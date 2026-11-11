@@ -5,7 +5,6 @@
 import { auth, db, onAuthStateChanged } from './firebase_config.js';
 import {
   GoogleAuthProvider,
-  signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
   signInWithEmailAndPassword,
@@ -198,20 +197,16 @@ export async function signIn(email, password, showError) {
 }
 
 // ── Google Sign In ─────────────────────────────────────────────
-// Popup first (works best in the installed PWA); falls back to
-// redirect if the popup is blocked. The auth listener above creates
-// the user doc and redirects to the free or full page.
+// Full-page redirect to Google (fills the viewport), then back here.
+// The auth listener above creates the user doc and redirects to the
+// free or full page once Firebase finishes the redirect sign-in.
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 
 export async function signInWithGoogle(showError) {
   try {
-    await signInWithPopup(auth, googleProvider);
+    await signInWithRedirect(auth, googleProvider);
   } catch (e) {
-    if (e.code === 'auth/popup-blocked' || e.code === 'auth/operation-not-supported-in-this-environment') {
-      try { await signInWithRedirect(auth, googleProvider); return; } catch (e2) { e = e2; }
-    }
-    if (e.code === 'auth/popup-closed-by-user' || e.code === 'auth/cancelled-popup-request') return;
     if (e.code === 'auth/unauthorized-domain') {
       if (showError) showError('This site is not authorized for Google sign-in yet.');
     } else {
@@ -221,8 +216,12 @@ export async function signInWithGoogle(showError) {
   }
 }
 
-// Finish a redirect-style sign-in if one was started
-getRedirectResult(auth).catch(e => console.error('Redirect sign-in error:', e));
+// Finish a redirect-style sign-in when Google sends the user back
+getRedirectResult(auth).catch(e => {
+  console.error('Redirect sign-in error:', e);
+  const el = document.getElementById('sign_in_error');
+  if (el) { el.textContent = 'Google sign-in failed. Please try again.'; el.style.display = 'block'; }
+});
 
 // ── Sign Out ───────────────────────────────────────────────────
 export async function signOutUser() {
