@@ -1,0 +1,141 @@
+/* ================================================================
+   full_version_stylesheet.css — Full Version Tools page
+   Notepad-style expanding list on a white card.
+   Loaded after account_type_stylesheet.css; scoped to body.full-version
+   so no other page is affected. Page background is unchanged (blue).
+   ================================================================ */
+
+body.full-version {
+  --ink: #1a1a2e;
+  --rule-blue: rgba(100, 149, 237, 0.4);
+}
+
+/* ── White tools card ─────────────────────────────────────────── */
+body.full-version .tools-card {
+  align-items: stretch;
+  justify-content: flex-start;
+  background: #ffffff;
+  border: 2px solid var(--gold);
+  box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  text-align: left;
+}
+
+body.full-version .tools-card::before { display: none; }
+
+body.full-version .tools-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+  margin: 4px 4px 8px;
+}
+
+body.full-version .tools-card .tool-tip {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  font: 14px 'Crimson Pro', serif;
+  color: var(--ink);
+  text-indent: 0;
+  background: rgba(255, 160, 66, 0.25);
+  border-right: 10px solid rgba(255, 177, 66, 0.5);
+}
+
+/* ── Notepad-style numbered list ──────────────────────────────── */
+body.full-version .notes-ol {
+  list-style: decimal;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 24px;
+  color: var(--ink);
+  font-family: 'Crimson Pro', serif;
+}
+
+body.full-version .note-list-item {
+  min-height: 44px;
+  border-bottom: 1px solid var(--rule-blue);
+  display: list-item;
+}
+
+body.full-version .row-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  min-height: 44px;
+}
+
+body.full-version .note-list-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--ink);
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+body.full-version .note-list-title:active { opacity: 0.6; }
+
+body.full-version .row-content .orange-btn {
+  flex: 0 0 auto;
+  margin: 4px 0;
+  padding: 4px 10px;
+  min-height: 34px;
+  align-items: center;
+}
+
+/* ── Expanded features (sub list) ─────────────────────────────── */
+body.full-version .sub-content-row {
+  display: block;
+  list-style: none;
+  background: #fafafa;
+  border-bottom: 1px solid var(--rule-blue);
+  padding: 0 0 6px;
+}
+
+body.full-version .features-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  text-align: left;
+  margin: 8px 8px 2px;
+  padding: 0;
+}
+
+body.full-version .note-items-list {
+  list-style: decimal;
+  width: 100%;
+  margin: 0;
+  padding: 0 8px 0 28px;
+}
+
+body.full-version .note-item-row {
+  border-bottom: 1px solid var(--rule-blue);
+  padding: 4px 0 2px 4px;
+}
+
+body.full-version .note-item-row:last-child { border-bottom: none; }
+
+body.full-version .note-item-row h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 4px 0 0;
+  text-indent: 0;
+}
+
+body.full-version .note-item-row p {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  color: #333;
+  text-indent: 0;
+  margin: 0;
+  padding: 2px 4px 8px 0;
+}
+
+body.full-version .note-item-row .red { color: #c0392b; }
