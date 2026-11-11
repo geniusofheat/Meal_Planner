@@ -3,44 +3,46 @@
 // Auto-updating: always fetches fresh files, cache is backup only
 // ============================================================
 
-const CACHE_NAME = 'Meal-Planner-v2';
+const CACHE_NAME = 'Meal-Planner-v3';
 
 const FILES_TO_CACHE = [
-  'index.css',	
   'index.html',
+  'index_stylesheet.css',
   'index_data.js',
-  'login.css',  
-  'login.html',
-  'login_data.js',
+  'account_type.html',
+  'account_type_stylesheet.css',
+  'account_type_data.js',
   'free_version_index.html',
-  'full_version_index.html',  
-  'icon_192.png',
-  'icon_512.png',
+  'full_version_index.html',
+  'icon-192.png',
+  'icon-512.png',
   'meal_planner_service_worker.js',
-  'meal_planner_manifest.json'
-  'meal_planner.html',
-  'meal_planner_data.js',  
+  'meal_planner_manifest.json',
+  'meal_planner_data.js',
   'cookbook_menu.html',
-  'cookbook_menu_data.js',  
-  'favorites_list.html',
+  'cookbook_menu_stylesheet.css',
+  'cookbook_menu_data.js',
+  'cookbook_engine.js',
   'grocery_list.html',
+  'grocery_list.css',
   'grocery_list_data.js',
-  'grocery_list_stylesheet.css',
   'firebase_config.js',
   'firebase_login_auth.js',
   'meats_data.js',
-  'dips_and_sauces_data.js',
+  'pork_data.js',
   'desserts_data.js',
   'pastas_data.js',
   'beans_and_legumes_data.js',
   'beverages_data.js',
   'breads_and_grains_data.js',
-  'candy_data.js',
-
+  'hard_and_soft_candy_data.js',
+  'dips_sauces_and_gravies_data.js',
   'salads_data.js',
   'seafood_data.js',
-  'vegetables_data.js'
-
+  'side_dishes_data.js',
+  'soups_and_stews_data.js',
+  'vegetables_data.js',
+  'pickles_and_preserves.js'
 ];
 
 // Install — cache all files
