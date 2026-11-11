@@ -828,3 +828,57 @@ p {
   font-style: italic;
   font-size: 14px;
 }
+
+
+/* ================================================================
+   BLUE PAGE + WHITE CARD  (matches the Full Version Tools page)
+   Blue background behind the containers; lists stay on white.
+   ================================================================ */
+
+html {
+  background: #0a0904 linear-gradient(160deg,
+    rgba(0,0,148,0.9) 0%,
+    rgba(22,46,95,0.80) 10%,
+    rgba(0,0,0,0.90) 100%
+  );
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+  min-height: 100vh;
+}
+
+/* Header becomes a blue bar with a gold border */
+header {
+  width: 100%;
+  margin: 5px 0;
+  padding: 6px 10px;
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  background: linear-gradient(160deg,
+    rgba(0,50,120,0.35) 0%,
+    rgba(65,156,185,0.05) 80%,
+    rgba(50,50,50,0.30) 100%
+  );
+}
+
+header h3 { color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 600; }
+header .notepad-date { color: #f0e8d0; margin-right: 10px; }
+.help-btn-label { color: #f0e8d0; }
+
+#mainPageDescription,
+.search-error-message { color: #f0e8d0; }
+
+#breadcrumb { color: #f0e8d0; }
+.crumb { color: var(--gold); }
+.crumb-separator { color: #f0e8d0; }
+
+/* The white container */
+main {
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 2px 4px 24px rgba(0,0,0,0.3);
+}
