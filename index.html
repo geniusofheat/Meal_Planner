@@ -30,89 +30,16 @@
       <hr>
     </div>
     <form id="sign-in-form" class="card-body">
-      <p>Already have an account? Enter your Username and Password to sign in:</p>
-	  <input type="email" id="auth_email" placeholder="Type your e-mail :" class="input">
-      <input type="password" id="auth_password" placeholder="Password :" class="input">
-      <div>
-        <label style="font-size:12px; color:#fefeff; margin:20px;">
-          <input type="checkbox" id="show-password-toggle">
-          Show Password
-        </label>
-      </div>
-      <button type="button" id="sign-in-btn" class="orange-btn">Sign In :</button>
+      <p>Sign in with your Google account. New here? Signing in creates your account.</p>
+      <button type="button" id="google-sign-in-btn" class="orange-btn">Sign in with Google :</button>
       <div class="flex" style="flex-direction:column; align-items:center; gap:10px; margin-top:5px;">
-        Need an account ? <a href="account_type.html" id="create-account-link" style="font-size:12px; color:var(--gold);">Create Account</a>
-        Need help with sign in ? <a href="#" data-show-card="account-recovery" style="font-size:12px; color:var(--gold);">Account Recovery</a>
+        Want to see the plans ? <a href="account_type.html" id="create-account-link" style="font-size:12px; color:var(--gold);">View Plans</a>
         Have a suggestion ? <a href="#" data-show-card="contfor-form" style="font-size:12px; color:var(--gold);">Contact Us</a>
       </div>
     </form>
     <p id="sign_in_error"></p>
   </div>
   <!-- ── SIGN-IN CARD END ── -->
-
-<!-- CREATE ACCOUNT CARD - FREE VERSION -->
-<div id="free_version_card" class="card hidden">
-
-  <h2>Create Account : Free Version</h2>
-  <p class="desc">Create a free account to access core features.</p>
-
-  <hr>
-
-  <div class="gold-block">
-    <p>Enter a username, password, and e-mail to create a free account.</p>
-
-    <input type="text" id="free_username" placeholder="Create a username :" class="input">
-    <input type="password" id="free_password" placeholder="Create a password :" class="input">
-    <input type="email" id="free_email" placeholder="Enter e-mail :" class="input">
-
-    <button id="free-create-btn" class="orange-btn">Sign Up ! :</button>
-
-    <p id="free_auth_error"></p>
-
-    <p style="font-size:12px;"><a href="#" data-show-card="sign-in-out" style="color:var(--gold);">Back to Sign In</a></p>
-  </div>
-</div>
-<!-- END CREATE ACCOUNT CARD - FREE VERSION -->
-
-
-<!-- CREATE ACCOUNT CARD - FULL VERSION -->
-<div id="full_version_card" class="card hidden">
-
-  <h2>Create Account : Full Version</h2>
-  <p class="desc">Create a full account to unlock all features and premium access.</p>
-
-  <hr>
-
-  <div class="gold-block">
-    <p>Enter a username, password, and e-mail to create a full account.</p>
-
-    <input type="text" id="full_username" placeholder="Create a username :" class="input">
-    <input type="password" id="full_password" placeholder="Create a password :" class="input">
-    <input type="email" id="full_email" placeholder="Enter e-mail :" class="input">
-
-    <button id="full-create-btn" class="orange-btn">Sign Up ! :</button>
-
-    <p id="full_auth_error"></p>
-
-    <p style="font-size:12px;"><a href="#" data-show-card="sign-in-out" style="color:var(--gold);">Back to Sign In</a></p>
-  </div>
-</div>
-<!-- CREATE ACCOUNT CARD - FULL VERSION END -->
-
-  <!-- ── PASSWORD RECOVERY CARD ── -->
-  <div id="account-recovery" class="card hidden">
-    <div class="card-header">
-      <h2>Account Recovery :</h2>
-      <hr>
-    </div>
-    <div class="card-body">
-      <p>Type your e-mail address to verify your account info :</p>
-      <input type="email" id="recover_email" placeholder="Type Email Here :" class="input">
-      <button id="password-recover-btn" class="blue-btn">Send e-mail :</button>
-      <p style="font-size:12px;"><a href="#" data-show-card="sign-in-out" style="color:var(--gold);">Back to Sign In</a></p>
-    </div>
-  </div>
-  <!-- ── PASSWORD RECOVERY CARD END ── -->
 
   <!-- ── CONTACT FORM CARD ── -->
   <div id="contfor-form" class="card hidden">
