@@ -1,10 +1,10 @@
 {
-  "id": "/Meal-Planner/index.html",
+  "id": "/Meal_Planner/index.html",
   "name": "My Meal Planner",
   "short_name": "Meal Planner",
   "description": "The meal planner app provides a list of tools to help users shop for grocery items and become better cooks. The 1 free tool is the grocery list tool that uses smart javascript to add items to a list. The list is an input checkbox and x-delete to be simple for anyone to use. It remembers the items added to the list and allows users to lock the list until necessary to delete items. The paid users get access to the cookbook which has 100's of chef inspired recipes across multiple categories. The cookbook is a simple toggle list that opens a recipe card for each recipe. Each recipe card allows the user to save the recipe to their favorites list and use the recipe with the meal planner calendar.",
   "start_url": "index.html",
-  "scope": "/Meal-Planner/",
+  "scope": "/Meal_Planner/",
   "display": "standalone",
   "background_color": "#0a0a1a",
   "theme_color": "#c8a96e",
