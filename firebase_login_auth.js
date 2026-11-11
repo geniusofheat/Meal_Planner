@@ -8,7 +8,10 @@ import {
   signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
-  signOut
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
+  sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { doc, getDoc, setDoc, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
@@ -22,6 +25,9 @@ let preview_used      = false;
 // must have its id listed here.
 const ALL_CARD_IDS = [
   'sign-in-out',
+  'free_version_card',
+  'full_version_card',
+  'account-recovery',
   'contfor-form'
 ];
 
@@ -115,8 +121,11 @@ const FULL_PAGE  = 'full_version_index.html';
 // page gets renamed again later.
 const on_login_page = !!document.getElementById('sign-in-form');
 
-// ── Create the Firestore user doc on first Google sign-in ─────
-async function ensureUserDoc(user) {
+// ── Create the Firestore user doc on first Google sign-in ──────
+// Email/password accounts are created by createAccount(), so this
+// only runs for Google users.
+async function ensureGoogleUserDoc(user) {
+  if (!user.providerData.some(p => p.providerId === 'google.com')) return;
   try {
     const ref  = doc(db, 'users', user.uid);
     const snap = await getDoc(ref);
@@ -136,7 +145,7 @@ async function ensureUserDoc(user) {
 onAuthStateChanged(auth, async (user) => {
   currentUser = user;
 
-  if (user) await ensureUserDoc(user);
+  if (user) await ensureGoogleUserDoc(user);
   await updateNavBar(user);
 
   if (user) {
@@ -167,10 +176,31 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
+// ── Sign In ────────────────────────────────────────────────────
+export async function signIn(email, password, showError) {
+  try {
+    const cred = await signInWithEmailAndPassword(auth, email, password);
+    const snap = await getDoc(doc(db, 'users', cred.user.uid));
+
+    if (snap.exists() && snap.data().paid === true) {
+      window.location.href = FULL_PAGE;
+    } else {
+      window.location.href = FREE_PAGE;
+    }
+
+  } catch (e) {
+    if (e.code === 'auth/user-not-found') {
+      if (showError) showError('No account found. Please use the Create Account link to register.');
+    } else {
+      if (showError) showError('Incorrect email or password.');
+    }
+  }
+}
+
 // ── Google Sign In ─────────────────────────────────────────────
 // Popup first (works best in the installed PWA); falls back to
-// redirect if the popup is blocked. The auth listener above does
-// the user-doc creation and the page redirect after sign-in.
+// redirect if the popup is blocked. The auth listener above creates
+// the user doc and redirects to the free or full page.
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 
@@ -205,6 +235,35 @@ export async function signOutUser() {
 }
 window.signOutUser = signOutUser;
 
+// ── Create Account ─────────────────────────────────────────────
+export async function createAccount(username, email, password, showError) {
+  if (!username) { if (showError) showError('Enter a valid username.'); return; }
+  if (password.length < 6) { if (showError) showError('Password must be at least 6 characters.'); return; }
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, password);
+    await setDoc(doc(db, 'users', cred.user.uid), {
+      username: username,
+      email:    email,
+      paid:     false,
+      created:  new Date().toISOString()
+    });
+    window.location.href = FREE_PAGE;
+  } catch (e) {
+    if (showError) showError(e.message || 'Could not create account.');
+  }
+}
+
+// ── Password Recovery ──────────────────────────────────────────
+export async function sendRecoveryEmail(email, showError) {
+  if (!email) { if (showError) showError('Enter a valid email.'); return; }
+  try {
+    await sendPasswordResetEmail(auth, email);
+    alert('Password recovery email sent. Check your inbox.');
+  } catch (e) {
+    if (showError) showError(e.message);
+  }
+}
+
 // ── Wire up all buttons on page load ──────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -213,9 +272,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el) { el.textContent = msg; el.style.display = 'block'; }
   }
 
+  function showCreateError(msg, cardType) {
+    const el = document.getElementById(cardType === 'full' ? 'full_auth_error' : 'free_auth_error');
+    if (el) { el.textContent = msg; el.style.display = 'block'; }
+  }
+
+  // ── SIGN IN ──────────────────────────────────────────────
+  const signInBtn = document.getElementById('sign-in-btn');
+  if (signInBtn) signInBtn.addEventListener('click', () => {
+    const email    = document.getElementById('auth_email').value.trim();
+    const password = document.getElementById('auth_password').value;
+    signIn(email, password, showSignInError);
+  });
+
   // ── GOOGLE SIGN IN ───────────────────────────────────────
   const googleBtn = document.getElementById('google-sign-in-btn');
   if (googleBtn) googleBtn.addEventListener('click', () => signInWithGoogle(showSignInError));
+
+  // ── CREATE ACCOUNT — FREE VERSION ─────────────────────────
+  const freeCreateBtn = document.getElementById('free-create-btn');
+  if (freeCreateBtn) freeCreateBtn.addEventListener('click', () => {
+    const username = document.getElementById('free_username').value.trim();
+    const email    = document.getElementById('free_email').value.trim();
+    const password = document.getElementById('free_password').value;
+    createAccount(username, email, password, (msg) => showCreateError(msg, 'free'));
+  });
+
+  // ── CREATE ACCOUNT — FULL VERSION ─────────────────────────
+  const fullCreateBtn = document.getElementById('full-create-btn');
+  if (fullCreateBtn) fullCreateBtn.addEventListener('click', () => {
+    const username = document.getElementById('full_username').value.trim();
+    const email    = document.getElementById('full_email').value.trim();
+    const password = document.getElementById('full_password').value;
+    createAccount(username, email, password, (msg) => showCreateError(msg, 'full'));
+  });
+
+  // ── PASSWORD RECOVERY ────────────────────────────────────
+  const recoverBtn = document.getElementById('password-recover-btn');
+  if (recoverBtn) recoverBtn.addEventListener('click', () => {
+    const email = document.getElementById('recover_email').value.trim();
+    sendRecoveryEmail(email, showSignInError);
+  });
 
   // ── SIGN OUT ──────────────────────────────────────────────
   const signOutBtn = document.getElementById('sign-out-btn');
