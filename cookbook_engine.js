@@ -55,6 +55,7 @@ let open_subcat = {}; // { cat_id: sub_idx_or_'custom' }
 let engine_current_recipe = null;
 let engine_current_cat_name = null;
 let engine_batch_count = 1;
+let engine_list_scroll = 0;   // where the list was scrolled when a recipe was opened
 
 
 // ── SECTION 2: INIT ─────────────────────────────────────────────
@@ -243,6 +244,7 @@ function open_recipe_view(recipe, icon, cat_name) {
   engine_current_recipe = recipe;
   engine_current_cat_name = cat_name;
   engine_batch_count = 1;
+  engine_list_scroll = window.scrollY || 0;
 
   document.getElementById('notes-list-view').style.display = 'none';
   document.getElementById('recipe-editor-view').style.display = 'block';
@@ -252,6 +254,9 @@ function open_recipe_view(recipe, icon, cat_name) {
 
   document.getElementById('recipe-editor-body').innerHTML = render_recipe_card(recipe);
   show_back_btn();
+  const desc = document.getElementById('mainPageDescription');
+  if (desc) desc.style.display = 'none';
+  window.scrollTo(0, 0);
 }
 window.open_recipe_view = open_recipe_view;
 
@@ -312,8 +317,24 @@ function back_to_list() {
   document.getElementById('notes-list-view').style.display = 'block';
   set_header_title('📖  Cookbook :');
   hide_back_btn();
+  const desc = document.getElementById('mainPageDescription');
+  if (desc) desc.style.display = '';
+  window.scrollTo(0, engine_list_scroll);   // return to the spot in the list
 }
 window.back_to_list = back_to_list;
+
+// Toolbar Back button (always visible above the container):
+//   recipe open  -> back to the list you were viewing
+//   list showing -> back to the Full Version Tools page
+function toolbar_back() {
+  const recipe_view = document.getElementById('recipe-editor-view');
+  if (recipe_view && recipe_view.style.display !== 'none') {
+    back_to_list();
+  } else {
+    window.location.href = 'full_version_index.html';
+  }
+}
+window.toolbar_back = toolbar_back;
 
 function show_back_btn() {
   const btn = document.getElementById('headerBackBtn');

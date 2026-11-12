@@ -882,3 +882,20 @@ main {
   padding: 8px;
   box-shadow: 2px 4px 24px rgba(0,0,0,0.3);
 }
+
+
+/* ── Toolbar above the container: [← Back]  title  date  help ── */
+header.cookbook-toolbar { gap: 8px; }
+header.cookbook-toolbar #toolbarBackBtn {
+  margin: 0;
+  padding: 6px 10px;
+  min-height: 34px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+}
+header.cookbook-toolbar h3 { flex: 1 1 auto; margin: 0; padding: 0; white-space: nowrap; }
+header.cookbook-toolbar .notepad-date { font-size: 12px; margin-right: 4px; }
+header.cookbook-toolbar .help-btn-wrap { margin-right: 0; }

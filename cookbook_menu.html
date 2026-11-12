@@ -10,14 +10,15 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=4">
 </head>
 
 <body>
 
 <div id="breadcrumb"></div>
 
-<header>
+<header class="cookbook-toolbar">
+  <button class="orange-btn" id="toolbarBackBtn" onclick="toolbar_back()">← Back</button>
   <h3 id="pageTitle">📖  &nbsp;&nbsp;Cookbook :</h3>
   <div class="notepad-date" id="dateDisplay"></div>
   <div class="help-btn-wrap">
@@ -45,7 +46,6 @@
     <div class="note-editor-sticky-toolbar">
       <div class="toolbar-row">
         <h3 id="recipe-title-display"></h3>
-        <button class="orange-btn" id="headerBackBtn" onclick="back_to_list()" style="display:none;">← Back</button>
       </div>
     </div>
 
@@ -111,7 +111,7 @@
 <script src="side_dishes_data.js"></script>
 <script src="cookbook_menu_data.js"></script>
 
-<script src="cookbook_engine.js"></script>
+<script src="cookbook_engine.js?v=4"></script>
 
 <script>
   if ('serviceWorker' in navigator) {
