@@ -85,24 +85,22 @@ function redraw_list() {
   const list = document.getElementById('notes-list');
   if (!list) return;
 
-  const sorted_tools = [...TOOLS].sort((a, b) => a.sortKey.localeCompare(b.sortKey));
+  // The Cookbook page opens straight onto the recipe categories — the
+  // tool list (Favorites, Meal Planner, ...) lives on the Tools page.
+  const sorted_categories = [...CATEGORIES].sort((a, b) => a.label.localeCompare(b.label));
 
   let html = '<ol class="notes-ol">';
-  sorted_tools.forEach((tool) => {
-    const is_open = expanded_tools.has(tool.id);
-    const add_btn = (tool.id === 'recipes')
-      ? '<span class="bracket-action" onclick="event.stopPropagation(); open_add_recipe_modal()">[ + ]</span>'
-      : '';
+  sorted_categories.forEach((cat) => {
+    const is_open = expanded_categories.has(cat.id);
     html += `
       <li class="note-list-item">
         <div class="row-content">
-          <span class="note-list-title" onclick="toggle_tool('${tool.id}')">${tool.label}</span>
-          ${add_btn}
+          <span class="note-list-title" onclick="toggle_category_cb('${cat.id}')">${cat.icon} ${cat.label}</span>
         </div>
       </li>
     `;
     if (is_open) {
-      html += `<li class="sub-content-row">${render_tool_content(tool.id)}</li>`;
+      html += `<li class="sub-content-row">${render_subcats(cat.id)}</li>`;
     }
   });
   html += '</ol>';
@@ -256,6 +254,8 @@ function open_recipe_view(recipe, icon, cat_name) {
   show_back_btn();
   const desc = document.getElementById('mainPageDescription');
   if (desc) desc.style.display = 'none';
+  const srow = document.getElementById('search-row');
+  if (srow) srow.style.display = 'none';
   window.scrollTo(0, 0);
 }
 window.open_recipe_view = open_recipe_view;
@@ -319,6 +319,8 @@ function back_to_list() {
   hide_back_btn();
   const desc = document.getElementById('mainPageDescription');
   if (desc) desc.style.display = '';
+  const srow = document.getElementById('search-row');
+  if (srow) srow.style.display = '';
   window.scrollTo(0, engine_list_scroll);   // return to the spot in the list
 }
 window.back_to_list = back_to_list;

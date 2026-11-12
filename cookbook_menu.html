@@ -10,7 +10,7 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=4">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=5">
 </head>
 
 <body>
@@ -31,6 +31,14 @@
 
 <!-- Search results message -->
 <div id="search_results" class="search-error-message"></div>
+
+<!-- SEARCH ROW (its own bordered row above the container) -->
+<div class="search-row" id="search-row">
+  <span class="search-icon" onclick="startVoice()">🎤</span>
+  <input class="text-input" type="text" id="search_input" placeholder="Search the menu here..." onkeydown="search_on_enter(event)" autocomplete="off">
+  <span class="search-icon" onclick="search_cookbook()">🔍</span>
+  <span class="bracket-action search-add" onclick="open_add_recipe_modal()">[ + ]</span>
+</div>
 
 <main class="main">
 
@@ -111,7 +119,7 @@
 <script src="side_dishes_data.js"></script>
 <script src="cookbook_menu_data.js"></script>
 
-<script src="cookbook_engine.js?v=5"></script>
+<script src="cookbook_engine.js?v=6"></script>
 
 <script>
   if ('serviceWorker' in navigator) {

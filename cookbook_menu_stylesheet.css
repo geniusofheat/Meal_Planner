@@ -899,3 +899,41 @@ header.cookbook-toolbar #toolbarBackBtn {
 header.cookbook-toolbar h3 { flex: 1 1 auto; margin: 0; padding: 0; white-space: nowrap; }
 header.cookbook-toolbar .notepad-date { font-size: 12px; margin-right: 4px; }
 header.cookbook-toolbar .help-btn-wrap { margin-right: 0; }
+
+
+/* ================================================================
+   BEIGE CONTAINER + SEARCH ROW
+   Container uses the same beige as the recipe cards (#f2f2ef).
+   ================================================================ */
+main { background-color: #f2f2ef; }
+.sub-content-row { background: rgba(0,0,0,0.03); }
+.notepad-row { background: transparent; }
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  min-height: 44px;
+  margin: 8px 0 10px;           /* 10px between the search row and the container */
+  background: #f2f2ef;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+}
+.search-row .text-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  background: transparent;
+  color: #1a1a2e;
+}
+.search-row .search-icon { cursor: pointer; font-size: 18px; }
+.search-row .search-add { color: #1a1a2e; white-space: nowrap; }
+
+/* exactly 10px between the search row and the container */
+.search-row + main { margin-top: 0; }
+
+/* room for two-digit list numbers (10–13) */
+#notes-list .notes-ol { padding-left: 34px; }
