@@ -10,15 +10,15 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=4">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=6">
 <link rel="stylesheet" href="meal_planner_calendar.css?v=2">
+<link rel="stylesheet" href="button_style.css?v=1">
 </head>
 
 <body>
 
 <!-- TOOLBAR (above the container) -->
 <header class="cookbook-toolbar">
-  <button class="orange-btn" id="toolbarBackBtn" onclick="window.location.href='full_version_index.html'">← Back</button>
   <h3 id="pageTitle">📅 &nbsp;Meal Planner :</h3>
   <div class="notepad-date" id="dateDisplay"></div>
   <div class="help-btn-wrap">
@@ -28,6 +28,11 @@
 </header>
 
 <p id="mainPageDescription">Plan your meals by the day. Choose a day from the calendar to plan a meal, or tap a highlighted day to see what is already planned.</p>
+
+<!-- BACK TOOLBAR -->
+<div class="back-row">
+  <button class="orange-btn" id="toolbarBackBtn" onclick="window.location.href='full_version_index.html'">← Back</button>
+</div>
 
 <!-- Shown when a recipe was sent here from the Cookbook -->
 <div id="pending-banner" class="pending-banner" style="display:none;"></div>

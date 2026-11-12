@@ -1,0 +1,63 @@
+/* ================================================================
+   button_style.css — shared button look, loaded LAST on every page.
+   Colors alternate dark <-> light with the surface under the button:
+
+     light surface (white / beige container)  ->  navy border, white fill, navy text
+     dark surface  (blue page / blue cards)   ->  white border, navy fill, white text
+
+   Shape: oval (pill) border with 5px of space inside it.
+   ================================================================ */
+
+:root {
+  --btn-navy:  #14286b;
+  --btn-white: #ffffff;
+}
+
+/* ── Default: button sits on a LIGHT surface ──────────────────── */
+.orange-btn,
+.orange-btn-44,
+.notepad-remove {
+  background: var(--btn-white) !important;
+  color: var(--btn-navy) !important;
+  border: 2px solid var(--btn-navy) !important;
+  border-radius: 999px !important;
+  text-shadow: none !important;
+  cursor: pointer;
+}
+
+.orange-btn {
+  padding: 5px 14px !important;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+/* small round icon buttons (30 x 30) */
+.orange-btn-44 { border-radius: 50% !important; padding: 4px !important; }
+
+.notepad-remove { padding: 5px 12px !important; }
+
+/* ── Button sits on a DARK surface (blue page / blue cards) ───── */
+.card .orange-btn,
+.card .orange-btn-44,
+.section .orange-btn,            /* plans page: sits straight on the blue page */
+header .orange-btn,              /* dark header bars */
+.pending-banner .orange-btn,
+.hdr-btn {
+  background: var(--btn-navy) !important;
+  color: var(--btn-white) !important;
+  border: 2px solid var(--btn-white) !important;
+  border-radius: 999px !important;
+}
+.hdr-btn { padding: 6px 14px !important; }
+
+/* …except the white tools card, which is a light surface */
+.card.tools-card .orange-btn {
+  background: var(--btn-white) !important;
+  color: var(--btn-navy) !important;
+  border: 2px solid var(--btn-navy) !important;
+}
+
+.orange-btn:active,
+.orange-btn-44:active,
+.hdr-btn:active,
+.notepad-remove:active { opacity: 0.75; }

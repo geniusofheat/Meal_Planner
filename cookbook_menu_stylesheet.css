@@ -937,3 +937,27 @@ main { background-color: #f2f2ef; }
 
 /* room for two-digit list numbers (10–13) */
 #notes-list .notes-ol { padding-left: 34px; }
+
+
+/* ================================================================
+   TOP AREA: no border around title/date/help; Back gets its own row
+   ================================================================ */
+header.cookbook-toolbar {
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.back-row {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 10px;
+  margin: 8px 0 0;
+  background: #f2f2ef;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+}
+.back-row .orange-btn { margin: 0; }
