@@ -40,7 +40,7 @@
   flex: 1 1 auto;
   text-align: center;
   font: 600 20px 'Playfair Display', serif;
-  color: #1a1a2e;
+  color: var(--btn-navy);
 }
 
 /* ── Calendar grid ────────────────────────────────────────────── */
@@ -53,7 +53,7 @@
 .cal-weekdays div {
   text-align: center;
   font: 600 12px 'Space Mono', monospace;
-  color: #1a1a2e;
+  color: var(--btn-navy);
   padding: 2px 0 4px;
 }
 
@@ -61,35 +61,37 @@
 .cal-blank {
   aspect-ratio: 1 / 1;
 }
+/* Not highlighted: white square, blue number */
 .cal-day {
   display: flex;
   align-items: center;
   justify-content: center;
   font: 16px 'Crimson Pro', serif;
-  color: #1a1a2e;
+  color: var(--btn-navy);
   background: #ffffff;
-  border: 1px solid rgba(100, 149, 237, 0.55);
+  border: 1px solid rgba(20, 40, 107, 0.35);
   border-radius: 2px;
   padding: 0;
   cursor: default;
 }
 .cal-day.today {
-  border: 2px solid #1a1a2e;
-  font-weight: 600;
+  border: 2px solid var(--btn-navy);
+  font-weight: 700;
 }
-/* A planned day: the whole numbered square is highlighted */
+/* Highlighted (something planned): navy square, orange number */
 .cal-day.planned {
-  background: #ffa500;
-  border-color: #b36b00;
+  background: var(--btn-navy);
+  border-color: var(--btn-navy);
+  color: #ffa500;
   font-weight: 700;
   cursor: pointer;
 }
 .cal-day.planned.selected {
-  background: #ff8c00;
-  box-shadow: inset 0 0 0 2px #1a1a2e;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--gold);
+  position: relative;
 }
-.cal-grid.picking .cal-day { cursor: pointer; background: #fff8e8; }
-.cal-grid.picking .cal-day.planned { background: #ffa500; }
+/* Choosing a day for a recipe: every day is tappable */
+.cal-grid.picking .cal-day { cursor: pointer; border-color: var(--btn-navy); }
 
 /* ── Week list (below the calendar) ───────────────────────────── */
 .week-title {
