@@ -345,32 +345,49 @@ function hide_back_btn() {
   if (btn) btn.style.display = 'none';
 }
 
+// Hand the open recipe to the Meal Planner page and go there.
+// mode 'plan' -> planner asks which day;  mode 'save' -> also kept in Favorites.
+function send_recipe_to_planner(mode) {
+  const r = engine_current_recipe;
+  if (!r) return;
+  const copy = {
+    name:        r.name,
+    servings:    r.servings || '',
+    ingredients: r.ingredients || [],
+    steps:       Array.isArray(r.steps) ? r.steps : [],
+    prep:        r.prep || '',
+    notes:       r.notes || '',
+    batches:     engine_batch_count,
+    mode:        mode
+  };
+  try { localStorage.setItem('mealplanner_pending_recipe', JSON.stringify(copy)); } catch (e) { console.error(e); }
+  window.location.href = 'meal_planner.html';
+}
+
 function save_to_favorites_cb() {
   if (!engine_current_recipe) return;
-  const favs = JSON.parse(localStorage.getItem('mealplanner_favorites') || '[]');
-  const exists = favs.find((f) => f.name === engine_current_recipe.name);
-  if (!exists) {
-    favs.push({
-      name: engine_current_recipe.name,
-      catName: engine_current_cat_name,
-      servings: engine_current_recipe.servings,
-      ingredients: engine_current_recipe.ingredients,
-      steps: engine_current_recipe.steps,
-      notes: engine_current_recipe.notes
-    });
-    localStorage.setItem('mealplanner_favorites', JSON.stringify(favs));
-  }
+  try {
+    const favs = JSON.parse(localStorage.getItem('mealplanner_favorites') || '[]');
+    const exists = favs.find((f) => f.name === engine_current_recipe.name);
+    if (!exists) {
+      favs.push({
+        name: engine_current_recipe.name,
+        catName: engine_current_cat_name,
+        servings: engine_current_recipe.servings,
+        ingredients: engine_current_recipe.ingredients,
+        steps: engine_current_recipe.steps,
+        prep: engine_current_recipe.prep,
+        notes: engine_current_recipe.notes
+      });
+      localStorage.setItem('mealplanner_favorites', JSON.stringify(favs));
+    }
+  } catch (e) { console.error(e); }
+  send_recipe_to_planner('save');
 }
 window.save_to_favorites_cb = save_to_favorites_cb;
 
 function open_plan_popup_cb() {
-  if (!engine_current_recipe) return;
-  localStorage.setItem('mealplanner_pending_recipe', JSON.stringify({
-    name: engine_current_recipe.name,
-    ingredients: engine_current_recipe.ingredients,
-    steps: engine_current_recipe.steps
-  }));
-  window.location.href = 'meal_planner.html';
+  send_recipe_to_planner('plan');
 }
 window.open_plan_popup_cb = open_plan_popup_cb;
 

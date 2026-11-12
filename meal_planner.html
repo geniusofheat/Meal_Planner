@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Planner</title>
+
+<meta name="theme-color" content="#c8a96e">
+
+<link rel="manifest" href="meal_planner_manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=4">
+<link rel="stylesheet" href="meal_planner_calendar.css?v=1">
+</head>
+
+<body>
+
+<!-- TOOLBAR (above the container) -->
+<header class="cookbook-toolbar">
+  <button class="orange-btn" id="toolbarBackBtn" onclick="window.location.href='full_version_index.html'">← Back</button>
+  <h3 id="pageTitle">📅 &nbsp;Meal Planner :</h3>
+  <div class="notepad-date" id="dateDisplay"></div>
+</header>
+
+<!-- Shown when a recipe was sent here from the Cookbook -->
+<div id="pending-banner" class="pending-banner" style="display:none;"></div>
+
+<!-- CONTAINER -->
+<main class="main">
+
+  <!-- Month toolbar row -->
+  <div class="cal-toolbar">
+    <button class="orange-btn cal-nav" id="cal-prev" aria-label="Previous month">◀</button>
+    <div class="cal-month-title" id="cal-month-title"></div>
+    <button class="orange-btn cal-nav" id="cal-next" aria-label="Next month">▶</button>
+  </div>
+
+  <!-- Days of the week + month grid -->
+  <div class="cal-weekdays">
+    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+  </div>
+  <div class="cal-grid" id="cal-grid"></div>
+
+  <!-- 7-day list for the chosen week -->
+  <div id="week-section"></div>
+
+</main>
+
+<script src="meal_planner_calendar.js?v=1"></script>
+<script type="module" src="firebase_login_auth.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('meal_planner_service_worker.js');
+  }
+</script>
+
+</body>
+</html>
