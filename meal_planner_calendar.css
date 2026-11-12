@@ -127,3 +127,12 @@
 .meal-detail { padding: 0 4px 8px; font: 15px 'Crimson Pro', serif; color: #333; }
 .meal-detail h4 { margin: 6px 0 2px; font: 600 14px 'Playfair Display', serif; }
 .meal-detail ul, .meal-detail ol { margin: 0; padding-left: 22px; }
+
+
+/* ── Prompt above the calendar ────────────────────────────────── */
+.cal-prompt {
+  padding: 2px 4px 8px;
+  text-align: center;
+  font: 17px 'Crimson Pro', serif;
+  color: #1a1a2e;
+}

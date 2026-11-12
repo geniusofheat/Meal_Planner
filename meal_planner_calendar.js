@@ -84,10 +84,40 @@ function change_month(delta) {
 }
 
 function render_all() {
+  render_prompt();
   render_banner();
   render_calendar();
   render_week();
 }
+
+// ── prompt above the calendar ───────────────────────────────────
+function render_prompt() {
+  const el = document.getElementById('cal-prompt');
+  if (!el) return;
+  el.textContent = pending
+    ? 'Please choose a day of the week from the calendar below.'
+    : 'Tap a highlighted day to see what is planned for that week.';
+}
+
+// ── help ────────────────────────────────────────────────────────
+const HELP_CONTENT = `
+  <p>The Meal Planner lets you plan recipes from the Cookbook on the days you want to cook them.</p>
+  <ul class="help-list">
+    <li>Press Plan or Save on a recipe card, then tap a day on the calendar to add it.</li>
+    <li>Use the arrows above the calendar to move to the previous or next month.</li>
+    <li>Days with something planned are highlighted. Tap one to see that week listed below the calendar.</li>
+    <li>Tap a day in the list to open or close it, tap a meal to see its recipe, and tap Remove to take it off your plan.</li>
+  </ul>
+`;
+function show_help_modal() {
+  document.getElementById('helpModalBody').innerHTML = HELP_CONTENT;
+  document.getElementById('helpModalOverlay').style.display = 'flex';
+}
+function hide_help_modal() {
+  document.getElementById('helpModalOverlay').style.display = 'none';
+}
+window.show_help_modal = show_help_modal;
+window.hide_help_modal = hide_help_modal;
 
 // ── pending recipe banner ───────────────────────────────────────
 function render_banner() {
@@ -95,7 +125,7 @@ function render_banner() {
   if (!pending) { el.style.display = 'none'; el.innerHTML = ''; return; }
   const lead = pending.mode === 'save' ? 'Saved to Favorites. ' : '';
   el.style.display = 'flex';
-  el.innerHTML = '<div>' + lead + 'Tap a day to plan <b>' + esc(pending.name) + '</b>.</div>' +
+  el.innerHTML = '<div>' + lead + 'Planning: <b>' + esc(pending.name) + '</b></div>' +
                  '<button class="orange-btn" data-act="cancel-pending">Cancel</button>';
 }
 function on_banner_click(e) {
