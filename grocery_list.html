@@ -4,55 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grocery Notepad</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="grocery_list.css">
-  <link rel="stylesheet" href="button_style.css?v=1">
+<link rel="stylesheet" href="button_style.css?v=1">
 </head>
+
 <body>
+
 <header>
   <div class="header-left">
     <button class="orange-btn" onclick="handleBack()">← Back</button>
   </div>
+
   <div class="header-right">
     <div class="notepad-date" id="dateDisplay"></div>
   </div>
 </header>
 
 <main class="main">
-  <div class="toolbar-row grocery-heading-row">
-    <div class="notepad-title">Grocery List :</div>
-    <button class="orange-btn" id="lockBtn" onclick="toggleLock()">🔓 Lock</button>
-  </div>
 
-  <div class="notepad-body grocery-home-view" id="grocery-home-view">
+<!-- GROCERY LIST NOTEPAD -->
+  <div class="toolbar-row">
+    <div class="notepad-title">Grocery List :</div>    
+    
+    <button class="orange-btn" style="display: flex; justify-content: flex-end;" id="lockBtn" onclick="toggleLock()">🔓 Lock</button>
+  </div>
+<!-- END GROCERY LIST NOTEPAD -->
+
+  <div class="notepad-body">
     <div id="grocery-list"></div>
 
-    <div id="saveListContainer" class="block-flex-row-no-border" style="display:none;">
-      <input id="saveListNameInput" class="text-input" placeholder="Name this list...">
-      <button class="orange-btn-44" onclick="confirmSaveList()">Save :</button>
-    </div>
+<!-- GROCERY LIST TITLE INPUT ROW -->
+  <div id="saveListContainer" class="block-flex-row-no-border" style="display:none;">
+  	
+    <input id="saveListNameInput" class="text-input" placeholder="Name this list...">
+    
+    <button class="orange-btn-44" onclick="confirmSaveList()">Save :</button>
+  </div>
+<!-- END GROCERY LIST TITLE INPUT ROW -->
 
-    <div class="toolbar-row grocery-input-row">
-      <input class="text-input" id="textInput" placeholder="Add item...">
-      <button class="orange-btn-44" onclick="addItems()">＋</button>
-      <button class="orange-btn-44" onclick="voiceInput()">🎤</button>
-    </div>
 
-    <div class="toolbar-row grocery-actions-row">
-      <button class="orange-btn" onclick="saveCurrentList()">＋ New List</button>
-    </div>
+<!-- ADD ITEM INPUT ROW -->
+  <div class="toolbar-row">
+  	
+    <input class="text-input" id="textInput" placeholder="Add item...">
+    
+    <button class="orange-btn-44" onclick="addItems()">＋</button>
+    
+    <button class="orange-btn-44" onclick="voiceInput()">🎤</button>  
+  </div>
+<!-- END ADD ITEM INPUT ROW -->
+
+  <div class="toolbar-row">
+
+<!-- END SAVE LIST BUTTON AND CUSTOM LISTS BUTTON -->
+    <button class="orange-btn" onclick="toggleSavedLists()">📋</button>
+
+
+    <button class="orange-btn" onclick="saveCurrentList()">Save</button>
+<!-- END SAVE LIST BUTTON AND CUSTOM LISTS BUTTON -->
   </div>
 
-  <div class="notepad-body grocery-editor-view" id="grocery-editor-view" style="display:none;">
-    <div class="grocery-editor-title-row">
-      <div id="grocery-editor-title" class="grocery-editor-title"></div>
-    </div>
-    <div class="toolbar-row grocery-editor-actions">
-      <button class="orange-btn" onclick="saveItemContent()">💾 Save</button>
-      <button class="orange-btn" onclick="closeItemEditor()">← Back</button>
-    </div>
-    <textarea id="grocery-item-content" class="grocery-item-content" placeholder="Write details about this grocery item..."></textarea>
   </div>
+
+
+
 </main>
 
 <script>
@@ -60,9 +78,12 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service_worker.js');
 }
 </script>
+
 <script type="module" src="grocery_list_data.js"></script>
 <script type="module" src="firebase_login_auth.js"></script>
+
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
+
 </body>
 </html>
