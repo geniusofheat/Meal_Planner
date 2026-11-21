@@ -961,3 +961,18 @@ header.cookbook-toolbar {
   box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
 }
 .back-row .orange-btn { margin: 0; }
+
+.tool-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin: 8px 0 0;
+  background: #f2f2ef;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+}
+.tool-links-row .orange-btn { margin: 0; text-decoration: none; }
