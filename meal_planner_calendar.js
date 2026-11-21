@@ -223,6 +223,70 @@ function render_week() {
   sec.innerHTML = html;
 }
 
+// ── recovering instructions for meals saved without them ───────
+const COOKBOOK_FILES = [
+  'beverages_data.js', 'beans_and_legumes_data.js', 'breads_and_grains_data.js',
+  'desserts_data.js', 'dips_sauces_and_gravies_data.js', 'hard_and_soft_candy_data.js',
+  'meats_data.js', 'pastas_data.js', 'pickles_and_preserves.js', 'salads_data.js',
+  'soups_and_stews_data.js', 'vegetables_data.js', 'side_dishes_data.js'
+];
+const COOKBOOK_GLOBALS = [
+  'beverages_data', 'beans_and_legumes_data', 'breads_and_grains_data', 'desserts_data',
+  'dips_sauces_and_gravies_data', 'hard_and_soft_candy_data', 'meats_data', 'pastas_data',
+  'pickles_and_preserves', 'salads_data', 'soups_and_stews_data', 'vegetables_data', 'side_dishes_data'
+];
+let cookbook_loading = null;
+
+function load_cookbook_data() {
+  if (cookbook_loading) return cookbook_loading;
+  cookbook_loading = Promise.all(COOKBOOK_FILES.map(src => new Promise(resolve => {
+    const el = document.createElement('script');
+    el.src = src + '?v=1';
+    el.onload = resolve;
+    el.onerror = resolve;
+    document.head.appendChild(el);
+  })));
+  return cookbook_loading;
+}
+
+function find_cookbook_recipe(name) {
+  const want = String(name || '').trim().toLowerCase();
+  for (const g of COOKBOOK_GLOBALS) {
+    let arr = null;
+    try { arr = (new Function('return typeof ' + g + ' !== "undefined" ? ' + g + ' : null'))(); } catch (e) {}
+    if (!Array.isArray(arr)) continue;
+    for (const sub of arr) {
+      for (const r of (sub.recipes || [])) {
+        if (String(r.name).trim().toLowerCase() === want) return r;
+      }
+    }
+  }
+  return null;
+}
+
+function has_instructions(m) {
+  if (Array.isArray(m.steps) && m.steps.length) return true;
+  if (typeof m.steps === 'string' && m.steps.trim()) return true;
+  return !!(m.prep && String(m.prep).trim());
+}
+
+// Fill in preparation (and any other missing parts) from the Cookbook
+function recover_meal(iso, idx) {
+  const m = plan[iso] && plan[iso][idx];
+  if (!m || has_instructions(m)) return Promise.resolve();
+  return load_cookbook_data().then(() => {
+    const r = find_cookbook_recipe(m.name);
+    if (!r) return;
+    if (!m.servings && r.servings) m.servings = r.servings;
+    if ((!m.ingredients || !m.ingredients.length) && r.ingredients) m.ingredients = r.ingredients;
+    if (Array.isArray(r.steps) && r.steps.length) m.steps = r.steps;
+    if (r.prep) m.prep = r.prep;
+    if (!m.notes && r.notes) m.notes = r.notes;
+    save_plan();
+    render_week();
+  });
+}
+
 function meal_detail_html(m) {
   let h = '';
   if (m.servings) h += '<div>' + esc(m.servings) + '</div>';
@@ -231,8 +295,12 @@ function meal_detail_html(m) {
   }
   if (Array.isArray(m.steps) && m.steps.length) {
     h += '<h4>Preparation :</h4><ol>' + m.steps.map(s => '<li>' + esc(s) + '</li>').join('') + '</ol>';
+  } else if (typeof m.steps === 'string' && m.steps.trim()) {
+    h += '<h4>Preparation :</h4><div>' + esc(m.steps) + '</div>';
   } else if (m.prep) {
     h += '<h4>Preparation :</h4><div>' + esc(m.prep) + '</div>';
+  } else {
+    h += '<h4>Preparation :</h4><div>Loading instructions…</div>';
   }
   if (m.notes) h += '<h4>Notes :</h4><div>' + esc(m.notes) + '</div>';
   return h;
@@ -258,6 +326,10 @@ function on_week_click(e) {
     const key = meal.getAttribute('data-key');
     if (open_meals.has(key)) open_meals.delete(key); else open_meals.add(key);
     render_week();
+    if (open_meals.has(key)) {
+      const parts = key.split('#');
+      recover_meal(parts[0], Number(parts[1]));
+    }
     return;
   }
   const day = e.target.closest('[data-act="toggle-day"]');

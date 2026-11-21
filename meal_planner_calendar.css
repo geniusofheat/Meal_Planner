@@ -78,16 +78,16 @@
   border: 2px solid var(--btn-navy);
   font-weight: 700;
 }
-/* Highlighted (something planned): navy square, orange number */
+/* Highlighted (something planned): orange square, navy number */
 .cal-day.planned {
-  background: var(--btn-navy);
-  border-color: var(--btn-navy);
-  color: #ffa500;
+  background: #ffa500;
+  border-color: #d98200;
+  color: var(--btn-navy);
   font-weight: 700;
   cursor: pointer;
 }
 .cal-day.planned.selected {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--gold);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--btn-navy);
   position: relative;
 }
 /* Choosing a day for a recipe: every day is tappable */

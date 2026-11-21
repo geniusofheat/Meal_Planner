@@ -5,6 +5,7 @@
 import { auth, db, onAuthStateChanged } from './firebase_config.js';
 import {
   GoogleAuthProvider,
+  signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
   signInWithEmailAndPassword,
@@ -197,16 +198,23 @@ export async function signIn(email, password, showError) {
 }
 
 // ── Google Sign In ─────────────────────────────────────────────
-// Full-page redirect to Google (fills the viewport), then back here.
-// The auth listener above creates the user doc and redirects to the
-// free or full page once Firebase finishes the redirect sign-in.
+// Popup flow. On phones Chrome opens it as a full-screen tab, and it
+// keeps working in browsers that block the third-party storage a
+// full-page redirect needs (a redirect from github.io to Google and back
+// loses the sign-in there). Redirect is only a fallback if the popup
+// cannot open. The auth listener above creates the user doc and sends
+// the user to the free or full page.
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 
 export async function signInWithGoogle(showError) {
   try {
-    await signInWithRedirect(auth, googleProvider);
+    await signInWithPopup(auth, googleProvider);
   } catch (e) {
+    if (e.code === 'auth/popup-blocked' || e.code === 'auth/operation-not-supported-in-this-environment') {
+      try { await signInWithRedirect(auth, googleProvider); return; } catch (e2) { e = e2; }
+    }
+    if (e.code === 'auth/popup-closed-by-user' || e.code === 'auth/cancelled-popup-request') return;
     if (e.code === 'auth/unauthorized-domain') {
       if (showError) showError('This site is not authorized for Google sign-in yet.');
     } else {
@@ -216,7 +224,7 @@ export async function signInWithGoogle(showError) {
   }
 }
 
-// Finish a redirect-style sign-in when Google sends the user back
+// Finish a redirect-style sign-in if the fallback above was used
 getRedirectResult(auth).catch(e => {
   console.error('Redirect sign-in error:', e);
   const el = document.getElementById('sign_in_error');
