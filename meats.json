@@ -144,466 +144,6 @@
     ]
   },
   {
-    "id": "beef",
-    "icon": "🥩",
-    "name": "Beef",
-    "desc": "Classic beef dishes from steaks and roasts to stews, stir fries, and slow-cooked comfort food.",
-    "recipes": [
-      {
-        "name": "Beef Chili",
-        "servings": "6 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) ground beef",
-          "2 cans (14 oz each) kidney beans, drained",
-          "1 can (28 oz) crushed tomatoes",
-          "1 onion, diced",
-          "4 garlic cloves, minced",
-          "1 red bell pepper, diced",
-          "2 tbsp chili powder",
-          "1 tsp cumin",
-          "1 tsp smoked paprika",
-          "½ tsp cayenne",
-          "Salt and pepper",
-          "2 tbsp olive oil",
-          "Toppings: sour cream, cheese, green onions"
-        ],
-        "prep": "Heat olive oil in a large pot over medium heat. Brown ground beef and drain excess fat. Add onion, pepper, and garlic and cook until softened. Add all spices and cook 1 minute. Add crushed tomatoes and beans. Bring to a boil. Reduce heat and simmer uncovered 30–40 minutes until thick. Season with salt and pepper. Serve with toppings."
-      },
-      {
-        "name": "Beef Kebabs",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) ground beef",
-          "1 onion, grated",
-          "4 garlic cloves, minced",
-          "¼ cup fresh parsley, chopped",
-          "1 tsp cumin",
-          "1 tsp coriander",
-          "½ tsp cinnamon",
-          "½ tsp cayenne",
-          "Salt and pepper",
-          "Flatbread, tzatziki, and salad to serve"
-        ],
-        "prep": "Combine ground beef with grated onion, garlic, parsley, and all spices. Mix well. Refrigerate 30 minutes. Shape around flat metal skewers into long sausage shapes, pressing firmly. Grill over high heat or cook in a grill pan, turning occasionally, until cooked through and charred in spots — about 10–12 minutes. Serve with flatbread, tzatziki, and fresh salad."
-      },
-      {
-        "name": "Beef Rendang",
-        "servings": "6 servings",
-        "ingredients": [
-          "1 kg (2 lbs) beef chuck, cubed",
-          "Paste: 6 shallots, 4 garlic cloves, 3 red chilies, 2-inch galangal, 2-inch ginger, 2 lemongrass stalks",
-          "2 cans (14 oz each) coconut milk",
-          "4 kaffir lime leaves",
-          "1 cinnamon stick",
-          "3 star anise",
-          "2 tbsp oil",
-          "Salt and sugar to taste",
-          "Toasted desiccated coconut"
-        ],
-        "prep": "Blend paste ingredients until smooth. Heat oil in a large wok or pot. Cook paste over medium heat until fragrant and oil separates, about 10 minutes. Add beef and stir to coat. Add coconut milk, lime leaves, cinnamon, and star anise. Simmer uncovered over medium-low heat stirring occasionally 2–3 hours until liquid is almost completely absorbed and beef is dark and dry-fried. Add toasted coconut in the last 30 minutes."
-      },
-      {
-        "name": "Beef Short Ribs",
-        "servings": "4 servings",
-        "ingredients": [
-          "1.5 kg (3 lbs) bone-in beef short ribs",
-          "1 onion, diced",
-          "3 carrots, diced",
-          "4 garlic cloves",
-          "2 cups (480 ml) red wine",
-          "2 cups (480 ml) beef broth",
-          "2 tbsp tomato paste",
-          "Fresh thyme and bay leaf",
-          "2 tbsp olive oil",
-          "Salt and pepper"
-        ],
-        "prep": "Preheat oven to 325°F (165°C). Season short ribs generously with salt and pepper. Sear in olive oil in a Dutch oven over high heat on all sides until deeply browned. Remove. Cook vegetables until softened. Add garlic and tomato paste. Add wine and reduce by half. Add broth and herbs. Return ribs bone side up. Cover and braise 3–3.5 hours until meat is falling off the bone. Strain sauce and reduce if desired."
-      },
-      {
-        "name": "Beef Stew",
-        "servings": "6 servings",
-        "ingredients": [
-          "1 kg (2 lbs) beef chuck, cut into 2-inch cubes",
-          "3 potatoes, cubed",
-          "3 carrots, sliced",
-          "2 celery stalks, sliced",
-          "1 onion, diced",
-          "4 garlic cloves, minced",
-          "2 cups (480 ml) beef broth",
-          "1 cup (240 ml) red wine",
-          "2 tbsp tomato paste",
-          "2 tbsp flour",
-          "2 tbsp olive oil",
-          "Fresh thyme and bay leaf",
-          "Salt and pepper"
-        ],
-        "prep": "Season beef with salt and pepper and dust with flour. Brown in olive oil in a large pot over high heat in batches. Remove beef. Cook onion, carrots, and celery until softened. Add garlic and tomato paste and cook 1 minute. Add wine and reduce. Add broth, herbs, and beef. Bring to a boil. Reduce heat, cover, and simmer 1.5 hours. Add potatoes and cook 30 more minutes until everything is tender."
-      },
-      {
-        "name": "Beef Stroganoff",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) beef sirloin or tenderloin, thinly sliced",
-          "300 g (10.5 oz) cremini mushrooms, sliced",
-          "1 onion, thinly sliced",
-          "3 garlic cloves, minced",
-          "1 cup (240 ml) beef broth",
-          "1 cup (240 ml) sour cream",
-          "2 tbsp Dijon mustard",
-          "2 tbsp butter",
-          "1 tbsp Worcestershire sauce",
-          "Fresh parsley",
-          "Salt and pepper",
-          "Egg noodles or rice to serve"
-        ],
-        "prep": "Season beef strips with salt and pepper. Heat butter in a large skillet over high heat. Cook beef quickly in batches until browned — do not overcook. Remove. Cook mushrooms and onions until golden. Add garlic and cook 1 minute. Add broth and Worcestershire and reduce by half. Lower heat and stir in sour cream and mustard. Return beef and heat through gently. Do not boil after adding sour cream. Serve over egg noodles."
-      },
-      {
-        "name": "Beef Tacos",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) ground beef",
-          "1 onion, diced",
-          "4 garlic cloves, minced",
-          "1 can (14 oz) diced tomatoes",
-          "2 tsp cumin",
-          "1 tsp chili powder",
-          "1 tsp smoked paprika",
-          "½ tsp oregano",
-          "Salt and pepper",
-          "8 corn or flour tortillas",
-          "Toppings: shredded cheese, sour cream, salsa, avocado, cilantro, lime"
-        ],
-        "prep": "Brown ground beef in a large skillet over medium-high heat, breaking up lumps. Drain excess fat. Add onion and cook until softened. Add garlic and all spices and cook 1 minute. Add diced tomatoes and simmer 10 minutes until most liquid evaporates. Season with salt and pepper. Warm tortillas. Fill with beef mixture and desired toppings."
-      },
-      {
-        "name": "Beef Wellington",
-        "servings": "6 servings",
-        "ingredients": [
-          "1 kg (2 lbs) beef tenderloin, trimmed",
-          "500 g (1 lb) cremini mushrooms, finely chopped (duxelles)",
-          "6 slices prosciutto",
-          "2 tbsp Dijon mustard",
-          "1 sheet puff pastry",
-          "1 egg, beaten",
-          "2 tbsp butter",
-          "Salt and pepper"
-        ],
-        "prep": "Season tenderloin and sear in butter over very high heat on all sides. Cool completely. Brush with Dijon mustard. Make duxelles by cooking mushrooms in butter until all moisture evaporates — about 15 minutes. Cool. Lay prosciutto on plastic wrap, spread duxelles, place beef at edge and roll tightly. Refrigerate 30 minutes. Wrap in puff pastry, seal edges with egg wash. Brush with egg wash. Bake at 425°F 25–30 minutes until pastry is golden and beef reaches 125°F for medium rare. Rest 10 minutes."
-      },
-      {
-        "name": "Classic Beef Meatloaf",
-        "servings": "6 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) ground beef",
-          "½ cup breadcrumbs",
-          "½ cup milk",
-          "2 eggs",
-          "1 onion, finely diced",
-          "3 garlic cloves, minced",
-          "2 tbsp Worcestershire sauce",
-          "1 tsp dried thyme",
-          "Salt and pepper",
-          "Glaze: ½ cup ketchup, 2 tbsp brown sugar, 1 tbsp Dijon mustard"
-        ],
-        "prep": "Preheat oven to 375°F (190°C). Soak breadcrumbs in milk 5 minutes. Combine ground beef, breadcrumbs, eggs, onion, garlic, Worcestershire, thyme, salt and pepper. Mix gently until just combined — do not overmix. Form into a loaf shape in a baking dish or loaf pan. Mix glaze ingredients and spread over top. Bake 55–65 minutes until internal temperature reaches 160°F. Rest 10 minutes before slicing."
-      },
-      {
-        "name": "Classic Pot Roast",
-        "servings": "6 servings",
-        "ingredients": [
-          "1.5 kg (3 lbs) beef chuck roast",
-          "3 carrots, cut into chunks",
-          "3 celery stalks, cut into chunks",
-          "1 onion, quartered",
-          "4 garlic cloves, minced",
-          "2 cups (480 ml) beef broth",
-          "1 cup (240 ml) red wine",
-          "2 tbsp tomato paste",
-          "2 tbsp olive oil",
-          "Fresh thyme and rosemary",
-          "Salt and pepper"
-        ],
-        "prep": "Preheat oven to 325°F (165°C). Pat beef dry and season generously with salt and pepper. Heat olive oil in a large Dutch oven over high heat. Sear beef on all sides until deeply browned, about 3–4 minutes per side. Remove beef. Add onion, carrots, and celery and cook 3 minutes. Add garlic and tomato paste and cook 1 minute. Add wine and scrape up any browned bits. Add broth and herbs. Return beef. Cover tightly and braise in oven 3–3.5 hours until fork tender. Rest 15 minutes before slicing."
-      },
-      {
-        "name": "Korean Beef Bulgogi",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) beef ribeye or sirloin, very thinly sliced",
-          "Marinade: 4 tbsp soy sauce, 2 tbsp sesame oil, 2 tbsp sugar, 1 Asian pear or ½ cup pear juice, 4 garlic cloves minced, 1 tbsp fresh ginger, 2 green onions sliced, 1 tsp black pepper",
-          "Sesame seeds and green onions to garnish"
-        ],
-        "prep": "If possible freeze beef 30 minutes for easier thin slicing. Slice paper thin against the grain. Mix all marinade ingredients together. Combine beef with marinade and mix well. Marinate at least 30 minutes, ideally 2 hours. Cook beef in a very hot skillet or grill pan in batches, not crowding the pan. Cook each batch 1–2 minutes per side until caramelized. Garnish with sesame seeds and green onions. Serve with steamed rice."
-      },
-      {
-        "name": "Pan Seared Ribeye Steak",
-        "servings": "2 servings",
-        "ingredients": [
-          "2 ribeye steaks, 1.5 inches thick",
-          "4 tbsp unsalted butter",
-          "4 garlic cloves, smashed",
-          "Fresh thyme and rosemary sprigs",
-          "2 tbsp vegetable oil",
-          "Flaky sea salt and black pepper"
-        ],
-        "prep": "Remove steaks from fridge 45 minutes before cooking. Pat completely dry. Season generously with salt and pepper on all sides. Heat oil in a heavy cast iron skillet over very high heat until just smoking. Add steaks and cook without moving 3–4 minutes until deeply browned. Flip and cook 2–3 minutes. Add butter, garlic, and herbs. Tilt pan and baste steaks continuously with foamy butter for 2 minutes. Remove and rest on a rack 8–10 minutes before slicing."
-      },
-      {
-        "name": "Philly Cheesesteak",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) ribeye steak, very thinly sliced",
-          "2 onions, thinly sliced",
-          "2 green bell peppers, thinly sliced",
-          "200 g (7 oz) provolone or Cheez Whiz",
-          "4 hoagie rolls",
-          "2 tbsp butter",
-          "Salt and pepper"
-        ],
-        "prep": "Freeze steak 30 minutes for easier slicing. Slice paper thin. Cook onions and peppers in butter over medium heat until very soft and slightly caramelized — about 15 minutes. Season. Push to the side or remove. Increase heat to high. Cook beef quickly, seasoning with salt and pepper, breaking into small pieces. Combine with onions and peppers. Top with cheese slices and cover pan briefly until melted. Serve on hoagie rolls."
-      }
-    ]
-  },
-  {
-    "id": "chicken",
-    "icon": "🍗",
-    "name": "Chicken",
-    "desc": "Roasted, fried, grilled, braised, and baked chicken dishes from around the world.",
-    "recipes": [
-      {
-        "name": "Crispy Chicken Nuggets",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 lb chicken breast, cut into bite-sized pieces",
-          "1 cup all-purpose flour",
-          "1 tsp garlic powder",
-          "1 tsp onion powder",
-          "1 tsp paprika",
-          "salt and pepper",
-          "2 eggs, beaten",
-          "1 cup breadcrumbs (panko for extra crunch)",
-          "1 tsp dried oregano (optional)",
-          "vegetable oil for frying"
-        ],
-        "prep": "Pat chicken dry. Set up three bowls: (1) flour mixed with garlic powder, onion powder, paprika, salt, and pepper, (2) beaten eggs, (3) breadcrumbs with oregano. Dredge chicken in flour, dip in egg, then coat in breadcrumbs. Heat oil to about 350°F. Fry nuggets in batches 4–5 minutes per side until golden brown and internal temperature reaches 165°F. Remove to paper towels and serve hot."
-      },
-      {
-        "name": "BBQ Chicken",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole chicken, cut into pieces",
-          "BBQ sauce: 1 cup ketchup, ¼ cup brown sugar, 2 tbsp apple cider vinegar, 1 tbsp Worcestershire, 1 tsp smoked paprika, 1 tsp garlic powder, salt and pepper",
-          "Dry rub: 1 tbsp smoked paprika, 1 tsp garlic powder, 1 tsp onion powder, 1 tsp brown sugar, salt and pepper"
-        ],
-        "prep": "Apply dry rub to chicken. Grill over indirect medium heat 35–40 minutes turning occasionally until mostly cooked through. Brush generously with BBQ sauce. Move to direct heat. Grill 5 minutes per side, brushing more sauce and turning, until caramelized and internal temperature reaches 165°F. Rest 5 minutes."
-      },
-      {
-        "name": "Butter Chicken",
-        "servings": "4 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) boneless chicken thighs, cubed",
-          "Marinade: 1 cup yogurt, 2 tbsp lemon juice, 2 tsp cumin, 1 tsp turmeric, 1 tsp garam masala, 1 tsp chili powder, 4 garlic cloves, 1 tbsp ginger",
-          "Sauce: 2 tbsp butter, 1 onion diced, 4 garlic cloves, 1 tbsp ginger, 1 can (28 oz) crushed tomatoes, 1 cup heavy cream, 2 tsp garam masala, 1 tsp cumin, 1 tsp paprika, salt and sugar"
-        ],
-        "prep": "Marinate chicken at least 2 hours. Grill or broil chicken until charred and cooked through. Make sauce by cooking onion in butter until golden. Add garlic, ginger, and spices. Add tomatoes and simmer 20 minutes. Blend until smooth. Return to pan. Add cream and simmer 10 minutes. Add cooked chicken and simmer 5 more minutes. Garnish with cream and cilantro. Serve with naan or rice."
-      },
-      {
-        "name": "Chicken Cacciatore",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole chicken, cut into pieces",
-          "1 onion, diced",
-          "1 red bell pepper, diced",
-          "4 garlic cloves, minced",
-          "1 cup (240 ml) dry white wine",
-          "1 can (28 oz) crushed tomatoes",
-          "200 g (7 oz) cremini mushrooms, sliced",
-          "2 tbsp olive oil",
-          "Fresh rosemary and thyme",
-          "Salt and pepper",
-          "Capers and olives (optional)"
-        ],
-        "prep": "Season chicken and brown in olive oil on all sides. Remove. Cook onion, pepper, and mushrooms until softened. Add garlic and cook 1 minute. Add wine and reduce by half. Add crushed tomatoes and herbs. Return chicken. Simmer covered 40–45 minutes until chicken is very tender. Stir in capers and olives if using. Season with salt and pepper."
-      },
-      {
-        "name": "Chicken Cordon Bleu",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 boneless skinless chicken breasts",
-          "4 slices ham",
-          "4 slices Swiss cheese",
-          "1 cup breadcrumbs",
-          "½ cup flour",
-          "2 eggs, beaten",
-          "2 tbsp butter, melted",
-          "Salt, pepper, and paprika",
-          "Dijon cream sauce to serve"
-        ],
-        "prep": "Pound chicken breasts thin. Season with salt and pepper. Place a slice of ham and Swiss cheese on each breast. Roll up tightly and secure with toothpicks. Dredge in flour, dip in egg, coat in breadcrumbs mixed with paprika. Drizzle with melted butter. Bake at 375°F for 30–35 minutes until golden and cooked through. Make a simple cream sauce with butter, garlic, cream, and Dijon mustard. Serve over chicken."
-      },
-      {
-        "name": "Chicken Marsala",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 boneless skinless chicken breasts, pounded thin",
-          "300 g (10.5 oz) cremini mushrooms, sliced",
-          "½ cup flour",
-          "¾ cup (180 ml) Marsala wine",
-          "½ cup (120 ml) chicken broth",
-          "4 tbsp butter",
-          "2 tbsp olive oil",
-          "3 garlic cloves, minced",
-          "Fresh parsley",
-          "Salt and pepper"
-        ],
-        "prep": "Season chicken with salt and pepper and dredge in flour. Heat olive oil and 2 tbsp butter in a large skillet over medium-high heat. Cook chicken 3–4 minutes per side until golden. Remove. Add mushrooms and cook until golden. Add garlic and cook 30 seconds. Add Marsala and cook until reduced by half. Add broth and simmer 3 minutes. Stir in remaining butter. Return chicken and heat through. Garnish with parsley."
-      },
-      {
-        "name": "Chicken Parmesan",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 boneless skinless chicken breasts",
-          "1 cup breadcrumbs",
-          "½ cup Parmesan, grated",
-          "2 eggs, beaten",
-          "½ cup flour",
-          "2 cups marinara sauce",
-          "2 cups shredded mozzarella",
-          "Salt, pepper, and Italian seasoning",
-          "Olive oil for frying"
-        ],
-        "prep": "Pound chicken breasts to even thickness. Season with salt, pepper, and Italian seasoning. Dredge in flour, dip in egg, then coat in breadcrumbs mixed with Parmesan. Pan fry in olive oil over medium-high heat until golden on both sides, about 3–4 minutes per side. Transfer to a baking dish. Top each piece with marinara and mozzarella. Bake at 400°F for 15–20 minutes until cheese is melted and bubbly."
-      },
-      {
-        "name": "Chicken Piccata",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 boneless skinless chicken breasts, pounded thin",
-          "½ cup flour",
-          "4 tbsp butter",
-          "3 tbsp olive oil",
-          "4 garlic cloves, minced",
-          "½ cup (120 ml) dry white wine",
-          "½ cup (120 ml) chicken broth",
-          "Juice of 2 lemons",
-          "3 tbsp capers, rinsed",
-          "Fresh parsley",
-          "Salt and pepper"
-        ],
-        "prep": "Season chicken with salt and pepper. Dredge in flour. Heat olive oil and 2 tbsp butter in a large skillet over medium-high heat. Cook chicken 3–4 minutes per side until golden. Remove. Add garlic and cook 30 seconds. Add wine and cook until reduced by half. Add broth and lemon juice and simmer 3 minutes. Stir in capers and remaining butter until sauce is silky. Return chicken to pan and heat through. Garnish with parsley."
-      },
-      {
-        "name": "Chicken Shawarma",
-        "servings": "4 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) boneless chicken thighs",
-          "Marinade: 4 tbsp olive oil, juice of 1 lemon, 4 garlic cloves, 2 tsp cumin, 1 tsp turmeric, 1 tsp coriander, 1 tsp paprika, ½ tsp cinnamon, ½ tsp cayenne, salt and pepper",
-          "Pita bread, hummus, tzatziki, pickles, and salad to serve"
-        ],
-        "prep": "Mix marinade ingredients. Coat chicken thoroughly. Marinate at least 2 hours or overnight. Grill or cook in a cast iron skillet over high heat 4–5 minutes per side until charred and cooked through. Rest 5 minutes and slice thinly. Serve in warmed pita with hummus, tzatziki, pickles, and fresh vegetables."
-      },
-      {
-        "name": "Chicken Souvlaki",
-        "servings": "4 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) boneless chicken breast, cubed",
-          "Marinade: 4 tbsp olive oil, juice of 1 lemon, 4 garlic cloves, 1 tsp oregano, 1 tsp cumin, salt and pepper",
-          "Pita, tzatziki, red onion, tomatoes, and cucumber to serve"
-        ],
-        "prep": "Mix marinade and coat chicken thoroughly. Marinate at least 1 hour. Thread onto skewers. Grill over high heat turning occasionally until chicken is cooked through and nicely charred — about 10–12 minutes. Serve in warm pita with tzatziki, sliced red onion, tomatoes, and cucumber."
-      },
-      {
-        "name": "Chicken Tikka Masala",
-        "servings": "4 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) boneless chicken breast, cubed",
-          "Marinade: 1 cup yogurt, 2 tsp garam masala, 1 tsp cumin, 1 tsp turmeric, 4 garlic cloves, 1 tbsp ginger",
-          "Sauce: 2 tbsp butter, 1 onion, 4 garlic cloves, 1 tbsp ginger, 1 can crushed tomatoes, 1 cup heavy cream, 2 tsp garam masala, 1 tsp cumin, 1 tsp coriander, paprika, salt"
-        ],
-        "prep": "Marinate chicken 2 hours. Grill or broil until lightly charred. Make sauce: cook onion in butter until golden. Add garlic, ginger, and spices. Add tomatoes and simmer 15 minutes. Blend until smooth. Add cream and simmer 10 minutes. Add chicken and simmer 5 minutes. Serve with basmati rice and naan."
-      },
-      {
-        "name": "Coq au Vin",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole chicken, cut into pieces",
-          "200 g (7 oz) bacon lardons",
-          "300 g (10.5 oz) cremini mushrooms",
-          "1 cup pearl onions",
-          "2 cups (480 ml) red wine",
-          "1 cup (240 ml) chicken broth",
-          "2 tbsp tomato paste",
-          "4 garlic cloves",
-          "Bouquet garni",
-          "3 tbsp butter",
-          "Salt and pepper"
-        ],
-        "prep": "Brown bacon in a Dutch oven. Remove. Brown chicken pieces in bacon fat on all sides. Remove. Cook pearl onions and mushrooms until golden. Add garlic and tomato paste. Add wine, broth, and bouquet garni. Return chicken and bacon. Braise covered at 325°F for 1.5 hours until chicken is very tender. Remove chicken. Strain and reduce sauce. Return chicken and mushrooms to sauce. Serve with crusty bread or mashed potatoes."
-      },
-      {
-        "name": "Honey Garlic Chicken",
-        "servings": "4 servings",
-        "ingredients": [
-          "8 bone-in skin-on chicken thighs",
-          "Sauce: 4 tbsp honey, 3 tbsp soy sauce, 4 garlic cloves minced, 1 tbsp apple cider vinegar, 1 tsp sesame oil, red pepper flakes",
-          "2 tbsp olive oil",
-          "Salt and pepper",
-          "Sesame seeds and green onions to garnish"
-        ],
-        "prep": "Preheat oven to 400°F (200°C). Season chicken with salt and pepper. Heat olive oil in an oven-safe skillet over medium-high heat. Sear chicken skin side down 4–5 minutes until golden and crispy. Flip. Mix sauce ingredients and pour over chicken. Transfer to oven and bake 25–30 minutes until cooked through, basting with sauce halfway through. Garnish with sesame seeds and green onions."
-      },
-      {
-        "name": "Lemon Herb Roasted Chicken Thighs",
-        "servings": "4 servings",
-        "ingredients": [
-          "8 bone-in skin-on chicken thighs",
-          "Juice and zest of 2 lemons",
-          "4 garlic cloves, minced",
-          "3 tbsp olive oil",
-          "2 tsp dried oregano",
-          "1 tsp dried thyme",
-          "1 tsp paprika",
-          "Salt and black pepper",
-          "Fresh parsley to garnish"
-        ],
-        "prep": "Preheat oven to 425°F (220°C). Mix lemon juice, zest, garlic, olive oil, and all herbs and spices together. Score chicken thighs and coat thoroughly in marinade. Marinate 30 minutes if time allows. Place skin side up in a baking dish. Roast 35–40 minutes until skin is deeply golden and crispy and juices run clear. Baste with pan juices halfway through. Garnish with fresh parsley."
-      },
-      {
-        "name": "Roast Chicken",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole chicken, about 1.8 kg (4 lbs)",
-          "4 tbsp unsalted butter, softened",
-          "4 garlic cloves, minced",
-          "1 lemon, halved",
-          "Fresh thyme and rosemary",
-          "Salt and black pepper",
-          "1 onion, quartered",
-          "Olive oil"
-        ],
-        "prep": "Preheat oven to 425°F (220°C). Pat chicken dry inside and out. Mix butter with garlic, thyme, rosemary, salt and pepper. Carefully separate skin from breast and rub butter mixture directly under the skin. Season the entire outside generously with salt and pepper. Stuff cavity with lemon halves, onion, and remaining herbs. Tie legs together. Place on a rack in a roasting pan. Roast 60–75 minutes until juices run clear and internal temperature reaches 165°F. Rest 15 minutes before carving."
-      },
-      {
-        "name": "Southern Fried Chicken",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole chicken, cut into pieces",
-          "2 cups buttermilk",
-          "2 cups flour",
-          "1 tbsp garlic powder",
-          "1 tbsp onion powder",
-          "1 tsp paprika",
-          "1 tsp cayenne",
-          "1 tsp dried thyme",
-          "Salt and black pepper",
-          "Oil for frying"
-        ],
-        "prep": "Soak chicken in buttermilk with salt and pepper for at least 4 hours or overnight. Mix flour with all spices, salt, and pepper. Remove chicken from buttermilk and dredge in seasoned flour, pressing to adhere. Let sit on a rack 15 minutes. Heat oil to 325°F in a large heavy pot. Fry chicken in batches — dark meat 13–15 minutes, white meat 10–12 minutes, turning once, until golden brown and cooked through. Drain on a rack."
-      }
-    ]
-  },
-  {
     "id": "lamb",
     "icon": "🍖",
     "name": "Lamb",
@@ -1080,301 +620,6 @@
     ]
   },
   {
-    "id": "turkey",
-    "icon": "🦃",
-    "name": "Turkey",
-    "desc": "Whole roasted turkey, turkey breast, turkey burgers, ground turkey dishes, and holiday classics.",
-    "recipes": [
-      {
-        "name": "Ground Turkey Tacos",
-        "servings": "4 servings",
-        "ingredients": [
-          "500 g (1 lb) ground turkey",
-          "1 onion, diced",
-          "3 garlic cloves, minced",
-          "2 tsp cumin",
-          "1 tsp chili powder",
-          "1 tsp smoked paprika",
-          "½ tsp oregano",
-          "1 can (14 oz) diced tomatoes",
-          "Salt and pepper",
-          "8 taco shells or tortillas",
-          "Toppings: cheese, sour cream, salsa, lettuce, avocado"
-        ],
-        "prep": "Brown turkey in a skillet. Add onion and garlic and cook until softened. Add all spices and cook 1 minute. Add tomatoes and simmer 10 minutes. Season with salt and pepper. Serve in taco shells with desired toppings."
-      },
-      {
-        "name": "Roast Turkey",
-        "servings": "10 servings",
-        "ingredients": [
-          "1 whole turkey, about 5.5 kg (12 lbs)",
-          "½ cup (115 g) unsalted butter, softened",
-          "4 garlic cloves, minced",
-          "1 tbsp fresh thyme",
-          "1 tbsp fresh rosemary",
-          "1 tbsp fresh sage",
-          "1 onion, quartered",
-          "1 lemon, quartered",
-          "4 cups (960 ml) turkey or chicken broth",
-          "Salt and black pepper"
-        ],
-        "prep": "The night before, rub turkey all over with salt and refrigerate uncovered. Preheat oven to 425°F (220°C). Mix butter with garlic and fresh herbs. Loosen skin and rub butter under skin over breast and thighs. Rub outside with remaining butter. Season with pepper. Stuff cavity with onion and lemon. Place on a rack in a large roasting pan. Pour 2 cups broth into pan. Roast at high heat 30 minutes. Reduce to 325°F. Roast about 2.5–3 hours total, basting every 30 minutes and adding broth as needed. Internal temperature should reach 165°F at the thigh. Rest 30 minutes before carving."
-      },
-      {
-        "name": "Turkey Breast Roast",
-        "servings": "6 servings",
-        "ingredients": [
-          "1.5 kg (3 lbs) boneless turkey breast",
-          "4 tbsp butter, softened",
-          "4 garlic cloves, minced",
-          "1 tsp dried sage",
-          "1 tsp dried thyme",
-          "1 tsp dried rosemary",
-          "Salt and black pepper",
-          "1 cup (240 ml) chicken broth"
-        ],
-        "prep": "Preheat oven to 375°F (190°C). Mix butter with garlic and herbs. Loosen skin and rub butter under skin and all over outside. Season generously with salt and pepper. Place on a rack in a roasting pan with broth below. Roast 60–80 minutes basting every 20 minutes until internal temperature reaches 165°F. Rest 15 minutes before slicing."
-      },
-      {
-        "name": "Turkey Burgers",
-        "servings": "4 servings",
-        "ingredients": [
-          "500 g (1 lb) ground turkey",
-          "¼ cup breadcrumbs",
-          "1 egg",
-          "2 garlic cloves, minced",
-          "1 tbsp Worcestershire sauce",
-          "1 tsp onion powder",
-          "Salt and pepper",
-          "Burger buns and toppings"
-        ],
-        "prep": "Mix all ingredients gently — do not overwork. Shape into 4 patties. Make a small indent in the center of each to prevent puffing. Season outside with salt and pepper. Grill or cook in a skillet over medium heat 5–6 minutes per side until cooked through to 165°F. Do not press down. Rest 3 minutes. Serve on buns with desired toppings."
-      },
-      {
-        "name": "Turkey Kebabs",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) turkey breast, cubed",
-          "Marinade: 3 tbsp olive oil, juice of 1 lemon, 3 garlic cloves, 1 tsp cumin, 1 tsp paprika, ½ tsp oregano, salt and pepper",
-          "Bell peppers and onion, cubed for skewers",
-          "Tzatziki to serve"
-        ],
-        "prep": "Mix marinade and coat turkey. Marinate 1 hour. Thread turkey, peppers, and onion alternately onto skewers. Grill over medium-high heat turning occasionally until turkey is cooked through and vegetables are slightly charred — about 12–15 minutes. Serve with tzatziki and pita or rice."
-      },
-      {
-        "name": "Turkey Lettuce Wraps",
-        "servings": "4 servings",
-        "ingredients": [
-          "500 g (1 lb) ground turkey",
-          "1 onion, finely diced",
-          "3 garlic cloves, minced",
-          "1 tbsp fresh ginger",
-          "1 can (8 oz) water chestnuts, drained and chopped",
-          "3 tbsp soy sauce",
-          "1 tbsp hoisin sauce",
-          "1 tbsp sesame oil",
-          "1 tsp rice vinegar",
-          "Butter lettuce leaves",
-          "Green onions and sesame seeds to garnish"
-        ],
-        "prep": "Cook turkey in a skillet over medium-high heat until browned. Add onion, garlic, and ginger and cook 3 minutes. Add water chestnuts. Mix soy sauce, hoisin, sesame oil, and vinegar and pour over. Cook 2 minutes. Serve in crisp butter lettuce cups topped with green onions and sesame seeds."
-      },
-      {
-        "name": "Turkey Meatballs",
-        "servings": "4 servings",
-        "ingredients": [
-          "500 g (1 lb) ground turkey",
-          "½ cup breadcrumbs",
-          "¼ cup milk",
-          "1 egg",
-          "3 garlic cloves, minced",
-          "¼ cup Parmesan, grated",
-          "2 tbsp fresh parsley",
-          "1 tsp Italian seasoning",
-          "Salt and pepper",
-          "2 cups marinara sauce"
-        ],
-        "prep": "Soak breadcrumbs in milk 5 minutes. Combine turkey, breadcrumbs, egg, garlic, Parmesan, parsley, Italian seasoning, salt and pepper. Mix gently. Roll into golf ball sized balls. Bake on a greased baking sheet at 400°F for 18–20 minutes or pan fry in olive oil until golden on all sides. Simmer in marinara sauce 10 minutes. Serve over pasta or as a sub."
-      },
-      {
-        "name": "Turkey Meatloaf",
-        "servings": "6 servings",
-        "ingredients": [
-          "700 g (1.5 lbs) ground turkey",
-          "½ cup breadcrumbs",
-          "½ cup milk",
-          "2 eggs",
-          "1 onion, finely diced",
-          "3 garlic cloves, minced",
-          "2 tbsp Worcestershire sauce",
-          "1 tsp dried thyme",
-          "Salt and pepper",
-          "Glaze: ½ cup ketchup, 2 tbsp brown sugar, 1 tbsp Dijon"
-        ],
-        "prep": "Preheat oven to 375°F (190°C). Soak breadcrumbs in milk. Mix turkey with all ingredients gently. Form into a loaf in a baking dish. Mix glaze and spread over top. Bake 55–60 minutes until internal temperature reaches 165°F. Rest 10 minutes before slicing."
-      },
-      {
-        "name": "Turkey Piccata",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 turkey breast cutlets, pounded thin",
-          "½ cup flour",
-          "4 tbsp butter",
-          "2 tbsp olive oil",
-          "4 garlic cloves, minced",
-          "½ cup (120 ml) dry white wine",
-          "½ cup (120 ml) chicken broth",
-          "Juice of 2 lemons",
-          "3 tbsp capers, rinsed",
-          "Fresh parsley",
-          "Salt and pepper"
-        ],
-        "prep": "Season turkey with salt and pepper. Dredge in flour. Heat olive oil and 2 tbsp butter in a skillet over medium-high heat. Cook turkey 3 minutes per side until golden. Remove. Add garlic and cook 30 seconds. Add wine and reduce by half. Add broth and lemon juice and simmer 3 minutes. Stir in capers and remaining butter. Return turkey and heat through. Garnish with parsley."
-      },
-      {
-        "name": "Turkey Pot Pie",
-        "servings": "6 servings",
-        "ingredients": [
-          "3 cups cooked turkey, shredded",
-          "1 cup frozen peas",
-          "1 cup carrots, diced and cooked",
-          "1 cup celery, diced and cooked",
-          "1 onion, diced",
-          "4 tbsp butter",
-          "¼ cup flour",
-          "2 cups (480 ml) chicken broth",
-          "1 cup (240 ml) heavy cream",
-          "Salt, pepper, and thyme",
-          "2 sheets pie crust or puff pastry"
-        ],
-        "prep": "Preheat oven to 400°F (200°C). Melt butter and cook onion until soft. Whisk in flour and cook 1 minute. Gradually add broth and cream. Stir until thickened. Add turkey, peas, carrots, celery, thyme, salt, and pepper. Line a pie dish with one crust. Fill with turkey mixture. Top with second crust, seal edges, and cut slits. Brush with egg wash. Bake 35–40 minutes until golden."
-      },
-      {
-        "name": "Turkey Soup",
-        "servings": "6 servings",
-        "ingredients": [
-          "3 cups cooked turkey, shredded",
-          "8 cups (1.9 L) turkey or chicken broth",
-          "3 carrots, sliced",
-          "3 celery stalks, sliced",
-          "1 onion, diced",
-          "3 garlic cloves, minced",
-          "2 cups egg noodles",
-          "Fresh thyme and bay leaf",
-          "2 tbsp olive oil",
-          "Salt and pepper",
-          "Fresh parsley"
-        ],
-        "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and cook 1 minute. Add broth, thyme, and bay leaf. Bring to a boil. Add noodles and cook until tender. Add shredded turkey and heat through. Season with salt and pepper. Remove bay leaf and garnish with fresh parsley."
-      },
-      {
-        "name": "Turkey Stir Fry",
-        "servings": "4 servings",
-        "ingredients": [
-          "500 g (1 lb) turkey breast, thinly sliced",
-          "2 cups broccoli florets",
-          "1 red bell pepper, sliced",
-          "2 carrots, julienned",
-          "3 garlic cloves, minced",
-          "1 tbsp fresh ginger",
-          "Sauce: 3 tbsp soy sauce, 1 tbsp oyster sauce, 1 tbsp sesame oil, 1 tsp cornstarch, 1 tsp sugar",
-          "2 tbsp vegetable oil"
-        ],
-        "prep": "Mix sauce ingredients. Heat oil in a wok over very high heat. Cook turkey quickly in batches until cooked through. Remove. Add vegetables and stir fry 3–4 minutes until tender-crisp. Add garlic and ginger and cook 30 seconds. Return turkey. Pour sauce over and toss until thickened and glossy. Serve over steamed rice."
-      },
-      {
-        "name": "Turkey Stuffed Peppers",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 large bell peppers, tops cut off and seeded",
-          "500 g (1 lb) ground turkey",
-          "1 cup cooked rice",
-          "1 can (14 oz) diced tomatoes",
-          "1 onion, diced",
-          "3 garlic cloves, minced",
-          "1 tsp Italian seasoning",
-          "1 cup shredded mozzarella",
-          "Salt and pepper",
-          "Olive oil"
-        ],
-        "prep": "Preheat oven to 375°F (190°C). Cook turkey with onion and garlic. Add tomatoes, cooked rice, and Italian seasoning. Season with salt and pepper. Fill peppers with turkey mixture. Place in a baking dish with ¼ cup water in the bottom. Cover with foil and bake 30 minutes. Uncover, top with mozzarella, and bake 15 more minutes until cheese is melted and peppers are tender."
-      },
-      {
-        "name": "Turkey Stuffed with Cornbread Dressing",
-        "servings": "8 servings",
-        "ingredients": [
-          "1 whole turkey, about 4.5 kg (10 lbs)",
-          "Cornbread dressing: 4 cups cornbread crumbled, 1 onion diced, 3 celery stalks diced, 2 eggs, 2 cups chicken broth, 1 tsp sage, salt and pepper",
-          "4 tbsp butter, softened",
-          "Salt and pepper"
-        ],
-        "prep": "Make dressing by combining cornbread, cooked onion and celery, eggs, broth, sage, salt, and pepper — mixture should be moist but not wet. Preheat oven to 325°F. Rub turkey inside and out with butter, salt, and pepper. Loosely stuff with dressing. Tie legs. Roast 3–3.5 hours until internal temperature in thigh reaches 165°F and stuffing reaches 165°F. Rest 20 minutes. Carve and serve with remaining dressing baked separately."
-      }
-    ]
-  },
-  {
-    "id": "bbq",
-    "icon": "🔥",
-    "name": "BBQ",
-    "desc": "Slow-smoked ribs, brisket and pulled pork.",
-    "recipes": [
-      {
-        "name": "Pulled Pork Sandwiches",
-        "servings": "8 servings",
-        "ingredients": [
-          "2 kg (4.5 lbs) pork shoulder",
-          "Dry rub: 2 tbsp brown sugar, 1 tbsp smoked paprika, 1 tbsp garlic powder, 1 tbsp onion powder, 1 tsp cayenne, 1 tbsp salt, 1 tsp pepper",
-          "Apple cider vinegar mop sauce",
-          "BBQ sauce",
-          "Brioche buns and coleslaw"
-        ],
-        "prep": "Apply dry rub and refrigerate overnight. Smoke at 225–250°F with hickory wood for 8–10 hours. Mop with apple cider vinegar mixture every hour. Wrap in foil at 165°F. Continue until 205°F. Rest 1 hour. Shred with two forks discarding fat. Toss with BBQ sauce. Serve on brioche buns piled with coleslaw."
-      },
-      {
-        "name": "Smoked Brisket",
-        "servings": "10 servings",
-        "ingredients": [
-          "3 kg (6.5 lbs) whole beef brisket, flat and point",
-          "Dry rub: 3 tbsp coarse salt, 2 tbsp coarse black pepper, 1 tsp garlic powder",
-          "Wood chunks: oak or hickory",
-          "Target smoker temperature: 225–250°F"
-        ],
-        "prep": "Trim excess fat to ¼ inch. Apply dry rub generously on all sides. Refrigerate uncovered overnight. Bring to room temperature 1 hour before smoking. Smoke fat side up at 225–250°F with oak or hickory wood for 8–12 hours. Spritz with water or apple cider vinegar every 2 hours after the first 3 hours. Wrap in butcher paper at 165°F internal temperature. Continue cooking until 200–205°F. Rest wrapped 1–2 hours in a cooler before slicing against the grain."
-      },
-      {
-        "name": "Smoked Ribs",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 racks spare ribs or baby back ribs",
-          "Dry rub: 3 tbsp brown sugar, 2 tbsp smoked paprika, 1 tbsp garlic powder, 1 tbsp onion powder, 1 tsp cumin, 1 tsp cayenne, 2 tsp salt, 1 tsp black pepper",
-          "Apple juice for spritzing",
-          "BBQ sauce for finishing"
-        ],
-        "prep": "Remove membrane from back of ribs. Apply dry rub generously on all sides. Smoke at 225°F with hickory or apple wood for 3 hours. Spritz with apple juice every 45 minutes. Wrap tightly in foil with a splash of apple juice. Continue smoking 2 more hours. Unwrap. Brush with BBQ sauce and smoke unwrapped 1 final hour. Rest 15 minutes. Slice between bones."
-      },
-      {
-        "name": "Texas Style Beef Ribs",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 racks beef plate ribs, 3 bones each",
-          "Dry rub: 3 tbsp coarse salt, 2 tbsp coarse black pepper, 1 tsp garlic powder",
-          "Oak wood for smoking"
-        ],
-        "prep": "Trim excess fat. Apply dry rub aggressively on all sides. Refrigerate uncovered overnight. Smoke at 275°F with oak wood for 8–10 hours until dark bark forms and internal temperature reaches 200–210°F. The meat should jiggle when shaken. Rest wrapped in butcher paper for at least 1 hour before eating. No BBQ sauce needed — the bark and juices are the sauce."
-      },
-      {
-        "name": "Santa Maria Tri Tip",
-        "servings": "6 servings",
-        "ingredients": [
-          "1.5 kg (3 lbs) tri-tip roast",
-          "Dry rub: 2 tbsp coarse salt, 1 tbsp black pepper, 1 tsp garlic powder, 1 tsp paprika",
-          "Salsa fresca and garlic bread to serve"
-        ],
-        "prep": "Apply dry rub on all sides. Let sit at room temperature 1 hour. Grill over high direct heat 4–5 minutes per side until deeply seared. Move to indirect heat and cook until internal temperature reaches 130–135°F for medium rare — about 20–30 more minutes. Rest 10 minutes. Slice thinly against the grain. Tri-tip has two grain directions — find where they meet in the middle and slice accordingly. Serve with salsa fresca and garlic bread."
-      }
-    ]
-  },
-  {
     "id": "grilled",
     "icon": "🥩",
     "name": "Grilled Meats",
@@ -1490,228 +735,6 @@
           "Tzatziki, hummus, and hot sauce to serve"
         ],
         "prep": "Marinate and season each protein appropriately. Grill items in order of cooking time — chicken first, lamb chops, sausages, and kofta last. Grill tomatoes and peppers alongside. Warm flatbread on the grill. Arrange everything on a large platter. Serve family style with tzatziki, hummus, and hot sauce."
-      }
-    ]
-  },
-  {
-    "id": "duck",
-    "icon": "🦆",
-    "name": "Duck",
-    "desc": "Roasted, braised, confit and fried duck.",
-    "recipes": [
-      {
-        "name": "Braised Duck Legs",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 duck legs",
-          "1 onion, diced",
-          "2 carrots, diced",
-          "4 garlic cloves",
-          "1 cup (240 ml) red wine",
-          "1 cup (240 ml) chicken broth",
-          "1 can (14 oz) diced tomatoes",
-          "Fresh thyme and bay leaf",
-          "2 tbsp olive oil",
-          "Salt and pepper"
-        ],
-        "prep": "Preheat oven to 325°F (165°C). Score duck skin. Season and sear skin side down in a Dutch oven over medium heat until fat renders and skin is golden — about 10 minutes. Flip and sear 2 minutes. Remove. Cook vegetables in rendered fat until softened. Add garlic and wine and reduce. Add broth, tomatoes, and herbs. Return duck legs skin side up. Braise uncovered 1.5–2 hours until very tender."
-      },
-      {
-        "name": "Duck à l'Orange",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole duck, about 2 kg",
-          "Orange sauce: juice of 4 oranges, zest of 1 orange, 2 tbsp Grand Marnier, 1 cup chicken broth, 2 tbsp butter, 1 tbsp honey, salt and pepper",
-          "Salt and black pepper for seasoning"
-        ],
-        "prep": "Score duck skin. Season inside and out with salt and pepper. Roast at 425°F 30 minutes. Drain fat. Reduce to 350°F and roast 60 more minutes until cooked through. Make sauce: cook orange juice with zest and Grand Marnier until reduced by half. Add broth and reduce again. Whisk in cold butter and honey. Season. Carve duck and serve with orange sauce."
-      },
-      {
-        "name": "Duck Breast with Orange Sauce",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 duck breasts",
-          "Sauce: juice of 3 oranges, zest of 1 orange, 2 tbsp honey, 1 tbsp soy sauce, 1 cup (240 ml) chicken broth, 2 tbsp butter, 1 shallot minced",
-          "Salt and black pepper"
-        ],
-        "prep": "Score duck skin in a crosshatch pattern without cutting into flesh. Season generously with salt and pepper. Place skin side down in a cold skillet. Turn heat to medium. Cook 12–15 minutes until most fat is rendered and skin is deeply golden and crispy. Flip and cook 3–5 minutes more for medium rare. Rest 5 minutes. Make sauce by cooking shallot in same pan. Add orange juice and zest, honey, and soy sauce. Reduce by half. Add broth and reduce again. Finish with butter."
-      },
-      {
-        "name": "Duck Confit",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 duck legs",
-          "1 kg (2 lbs) duck fat or enough to submerge",
-          "1 tbsp coarse salt",
-          "1 tsp black pepper",
-          "4 garlic cloves",
-          "Fresh thyme and bay leaf",
-          "½ tsp juniper berries"
-        ],
-        "prep": "Rub duck legs with salt, pepper, garlic, and thyme. Refrigerate uncovered 24 hours. Rinse and pat dry. Preheat oven to 225°F (107°C). Place duck in a deep baking dish and cover completely with melted duck fat. Add herbs and juniper berries. Cover tightly and cook 6–8 hours until meat is very tender and nearly falling off the bone. Cool in fat and store up to 2 weeks. To serve, sear skin side down in a dry hot skillet until deeply golden and crispy."
-      },
-      {
-        "name": "Duck Fried Rice",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 cups day-old cooked rice",
-          "2 cups shredded duck confit or roast duck",
-          "3 large eggs",
-          "1 cup frozen peas",
-          "3 green onions, sliced",
-          "3 garlic cloves, minced",
-          "3 tbsp soy sauce",
-          "1 tbsp oyster sauce",
-          "1 tsp sesame oil",
-          "2 tbsp vegetable oil"
-        ],
-        "prep": "Heat oil in a wok over very high heat. Add eggs and scramble. Add garlic and cook 30 seconds. Add cold rice and stir fry 3 minutes. Add duck, peas, soy sauce, oyster sauce, and sesame oil. Toss everything together until heated through. Add green onions. Drizzle with sesame oil. Serve immediately."
-      },
-      {
-        "name": "Duck Ragu",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 duck legs",
-          "1 onion, finely diced",
-          "2 carrots, finely diced",
-          "2 celery stalks, finely diced",
-          "4 garlic cloves",
-          "1 cup (240 ml) red wine",
-          "1 can (28 oz) crushed tomatoes",
-          "2 tbsp tomato paste",
-          "Fresh thyme and rosemary",
-          "Salt and pepper",
-          "Pappardelle to serve",
-          "Parmesan for serving"
-        ],
-        "prep": "Season duck legs and sear in a Dutch oven over high heat until browned on all sides. Remove. Cook vegetables until softened. Add garlic and tomato paste and cook 1 minute. Add wine and reduce. Add tomatoes and herbs. Return duck. Braise covered at 325°F for 2–2.5 hours until meat falls off the bone. Shred duck meat and discard bones. Reduce sauce if needed. Toss with pappardelle and Parmesan."
-      },
-      {
-        "name": "Duck Tacos",
-        "servings": "4 servings",
-        "ingredients": [
-          "Duck confit from 4 legs, shredded and crisped",
-          "8 corn tortillas",
-          "Toppings: pickled red onion, mango salsa, avocado, cilantro, lime crema, jalapeño"
-        ],
-        "prep": "Shred duck confit meat. Crisp in a hot dry skillet until golden and slightly caramelized. Warm tortillas on a dry skillet. Fill with crispy duck meat. Top with pickled red onion, mango salsa, sliced avocado, fresh cilantro, and lime crema. Serve with lime wedges."
-      },
-      {
-        "name": "Peking Duck",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole duck, about 2 kg (4.5 lbs)",
-          "2 tbsp maltose or honey",
-          "1 tbsp soy sauce",
-          "1 tsp five spice powder",
-          "Chinese pancakes, hoisin sauce, cucumber, and green onions to serve"
-        ],
-        "prep": "Blanch duck with boiling water poured over skin to tighten it. Pat completely dry. Mix maltose, soy sauce, and five spice. Brush all over duck. Air dry on a rack in the refrigerator uncovered 24–48 hours. Preheat oven to 375°F. Roast on a rack 60–75 minutes until skin is deep brown and extremely crispy. Slice off skin and meat thinly. Serve with pancakes, hoisin sauce, cucumber strips, and green onions."
-      },
-      {
-        "name": "Roasted Duck",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole duck, about 2 kg (4.5 lbs)",
-          "4 garlic cloves",
-          "1 orange, quartered",
-          "Fresh thyme and rosemary",
-          "2 tbsp Chinese five spice",
-          "Salt and black pepper",
-          "1 cup (240 ml) orange juice",
-          "2 tbsp honey"
-        ],
-        "prep": "Preheat oven to 425°F (220°C). Score duck skin all over in a crosshatch pattern without cutting into flesh. Rub all over with five spice, salt, and pepper inside and out. Stuff cavity with garlic, orange, and herbs. Place on a rack in a roasting pan. Roast at high heat 30 minutes. Drain fat. Reduce to 350°F. Mix orange juice and honey and brush over duck. Roast another 60–75 minutes basting every 20 minutes until skin is deep mahogany and crispy. Rest 15 minutes before carving."
-      },
-      {
-        "name": "Smoked Duck Salad",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 smoked duck breasts, thinly sliced",
-          "4 cups mixed salad greens",
-          "1 cup sliced fresh figs or pears",
-          "¼ cup candied walnuts",
-          "½ cup blue cheese or gorgonzola, crumbled",
-          "Dressing: 3 tbsp walnut oil, 2 tbsp red wine vinegar, 1 tsp Dijon mustard, 1 tsp honey, salt and pepper"
-        ],
-        "prep": "Slice smoked duck breast thinly. Arrange salad greens on plates. Top with sliced duck, figs or pears, candied walnuts, and blue cheese. Whisk dressing ingredients together and drizzle over salad. Serve immediately."
-      },
-      {
-        "name": "Wild Duck with Cherry Sauce",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 wild duck breasts",
-          "Cherry sauce: 1 cup fresh or frozen cherries, ½ cup red wine, 2 tbsp balsamic vinegar, 1 shallot minced, 1 tbsp butter, 1 tsp sugar, salt and pepper",
-          "Salt and black pepper",
-          "2 tbsp oil"
-        ],
-        "prep": "Score duck skin. Season with salt and pepper. Cook skin side down in a cold pan over medium heat 10–12 minutes until fat renders and skin is very crispy. Flip and cook 3 minutes for medium rare. Rest 5 minutes. Make cherry sauce by cooking shallot in butter. Add wine and balsamic and reduce. Add cherries and sugar. Simmer 10 minutes until slightly thickened. Season. Slice duck and serve with cherry sauce."
-      }
-    ]
-  },
-  {
-    "id": "game_birds",
-    "icon": "🪶",
-    "name": "Game Birds",
-    "desc": "Quail, pheasant and guinea fowl.",
-    "recipes": [
-      {
-        "name": "Grilled Quail",
-        "servings": "4 servings",
-        "ingredients": [
-          "8 quails, spatchcocked",
-          "Marinade: 4 tbsp olive oil, 3 garlic cloves, juice of 1 lemon, 1 tsp thyme, 1 tsp rosemary, salt and pepper",
-          "Salad greens and pan juices to serve"
-        ],
-        "prep": "Mix marinade and coat quails thoroughly. Marinate at least 1 hour. Grill over medium-high heat 4–5 minutes per side until cooked through — juices should run clear. Quail cooks quickly so watch carefully. Rest 5 minutes. Serve on a bed of salad greens drizzled with pan juices and lemon."
-      },
-      {
-        "name": "Guinea Fowl with Mushrooms",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 guinea fowl, cut into pieces",
-          "400 g (14 oz) mixed mushrooms, sliced",
-          "1 onion, diced",
-          "4 garlic cloves",
-          "½ cup (120 ml) dry white wine",
-          "1 cup (240 ml) chicken broth",
-          "½ cup (120 ml) heavy cream",
-          "Fresh thyme",
-          "3 tbsp butter",
-          "Salt and pepper"
-        ],
-        "prep": "Season guinea fowl and brown in butter on all sides. Remove. Cook mushrooms and onion in same pan until golden. Add garlic and thyme. Add wine and reduce by half. Add broth. Return guinea fowl. Cover and simmer 40–45 minutes until cooked through. Remove bird. Add cream to sauce and reduce until slightly thickened. Return bird to sauce. Serve with mashed potatoes or buttered noodles."
-      },
-      {
-        "name": "Pan Roasted Quail with Grapes",
-        "servings": "4 servings",
-        "ingredients": [
-          "8 quails",
-          "2 cups red grapes",
-          "4 shallots, halved",
-          "4 garlic cloves",
-          "½ cup (120 ml) Marsala wine",
-          "1 cup (240 ml) chicken broth",
-          "3 tbsp butter",
-          "Fresh thyme",
-          "Salt and pepper"
-        ],
-        "prep": "Preheat oven to 425°F (220°C). Season quails inside and out with salt and pepper. Sear in butter in an oven-safe skillet on all sides until golden. Remove. Add shallots, garlic, and grapes and cook 2 minutes. Add Marsala and cook 1 minute. Add broth and thyme. Return quails. Roast in oven 12–15 minutes until cooked through. Remove birds. Reduce sauce until slightly thickened. Serve quails with grapes and sauce."
-      },
-      {
-        "name": "Roasted Pheasant",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 whole pheasant, about 1.2 kg (2.5 lbs)",
-          "6 strips bacon",
-          "4 tbsp butter, softened",
-          "4 garlic cloves, minced",
-          "Fresh thyme",
-          "Salt and black pepper",
-          "1 cup (240 ml) chicken broth",
-          "½ cup (120 ml) dry white wine"
-        ],
-        "prep": "Preheat oven to 375°F (190°C). Mix butter with garlic, thyme, salt and pepper. Rub under skin and all over outside. Cover breast with bacon strips secured with toothpicks to prevent drying. Place on a rack. Pour broth and wine into pan. Roast 50–60 minutes basting frequently until internal temperature reaches 165°F. Remove bacon for last 10 minutes to brown breast. Rest 10 minutes. Carve and serve with pan juices."
       }
     ]
   },
@@ -3296,6 +2319,37 @@
             "prep": "Cook thick-cut bacon in a cold skillet over medium heat turning occasionally until very crispy but not burnt — about 8–10 minutes. Drain on a wire rack. Toast bread. Spread mayo generously on both slices. Season tomato slices with salt and pepper. Layer lettuce, tomato, and crispy bacon on one slice. Top with second slice. Slice diagonally. The secret to a great BLT is thick-cut bacon, perfectly ripe tomatoes, and enough mayo."
           }
         ]
+      },
+      {
+        "id": "pork_barbecue",
+        "icon": "🔥",
+        "name": "Barbecue",
+        "desc": "Smoked and slow-cooked pork barbecue.",
+        "recipes": [
+          {
+            "name": "Pulled Pork Sandwiches",
+            "servings": "8 servings",
+            "ingredients": [
+              "2 kg (4.5 lbs) pork shoulder",
+              "Dry rub: 2 tbsp brown sugar, 1 tbsp smoked paprika, 1 tbsp garlic powder, 1 tbsp onion powder, 1 tsp cayenne, 1 tbsp salt, 1 tsp pepper",
+              "Apple cider vinegar mop sauce",
+              "BBQ sauce",
+              "Brioche buns and coleslaw"
+            ],
+            "prep": "Apply dry rub and refrigerate overnight. Smoke at 225–250°F with hickory wood for 8–10 hours. Mop with apple cider vinegar mixture every hour. Wrap in foil at 165°F. Continue until 205°F. Rest 1 hour. Shred with two forks discarding fat. Toss with BBQ sauce. Serve on brioche buns piled with coleslaw."
+          },
+          {
+            "name": "Smoked Ribs",
+            "servings": "4 servings",
+            "ingredients": [
+              "2 racks spare ribs or baby back ribs",
+              "Dry rub: 3 tbsp brown sugar, 2 tbsp smoked paprika, 1 tbsp garlic powder, 1 tbsp onion powder, 1 tsp cumin, 1 tsp cayenne, 2 tsp salt, 1 tsp black pepper",
+              "Apple juice for spritzing",
+              "BBQ sauce for finishing"
+            ],
+            "prep": "Remove membrane from back of ribs. Apply dry rub generously on all sides. Smoke at 225°F with hickory or apple wood for 3 hours. Spritz with apple juice every 45 minutes. Wrap tightly in foil with a splash of apple juice. Continue smoking 2 more hours. Unwrap. Brush with BBQ sauce and smoke unwrapped 1 final hour. Rest 15 minutes. Slice between bones."
+          }
+        ]
       }
     ]
   },
@@ -4760,6 +3814,976 @@
               "Soy sauce and wasabi to serve"
             ],
             "prep": "Lay a half-sheet of nori flat in your hand shiny side down. Place a small scoop of rice on the left side of the nori. Add 2–3 fillings diagonally across the rice. Fold the bottom left corner of the nori over the filling, then continue rolling into a cone shape. The hand roll should be eaten immediately — nori becomes soggy quickly. Serve with soy sauce and wasabi. Set up all fillings in small bowls so guests can make their own."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beef",
+    "icon": "🥩",
+    "name": "Beef",
+    "desc": "Classic beef dishes from steaks and roasts to stews, stir fries, and slow-cooked comfort food.",
+    "subcategories": [
+      {
+        "id": "beef_classics",
+        "icon": "🥩",
+        "name": "Classics",
+        "desc": "Classic beef dishes from steaks and roasts to stews and stir fries.",
+        "recipes": [
+          {
+            "name": "Beef Chili",
+            "servings": "6 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) ground beef",
+              "2 cans (14 oz each) kidney beans, drained",
+              "1 can (28 oz) crushed tomatoes",
+              "1 onion, diced",
+              "4 garlic cloves, minced",
+              "1 red bell pepper, diced",
+              "2 tbsp chili powder",
+              "1 tsp cumin",
+              "1 tsp smoked paprika",
+              "½ tsp cayenne",
+              "Salt and pepper",
+              "2 tbsp olive oil",
+              "Toppings: sour cream, cheese, green onions"
+            ],
+            "prep": "Heat olive oil in a large pot over medium heat. Brown ground beef and drain excess fat. Add onion, pepper, and garlic and cook until softened. Add all spices and cook 1 minute. Add crushed tomatoes and beans. Bring to a boil. Reduce heat and simmer uncovered 30–40 minutes until thick. Season with salt and pepper. Serve with toppings."
+          },
+          {
+            "name": "Beef Kebabs",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) ground beef",
+              "1 onion, grated",
+              "4 garlic cloves, minced",
+              "¼ cup fresh parsley, chopped",
+              "1 tsp cumin",
+              "1 tsp coriander",
+              "½ tsp cinnamon",
+              "½ tsp cayenne",
+              "Salt and pepper",
+              "Flatbread, tzatziki, and salad to serve"
+            ],
+            "prep": "Combine ground beef with grated onion, garlic, parsley, and all spices. Mix well. Refrigerate 30 minutes. Shape around flat metal skewers into long sausage shapes, pressing firmly. Grill over high heat or cook in a grill pan, turning occasionally, until cooked through and charred in spots — about 10–12 minutes. Serve with flatbread, tzatziki, and fresh salad."
+          },
+          {
+            "name": "Beef Rendang",
+            "servings": "6 servings",
+            "ingredients": [
+              "1 kg (2 lbs) beef chuck, cubed",
+              "Paste: 6 shallots, 4 garlic cloves, 3 red chilies, 2-inch galangal, 2-inch ginger, 2 lemongrass stalks",
+              "2 cans (14 oz each) coconut milk",
+              "4 kaffir lime leaves",
+              "1 cinnamon stick",
+              "3 star anise",
+              "2 tbsp oil",
+              "Salt and sugar to taste",
+              "Toasted desiccated coconut"
+            ],
+            "prep": "Blend paste ingredients until smooth. Heat oil in a large wok or pot. Cook paste over medium heat until fragrant and oil separates, about 10 minutes. Add beef and stir to coat. Add coconut milk, lime leaves, cinnamon, and star anise. Simmer uncovered over medium-low heat stirring occasionally 2–3 hours until liquid is almost completely absorbed and beef is dark and dry-fried. Add toasted coconut in the last 30 minutes."
+          },
+          {
+            "name": "Beef Short Ribs",
+            "servings": "4 servings",
+            "ingredients": [
+              "1.5 kg (3 lbs) bone-in beef short ribs",
+              "1 onion, diced",
+              "3 carrots, diced",
+              "4 garlic cloves",
+              "2 cups (480 ml) red wine",
+              "2 cups (480 ml) beef broth",
+              "2 tbsp tomato paste",
+              "Fresh thyme and bay leaf",
+              "2 tbsp olive oil",
+              "Salt and pepper"
+            ],
+            "prep": "Preheat oven to 325°F (165°C). Season short ribs generously with salt and pepper. Sear in olive oil in a Dutch oven over high heat on all sides until deeply browned. Remove. Cook vegetables until softened. Add garlic and tomato paste. Add wine and reduce by half. Add broth and herbs. Return ribs bone side up. Cover and braise 3–3.5 hours until meat is falling off the bone. Strain sauce and reduce if desired."
+          },
+          {
+            "name": "Beef Stew",
+            "servings": "6 servings",
+            "ingredients": [
+              "1 kg (2 lbs) beef chuck, cut into 2-inch cubes",
+              "3 potatoes, cubed",
+              "3 carrots, sliced",
+              "2 celery stalks, sliced",
+              "1 onion, diced",
+              "4 garlic cloves, minced",
+              "2 cups (480 ml) beef broth",
+              "1 cup (240 ml) red wine",
+              "2 tbsp tomato paste",
+              "2 tbsp flour",
+              "2 tbsp olive oil",
+              "Fresh thyme and bay leaf",
+              "Salt and pepper"
+            ],
+            "prep": "Season beef with salt and pepper and dust with flour. Brown in olive oil in a large pot over high heat in batches. Remove beef. Cook onion, carrots, and celery until softened. Add garlic and tomato paste and cook 1 minute. Add wine and reduce. Add broth, herbs, and beef. Bring to a boil. Reduce heat, cover, and simmer 1.5 hours. Add potatoes and cook 30 more minutes until everything is tender."
+          },
+          {
+            "name": "Beef Stroganoff",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) beef sirloin or tenderloin, thinly sliced",
+              "300 g (10.5 oz) cremini mushrooms, sliced",
+              "1 onion, thinly sliced",
+              "3 garlic cloves, minced",
+              "1 cup (240 ml) beef broth",
+              "1 cup (240 ml) sour cream",
+              "2 tbsp Dijon mustard",
+              "2 tbsp butter",
+              "1 tbsp Worcestershire sauce",
+              "Fresh parsley",
+              "Salt and pepper",
+              "Egg noodles or rice to serve"
+            ],
+            "prep": "Season beef strips with salt and pepper. Heat butter in a large skillet over high heat. Cook beef quickly in batches until browned — do not overcook. Remove. Cook mushrooms and onions until golden. Add garlic and cook 1 minute. Add broth and Worcestershire and reduce by half. Lower heat and stir in sour cream and mustard. Return beef and heat through gently. Do not boil after adding sour cream. Serve over egg noodles."
+          },
+          {
+            "name": "Beef Tacos",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) ground beef",
+              "1 onion, diced",
+              "4 garlic cloves, minced",
+              "1 can (14 oz) diced tomatoes",
+              "2 tsp cumin",
+              "1 tsp chili powder",
+              "1 tsp smoked paprika",
+              "½ tsp oregano",
+              "Salt and pepper",
+              "8 corn or flour tortillas",
+              "Toppings: shredded cheese, sour cream, salsa, avocado, cilantro, lime"
+            ],
+            "prep": "Brown ground beef in a large skillet over medium-high heat, breaking up lumps. Drain excess fat. Add onion and cook until softened. Add garlic and all spices and cook 1 minute. Add diced tomatoes and simmer 10 minutes until most liquid evaporates. Season with salt and pepper. Warm tortillas. Fill with beef mixture and desired toppings."
+          },
+          {
+            "name": "Beef Wellington",
+            "servings": "6 servings",
+            "ingredients": [
+              "1 kg (2 lbs) beef tenderloin, trimmed",
+              "500 g (1 lb) cremini mushrooms, finely chopped (duxelles)",
+              "6 slices prosciutto",
+              "2 tbsp Dijon mustard",
+              "1 sheet puff pastry",
+              "1 egg, beaten",
+              "2 tbsp butter",
+              "Salt and pepper"
+            ],
+            "prep": "Season tenderloin and sear in butter over very high heat on all sides. Cool completely. Brush with Dijon mustard. Make duxelles by cooking mushrooms in butter until all moisture evaporates — about 15 minutes. Cool. Lay prosciutto on plastic wrap, spread duxelles, place beef at edge and roll tightly. Refrigerate 30 minutes. Wrap in puff pastry, seal edges with egg wash. Brush with egg wash. Bake at 425°F 25–30 minutes until pastry is golden and beef reaches 125°F for medium rare. Rest 10 minutes."
+          },
+          {
+            "name": "Classic Beef Meatloaf",
+            "servings": "6 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) ground beef",
+              "½ cup breadcrumbs",
+              "½ cup milk",
+              "2 eggs",
+              "1 onion, finely diced",
+              "3 garlic cloves, minced",
+              "2 tbsp Worcestershire sauce",
+              "1 tsp dried thyme",
+              "Salt and pepper",
+              "Glaze: ½ cup ketchup, 2 tbsp brown sugar, 1 tbsp Dijon mustard"
+            ],
+            "prep": "Preheat oven to 375°F (190°C). Soak breadcrumbs in milk 5 minutes. Combine ground beef, breadcrumbs, eggs, onion, garlic, Worcestershire, thyme, salt and pepper. Mix gently until just combined — do not overmix. Form into a loaf shape in a baking dish or loaf pan. Mix glaze ingredients and spread over top. Bake 55–65 minutes until internal temperature reaches 160°F. Rest 10 minutes before slicing."
+          },
+          {
+            "name": "Classic Pot Roast",
+            "servings": "6 servings",
+            "ingredients": [
+              "1.5 kg (3 lbs) beef chuck roast",
+              "3 carrots, cut into chunks",
+              "3 celery stalks, cut into chunks",
+              "1 onion, quartered",
+              "4 garlic cloves, minced",
+              "2 cups (480 ml) beef broth",
+              "1 cup (240 ml) red wine",
+              "2 tbsp tomato paste",
+              "2 tbsp olive oil",
+              "Fresh thyme and rosemary",
+              "Salt and pepper"
+            ],
+            "prep": "Preheat oven to 325°F (165°C). Pat beef dry and season generously with salt and pepper. Heat olive oil in a large Dutch oven over high heat. Sear beef on all sides until deeply browned, about 3–4 minutes per side. Remove beef. Add onion, carrots, and celery and cook 3 minutes. Add garlic and tomato paste and cook 1 minute. Add wine and scrape up any browned bits. Add broth and herbs. Return beef. Cover tightly and braise in oven 3–3.5 hours until fork tender. Rest 15 minutes before slicing."
+          },
+          {
+            "name": "Korean Beef Bulgogi",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) beef ribeye or sirloin, very thinly sliced",
+              "Marinade: 4 tbsp soy sauce, 2 tbsp sesame oil, 2 tbsp sugar, 1 Asian pear or ½ cup pear juice, 4 garlic cloves minced, 1 tbsp fresh ginger, 2 green onions sliced, 1 tsp black pepper",
+              "Sesame seeds and green onions to garnish"
+            ],
+            "prep": "If possible freeze beef 30 minutes for easier thin slicing. Slice paper thin against the grain. Mix all marinade ingredients together. Combine beef with marinade and mix well. Marinate at least 30 minutes, ideally 2 hours. Cook beef in a very hot skillet or grill pan in batches, not crowding the pan. Cook each batch 1–2 minutes per side until caramelized. Garnish with sesame seeds and green onions. Serve with steamed rice."
+          },
+          {
+            "name": "Pan Seared Ribeye Steak",
+            "servings": "2 servings",
+            "ingredients": [
+              "2 ribeye steaks, 1.5 inches thick",
+              "4 tbsp unsalted butter",
+              "4 garlic cloves, smashed",
+              "Fresh thyme and rosemary sprigs",
+              "2 tbsp vegetable oil",
+              "Flaky sea salt and black pepper"
+            ],
+            "prep": "Remove steaks from fridge 45 minutes before cooking. Pat completely dry. Season generously with salt and pepper on all sides. Heat oil in a heavy cast iron skillet over very high heat until just smoking. Add steaks and cook without moving 3–4 minutes until deeply browned. Flip and cook 2–3 minutes. Add butter, garlic, and herbs. Tilt pan and baste steaks continuously with foamy butter for 2 minutes. Remove and rest on a rack 8–10 minutes before slicing."
+          },
+          {
+            "name": "Philly Cheesesteak",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) ribeye steak, very thinly sliced",
+              "2 onions, thinly sliced",
+              "2 green bell peppers, thinly sliced",
+              "200 g (7 oz) provolone or Cheez Whiz",
+              "4 hoagie rolls",
+              "2 tbsp butter",
+              "Salt and pepper"
+            ],
+            "prep": "Freeze steak 30 minutes for easier slicing. Slice paper thin. Cook onions and peppers in butter over medium heat until very soft and slightly caramelized — about 15 minutes. Season. Push to the side or remove. Increase heat to high. Cook beef quickly, seasoning with salt and pepper, breaking into small pieces. Combine with onions and peppers. Top with cheese slices and cover pan briefly until melted. Serve on hoagie rolls."
+          }
+        ]
+      },
+      {
+        "id": "beef_barbecue",
+        "icon": "🔥",
+        "name": "Barbecue",
+        "desc": "Smoked and slow-cooked beef barbecue.",
+        "recipes": [
+          {
+            "name": "Smoked Brisket",
+            "servings": "10 servings",
+            "ingredients": [
+              "3 kg (6.5 lbs) whole beef brisket, flat and point",
+              "Dry rub: 3 tbsp coarse salt, 2 tbsp coarse black pepper, 1 tsp garlic powder",
+              "Wood chunks: oak or hickory",
+              "Target smoker temperature: 225–250°F"
+            ],
+            "prep": "Trim excess fat to ¼ inch. Apply dry rub generously on all sides. Refrigerate uncovered overnight. Bring to room temperature 1 hour before smoking. Smoke fat side up at 225–250°F with oak or hickory wood for 8–12 hours. Spritz with water or apple cider vinegar every 2 hours after the first 3 hours. Wrap in butcher paper at 165°F internal temperature. Continue cooking until 200–205°F. Rest wrapped 1–2 hours in a cooler before slicing against the grain."
+          },
+          {
+            "name": "Texas Style Beef Ribs",
+            "servings": "4 servings",
+            "ingredients": [
+              "2 racks beef plate ribs, 3 bones each",
+              "Dry rub: 3 tbsp coarse salt, 2 tbsp coarse black pepper, 1 tsp garlic powder",
+              "Oak wood for smoking"
+            ],
+            "prep": "Trim excess fat. Apply dry rub aggressively on all sides. Refrigerate uncovered overnight. Smoke at 275°F with oak wood for 8–10 hours until dark bark forms and internal temperature reaches 200–210°F. The meat should jiggle when shaken. Rest wrapped in butcher paper for at least 1 hour before eating. No BBQ sauce needed — the bark and juices are the sauce."
+          },
+          {
+            "name": "Santa Maria Tri Tip",
+            "servings": "6 servings",
+            "ingredients": [
+              "1.5 kg (3 lbs) tri-tip roast",
+              "Dry rub: 2 tbsp coarse salt, 1 tbsp black pepper, 1 tsp garlic powder, 1 tsp paprika",
+              "Salsa fresca and garlic bread to serve"
+            ],
+            "prep": "Apply dry rub on all sides. Let sit at room temperature 1 hour. Grill over high direct heat 4–5 minutes per side until deeply seared. Move to indirect heat and cook until internal temperature reaches 130–135°F for medium rare — about 20–30 more minutes. Rest 10 minutes. Slice thinly against the grain. Tri-tip has two grain directions — find where they meet in the middle and slice accordingly. Serve with salsa fresca and garlic bread."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "poultry",
+    "icon": "🍗",
+    "name": "Poultry",
+    "desc": "Chicken, duck, turkey and game birds.",
+    "subcategories": [
+      {
+        "id": "chicken",
+        "icon": "🍗",
+        "name": "Chicken",
+        "desc": "Roasted, fried, grilled, braised, and baked chicken dishes from around the world.",
+        "recipes": [
+          {
+            "name": "Crispy Chicken Nuggets",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 lb chicken breast, cut into bite-sized pieces",
+              "1 cup all-purpose flour",
+              "1 tsp garlic powder",
+              "1 tsp onion powder",
+              "1 tsp paprika",
+              "salt and pepper",
+              "2 eggs, beaten",
+              "1 cup breadcrumbs (panko for extra crunch)",
+              "1 tsp dried oregano (optional)",
+              "vegetable oil for frying"
+            ],
+            "prep": "Pat chicken dry. Set up three bowls: (1) flour mixed with garlic powder, onion powder, paprika, salt, and pepper, (2) beaten eggs, (3) breadcrumbs with oregano. Dredge chicken in flour, dip in egg, then coat in breadcrumbs. Heat oil to about 350°F. Fry nuggets in batches 4–5 minutes per side until golden brown and internal temperature reaches 165°F. Remove to paper towels and serve hot."
+          },
+          {
+            "name": "BBQ Chicken",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole chicken, cut into pieces",
+              "BBQ sauce: 1 cup ketchup, ¼ cup brown sugar, 2 tbsp apple cider vinegar, 1 tbsp Worcestershire, 1 tsp smoked paprika, 1 tsp garlic powder, salt and pepper",
+              "Dry rub: 1 tbsp smoked paprika, 1 tsp garlic powder, 1 tsp onion powder, 1 tsp brown sugar, salt and pepper"
+            ],
+            "prep": "Apply dry rub to chicken. Grill over indirect medium heat 35–40 minutes turning occasionally until mostly cooked through. Brush generously with BBQ sauce. Move to direct heat. Grill 5 minutes per side, brushing more sauce and turning, until caramelized and internal temperature reaches 165°F. Rest 5 minutes."
+          },
+          {
+            "name": "Butter Chicken",
+            "servings": "4 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) boneless chicken thighs, cubed",
+              "Marinade: 1 cup yogurt, 2 tbsp lemon juice, 2 tsp cumin, 1 tsp turmeric, 1 tsp garam masala, 1 tsp chili powder, 4 garlic cloves, 1 tbsp ginger",
+              "Sauce: 2 tbsp butter, 1 onion diced, 4 garlic cloves, 1 tbsp ginger, 1 can (28 oz) crushed tomatoes, 1 cup heavy cream, 2 tsp garam masala, 1 tsp cumin, 1 tsp paprika, salt and sugar"
+            ],
+            "prep": "Marinate chicken at least 2 hours. Grill or broil chicken until charred and cooked through. Make sauce by cooking onion in butter until golden. Add garlic, ginger, and spices. Add tomatoes and simmer 20 minutes. Blend until smooth. Return to pan. Add cream and simmer 10 minutes. Add cooked chicken and simmer 5 more minutes. Garnish with cream and cilantro. Serve with naan or rice."
+          },
+          {
+            "name": "Chicken Cacciatore",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole chicken, cut into pieces",
+              "1 onion, diced",
+              "1 red bell pepper, diced",
+              "4 garlic cloves, minced",
+              "1 cup (240 ml) dry white wine",
+              "1 can (28 oz) crushed tomatoes",
+              "200 g (7 oz) cremini mushrooms, sliced",
+              "2 tbsp olive oil",
+              "Fresh rosemary and thyme",
+              "Salt and pepper",
+              "Capers and olives (optional)"
+            ],
+            "prep": "Season chicken and brown in olive oil on all sides. Remove. Cook onion, pepper, and mushrooms until softened. Add garlic and cook 1 minute. Add wine and reduce by half. Add crushed tomatoes and herbs. Return chicken. Simmer covered 40–45 minutes until chicken is very tender. Stir in capers and olives if using. Season with salt and pepper."
+          },
+          {
+            "name": "Chicken Cordon Bleu",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 boneless skinless chicken breasts",
+              "4 slices ham",
+              "4 slices Swiss cheese",
+              "1 cup breadcrumbs",
+              "½ cup flour",
+              "2 eggs, beaten",
+              "2 tbsp butter, melted",
+              "Salt, pepper, and paprika",
+              "Dijon cream sauce to serve"
+            ],
+            "prep": "Pound chicken breasts thin. Season with salt and pepper. Place a slice of ham and Swiss cheese on each breast. Roll up tightly and secure with toothpicks. Dredge in flour, dip in egg, coat in breadcrumbs mixed with paprika. Drizzle with melted butter. Bake at 375°F for 30–35 minutes until golden and cooked through. Make a simple cream sauce with butter, garlic, cream, and Dijon mustard. Serve over chicken."
+          },
+          {
+            "name": "Chicken Marsala",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 boneless skinless chicken breasts, pounded thin",
+              "300 g (10.5 oz) cremini mushrooms, sliced",
+              "½ cup flour",
+              "¾ cup (180 ml) Marsala wine",
+              "½ cup (120 ml) chicken broth",
+              "4 tbsp butter",
+              "2 tbsp olive oil",
+              "3 garlic cloves, minced",
+              "Fresh parsley",
+              "Salt and pepper"
+            ],
+            "prep": "Season chicken with salt and pepper and dredge in flour. Heat olive oil and 2 tbsp butter in a large skillet over medium-high heat. Cook chicken 3–4 minutes per side until golden. Remove. Add mushrooms and cook until golden. Add garlic and cook 30 seconds. Add Marsala and cook until reduced by half. Add broth and simmer 3 minutes. Stir in remaining butter. Return chicken and heat through. Garnish with parsley."
+          },
+          {
+            "name": "Chicken Parmesan",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 boneless skinless chicken breasts",
+              "1 cup breadcrumbs",
+              "½ cup Parmesan, grated",
+              "2 eggs, beaten",
+              "½ cup flour",
+              "2 cups marinara sauce",
+              "2 cups shredded mozzarella",
+              "Salt, pepper, and Italian seasoning",
+              "Olive oil for frying"
+            ],
+            "prep": "Pound chicken breasts to even thickness. Season with salt, pepper, and Italian seasoning. Dredge in flour, dip in egg, then coat in breadcrumbs mixed with Parmesan. Pan fry in olive oil over medium-high heat until golden on both sides, about 3–4 minutes per side. Transfer to a baking dish. Top each piece with marinara and mozzarella. Bake at 400°F for 15–20 minutes until cheese is melted and bubbly."
+          },
+          {
+            "name": "Chicken Piccata",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 boneless skinless chicken breasts, pounded thin",
+              "½ cup flour",
+              "4 tbsp butter",
+              "3 tbsp olive oil",
+              "4 garlic cloves, minced",
+              "½ cup (120 ml) dry white wine",
+              "½ cup (120 ml) chicken broth",
+              "Juice of 2 lemons",
+              "3 tbsp capers, rinsed",
+              "Fresh parsley",
+              "Salt and pepper"
+            ],
+            "prep": "Season chicken with salt and pepper. Dredge in flour. Heat olive oil and 2 tbsp butter in a large skillet over medium-high heat. Cook chicken 3–4 minutes per side until golden. Remove. Add garlic and cook 30 seconds. Add wine and cook until reduced by half. Add broth and lemon juice and simmer 3 minutes. Stir in capers and remaining butter until sauce is silky. Return chicken to pan and heat through. Garnish with parsley."
+          },
+          {
+            "name": "Chicken Shawarma",
+            "servings": "4 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) boneless chicken thighs",
+              "Marinade: 4 tbsp olive oil, juice of 1 lemon, 4 garlic cloves, 2 tsp cumin, 1 tsp turmeric, 1 tsp coriander, 1 tsp paprika, ½ tsp cinnamon, ½ tsp cayenne, salt and pepper",
+              "Pita bread, hummus, tzatziki, pickles, and salad to serve"
+            ],
+            "prep": "Mix marinade ingredients. Coat chicken thoroughly. Marinate at least 2 hours or overnight. Grill or cook in a cast iron skillet over high heat 4–5 minutes per side until charred and cooked through. Rest 5 minutes and slice thinly. Serve in warmed pita with hummus, tzatziki, pickles, and fresh vegetables."
+          },
+          {
+            "name": "Chicken Souvlaki",
+            "servings": "4 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) boneless chicken breast, cubed",
+              "Marinade: 4 tbsp olive oil, juice of 1 lemon, 4 garlic cloves, 1 tsp oregano, 1 tsp cumin, salt and pepper",
+              "Pita, tzatziki, red onion, tomatoes, and cucumber to serve"
+            ],
+            "prep": "Mix marinade and coat chicken thoroughly. Marinate at least 1 hour. Thread onto skewers. Grill over high heat turning occasionally until chicken is cooked through and nicely charred — about 10–12 minutes. Serve in warm pita with tzatziki, sliced red onion, tomatoes, and cucumber."
+          },
+          {
+            "name": "Chicken Tikka Masala",
+            "servings": "4 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) boneless chicken breast, cubed",
+              "Marinade: 1 cup yogurt, 2 tsp garam masala, 1 tsp cumin, 1 tsp turmeric, 4 garlic cloves, 1 tbsp ginger",
+              "Sauce: 2 tbsp butter, 1 onion, 4 garlic cloves, 1 tbsp ginger, 1 can crushed tomatoes, 1 cup heavy cream, 2 tsp garam masala, 1 tsp cumin, 1 tsp coriander, paprika, salt"
+            ],
+            "prep": "Marinate chicken 2 hours. Grill or broil until lightly charred. Make sauce: cook onion in butter until golden. Add garlic, ginger, and spices. Add tomatoes and simmer 15 minutes. Blend until smooth. Add cream and simmer 10 minutes. Add chicken and simmer 5 minutes. Serve with basmati rice and naan."
+          },
+          {
+            "name": "Coq au Vin",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole chicken, cut into pieces",
+              "200 g (7 oz) bacon lardons",
+              "300 g (10.5 oz) cremini mushrooms",
+              "1 cup pearl onions",
+              "2 cups (480 ml) red wine",
+              "1 cup (240 ml) chicken broth",
+              "2 tbsp tomato paste",
+              "4 garlic cloves",
+              "Bouquet garni",
+              "3 tbsp butter",
+              "Salt and pepper"
+            ],
+            "prep": "Brown bacon in a Dutch oven. Remove. Brown chicken pieces in bacon fat on all sides. Remove. Cook pearl onions and mushrooms until golden. Add garlic and tomato paste. Add wine, broth, and bouquet garni. Return chicken and bacon. Braise covered at 325°F for 1.5 hours until chicken is very tender. Remove chicken. Strain and reduce sauce. Return chicken and mushrooms to sauce. Serve with crusty bread or mashed potatoes."
+          },
+          {
+            "name": "Honey Garlic Chicken",
+            "servings": "4 servings",
+            "ingredients": [
+              "8 bone-in skin-on chicken thighs",
+              "Sauce: 4 tbsp honey, 3 tbsp soy sauce, 4 garlic cloves minced, 1 tbsp apple cider vinegar, 1 tsp sesame oil, red pepper flakes",
+              "2 tbsp olive oil",
+              "Salt and pepper",
+              "Sesame seeds and green onions to garnish"
+            ],
+            "prep": "Preheat oven to 400°F (200°C). Season chicken with salt and pepper. Heat olive oil in an oven-safe skillet over medium-high heat. Sear chicken skin side down 4–5 minutes until golden and crispy. Flip. Mix sauce ingredients and pour over chicken. Transfer to oven and bake 25–30 minutes until cooked through, basting with sauce halfway through. Garnish with sesame seeds and green onions."
+          },
+          {
+            "name": "Lemon Herb Roasted Chicken Thighs",
+            "servings": "4 servings",
+            "ingredients": [
+              "8 bone-in skin-on chicken thighs",
+              "Juice and zest of 2 lemons",
+              "4 garlic cloves, minced",
+              "3 tbsp olive oil",
+              "2 tsp dried oregano",
+              "1 tsp dried thyme",
+              "1 tsp paprika",
+              "Salt and black pepper",
+              "Fresh parsley to garnish"
+            ],
+            "prep": "Preheat oven to 425°F (220°C). Mix lemon juice, zest, garlic, olive oil, and all herbs and spices together. Score chicken thighs and coat thoroughly in marinade. Marinate 30 minutes if time allows. Place skin side up in a baking dish. Roast 35–40 minutes until skin is deeply golden and crispy and juices run clear. Baste with pan juices halfway through. Garnish with fresh parsley."
+          },
+          {
+            "name": "Roast Chicken",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole chicken, about 1.8 kg (4 lbs)",
+              "4 tbsp unsalted butter, softened",
+              "4 garlic cloves, minced",
+              "1 lemon, halved",
+              "Fresh thyme and rosemary",
+              "Salt and black pepper",
+              "1 onion, quartered",
+              "Olive oil"
+            ],
+            "prep": "Preheat oven to 425°F (220°C). Pat chicken dry inside and out. Mix butter with garlic, thyme, rosemary, salt and pepper. Carefully separate skin from breast and rub butter mixture directly under the skin. Season the entire outside generously with salt and pepper. Stuff cavity with lemon halves, onion, and remaining herbs. Tie legs together. Place on a rack in a roasting pan. Roast 60–75 minutes until juices run clear and internal temperature reaches 165°F. Rest 15 minutes before carving."
+          },
+          {
+            "name": "Southern Fried Chicken",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole chicken, cut into pieces",
+              "2 cups buttermilk",
+              "2 cups flour",
+              "1 tbsp garlic powder",
+              "1 tbsp onion powder",
+              "1 tsp paprika",
+              "1 tsp cayenne",
+              "1 tsp dried thyme",
+              "Salt and black pepper",
+              "Oil for frying"
+            ],
+            "prep": "Soak chicken in buttermilk with salt and pepper for at least 4 hours or overnight. Mix flour with all spices, salt, and pepper. Remove chicken from buttermilk and dredge in seasoned flour, pressing to adhere. Let sit on a rack 15 minutes. Heat oil to 325°F in a large heavy pot. Fry chicken in batches — dark meat 13–15 minutes, white meat 10–12 minutes, turning once, until golden brown and cooked through. Drain on a rack."
+          }
+        ]
+      },
+      {
+        "id": "duck",
+        "icon": "🦆",
+        "name": "Duck",
+        "desc": "Roasted, braised, confit and fried duck.",
+        "recipes": [
+          {
+            "name": "Braised Duck Legs",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 duck legs",
+              "1 onion, diced",
+              "2 carrots, diced",
+              "4 garlic cloves",
+              "1 cup (240 ml) red wine",
+              "1 cup (240 ml) chicken broth",
+              "1 can (14 oz) diced tomatoes",
+              "Fresh thyme and bay leaf",
+              "2 tbsp olive oil",
+              "Salt and pepper"
+            ],
+            "prep": "Preheat oven to 325°F (165°C). Score duck skin. Season and sear skin side down in a Dutch oven over medium heat until fat renders and skin is golden — about 10 minutes. Flip and sear 2 minutes. Remove. Cook vegetables in rendered fat until softened. Add garlic and wine and reduce. Add broth, tomatoes, and herbs. Return duck legs skin side up. Braise uncovered 1.5–2 hours until very tender."
+          },
+          {
+            "name": "Duck à l'Orange",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole duck, about 2 kg",
+              "Orange sauce: juice of 4 oranges, zest of 1 orange, 2 tbsp Grand Marnier, 1 cup chicken broth, 2 tbsp butter, 1 tbsp honey, salt and pepper",
+              "Salt and black pepper for seasoning"
+            ],
+            "prep": "Score duck skin. Season inside and out with salt and pepper. Roast at 425°F 30 minutes. Drain fat. Reduce to 350°F and roast 60 more minutes until cooked through. Make sauce: cook orange juice with zest and Grand Marnier until reduced by half. Add broth and reduce again. Whisk in cold butter and honey. Season. Carve duck and serve with orange sauce."
+          },
+          {
+            "name": "Duck Breast with Orange Sauce",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 duck breasts",
+              "Sauce: juice of 3 oranges, zest of 1 orange, 2 tbsp honey, 1 tbsp soy sauce, 1 cup (240 ml) chicken broth, 2 tbsp butter, 1 shallot minced",
+              "Salt and black pepper"
+            ],
+            "prep": "Score duck skin in a crosshatch pattern without cutting into flesh. Season generously with salt and pepper. Place skin side down in a cold skillet. Turn heat to medium. Cook 12–15 minutes until most fat is rendered and skin is deeply golden and crispy. Flip and cook 3–5 minutes more for medium rare. Rest 5 minutes. Make sauce by cooking shallot in same pan. Add orange juice and zest, honey, and soy sauce. Reduce by half. Add broth and reduce again. Finish with butter."
+          },
+          {
+            "name": "Duck Confit",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 duck legs",
+              "1 kg (2 lbs) duck fat or enough to submerge",
+              "1 tbsp coarse salt",
+              "1 tsp black pepper",
+              "4 garlic cloves",
+              "Fresh thyme and bay leaf",
+              "½ tsp juniper berries"
+            ],
+            "prep": "Rub duck legs with salt, pepper, garlic, and thyme. Refrigerate uncovered 24 hours. Rinse and pat dry. Preheat oven to 225°F (107°C). Place duck in a deep baking dish and cover completely with melted duck fat. Add herbs and juniper berries. Cover tightly and cook 6–8 hours until meat is very tender and nearly falling off the bone. Cool in fat and store up to 2 weeks. To serve, sear skin side down in a dry hot skillet until deeply golden and crispy."
+          },
+          {
+            "name": "Duck Fried Rice",
+            "servings": "4 servings",
+            "ingredients": [
+              "2 cups day-old cooked rice",
+              "2 cups shredded duck confit or roast duck",
+              "3 large eggs",
+              "1 cup frozen peas",
+              "3 green onions, sliced",
+              "3 garlic cloves, minced",
+              "3 tbsp soy sauce",
+              "1 tbsp oyster sauce",
+              "1 tsp sesame oil",
+              "2 tbsp vegetable oil"
+            ],
+            "prep": "Heat oil in a wok over very high heat. Add eggs and scramble. Add garlic and cook 30 seconds. Add cold rice and stir fry 3 minutes. Add duck, peas, soy sauce, oyster sauce, and sesame oil. Toss everything together until heated through. Add green onions. Drizzle with sesame oil. Serve immediately."
+          },
+          {
+            "name": "Duck Ragu",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 duck legs",
+              "1 onion, finely diced",
+              "2 carrots, finely diced",
+              "2 celery stalks, finely diced",
+              "4 garlic cloves",
+              "1 cup (240 ml) red wine",
+              "1 can (28 oz) crushed tomatoes",
+              "2 tbsp tomato paste",
+              "Fresh thyme and rosemary",
+              "Salt and pepper",
+              "Pappardelle to serve",
+              "Parmesan for serving"
+            ],
+            "prep": "Season duck legs and sear in a Dutch oven over high heat until browned on all sides. Remove. Cook vegetables until softened. Add garlic and tomato paste and cook 1 minute. Add wine and reduce. Add tomatoes and herbs. Return duck. Braise covered at 325°F for 2–2.5 hours until meat falls off the bone. Shred duck meat and discard bones. Reduce sauce if needed. Toss with pappardelle and Parmesan."
+          },
+          {
+            "name": "Duck Tacos",
+            "servings": "4 servings",
+            "ingredients": [
+              "Duck confit from 4 legs, shredded and crisped",
+              "8 corn tortillas",
+              "Toppings: pickled red onion, mango salsa, avocado, cilantro, lime crema, jalapeño"
+            ],
+            "prep": "Shred duck confit meat. Crisp in a hot dry skillet until golden and slightly caramelized. Warm tortillas on a dry skillet. Fill with crispy duck meat. Top with pickled red onion, mango salsa, sliced avocado, fresh cilantro, and lime crema. Serve with lime wedges."
+          },
+          {
+            "name": "Peking Duck",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole duck, about 2 kg (4.5 lbs)",
+              "2 tbsp maltose or honey",
+              "1 tbsp soy sauce",
+              "1 tsp five spice powder",
+              "Chinese pancakes, hoisin sauce, cucumber, and green onions to serve"
+            ],
+            "prep": "Blanch duck with boiling water poured over skin to tighten it. Pat completely dry. Mix maltose, soy sauce, and five spice. Brush all over duck. Air dry on a rack in the refrigerator uncovered 24–48 hours. Preheat oven to 375°F. Roast on a rack 60–75 minutes until skin is deep brown and extremely crispy. Slice off skin and meat thinly. Serve with pancakes, hoisin sauce, cucumber strips, and green onions."
+          },
+          {
+            "name": "Roasted Duck",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole duck, about 2 kg (4.5 lbs)",
+              "4 garlic cloves",
+              "1 orange, quartered",
+              "Fresh thyme and rosemary",
+              "2 tbsp Chinese five spice",
+              "Salt and black pepper",
+              "1 cup (240 ml) orange juice",
+              "2 tbsp honey"
+            ],
+            "prep": "Preheat oven to 425°F (220°C). Score duck skin all over in a crosshatch pattern without cutting into flesh. Rub all over with five spice, salt, and pepper inside and out. Stuff cavity with garlic, orange, and herbs. Place on a rack in a roasting pan. Roast at high heat 30 minutes. Drain fat. Reduce to 350°F. Mix orange juice and honey and brush over duck. Roast another 60–75 minutes basting every 20 minutes until skin is deep mahogany and crispy. Rest 15 minutes before carving."
+          },
+          {
+            "name": "Smoked Duck Salad",
+            "servings": "4 servings",
+            "ingredients": [
+              "2 smoked duck breasts, thinly sliced",
+              "4 cups mixed salad greens",
+              "1 cup sliced fresh figs or pears",
+              "¼ cup candied walnuts",
+              "½ cup blue cheese or gorgonzola, crumbled",
+              "Dressing: 3 tbsp walnut oil, 2 tbsp red wine vinegar, 1 tsp Dijon mustard, 1 tsp honey, salt and pepper"
+            ],
+            "prep": "Slice smoked duck breast thinly. Arrange salad greens on plates. Top with sliced duck, figs or pears, candied walnuts, and blue cheese. Whisk dressing ingredients together and drizzle over salad. Serve immediately."
+          },
+          {
+            "name": "Wild Duck with Cherry Sauce",
+            "servings": "4 servings",
+            "ingredients": [
+              "2 wild duck breasts",
+              "Cherry sauce: 1 cup fresh or frozen cherries, ½ cup red wine, 2 tbsp balsamic vinegar, 1 shallot minced, 1 tbsp butter, 1 tsp sugar, salt and pepper",
+              "Salt and black pepper",
+              "2 tbsp oil"
+            ],
+            "prep": "Score duck skin. Season with salt and pepper. Cook skin side down in a cold pan over medium heat 10–12 minutes until fat renders and skin is very crispy. Flip and cook 3 minutes for medium rare. Rest 5 minutes. Make cherry sauce by cooking shallot in butter. Add wine and balsamic and reduce. Add cherries and sugar. Simmer 10 minutes until slightly thickened. Season. Slice duck and serve with cherry sauce."
+          }
+        ]
+      },
+      {
+        "id": "game_birds",
+        "icon": "🪶",
+        "name": "Game Birds",
+        "desc": "Quail, pheasant and guinea fowl.",
+        "recipes": [
+          {
+            "name": "Grilled Quail",
+            "servings": "4 servings",
+            "ingredients": [
+              "8 quails, spatchcocked",
+              "Marinade: 4 tbsp olive oil, 3 garlic cloves, juice of 1 lemon, 1 tsp thyme, 1 tsp rosemary, salt and pepper",
+              "Salad greens and pan juices to serve"
+            ],
+            "prep": "Mix marinade and coat quails thoroughly. Marinate at least 1 hour. Grill over medium-high heat 4–5 minutes per side until cooked through — juices should run clear. Quail cooks quickly so watch carefully. Rest 5 minutes. Serve on a bed of salad greens drizzled with pan juices and lemon."
+          },
+          {
+            "name": "Guinea Fowl with Mushrooms",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 guinea fowl, cut into pieces",
+              "400 g (14 oz) mixed mushrooms, sliced",
+              "1 onion, diced",
+              "4 garlic cloves",
+              "½ cup (120 ml) dry white wine",
+              "1 cup (240 ml) chicken broth",
+              "½ cup (120 ml) heavy cream",
+              "Fresh thyme",
+              "3 tbsp butter",
+              "Salt and pepper"
+            ],
+            "prep": "Season guinea fowl and brown in butter on all sides. Remove. Cook mushrooms and onion in same pan until golden. Add garlic and thyme. Add wine and reduce by half. Add broth. Return guinea fowl. Cover and simmer 40–45 minutes until cooked through. Remove bird. Add cream to sauce and reduce until slightly thickened. Return bird to sauce. Serve with mashed potatoes or buttered noodles."
+          },
+          {
+            "name": "Pan Roasted Quail with Grapes",
+            "servings": "4 servings",
+            "ingredients": [
+              "8 quails",
+              "2 cups red grapes",
+              "4 shallots, halved",
+              "4 garlic cloves",
+              "½ cup (120 ml) Marsala wine",
+              "1 cup (240 ml) chicken broth",
+              "3 tbsp butter",
+              "Fresh thyme",
+              "Salt and pepper"
+            ],
+            "prep": "Preheat oven to 425°F (220°C). Season quails inside and out with salt and pepper. Sear in butter in an oven-safe skillet on all sides until golden. Remove. Add shallots, garlic, and grapes and cook 2 minutes. Add Marsala and cook 1 minute. Add broth and thyme. Return quails. Roast in oven 12–15 minutes until cooked through. Remove birds. Reduce sauce until slightly thickened. Serve quails with grapes and sauce."
+          },
+          {
+            "name": "Roasted Pheasant",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 whole pheasant, about 1.2 kg (2.5 lbs)",
+              "6 strips bacon",
+              "4 tbsp butter, softened",
+              "4 garlic cloves, minced",
+              "Fresh thyme",
+              "Salt and black pepper",
+              "1 cup (240 ml) chicken broth",
+              "½ cup (120 ml) dry white wine"
+            ],
+            "prep": "Preheat oven to 375°F (190°C). Mix butter with garlic, thyme, salt and pepper. Rub under skin and all over outside. Cover breast with bacon strips secured with toothpicks to prevent drying. Place on a rack. Pour broth and wine into pan. Roast 50–60 minutes basting frequently until internal temperature reaches 165°F. Remove bacon for last 10 minutes to brown breast. Rest 10 minutes. Carve and serve with pan juices."
+          }
+        ]
+      },
+      {
+        "id": "turkey",
+        "icon": "🦃",
+        "name": "Turkey",
+        "desc": "Whole roasted turkey, turkey breast, turkey burgers, ground turkey dishes, and holiday classics.",
+        "recipes": [
+          {
+            "name": "Ground Turkey Tacos",
+            "servings": "4 servings",
+            "ingredients": [
+              "500 g (1 lb) ground turkey",
+              "1 onion, diced",
+              "3 garlic cloves, minced",
+              "2 tsp cumin",
+              "1 tsp chili powder",
+              "1 tsp smoked paprika",
+              "½ tsp oregano",
+              "1 can (14 oz) diced tomatoes",
+              "Salt and pepper",
+              "8 taco shells or tortillas",
+              "Toppings: cheese, sour cream, salsa, lettuce, avocado"
+            ],
+            "prep": "Brown turkey in a skillet. Add onion and garlic and cook until softened. Add all spices and cook 1 minute. Add tomatoes and simmer 10 minutes. Season with salt and pepper. Serve in taco shells with desired toppings."
+          },
+          {
+            "name": "Roast Turkey",
+            "servings": "10 servings",
+            "ingredients": [
+              "1 whole turkey, about 5.5 kg (12 lbs)",
+              "½ cup (115 g) unsalted butter, softened",
+              "4 garlic cloves, minced",
+              "1 tbsp fresh thyme",
+              "1 tbsp fresh rosemary",
+              "1 tbsp fresh sage",
+              "1 onion, quartered",
+              "1 lemon, quartered",
+              "4 cups (960 ml) turkey or chicken broth",
+              "Salt and black pepper"
+            ],
+            "prep": "The night before, rub turkey all over with salt and refrigerate uncovered. Preheat oven to 425°F (220°C). Mix butter with garlic and fresh herbs. Loosen skin and rub butter under skin over breast and thighs. Rub outside with remaining butter. Season with pepper. Stuff cavity with onion and lemon. Place on a rack in a large roasting pan. Pour 2 cups broth into pan. Roast at high heat 30 minutes. Reduce to 325°F. Roast about 2.5–3 hours total, basting every 30 minutes and adding broth as needed. Internal temperature should reach 165°F at the thigh. Rest 30 minutes before carving."
+          },
+          {
+            "name": "Turkey Breast Roast",
+            "servings": "6 servings",
+            "ingredients": [
+              "1.5 kg (3 lbs) boneless turkey breast",
+              "4 tbsp butter, softened",
+              "4 garlic cloves, minced",
+              "1 tsp dried sage",
+              "1 tsp dried thyme",
+              "1 tsp dried rosemary",
+              "Salt and black pepper",
+              "1 cup (240 ml) chicken broth"
+            ],
+            "prep": "Preheat oven to 375°F (190°C). Mix butter with garlic and herbs. Loosen skin and rub butter under skin and all over outside. Season generously with salt and pepper. Place on a rack in a roasting pan with broth below. Roast 60–80 minutes basting every 20 minutes until internal temperature reaches 165°F. Rest 15 minutes before slicing."
+          },
+          {
+            "name": "Turkey Burgers",
+            "servings": "4 servings",
+            "ingredients": [
+              "500 g (1 lb) ground turkey",
+              "¼ cup breadcrumbs",
+              "1 egg",
+              "2 garlic cloves, minced",
+              "1 tbsp Worcestershire sauce",
+              "1 tsp onion powder",
+              "Salt and pepper",
+              "Burger buns and toppings"
+            ],
+            "prep": "Mix all ingredients gently — do not overwork. Shape into 4 patties. Make a small indent in the center of each to prevent puffing. Season outside with salt and pepper. Grill or cook in a skillet over medium heat 5–6 minutes per side until cooked through to 165°F. Do not press down. Rest 3 minutes. Serve on buns with desired toppings."
+          },
+          {
+            "name": "Turkey Kebabs",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) turkey breast, cubed",
+              "Marinade: 3 tbsp olive oil, juice of 1 lemon, 3 garlic cloves, 1 tsp cumin, 1 tsp paprika, ½ tsp oregano, salt and pepper",
+              "Bell peppers and onion, cubed for skewers",
+              "Tzatziki to serve"
+            ],
+            "prep": "Mix marinade and coat turkey. Marinate 1 hour. Thread turkey, peppers, and onion alternately onto skewers. Grill over medium-high heat turning occasionally until turkey is cooked through and vegetables are slightly charred — about 12–15 minutes. Serve with tzatziki and pita or rice."
+          },
+          {
+            "name": "Turkey Lettuce Wraps",
+            "servings": "4 servings",
+            "ingredients": [
+              "500 g (1 lb) ground turkey",
+              "1 onion, finely diced",
+              "3 garlic cloves, minced",
+              "1 tbsp fresh ginger",
+              "1 can (8 oz) water chestnuts, drained and chopped",
+              "3 tbsp soy sauce",
+              "1 tbsp hoisin sauce",
+              "1 tbsp sesame oil",
+              "1 tsp rice vinegar",
+              "Butter lettuce leaves",
+              "Green onions and sesame seeds to garnish"
+            ],
+            "prep": "Cook turkey in a skillet over medium-high heat until browned. Add onion, garlic, and ginger and cook 3 minutes. Add water chestnuts. Mix soy sauce, hoisin, sesame oil, and vinegar and pour over. Cook 2 minutes. Serve in crisp butter lettuce cups topped with green onions and sesame seeds."
+          },
+          {
+            "name": "Turkey Meatballs",
+            "servings": "4 servings",
+            "ingredients": [
+              "500 g (1 lb) ground turkey",
+              "½ cup breadcrumbs",
+              "¼ cup milk",
+              "1 egg",
+              "3 garlic cloves, minced",
+              "¼ cup Parmesan, grated",
+              "2 tbsp fresh parsley",
+              "1 tsp Italian seasoning",
+              "Salt and pepper",
+              "2 cups marinara sauce"
+            ],
+            "prep": "Soak breadcrumbs in milk 5 minutes. Combine turkey, breadcrumbs, egg, garlic, Parmesan, parsley, Italian seasoning, salt and pepper. Mix gently. Roll into golf ball sized balls. Bake on a greased baking sheet at 400°F for 18–20 minutes or pan fry in olive oil until golden on all sides. Simmer in marinara sauce 10 minutes. Serve over pasta or as a sub."
+          },
+          {
+            "name": "Turkey Meatloaf",
+            "servings": "6 servings",
+            "ingredients": [
+              "700 g (1.5 lbs) ground turkey",
+              "½ cup breadcrumbs",
+              "½ cup milk",
+              "2 eggs",
+              "1 onion, finely diced",
+              "3 garlic cloves, minced",
+              "2 tbsp Worcestershire sauce",
+              "1 tsp dried thyme",
+              "Salt and pepper",
+              "Glaze: ½ cup ketchup, 2 tbsp brown sugar, 1 tbsp Dijon"
+            ],
+            "prep": "Preheat oven to 375°F (190°C). Soak breadcrumbs in milk. Mix turkey with all ingredients gently. Form into a loaf in a baking dish. Mix glaze and spread over top. Bake 55–60 minutes until internal temperature reaches 165°F. Rest 10 minutes before slicing."
+          },
+          {
+            "name": "Turkey Piccata",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 turkey breast cutlets, pounded thin",
+              "½ cup flour",
+              "4 tbsp butter",
+              "2 tbsp olive oil",
+              "4 garlic cloves, minced",
+              "½ cup (120 ml) dry white wine",
+              "½ cup (120 ml) chicken broth",
+              "Juice of 2 lemons",
+              "3 tbsp capers, rinsed",
+              "Fresh parsley",
+              "Salt and pepper"
+            ],
+            "prep": "Season turkey with salt and pepper. Dredge in flour. Heat olive oil and 2 tbsp butter in a skillet over medium-high heat. Cook turkey 3 minutes per side until golden. Remove. Add garlic and cook 30 seconds. Add wine and reduce by half. Add broth and lemon juice and simmer 3 minutes. Stir in capers and remaining butter. Return turkey and heat through. Garnish with parsley."
+          },
+          {
+            "name": "Turkey Pot Pie",
+            "servings": "6 servings",
+            "ingredients": [
+              "3 cups cooked turkey, shredded",
+              "1 cup frozen peas",
+              "1 cup carrots, diced and cooked",
+              "1 cup celery, diced and cooked",
+              "1 onion, diced",
+              "4 tbsp butter",
+              "¼ cup flour",
+              "2 cups (480 ml) chicken broth",
+              "1 cup (240 ml) heavy cream",
+              "Salt, pepper, and thyme",
+              "2 sheets pie crust or puff pastry"
+            ],
+            "prep": "Preheat oven to 400°F (200°C). Melt butter and cook onion until soft. Whisk in flour and cook 1 minute. Gradually add broth and cream. Stir until thickened. Add turkey, peas, carrots, celery, thyme, salt, and pepper. Line a pie dish with one crust. Fill with turkey mixture. Top with second crust, seal edges, and cut slits. Brush with egg wash. Bake 35–40 minutes until golden."
+          },
+          {
+            "name": "Turkey Soup",
+            "servings": "6 servings",
+            "ingredients": [
+              "3 cups cooked turkey, shredded",
+              "8 cups (1.9 L) turkey or chicken broth",
+              "3 carrots, sliced",
+              "3 celery stalks, sliced",
+              "1 onion, diced",
+              "3 garlic cloves, minced",
+              "2 cups egg noodles",
+              "Fresh thyme and bay leaf",
+              "2 tbsp olive oil",
+              "Salt and pepper",
+              "Fresh parsley"
+            ],
+            "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and cook 1 minute. Add broth, thyme, and bay leaf. Bring to a boil. Add noodles and cook until tender. Add shredded turkey and heat through. Season with salt and pepper. Remove bay leaf and garnish with fresh parsley."
+          },
+          {
+            "name": "Turkey Stir Fry",
+            "servings": "4 servings",
+            "ingredients": [
+              "500 g (1 lb) turkey breast, thinly sliced",
+              "2 cups broccoli florets",
+              "1 red bell pepper, sliced",
+              "2 carrots, julienned",
+              "3 garlic cloves, minced",
+              "1 tbsp fresh ginger",
+              "Sauce: 3 tbsp soy sauce, 1 tbsp oyster sauce, 1 tbsp sesame oil, 1 tsp cornstarch, 1 tsp sugar",
+              "2 tbsp vegetable oil"
+            ],
+            "prep": "Mix sauce ingredients. Heat oil in a wok over very high heat. Cook turkey quickly in batches until cooked through. Remove. Add vegetables and stir fry 3–4 minutes until tender-crisp. Add garlic and ginger and cook 30 seconds. Return turkey. Pour sauce over and toss until thickened and glossy. Serve over steamed rice."
+          },
+          {
+            "name": "Turkey Stuffed Peppers",
+            "servings": "4 servings",
+            "ingredients": [
+              "4 large bell peppers, tops cut off and seeded",
+              "500 g (1 lb) ground turkey",
+              "1 cup cooked rice",
+              "1 can (14 oz) diced tomatoes",
+              "1 onion, diced",
+              "3 garlic cloves, minced",
+              "1 tsp Italian seasoning",
+              "1 cup shredded mozzarella",
+              "Salt and pepper",
+              "Olive oil"
+            ],
+            "prep": "Preheat oven to 375°F (190°C). Cook turkey with onion and garlic. Add tomatoes, cooked rice, and Italian seasoning. Season with salt and pepper. Fill peppers with turkey mixture. Place in a baking dish with ¼ cup water in the bottom. Cover with foil and bake 30 minutes. Uncover, top with mozzarella, and bake 15 more minutes until cheese is melted and peppers are tender."
+          },
+          {
+            "name": "Turkey Stuffed with Cornbread Dressing",
+            "servings": "8 servings",
+            "ingredients": [
+              "1 whole turkey, about 4.5 kg (10 lbs)",
+              "Cornbread dressing: 4 cups cornbread crumbled, 1 onion diced, 3 celery stalks diced, 2 eggs, 2 cups chicken broth, 1 tsp sage, salt and pepper",
+              "4 tbsp butter, softened",
+              "Salt and pepper"
+            ],
+            "prep": "Make dressing by combining cornbread, cooked onion and celery, eggs, broth, sage, salt, and pepper — mixture should be moist but not wet. Preheat oven to 325°F. Rub turkey inside and out with butter, salt, and pepper. Loosely stuff with dressing. Tie legs. Roast 3–3.5 hours until internal temperature in thigh reaches 165°F and stuffing reaches 165°F. Rest 20 minutes. Carve and serve with remaining dressing baked separately."
           }
         ]
       }
