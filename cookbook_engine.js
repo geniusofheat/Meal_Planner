@@ -185,6 +185,16 @@ function render_subcats(cat_id) {
     .map((sub, original_idx) => ({ sub, original_idx }))
     .sort((a, b) => a.sub.name.localeCompare(b.sub.name));
   const open_key = open_subcat[cat_id];
+
+  // A category whose only subcategory repeats the category's own title
+  // (Breads & Grains, Pickles & Preserves, Side Dishes): skip that extra
+  // level and list the recipes straight away.
+  const cat_def = CATEGORIES.find((c) => c.id === cat_id);
+  if (cat_def && subcats.length === 1 &&
+      subcats[0].sub.name.trim().toLowerCase() === cat_def.label.trim().toLowerCase()) {
+    return render_recipe_titles(cat_id, subcats[0].original_idx, subcats[0].sub.recipes || []);
+  }
+
   let html = '<ul class="sub-list level-2">';
 
   if (subcats.length === 0) {

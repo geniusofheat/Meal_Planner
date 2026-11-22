@@ -3,7 +3,7 @@ const pickles_and_preserves = [
   {
     "id": "pickles",
     "icon": "🥒",
-    "name": "Pickled Vegetables",
+    "name": "Pickles & Preserves",
     "desc": "Pickled vegetables, brines, and preserves for snacking, sandwiches, and pantry stocking.",
     "recipes": [
       {

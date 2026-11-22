@@ -5,7 +5,7 @@ const breads_and_grains_data = [
   // ===========================
   {
     id: "breads",
-    icon:"🍞", name:"Breads & Pilafs",
+    icon:"🍞", name:"Breads & Grains",
     desc:"Freshly baked breads, rolls, and hearty grain-based dishes including rice, quinoa, and whole grains.",
     recipes:[
 
