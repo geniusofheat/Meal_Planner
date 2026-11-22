@@ -2338,6 +2338,92 @@
               "Red pepper flakes and olive oil"
             ],
             "prep": "Preheat oven to 500°F (260°C) with a pizza stone or inverted baking sheet inside. Stretch dough to desired shape. Spread thin layer of crushed tomatoes. Top with mozzarella, chorizo, red onion, and roasted red peppers. Drizzle with olive oil. Bake 10–12 minutes until crust is charred and crispy and cheese is bubbling. Top immediately with fresh arugula and shaved Parmesan."
+          },
+          {
+            "name": "Conecuh Sausage Skillet with Peppers and Potatoes",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 package (14 oz) Conecuh smoked sausage, sliced into rounds",
+              "1½ lbs red potatoes, diced into ½-inch pieces",
+              "1 green bell pepper, diced",
+              "1 yellow onion, diced",
+              "2 tbsp vegetable oil",
+              "½ tsp garlic powder",
+              "½ tsp salt",
+              "¼ tsp black pepper"
+            ],
+            "prep": "Heat the oil in a large skillet over medium heat. Cook the potatoes with the salt, covered, for 10 minutes, stirring now and then. Add the onion and pepper and cook 5 minutes. Stir in the Conecuh sausage, garlic powder, and pepper and cook, uncovered, 8–10 minutes until the potatoes are tender and the sausage is browned."
+          },
+          {
+            "name": "Conecuh Sausage and Rice Skillet",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 package (14 oz) Conecuh smoked sausage, sliced",
+              "1 tbsp butter",
+              "1 small onion, diced",
+              "1 celery stalk, diced",
+              "2 cloves garlic, minced",
+              "1 cup long-grain white rice",
+              "2 cups chicken broth",
+              "1 tsp Creole seasoning",
+              "2 green onions, sliced"
+            ],
+            "prep": "Brown the sausage in a large skillet over medium-high heat for 4 minutes, then remove. Melt the butter in the same skillet and cook the onion and celery 4 minutes. Add the garlic for 30 seconds, then stir in the rice, broth, and Creole seasoning. Bring to a boil, return the sausage, cover, and simmer on low 18–20 minutes. Rest 5 minutes, fluff, and top with green onions."
+          },
+          {
+            "name": "Grilled Bratwurst with Sauerkraut and Mustard",
+            "servings": "6 servings",
+            "ingredients": [
+              "6 fresh bratwurst links (such as Johnsonville)",
+              "1 can (14 oz) sauerkraut, drained",
+              "1 tbsp butter",
+              "½ yellow onion, thinly sliced",
+              "1 can (12 oz) beer",
+              "6 brat buns or hard rolls",
+              "Stone-ground mustard, for serving"
+            ],
+            "prep": "Simmer the brats in the beer with the onion in a skillet over medium heat for 10 minutes. Move them to a medium-hot grill and cook 6–8 minutes, turning, until browned and 160°F inside. Meanwhile warm the sauerkraut in the butter with the beer-cooked onion. Serve the brats in buns topped with sauerkraut and mustard."
+          },
+          {
+            "name": "Polska Kielbasa and Pierogi Skillet",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 package (13–14 oz) Polska kielbasa, sliced",
+              "1 package (16 oz) potato and cheese pierogi, thawed if frozen",
+              "3 tbsp butter",
+              "1 large yellow onion, sliced",
+              "½ tsp salt",
+              "¼ tsp black pepper",
+              "2 tbsp chopped fresh chives",
+              "Sour cream, for serving"
+            ],
+            "prep": "Melt 1 tbsp butter in a large skillet over medium heat and cook the onion 12–15 minutes until golden. Remove. Add the remaining butter and brown the pierogi 3–4 minutes per side. Add the kielbasa and cook 4 minutes until browned. Return the onion, season with salt and pepper, and serve with chives and sour cream."
+          },
+          {
+            "name": "Fried Boudin Balls",
+            "servings": "6 servings",
+            "ingredients": [
+              "1 lb boudin sausage, casings removed",
+              "½ cup all-purpose flour",
+              "2 large eggs, beaten with 1 tbsp water",
+              "1 cup plain breadcrumbs",
+              "Vegetable oil, for frying (about 3 cups)",
+              "Creole mustard, for serving"
+            ],
+            "prep": "Roll the boudin into golf-ball-size rounds and chill 20 minutes. Dredge each in the flour, dip in the egg, and coat with breadcrumbs. Heat the oil to 350°F. Fry in batches 2–3 minutes until deep golden. Drain on a rack and serve hot with Creole mustard."
+          },
+          {
+            "name": "Sausage, Egg, and Cheese Breakfast Sandwich",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 lb breakfast sausage (such as Jimmy Dean or Bob Evans)",
+              "4 English muffins, split and toasted",
+              "4 large eggs",
+              "4 slices American cheese",
+              "1 tbsp butter",
+              "Salt and pepper"
+            ],
+            "prep": "Form the sausage into 4 patties slightly wider than the muffins and cook in a skillet over medium heat 4–5 minutes per side until browned and 160°F inside. Fry the eggs in the butter to your liking and season. Top each bottom muffin half with a patty, an egg, and a slice of cheese. Close with the muffin tops."
           }
         ]
       }
@@ -4080,7 +4166,7 @@
         "id": "beef_sausages",
         "icon": "🌭",
         "name": "Sausages",
-        "desc": "Hot dogs and beef sausage dishes.",
+        "desc": "Hot dogs, kielbasa, hot links and smoked beef sausage dishes.",
         "recipes": [
           {
             "name": "Hot Dog Bar",
@@ -4091,6 +4177,84 @@
               "Condiments: mustard, ketchup, relish, sauerkraut, diced onion, jalapeños, cheddar sauce, chili, coleslaw"
             ],
             "prep": "Grill hot dogs over medium-high heat turning frequently until nicely charred and skin blisters slightly — about 5–6 minutes. Alternatively boil in water or steam. Toast buns on the grill or in a skillet with a little butter. Set up a condiment bar and let everyone build their own. Classic combinations: Chicago style with mustard, relish, onion, and tomato; New York style with sauerkraut and spicy mustard; chili cheese dog."
+          },
+          {
+            "name": "Beef Polska Kielbasa and Cabbage Skillet",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 package (13–14 oz) beef Polska kielbasa (such as Hillshire Farm), sliced into ½-inch rounds",
+              "1 small head green cabbage (about 6 cups), chopped",
+              "1 yellow onion, sliced",
+              "2 tbsp butter",
+              "1 tbsp apple cider vinegar",
+              "½ tsp caraway seeds",
+              "½ tsp salt",
+              "¼ tsp black pepper",
+              "¼ cup beef broth or water"
+            ],
+            "prep": "Brown the kielbasa slices in a large skillet over medium-high heat for 4–5 minutes, then remove. Melt the butter in the same skillet and cook the onion 3 minutes. Add the cabbage, caraway, salt, and pepper and cook 5 minutes, stirring. Pour in the broth, cover, and cook 8–10 minutes until the cabbage is tender. Stir in the vinegar and the kielbasa and cook 2 more minutes."
+          },
+          {
+            "name": "Smoked Beef Sausage and Rice Skillet",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 package (14 oz) smoked beef sausage, sliced",
+              "1 tbsp vegetable oil",
+              "1 green bell pepper, diced",
+              "1 small onion, diced",
+              "2 cloves garlic, minced",
+              "1 cup long-grain white rice",
+              "1¾ cups beef broth",
+              "1 can (10 oz) diced tomatoes with green chiles",
+              "1 tsp Cajun seasoning",
+              "Chopped green onions, for serving"
+            ],
+            "prep": "Brown the sausage in the oil in a large deep skillet over medium-high heat for 4 minutes. Add the pepper and onion and cook 3 minutes, then add the garlic for 30 seconds. Stir in the rice, broth, tomatoes, and Cajun seasoning and bring to a boil. Cover, reduce to low, and cook 18–20 minutes until the rice is tender. Fluff with a fork and top with green onions."
+          },
+          {
+            "name": "Beef Hot Links with Peppers and Onions",
+            "servings": "4 servings",
+            "ingredients": [
+              "6 beef hot links",
+              "2 tbsp olive oil",
+              "2 bell peppers, sliced",
+              "1 large yellow onion, sliced",
+              "2 cloves garlic, minced",
+              "½ tsp dried oregano",
+              "½ tsp salt",
+              "6 hoagie rolls, toasted",
+              "Spicy brown mustard, for serving"
+            ],
+            "prep": "Brown the hot links in a skillet over medium heat for 8–10 minutes, turning, until cooked through. Remove and set aside. Add the oil, peppers, and onion to the skillet and cook 8 minutes until soft and lightly browned. Add the garlic, oregano, and salt for 1 minute. Slice the links on an angle, return them to the pan to warm, and serve in the rolls with mustard."
+          },
+          {
+            "name": "Chili Cheese Dogs",
+            "servings": "6 servings",
+            "ingredients": [
+              "6 all-beef hot dogs",
+              "6 hot dog buns, toasted",
+              "2 cups prepared beef chili, warm",
+              "1½ cups shredded cheddar cheese",
+              "¼ cup diced white onion",
+              "Yellow mustard, for serving"
+            ],
+            "prep": "Heat the hot dogs on a grill, in a skillet, or in simmering water for 5–7 minutes until hot. Place each in a toasted bun. Spoon the warm chili over the top, then sprinkle with cheddar and onion. Broil the dogs 1 minute if you want the cheese melted. Serve with mustard."
+          },
+          {
+            "name": "Beef Kielbasa and Potato Sheet Pan",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 package (13–14 oz) beef kielbasa, cut into 1-inch pieces",
+              "1½ lbs baby potatoes, halved",
+              "1 red onion, cut into wedges",
+              "2 tbsp olive oil",
+              "1 tsp smoked paprika",
+              "1 tsp garlic powder",
+              "½ tsp salt",
+              "¼ tsp black pepper",
+              "2 tbsp chopped fresh parsley"
+            ],
+            "prep": "Heat the oven to 425°F. Toss the potatoes with the oil, paprika, garlic powder, salt, and pepper on a large sheet pan. Roast 15 minutes. Add the kielbasa and onion, toss, and roast another 20–25 minutes until the potatoes are golden and the kielbasa is browned at the edges. Sprinkle with parsley."
           }
         ]
       }

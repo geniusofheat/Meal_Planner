@@ -29,7 +29,7 @@ window.load_cookbook_json = function () {
   if (cookbook_json_loading) return cookbook_json_loading;
   const files = window.COOKBOOK_JSON_FILES;
   cookbook_json_loading = Promise.all(Object.keys(files).map(function (cat_id) {
-    return fetch(files[cat_id] + "?v=7")
+    return fetch(files[cat_id] + "?v=8")
       .then(function (res) { return res.ok ? res.json() : []; })
       .catch(function () { return []; })
       .then(function (data) {
