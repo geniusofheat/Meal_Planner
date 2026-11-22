@@ -10,6 +10,7 @@ const cookbook_data = {
   hard_and_soft_candy: typeof hard_and_soft_candy_data !== 'undefined' ? hard_and_soft_candy_data : null,
   pickles_and_preserves: typeof pickles_and_preserves !== 'undefined' ? pickles_and_preserves : null,
   side_dishes: typeof side_dishes_data !== 'undefined' ? side_dishes_data : null,
+  snacks: typeof snacks_data !== 'undefined' ? snacks_data : null,
   meats: typeof meats_data !== 'undefined' ? meats_data : null,
   pastas: typeof pastas_data !== 'undefined' ? pastas_data : null,
   rice: typeof rice_data !== 'undefined' ? rice_data : null,

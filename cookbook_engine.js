@@ -45,7 +45,8 @@ const CATEGORIES = [
   { id: 'salads',                   icon: '🥗', label: 'Salads' },
   { id: 'soups_and_stews',          icon: '🍲', label: 'Soups & Stews' },
   { id: 'vegetables',               icon: '🥦', label: 'Vegetable Dishes' },
-  { id: 'side_dishes',              icon: '🥔', label: 'Side Dishes' }
+  { id: 'side_dishes',              icon: '🥔', label: 'Side Dishes' },
+  { id: 'snacks',                   icon: '🥨', label: 'Snacks' }
 ];
 
 let expanded_tools = new Set();

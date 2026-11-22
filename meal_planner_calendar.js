@@ -228,12 +228,12 @@ const COOKBOOK_FILES = [
   'beverages_data.js', 'beans_and_legumes_data.js', 'breads_and_grains_data.js',
   'desserts_data.js', 'dips_sauces_and_gravies_data.js', 'hard_and_soft_candy_data.js',
   'meats_data.js', 'pastas_data.js', 'pickles_and_preserves.js', 'salads_data.js',
-  'soups_and_stews_data.js', 'vegetables_data.js', 'side_dishes_data.js'
+  'soups_and_stews_data.js', 'vegetables_data.js', 'side_dishes_data.js', 'snacks_data.js'
 ];
 const COOKBOOK_GLOBALS = [
   'beverages_data', 'beans_and_legumes_data', 'breads_and_grains_data', 'desserts_data',
   'dips_sauces_and_gravies_data', 'hard_and_soft_candy_data', 'meats_data', 'pastas_data',
-  'pickles_and_preserves', 'salads_data', 'soups_and_stews_data', 'vegetables_data', 'side_dishes_data'
+  'pickles_and_preserves', 'salads_data', 'soups_and_stews_data', 'vegetables_data', 'side_dishes_data', 'snacks_data'
 ];
 let cookbook_loading = null;
 

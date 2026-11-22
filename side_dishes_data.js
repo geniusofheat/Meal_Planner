@@ -159,10 +159,10 @@ const side_dishes_data = [
     ]
   },
   {
-    "id": "snacks",
+    "id": "baked_favorites",
     "icon": "🍕",
-    "name": "Snacks",
-    "desc": "Sliders, pizza slices and chips with dip.",
+    "name": "Baked Favorites",
+    "desc": "Oven-baked handheld favorites.",
     "recipes": [
       {
         "name": "Sliders",
@@ -186,15 +186,6 @@ const side_dishes_data = [
           "toppings"
         ],
         "prep": "Prepare pizza, bake, and slice into handheld pieces."
-      },
-      {
-        "name": "Chips and Dip",
-        "servings": "4 servings",
-        "ingredients": [
-          "bag of chips",
-          "dip of choice"
-        ],
-        "prep": "Serve chips with dip."
       }
     ]
   }
