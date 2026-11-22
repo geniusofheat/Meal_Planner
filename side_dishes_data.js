@@ -5,7 +5,7 @@ const side_dishes_data = [
   // ===========================
   {
     id: 'side_dishes',
-    icon:"🍗", name:"Side Dishes",
+    icon:"🍗", name:"Handheld Foods",
     desc:"Handheld foods that can be eaten without utensils, perfect for snacks, parties, or quick meals.",
     recipes:[
 
