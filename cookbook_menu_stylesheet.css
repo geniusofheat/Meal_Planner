@@ -980,3 +980,14 @@ main { background-color: #14286b; color: #ffffff; }
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
+
+/* ── Top row = navigation row: [Back]  date  help;  page title sits below it ── */
+header.cookbook-toolbar { justify-content: space-between; }
+header.cookbook-toolbar .notepad-date { margin-left: auto; }
+.page-title {
+  margin: 6px 0 0;
+  text-align: center;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}

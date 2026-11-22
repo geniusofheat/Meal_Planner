@@ -154,7 +154,7 @@ function nextMonth() {
 function chooseCookbook() {
   // Save the pending date so cookbook_menu can pass a recipe back
   localStorage.setItem('mealplanner_pending_date', JSON.stringify(mp_selected_date));
-  window.location.href = 'cookbook_menu.html';
+  window.location.href = 'recipes_menu.html';
 }
 
 function showCreateForm() {
@@ -181,7 +181,7 @@ function submitCreatedMeal() {
   confirmMeal();
 }
 
-// Called by cookbook_menu.html after recipe is chosen (via localStorage + redirect back)
+// Called by recipes_menu.html after recipe is chosen (via localStorage + redirect back)
 function checkPendingCookbookRecipe() {
   const raw = localStorage.getItem('mealplanner_pending_recipe');
   if (!raw) return;

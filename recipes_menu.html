@@ -10,7 +10,7 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=10">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=11">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
@@ -19,7 +19,7 @@
 <div id="breadcrumb"></div>
 
 <header class="cookbook-toolbar">
-  <h3 id="pageTitle">📖  &nbsp;&nbsp;Cookbook :</h3>
+  <button class="orange-btn" id="toolbarBackBtn" onclick="toolbar_back()">← Back</button>
   <div class="notepad-date" id="dateDisplay"></div>
   <div class="help-btn-wrap">
     <div class="help-btn" id="helpBtn" onclick="show_help_modal()">?</div>
@@ -27,15 +27,12 @@
   </div>
 </header>
 
+<h3 id="pageTitle" class="page-title">📖  Recipes Menu :</h3>
+
 <p id="mainPageDescription">Please choose an item in the list or click Help for more instructions.<span class="desc-line">Search through the recipes menu below to find a recipe.</span></p>
 
 <!-- Search results message -->
 <div id="search_results" class="search-error-message"></div>
-
-<!-- BACK TOOLBAR (its own row above the search row) -->
-<div class="back-row">
-  <button class="orange-btn" id="toolbarBackBtn" onclick="toolbar_back()">← Back</button>
-</div>
 
 <!-- SEARCH ROW (its own bordered row above the container) -->
 <div class="search-row" id="search-row">
@@ -125,7 +122,7 @@
 <script src="side_dishes_data.js"></script>
 <script src="cookbook_menu_data.js"></script>
 
-<script src="cookbook_engine.js?v=6"></script>
+<script src="cookbook_engine.js?v=7"></script>
 
 <script>
   if ('serviceWorker' in navigator) {

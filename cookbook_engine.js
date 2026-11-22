@@ -315,7 +315,7 @@ window.adjust_batches = adjust_batches;
 function back_to_list() {
   document.getElementById('recipe-editor-view').style.display = 'none';
   document.getElementById('notes-list-view').style.display = 'block';
-  set_header_title('📖  Cookbook :');
+  set_header_title('📖  Recipes Menu :');
   hide_back_btn();
   const desc = document.getElementById('mainPageDescription');
   if (desc) desc.style.display = '';
