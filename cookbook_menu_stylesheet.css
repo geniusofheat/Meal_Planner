@@ -971,3 +971,12 @@ main { background-color: #14286b; color: #ffffff; }
 #notes-list-view .note-list-item { border-bottom: 1px solid var(--gold); }
 #notes-list-view .sub-content-row { background: rgba(255,255,255,0.08); }
 #notes-list-view .notes-ol { color: #ffffff; }
+
+#mainPageDescription .desc-line { display: block; margin-top: 8px; }
+.menu-title {
+  margin: 4px 0 6px;
+  text-align: center;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}

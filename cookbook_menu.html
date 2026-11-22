@@ -10,7 +10,7 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=9">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=10">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
@@ -27,7 +27,7 @@
   </div>
 </header>
 
-<p id="mainPageDescription">Please choose an item in the list or click Help for more instructions.</p>
+<p id="mainPageDescription">Please choose an item in the list or click Help for more instructions.<span class="desc-line">Search through the recipes menu below to find a recipe.</span></p>
 
 <!-- Search results message -->
 <div id="search_results" class="search-error-message"></div>
@@ -48,6 +48,7 @@
 <main class="main">
 
   <div id="notes-list-view">
+    <h3 class="menu-title">🍽️ Recipes Menu :</h3>
     <div class="notepad-body">
       <div id="notes-list"></div>
     </div>
