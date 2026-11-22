@@ -1,4 +1,4 @@
-const pickles_and_preserves = [
+[
   {
     "id": "pickles",
     "icon": "🥒",
@@ -370,4 +370,4 @@ const pickles_and_preserves = [
       }
     ]
   }
-];
+]

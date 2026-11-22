@@ -1,4 +1,4 @@
-const salads_data = [
+[
   {
     "id": "green-garden",
     "icon": "🥗",
@@ -2104,4 +2104,4 @@ const salads_data = [
       }
     ]
   }
-];
+]

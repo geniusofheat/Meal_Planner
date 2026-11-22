@@ -1,4 +1,4 @@
-const breads_and_grains_data = [
+[
   {
     "id": "breads",
     "icon": "🍞",
@@ -492,4 +492,4 @@ const breads_and_grains_data = [
       }
     ]
   }
-];
+]

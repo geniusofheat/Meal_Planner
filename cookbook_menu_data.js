@@ -1,23 +1,8 @@
 // ================================================================
 //  § 1 — CATEGORY DATA MAP
 // ================================================================
-const cookbook_data = {
-  beverages: typeof beverages_data !== 'undefined' ? beverages_data : null,
-  beans_and_legumes: typeof beans_and_legumes_data !== 'undefined' ? beans_and_legumes_data : null,
-  breads_and_grains: typeof breads_and_grains_data !== 'undefined' ? breads_and_grains_data : null,
-  desserts: typeof desserts_data !== 'undefined' ? desserts_data : null,
-  dips_sauces_and_gravies: typeof dips_sauces_and_gravies_data !== 'undefined' ? dips_sauces_and_gravies_data : null,
-  hard_and_soft_candy: typeof hard_and_soft_candy_data !== 'undefined' ? hard_and_soft_candy_data : null,
-  pickles_and_preserves: typeof pickles_and_preserves !== 'undefined' ? pickles_and_preserves : null,
-  side_dishes: typeof side_dishes_data !== 'undefined' ? side_dishes_data : null,
-  snacks: typeof snacks_data !== 'undefined' ? snacks_data : null,
-  meats: typeof meats_data !== 'undefined' ? meats_data : null,
-  pastas: typeof pastas_data !== 'undefined' ? pastas_data : null,
-  rice: typeof rice_data !== 'undefined' ? rice_data : null,
-  salads: typeof salads_data !== 'undefined' ? salads_data : null,
-  soups_and_stews: typeof soups_and_stews_data !== 'undefined' ? soups_and_stews_data : null,
-  vegetables: typeof vegetables_data !== 'undefined' ? vegetables_data : null,
-};
+// Filled in by cookbook_json.js (one JSON file per main category)
+const cookbook_data = window.cookbook_json_data;
 
 let active_category = null;
 let current_recipe = null;

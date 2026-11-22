@@ -1,4 +1,4 @@
-const vegetables_data = [
+[
   {
     "id": "sprouts",
     "icon": "🌱",
@@ -610,4 +610,4 @@ const vegetables_data = [
       }
     ]
   }
-];
+]

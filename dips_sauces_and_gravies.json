@@ -1,4 +1,4 @@
-const dips_sauces_and_gravies_data = [
+[
   {
     "id": "dips",
     "icon": "🥣",
@@ -527,4 +527,4 @@ const dips_sauces_and_gravies_data = [
       }
     ]
   }
-];
+]

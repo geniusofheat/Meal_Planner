@@ -64,6 +64,8 @@ let engine_list_scroll = 0;   // where the list was scrolled when a recipe was o
 document.addEventListener('DOMContentLoaded', () => {
   set_date_display();
   redraw_list();
+  // the category JSON files load in the background; redraw once they are in
+  if (window.load_cookbook_json) window.load_cookbook_json().then(redraw_list);
 });
 
 function set_date_display() {

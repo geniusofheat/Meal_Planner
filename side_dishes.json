@@ -1,4 +1,4 @@
-const side_dishes_data = [
+[
   {
     "id": "fried_favorites",
     "icon": "🍗",
@@ -189,4 +189,4 @@ const side_dishes_data = [
       }
     ]
   }
-];
+]

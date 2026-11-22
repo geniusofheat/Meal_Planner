@@ -1,4 +1,4 @@
-const soups_and_stews_data = [
+[
   {
     "id": "classicSoups",
     "icon": "🍲",
@@ -2152,4 +2152,4 @@ const soups_and_stews_data = [
       }
     ]
   }
-];
+]

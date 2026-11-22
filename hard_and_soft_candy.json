@@ -1,4 +1,4 @@
-const hard_and_soft_candy_data = [
+[
   {
     "id": "chocolate",
     "icon": "🍫",
@@ -199,4 +199,4 @@ const hard_and_soft_candy_data = [
       }
     ]
   }
-];
+]

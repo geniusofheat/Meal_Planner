@@ -1,4 +1,4 @@
-const meats_data = [
+[
   {
     "id": "asian_stirfry",
     "icon": "🥢",
@@ -2394,4 +2394,4 @@ const meats_data = [
       }
     ]
   }
-];
+]

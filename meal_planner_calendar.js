@@ -224,38 +224,15 @@ function render_week() {
 }
 
 // ── recovering instructions for meals saved without them ───────
-const COOKBOOK_FILES = [
-  'beverages_data.js', 'beans_and_legumes_data.js', 'breads_and_grains_data.js',
-  'desserts_data.js', 'dips_sauces_and_gravies_data.js', 'hard_and_soft_candy_data.js',
-  'meats_data.js', 'pastas_data.js', 'pickles_and_preserves.js', 'salads_data.js',
-  'soups_and_stews_data.js', 'vegetables_data.js', 'side_dishes_data.js', 'snacks_data.js'
-];
-const COOKBOOK_GLOBALS = [
-  'beverages_data', 'beans_and_legumes_data', 'breads_and_grains_data', 'desserts_data',
-  'dips_sauces_and_gravies_data', 'hard_and_soft_candy_data', 'meats_data', 'pastas_data',
-  'pickles_and_preserves', 'salads_data', 'soups_and_stews_data', 'vegetables_data', 'side_dishes_data', 'snacks_data'
-];
-let cookbook_loading = null;
-
 function load_cookbook_data() {
-  if (cookbook_loading) return cookbook_loading;
-  cookbook_loading = Promise.all(COOKBOOK_FILES.map(src => new Promise(resolve => {
-    const el = document.createElement('script');
-    el.src = src + '?v=1';
-    el.onload = resolve;
-    el.onerror = resolve;
-    document.head.appendChild(el);
-  })));
-  return cookbook_loading;
+  return window.load_cookbook_json ? window.load_cookbook_json() : Promise.resolve();
 }
 
 function find_cookbook_recipe(name) {
   const want = String(name || '').trim().toLowerCase();
-  for (const g of COOKBOOK_GLOBALS) {
-    let arr = null;
-    try { arr = (new Function('return typeof ' + g + ' !== "undefined" ? ' + g + ' : null'))(); } catch (e) {}
-    if (!Array.isArray(arr)) continue;
-    for (const sub of arr) {
+  const data = window.cookbook_json_data || {};
+  for (const cat_id of Object.keys(data)) {
+    for (const sub of (data[cat_id] || [])) {
       for (const r of (sub.recipes || [])) {
         if (String(r.name).trim().toLowerCase() === want) return r;
       }

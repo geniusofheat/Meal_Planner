@@ -3,7 +3,7 @@
 // Auto-updating: always fetches fresh files, cache is backup only
 // ============================================================
 
-const CACHE_NAME = 'Meal_Planner-v32';
+const CACHE_NAME = 'Meal_Planner-v33';
 
 const FILES_TO_CACHE = [
   'index.html',
@@ -33,22 +33,23 @@ const FILES_TO_CACHE = [
   'grocery_list_data.js',
   'firebase_config.js',
   'firebase_login_auth.js',
-  'meats_data.js',
   'pork_data.js',
-  'desserts_data.js',
-  'pastas_data.js',
-  'beans_and_legumes_data.js',
-  'beverages_data.js',
-  'breads_and_grains_data.js',
-  'hard_and_soft_candy_data.js',
-  'dips_sauces_and_gravies_data.js',
-  'salads_data.js',
   'seafood_data.js',
-  'side_dishes_data.js',
-  'snacks_data.js',
-  'soups_and_stews_data.js',
-  'vegetables_data.js',
-  'pickles_and_preserves.js'
+  'cookbook_json.js',
+  'beans_and_legumes.json',
+  'beverages.json',
+  'breads_and_grains.json',
+  'desserts.json',
+  'dips_sauces_and_gravies.json',
+  'hard_and_soft_candy.json',
+  'meats.json',
+  'pastas.json',
+  'pickles_and_preserves.json',
+  'salads.json',
+  'side_dishes.json',
+  'snacks.json',
+  'soups_and_stews.json',
+  'vegetable_dishes.json'
 ];
 
 // Install — cache all files

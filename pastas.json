@@ -1,4 +1,4 @@
-const pastas_data = [
+[
   {
     "id": "pastaDishes",
     "icon": "🍝",
@@ -1066,4 +1066,4 @@ const pastas_data = [
       }
     ]
   }
-];
+]

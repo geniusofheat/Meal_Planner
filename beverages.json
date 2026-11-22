@@ -1,4 +1,4 @@
-const beverages_data = [
+[
   {
     "id": "smoothies",
     "icon": "🍵",
@@ -1462,4 +1462,4 @@ const beverages_data = [
       }
     ]
   }
-];
+]
