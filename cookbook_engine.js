@@ -40,7 +40,7 @@ const CATEGORIES = [
   { id: 'dips_sauces_and_gravies',  icon: '🥣', label: 'Dips, Sauces, & Gravies' },
   { id: 'hard_and_soft_candy',      icon: '🍬', label: 'Hard & Soft Candy' },
   { id: 'meats',                    icon: '🥩', label: 'Meats' },
-  { id: 'pastas',                   icon: '🍝', label: 'Pastas & Rice' },
+  { id: 'pastas',                   icon: '🍝', label: 'Pastas' },
   { id: 'pickles_and_preserves',    icon: '🥒', label: 'Pickles & Preserves' },
   { id: 'salads',                   icon: '🥗', label: 'Salads' },
   { id: 'soups_and_stews',          icon: '🍲', label: 'Soups & Stews' },

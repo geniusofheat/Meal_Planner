@@ -1,4 +1,4 @@
- const beverages_data = [
+const beverages_data = [
   {
     "id": "smoothies",
     "icon": "🍵",
@@ -225,20 +225,242 @@
     ]
   },
   {
-    "id": "coffee",
-    "icon": "🍵",
-    "name": "Coffee & Espresso",
+    "id": "cocktails",
+    "icon": "🍸",
+    "name": "Cocktails",
+    "desc": "Classic shaken and stirred cocktails from the bar.",
     "recipes": [
       {
-        "name": "Affogato",
+        "id": "ck1",
+        "name": "Classic Martini",
         "servings": "1 serving",
         "ingredients": [
-          "1–2 scoops vanilla gelato or ice cream",
-          "1–2 shots freshly brewed hot espresso",
-          "Amaretti cookies or chocolate shavings (optional)"
+          "2½ oz gin or vodka",
+          "½ oz dry vermouth",
+          "Ice",
+          "Lemon twist or green olive to garnish"
         ],
-        "prep": "Place gelato in a small chilled glass. Brew espresso shots. Pour the hot espresso directly over the cold gelato immediately before serving. The contrast of hot and cold, bitter and sweet is extraordinary. Serve immediately with amaretti cookies on the side."
+        "prep": "Fill a mixing glass with ice. Add gin or vodka and vermouth. Stir with a bar spoon for 30 seconds until well chilled — do not shake a martini or it will become cloudy. Strain into a chilled martini glass. Garnish with a lemon twist or olive. For a drier martini reduce the vermouth. For a dirty martini add a splash of olive brine."
       },
+      {
+        "id": "ck2",
+        "name": "Old Fashioned",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz bourbon or rye whiskey",
+          "1 sugar cube or 1 tsp simple syrup",
+          "2 dashes Angostura bitters",
+          "Large ice cube",
+          "Orange peel and cherry to garnish"
+        ],
+        "prep": "Place sugar cube in a rocks glass and saturate with bitters. Muddle until dissolved. Add a large ice cube. Pour whiskey over. Stir gently 10–15 seconds. Express orange peel over the glass by holding it peel-side down and giving it a firm twist to release the oils. Run peel around the rim and drop in. Add a cherry to garnish."
+      },
+      {
+        "id": "ck3",
+        "name": "Negroni",
+        "servings": "1 serving",
+        "ingredients": [
+          "1 oz gin",
+          "1 oz sweet vermouth",
+          "1 oz Campari",
+          "Large ice cube",
+          "Orange slice or peel to garnish"
+        ],
+        "prep": "Fill a rocks glass with a large ice cube. Pour gin, sweet vermouth, and Campari directly into the glass. Stir gently with a bar spoon for 20 seconds. Garnish with an orange slice or expressed orange peel. The Negroni is perfectly balanced — equal parts of each ingredient is essential. Do not adjust the ratios or you lose the balance."
+      },
+      {
+        "id": "ck4",
+        "name": "Whiskey Sour",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz bourbon",
+          "¾ oz fresh lemon juice",
+          "¾ oz simple syrup",
+          "1 egg white (optional but recommended)",
+          "Ice",
+          "Cherry and orange slice to garnish"
+        ],
+        "prep": "If using egg white, add all ingredients to a shaker without ice and dry shake vigorously 15 seconds to emulsify. Then add ice and shake again hard for 15 seconds. If not using egg white, just add all ingredients to a shaker with ice and shake well. Strain into a rocks glass over fresh ice. Garnish with a cherry and orange slice. The egg white creates a silky texture and beautiful foam."
+      },
+      {
+        "id": "ck5",
+        "name": "Manhattan",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz rye or bourbon whiskey",
+          "1 oz sweet vermouth",
+          "2 dashes Angostura bitters",
+          "Ice",
+          "Maraschino cherry to garnish"
+        ],
+        "prep": "Fill a mixing glass with ice. Add whiskey, sweet vermouth, and bitters. Stir with a bar spoon for 30 seconds until well chilled. Strain into a chilled coupe or martini glass. Garnish with a maraschino cherry. A Manhattan is always stirred never shaken — shaking dilutes it too much and makes it cloudy."
+      }
+    ]
+  },
+  {
+    "id": "margaritas",
+    "icon": "🍹",
+    "name": "Margaritas",
+    "desc": "Classic and flavored margaritas — shaken, frozen, and on the rocks.",
+    "recipes": [
+      {
+        "id": "mg1",
+        "name": "Classic Margarita",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz blanco tequila",
+          "1 oz Cointreau or triple sec",
+          "¾ oz fresh lime juice",
+          "Salt for the rim",
+          "Ice",
+          "Lime wheel to garnish"
+        ],
+        "prep": "Rub a lime wedge around the rim of a rocks glass. Dip rim in salt and set aside. Fill a cocktail shaker with ice. Add tequila, Cointreau, and fresh lime juice. Shake hard for 15 seconds until very cold. Fill glass with fresh ice. Strain margarita over ice. Garnish with a lime wheel. Always use fresh lime juice — bottled juice makes a noticeably inferior margarita."
+      },
+      {
+        "id": "mg2",
+        "name": "Strawberry Margarita",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz blanco tequila",
+          "1 oz triple sec",
+          "¾ oz fresh lime juice",
+          "4 fresh strawberries or 1 oz strawberry puree",
+          "1 tsp sugar",
+          "Ice",
+          "Salt rim optional",
+          "Strawberry to garnish"
+        ],
+        "prep": "Muddle fresh strawberries with sugar in a shaker until broken down. Add tequila, triple sec, and lime juice. Fill with ice and shake vigorously 15 seconds. Strain over fresh ice in a salted or unsalted glass. Garnish with a fresh strawberry. For a frozen version blend all ingredients with 1 cup of ice instead of shaking."
+      },
+      {
+        "id": "mg3",
+        "name": "Frozen Margarita",
+        "servings": "2 servings",
+        "ingredients": [
+          "3 oz blanco tequila",
+          "1½ oz triple sec",
+          "1½ oz fresh lime juice",
+          "1 tbsp sugar",
+          "2 cups ice",
+          "Salt for rims",
+          "Lime wheels to garnish"
+        ],
+        "prep": "Salt the rims of two glasses and set aside. Add tequila, triple sec, lime juice, sugar, and ice to a blender. Blend on high until completely smooth. The mixture should be thick enough to mound slightly. Pour into salted glasses. Garnish with lime wheels. If too thin add more ice and blend again. If too thick add a splash of water."
+      },
+      {
+        "id": "mg4",
+        "name": "Spicy Jalapeño Margarita",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz blanco tequila",
+          "1 oz triple sec",
+          "¾ oz fresh lime juice",
+          "2–3 fresh jalapeño slices",
+          "Salt or Tajin for rim",
+          "Ice",
+          "Jalapeño slice and lime to garnish"
+        ],
+        "prep": "Muddle jalapeño slices in the bottom of a shaker — 2 slices for mild, 3 for hot. Add tequila, triple sec, and lime juice. Fill with ice and shake hard 15 seconds. Double strain through a fine mesh strainer into a Tajin or salt rimmed glass over fresh ice. Garnish with a jalapeño slice and lime wheel. Double straining removes jalapeño seeds and pulp for a cleaner drink."
+      },
+      {
+        "id": "mg5",
+        "name": "Mango Margarita",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz blanco tequila",
+          "1 oz triple sec",
+          "½ oz fresh lime juice",
+          "2 oz fresh mango puree or juice",
+          "Tajin for rim",
+          "Ice",
+          "Mango slice and lime to garnish"
+        ],
+        "prep": "Rim a glass with Tajin by rubbing lime around the edge and dipping in Tajin. Fill shaker with ice. Add tequila, triple sec, lime juice, and mango puree. Shake vigorously 15 seconds. Strain over fresh ice in rimmed glass. Garnish with a mango slice and lime wheel. For best results use fresh ripe mango blended smooth rather than bottled mango juice."
+      }
+    ]
+  },
+  {
+    "id": "mixed-drinks",
+    "icon": "🥂",
+    "name": "Mixed Drinks",
+    "desc": "Easy and crowd-pleasing mixed drinks and highballs for any occasion.",
+    "recipes": [
+      {
+        "id": "md1",
+        "name": "Moscow Mule",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz vodka",
+          "½ oz fresh lime juice",
+          "4 oz ginger beer",
+          "Ice",
+          "Lime wedge and fresh mint to garnish"
+        ],
+        "prep": "Fill a copper mug or rocks glass with ice. Pour vodka over ice. Add fresh lime juice. Top with ginger beer — pour gently to preserve the fizz. Give it one gentle stir. Garnish with a lime wedge and a sprig of fresh mint. Use a good quality spicy ginger beer for the best flavor. The copper mug keeps the drink colder longer."
+      },
+      {
+        "id": "md2",
+        "name": "Gin and Tonic",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz gin",
+          "4 oz tonic water",
+          "Ice",
+          "Lime wedge",
+          "Optional: cucumber slice, rosemary sprig"
+        ],
+        "prep": "Fill a tall glass or wine glass with ice. Pour gin over ice. Top with tonic water — pour slowly down the side of the glass to preserve carbonation. Squeeze a lime wedge over and drop in. Garnish with cucumber or rosemary if desired. The quality of the tonic water matters as much as the gin — use a premium tonic for a noticeably better drink."
+      },
+      {
+        "id": "md3",
+        "name": "Dark and Stormy",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz dark rum",
+          "4 oz ginger beer",
+          "½ oz fresh lime juice",
+          "Ice",
+          "Lime wedge to garnish"
+        ],
+        "prep": "Fill a tall glass with ice. Pour ginger beer over ice. Squeeze lime juice in. Slowly pour dark rum over the back of a spoon so it floats on top of the ginger beer — this layered presentation is the signature of a Dark and Stormy. Garnish with a lime wedge. Goslings Black Seal rum is the traditional choice. Stir before drinking."
+      },
+      {
+        "id": "md4",
+        "name": "Paloma",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 oz blanco tequila",
+          "½ oz fresh lime juice",
+          "4 oz fresh grapefruit juice or grapefruit soda",
+          "Pinch of salt",
+          "Tajin or salt for rim",
+          "Ice",
+          "Grapefruit slice to garnish"
+        ],
+        "prep": "Rim a tall glass with Tajin or salt. Fill with ice. Pour tequila and lime juice over ice. Add a pinch of salt. Top with fresh grapefruit juice or grapefruit soda. Stir gently. Garnish with a grapefruit slice. The Paloma is Mexico's most popular cocktail — arguably more beloved there than the margarita. Fresh grapefruit juice is far superior to grapefruit soda."
+      },
+      {
+        "id": "md5",
+        "name": "Aperol Spritz",
+        "servings": "1 serving",
+        "ingredients": [
+          "3 oz prosecco",
+          "2 oz Aperol",
+          "1 oz soda water",
+          "Ice",
+          "Orange slice and green olive to garnish"
+        ],
+        "prep": "Fill a large wine glass with ice. Pour prosecco first — always add sparkling wine before liqueur to preserve bubbles. Add Aperol. Top with a splash of soda water. Give it one gentle stir. Garnish with a slice of orange and a green olive on a cocktail pick. The ratio 3-2-1 is the classic formula — 3 parts prosecco, 2 parts Aperol, 1 part soda."
+      }
+    ]
+  },
+  {
+    "id": "coffee",
+    "icon": "☕",
+    "name": "Coffee",
+    "desc": "Brewed, iced and spiked coffee drinks.",
+    "recipes": [
       {
         "name": "Bulletproof Coffee",
         "servings": "1 serving",
@@ -249,6 +471,69 @@
           "Optional: collagen powder, cinnamon, vanilla"
         ],
         "prep": "Brew strong coffee. Add hot coffee, butter, and MCT oil to a blender. Blend on high 30 seconds until frothy and emulsified. Pour into a mug and serve immediately."
+      },
+      {
+        "name": "Cold Brew Coffee",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup (100 g) coarsely ground coffee — medium to dark roast",
+          "4 cups (960 ml) cold filtered water",
+          "Milk or cream to serve"
+        ],
+        "prep": "Combine coarsely ground coffee and cold water in a large jar or pitcher. Stir to make sure all grounds are wet. Cover and refrigerate 12–24 hours — 18 hours is the sweet spot. Longer steeping produces a stronger more concentrated brew. Strain through a fine mesh sieve lined with cheesecloth or a coffee filter. Pour slowly — do not press or squeeze the grounds or the coffee will turn bitter. Store strained cold brew in the refrigerator up to 2 weeks. Serve over ice with milk or cream."
+      },
+      {
+        "name": "Dalgona Coffee",
+        "servings": "2 servings",
+        "ingredients": [
+          "2 tbsp instant coffee",
+          "2 tbsp sugar",
+          "2 tbsp hot water",
+          "1½ cups milk per serving",
+          "Ice cubes"
+        ],
+        "prep": "Combine instant coffee, sugar, and hot water in a bowl. Beat vigorously until thick, pale, and fluffy — about 2 minutes with a hand mixer or 8–10 minutes by hand. The mixture should hold stiff peaks. Fill two glasses with ice and milk. Spoon the whipped coffee mixture on top. Stir before drinking."
+      },
+      {
+        "name": "Irish Coffee",
+        "servings": "1 serving",
+        "ingredients": [
+          "1½ oz Irish whiskey",
+          "1 cup hot brewed strong black coffee",
+          "1 tsp brown sugar",
+          "Heavy cream, lightly whipped",
+          "Freshly grated nutmeg (optional)"
+        ],
+        "prep": "Preheat a glass mug. Add brown sugar. Pour hot coffee over sugar and stir. Add Irish whiskey. Hold a spoon upside down and slowly pour whipped cream over the back so it floats on top. Sip coffee through the cream layer."
+      },
+      {
+        "name": "Vietnamese Iced Coffee",
+        "servings": "1 serving",
+        "ingredients": [
+          "2–3 tbsp finely ground Vietnamese coffee",
+          "2 tbsp sweetened condensed milk",
+          "Hot water",
+          "Lots of ice"
+        ],
+        "prep": "Add condensed milk to the bottom of a glass. Set a Vietnamese phin filter on top. Add coffee to the filter chamber. Pour hot water to bloom 30 seconds then fill the chamber. Allow coffee to drip slowly — 4–5 minutes. Remove filter. Stir condensed milk and coffee together. Pour over a glass full of ice and stir vigorously."
+      }
+    ]
+  },
+  {
+    "id": "espresso",
+    "icon": "☕",
+    "name": "Espresso Drinks",
+    "desc": "Lattes, cappuccinos and other espresso-based drinks.",
+    "recipes": [
+      {
+        "name": "Affogato",
+        "servings": "1 serving",
+        "ingredients": [
+          "1–2 scoops vanilla gelato or ice cream",
+          "1–2 shots freshly brewed hot espresso",
+          "Amaretti cookies or chocolate shavings (optional)"
+        ],
+        "prep": "Place gelato in a small chilled glass. Brew espresso shots. Pour the hot espresso directly over the cold gelato immediately before serving. The contrast of hot and cold, bitter and sweet is extraordinary. Serve immediately with amaretti cookies on the side."
       },
       {
         "name": "Cappuccino",
@@ -283,16 +568,6 @@
         "prep": "Brew two shots of espresso into a prewarmed cup. Steam milk using an espresso machine steam wand until temperature reaches 150°F (65°C) — the milk should be silky with microfoam, not large bubbles. Hold the steam wand just below the surface at the beginning to create foam, then submerge to heat. Tap the pitcher on the counter and swirl to integrate. Pour steamed milk over espresso holding back foam with a spoon then spooning foam on top."
       },
       {
-        "name": "Cold Brew Coffee",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 cup (100 g) coarsely ground coffee — medium to dark roast",
-          "4 cups (960 ml) cold filtered water",
-          "Milk or cream to serve"
-        ],
-        "prep": "Combine coarsely ground coffee and cold water in a large jar or pitcher. Stir to make sure all grounds are wet. Cover and refrigerate 12–24 hours — 18 hours is the sweet spot. Longer steeping produces a stronger more concentrated brew. Strain through a fine mesh sieve lined with cheesecloth or a coffee filter. Pour slowly — do not press or squeeze the grounds or the coffee will turn bitter. Store strained cold brew in the refrigerator up to 2 weeks. Serve over ice with milk or cream."
-      },
-      {
         "name": "Cortado",
         "servings": "1 serving",
         "ingredients": [
@@ -301,18 +576,6 @@
           "No foam"
         ],
         "prep": "Brew two shots of espresso. Steam a small amount of milk to 140°F with very little foam. Pour equal parts steamed milk directly into the espresso. A cortado is defined by its 1:1 ratio of espresso to milk served in a small 4 oz glass."
-      },
-      {
-        "name": "Dalgona Coffee",
-        "servings": "2 servings",
-        "ingredients": [
-          "2 tbsp instant coffee",
-          "2 tbsp sugar",
-          "2 tbsp hot water",
-          "1½ cups milk per serving",
-          "Ice cubes"
-        ],
-        "prep": "Combine instant coffee, sugar, and hot water in a bowl. Beat vigorously until thick, pale, and fluffy — about 2 minutes with a hand mixer or 8–10 minutes by hand. The mixture should hold stiff peaks. Fill two glasses with ice and milk. Spoon the whipped coffee mixture on top. Stir before drinking."
       },
       {
         "name": "Espresso Martini",
@@ -349,30 +612,6 @@
         "prep": "Brew espresso and allow to cool slightly. Fill a tall glass with ice. Pour caramel sauce over ice. Pour cooled espresso over caramel. Slowly pour milk over the espresso. Stir gently. Top with whipped cream and an extra drizzle of caramel sauce if desired."
       },
       {
-        "name": "Iced Matcha Latte",
-        "servings": "1 serving",
-        "ingredients": [
-          "1–2 tsp ceremonial grade matcha powder",
-          "2 tbsp hot water at 175°F",
-          "1 cup oat milk or milk of choice",
-          "1 tsp honey or simple syrup",
-          "Ice cubes"
-        ],
-        "prep": "Sift matcha into a bowl. Add hot water and whisk vigorously in a W motion until smooth. Fill a glass with ice. Pour milk over ice. Pour matcha mixture over milk. Sweeten with honey and stir before drinking."
-      },
-      {
-        "name": "Irish Coffee",
-        "servings": "1 serving",
-        "ingredients": [
-          "1½ oz Irish whiskey",
-          "1 cup hot brewed strong black coffee",
-          "1 tsp brown sugar",
-          "Heavy cream, lightly whipped",
-          "Freshly grated nutmeg (optional)"
-        ],
-        "prep": "Preheat a glass mug. Add brown sugar. Pour hot coffee over sugar and stir. Add Irish whiskey. Hold a spoon upside down and slowly pour whipped cream over the back so it floats on top. Sip coffee through the cream layer."
-      },
-      {
         "name": "Mocha",
         "servings": "1 serving",
         "ingredients": [
@@ -383,24 +622,109 @@
           "Cocoa powder for dusting"
         ],
         "prep": "Stir chocolate syrup into the bottom of a prewarmed mug. Brew espresso directly over the chocolate and stir to combine. Steam milk to 150°F with microfoam. Pour steamed milk over the espresso-chocolate mixture. Top with whipped cream and dust with cocoa powder."
-      },
-      {
-        "name": "Vietnamese Iced Coffee",
-        "servings": "1 serving",
-        "ingredients": [
-          "2–3 tbsp finely ground Vietnamese coffee",
-          "2 tbsp sweetened condensed milk",
-          "Hot water",
-          "Lots of ice"
-        ],
-        "prep": "Add condensed milk to the bottom of a glass. Set a Vietnamese phin filter on top. Add coffee to the filter chamber. Pour hot water to bloom 30 seconds then fill the chamber. Allow coffee to drip slowly — 4–5 minutes. Remove filter. Stir condensed milk and coffee together. Pour over a glass full of ice and stir vigorously."
       }
     ]
   },
   {
     "id": "tea",
     "icon": "🍵",
-    "name": "Tea & Herbal Drinks",
+    "name": "Tea",
+    "desc": "Black, green, matcha and chai teas, hot or iced.",
+    "recipes": [
+      {
+        "name": "Earl Grey Lavender Latte",
+        "servings": "1 serving",
+        "ingredients": [
+          "1 Earl Grey tea bag",
+          "½ cup boiling water",
+          "½ cup oat milk",
+          "1 tsp dried culinary lavender",
+          "1 tbsp honey",
+          "¼ tsp vanilla"
+        ],
+        "prep": "Steep Earl Grey and dried lavender in boiling water 4 minutes. Strain into a mug. Warm oat milk with honey and vanilla. Froth until foamy. Pour over tea."
+      },
+      {
+        "name": "Homemade Masala Chai",
+        "servings": "2 servings",
+        "ingredients": [
+          "2 cups water",
+          "1 cup whole milk",
+          "2 tsp loose leaf black tea or 2 tea bags",
+          "4 cardamom pods crushed, 1 cinnamon stick, 4 cloves, ½-inch ginger, 4 peppercorns",
+          "2 tbsp sugar"
+        ],
+        "prep": "Combine water and all spices in a saucepan. Bring to a boil. Simmer 5 minutes. Add tea and simmer 2 more minutes. Add milk and sugar. Bring back to a gentle boil stirring constantly. Simmer 2 minutes. Strain into cups pressing on the solids. Serve immediately."
+      },
+      {
+        "name": "Iced Green Tea Lemonade",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 green tea bags",
+          "4 cups hot water at 175°F",
+          "Juice of 4 lemons",
+          "4 tbsp honey or simple syrup",
+          "Ice cubes",
+          "Fresh mint and lemon slices to garnish"
+        ],
+        "prep": "Brew green tea in hot water — not boiling. Steep 2–3 minutes. Remove bags. Add honey and stir. Cool then refrigerate. Add lemon juice and taste. Serve over ice with fresh mint and lemon slices."
+      },
+      {
+        "name": "Jasmine Green Tea",
+        "servings": "2 servings",
+        "ingredients": [
+          "2 tsp loose jasmine green tea leaves",
+          "2 cups water at 175°F",
+          "Honey to taste (optional)"
+        ],
+        "prep": "Heat water to 175°F — never boiling. Place tea leaves in an infuser. Pour hot water over. Steep exactly 2 minutes. Remove leaves immediately. Add a touch of honey if desired."
+      },
+      {
+        "name": "Matcha Latte",
+        "servings": "1 serving",
+        "ingredients": [
+          "1–2 tsp ceremonial matcha powder",
+          "2 tbsp hot water at 175°F",
+          "1 cup oat milk or whole milk",
+          "1 tsp honey",
+          "Pinch of vanilla"
+        ],
+        "prep": "Sift matcha into a bowl. Add hot water and whisk vigorously until smooth and frothy. Heat milk with honey and vanilla. Pour hot milk into a mug. Pour matcha mixture over milk and stir gently. Top with a light dusting of matcha powder."
+      },
+      {
+        "name": "Spiced Apple Cider Tea",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups apple cider",
+          "2 cups brewed black tea",
+          "2 cinnamon sticks",
+          "4 whole cloves",
+          "2 star anise",
+          "1 orange, sliced",
+          "2 tbsp honey",
+          "½ tsp vanilla extract"
+        ],
+        "prep": "Combine all ingredients in a saucepan. Bring to a gentle simmer. Simmer 15 minutes to infuse all flavors. Add honey and vanilla. Strain into mugs. Serve hot with a cinnamon stick garnish."
+      },
+      {
+        "name": "Iced Matcha Latte",
+        "servings": "1 serving",
+        "ingredients": [
+          "1–2 tsp ceremonial grade matcha powder",
+          "2 tbsp hot water at 175°F",
+          "1 cup oat milk or milk of choice",
+          "1 tsp honey or simple syrup",
+          "Ice cubes"
+        ],
+        "prep": "Sift matcha into a bowl. Add hot water and whisk vigorously in a W motion until smooth. Fill a glass with ice. Pour milk over ice. Pour matcha mixture over milk. Sweeten with honey and stir before drinking."
+      }
+    ]
+  },
+  {
+    "id": "herbal",
+    "icon": "🌿",
+    "name": "Herbal Drinks",
+    "desc": "Caffeine-free herbal teas and soothing warm drinks.",
     "recipes": [
       {
         "name": "Butterfly Pea Flower Tea",
@@ -426,19 +750,6 @@
           "Pinch of cinnamon"
         ],
         "prep": "Steep chamomile in hot water 5 minutes. Warm milk with honey and vanilla until steaming. Froth vigorously. Pour chamomile tea into a mug. Pour frothed milk over. Dust with cinnamon."
-      },
-      {
-        "name": "Earl Grey Lavender Latte",
-        "servings": "1 serving",
-        "ingredients": [
-          "1 Earl Grey tea bag",
-          "½ cup boiling water",
-          "½ cup oat milk",
-          "1 tsp dried culinary lavender",
-          "1 tbsp honey",
-          "¼ tsp vanilla"
-        ],
-        "prep": "Steep Earl Grey and dried lavender in boiling water 4 minutes. Strain into a mug. Warm oat milk with honey and vanilla. Froth until foamy. Pour over tea."
       },
       {
         "name": "Ginger Lemon Honey Tea",
@@ -480,41 +791,6 @@
         "prep": "Place hibiscus flowers in a heatproof pitcher. Pour boiling water over. Steep 10–15 minutes. Strain. Add honey and lime juice. Cool then refrigerate until cold. Serve over ice with fresh mint."
       },
       {
-        "name": "Homemade Masala Chai",
-        "servings": "2 servings",
-        "ingredients": [
-          "2 cups water",
-          "1 cup whole milk",
-          "2 tsp loose leaf black tea or 2 tea bags",
-          "4 cardamom pods crushed, 1 cinnamon stick, 4 cloves, ½-inch ginger, 4 peppercorns",
-          "2 tbsp sugar"
-        ],
-        "prep": "Combine water and all spices in a saucepan. Bring to a boil. Simmer 5 minutes. Add tea and simmer 2 more minutes. Add milk and sugar. Bring back to a gentle boil stirring constantly. Simmer 2 minutes. Strain into cups pressing on the solids. Serve immediately."
-      },
-      {
-        "name": "Iced Green Tea Lemonade",
-        "servings": "4 servings",
-        "ingredients": [
-          "4 green tea bags",
-          "4 cups hot water at 175°F",
-          "Juice of 4 lemons",
-          "4 tbsp honey or simple syrup",
-          "Ice cubes",
-          "Fresh mint and lemon slices to garnish"
-        ],
-        "prep": "Brew green tea in hot water — not boiling. Steep 2–3 minutes. Remove bags. Add honey and stir. Cool then refrigerate. Add lemon juice and taste. Serve over ice with fresh mint and lemon slices."
-      },
-      {
-        "name": "Jasmine Green Tea",
-        "servings": "2 servings",
-        "ingredients": [
-          "2 tsp loose jasmine green tea leaves",
-          "2 cups water at 175°F",
-          "Honey to taste (optional)"
-        ],
-        "prep": "Heat water to 175°F — never boiling. Place tea leaves in an infuser. Pour hot water over. Steep exactly 2 minutes. Remove leaves immediately. Add a touch of honey if desired."
-      },
-      {
         "name": "Lemon Verbena Iced Tea",
         "servings": "4 servings",
         "ingredients": [
@@ -525,18 +801,6 @@
           "Ice and lemon slices to serve"
         ],
         "prep": "Steep lemon verbena in boiling water 7–10 minutes. Strain. Add honey and lemon juice. Cool completely and refrigerate. Serve over ice with lemon slices."
-      },
-      {
-        "name": "Matcha Latte",
-        "servings": "1 serving",
-        "ingredients": [
-          "1–2 tsp ceremonial matcha powder",
-          "2 tbsp hot water at 175°F",
-          "1 cup oat milk or whole milk",
-          "1 tsp honey",
-          "Pinch of vanilla"
-        ],
-        "prep": "Sift matcha into a bowl. Add hot water and whisk vigorously until smooth and frothy. Heat milk with honey and vanilla. Pour hot milk into a mug. Pour matcha mixture over milk and stir gently. Top with a light dusting of matcha powder."
       },
       {
         "name": "Peppermint Tea",
@@ -563,21 +827,6 @@
         "prep": "Steep rooibos in boiling water 5 minutes. Remove bags. Warm oat milk with honey and vanilla and froth. Pour rooibos tea into a mug. Pour frothed milk over. Dust with cinnamon."
       },
       {
-        "name": "Spiced Apple Cider Tea",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 cups apple cider",
-          "2 cups brewed black tea",
-          "2 cinnamon sticks",
-          "4 whole cloves",
-          "2 star anise",
-          "1 orange, sliced",
-          "2 tbsp honey",
-          "½ tsp vanilla extract"
-        ],
-        "prep": "Combine all ingredients in a saucepan. Bring to a gentle simmer. Simmer 15 minutes to infuse all flavors. Add honey and vanilla. Strain into mugs. Serve hot with a cinnamon stick garnish."
-      },
-      {
         "name": "Turmeric Ginger Tea",
         "servings": "2 servings",
         "ingredients": [
@@ -593,40 +842,12 @@
       }
     ]
   },
-  
-    // ===========================
-  // FRUIT JUICE DRINKS
-  // ===========================
   {
     "id": "juices",
-    "icon": "🍹",
-    "name": "Juices & Wellness Shots",
+    "icon": "🥤",
+    "name": "Juices",
+    "desc": "Fresh-pressed fruit and vegetable juices.",
     "recipes": [
-      {
-        "name": "Aloe Vera Juice",
-        "servings": "1 serving",
-        "ingredients": [
-          "2 tbsp pure aloe vera gel",
-          "1 cup coconut water or water",
-          "Juice of ½ lemon",
-          "1 tsp honey",
-          "Pinch of mint"
-        ],
-        "prep": "Blend aloe gel with coconut water, lemon juice, honey, and mint. Strain if desired. Drink immediately."
-      },
-      {
-        "name": "Apple Cider Vinegar Drink",
-        "servings": "1 serving",
-        "ingredients": [
-          "1 tbsp raw apple cider vinegar with the mother",
-          "1 cup warm or cold water",
-          "1 tbsp raw honey",
-          "Juice of ½ lemon",
-          "Pinch of cinnamon",
-          "Pinch of cayenne (optional)"
-        ],
-        "prep": "Combine all ingredients and stir until honey dissolves. Drink through a straw to protect tooth enamel. Best consumed first thing in the morning."
-      },
       {
         "name": "Beet Juice",
         "servings": "2 servings",
@@ -702,19 +923,6 @@
         "prep": "Make simple syrup by heating sugar and water until dissolved. Cool. Combine lemon juice, simple syrup, and cold water. Stir well. Serve over ice."
       },
       {
-        "name": "Immunity Ginger Shot",
-        "servings": "4 shots",
-        "ingredients": [
-          "4-inch fresh ginger root, peeled",
-          "Juice of 2 lemons",
-          "1 tsp ground turmeric or 1-inch fresh turmeric",
-          "Pinch of black pepper",
-          "1 tbsp raw honey",
-          "Pinch of cayenne"
-        ],
-        "prep": "Juice ginger and turmeric. Combine with lemon juice, black pepper, honey, and cayenne. Pour into shot glasses. Store refrigerated up to 3 days."
-      },
-      {
         "name": "Orange Carrot Turmeric Juice",
         "servings": "2 servings",
         "ingredients": [
@@ -778,6 +986,40 @@
           "Pinch of sea salt"
         ],
         "prep": "Blend watermelon until liquid. Strain if desired. Add lime juice and sea salt. Pour over ice with fresh mint. Serve immediately."
+      }
+    ]
+  },
+  {
+    "id": "wellness_shots",
+    "icon": "💪",
+    "name": "Wellness Shots",
+    "desc": "Small, strong shots and tonics.",
+    "recipes": [
+      {
+        "name": "Apple Cider Vinegar Drink",
+        "servings": "1 serving",
+        "ingredients": [
+          "1 tbsp raw apple cider vinegar with the mother",
+          "1 cup warm or cold water",
+          "1 tbsp raw honey",
+          "Juice of ½ lemon",
+          "Pinch of cinnamon",
+          "Pinch of cayenne (optional)"
+        ],
+        "prep": "Combine all ingredients and stir until honey dissolves. Drink through a straw to protect tooth enamel. Best consumed first thing in the morning."
+      },
+      {
+        "name": "Immunity Ginger Shot",
+        "servings": "4 shots",
+        "ingredients": [
+          "4-inch fresh ginger root, peeled",
+          "Juice of 2 lemons",
+          "1 tsp ground turmeric or 1-inch fresh turmeric",
+          "Pinch of black pepper",
+          "1 tbsp raw honey",
+          "Pinch of cayenne"
+        ],
+        "prep": "Juice ginger and turmeric. Combine with lemon juice, black pepper, honey, and cayenne. Pour into shot glasses. Store refrigerated up to 3 days."
       },
       {
         "name": "Wheatgrass Shot",
@@ -789,66 +1031,26 @@
           "Orange slice to chase"
         ],
         "prep": "Process wheatgrass through a slow masticating juicer. Add lemon juice. Pour into shot glasses. Drink in one or two sips followed by an orange slice."
+      },
+      {
+        "name": "Aloe Vera Juice",
+        "servings": "1 serving",
+        "ingredients": [
+          "2 tbsp pure aloe vera gel",
+          "1 cup coconut water or water",
+          "Juice of ½ lemon",
+          "1 tsp honey",
+          "Pinch of mint"
+        ],
+        "prep": "Blend aloe gel with coconut water, lemon juice, honey, and mint. Strain if desired. Drink immediately."
       }
     ]
   },
-  
-    // ===========================
-  // 🍸 COCKTAILS
-  // ===========================
-  {
-    id: 'cocktails',
-    icon: '🍸', name: 'Cocktails',
-    desc: 'Classic shaken and stirred cocktails from the bar.',
-    recipes: [
-      {id: 'ck1', name: 'Classic Martini', servings: '1 serving', ingredients: ['2½ oz gin or vodka', '½ oz dry vermouth', 'Ice', 'Lemon twist or green olive to garnish'], prep: 'Fill a mixing glass with ice. Add gin or vodka and vermouth. Stir with a bar spoon for 30 seconds until well chilled — do not shake a martini or it will become cloudy. Strain into a chilled martini glass. Garnish with a lemon twist or olive. For a drier martini reduce the vermouth. For a dirty martini add a splash of olive brine.'},
-      {id: 'ck2', name: 'Old Fashioned', servings: '1 serving', ingredients: ['2 oz bourbon or rye whiskey', '1 sugar cube or 1 tsp simple syrup', '2 dashes Angostura bitters', 'Large ice cube', 'Orange peel and cherry to garnish'], prep: 'Place sugar cube in a rocks glass and saturate with bitters. Muddle until dissolved. Add a large ice cube. Pour whiskey over. Stir gently 10–15 seconds. Express orange peel over the glass by holding it peel-side down and giving it a firm twist to release the oils. Run peel around the rim and drop in. Add a cherry to garnish.'},
-      {id: 'ck3', name: 'Negroni', servings: '1 serving', ingredients: ['1 oz gin', '1 oz sweet vermouth', '1 oz Campari', 'Large ice cube', 'Orange slice or peel to garnish'], prep: 'Fill a rocks glass with a large ice cube. Pour gin, sweet vermouth, and Campari directly into the glass. Stir gently with a bar spoon for 20 seconds. Garnish with an orange slice or expressed orange peel. The Negroni is perfectly balanced — equal parts of each ingredient is essential. Do not adjust the ratios or you lose the balance.'},
-      {id: 'ck4', name: 'Whiskey Sour', servings: '1 serving', ingredients: ['2 oz bourbon', '¾ oz fresh lemon juice', '¾ oz simple syrup', '1 egg white (optional but recommended)', 'Ice', 'Cherry and orange slice to garnish'], prep: 'If using egg white, add all ingredients to a shaker without ice and dry shake vigorously 15 seconds to emulsify. Then add ice and shake again hard for 15 seconds. If not using egg white, just add all ingredients to a shaker with ice and shake well. Strain into a rocks glass over fresh ice. Garnish with a cherry and orange slice. The egg white creates a silky texture and beautiful foam.'},
-      {id: 'ck5', name: 'Manhattan', servings: '1 serving', ingredients: ['2 oz rye or bourbon whiskey', '1 oz sweet vermouth', '2 dashes Angostura bitters', 'Ice', 'Maraschino cherry to garnish'], prep: 'Fill a mixing glass with ice. Add whiskey, sweet vermouth, and bitters. Stir with a bar spoon for 30 seconds until well chilled. Strain into a chilled coupe or martini glass. Garnish with a maraschino cherry. A Manhattan is always stirred never shaken — shaking dilutes it too much and makes it cloudy.'}
-    ]
-  },
-
-  // ===========================
-  // 🍹 MARGARITAS
-  // ===========================
-  {
-    id: 'margaritas',
-    icon: '🍹', name: 'Margaritas',
-    desc: 'Classic and flavored margaritas — shaken, frozen, and on the rocks.',
-    recipes: [
-      {id: 'mg1', name: 'Classic Margarita', servings: '1 serving', ingredients: ['2 oz blanco tequila', '1 oz Cointreau or triple sec', '¾ oz fresh lime juice', 'Salt for the rim', 'Ice', 'Lime wheel to garnish'], prep: 'Rub a lime wedge around the rim of a rocks glass. Dip rim in salt and set aside. Fill a cocktail shaker with ice. Add tequila, Cointreau, and fresh lime juice. Shake hard for 15 seconds until very cold. Fill glass with fresh ice. Strain margarita over ice. Garnish with a lime wheel. Always use fresh lime juice — bottled juice makes a noticeably inferior margarita.'},
-      {id: 'mg2', name: 'Strawberry Margarita', servings: '1 serving', ingredients: ['2 oz blanco tequila', '1 oz triple sec', '¾ oz fresh lime juice', '4 fresh strawberries or 1 oz strawberry puree', '1 tsp sugar', 'Ice', 'Salt rim optional', 'Strawberry to garnish'], prep: 'Muddle fresh strawberries with sugar in a shaker until broken down. Add tequila, triple sec, and lime juice. Fill with ice and shake vigorously 15 seconds. Strain over fresh ice in a salted or unsalted glass. Garnish with a fresh strawberry. For a frozen version blend all ingredients with 1 cup of ice instead of shaking.'},
-      {id: 'mg3', name: 'Frozen Margarita', servings: '2 servings', ingredients: ['3 oz blanco tequila', '1½ oz triple sec', '1½ oz fresh lime juice', '1 tbsp sugar', '2 cups ice', 'Salt for rims', 'Lime wheels to garnish'], prep: 'Salt the rims of two glasses and set aside. Add tequila, triple sec, lime juice, sugar, and ice to a blender. Blend on high until completely smooth. The mixture should be thick enough to mound slightly. Pour into salted glasses. Garnish with lime wheels. If too thin add more ice and blend again. If too thick add a splash of water.'},
-      {id: 'mg4', name: 'Spicy Jalapeño Margarita', servings: '1 serving', ingredients: ['2 oz blanco tequila', '1 oz triple sec', '¾ oz fresh lime juice', '2–3 fresh jalapeño slices', 'Salt or Tajin for rim', 'Ice', 'Jalapeño slice and lime to garnish'], prep: 'Muddle jalapeño slices in the bottom of a shaker — 2 slices for mild, 3 for hot. Add tequila, triple sec, and lime juice. Fill with ice and shake hard 15 seconds. Double strain through a fine mesh strainer into a Tajin or salt rimmed glass over fresh ice. Garnish with a jalapeño slice and lime wheel. Double straining removes jalapeño seeds and pulp for a cleaner drink.'},
-      {id: 'mg5', name: 'Mango Margarita', servings: '1 serving', ingredients: ['2 oz blanco tequila', '1 oz triple sec', '½ oz fresh lime juice', '2 oz fresh mango puree or juice', 'Tajin for rim', 'Ice', 'Mango slice and lime to garnish'], prep: 'Rim a glass with Tajin by rubbing lime around the edge and dipping in Tajin. Fill shaker with ice. Add tequila, triple sec, lime juice, and mango puree. Shake vigorously 15 seconds. Strain over fresh ice in rimmed glass. Garnish with a mango slice and lime wheel. For best results use fresh ripe mango blended smooth rather than bottled mango juice.'}
-    ]
-  },
-
-  // ===========================
-  // 🥂 MIXED DRINKS
-  // ===========================
-  {
-    id: 'mixed-drinks',
-    icon: '🥂', name: 'Mixed Drinks',
-    desc: 'Easy and crowd-pleasing mixed drinks and highballs for any occasion.',
-    recipes: [
-      {id: 'md1', name: 'Moscow Mule', servings: '1 serving', ingredients: ['2 oz vodka', '½ oz fresh lime juice', '4 oz ginger beer', 'Ice', 'Lime wedge and fresh mint to garnish'], prep: 'Fill a copper mug or rocks glass with ice. Pour vodka over ice. Add fresh lime juice. Top with ginger beer — pour gently to preserve the fizz. Give it one gentle stir. Garnish with a lime wedge and a sprig of fresh mint. Use a good quality spicy ginger beer for the best flavor. The copper mug keeps the drink colder longer.'},
-      {id: 'md2', name: 'Gin and Tonic', servings: '1 serving', ingredients: ['2 oz gin', '4 oz tonic water', 'Ice', 'Lime wedge', 'Optional: cucumber slice, rosemary sprig'], prep: 'Fill a tall glass or wine glass with ice. Pour gin over ice. Top with tonic water — pour slowly down the side of the glass to preserve carbonation. Squeeze a lime wedge over and drop in. Garnish with cucumber or rosemary if desired. The quality of the tonic water matters as much as the gin — use a premium tonic for a noticeably better drink.'},
-      {id: 'md3', name: 'Dark and Stormy', servings: '1 serving', ingredients: ['2 oz dark rum', '4 oz ginger beer', '½ oz fresh lime juice', 'Ice', 'Lime wedge to garnish'], prep: 'Fill a tall glass with ice. Pour ginger beer over ice. Squeeze lime juice in. Slowly pour dark rum over the back of a spoon so it floats on top of the ginger beer — this layered presentation is the signature of a Dark and Stormy. Garnish with a lime wedge. Goslings Black Seal rum is the traditional choice. Stir before drinking.'},
-      {id: 'md4', name: 'Paloma', servings: '1 serving', ingredients: ['2 oz blanco tequila', '½ oz fresh lime juice', '4 oz fresh grapefruit juice or grapefruit soda', 'Pinch of salt', 'Tajin or salt for rim', 'Ice', 'Grapefruit slice to garnish'], prep: 'Rim a tall glass with Tajin or salt. Fill with ice. Pour tequila and lime juice over ice. Add a pinch of salt. Top with fresh grapefruit juice or grapefruit soda. Stir gently. Garnish with a grapefruit slice. The Paloma is Mexico\'s most popular cocktail — arguably more beloved there than the margarita. Fresh grapefruit juice is far superior to grapefruit soda.'},
-      {id: 'md5', name: 'Aperol Spritz', servings: '1 serving', ingredients: ['3 oz prosecco', '2 oz Aperol', '1 oz soda water', 'Ice', 'Orange slice and green olive to garnish'], prep: 'Fill a large wine glass with ice. Pour prosecco first — always add sparkling wine before liqueur to preserve bubbles. Add Aperol. Top with a splash of soda water. Give it one gentle stir. Garnish with a slice of orange and a green olive on a cocktail pick. The ratio 3-2-1 is the classic formula — 3 parts prosecco, 2 parts Aperol, 1 part soda.'}
-    ]
-  },
-
-  // ===========================
-  // 🥂 MOCKTAIL DRINKS
-  // ===========================
-  
   {
     "id": "mocktails",
-    "icon": "🧃",
-    "name": "Mocktails & Sodas",
+    "icon": "🍹",
+    "name": "Mocktails",
+    "desc": "Alcohol-free mixed drinks and coolers.",
     "recipes": [
       {
         "name": "Arnold Palmer",
@@ -860,19 +1062,6 @@
           "Lemon slices and mint to garnish"
         ],
         "prep": "Fill tall glasses with ice. Pour equal parts iced tea and lemonade over ice. Stir gently. Garnish with lemon and mint."
-      },
-      {
-        "name": "Cherry Limeade",
-        "servings": "4 servings",
-        "ingredients": [
-          "½ cup maraschino cherry juice",
-          "Juice of 4 limes",
-          "¼ cup simple syrup",
-          "3 cups sparkling water",
-          "Maraschino cherries and lime slices to garnish",
-          "Ice cubes"
-        ],
-        "prep": "Combine cherry juice, lime juice, and simple syrup. Add sparkling water just before serving. Pour over ice. Garnish with cherries and lime."
       },
       {
         "name": "Cucumber Jalapeño Limeade",
@@ -901,19 +1090,6 @@
           "Cucumber ribbons and mint to garnish"
         ],
         "prep": "Blend cucumber and mint with ½ cup water. Strain. Combine with lime juice and honey. Fill glasses with ice. Pour cucumber mixture halfway. Top with sparkling water. Garnish."
-      },
-      {
-        "name": "Homemade Ginger Beer",
-        "servings": "4 servings",
-        "ingredients": [
-          "3-inch fresh ginger root, grated",
-          "1 cup sugar",
-          "1 cup water for syrup",
-          "Juice of 2 lemons",
-          "3 cups sparkling water",
-          "Ice and lemon slices to serve"
-        ],
-        "prep": "Simmer ginger, sugar, and water 5 minutes. Steep 20 minutes. Strain. Cool completely. Combine 4 tbsp syrup with lemon juice. Top with sparkling water. Pour over ice."
       },
       {
         "name": "Lavender Lemonade",
@@ -953,20 +1129,6 @@
         "prep": "Shake pineapple juice, coconut cream, and lime with ice. Strain into glasses. Top with sparkling water. Garnish with pineapple and toasted coconut."
       },
       {
-        "name": "Pomegranate Sparkling Punch",
-        "servings": "6 servings",
-        "ingredients": [
-          "2 cups pure pomegranate juice",
-          "1 cup cranberry juice",
-          "Juice of 2 limes",
-          "2 tbsp honey",
-          "2 cups sparkling water",
-          "1 cup pomegranate seeds",
-          "Ice and mint to serve"
-        ],
-        "prep": "Combine juices, lime, and honey. Refrigerate. Add sparkling water and pomegranate seeds just before serving. Pour over ice with mint."
-      },
-      {
         "name": "Rosemary Lemon Spritzer",
         "servings": "4 servings",
         "ingredients": [
@@ -976,45 +1138,6 @@
           "Ice and rosemary sprigs to garnish"
         ],
         "prep": "Simmer rosemary syrup 5 minutes. Steep 30 minutes. Strain and cool. Combine 3 tbsp syrup with lemon juice. Top with sparkling water. Serve over ice with rosemary."
-      },
-      {
-        "name": "Shirley Temple",
-        "servings": "2 servings",
-        "ingredients": [
-          "2 cups ginger ale or lemon-lime soda",
-          "4 tbsp grenadine syrup",
-          "Juice of ½ orange",
-          "Maraschino cherries and orange slices to garnish",
-          "Ice cubes"
-        ],
-        "prep": "Fill two tall glasses with ice. Pour soda over ice. Add grenadine — it sinks creating a gradient. Add a splash of orange juice. Do not stir. Garnish with cherries and orange slices."
-      },
-      {
-        "name": "Sparkling Cranberry Punch",
-        "servings": "8 servings",
-        "ingredients": [
-          "3 cups cranberry juice",
-          "1 cup orange juice",
-          "Juice of 2 limes",
-          "2 tbsp honey",
-          "2 cups ginger ale",
-          "1 cup sparkling water",
-          "Orange and lime slices",
-          "Fresh cranberries and mint"
-        ],
-        "prep": "Combine juices, lime, and honey. Refrigerate. Add ginger ale and sparkling water just before serving. Add fruit and mint. Ladle into ice-filled glasses."
-      },
-      {
-        "name": "Sparkling Strawberry Lemonade",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 cups fresh strawberries, hulled",
-          "Juice of 4 lemons",
-          "½ cup simple syrup",
-          "2 cups sparkling water",
-          "Ice and fresh strawberry slices to garnish"
-        ],
-        "prep": "Blend strawberries and strain. Combine with lemon juice and simple syrup. Add sparkling water just before serving. Pour over ice. Garnish with strawberry slices."
       },
       {
         "name": "Virgin Mojito",
@@ -1044,9 +1167,97 @@
     ]
   },
   {
-    "id": "milks",
+    "id": "sodas",
+    "icon": "🥤",
+    "name": "Sodas",
+    "desc": "Sparkling drinks, punches and homemade sodas.",
+    "recipes": [
+      {
+        "name": "Homemade Ginger Beer",
+        "servings": "4 servings",
+        "ingredients": [
+          "3-inch fresh ginger root, grated",
+          "1 cup sugar",
+          "1 cup water for syrup",
+          "Juice of 2 lemons",
+          "3 cups sparkling water",
+          "Ice and lemon slices to serve"
+        ],
+        "prep": "Simmer ginger, sugar, and water 5 minutes. Steep 20 minutes. Strain. Cool completely. Combine 4 tbsp syrup with lemon juice. Top with sparkling water. Pour over ice."
+      },
+      {
+        "name": "Cherry Limeade",
+        "servings": "4 servings",
+        "ingredients": [
+          "½ cup maraschino cherry juice",
+          "Juice of 4 limes",
+          "¼ cup simple syrup",
+          "3 cups sparkling water",
+          "Maraschino cherries and lime slices to garnish",
+          "Ice cubes"
+        ],
+        "prep": "Combine cherry juice, lime juice, and simple syrup. Add sparkling water just before serving. Pour over ice. Garnish with cherries and lime."
+      },
+      {
+        "name": "Shirley Temple",
+        "servings": "2 servings",
+        "ingredients": [
+          "2 cups ginger ale or lemon-lime soda",
+          "4 tbsp grenadine syrup",
+          "Juice of ½ orange",
+          "Maraschino cherries and orange slices to garnish",
+          "Ice cubes"
+        ],
+        "prep": "Fill two tall glasses with ice. Pour soda over ice. Add grenadine — it sinks creating a gradient. Add a splash of orange juice. Do not stir. Garnish with cherries and orange slices."
+      },
+      {
+        "name": "Pomegranate Sparkling Punch",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cups pure pomegranate juice",
+          "1 cup cranberry juice",
+          "Juice of 2 limes",
+          "2 tbsp honey",
+          "2 cups sparkling water",
+          "1 cup pomegranate seeds",
+          "Ice and mint to serve"
+        ],
+        "prep": "Combine juices, lime, and honey. Refrigerate. Add sparkling water and pomegranate seeds just before serving. Pour over ice with mint."
+      },
+      {
+        "name": "Sparkling Cranberry Punch",
+        "servings": "8 servings",
+        "ingredients": [
+          "3 cups cranberry juice",
+          "1 cup orange juice",
+          "Juice of 2 limes",
+          "2 tbsp honey",
+          "2 cups ginger ale",
+          "1 cup sparkling water",
+          "Orange and lime slices",
+          "Fresh cranberries and mint"
+        ],
+        "prep": "Combine juices, lime, and honey. Refrigerate. Add ginger ale and sparkling water just before serving. Add fruit and mint. Ladle into ice-filled glasses."
+      },
+      {
+        "name": "Sparkling Strawberry Lemonade",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups fresh strawberries, hulled",
+          "Juice of 4 lemons",
+          "½ cup simple syrup",
+          "2 cups sparkling water",
+          "Ice and fresh strawberry slices to garnish"
+        ],
+        "prep": "Blend strawberries and strain. Combine with lemon juice and simple syrup. Add sparkling water just before serving. Pour over ice. Garnish with strawberry slices."
+      }
+    ]
+  },
+  {
+    "id": "flavored_milks",
     "icon": "🥛",
-    "name": "Milks & Nut Milks",
+    "name": "Flavored Milks",
+    "desc": "Milk-based drinks with added flavors.",
     "recipes": [
       {
         "name": "Banana Milk",
@@ -1061,79 +1272,6 @@
         "prep": "Blend all ingredients 30 seconds until completely smooth. Serve immediately over ice. Best consumed right away as banana oxidizes."
       },
       {
-        "name": "Chocolate Hazelnut Milk",
-        "servings": "2 servings",
-        "ingredients": [
-          "2 cups hazelnut milk or almond milk",
-          "2 tbsp cocoa powder",
-          "2 tbsp Nutella or hazelnut butter",
-          "1 tbsp honey",
-          "½ tsp vanilla extract",
-          "Pinch of sea salt"
-        ],
-        "prep": "Combine all ingredients in a blender. Blend 30 seconds until smooth and creamy. Serve cold over ice or heat gently for a warm version."
-      },
-      {
-        "name": "Coconut Milk",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 cups unsweetened shredded coconut",
-          "4 cups hot water",
-          "Pinch of sea salt",
-          "1 tsp vanilla extract (optional)",
-          "1 tbsp honey (optional)"
-        ],
-        "prep": "Pour hot water over coconut in a blender. Let sit 5 minutes. Blend on high 90 seconds. Strain through a nut milk bag squeezing firmly. Add salt, vanilla, and honey. Refrigerate up to 4 days. Shake well before using."
-      },
-      {
-        "name": "Hemp Seed Milk",
-        "servings": "4 servings",
-        "ingredients": [
-          "½ cup raw hemp seeds",
-          "4 cups cold filtered water",
-          "1 tbsp maple syrup",
-          "½ tsp vanilla extract",
-          "Pinch of sea salt"
-        ],
-        "prep": "Blend hemp seeds and cold water 60 seconds. No straining needed. Add maple syrup, vanilla, and salt. Store refrigerated up to 4 days."
-      },
-      {
-        "name": "Homemade Almond Milk",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 cup raw almonds",
-          "4 cups filtered water, plus extra for soaking",
-          "1 tbsp honey or maple syrup (optional)",
-          "½ tsp vanilla extract (optional)",
-          "Pinch of sea salt"
-        ],
-        "prep": "Soak almonds 8–12 hours. Drain and rinse. Blend with 4 cups fresh water 90 seconds until white and creamy. Strain through a nut milk bag squeezing to extract every drop. Add sweetener, vanilla, and salt. Store refrigerated up to 4 days."
-      },
-      {
-        "name": "Homemade Cashew Milk",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 cup raw cashews",
-          "4 cups filtered water, plus extra for soaking",
-          "1 tbsp honey or maple syrup (optional)",
-          "½ tsp vanilla extract",
-          "Pinch of sea salt"
-        ],
-        "prep": "Soak cashews 2–4 hours. Drain and rinse. Blend with 4 cups fresh water 90 seconds until completely smooth. No straining needed. Add sweetener, vanilla, and salt. Refrigerate up to 4 days."
-      },
-      {
-        "name": "Homemade Oat Milk",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 cup rolled oats",
-          "4 cups cold filtered water",
-          "1 tbsp maple syrup (optional)",
-          "½ tsp vanilla extract (optional)",
-          "Pinch of sea salt"
-        ],
-        "prep": "Add oats and cold water to a blender. Blend exactly 30 seconds — no more. Strain immediately through cheesecloth. Do not squeeze. Add maple syrup, vanilla, and salt. Refrigerate up to 5 days."
-      },
-      {
         "name": "Lavender Honey Milk",
         "servings": "2 servings",
         "ingredients": [
@@ -1144,34 +1282,6 @@
           "Pinch of sea salt"
         ],
         "prep": "Combine milk and lavender in a saucepan. Heat until steaming. Remove from heat and steep 15 minutes. Strain. Add honey, vanilla, and salt. Reheat gently. Serve in mugs."
-      },
-      {
-        "name": "Macadamia Nut Milk",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 cup raw macadamia nuts",
-          "4 cups filtered water plus extra for soaking",
-          "1 tbsp honey",
-          "½ tsp vanilla extract",
-          "Pinch of sea salt"
-        ],
-        "prep": "Soak macadamia nuts 4 hours. Drain and rinse. Blend with 4 cups fresh water 90 seconds until smooth. No straining needed. Add honey, vanilla, and salt. Refrigerate up to 4 days."
-      },
-      {
-        "name": "Mexican Horchata",
-        "servings": "6 servings",
-        "ingredients": [
-          "1 cup long grain white rice",
-          "1 cup blanched almonds",
-          "4 cups water for soaking",
-          "4 cups cold water",
-          "1 cup milk",
-          "¾ cup sugar",
-          "1 tsp vanilla extract",
-          "1 tsp ground cinnamon",
-          "Ice and cinnamon for serving"
-        ],
-        "prep": "Soak rice and almonds overnight. Drain. Blend with 2 cups cold water until very smooth. Strain through cheesecloth. Add remaining water, milk, sugar, vanilla, and cinnamon. Blend briefly. Refrigerate until cold. Serve over ice dusted with cinnamon."
       },
       {
         "name": "Pumpkin Spice Latte",
@@ -1239,42 +1349,117 @@
           "½ tsp vanilla extract",
           "1 tsp coconut oil (optional)"
         ],
-        "prep": "Whisk all ingredients in a saucepan. Heat over medium heat stirring constantly until hot and steaming. Pour through a strainer into mugs. Sprinkle cinnamon on top."}
+        "prep": "Whisk all ingredients in a saucepan. Heat over medium heat stirring constantly until hot and steaming. Pour through a strainer into mugs. Sprinkle cinnamon on top."
+      }
+    ]
+  },
+  {
+    "id": "plant_milks",
+    "icon": "🥥",
+    "name": "Plant Milks",
+    "desc": "Homemade milks from nuts, seeds, oats and coconut.",
+    "recipes": [
+      {
+        "name": "Coconut Milk",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups unsweetened shredded coconut",
+          "4 cups hot water",
+          "Pinch of sea salt",
+          "1 tsp vanilla extract (optional)",
+          "1 tbsp honey (optional)"
+        ],
+        "prep": "Pour hot water over coconut in a blender. Let sit 5 minutes. Blend on high 90 seconds. Strain through a nut milk bag squeezing firmly. Add salt, vanilla, and honey. Refrigerate up to 4 days. Shake well before using."
+      },
+      {
+        "name": "Hemp Seed Milk",
+        "servings": "4 servings",
+        "ingredients": [
+          "½ cup raw hemp seeds",
+          "4 cups cold filtered water",
+          "1 tbsp maple syrup",
+          "½ tsp vanilla extract",
+          "Pinch of sea salt"
+        ],
+        "prep": "Blend hemp seeds and cold water 60 seconds. No straining needed. Add maple syrup, vanilla, and salt. Store refrigerated up to 4 days."
+      },
+      {
+        "name": "Homemade Almond Milk",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup raw almonds",
+          "4 cups filtered water, plus extra for soaking",
+          "1 tbsp honey or maple syrup (optional)",
+          "½ tsp vanilla extract (optional)",
+          "Pinch of sea salt"
+        ],
+        "prep": "Soak almonds 8–12 hours. Drain and rinse. Blend with 4 cups fresh water 90 seconds until white and creamy. Strain through a nut milk bag squeezing to extract every drop. Add sweetener, vanilla, and salt. Store refrigerated up to 4 days."
+      },
+      {
+        "name": "Homemade Cashew Milk",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup raw cashews",
+          "4 cups filtered water, plus extra for soaking",
+          "1 tbsp honey or maple syrup (optional)",
+          "½ tsp vanilla extract",
+          "Pinch of sea salt"
+        ],
+        "prep": "Soak cashews 2–4 hours. Drain and rinse. Blend with 4 cups fresh water 90 seconds until completely smooth. No straining needed. Add sweetener, vanilla, and salt. Refrigerate up to 4 days."
+      },
+      {
+        "name": "Homemade Oat Milk",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup rolled oats",
+          "4 cups cold filtered water",
+          "1 tbsp maple syrup (optional)",
+          "½ tsp vanilla extract (optional)",
+          "Pinch of sea salt"
+        ],
+        "prep": "Add oats and cold water to a blender. Blend exactly 30 seconds — no more. Strain immediately through cheesecloth. Do not squeeze. Add maple syrup, vanilla, and salt. Refrigerate up to 5 days."
+      },
+      {
+        "name": "Macadamia Nut Milk",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup raw macadamia nuts",
+          "4 cups filtered water plus extra for soaking",
+          "1 tbsp honey",
+          "½ tsp vanilla extract",
+          "Pinch of sea salt"
+        ],
+        "prep": "Soak macadamia nuts 4 hours. Drain and rinse. Blend with 4 cups fresh water 90 seconds until smooth. No straining needed. Add honey, vanilla, and salt. Refrigerate up to 4 days."
+      },
+      {
+        "name": "Chocolate Hazelnut Milk",
+        "servings": "2 servings",
+        "ingredients": [
+          "2 cups hazelnut milk or almond milk",
+          "2 tbsp cocoa powder",
+          "2 tbsp Nutella or hazelnut butter",
+          "1 tbsp honey",
+          "½ tsp vanilla extract",
+          "Pinch of sea salt"
+        ],
+        "prep": "Combine all ingredients in a blender. Blend 30 seconds until smooth and creamy. Serve cold over ice or heat gently for a warm version."
+      },
+      {
+        "name": "Mexican Horchata",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 cup long grain white rice",
+          "1 cup blanched almonds",
+          "4 cups water for soaking",
+          "4 cups cold water",
+          "1 cup milk",
+          "¾ cup sugar",
+          "1 tsp vanilla extract",
+          "1 tsp ground cinnamon",
+          "Ice and cinnamon for serving"
+        ],
+        "prep": "Soak rice and almonds overnight. Drain. Blend with 2 cups cold water until very smooth. Strain through cheesecloth. Add remaining water, milk, sugar, vanilla, and cinnamon. Blend briefly. Refrigerate until cold. Serve over ice dusted with cinnamon."
+      }
     ]
   }
 ];
-
-
-// ================================================================
-//  TOGGLE CATEGORY — shows/hides recipe list under a card
-// ================================================================
-function toggleCategory(catId) {
-  var ul = document.getElementById(catId);
-  if (!ul) return;
-
-  if (ul.style.display === 'block') {
-    ul.style.display = 'none';
-    return;
-  }
-
-  var cat = beverages_data.find(function(c) { return c.id === catId; });
-  if (!cat) return;
-
-  if (ul.innerHTML === '') {
-    cat.recipes.forEach(function(recipe, idx) {
-      var li = document.createElement('li');
-      li.className = 'browser-item';
-      li.innerHTML =
-        '<span class="browser-item-name">' + recipe.name + '</span>' +
-        '<span class="browser-item-arrow">›</span>';
-      li.addEventListener('click', function() {
-        open_recipe_modal(recipe, catId);
-      });
-      ul.appendChild(li);
-    });
-  }
-
-  ul.style.display = 'block';
-}
-
-

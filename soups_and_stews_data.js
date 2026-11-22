@@ -1,223 +1,2155 @@
 const soups_and_stews_data = [
-
   {
-    id: 'classicSoups',
-    icon:"🍲", name:"Classic Soups",
-    desc:"Timeless soup data from chicken noodle and tomato to French onion and minestrone.",
-    recipes:[
-      {name:"Chicken Noodle Soup",servings:"6 servings",ingredients:["1 whole chicken or 4 bone-in chicken thighs","3 carrots, sliced","3 celery stalks, sliced","1 onion, diced","4 garlic cloves, minced","2 cups egg noodles","8 cups (1.9 L) chicken broth","Fresh thyme and bay leaf","2 tbsp olive oil","Salt and pepper","Fresh parsley to garnish"],prep:"Heat olive oil in a large pot over medium heat. Cook onion, carrots, and celery until softened — about 8 minutes. Add garlic and cook 1 minute. Add broth, chicken, thyme, and bay leaf. Bring to a boil. Reduce heat and simmer 35–40 minutes until chicken is cooked through. Remove chicken and shred meat discarding bones and skin. Return meat to pot. Add egg noodles and cook 8 minutes until tender. Remove bay leaf. Season with salt and pepper. Garnish with fresh parsley."},
-      {name:"French Onion Soup",servings:"4 servings",ingredients:["6 large yellow onions, very thinly sliced","4 tbsp unsalted butter","1 tbsp olive oil","1 tsp sugar","½ cup (120 ml) dry white wine","6 cups (1.4 L) beef broth","2 sprigs fresh thyme","1 bay leaf","Salt and pepper","4 thick slices crusty bread","2 cups Gruyère cheese, shredded"],prep:"Melt butter and olive oil in a large heavy pot over medium heat. Add onions and sugar. Cook stirring occasionally for 45–60 minutes until deeply caramelized and dark golden — do not rush this step. Add wine and cook until evaporated. Add broth, thyme, and bay leaf. Simmer 20 minutes. Season with salt and pepper. Ladle into oven-safe bowls. Top with a slice of crusty bread and generous mound of Gruyère. Broil until cheese is melted, bubbly, and golden."},
-      {name:"Tomato Soup",servings:"4 servings",ingredients:["2 cans (28 oz each) crushed San Marzano tomatoes","1 onion, diced","4 garlic cloves, minced","2 cups (480 ml) vegetable or chicken broth","½ cup (120 ml) heavy cream","3 tbsp unsalted butter","1 tsp sugar","Fresh basil leaves","Salt and pepper"],prep:"Melt butter in a large pot over medium heat. Cook onion until softened. Add garlic and cook 1 minute. Add tomatoes, broth, sugar, and basil. Simmer 20 minutes. Blend until completely smooth using an immersion blender. Stir in heavy cream. Return to gentle heat. Season with salt and pepper. Serve with grilled cheese for dipping."},
-      {name:"Minestrone",servings:"6 servings",ingredients:["1 can (14 oz) cannellini beans, drained","1 can (14 oz) diced tomatoes","2 carrots, diced","2 celery stalks, diced","1 onion, diced","2 zucchini, diced","2 cups spinach or kale","4 garlic cloves, minced","1 cup small pasta — ditalini or elbow","6 cups (1.4 L) vegetable broth","3 tbsp olive oil","1 tsp Italian seasoning","Parmesan rind (optional)","Salt, pepper, and red pepper flakes","Parmesan for serving"],prep:"Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and Italian seasoning and cook 1 minute. Add tomatoes, broth, and Parmesan rind if using. Simmer 15 minutes. Add beans, zucchini, and pasta. Cook until pasta is tender — about 10 minutes. Add spinach and stir until wilted. Remove Parmesan rind. Season with salt, pepper, and red pepper flakes. Serve with grated Parmesan."},
-      {name:"Butternut Squash Soup",servings:"4 servings",ingredients:["1 large butternut squash, peeled and cubed","1 onion, diced","3 garlic cloves, minced","1-inch piece fresh ginger, grated","4 cups (960 ml) vegetable or chicken broth","1 cup (240 ml) coconut milk","3 tbsp butter","1 tsp cumin","½ tsp nutmeg","Salt and pepper","Toasted pumpkin seeds and cream to garnish"],prep:"Melt butter in a large pot. Cook onion until soft. Add garlic and ginger and cook 1 minute. Add squash, broth, cumin, and nutmeg. Bring to a boil. Reduce heat and simmer 20–25 minutes until squash is completely tender. Blend until very smooth. Stir in coconut milk. Season with salt and pepper. Thin with extra broth if needed. Garnish with a swirl of cream and toasted pumpkin seeds."},
-      {name:"Potato Leek Soup",servings:"4 servings",ingredients:["4 large leeks, white and light green parts, sliced and washed","4 large potatoes, peeled and diced","4 cups (960 ml) chicken or vegetable broth","1 cup (240 ml) heavy cream","4 tbsp unsalted butter","3 garlic cloves, minced","Fresh thyme","Salt and white pepper","Chives to garnish"],prep:"Melt butter in a large pot over medium heat. Cook leeks until very soft and silky — about 15 minutes. Add garlic and thyme and cook 1 minute. Add potatoes and broth. Bring to a boil. Simmer 20 minutes until potatoes are completely tender. Blend until smooth. Stir in cream. Season with salt and white pepper. Serve hot garnished with fresh chives. Can also be served cold as vichyssoise."},
-      {name:"Split Pea Soup",servings:"6 servings",ingredients:["500 g (1 lb) dried split peas, rinsed","1 ham hock or 2 cups diced ham","1 onion, diced","3 carrots, diced","3 celery stalks, diced","4 garlic cloves, minced","8 cups (1.9 L) chicken broth","2 bay leaves","Fresh thyme","Salt and pepper"],prep:"Combine split peas, ham hock, onion, carrots, celery, garlic, broth, bay leaves, and thyme in a large pot. Bring to a boil. Skim any foam. Reduce heat and simmer covered 1–1.5 hours until peas are completely dissolved and soup is thick. Remove ham hock and shred meat. Return meat to soup. Remove bay leaves. Season with salt and pepper. If too thick add more broth."},
-      {name:"Lentil Soup",servings:"6 servings",ingredients:["1½ cups (270 g) red or green lentils","1 onion, diced","3 carrots, diced","3 celery stalks, diced","4 garlic cloves, minced","1 can (14 oz) crushed tomatoes","6 cups (1.4 L) vegetable or chicken broth","2 tsp cumin","1 tsp coriander","1 tsp smoked paprika","½ tsp turmeric","3 tbsp olive oil","Juice of 1 lemon","Salt and pepper","Fresh parsley to garnish"],prep:"Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and all spices and cook 1 minute. Add lentils, tomatoes, and broth. Bring to a boil. Reduce heat and simmer 25–30 minutes until lentils are completely tender. For a creamier texture blend half the soup. Stir in lemon juice. Season with salt and pepper. Garnish with parsley."},
-      {name:"Clam Chowder",servings:"4 servings",ingredients:["2 cans (6.5 oz each) chopped clams with juice","4 strips bacon, diced","1 onion, diced","3 celery stalks, diced","3 large potatoes, cubed","3 garlic cloves, minced","2 cups (480 ml) clam juice or fish broth","2 cups (480 ml) heavy cream","3 tbsp butter","3 tbsp flour","Fresh thyme and bay leaf","Salt and pepper","Oyster crackers to serve"],prep:"Cook bacon in a large pot until crispy. Remove. Cook onion and celery in bacon fat until soft. Add garlic and cook 1 minute. Stir in flour and cook 2 minutes. Add clam juice and bring to a boil. Add potatoes, thyme, and bay leaf. Simmer 15 minutes until potatoes are tender. Add cream and clams with their juice. Simmer 5 minutes — do not boil. Season with salt and pepper. Garnish with bacon bits and oyster crackers."},
-      {name:"Corn Chowder",servings:"4 servings",ingredients:["6 ears fresh corn, kernels cut off (or 3 cups frozen)","4 strips bacon, diced","1 onion, diced","3 celery stalks, diced","2 large potatoes, cubed","3 garlic cloves, minced","4 cups (960 ml) chicken broth","1 cup (240 ml) heavy cream","3 tbsp butter","3 tbsp flour","Fresh thyme","Salt, pepper, and smoked paprika"],prep:"Cook bacon until crispy. Remove and reserve. Cook onion and celery in bacon fat until soft. Add garlic. Stir in flour and cook 2 minutes. Add broth and bring to a boil. Add potatoes and thyme. Simmer 15 minutes. Add corn and cream. Simmer 10 more minutes. Season with salt, pepper, and smoked paprika. Garnish with bacon and chives."},
-      {name:"Broccoli Cheddar Soup",servings:"4 servings",ingredients:["4 cups broccoli florets, chopped","1 onion, diced","3 garlic cloves, minced","2 carrots, shredded","4 cups (960 ml) chicken or vegetable broth","1 cup (240 ml) heavy cream","2 cups sharp cheddar, shredded","4 tbsp butter","¼ cup flour","Salt, pepper, and nutmeg"],prep:"Melt butter in a large pot over medium heat. Cook onion until soft. Add garlic and cook 1 minute. Whisk in flour and cook 2 minutes. Gradually add broth whisking until smooth. Add broccoli and carrots. Simmer 15–20 minutes until broccoli is very tender. Add cream and simmer 5 minutes. Remove from heat and stir in cheddar until melted. Do not boil after adding cheese. Season with salt, pepper, and nutmeg."},
-      {name:"Gazpacho",servings:"4 servings",ingredients:["6 ripe tomatoes, roughly chopped","1 English cucumber, roughly chopped","1 red bell pepper, roughly chopped","½ red onion, roughly chopped","3 garlic cloves","3 tbsp sherry vinegar or red wine vinegar","½ cup (120 ml) extra virgin olive oil","1 tsp cumin","Salt and pepper","Ice cold water to adjust consistency","Croutons and olive oil to garnish"],prep:"Combine all vegetables and garlic in a blender. Blend until smooth. Add vinegar, olive oil, cumin, salt, and pepper. Blend again. Add cold water to reach desired consistency. Taste and adjust seasoning — it should be punchy and well seasoned. Strain through a sieve for a silky texture or leave as is for rustic. Refrigerate at least 2 hours — gazpacho should be served very cold. Garnish with croutons and a drizzle of olive oil."},
-      {name:"Chicken Tortilla Soup",servings:"6 servings",ingredients:["2 chicken breasts, cooked and shredded","1 can (14 oz) black beans, drained","1 can (14 oz) corn, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves, minced","1 jalapeño, diced","4 cups (960 ml) chicken broth","2 tsp cumin","1 tsp chili powder","1 tsp smoked paprika","Salt and pepper","Toppings: tortilla strips, avocado, sour cream, cheese, cilantro, lime"],prep:"Heat oil in a large pot. Cook onion, jalapeño, and garlic until soft. Add cumin, chili powder, and paprika and cook 1 minute. Add tomatoes, broth, beans, and corn. Simmer 15 minutes. Add shredded chicken and heat through. Season with salt and pepper. Serve topped with crispy tortilla strips, avocado, sour cream, shredded cheese, cilantro, and lime."},
-      {name:"Miso Soup",servings:"4 servings",ingredients:["4 cups (960 ml) dashi stock or water","3 tbsp white or red miso paste","200 g (7 oz) soft tofu, cubed","2 green onions, thinly sliced","1 cup dried wakame seaweed, rehydrated","Optional: mushrooms, clams, or daikon"],prep:"Heat dashi stock until just below boiling — do not boil. Dissolve miso paste in a ladle of hot dashi then stir into the pot. Add tofu, rehydrated wakame, and any optional ingredients. Heat gently 2 minutes. Do not boil after adding miso — boiling destroys beneficial probiotics and changes the flavor. Serve immediately in small bowls topped with green onions."},
-      {name:"Borscht",servings:"6 servings",ingredients:["4 medium beets, peeled and grated","1 onion, diced","2 carrots, grated","3 celery stalks, diced","3 garlic cloves, minced","1 small head cabbage, shredded","1 can (14 oz) diced tomatoes","6 cups (1.4 L) beef or vegetable broth","3 tbsp red wine vinegar","1 tbsp sugar","3 tbsp olive oil","Fresh dill","Salt and pepper","Sour cream to serve"],prep:"Heat olive oil in a large pot. Cook onion, carrots, and celery until soft. Add garlic and beets and cook 5 minutes. Add tomatoes, broth, cabbage, vinegar, and sugar. Bring to a boil. Reduce heat and simmer 30 minutes until beets and cabbage are tender. Season with salt and pepper. The soup should taste sweet, sour, and earthy. Serve with a dollop of sour cream and fresh dill."}
+    "id": "classicSoups",
+    "icon": "🍲",
+    "name": "Classic Soups",
+    "desc": "Timeless soup data from chicken noodle and tomato to French onion and minestrone.",
+    "recipes": [
+      {
+        "name": "Chicken Noodle Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 whole chicken or 4 bone-in chicken thighs",
+          "3 carrots, sliced",
+          "3 celery stalks, sliced",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "2 cups egg noodles",
+          "8 cups (1.9 L) chicken broth",
+          "Fresh thyme and bay leaf",
+          "2 tbsp olive oil",
+          "Salt and pepper",
+          "Fresh parsley to garnish"
+        ],
+        "prep": "Heat olive oil in a large pot over medium heat. Cook onion, carrots, and celery until softened — about 8 minutes. Add garlic and cook 1 minute. Add broth, chicken, thyme, and bay leaf. Bring to a boil. Reduce heat and simmer 35–40 minutes until chicken is cooked through. Remove chicken and shred meat discarding bones and skin. Return meat to pot. Add egg noodles and cook 8 minutes until tender. Remove bay leaf. Season with salt and pepper. Garnish with fresh parsley."
+      },
+      {
+        "name": "French Onion Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 large yellow onions, very thinly sliced",
+          "4 tbsp unsalted butter",
+          "1 tbsp olive oil",
+          "1 tsp sugar",
+          "½ cup (120 ml) dry white wine",
+          "6 cups (1.4 L) beef broth",
+          "2 sprigs fresh thyme",
+          "1 bay leaf",
+          "Salt and pepper",
+          "4 thick slices crusty bread",
+          "2 cups Gruyère cheese, shredded"
+        ],
+        "prep": "Melt butter and olive oil in a large heavy pot over medium heat. Add onions and sugar. Cook stirring occasionally for 45–60 minutes until deeply caramelized and dark golden — do not rush this step. Add wine and cook until evaporated. Add broth, thyme, and bay leaf. Simmer 20 minutes. Season with salt and pepper. Ladle into oven-safe bowls. Top with a slice of crusty bread and generous mound of Gruyère. Broil until cheese is melted, bubbly, and golden."
+      },
+      {
+        "name": "Tomato Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (28 oz each) crushed San Marzano tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "2 cups (480 ml) vegetable or chicken broth",
+          "½ cup (120 ml) heavy cream",
+          "3 tbsp unsalted butter",
+          "1 tsp sugar",
+          "Fresh basil leaves",
+          "Salt and pepper"
+        ],
+        "prep": "Melt butter in a large pot over medium heat. Cook onion until softened. Add garlic and cook 1 minute. Add tomatoes, broth, sugar, and basil. Simmer 20 minutes. Blend until completely smooth using an immersion blender. Stir in heavy cream. Return to gentle heat. Season with salt and pepper. Serve with grilled cheese for dipping."
+      },
+      {
+        "name": "Minestrone",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 can (14 oz) cannellini beans, drained",
+          "1 can (14 oz) diced tomatoes",
+          "2 carrots, diced",
+          "2 celery stalks, diced",
+          "1 onion, diced",
+          "2 zucchini, diced",
+          "2 cups spinach or kale",
+          "4 garlic cloves, minced",
+          "1 cup small pasta — ditalini or elbow",
+          "6 cups (1.4 L) vegetable broth",
+          "3 tbsp olive oil",
+          "1 tsp Italian seasoning",
+          "Parmesan rind (optional)",
+          "Salt, pepper, and red pepper flakes",
+          "Parmesan for serving"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and Italian seasoning and cook 1 minute. Add tomatoes, broth, and Parmesan rind if using. Simmer 15 minutes. Add beans, zucchini, and pasta. Cook until pasta is tender — about 10 minutes. Add spinach and stir until wilted. Remove Parmesan rind. Season with salt, pepper, and red pepper flakes. Serve with grated Parmesan."
+      },
+      {
+        "name": "Butternut Squash Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large butternut squash, peeled and cubed",
+          "1 onion, diced",
+          "3 garlic cloves, minced",
+          "1-inch piece fresh ginger, grated",
+          "4 cups (960 ml) vegetable or chicken broth",
+          "1 cup (240 ml) coconut milk",
+          "3 tbsp butter",
+          "1 tsp cumin",
+          "½ tsp nutmeg",
+          "Salt and pepper",
+          "Toasted pumpkin seeds and cream to garnish"
+        ],
+        "prep": "Melt butter in a large pot. Cook onion until soft. Add garlic and ginger and cook 1 minute. Add squash, broth, cumin, and nutmeg. Bring to a boil. Reduce heat and simmer 20–25 minutes until squash is completely tender. Blend until very smooth. Stir in coconut milk. Season with salt and pepper. Thin with extra broth if needed. Garnish with a swirl of cream and toasted pumpkin seeds."
+      },
+      {
+        "name": "Potato Leek Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 large leeks, white and light green parts, sliced and washed",
+          "4 large potatoes, peeled and diced",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp unsalted butter",
+          "3 garlic cloves, minced",
+          "Fresh thyme",
+          "Salt and white pepper",
+          "Chives to garnish"
+        ],
+        "prep": "Melt butter in a large pot over medium heat. Cook leeks until very soft and silky — about 15 minutes. Add garlic and thyme and cook 1 minute. Add potatoes and broth. Bring to a boil. Simmer 20 minutes until potatoes are completely tender. Blend until smooth. Stir in cream. Season with salt and white pepper. Serve hot garnished with fresh chives. Can also be served cold as vichyssoise."
+      },
+      {
+        "name": "Split Pea Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "500 g (1 lb) dried split peas, rinsed",
+          "1 ham hock or 2 cups diced ham",
+          "1 onion, diced",
+          "3 carrots, diced",
+          "3 celery stalks, diced",
+          "4 garlic cloves, minced",
+          "8 cups (1.9 L) chicken broth",
+          "2 bay leaves",
+          "Fresh thyme",
+          "Salt and pepper"
+        ],
+        "prep": "Combine split peas, ham hock, onion, carrots, celery, garlic, broth, bay leaves, and thyme in a large pot. Bring to a boil. Skim any foam. Reduce heat and simmer covered 1–1.5 hours until peas are completely dissolved and soup is thick. Remove ham hock and shred meat. Return meat to soup. Remove bay leaves. Season with salt and pepper. If too thick add more broth."
+      },
+      {
+        "name": "Lentil Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "1½ cups (270 g) red or green lentils",
+          "1 onion, diced",
+          "3 carrots, diced",
+          "3 celery stalks, diced",
+          "4 garlic cloves, minced",
+          "1 can (14 oz) crushed tomatoes",
+          "6 cups (1.4 L) vegetable or chicken broth",
+          "2 tsp cumin",
+          "1 tsp coriander",
+          "1 tsp smoked paprika",
+          "½ tsp turmeric",
+          "3 tbsp olive oil",
+          "Juice of 1 lemon",
+          "Salt and pepper",
+          "Fresh parsley to garnish"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and all spices and cook 1 minute. Add lentils, tomatoes, and broth. Bring to a boil. Reduce heat and simmer 25–30 minutes until lentils are completely tender. For a creamier texture blend half the soup. Stir in lemon juice. Season with salt and pepper. Garnish with parsley."
+      },
+      {
+        "name": "Clam Chowder",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (6.5 oz each) chopped clams with juice",
+          "4 strips bacon, diced",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "3 large potatoes, cubed",
+          "3 garlic cloves, minced",
+          "2 cups (480 ml) clam juice or fish broth",
+          "2 cups (480 ml) heavy cream",
+          "3 tbsp butter",
+          "3 tbsp flour",
+          "Fresh thyme and bay leaf",
+          "Salt and pepper",
+          "Oyster crackers to serve"
+        ],
+        "prep": "Cook bacon in a large pot until crispy. Remove. Cook onion and celery in bacon fat until soft. Add garlic and cook 1 minute. Stir in flour and cook 2 minutes. Add clam juice and bring to a boil. Add potatoes, thyme, and bay leaf. Simmer 15 minutes until potatoes are tender. Add cream and clams with their juice. Simmer 5 minutes — do not boil. Season with salt and pepper. Garnish with bacon bits and oyster crackers."
+      },
+      {
+        "name": "Corn Chowder",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 ears fresh corn, kernels cut off (or 3 cups frozen)",
+          "4 strips bacon, diced",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "2 large potatoes, cubed",
+          "3 garlic cloves, minced",
+          "4 cups (960 ml) chicken broth",
+          "1 cup (240 ml) heavy cream",
+          "3 tbsp butter",
+          "3 tbsp flour",
+          "Fresh thyme",
+          "Salt, pepper, and smoked paprika"
+        ],
+        "prep": "Cook bacon until crispy. Remove and reserve. Cook onion and celery in bacon fat until soft. Add garlic. Stir in flour and cook 2 minutes. Add broth and bring to a boil. Add potatoes and thyme. Simmer 15 minutes. Add corn and cream. Simmer 10 more minutes. Season with salt, pepper, and smoked paprika. Garnish with bacon and chives."
+      },
+      {
+        "name": "Broccoli Cheddar Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups broccoli florets, chopped",
+          "1 onion, diced",
+          "3 garlic cloves, minced",
+          "2 carrots, shredded",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 cup (240 ml) heavy cream",
+          "2 cups sharp cheddar, shredded",
+          "4 tbsp butter",
+          "¼ cup flour",
+          "Salt, pepper, and nutmeg"
+        ],
+        "prep": "Melt butter in a large pot over medium heat. Cook onion until soft. Add garlic and cook 1 minute. Whisk in flour and cook 2 minutes. Gradually add broth whisking until smooth. Add broccoli and carrots. Simmer 15–20 minutes until broccoli is very tender. Add cream and simmer 5 minutes. Remove from heat and stir in cheddar until melted. Do not boil after adding cheese. Season with salt, pepper, and nutmeg."
+      },
+      {
+        "name": "Gazpacho",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 ripe tomatoes, roughly chopped",
+          "1 English cucumber, roughly chopped",
+          "1 red bell pepper, roughly chopped",
+          "½ red onion, roughly chopped",
+          "3 garlic cloves",
+          "3 tbsp sherry vinegar or red wine vinegar",
+          "½ cup (120 ml) extra virgin olive oil",
+          "1 tsp cumin",
+          "Salt and pepper",
+          "Ice cold water to adjust consistency",
+          "Croutons and olive oil to garnish"
+        ],
+        "prep": "Combine all vegetables and garlic in a blender. Blend until smooth. Add vinegar, olive oil, cumin, salt, and pepper. Blend again. Add cold water to reach desired consistency. Taste and adjust seasoning — it should be punchy and well seasoned. Strain through a sieve for a silky texture or leave as is for rustic. Refrigerate at least 2 hours — gazpacho should be served very cold. Garnish with croutons and a drizzle of olive oil."
+      },
+      {
+        "name": "Chicken Tortilla Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 chicken breasts, cooked and shredded",
+          "1 can (14 oz) black beans, drained",
+          "1 can (14 oz) corn, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "1 jalapeño, diced",
+          "4 cups (960 ml) chicken broth",
+          "2 tsp cumin",
+          "1 tsp chili powder",
+          "1 tsp smoked paprika",
+          "Salt and pepper",
+          "Toppings: tortilla strips, avocado, sour cream, cheese, cilantro, lime"
+        ],
+        "prep": "Heat oil in a large pot. Cook onion, jalapeño, and garlic until soft. Add cumin, chili powder, and paprika and cook 1 minute. Add tomatoes, broth, beans, and corn. Simmer 15 minutes. Add shredded chicken and heat through. Season with salt and pepper. Serve topped with crispy tortilla strips, avocado, sour cream, shredded cheese, cilantro, and lime."
+      },
+      {
+        "name": "Miso Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups (960 ml) dashi stock or water",
+          "3 tbsp white or red miso paste",
+          "200 g (7 oz) soft tofu, cubed",
+          "2 green onions, thinly sliced",
+          "1 cup dried wakame seaweed, rehydrated",
+          "Optional: mushrooms, clams, or daikon"
+        ],
+        "prep": "Heat dashi stock until just below boiling — do not boil. Dissolve miso paste in a ladle of hot dashi then stir into the pot. Add tofu, rehydrated wakame, and any optional ingredients. Heat gently 2 minutes. Do not boil after adding miso — boiling destroys beneficial probiotics and changes the flavor. Serve immediately in small bowls topped with green onions."
+      },
+      {
+        "name": "Borscht",
+        "servings": "6 servings",
+        "ingredients": [
+          "4 medium beets, peeled and grated",
+          "1 onion, diced",
+          "2 carrots, grated",
+          "3 celery stalks, diced",
+          "3 garlic cloves, minced",
+          "1 small head cabbage, shredded",
+          "1 can (14 oz) diced tomatoes",
+          "6 cups (1.4 L) beef or vegetable broth",
+          "3 tbsp red wine vinegar",
+          "1 tbsp sugar",
+          "3 tbsp olive oil",
+          "Fresh dill",
+          "Salt and pepper",
+          "Sour cream to serve"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until soft. Add garlic and beets and cook 5 minutes. Add tomatoes, broth, cabbage, vinegar, and sugar. Bring to a boil. Reduce heat and simmer 30 minutes until beets and cabbage are tender. Season with salt and pepper. The soup should taste sweet, sour, and earthy. Serve with a dollop of sour cream and fresh dill."
+      }
     ]
   },
-
   {
-    id: 'heartyStews',
-    icon:"🥘", name:"Hearty Stews",
-    desc:"Rich and warming beef, lamb, pork, and vegetable stews slow cooked to perfection.",
-    recipes:[
-      {name:"Classic Beef Stew",servings:"6 servings",ingredients:["1 kg (2 lbs) beef chuck, cut into 2-inch cubes","3 potatoes, cubed","3 carrots, sliced","2 celery stalks, sliced","1 onion, diced","4 garlic cloves, minced","2 cups (480 ml) beef broth","1 cup (240 ml) red wine","2 tbsp tomato paste","2 tbsp flour","2 tbsp olive oil","Fresh thyme and bay leaf","Salt and pepper"],prep:"Season beef with salt and pepper and dust with flour. Brown in olive oil in a large pot over high heat in batches — do not crowd. Remove beef. Cook onion, carrots, and celery until softened. Add garlic and tomato paste and cook 1 minute. Add wine and reduce. Add broth, herbs, and beef. Bring to a boil. Reduce heat, cover, and simmer 1.5 hours. Add potatoes and cook 30 more minutes until everything is tender and sauce has thickened."},
-      {name:"Beef Bourguignon",servings:"6 servings",ingredients:["1 kg (2 lbs) beef chuck, cubed","200 g (7 oz) bacon lardons","500 g (1 lb) cremini mushrooms, quartered","2 cups pearl onions","3 cups (720 ml) Burgundy red wine","2 cups (480 ml) beef broth","2 tbsp tomato paste","4 garlic cloves","Bouquet garni — thyme, bay leaf, parsley","3 tbsp butter","Salt and pepper"],prep:"Marinate beef in wine overnight if possible. Pat dry. Brown bacon in a Dutch oven. Remove. Brown beef in batches in bacon fat. Remove. Cook pearl onions and mushrooms until golden. Add garlic and tomato paste. Add wine, broth, beef, and bacon. Add bouquet garni. Braise covered at 325°F (165°C) for 2.5 hours until beef is very tender. Uncover and cook 30 more minutes until sauce thickens."},
-      {name:"Irish Lamb Stew",servings:"6 servings",ingredients:["1 kg (2 lbs) lamb shoulder, cut into chunks","6 potatoes, quartered","3 carrots, sliced","1 onion, diced","3 cups (720 ml) chicken or vegetable broth","Fresh thyme and parsley","Salt and pepper","2 tbsp butter"],prep:"Layer lamb, potatoes, carrots, and onion in a large heavy pot. Season generously with salt and pepper. Add thyme and broth. Bring to a boil. Reduce heat, cover, and simmer 1.5–2 hours until lamb is very tender and potatoes are falling apart thickening the broth. Stir in butter at the end. Garnish with fresh parsley. This traditional Irish stew is purposely simple — the quality of the lamb carries it."},
-      {name:"Chicken and Dumpling Stew",servings:"6 servings",ingredients:["1 kg (2 lbs) boneless chicken thighs","3 carrots, sliced","3 celery stalks, sliced","1 onion, diced","4 garlic cloves","6 cups (1.4 L) chicken broth","1 cup frozen peas","Dumplings: 2 cups flour, 1 tbsp baking powder, 1 tsp salt, 1 cup milk, 4 tbsp melted butter","Fresh thyme and bay leaf","Salt and pepper"],prep:"Cook chicken with vegetables in broth with thyme and bay leaf until cooked through — about 30 minutes. Remove chicken and shred. Return to pot. Add peas. Make dumplings by mixing flour, baking powder, and salt. Stir in milk and butter until just combined — do not overmix. Drop spoonfuls onto simmering stew. Cover and cook 15 minutes without lifting the lid. Dumplings should be fluffy and cooked through."},
-      {name:"Hungarian Goulash",servings:"6 servings",ingredients:["1 kg (2 lbs) beef chuck, cubed","2 large onions, diced","3 garlic cloves, minced","3 tbsp sweet Hungarian paprika","1 tsp caraway seeds","1 can (14 oz) crushed tomatoes","3 cups (720 ml) beef broth","2 tbsp lard or oil","Salt and pepper","Sour cream and egg noodles to serve"],prep:"Heat lard in a large pot over medium heat. Cook onions until deeply golden — about 20 minutes. Remove from heat and stir in paprika — this prevents burning. Add beef and caraway seeds. Return to heat and stir well. Add tomatoes and broth. Cover and simmer 1.5–2 hours until beef is very tender. Season with salt and pepper. Serve over egg noodles with a spoonful of sour cream."},
-      {name:"Pork and Bean Stew",servings:"6 servings",ingredients:["700 g (1.5 lbs) pork shoulder, cubed","2 cans (14 oz each) white beans, drained","1 can (14 oz) crushed tomatoes","1 onion, diced","4 garlic cloves, minced","2 cups (480 ml) chicken broth","1 cup (240 ml) white wine","Fresh rosemary and thyme","2 tbsp olive oil","Salt and pepper"],prep:"Brown pork in olive oil in a Dutch oven over high heat. Remove. Cook onion until soft. Add garlic and herbs. Add wine and reduce. Add tomatoes, broth, and pork. Cover and simmer 1 hour. Add beans and simmer 30 more minutes until pork is tender and beans have absorbed the flavors. Season with salt and pepper."},
-      {name:"Cassoulet",servings:"8 servings",ingredients:["500 g (1 lb) dried white beans, soaked overnight","4 duck confit legs","300 g (10.5 oz) pork sausages","300 g (10.5 oz) pork belly, cubed","1 onion, diced","4 garlic cloves","1 can (28 oz) crushed tomatoes","4 cups (960 ml) chicken broth","Bouquet garni","Breadcrumbs for topping","Salt and pepper"],prep:"Cook soaked beans in fresh water 1 hour until almost tender. Drain. Brown sausages and pork belly. Cook onion and garlic. Layer everything in a large casserole dish — beans, meats, tomatoes, broth, and bouquet garni. Bake covered at 325°F for 2 hours. Uncover, top with breadcrumbs, and bake 30 more minutes until crust is golden and soup bubbles through."},
-      {name:"Moroccan Lamb Stew",servings:"4 servings",ingredients:["700 g (1.5 lbs) lamb shoulder, cubed","1 onion, diced","4 garlic cloves","1 can (14 oz) diced tomatoes","1 cup (240 ml) chicken broth","½ cup dried apricots","¼ cup green olives","2 tsp ras el hanout","1 tsp cinnamon","1 tsp cumin","1 tsp ginger","2 tbsp olive oil","Salt and pepper","Cilantro and toasted almonds","Couscous to serve"],prep:"Heat olive oil in a tagine or Dutch oven. Brown lamb on all sides. Remove. Cook onion until golden. Add garlic and all spices and cook 1 minute. Return lamb. Add tomatoes, broth, apricots, and olives. Cover and simmer 1.5–2 hours until lamb is very tender. Adjust seasoning. Garnish with cilantro and toasted almonds. Serve over couscous."},
-      {name:"Venison Stew",servings:"4 servings",ingredients:["700 g (1.5 lbs) venison shoulder, cubed","3 carrots, sliced","2 parsnips, cubed","1 onion, diced","4 garlic cloves","2 cups (480 ml) red wine","2 cups (480 ml) beef broth","2 tbsp tomato paste","Fresh juniper berries and thyme","2 tbsp olive oil","Salt and pepper"],prep:"Marinate venison in red wine with juniper berries and thyme overnight. Remove and pat dry. Brown in olive oil over high heat. Remove. Cook vegetables. Add tomato paste, wine, and broth. Return venison. Simmer covered 2 hours until tender. Venison can be tough if cooked too quickly — low and slow is essential."},
-      {name:"Bouillabaisse",servings:"6 servings",ingredients:["500 g (1 lb) white fish — cod, halibut, snapper","500 g (1 lb) shellfish — mussels, clams, shrimp","1 onion, diced","4 garlic cloves","1 fennel bulb, sliced","1 can (28 oz) crushed tomatoes","2 cups (480 ml) fish broth","1 cup (240 ml) white wine","Saffron pinch soaked in broth","Orange zest","Fresh thyme and bay leaf","3 tbsp olive oil","Rouille and crusty bread to serve"],prep:"Heat olive oil in a large pot. Cook onion, garlic, and fennel until soft. Add white wine and cook 2 minutes. Add tomatoes, fish broth, saffron broth, orange zest, and herbs. Simmer 15 minutes. Add fish and cook 5 minutes. Add shellfish and cook until shells open — about 5 more minutes. Discard any unopened shells. Season with salt and pepper. Serve with rouille spread on toasted bread."},
-      {name:"Veal Stew",servings:"4 servings",ingredients:["700 g (1.5 lbs) veal shoulder, cubed","1 onion, diced","3 carrots, sliced","2 celery stalks, sliced","4 garlic cloves","1 cup (240 ml) white wine","2 cups (480 ml) chicken broth","½ cup heavy cream","2 egg yolks","Juice of 1 lemon","Fresh thyme and bay leaf","3 tbsp butter","Salt and white pepper"],prep:"Brown veal in butter over medium-high heat. Remove. Cook vegetables until soft. Add wine and reduce. Add broth and herbs. Return veal. Simmer covered 1–1.5 hours until very tender. Whisk egg yolks with cream and lemon juice. Remove stew from heat and stir in egg mixture — do not boil or it will curdle. Season with salt and white pepper. This classic French blanquette de veau is velvety and delicate."},
-      {name:"Oxtail Stew",servings:"4 servings",ingredients:["1.5 kg (3 lbs) oxtail, cut into sections","1 onion, diced","2 carrots, diced","4 garlic cloves","2 cups (480 ml) red wine","2 cups (480 ml) beef broth","1 can (14 oz) crushed tomatoes","Fresh thyme and bay leaf","2 tbsp olive oil","Salt and pepper","Mashed potatoes or polenta to serve"],prep:"Season oxtail and sear in olive oil over high heat until deeply browned on all sides. Remove. Cook vegetables until soft. Add wine and reduce. Add broth, tomatoes, and herbs. Return oxtail. Braise covered at 325°F for 3.5–4 hours until meat is falling off the bone. Skim fat from surface. Serve over mashed potatoes or polenta with the rich braising sauce."},
-      {name:"Pork Pozole",servings:"8 servings",ingredients:["1 kg (2 lbs) pork shoulder, cut into chunks","2 cans (29 oz each) hominy, drained","4 dried guajillo chilies, toasted and soaked","2 dried ancho chilies, toasted and soaked","1 onion","6 garlic cloves","1 tsp oregano","1 tsp cumin","8 cups (1.9 L) chicken broth","Salt","Toppings: shredded cabbage, radishes, lime, dried oregano, tostadas, avocado"],prep:"Simmer pork in broth with onion and garlic until very tender — about 1.5 hours. Remove pork and shred. Blend soaked chilies with a cup of broth, garlic, cumin, and oregano until smooth. Strain. Fry chili sauce in a hot pot 3 minutes. Add remaining broth, hominy, and pork. Simmer 30 minutes. Season with salt. Serve in bowls with all toppings on the side."},
-      {name:"Brunswick Stew",servings:"8 servings",ingredients:["1 whole chicken, cooked and shredded","500 g (1 lb) pulled pork","2 cups corn kernels","2 cups lima beans","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","2 cups (480 ml) chicken broth","2 tbsp Worcestershire sauce","1 tbsp brown sugar","1 tsp smoked paprika","2 tbsp butter","Salt and pepper"],prep:"Cook onion and garlic in butter until soft. Add tomatoes, broth, Worcestershire, brown sugar, and paprika. Simmer 15 minutes. Add chicken, pork, corn, and lima beans. Simmer 30–45 minutes until stew is very thick and flavors meld. Stir frequently near the end — it should be thick enough to support a spoon. Season with salt and pepper."},
-      {name:"Catalan Fish Stew",servings:"4 servings",ingredients:["500 g (1 lb) mixed fish — cod and monkfish","300 g (10.5 oz) shrimp, peeled","1 onion, diced","4 garlic cloves, minced","1 can (14 oz) crushed tomatoes","½ cup (120 ml) white wine","2 cups (480 ml) fish broth","¼ cup almonds, toasted","Saffron pinch","3 tbsp olive oil","Fresh parsley","Salt and pepper"],prep:"Heat olive oil in a large pan. Cook onion until soft. Add garlic and cook 1 minute. Add wine and reduce. Add tomatoes, broth, and saffron. Simmer 15 minutes. Blend almonds with a little broth into a paste — this thickens the stew. Stir in almond paste. Add fish and cook 5 minutes. Add shrimp and cook 3 more minutes. Season and garnish with parsley."}
+    "id": "heartyStews",
+    "icon": "🥘",
+    "name": "Hearty Stews",
+    "desc": "Rich and warming beef, lamb, pork, and vegetable stews slow cooked to perfection.",
+    "recipes": [
+      {
+        "name": "Classic Beef Stew",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) beef chuck, cut into 2-inch cubes",
+          "3 potatoes, cubed",
+          "3 carrots, sliced",
+          "2 celery stalks, sliced",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "2 cups (480 ml) beef broth",
+          "1 cup (240 ml) red wine",
+          "2 tbsp tomato paste",
+          "2 tbsp flour",
+          "2 tbsp olive oil",
+          "Fresh thyme and bay leaf",
+          "Salt and pepper"
+        ],
+        "prep": "Season beef with salt and pepper and dust with flour. Brown in olive oil in a large pot over high heat in batches — do not crowd. Remove beef. Cook onion, carrots, and celery until softened. Add garlic and tomato paste and cook 1 minute. Add wine and reduce. Add broth, herbs, and beef. Bring to a boil. Reduce heat, cover, and simmer 1.5 hours. Add potatoes and cook 30 more minutes until everything is tender and sauce has thickened."
+      },
+      {
+        "name": "Beef Bourguignon",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) beef chuck, cubed",
+          "200 g (7 oz) bacon lardons",
+          "500 g (1 lb) cremini mushrooms, quartered",
+          "2 cups pearl onions",
+          "3 cups (720 ml) Burgundy red wine",
+          "2 cups (480 ml) beef broth",
+          "2 tbsp tomato paste",
+          "4 garlic cloves",
+          "Bouquet garni — thyme, bay leaf, parsley",
+          "3 tbsp butter",
+          "Salt and pepper"
+        ],
+        "prep": "Marinate beef in wine overnight if possible. Pat dry. Brown bacon in a Dutch oven. Remove. Brown beef in batches in bacon fat. Remove. Cook pearl onions and mushrooms until golden. Add garlic and tomato paste. Add wine, broth, beef, and bacon. Add bouquet garni. Braise covered at 325°F (165°C) for 2.5 hours until beef is very tender. Uncover and cook 30 more minutes until sauce thickens."
+      },
+      {
+        "name": "Irish Lamb Stew",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) lamb shoulder, cut into chunks",
+          "6 potatoes, quartered",
+          "3 carrots, sliced",
+          "1 onion, diced",
+          "3 cups (720 ml) chicken or vegetable broth",
+          "Fresh thyme and parsley",
+          "Salt and pepper",
+          "2 tbsp butter"
+        ],
+        "prep": "Layer lamb, potatoes, carrots, and onion in a large heavy pot. Season generously with salt and pepper. Add thyme and broth. Bring to a boil. Reduce heat, cover, and simmer 1.5–2 hours until lamb is very tender and potatoes are falling apart thickening the broth. Stir in butter at the end. Garnish with fresh parsley. This traditional Irish stew is purposely simple — the quality of the lamb carries it."
+      },
+      {
+        "name": "Chicken and Dumpling Stew",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) boneless chicken thighs",
+          "3 carrots, sliced",
+          "3 celery stalks, sliced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "6 cups (1.4 L) chicken broth",
+          "1 cup frozen peas",
+          "Dumplings: 2 cups flour, 1 tbsp baking powder, 1 tsp salt, 1 cup milk, 4 tbsp melted butter",
+          "Fresh thyme and bay leaf",
+          "Salt and pepper"
+        ],
+        "prep": "Cook chicken with vegetables in broth with thyme and bay leaf until cooked through — about 30 minutes. Remove chicken and shred. Return to pot. Add peas. Make dumplings by mixing flour, baking powder, and salt. Stir in milk and butter until just combined — do not overmix. Drop spoonfuls onto simmering stew. Cover and cook 15 minutes without lifting the lid. Dumplings should be fluffy and cooked through."
+      },
+      {
+        "name": "Hungarian Goulash",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) beef chuck, cubed",
+          "2 large onions, diced",
+          "3 garlic cloves, minced",
+          "3 tbsp sweet Hungarian paprika",
+          "1 tsp caraway seeds",
+          "1 can (14 oz) crushed tomatoes",
+          "3 cups (720 ml) beef broth",
+          "2 tbsp lard or oil",
+          "Salt and pepper",
+          "Sour cream and egg noodles to serve"
+        ],
+        "prep": "Heat lard in a large pot over medium heat. Cook onions until deeply golden — about 20 minutes. Remove from heat and stir in paprika — this prevents burning. Add beef and caraway seeds. Return to heat and stir well. Add tomatoes and broth. Cover and simmer 1.5–2 hours until beef is very tender. Season with salt and pepper. Serve over egg noodles with a spoonful of sour cream."
+      },
+      {
+        "name": "Pork and Bean Stew",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) pork shoulder, cubed",
+          "2 cans (14 oz each) white beans, drained",
+          "1 can (14 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "2 cups (480 ml) chicken broth",
+          "1 cup (240 ml) white wine",
+          "Fresh rosemary and thyme",
+          "2 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Brown pork in olive oil in a Dutch oven over high heat. Remove. Cook onion until soft. Add garlic and herbs. Add wine and reduce. Add tomatoes, broth, and pork. Cover and simmer 1 hour. Add beans and simmer 30 more minutes until pork is tender and beans have absorbed the flavors. Season with salt and pepper."
+      },
+      {
+        "name": "Cassoulet",
+        "servings": "8 servings",
+        "ingredients": [
+          "500 g (1 lb) dried white beans, soaked overnight",
+          "4 duck confit legs",
+          "300 g (10.5 oz) pork sausages",
+          "300 g (10.5 oz) pork belly, cubed",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 can (28 oz) crushed tomatoes",
+          "4 cups (960 ml) chicken broth",
+          "Bouquet garni",
+          "Breadcrumbs for topping",
+          "Salt and pepper"
+        ],
+        "prep": "Cook soaked beans in fresh water 1 hour until almost tender. Drain. Brown sausages and pork belly. Cook onion and garlic. Layer everything in a large casserole dish — beans, meats, tomatoes, broth, and bouquet garni. Bake covered at 325°F for 2 hours. Uncover, top with breadcrumbs, and bake 30 more minutes until crust is golden and soup bubbles through."
+      },
+      {
+        "name": "Moroccan Lamb Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) lamb shoulder, cubed",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 can (14 oz) diced tomatoes",
+          "1 cup (240 ml) chicken broth",
+          "½ cup dried apricots",
+          "¼ cup green olives",
+          "2 tsp ras el hanout",
+          "1 tsp cinnamon",
+          "1 tsp cumin",
+          "1 tsp ginger",
+          "2 tbsp olive oil",
+          "Salt and pepper",
+          "Cilantro and toasted almonds",
+          "Couscous to serve"
+        ],
+        "prep": "Heat olive oil in a tagine or Dutch oven. Brown lamb on all sides. Remove. Cook onion until golden. Add garlic and all spices and cook 1 minute. Return lamb. Add tomatoes, broth, apricots, and olives. Cover and simmer 1.5–2 hours until lamb is very tender. Adjust seasoning. Garnish with cilantro and toasted almonds. Serve over couscous."
+      },
+      {
+        "name": "Venison Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) venison shoulder, cubed",
+          "3 carrots, sliced",
+          "2 parsnips, cubed",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "2 cups (480 ml) red wine",
+          "2 cups (480 ml) beef broth",
+          "2 tbsp tomato paste",
+          "Fresh juniper berries and thyme",
+          "2 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Marinate venison in red wine with juniper berries and thyme overnight. Remove and pat dry. Brown in olive oil over high heat. Remove. Cook vegetables. Add tomato paste, wine, and broth. Return venison. Simmer covered 2 hours until tender. Venison can be tough if cooked too quickly — low and slow is essential."
+      },
+      {
+        "name": "Bouillabaisse",
+        "servings": "6 servings",
+        "ingredients": [
+          "500 g (1 lb) white fish — cod, halibut, snapper",
+          "500 g (1 lb) shellfish — mussels, clams, shrimp",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 fennel bulb, sliced",
+          "1 can (28 oz) crushed tomatoes",
+          "2 cups (480 ml) fish broth",
+          "1 cup (240 ml) white wine",
+          "Saffron pinch soaked in broth",
+          "Orange zest",
+          "Fresh thyme and bay leaf",
+          "3 tbsp olive oil",
+          "Rouille and crusty bread to serve"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, garlic, and fennel until soft. Add white wine and cook 2 minutes. Add tomatoes, fish broth, saffron broth, orange zest, and herbs. Simmer 15 minutes. Add fish and cook 5 minutes. Add shellfish and cook until shells open — about 5 more minutes. Discard any unopened shells. Season with salt and pepper. Serve with rouille spread on toasted bread."
+      },
+      {
+        "name": "Veal Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) veal shoulder, cubed",
+          "1 onion, diced",
+          "3 carrots, sliced",
+          "2 celery stalks, sliced",
+          "4 garlic cloves",
+          "1 cup (240 ml) white wine",
+          "2 cups (480 ml) chicken broth",
+          "½ cup heavy cream",
+          "2 egg yolks",
+          "Juice of 1 lemon",
+          "Fresh thyme and bay leaf",
+          "3 tbsp butter",
+          "Salt and white pepper"
+        ],
+        "prep": "Brown veal in butter over medium-high heat. Remove. Cook vegetables until soft. Add wine and reduce. Add broth and herbs. Return veal. Simmer covered 1–1.5 hours until very tender. Whisk egg yolks with cream and lemon juice. Remove stew from heat and stir in egg mixture — do not boil or it will curdle. Season with salt and white pepper. This classic French blanquette de veau is velvety and delicate."
+      },
+      {
+        "name": "Oxtail Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "1.5 kg (3 lbs) oxtail, cut into sections",
+          "1 onion, diced",
+          "2 carrots, diced",
+          "4 garlic cloves",
+          "2 cups (480 ml) red wine",
+          "2 cups (480 ml) beef broth",
+          "1 can (14 oz) crushed tomatoes",
+          "Fresh thyme and bay leaf",
+          "2 tbsp olive oil",
+          "Salt and pepper",
+          "Mashed potatoes or polenta to serve"
+        ],
+        "prep": "Season oxtail and sear in olive oil over high heat until deeply browned on all sides. Remove. Cook vegetables until soft. Add wine and reduce. Add broth, tomatoes, and herbs. Return oxtail. Braise covered at 325°F for 3.5–4 hours until meat is falling off the bone. Skim fat from surface. Serve over mashed potatoes or polenta with the rich braising sauce."
+      },
+      {
+        "name": "Pork Pozole",
+        "servings": "8 servings",
+        "ingredients": [
+          "1 kg (2 lbs) pork shoulder, cut into chunks",
+          "2 cans (29 oz each) hominy, drained",
+          "4 dried guajillo chilies, toasted and soaked",
+          "2 dried ancho chilies, toasted and soaked",
+          "1 onion",
+          "6 garlic cloves",
+          "1 tsp oregano",
+          "1 tsp cumin",
+          "8 cups (1.9 L) chicken broth",
+          "Salt",
+          "Toppings: shredded cabbage, radishes, lime, dried oregano, tostadas, avocado"
+        ],
+        "prep": "Simmer pork in broth with onion and garlic until very tender — about 1.5 hours. Remove pork and shred. Blend soaked chilies with a cup of broth, garlic, cumin, and oregano until smooth. Strain. Fry chili sauce in a hot pot 3 minutes. Add remaining broth, hominy, and pork. Simmer 30 minutes. Season with salt. Serve in bowls with all toppings on the side."
+      },
+      {
+        "name": "Brunswick Stew",
+        "servings": "8 servings",
+        "ingredients": [
+          "1 whole chicken, cooked and shredded",
+          "500 g (1 lb) pulled pork",
+          "2 cups corn kernels",
+          "2 cups lima beans",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "2 cups (480 ml) chicken broth",
+          "2 tbsp Worcestershire sauce",
+          "1 tbsp brown sugar",
+          "1 tsp smoked paprika",
+          "2 tbsp butter",
+          "Salt and pepper"
+        ],
+        "prep": "Cook onion and garlic in butter until soft. Add tomatoes, broth, Worcestershire, brown sugar, and paprika. Simmer 15 minutes. Add chicken, pork, corn, and lima beans. Simmer 30–45 minutes until stew is very thick and flavors meld. Stir frequently near the end — it should be thick enough to support a spoon. Season with salt and pepper."
+      },
+      {
+        "name": "Catalan Fish Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) mixed fish — cod and monkfish",
+          "300 g (10.5 oz) shrimp, peeled",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "1 can (14 oz) crushed tomatoes",
+          "½ cup (120 ml) white wine",
+          "2 cups (480 ml) fish broth",
+          "¼ cup almonds, toasted",
+          "Saffron pinch",
+          "3 tbsp olive oil",
+          "Fresh parsley",
+          "Salt and pepper"
+        ],
+        "prep": "Heat olive oil in a large pan. Cook onion until soft. Add garlic and cook 1 minute. Add wine and reduce. Add tomatoes, broth, and saffron. Simmer 15 minutes. Blend almonds with a little broth into a paste — this thickens the stew. Stir in almond paste. Add fish and cook 5 minutes. Add shrimp and cook 3 more minutes. Season and garnish with parsley."
+      }
     ]
   },
-
   {
-    id: 'chilisGumbos',
-    icon:"🌶️", name:"Chilis & Gumbos",
-    desc:"Bold beef chili, white chicken chili, vegetarian chili, and classic Louisiana gumbo.",
-    recipes:[
-      {name:"Classic Beef Chili",servings:"6 servings",ingredients:["700 g (1.5 lbs) ground beef","2 cans (14 oz each) kidney beans, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves, minced","1 red bell pepper, diced","2 tbsp chili powder","1 tsp cumin","1 tsp smoked paprika","½ tsp cayenne","Salt and pepper","2 tbsp olive oil","Toppings: sour cream, cheese, green onions, jalapeños"],prep:"Heat olive oil in a large pot. Brown ground beef and drain excess fat. Add onion, pepper, and garlic and cook until softened. Add all spices and cook 1 minute. Add crushed tomatoes and beans. Bring to a boil. Reduce heat and simmer uncovered 30–40 minutes until thick. Season with salt and pepper. Serve with toppings."},
-      {name:"White Chicken Chili",servings:"6 servings",ingredients:["700 g (1.5 lbs) boneless chicken thighs or breasts","2 cans (14 oz each) white beans — cannellini or Great Northern","2 cans (4 oz each) diced green chilies","1 onion, diced","4 garlic cloves, minced","4 cups (960 ml) chicken broth","1 tsp cumin","1 tsp oregano","½ tsp cayenne","1 cup sour cream","Salt and pepper","Toppings: avocado, cheese, cilantro, lime"],prep:"Cook chicken in broth until cooked through. Remove and shred. Cook onion and garlic in a little oil until soft. Add spices. Add broth, green chilies, and white beans. Simmer 15 minutes. Mash some beans against the side of the pot to thicken. Return chicken. Stir in sour cream off the heat. Season with salt and pepper. Serve with toppings."},
-      {name:"Vegetarian Chili",servings:"6 servings",ingredients:["1 can (14 oz) black beans, drained","1 can (14 oz) kidney beans, drained","1 can (14 oz) chickpeas, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","2 bell peppers, diced","4 garlic cloves","1 zucchini, diced","1 cup corn kernels","2 tbsp chili powder","1 tsp cumin","1 tsp smoked paprika","2 tbsp olive oil","Salt and pepper"],prep:"Heat olive oil in a large pot. Cook onion and bell peppers until soft. Add garlic and all spices and cook 1 minute. Add tomatoes, all beans, zucchini, and corn. Simmer 30 minutes until thick and flavors meld. Season with salt and pepper. Serve with your favorite toppings."},
-      {name:"Texas Beef Chili",servings:"6 servings",ingredients:["1 kg (2 lbs) beef chuck, cut into small cubes — no beans in Texas chili","1 onion, diced","6 garlic cloves, minced","3 dried ancho chilies, toasted and soaked","2 dried guajillo chilies, toasted and soaked","1 cup (240 ml) beef broth","2 tsp cumin","1 tsp oregano","Salt","2 tbsp lard or oil"],prep:"Toast dried chilies in a dry pan. Soak in hot water 20 minutes. Blend with soaking water until smooth. Strain. Brown beef in lard in batches over high heat. Cook onion and garlic. Return beef. Add chili sauce, broth, cumin, and oregano. Simmer covered 2 hours until beef is very tender and sauce is thick. Season with salt. True Texas chili has no beans and no tomatoes."},
-      {name:"Chicken Chili",servings:"6 servings",ingredients:["700 g (1.5 lbs) ground chicken","2 cans (14 oz each) pinto beans, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","1 red bell pepper, diced","2 tbsp chili powder","1 tsp cumin","½ tsp smoked paprika","Salt and pepper","2 tbsp olive oil"],prep:"Brown ground chicken in olive oil. Add onion, bell pepper, and garlic and cook until soft. Add spices and cook 1 minute. Add tomatoes and beans. Simmer 30 minutes. Season with salt and pepper."},
-      {name:"Seafood Gumbo",servings:"6 servings",ingredients:["500 g (1 lb) shrimp, peeled","300 g (10.5 oz) crab meat","300 g (10.5 oz) andouille sausage, sliced","1 onion, diced","3 celery stalks, diced","1 green bell pepper, diced","4 garlic cloves","1 cup (240 ml) dark roux: equal parts flour and oil cooked until dark brown","6 cups (1.4 L) seafood broth","2 cups okra, sliced","Cajun seasoning, thyme, and bay leaf","File powder to serve","Rice to serve"],prep:"Make roux by cooking equal parts flour and oil in a heavy pot over medium heat, stirring constantly, until color of dark chocolate — about 30–45 minutes. Add onion, celery, and bell pepper — the holy trinity. Cook until soft. Add garlic. Add broth gradually while stirring. Add sausage, okra, Cajun seasoning, thyme, and bay leaf. Simmer 30 minutes. Add shrimp and crab and cook 5 more minutes. Serve over rice sprinkled with file powder."},
-      {name:"Chicken and Andouille Gumbo",servings:"6 servings",ingredients:["1 whole chicken, cut into pieces","300 g (10.5 oz) andouille sausage, sliced","Dark roux: ½ cup flour, ½ cup oil","1 onion, diced","3 celery stalks, diced","1 green bell pepper, diced","4 garlic cloves","6 cups (1.4 L) chicken broth","Cajun seasoning","File powder and rice to serve"],prep:"Make dark roux by cooking flour and oil over medium heat stirring constantly 30–45 minutes until very dark brown. Add vegetables and cook until soft. Add garlic. Add broth gradually. Add chicken and sausage. Simmer 45 minutes until chicken is very tender. Remove chicken, shred, and return meat. Season generously with Cajun seasoning. Serve over rice with file powder."},
-      {name:"Green Chile Stew",servings:"4 servings",ingredients:["700 g (1.5 lbs) pork shoulder, cubed","2 cups roasted green chiles, peeled and diced — Hatch or Anaheim","3 potatoes, cubed","1 onion, diced","4 garlic cloves","4 cups (960 ml) chicken broth","1 tsp cumin","1 tsp oregano","2 tbsp oil","Salt and pepper","Flour tortillas to serve"],prep:"Brown pork in oil over high heat. Remove. Cook onion and garlic until soft. Add cumin and oregano. Add broth, green chiles, and pork. Simmer 45 minutes. Add potatoes and cook 20 more minutes until tender. Season with salt and pepper. Serve with warm flour tortillas."},
-      {name:"Cincinnati Chili",servings:"6 servings",ingredients:["700 g (1.5 lbs) ground beef","1 can (28 oz) crushed tomatoes","1 onion, finely diced","4 garlic cloves","2 cups (480 ml) beef broth","2 tsp chili powder","1 tsp cumin","1 tsp cinnamon","½ tsp allspice","½ tsp cayenne","1 tbsp apple cider vinegar","Salt","Spaghetti, shredded cheddar, kidney beans, and diced onion to serve"],prep:"Brown beef with onion and garlic. Add all spices, tomatoes, broth, and vinegar. Simmer covered 1 hour stirring occasionally. The chili should be thin and sauce-like — this is not a thick Texas chili. Serve Cincinnati style — chili over spaghetti, topped with shredded cheddar, kidney beans, and diced onion."},
-      {name:"Black Bean Chili",servings:"6 servings",ingredients:["3 cans (14 oz each) black beans, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","1 red bell pepper, diced","1 chipotle pepper in adobo, minced","2 tbsp chili powder","1 tsp cumin","1 tsp smoked paprika","2 tbsp olive oil","Salt and pepper","Avocado, sour cream, and lime to serve"],prep:"Heat olive oil in a large pot. Cook onion and bell pepper until soft. Add garlic, chipotle, and all spices and cook 1 minute. Add tomatoes and black beans. Simmer 25 minutes. Mash about a third of the beans for a thicker texture. Season with salt and pepper. Serve with avocado, sour cream, and lime."},
-      {name:"Pork Green Chili",servings:"4 servings",ingredients:["700 g (1.5 lbs) pork shoulder, cubed","8 Hatch or Anaheim green chiles, roasted and diced","1 onion, diced","4 garlic cloves","4 cups (960 ml) chicken broth","1 tsp cumin","½ tsp oregano","2 tbsp oil","Salt and pepper"],prep:"Brown pork in oil. Remove. Cook onion and garlic until soft. Add cumin and oregano. Add broth, pork, and green chiles. Simmer covered 1 hour until pork is tender. For a thicker stew mix 2 tbsp flour with cold water and stir in. Simmer 10 more minutes. Season with salt and pepper."},
-      {name:"Turkey Chili",servings:"6 servings",ingredients:["700 g (1.5 lbs) ground turkey","2 cans (14 oz each) kidney beans, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","1 red bell pepper, diced","2 tbsp chili powder","1 tsp cumin","1 tsp smoked paprika","½ tsp cayenne","Salt and pepper","2 tbsp olive oil"],prep:"Brown turkey in olive oil and drain. Add onion, bell pepper, and garlic and cook until soft. Add spices and cook 1 minute. Add tomatoes and beans. Simmer 30 minutes. Season with salt and pepper."},
-      {name:"Cowboy Chili",servings:"8 servings",ingredients:["1 kg (2 lbs) beef chuck, cubed","500 g (1 lb) pork sausage","1 can (14 oz) pinto beans","1 can (14 oz) kidney beans","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","1 jalapeño, diced","3 tbsp chili powder","2 tsp cumin","1 tsp smoked paprika","2 tbsp oil","Salt and pepper"],prep:"Brown beef and sausage in oil in batches. Cook onion, jalapeño, and garlic. Add spices. Add tomatoes, beans, and all meats. Simmer covered 1.5–2 hours until beef is very tender. Season with salt and pepper."},
-      {name:"Okra Gumbo",servings:"6 servings",ingredients:["3 cups okra, sliced","1 onion, diced","3 celery stalks, diced","1 green bell pepper, diced","4 garlic cloves","1 can (28 oz) crushed tomatoes","4 cups (960 ml) vegetable broth","Roux: ½ cup flour and ½ cup oil","Cajun seasoning and bay leaf","Rice to serve"],prep:"Make roux by cooking flour and oil stirring constantly until dark brown — 30 minutes. Add onion, celery, and bell pepper and cook until soft. Add garlic. Add tomatoes and broth. Add okra and Cajun seasoning. Simmer 30 minutes — the okra will thicken the gumbo naturally. Season with salt. Serve over rice."},
-      {name:"Bison Chili",servings:"6 servings",ingredients:["700 g (1.5 lbs) ground bison","2 cans (14 oz each) pinto beans, drained","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","1 ancho chili, soaked and blended","2 tbsp chili powder","1 tsp cumin","1 tsp smoked paprika","Salt and pepper","2 tbsp oil"],prep:"Brown bison in oil. Add onion and garlic and cook until soft. Add ancho chili paste and all spices. Add tomatoes and beans. Simmer 30 minutes. Bison is leaner than beef so add a little broth if the chili gets too thick. Season with salt and pepper."}
+    "id": "vegetarianSoups",
+    "icon": "🌿",
+    "name": "Vegetarian Soups",
+    "desc": "Plant-based soups packed with vegetables, legumes, and bold flavors.",
+    "recipes": [
+      {
+        "name": "Roasted Tomato Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 kg (2 lbs) ripe tomatoes, halved",
+          "1 onion, quartered",
+          "6 garlic cloves",
+          "3 tbsp olive oil",
+          "1 tsp sugar",
+          "2 cups (480 ml) vegetable broth",
+          "½ cup heavy cream or coconut cream",
+          "Fresh basil",
+          "Salt and pepper"
+        ],
+        "prep": "Preheat oven to 400°F (200°C). Place tomatoes, onion, and garlic on a baking sheet. Drizzle with olive oil, sugar, salt, and pepper. Roast 35–40 minutes until tomatoes are caramelized and slightly charred. Transfer to a blender with broth and blend until smooth. Pour into a pot and stir in cream. Heat through. Season with salt and pepper. The roasting gives a depth of flavor that canned tomatoes cannot match."
+      },
+      {
+        "name": "Carrot Ginger Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) carrots, peeled and chopped",
+          "1 onion, diced",
+          "3 garlic cloves, minced",
+          "2-inch piece fresh ginger, grated",
+          "4 cups (960 ml) vegetable broth",
+          "1 can (14 oz) coconut milk",
+          "2 tbsp olive oil",
+          "1 tsp cumin",
+          "Juice of 1 orange",
+          "Salt and pepper",
+          "Toasted coconut and cilantro to garnish"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion until soft. Add garlic, ginger, and cumin and cook 1 minute. Add carrots and broth. Bring to a boil. Simmer 20–25 minutes until carrots are completely tender. Blend until very smooth. Add coconut milk and orange juice. Season with salt and pepper. Garnish with toasted coconut and fresh cilantro."
+      },
+      {
+        "name": "Mushroom Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) mixed mushrooms — cremini, shiitake, porcini",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "4 cups (960 ml) vegetable or chicken broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "½ cup dry sherry or white wine",
+          "Fresh thyme",
+          "Salt, pepper, and nutmeg",
+          "Sour cream and chives to garnish"
+        ],
+        "prep": "Melt butter in a large pot over high heat. Add mushrooms in batches and cook without stirring until golden — about 5 minutes. Add onion and garlic and cook until soft. Add sherry and cook until evaporated. Add broth and thyme. Simmer 15 minutes. Blend three-quarters of the soup until smooth. Return to pot. Add cream. Season with salt, pepper, and nutmeg. Garnish with sour cream and chives."
+      },
+      {
+        "name": "Sweet Potato Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 kg (2 lbs) sweet potatoes, peeled and cubed",
+          "1 onion, diced",
+          "3 garlic cloves",
+          "1-inch ginger, grated",
+          "4 cups (960 ml) vegetable broth",
+          "1 can (14 oz) coconut milk",
+          "2 tbsp olive oil",
+          "1 tsp curry powder",
+          "½ tsp cayenne",
+          "Salt and pepper",
+          "Lime juice and cilantro to garnish"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion until soft. Add garlic, ginger, curry powder, and cayenne and cook 1 minute. Add sweet potatoes and broth. Bring to a boil. Simmer 20 minutes until sweet potatoes are tender. Blend until very smooth. Stir in coconut milk. Season with salt, pepper, and lime juice. Garnish with cilantro."
+      },
+      {
+        "name": "Roasted Red Pepper Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 large red bell peppers, roasted and peeled",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "2 cups (480 ml) vegetable broth",
+          "½ cup heavy cream",
+          "2 tbsp olive oil",
+          "1 tsp smoked paprika",
+          "Salt and pepper",
+          "Basil oil to garnish"
+        ],
+        "prep": "Roast peppers until charred. Peel and remove seeds. Cook onion and garlic in olive oil until soft. Add roasted peppers, broth, and paprika. Simmer 15 minutes. Blend until completely smooth. Stir in cream. Season with salt and pepper. Garnish with a drizzle of basil oil and fresh basil."
+      },
+      {
+        "name": "Zucchini Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 medium zucchini, roughly chopped",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "4 cups (960 ml) vegetable broth",
+          "½ cup heavy cream or Greek yogurt",
+          "3 tbsp olive oil",
+          "Fresh basil and mint",
+          "Salt and pepper",
+          "Lemon juice"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion until soft. Add garlic and cook 1 minute. Add zucchini and broth. Bring to a boil. Simmer 15 minutes until zucchini is very tender. Add basil and mint. Blend until smooth. Stir in cream or yogurt. Add lemon juice. Season with salt and pepper. Serve warm or chilled."
+      },
+      {
+        "name": "Cauliflower Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large head cauliflower, cut into florets",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "4 cups (960 ml) vegetable or chicken broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Salt, white pepper, and nutmeg",
+          "Crispy capers or chives to garnish"
+        ],
+        "prep": "Melt butter in a large pot. Cook onion until soft. Add garlic. Add cauliflower and broth. Bring to a boil. Simmer 20 minutes until cauliflower is very tender. Blend until completely smooth. Stir in cream. Season with salt, white pepper, and nutmeg. Garnish with crispy capers or chives."
+      },
+      {
+        "name": "Pea and Mint Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) frozen peas",
+          "1 onion, diced",
+          "3 garlic cloves",
+          "4 cups (960 ml) vegetable broth",
+          "Large handful fresh mint leaves",
+          "½ cup crème fraîche or Greek yogurt",
+          "3 tbsp butter",
+          "Salt, pepper, and lemon juice"
+        ],
+        "prep": "Melt butter in a large pot. Cook onion until soft. Add garlic. Add broth and bring to a boil. Add peas and cook just 3 minutes — do not overcook or you lose the bright green color. Add mint. Blend immediately until smooth. Stir in crème fraîche. Season with salt, pepper, and lemon juice. Serve warm or very cold."
+      },
+      {
+        "name": "Black Bean Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cans (14 oz each) black beans, drained",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 jalapeño, diced",
+          "1 red bell pepper, diced",
+          "4 cups (960 ml) vegetable broth",
+          "1 tsp cumin",
+          "1 tsp smoked paprika",
+          "½ tsp oregano",
+          "2 tbsp olive oil",
+          "Juice of 1 lime",
+          "Salt and pepper",
+          "Sour cream, avocado, and cilantro to serve"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, jalapeño, and bell pepper until soft. Add garlic and spices and cook 1 minute. Add beans and broth. Simmer 20 minutes. Blend half the soup and return to pot for a creamy but chunky texture. Add lime juice. Season with salt and pepper. Serve with sour cream, avocado, and cilantro."
+      },
+      {
+        "name": "Vegetable Broth Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "3 carrots, sliced",
+          "3 celery stalks, sliced",
+          "1 onion, diced",
+          "2 zucchini, diced",
+          "1 cup green beans, cut",
+          "1 can (14 oz) diced tomatoes",
+          "4 garlic cloves",
+          "8 cups (1.9 L) vegetable broth",
+          "Fresh thyme, rosemary, and bay leaf",
+          "2 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and cook 1 minute. Add all remaining vegetables, tomatoes, broth, and herbs. Bring to a boil. Reduce heat and simmer 20 minutes until vegetables are tender. Remove bay leaf. Season with salt and pepper."
+      },
+      {
+        "name": "Gazpacho Verde",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cucumbers, roughly chopped",
+          "2 cups spinach or watercress",
+          "1 green bell pepper, roughly chopped",
+          "2 green onions",
+          "3 garlic cloves",
+          "¼ cup olive oil",
+          "3 tbsp white wine vinegar",
+          "1 slice stale bread, soaked in water",
+          "Salt and pepper",
+          "Ice cold water to adjust",
+          "Avocado and cucumber to garnish"
+        ],
+        "prep": "Blend all ingredients until smooth. Add cold water to reach a pourable consistency. Season with salt and pepper. Refrigerate at least 2 hours until very cold. Serve in chilled bowls or glasses with diced avocado and cucumber on top."
+      },
+      {
+        "name": "Roasted Garlic Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 heads garlic, roasted",
+          "1 onion, diced",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Fresh thyme",
+          "Salt, white pepper, and nutmeg",
+          "Parmesan croutons to serve"
+        ],
+        "prep": "Roast whole heads of garlic wrapped in foil at 400°F for 45 minutes until very soft and golden. Squeeze out cloves. Melt butter and cook onion until soft. Add roasted garlic, broth, and thyme. Simmer 15 minutes. Blend until smooth. Add cream. Season with salt, white pepper, and nutmeg. Serve with Parmesan croutons."
+      },
+      {
+        "name": "Tuscan White Bean Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cans (14 oz each) cannellini beans, drained",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "3 cups kale or spinach, chopped",
+          "1 can (14 oz) diced tomatoes",
+          "6 cups (1.4 L) vegetable broth",
+          "3 tbsp olive oil",
+          "Fresh rosemary and thyme",
+          "Salt, pepper, and red pepper flakes",
+          "Parmesan rind",
+          "Crusty bread to serve"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion until soft. Add garlic and herbs and cook 1 minute. Add tomatoes, broth, beans, and Parmesan rind. Simmer 20 minutes. Mash some beans against the side for a thicker texture. Add kale and cook until wilted. Remove Parmesan rind. Season with salt, pepper, and red pepper flakes. Drizzle with olive oil and serve with crusty bread."
+      },
+      {
+        "name": "Asparagus Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) fresh asparagus, woody ends removed",
+          "1 onion, diced",
+          "3 garlic cloves",
+          "4 cups (960 ml) vegetable broth",
+          "½ cup heavy cream",
+          "3 tbsp butter",
+          "Juice of ½ lemon",
+          "Salt, white pepper, and nutmeg"
+        ],
+        "prep": "Reserve tips of asparagus and blanch separately for garnish. Roughly chop the rest. Melt butter and cook onion until soft. Add garlic. Add asparagus and broth. Simmer 15 minutes until asparagus is very tender. Blend until completely smooth. Strain through a sieve for a silky finish. Add cream and lemon juice. Season with salt, white pepper, and nutmeg. Garnish with blanched tips."
+      },
+      {
+        "name": "Ribollita",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cans (14 oz each) cannellini beans, drained",
+          "1 onion, diced",
+          "2 carrots, diced",
+          "2 celery stalks, diced",
+          "4 garlic cloves",
+          "2 cups cavolo nero or kale, chopped",
+          "1 can (14 oz) diced tomatoes",
+          "6 cups (1.4 L) vegetable broth",
+          "4 thick slices day-old Tuscan bread",
+          "3 tbsp olive oil",
+          "Parmesan rind",
+          "Salt, pepper, and red pepper flakes"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion, carrots, and celery until soft. Add garlic. Add tomatoes, broth, beans, cavolo nero, and Parmesan rind. Simmer 30 minutes. Tear bread into chunks and stir in. Simmer 15 more minutes until bread breaks down and thickens the soup. Remove Parmesan rind. Season well. Ribollita means re-boiled — it is even better the next day reheated."
+      }
     ]
   },
-
   {
-    id: 'vegetarianSoups',
-    icon:"🌿", name:"Vegetarian Soups",
-    desc:"Plant-based soups packed with vegetables, legumes, and bold flavors.",
-    recipes:[
-      {name:"Roasted Tomato Soup",servings:"4 servings",ingredients:["1 kg (2 lbs) ripe tomatoes, halved","1 onion, quartered","6 garlic cloves","3 tbsp olive oil","1 tsp sugar","2 cups (480 ml) vegetable broth","½ cup heavy cream or coconut cream","Fresh basil","Salt and pepper"],prep:"Preheat oven to 400°F (200°C). Place tomatoes, onion, and garlic on a baking sheet. Drizzle with olive oil, sugar, salt, and pepper. Roast 35–40 minutes until tomatoes are caramelized and slightly charred. Transfer to a blender with broth and blend until smooth. Pour into a pot and stir in cream. Heat through. Season with salt and pepper. The roasting gives a depth of flavor that canned tomatoes cannot match."},
-      {name:"Carrot Ginger Soup",servings:"4 servings",ingredients:["700 g (1.5 lbs) carrots, peeled and chopped","1 onion, diced","3 garlic cloves, minced","2-inch piece fresh ginger, grated","4 cups (960 ml) vegetable broth","1 can (14 oz) coconut milk","2 tbsp olive oil","1 tsp cumin","Juice of 1 orange","Salt and pepper","Toasted coconut and cilantro to garnish"],prep:"Heat olive oil in a large pot. Cook onion until soft. Add garlic, ginger, and cumin and cook 1 minute. Add carrots and broth. Bring to a boil. Simmer 20–25 minutes until carrots are completely tender. Blend until very smooth. Add coconut milk and orange juice. Season with salt and pepper. Garnish with toasted coconut and fresh cilantro."},
-      {name:"Mushroom Soup",servings:"4 servings",ingredients:["700 g (1.5 lbs) mixed mushrooms — cremini, shiitake, porcini","1 onion, diced","4 garlic cloves, minced","4 cups (960 ml) vegetable or chicken broth","1 cup (240 ml) heavy cream","4 tbsp butter","½ cup dry sherry or white wine","Fresh thyme","Salt, pepper, and nutmeg","Sour cream and chives to garnish"],prep:"Melt butter in a large pot over high heat. Add mushrooms in batches and cook without stirring until golden — about 5 minutes. Add onion and garlic and cook until soft. Add sherry and cook until evaporated. Add broth and thyme. Simmer 15 minutes. Blend three-quarters of the soup until smooth. Return to pot. Add cream. Season with salt, pepper, and nutmeg. Garnish with sour cream and chives."},
-      {name:"Sweet Potato Soup",servings:"4 servings",ingredients:["1 kg (2 lbs) sweet potatoes, peeled and cubed","1 onion, diced","3 garlic cloves","1-inch ginger, grated","4 cups (960 ml) vegetable broth","1 can (14 oz) coconut milk","2 tbsp olive oil","1 tsp curry powder","½ tsp cayenne","Salt and pepper","Lime juice and cilantro to garnish"],prep:"Heat olive oil in a large pot. Cook onion until soft. Add garlic, ginger, curry powder, and cayenne and cook 1 minute. Add sweet potatoes and broth. Bring to a boil. Simmer 20 minutes until sweet potatoes are tender. Blend until very smooth. Stir in coconut milk. Season with salt, pepper, and lime juice. Garnish with cilantro."},
-      {name:"Roasted Red Pepper Soup",servings:"4 servings",ingredients:["6 large red bell peppers, roasted and peeled","1 onion, diced","4 garlic cloves","2 cups (480 ml) vegetable broth","½ cup heavy cream","2 tbsp olive oil","1 tsp smoked paprika","Salt and pepper","Basil oil to garnish"],prep:"Roast peppers until charred. Peel and remove seeds. Cook onion and garlic in olive oil until soft. Add roasted peppers, broth, and paprika. Simmer 15 minutes. Blend until completely smooth. Stir in cream. Season with salt and pepper. Garnish with a drizzle of basil oil and fresh basil."},
-      {name:"Zucchini Soup",servings:"4 servings",ingredients:["6 medium zucchini, roughly chopped","1 onion, diced","4 garlic cloves","4 cups (960 ml) vegetable broth","½ cup heavy cream or Greek yogurt","3 tbsp olive oil","Fresh basil and mint","Salt and pepper","Lemon juice"],prep:"Heat olive oil in a large pot. Cook onion until soft. Add garlic and cook 1 minute. Add zucchini and broth. Bring to a boil. Simmer 15 minutes until zucchini is very tender. Add basil and mint. Blend until smooth. Stir in cream or yogurt. Add lemon juice. Season with salt and pepper. Serve warm or chilled."},
-      {name:"Cauliflower Soup",servings:"4 servings",ingredients:["1 large head cauliflower, cut into florets","1 onion, diced","4 garlic cloves","4 cups (960 ml) vegetable or chicken broth","1 cup (240 ml) heavy cream","4 tbsp butter","Salt, white pepper, and nutmeg","Crispy capers or chives to garnish"],prep:"Melt butter in a large pot. Cook onion until soft. Add garlic. Add cauliflower and broth. Bring to a boil. Simmer 20 minutes until cauliflower is very tender. Blend until completely smooth. Stir in cream. Season with salt, white pepper, and nutmeg. Garnish with crispy capers or chives."},
-      {name:"Pea and Mint Soup",servings:"4 servings",ingredients:["500 g (1 lb) frozen peas","1 onion, diced","3 garlic cloves","4 cups (960 ml) vegetable broth","Large handful fresh mint leaves","½ cup crème fraîche or Greek yogurt","3 tbsp butter","Salt, pepper, and lemon juice"],prep:"Melt butter in a large pot. Cook onion until soft. Add garlic. Add broth and bring to a boil. Add peas and cook just 3 minutes — do not overcook or you lose the bright green color. Add mint. Blend immediately until smooth. Stir in crème fraîche. Season with salt, pepper, and lemon juice. Serve warm or very cold."},
-      {name:"Black Bean Soup",servings:"6 servings",ingredients:["2 cans (14 oz each) black beans, drained","1 onion, diced","4 garlic cloves","1 jalapeño, diced","1 red bell pepper, diced","4 cups (960 ml) vegetable broth","1 tsp cumin","1 tsp smoked paprika","½ tsp oregano","2 tbsp olive oil","Juice of 1 lime","Salt and pepper","Sour cream, avocado, and cilantro to serve"],prep:"Heat olive oil in a large pot. Cook onion, jalapeño, and bell pepper until soft. Add garlic and spices and cook 1 minute. Add beans and broth. Simmer 20 minutes. Blend half the soup and return to pot for a creamy but chunky texture. Add lime juice. Season with salt and pepper. Serve with sour cream, avocado, and cilantro."},
-      {name:"Vegetable Broth Soup",servings:"6 servings",ingredients:["3 carrots, sliced","3 celery stalks, sliced","1 onion, diced","2 zucchini, diced","1 cup green beans, cut","1 can (14 oz) diced tomatoes","4 garlic cloves","8 cups (1.9 L) vegetable broth","Fresh thyme, rosemary, and bay leaf","2 tbsp olive oil","Salt and pepper"],prep:"Heat olive oil in a large pot. Cook onion, carrots, and celery until softened. Add garlic and cook 1 minute. Add all remaining vegetables, tomatoes, broth, and herbs. Bring to a boil. Reduce heat and simmer 20 minutes until vegetables are tender. Remove bay leaf. Season with salt and pepper."},
-      {name:"Gazpacho Verde",servings:"4 servings",ingredients:["2 cucumbers, roughly chopped","2 cups spinach or watercress","1 green bell pepper, roughly chopped","2 green onions","3 garlic cloves","¼ cup olive oil","3 tbsp white wine vinegar","1 slice stale bread, soaked in water","Salt and pepper","Ice cold water to adjust","Avocado and cucumber to garnish"],prep:"Blend all ingredients until smooth. Add cold water to reach a pourable consistency. Season with salt and pepper. Refrigerate at least 2 hours until very cold. Serve in chilled bowls or glasses with diced avocado and cucumber on top."},
-      {name:"Roasted Garlic Soup",servings:"4 servings",ingredients:["3 heads garlic, roasted","1 onion, diced","4 cups (960 ml) chicken or vegetable broth","1 cup (240 ml) heavy cream","4 tbsp butter","Fresh thyme","Salt, white pepper, and nutmeg","Parmesan croutons to serve"],prep:"Roast whole heads of garlic wrapped in foil at 400°F for 45 minutes until very soft and golden. Squeeze out cloves. Melt butter and cook onion until soft. Add roasted garlic, broth, and thyme. Simmer 15 minutes. Blend until smooth. Add cream. Season with salt, white pepper, and nutmeg. Serve with Parmesan croutons."},
-      {name:"Tuscan White Bean Soup",servings:"6 servings",ingredients:["2 cans (14 oz each) cannellini beans, drained","1 onion, diced","4 garlic cloves","3 cups kale or spinach, chopped","1 can (14 oz) diced tomatoes","6 cups (1.4 L) vegetable broth","3 tbsp olive oil","Fresh rosemary and thyme","Salt, pepper, and red pepper flakes","Parmesan rind","Crusty bread to serve"],prep:"Heat olive oil in a large pot. Cook onion until soft. Add garlic and herbs and cook 1 minute. Add tomatoes, broth, beans, and Parmesan rind. Simmer 20 minutes. Mash some beans against the side for a thicker texture. Add kale and cook until wilted. Remove Parmesan rind. Season with salt, pepper, and red pepper flakes. Drizzle with olive oil and serve with crusty bread."},
-      {name:"Asparagus Soup",servings:"4 servings",ingredients:["700 g (1.5 lbs) fresh asparagus, woody ends removed","1 onion, diced","3 garlic cloves","4 cups (960 ml) vegetable broth","½ cup heavy cream","3 tbsp butter","Juice of ½ lemon","Salt, white pepper, and nutmeg"],prep:"Reserve tips of asparagus and blanch separately for garnish. Roughly chop the rest. Melt butter and cook onion until soft. Add garlic. Add asparagus and broth. Simmer 15 minutes until asparagus is very tender. Blend until completely smooth. Strain through a sieve for a silky finish. Add cream and lemon juice. Season with salt, white pepper, and nutmeg. Garnish with blanched tips."},
-      {name:"Ribollita",servings:"6 servings",ingredients:["2 cans (14 oz each) cannellini beans, drained","1 onion, diced","2 carrots, diced","2 celery stalks, diced","4 garlic cloves","2 cups cavolo nero or kale, chopped","1 can (14 oz) diced tomatoes","6 cups (1.4 L) vegetable broth","4 thick slices day-old Tuscan bread","3 tbsp olive oil","Parmesan rind","Salt, pepper, and red pepper flakes"],prep:"Heat olive oil in a large pot. Cook onion, carrots, and celery until soft. Add garlic. Add tomatoes, broth, beans, cavolo nero, and Parmesan rind. Simmer 30 minutes. Tear bread into chunks and stir in. Simmer 15 more minutes until bread breaks down and thickens the soup. Remove Parmesan rind. Season well. Ribollita means re-boiled — it is even better the next day reheated."}
+    "id": "asianSoups",
+    "icon": "🍜",
+    "name": "Asian Soups",
+    "desc": "Ramen, pho, tom yum, wonton soup, and noodle soups from across Asia.",
+    "recipes": [
+      {
+        "name": "Tonkotsu Ramen",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 portions ramen noodles",
+          "Broth: 1 kg pork trotters and bones, 8 cups water, 4 garlic cloves, 1-inch ginger, 2 green onions, 1 tsp white pepper — simmer 8–12 hours",
+          "Tare: 4 tbsp soy sauce, 2 tbsp mirin, 1 tbsp sake",
+          "Toppings: chashu pork, soft boiled eggs, nori, bamboo shoots, green onions, sesame seeds, black garlic oil"
+        ],
+        "prep": "Make broth by simmering pork bones in water at a vigorous boil for 10–12 hours until milky white and rich. Strain. Season with tare. Cook ramen noodles. Divide noodles into bowls. Pour hot broth over. Top with sliced chashu pork, halved soft boiled eggs, nori, bamboo shoots, and green onions. Drizzle black garlic oil over."
+      },
+      {
+        "name": "Beef Pho",
+        "servings": "4 servings",
+        "ingredients": [
+          "400 g (14 oz) flat rice noodles",
+          "Broth: 2 lbs beef bones, 1 onion charred, 3-inch ginger charred, 3 star anise, 5 cloves, 1 cinnamon stick, 1 tbsp fish sauce, 2 tsp sugar, salt, 8 cups water",
+          "Toppings: thinly sliced raw beef, bean sprouts, fresh basil, lime wedges, jalapeños, hoisin, sriracha"
+        ],
+        "prep": "Char onion and ginger directly over a flame or under the broiler. Simmer beef bones in water 30 minutes then drain and rinse. Return to pot with charred vegetables, star anise, cloves, and cinnamon. Simmer 3 hours. Strain. Season with fish sauce, sugar, and salt. Cook noodles and divide into bowls. Ladle piping hot broth over noodles — this cooks the raw beef. Serve with toppings on the side."
+      },
+      {
+        "name": "Tom Yum Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) large shrimp, peeled",
+          "4 cups (960 ml) chicken or seafood broth",
+          "3 stalks lemongrass, bruised and cut",
+          "4 kaffir lime leaves, torn",
+          "3 Thai chilies, bruised",
+          "3 slices galangal or ginger",
+          "3 tbsp fish sauce",
+          "3 tbsp lime juice",
+          "1 tbsp sugar",
+          "200 g (7 oz) mushrooms, halved",
+          "Cherry tomatoes",
+          "Fresh cilantro"
+        ],
+        "prep": "Bring broth to a boil with lemongrass, lime leaves, chilies, and galangal. Simmer 5 minutes to infuse. Add mushrooms and tomatoes. Add shrimp and cook until pink — about 3 minutes. Season with fish sauce, lime juice, and sugar. Adjust to taste — should be sour, spicy, and aromatic. Garnish with cilantro. Remove lemongrass before serving."
+      },
+      {
+        "name": "Wonton Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "Wontons: 24 wonton wrappers, 200 g ground pork, 100 g shrimp minced, 1 tbsp soy sauce, 1 tsp sesame oil, 1 tsp ginger, 2 green onions",
+          "Broth: 6 cups chicken broth, 2 tbsp soy sauce, 1 tsp sesame oil, 1-inch ginger, salt",
+          "Baby bok choy and green onions to serve"
+        ],
+        "prep": "Mix pork, shrimp, soy sauce, sesame oil, ginger, and green onions together. Place a teaspoon of filling in each wrapper. Moisten edges and fold into a triangle. Bring corners around and press together. Make broth by simmering chicken broth with soy sauce, sesame oil, and ginger for 10 minutes. Cook wontons in boiling water 4–5 minutes. Transfer to bowls. Pour hot broth over. Add blanched bok choy and green onions."
+      },
+      {
+        "name": "Miso Ramen",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 portions ramen noodles",
+          "Broth: 5 cups chicken broth, 4 tbsp white miso, 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp mirin, 3 garlic cloves minced, 1 tbsp ginger",
+          "Toppings: corn, butter, green onions, soft boiled eggs, nori, sesame seeds, ground pork"
+        ],
+        "prep": "Simmer broth ingredients — except miso — for 15 minutes. Dissolve miso in a ladle of hot broth then stir in. Do not boil. Cook ramen noodles. Divide into bowls. Pour miso broth over. Top with corn, a pat of butter, soft boiled eggs, nori, green onions, and sesame seeds."
+      },
+      {
+        "name": "Chicken Pho",
+        "servings": "4 servings",
+        "ingredients": [
+          "400 g (14 oz) flat rice noodles",
+          "Broth: 1 whole chicken, 1 onion charred, 3-inch ginger charred, 3 star anise, 3 cloves, 1 cinnamon stick, 1 tbsp fish sauce, 8 cups water",
+          "Toppings: fresh basil, bean sprouts, lime, jalapeños, hoisin, sriracha"
+        ],
+        "prep": "Char onion and ginger. Place chicken in pot with water, charred vegetables, and spices. Simmer 1 hour until chicken is cooked through. Remove chicken and shred. Strain broth and season with fish sauce, salt, and a pinch of sugar. Cook noodles. Divide into bowls with shredded chicken. Pour hot broth over. Serve with all toppings on the side."
+      },
+      {
+        "name": "Hot and Sour Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "200 g (7 oz) firm tofu, julienned",
+          "1 cup mushrooms, julienned",
+          "½ cup bamboo shoots, julienned",
+          "3 eggs, beaten",
+          "6 cups (1.4 L) chicken broth",
+          "3 tbsp soy sauce",
+          "3 tbsp rice vinegar",
+          "1 tbsp chili paste",
+          "2 tbsp cornstarch mixed with 3 tbsp water",
+          "1 tsp white pepper",
+          "Sesame oil and green onions"
+        ],
+        "prep": "Bring broth to a boil. Add mushrooms, bamboo shoots, and tofu. Add soy sauce, vinegar, chili paste, and white pepper. Simmer 5 minutes. Stir in cornstarch mixture and cook until slightly thickened. Slowly pour beaten eggs in a thin stream while stirring continuously to create egg ribbons. Drizzle with sesame oil. Garnish with green onions."
+      },
+      {
+        "name": "Laksa",
+        "servings": "4 servings",
+        "ingredients": [
+          "400 g (14 oz) rice vermicelli noodles",
+          "300 g (10.5 oz) shrimp, peeled",
+          "200 g (7 oz) tofu puffs",
+          "2 cans (14 oz each) coconut milk",
+          "2 cups (480 ml) chicken broth",
+          "Laksa paste: 4 shallots, 3 garlic cloves, 2-inch galangal, 2 lemongrass stalks, 3 dried chilies, 1 tsp turmeric, 1 tsp shrimp paste, 1 tsp cumin",
+          "Bean sprouts, fresh mint, and lime to serve"
+        ],
+        "prep": "Blend laksa paste ingredients until smooth. Fry paste in oil in a large pot over medium heat for 5 minutes until fragrant. Add coconut milk and broth. Simmer 15 minutes. Add shrimp and tofu puffs. Cook until shrimp are pink. Cook noodles. Divide into bowls. Pour hot laksa broth over. Top with bean sprouts, fresh mint, and lime."
+      },
+      {
+        "name": "Korean Doenjang Jjigae",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 tbsp doenjang (Korean fermented soybean paste)",
+          "200 g (7 oz) firm tofu, cubed",
+          "1 zucchini, diced",
+          "1 cup mushrooms, sliced",
+          "1 onion, diced",
+          "2 green onions, sliced",
+          "1 jalapeño, sliced",
+          "4 cups (960 ml) anchovy or vegetable broth",
+          "1 tsp gochugaru (optional)"
+        ],
+        "prep": "Bring broth to a boil. Dissolve doenjang in a ladle of broth then stir into pot. Add onion, zucchini, mushrooms, and jalapeño. Simmer 10 minutes. Add tofu and simmer 5 more minutes. Add green onions. Season with salt if needed. Serve with steamed rice — this is a Korean staple comfort food."
+      },
+      {
+        "name": "Vietnamese Crab Noodle Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "300 g (10.5 oz) fresh crab meat",
+          "400 g (14 oz) rice vermicelli noodles",
+          "4 cups (960 ml) crab or seafood broth",
+          "1 can (14 oz) crushed tomatoes",
+          "2 shallots, minced",
+          "3 garlic cloves",
+          "2 tbsp fish sauce",
+          "1 tsp shrimp paste",
+          "Sugar and pepper",
+          "Fresh herbs, bean sprouts, and lime to serve"
+        ],
+        "prep": "Cook shallots and garlic in oil until golden. Add shrimp paste and cook 1 minute. Add tomatoes and broth. Simmer 15 minutes. Add crab meat and fish sauce. Season with sugar and pepper. Cook vermicelli noodles and divide into bowls. Pour hot broth and crab over noodles. Serve with fresh herbs, bean sprouts, and lime wedges."
+      },
+      {
+        "name": "Khao Tom Rice Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups cooked jasmine rice",
+          "200 g (7 oz) ground pork",
+          "6 cups (1.4 L) chicken broth",
+          "4 garlic cloves, minced and fried crispy",
+          "1-inch ginger, sliced",
+          "2 tbsp fish sauce",
+          "1 tsp white pepper",
+          "3 green onions, sliced",
+          "Fresh cilantro and crispy garlic to serve"
+        ],
+        "prep": "Bring broth to a boil with ginger. Add rice and stir well. Simmer 10 minutes until rice breaks down and thickens the broth. Roll pork into small balls and drop into simmering soup. Cook 5 minutes. Season with fish sauce and white pepper. Ladle into bowls. Top generously with fried garlic, green onions, and cilantro."
+      },
+      {
+        "name": "Gyoza Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "20 gyoza or potsticker dumplings",
+          "6 cups (1.4 L) chicken broth",
+          "2 tbsp soy sauce",
+          "1 tsp sesame oil",
+          "1 tsp mirin",
+          "2 green onions, sliced",
+          "Baby bok choy",
+          "Chili oil and sesame seeds to serve"
+        ],
+        "prep": "Bring broth to a boil. Season with soy sauce, sesame oil, and mirin. Add bok choy and cook 2 minutes. Add gyoza and cook 5–6 minutes until cooked through. Ladle into bowls ensuring everyone gets dumplings. Add green onions, a drizzle of chili oil, and sesame seeds."
+      },
+      {
+        "name": "Kimchi Jjigae",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups aged kimchi, roughly chopped",
+          "300 g (10.5 oz) pork belly or shoulder, sliced",
+          "200 g (7 oz) firm tofu, cubed",
+          "1 onion, sliced",
+          "3 garlic cloves, minced",
+          "3 cups (720 ml) anchovy or chicken broth",
+          "2 tbsp gochugaru",
+          "1 tbsp gochujang",
+          "1 tbsp soy sauce",
+          "1 tsp sesame oil",
+          "Green onions to garnish"
+        ],
+        "prep": "Cook pork in a pot over medium heat until fat renders. Add garlic and cook 1 minute. Add kimchi and cook 3–5 minutes. Add gochugaru, gochujang, and broth. Bring to a boil. Reduce heat and simmer 20 minutes. Add tofu and simmer 5 more minutes. Season with soy sauce and sesame oil. Garnish with green onions. Serve with steamed rice. The more aged and sour the kimchi the better."
+      },
+      {
+        "name": "Thai Green Curry Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "400 g (14 oz) boneless chicken thighs, sliced",
+          "2 cans (14 oz each) coconut milk",
+          "2 cups (480 ml) chicken broth",
+          "3 tbsp green curry paste",
+          "2 cups vegetables — zucchini, bell peppers, broccoli",
+          "Kaffir lime leaves",
+          "Fish sauce and lime juice to season",
+          "Fresh basil and rice to serve"
+        ],
+        "prep": "Heat 1 tbsp coconut milk in a pot over medium heat. Add green curry paste and fry 2 minutes. Add remaining coconut milk and broth. Add kaffir lime leaves. Add chicken and simmer 15 minutes. Add vegetables and cook 5 more minutes. Season with fish sauce and lime juice. Add fresh basil. Serve over steamed rice or with rice noodles."
+      },
+      {
+        "name": "Soto Ayam",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 whole chicken, cooked and shredded",
+          "Spice paste: 6 shallots, 4 garlic cloves, 2-inch ginger, 2-inch galangal, 2 lemongrass stalks, 1 tsp turmeric",
+          "6 cups (1.4 L) chicken broth",
+          "Soto: glass noodles, hard boiled eggs, bean sprouts, fried shallots, celery leaves, lime",
+          "Salt and white pepper"
+        ],
+        "prep": "Blend spice paste until smooth. Fry in oil 5 minutes until fragrant. Add broth and bring to a boil. Simmer 20 minutes. Add shredded chicken. Season with salt and white pepper. Serve in bowls over glass noodles with hard boiled eggs, bean sprouts, fried shallots, celery leaves, and lime."
+      }
     ]
   },
-
   {
-    id: 'asianSoups',
-    icon:"🍜", name:"Asian Soups",
-    desc:"Ramen, pho, tom yum, wonton soup, and noodle soups from across Asia.",
-    recipes:[
-      {name:"Tonkotsu Ramen",servings:"4 servings",ingredients:["4 portions ramen noodles","Broth: 1 kg pork trotters and bones, 8 cups water, 4 garlic cloves, 1-inch ginger, 2 green onions, 1 tsp white pepper — simmer 8–12 hours","Tare: 4 tbsp soy sauce, 2 tbsp mirin, 1 tbsp sake","Toppings: chashu pork, soft boiled eggs, nori, bamboo shoots, green onions, sesame seeds, black garlic oil"],prep:"Make broth by simmering pork bones in water at a vigorous boil for 10–12 hours until milky white and rich. Strain. Season with tare. Cook ramen noodles. Divide noodles into bowls. Pour hot broth over. Top with sliced chashu pork, halved soft boiled eggs, nori, bamboo shoots, and green onions. Drizzle black garlic oil over."},
-      {name:"Beef Pho",servings:"4 servings",ingredients:["400 g (14 oz) flat rice noodles","Broth: 2 lbs beef bones, 1 onion charred, 3-inch ginger charred, 3 star anise, 5 cloves, 1 cinnamon stick, 1 tbsp fish sauce, 2 tsp sugar, salt, 8 cups water","Toppings: thinly sliced raw beef, bean sprouts, fresh basil, lime wedges, jalapeños, hoisin, sriracha"],prep:"Char onion and ginger directly over a flame or under the broiler. Simmer beef bones in water 30 minutes then drain and rinse. Return to pot with charred vegetables, star anise, cloves, and cinnamon. Simmer 3 hours. Strain. Season with fish sauce, sugar, and salt. Cook noodles and divide into bowls. Ladle piping hot broth over noodles — this cooks the raw beef. Serve with toppings on the side."},
-      {name:"Tom Yum Soup",servings:"4 servings",ingredients:["500 g (1 lb) large shrimp, peeled","4 cups (960 ml) chicken or seafood broth","3 stalks lemongrass, bruised and cut","4 kaffir lime leaves, torn","3 Thai chilies, bruised","3 slices galangal or ginger","3 tbsp fish sauce","3 tbsp lime juice","1 tbsp sugar","200 g (7 oz) mushrooms, halved","Cherry tomatoes","Fresh cilantro"],prep:"Bring broth to a boil with lemongrass, lime leaves, chilies, and galangal. Simmer 5 minutes to infuse. Add mushrooms and tomatoes. Add shrimp and cook until pink — about 3 minutes. Season with fish sauce, lime juice, and sugar. Adjust to taste — should be sour, spicy, and aromatic. Garnish with cilantro. Remove lemongrass before serving."},
-      {name:"Wonton Soup",servings:"4 servings",ingredients:["Wontons: 24 wonton wrappers, 200 g ground pork, 100 g shrimp minced, 1 tbsp soy sauce, 1 tsp sesame oil, 1 tsp ginger, 2 green onions","Broth: 6 cups chicken broth, 2 tbsp soy sauce, 1 tsp sesame oil, 1-inch ginger, salt","Baby bok choy and green onions to serve"],prep:"Mix pork, shrimp, soy sauce, sesame oil, ginger, and green onions together. Place a teaspoon of filling in each wrapper. Moisten edges and fold into a triangle. Bring corners around and press together. Make broth by simmering chicken broth with soy sauce, sesame oil, and ginger for 10 minutes. Cook wontons in boiling water 4–5 minutes. Transfer to bowls. Pour hot broth over. Add blanched bok choy and green onions."},
-      {name:"Miso Ramen",servings:"4 servings",ingredients:["4 portions ramen noodles","Broth: 5 cups chicken broth, 4 tbsp white miso, 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp mirin, 3 garlic cloves minced, 1 tbsp ginger","Toppings: corn, butter, green onions, soft boiled eggs, nori, sesame seeds, ground pork"],prep:"Simmer broth ingredients — except miso — for 15 minutes. Dissolve miso in a ladle of hot broth then stir in. Do not boil. Cook ramen noodles. Divide into bowls. Pour miso broth over. Top with corn, a pat of butter, soft boiled eggs, nori, green onions, and sesame seeds."},
-      {name:"Chicken Pho",servings:"4 servings",ingredients:["400 g (14 oz) flat rice noodles","Broth: 1 whole chicken, 1 onion charred, 3-inch ginger charred, 3 star anise, 3 cloves, 1 cinnamon stick, 1 tbsp fish sauce, 8 cups water","Toppings: fresh basil, bean sprouts, lime, jalapeños, hoisin, sriracha"],prep:"Char onion and ginger. Place chicken in pot with water, charred vegetables, and spices. Simmer 1 hour until chicken is cooked through. Remove chicken and shred. Strain broth and season with fish sauce, salt, and a pinch of sugar. Cook noodles. Divide into bowls with shredded chicken. Pour hot broth over. Serve with all toppings on the side."},
-      {name:"Hot and Sour Soup",servings:"4 servings",ingredients:["200 g (7 oz) firm tofu, julienned","1 cup mushrooms, julienned","½ cup bamboo shoots, julienned","3 eggs, beaten","6 cups (1.4 L) chicken broth","3 tbsp soy sauce","3 tbsp rice vinegar","1 tbsp chili paste","2 tbsp cornstarch mixed with 3 tbsp water","1 tsp white pepper","Sesame oil and green onions"],prep:"Bring broth to a boil. Add mushrooms, bamboo shoots, and tofu. Add soy sauce, vinegar, chili paste, and white pepper. Simmer 5 minutes. Stir in cornstarch mixture and cook until slightly thickened. Slowly pour beaten eggs in a thin stream while stirring continuously to create egg ribbons. Drizzle with sesame oil. Garnish with green onions."},
-      {name:"Laksa",servings:"4 servings",ingredients:["400 g (14 oz) rice vermicelli noodles","300 g (10.5 oz) shrimp, peeled","200 g (7 oz) tofu puffs","2 cans (14 oz each) coconut milk","2 cups (480 ml) chicken broth","Laksa paste: 4 shallots, 3 garlic cloves, 2-inch galangal, 2 lemongrass stalks, 3 dried chilies, 1 tsp turmeric, 1 tsp shrimp paste, 1 tsp cumin","Bean sprouts, fresh mint, and lime to serve"],prep:"Blend laksa paste ingredients until smooth. Fry paste in oil in a large pot over medium heat for 5 minutes until fragrant. Add coconut milk and broth. Simmer 15 minutes. Add shrimp and tofu puffs. Cook until shrimp are pink. Cook noodles. Divide into bowls. Pour hot laksa broth over. Top with bean sprouts, fresh mint, and lime."},
-      {name:"Korean Doenjang Jjigae",servings:"4 servings",ingredients:["3 tbsp doenjang (Korean fermented soybean paste)","200 g (7 oz) firm tofu, cubed","1 zucchini, diced","1 cup mushrooms, sliced","1 onion, diced","2 green onions, sliced","1 jalapeño, sliced","4 cups (960 ml) anchovy or vegetable broth","1 tsp gochugaru (optional)"],prep:"Bring broth to a boil. Dissolve doenjang in a ladle of broth then stir into pot. Add onion, zucchini, mushrooms, and jalapeño. Simmer 10 minutes. Add tofu and simmer 5 more minutes. Add green onions. Season with salt if needed. Serve with steamed rice — this is a Korean staple comfort food."},
-      {name:"Vietnamese Crab Noodle Soup",servings:"4 servings",ingredients:["300 g (10.5 oz) fresh crab meat","400 g (14 oz) rice vermicelli noodles","4 cups (960 ml) crab or seafood broth","1 can (14 oz) crushed tomatoes","2 shallots, minced","3 garlic cloves","2 tbsp fish sauce","1 tsp shrimp paste","Sugar and pepper","Fresh herbs, bean sprouts, and lime to serve"],prep:"Cook shallots and garlic in oil until golden. Add shrimp paste and cook 1 minute. Add tomatoes and broth. Simmer 15 minutes. Add crab meat and fish sauce. Season with sugar and pepper. Cook vermicelli noodles and divide into bowls. Pour hot broth and crab over noodles. Serve with fresh herbs, bean sprouts, and lime wedges."},
-      {name:"Khao Tom Rice Soup",servings:"4 servings",ingredients:["2 cups cooked jasmine rice","200 g (7 oz) ground pork","6 cups (1.4 L) chicken broth","4 garlic cloves, minced and fried crispy","1-inch ginger, sliced","2 tbsp fish sauce","1 tsp white pepper","3 green onions, sliced","Fresh cilantro and crispy garlic to serve"],prep:"Bring broth to a boil with ginger. Add rice and stir well. Simmer 10 minutes until rice breaks down and thickens the broth. Roll pork into small balls and drop into simmering soup. Cook 5 minutes. Season with fish sauce and white pepper. Ladle into bowls. Top generously with fried garlic, green onions, and cilantro."},
-      {name:"Gyoza Soup",servings:"4 servings",ingredients:["20 gyoza or potsticker dumplings","6 cups (1.4 L) chicken broth","2 tbsp soy sauce","1 tsp sesame oil","1 tsp mirin","2 green onions, sliced","Baby bok choy","Chili oil and sesame seeds to serve"],prep:"Bring broth to a boil. Season with soy sauce, sesame oil, and mirin. Add bok choy and cook 2 minutes. Add gyoza and cook 5–6 minutes until cooked through. Ladle into bowls ensuring everyone gets dumplings. Add green onions, a drizzle of chili oil, and sesame seeds."},
-      {name:"Kimchi Jjigae",servings:"4 servings",ingredients:["2 cups aged kimchi, roughly chopped","300 g (10.5 oz) pork belly or shoulder, sliced","200 g (7 oz) firm tofu, cubed","1 onion, sliced","3 garlic cloves, minced","3 cups (720 ml) anchovy or chicken broth","2 tbsp gochugaru","1 tbsp gochujang","1 tbsp soy sauce","1 tsp sesame oil","Green onions to garnish"],prep:"Cook pork in a pot over medium heat until fat renders. Add garlic and cook 1 minute. Add kimchi and cook 3–5 minutes. Add gochugaru, gochujang, and broth. Bring to a boil. Reduce heat and simmer 20 minutes. Add tofu and simmer 5 more minutes. Season with soy sauce and sesame oil. Garnish with green onions. Serve with steamed rice. The more aged and sour the kimchi the better."},
-      {name:"Thai Green Curry Soup",servings:"4 servings",ingredients:["400 g (14 oz) boneless chicken thighs, sliced","2 cans (14 oz each) coconut milk","2 cups (480 ml) chicken broth","3 tbsp green curry paste","2 cups vegetables — zucchini, bell peppers, broccoli","Kaffir lime leaves","Fish sauce and lime juice to season","Fresh basil and rice to serve"],prep:"Heat 1 tbsp coconut milk in a pot over medium heat. Add green curry paste and fry 2 minutes. Add remaining coconut milk and broth. Add kaffir lime leaves. Add chicken and simmer 15 minutes. Add vegetables and cook 5 more minutes. Season with fish sauce and lime juice. Add fresh basil. Serve over steamed rice or with rice noodles."},
-      {name:"Soto Ayam",servings:"4 servings",ingredients:["1 whole chicken, cooked and shredded","Spice paste: 6 shallots, 4 garlic cloves, 2-inch ginger, 2-inch galangal, 2 lemongrass stalks, 1 tsp turmeric","6 cups (1.4 L) chicken broth","Soto: glass noodles, hard boiled eggs, bean sprouts, fried shallots, celery leaves, lime","Salt and white pepper"],prep:"Blend spice paste until smooth. Fry in oil 5 minutes until fragrant. Add broth and bring to a boil. Simmer 20 minutes. Add shredded chicken. Season with salt and white pepper. Serve in bowls over glass noodles with hard boiled eggs, bean sprouts, fried shallots, celery leaves, and lime."}
+    "id": "internationalSoups",
+    "icon": "🌍",
+    "name": "International Soups",
+    "desc": "Soups and stews from around the world — from Italian ribollita to Indian dal.",
+    "recipes": [
+      {
+        "name": "Italian Ribollita",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cans (14 oz each) cannellini beans",
+          "1 onion, diced",
+          "2 carrots, diced",
+          "2 celery stalks, diced",
+          "4 garlic cloves",
+          "2 cups cavolo nero, chopped",
+          "1 can (14 oz) diced tomatoes",
+          "6 cups (1.4 L) vegetable broth",
+          "4 thick slices day-old bread",
+          "3 tbsp olive oil",
+          "Parmesan rind",
+          "Salt, pepper, and red pepper flakes"
+        ],
+        "prep": "Cook onion, carrots, and celery in olive oil until soft. Add garlic. Add tomatoes, broth, beans, cavolo nero, and Parmesan rind. Simmer 30 minutes. Tear bread into chunks and stir in. Simmer 15 minutes until bread breaks down and thickens the soup. Season well. Even better reheated the next day."
+      },
+      {
+        "name": "French Pistou Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 can (14 oz) cannellini beans",
+          "1 can (14 oz) diced tomatoes",
+          "2 zucchini, diced",
+          "2 carrots, diced",
+          "2 celery stalks, diced",
+          "1 onion, diced",
+          "1 cup green beans, cut",
+          "1 cup small pasta",
+          "6 cups (1.4 L) vegetable broth",
+          "Pistou: 2 cups basil, ½ cup Parmesan, ½ cup olive oil, 4 garlic cloves"
+        ],
+        "prep": "Cook all vegetables in broth until tender — about 20 minutes. Add pasta and beans and cook until pasta is tender. Season with salt and pepper. Make pistou by blending basil, Parmesan, olive oil, and garlic until smooth. Ladle soup into bowls and add a generous spoonful of pistou. The pistou is stirred in at the table — do not cook it in the soup."
+      },
+      {
+        "name": "Spanish Gazpacho",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 ripe tomatoes",
+          "1 English cucumber, peeled",
+          "1 red bell pepper",
+          "½ red onion",
+          "3 garlic cloves",
+          "3 tbsp sherry vinegar",
+          "½ cup (120 ml) extra virgin olive oil",
+          "1 slice stale bread soaked in water",
+          "Salt and pepper",
+          "Ice water to adjust",
+          "Diced vegetables and olive oil to garnish"
+        ],
+        "prep": "Blend tomatoes, cucumber, pepper, onion, garlic, and soaked bread until smooth. With blender running add olive oil in a stream. Add sherry vinegar, salt, and pepper. Strain through a sieve for silky texture. Add ice water to thin if needed. Refrigerate minimum 2 hours. Serve ice cold garnished with finely diced vegetables and olive oil."
+      },
+      {
+        "name": "Indian Dal Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) red lentils",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "1-inch ginger, grated",
+          "1 can (14 oz) crushed tomatoes",
+          "4 cups (960 ml) vegetable broth",
+          "1 tsp cumin",
+          "1 tsp turmeric",
+          "1 tsp coriander",
+          "1 tsp garam masala",
+          "Tadka: 2 tbsp ghee, 1 tsp mustard seeds, 2 dried red chilies, curry leaves",
+          "Salt and lime juice",
+          "Cilantro and naan to serve"
+        ],
+        "prep": "Cook onion in oil until golden. Add garlic and ginger and cook 2 minutes. Add all spices except tadka. Add lentils, tomatoes, and broth. Simmer 25 minutes until lentils are mushy. Add lime juice and salt. Make tadka by heating ghee until hot. Add mustard seeds and let pop. Add dried chilies and curry leaves — they will sizzle. Pour hot tadka over soup. Serve with naan."
+      },
+      {
+        "name": "Mexican Pozole",
+        "servings": "8 servings",
+        "ingredients": [
+          "1 kg (2 lbs) pork shoulder, cut into chunks",
+          "2 cans (29 oz each) hominy, drained",
+          "4 dried guajillo chilies, toasted and soaked",
+          "2 dried ancho chilies, toasted and soaked",
+          "1 onion",
+          "6 garlic cloves",
+          "1 tsp oregano",
+          "1 tsp cumin",
+          "8 cups (1.9 L) chicken broth",
+          "Salt",
+          "Toppings: cabbage, radishes, lime, oregano, tostadas, avocado"
+        ],
+        "prep": "Simmer pork in broth until very tender — about 1.5 hours. Remove and shred. Blend soaked chilies with garlic and spices. Strain. Fry chili sauce in a hot pot 3 minutes. Add broth, hominy, and pork. Simmer 30 minutes. Season with salt. Serve with all toppings."
+      },
+      {
+        "name": "Portuguese Caldo Verde",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 large potatoes, peeled and diced",
+          "200 g (7 oz) chouriço sausage, sliced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "6 cups (1.4 L) chicken broth",
+          "3 cups kale or collard greens, very thinly sliced",
+          "3 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Cook onion and garlic in olive oil until soft. Add potatoes and broth. Simmer 20 minutes until potatoes are completely tender. Blend until smooth. Return to pot. Add chouriço and kale. Simmer 5 more minutes until kale is just wilted but still bright green. Season with salt and pepper. Drizzle with olive oil."
+      },
+      {
+        "name": "Greek Avgolemono",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 cups (1.4 L) chicken broth",
+          "½ cup orzo or long grain rice",
+          "2 eggs",
+          "Juice of 2 lemons",
+          "2 cups cooked chicken, shredded (optional)",
+          "Salt and white pepper",
+          "Fresh dill to garnish"
+        ],
+        "prep": "Bring broth to a boil. Add orzo and cook until tender. Reduce heat to very low. Whisk eggs until frothy. Gradually whisk in lemon juice. Slowly ladle 1 cup of hot broth into egg mixture while whisking constantly to temper. Pour egg mixture back into pot while stirring. Do not boil after this point or eggs will curdle. Add chicken if using. Season with salt and white pepper. Garnish with dill."
+      },
+      {
+        "name": "Thai Tom Kha Gai",
+        "servings": "4 servings",
+        "ingredients": [
+          "400 g (14 oz) boneless chicken thighs, sliced",
+          "2 cans (14 oz each) coconut milk",
+          "2 cups (480 ml) chicken broth",
+          "3 stalks lemongrass, bruised",
+          "4 kaffir lime leaves",
+          "4 slices galangal or ginger",
+          "3 Thai chilies",
+          "3 tbsp fish sauce",
+          "3 tbsp lime juice",
+          "200 g (7 oz) mushrooms",
+          "Cherry tomatoes",
+          "Fresh cilantro"
+        ],
+        "prep": "Bring coconut milk, broth, lemongrass, lime leaves, galangal, and chilies to a simmer. Cook 10 minutes to infuse flavors. Add chicken and mushrooms. Simmer 10 minutes until chicken is cooked. Add tomatoes and cook 2 minutes. Season with fish sauce and lime juice. Garnish with cilantro. Remove lemongrass and lime leaves before serving."
+      },
+      {
+        "name": "Moroccan Harira",
+        "servings": "6 servings",
+        "ingredients": [
+          "200 g (7 oz) lamb shoulder, cubed",
+          "1 cup (190 g) red lentils",
+          "1 can (14 oz) chickpeas, drained",
+          "1 can (14 oz) crushed tomatoes",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "4 garlic cloves",
+          "½ cup fresh cilantro and parsley",
+          "2 tsp cumin",
+          "1 tsp turmeric",
+          "1 tsp cinnamon",
+          "Juice of 1 lemon",
+          "Salt and pepper",
+          "Dates and bread to serve"
+        ],
+        "prep": "Brown lamb in a large pot. Add onion, celery, and garlic and cook until soft. Add all spices. Add tomatoes, lentils, chickpeas, and 8 cups water. Bring to a boil. Simmer 45 minutes until lentils are tender and soup is thick. Add cilantro, parsley, and lemon juice. Season with salt and pepper. Traditionally served to break the Ramadan fast."
+      },
+      {
+        "name": "Ethiopian Red Lentil Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) red lentils",
+          "1 onion, finely diced",
+          "4 garlic cloves",
+          "1-inch ginger, grated",
+          "1 can (14 oz) diced tomatoes",
+          "4 cups (960 ml) vegetable broth",
+          "2 tbsp berbere spice blend",
+          "3 tbsp niter kibbeh (spiced butter) or regular butter",
+          "Salt",
+          "Injera or bread to serve"
+        ],
+        "prep": "Heat niter kibbeh in a pot. Cook onion until very soft and golden. Add garlic and ginger. Add berbere and cook 2 minutes. Add lentils, tomatoes, and broth. Simmer 25 minutes until lentils are completely dissolved. Season with salt. This Misir Wat is traditionally served with injera flatbread."
+      },
+      {
+        "name": "Russian Solyanka",
+        "servings": "4 servings",
+        "ingredients": [
+          "200 g (7 oz) mixed cured meats — ham, salami, kielbasa",
+          "2 dill pickles, diced",
+          "1 onion, diced",
+          "3 garlic cloves",
+          "2 tbsp tomato paste",
+          "4 cups (960 ml) beef broth",
+          "2 tbsp capers",
+          "2 tbsp black olives",
+          "1 tbsp butter",
+          "Salt, pepper, and sugar",
+          "Sour cream, lemon, and dill to serve"
+        ],
+        "prep": "Cook onion in butter until golden. Add garlic and tomato paste and cook 2 minutes. Add meats and cook 3 minutes. Add broth, pickles, capers, and olives. Simmer 20 minutes. Season with salt, pepper, and a pinch of sugar to balance. Serve with a dollop of sour cream, a slice of lemon, and fresh dill. This sour, salty, hearty soup is beloved in Russia."
+      },
+      {
+        "name": "Brazilian Feijoada",
+        "servings": "8 servings",
+        "ingredients": [
+          "500 g (1 lb) dried black beans, soaked overnight",
+          "300 g (10.5 oz) smoked pork sausage",
+          "200 g (7 oz) bacon, cubed",
+          "200 g (7 oz) salt pork or pork ribs",
+          "1 onion, diced",
+          "6 garlic cloves",
+          "2 bay leaves",
+          "Salt and pepper",
+          "Steamed rice, farofa, and orange slices to serve"
+        ],
+        "prep": "Cook soaked beans in fresh water until almost tender — about 1 hour. In a separate pot brown bacon and salt pork. Add sausage and cook. Add onion and garlic and cook until soft. Add beans with their liquid and bay leaves. Simmer 1–1.5 hours until beans are completely tender and liquid is thickened. Season with salt and pepper. Serve with steamed rice, farofa, and fresh orange slices."
+      },
+      {
+        "name": "Japanese Tonjiru",
+        "servings": "4 servings",
+        "ingredients": [
+          "300 g (10.5 oz) pork belly or shoulder, thinly sliced",
+          "1 cup daikon, cubed",
+          "2 carrots, sliced",
+          "1 onion, sliced",
+          "2 potatoes, cubed",
+          "3 tbsp miso paste",
+          "4 cups (960 ml) dashi broth",
+          "1 tsp sesame oil",
+          "Green onions and togarashi to serve"
+        ],
+        "prep": "Heat sesame oil in a pot. Cook pork until lightly browned. Add all vegetables and stir fry 3 minutes. Add dashi and bring to a boil. Reduce heat and simmer 20 minutes until vegetables are tender. Dissolve miso in a ladle of broth then stir into pot. Do not boil after adding miso. Serve topped with green onions and a sprinkle of togarashi."
+      },
+      {
+        "name": "Chinese Hot and Sour Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "200 g (7 oz) firm tofu, julienned",
+          "1 cup mushrooms, julienned",
+          "½ cup bamboo shoots, julienned",
+          "3 eggs, beaten",
+          "6 cups (1.4 L) chicken broth",
+          "3 tbsp soy sauce",
+          "4 tbsp rice vinegar",
+          "2 tbsp chili paste",
+          "2 tbsp cornstarch mixed with 3 tbsp water",
+          "1 tsp white pepper",
+          "Sesame oil and green onions"
+        ],
+        "prep": "Bring broth to a boil. Add mushrooms, bamboo shoots, tofu, soy sauce, vinegar, chili paste, and white pepper. Simmer 5 minutes. Stir in cornstarch mixture and cook until slightly thickened. Slowly pour beaten eggs in a thin stream while stirring to create egg ribbons. Drizzle with sesame oil. Garnish with green onions."
+      },
+      {
+        "name": "Lebanese Lentil Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) red lentils",
+          "1 large onion, diced",
+          "4 garlic cloves",
+          "1 tsp cumin",
+          "1 tsp turmeric",
+          "½ tsp coriander",
+          "6 cups (1.4 L) vegetable broth",
+          "Juice of 1–2 lemons",
+          "3 tbsp olive oil",
+          "Salt and pepper",
+          "Crispy fried onion and lemon wedges to serve"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion until deeply golden — about 20 minutes. Reserve half for garnish. Add garlic and spices and cook 1 minute. Add lentils and broth. Simmer 25 minutes until lentils are completely dissolved. Blend until smooth. Season generously with lemon juice, salt, and pepper. The lemon is crucial — be generous. Serve topped with crispy onions and extra lemon wedges."
+      }
     ]
   },
-
   {
-    id: 'slowCookerSoups',
-    icon:"🫕", name:"Slow Cooker Soups & Stews",
-    desc:"Set it and forget it slow cooker soups and stews full of deep slow-cooked flavor.",
-    recipes:[
-      {name:"Slow Cooker Beef Stew",servings:"6 servings",ingredients:["1 kg (2 lbs) beef chuck, cubed","3 potatoes, cubed","3 carrots, sliced","2 celery stalks, sliced","1 onion, diced","4 garlic cloves","1 cup (240 ml) red wine","2 cups (480 ml) beef broth","2 tbsp tomato paste","2 tbsp flour","Fresh thyme and bay leaf","Salt and pepper"],prep:"Dust beef with flour, salt, and pepper. Brown in a skillet over high heat then transfer to slow cooker. Add all vegetables, wine, broth, tomato paste, thyme, and bay leaf. Cook on low 8 hours or high 4–5 hours until beef is very tender. Remove bay leaf. Adjust seasoning. The long slow cook develops incredibly deep flavor."},
-      {name:"Slow Cooker Chicken Noodle Soup",servings:"6 servings",ingredients:["1 kg (2 lbs) bone-in chicken thighs","3 carrots, sliced","3 celery stalks, sliced","1 onion, diced","4 garlic cloves","6 cups (1.4 L) chicken broth","Fresh thyme and bay leaf","2 cups egg noodles","Salt and pepper","Fresh parsley"],prep:"Place chicken, vegetables, broth, and herbs in slow cooker. Cook on low 7–8 hours. Remove chicken and shred. Return meat to slow cooker. Turn to high. Add egg noodles and cook 20–30 minutes until tender. Remove bay leaf. Season with salt and pepper. Garnish with parsley."},
-      {name:"Slow Cooker Pulled Pork Stew",servings:"6 servings",ingredients:["1 kg (2 lbs) pork shoulder","1 onion, sliced","4 garlic cloves","1 can (28 oz) crushed tomatoes","1 cup (240 ml) chicken broth","2 tbsp Worcestershire sauce","1 tbsp brown sugar","1 tsp smoked paprika","1 tsp cumin","Salt and pepper"],prep:"Season pork generously with salt and paprika. Place onion in bottom of slow cooker. Set pork on top. Mix tomatoes, broth, Worcestershire, brown sugar, and cumin. Pour over pork. Cook on low 8–10 hours. Shred pork with two forks. Stir everything together. Season with salt and pepper."},
-      {name:"Slow Cooker White Bean Soup",servings:"6 servings",ingredients:["2 cans (14 oz each) cannellini beans, drained","1 onion, diced","4 garlic cloves","2 carrots, diced","3 celery stalks, diced","4 cups (960 ml) chicken or vegetable broth","1 can (14 oz) diced tomatoes","200 g (7 oz) Italian sausage, sliced","Fresh rosemary and thyme","Salt, pepper, and red pepper flakes"],prep:"Combine all ingredients in slow cooker. Cook on low 6–8 hours. Mash some beans against the side for a thicker texture. Season with salt, pepper, and red pepper flakes."},
-      {name:"Slow Cooker Lentil Soup",servings:"6 servings",ingredients:["1½ cups (270 g) green or red lentils, rinsed","1 onion, diced","3 carrots, diced","3 celery stalks, diced","4 garlic cloves","1 can (14 oz) diced tomatoes","6 cups (1.4 L) vegetable broth","2 tsp cumin","1 tsp smoked paprika","½ tsp turmeric","Juice of 1 lemon","Salt and pepper","Fresh parsley"],prep:"Combine all ingredients except lemon juice in slow cooker. Cook on low 8 hours or high 4 hours until lentils are completely tender. Add lemon juice. Season with salt and pepper. Garnish with parsley."},
-      {name:"Slow Cooker Split Pea Soup",servings:"6 servings",ingredients:["500 g (1 lb) dried split peas, rinsed","1 ham hock or 2 cups diced ham","1 onion, diced","3 carrots, diced","3 celery stalks, diced","4 garlic cloves","8 cups (1.9 L) chicken broth","Bay leaves and thyme","Salt and pepper"],prep:"Place all ingredients in slow cooker. Cook on low 8–10 hours until split peas have completely dissolved and soup is thick. Remove ham hock and shred meat. Return meat to soup. Remove bay leaves. Season with salt and pepper. If too thick add more broth."},
-      {name:"Slow Cooker Minestrone",servings:"6 servings",ingredients:["1 can (14 oz) cannellini beans, drained","1 can (14 oz) diced tomatoes","2 carrots, diced","2 celery stalks, diced","1 onion, diced","2 zucchini, diced","4 garlic cloves","6 cups (1.4 L) vegetable broth","1 tsp Italian seasoning","1 cup small pasta — added last hour","2 cups spinach","Salt, pepper, and Parmesan"],prep:"Place all vegetables, beans, tomatoes, broth, and Italian seasoning in slow cooker. Cook on low 6–8 hours. One hour before serving add pasta. Turn to high and cook until pasta is tender. Add spinach and stir until wilted. Season with salt and pepper. Serve with Parmesan."},
-      {name:"Slow Cooker Potato Soup",servings:"6 servings",ingredients:["6 large potatoes, peeled and diced","1 onion, diced","4 garlic cloves","4 cups (960 ml) chicken broth","1 cup sour cream","1 cup cheddar, shredded","4 strips bacon, cooked and crumbled","Salt, pepper, and chives"],prep:"Place potatoes, onion, garlic, and broth in slow cooker. Cook on low 7–8 hours until potatoes are completely tender. Mash roughly against the sides — leave some chunks. Stir in sour cream and cheddar until melted and smooth. Season with salt and pepper. Serve topped with bacon and chives."},
-      {name:"Slow Cooker Chicken Tortilla Soup",servings:"6 servings",ingredients:["700 g (1.5 lbs) boneless chicken thighs","1 can (14 oz) black beans, drained","1 can (14 oz) corn","1 can (28 oz) crushed tomatoes","1 onion, diced","4 garlic cloves","1 jalapeño, diced","4 cups (960 ml) chicken broth","2 tsp cumin","1 tsp chili powder","Salt and pepper","Toppings: tortilla strips, avocado, sour cream"],prep:"Place all ingredients in slow cooker. Cook on low 7–8 hours. Remove chicken and shred. Return to slow cooker. Stir well and season with salt and pepper. Serve with crispy tortilla strips, avocado, and sour cream."},
-      {name:"Slow Cooker Lamb Stew",servings:"4 servings",ingredients:["700 g (1.5 lbs) lamb shoulder, cubed","3 potatoes, cubed","2 carrots, sliced","1 onion, diced","4 garlic cloves","1 cup (240 ml) red wine","2 cups (480 ml) chicken broth","2 tbsp tomato paste","Fresh rosemary and thyme","Salt and pepper"],prep:"Brown lamb in a skillet. Transfer to slow cooker with all remaining ingredients. Cook on low 8 hours until lamb is very tender. Season with salt and pepper."},
-      {name:"Slow Cooker Seafood Chowder",servings:"4 servings",ingredients:["500 g (1 lb) mixed seafood — shrimp, scallops, white fish","3 potatoes, cubed","1 onion, diced","3 celery stalks, diced","3 garlic cloves","3 cups (720 ml) clam juice or seafood broth","1 cup (240 ml) heavy cream","3 tbsp butter","Salt, pepper, and Old Bay seasoning"],prep:"Place potatoes, onion, celery, garlic, and broth in slow cooker. Cook on low 6 hours until potatoes are tender. Add seafood and cream in the last 30 minutes of cooking — do not cook seafood too long or it becomes rubbery. Add butter. Season with salt, pepper, and Old Bay."},
-      {name:"Slow Cooker Tomato Basil Soup",servings:"4 servings",ingredients:["2 cans (28 oz each) crushed tomatoes","1 onion, diced","4 garlic cloves","2 cups (480 ml) vegetable broth","1 tbsp sugar","1 cup heavy cream","Large handful fresh basil","3 tbsp butter","Salt and pepper"],prep:"Place tomatoes, onion, garlic, broth, sugar, and butter in slow cooker. Cook on low 6–8 hours. Blend until smooth using an immersion blender. Stir in cream and fresh basil. Season with salt and pepper. Serve with grilled cheese."},
-      {name:"Slow Cooker French Onion Soup",servings:"4 servings",ingredients:["6 large yellow onions, thinly sliced","4 tbsp butter","1 cup (240 ml) dry white wine","5 cups (1.2 L) beef broth","Fresh thyme and bay leaf","Salt and pepper","Gruyère croutons to serve"],prep:"Combine onions, butter, and a pinch of salt in slow cooker. Cook on high 8–10 hours until onions are very deeply caramelized — the long cook creates incredible sweetness. Add wine, broth, thyme, and bay leaf. Cook another 2 hours. Season with salt and pepper. Ladle into oven-safe bowls with Gruyère toasted bread and broil until bubbly."},
-      {name:"Slow Cooker Vegetable Curry Soup",servings:"4 servings",ingredients:["2 cans (14 oz each) chickpeas, drained","1 can (14 oz) coconut milk","2 cups (480 ml) vegetable broth","1 onion, diced","4 garlic cloves","1-inch ginger, grated","2 tbsp curry powder","1 tsp turmeric","1 tsp cumin","2 cups sweet potato, cubed","2 cups spinach","Salt and lime juice"],prep:"Place all ingredients except spinach in slow cooker. Cook on low 7–8 hours. Add spinach in the last 30 minutes. Season with salt and lime juice. Serve over basmati rice."},
-      {name:"Slow Cooker Chicken Posole",servings:"6 servings",ingredients:["700 g (1.5 lbs) boneless chicken thighs","2 cans (29 oz each) hominy, drained","4 cups (960 ml) chicken broth","2 dried guajillo chilies, toasted and soaked","1 onion","4 garlic cloves","1 tsp cumin","1 tsp oregano","Salt","Toppings: shredded cabbage, radishes, lime, dried oregano, tostadas"],prep:"Blend soaked chilies with garlic, cumin, and oregano until smooth. Strain. Place chicken, hominy, broth, onion, and chili sauce in slow cooker. Cook on low 7–8 hours. Remove chicken and shred. Return to pot. Season with salt. Serve with all toppings on the side."}
+    "id": "chilis",
+    "icon": "🌶️",
+    "name": "Chilis",
+    "desc": "Beef, chicken, bean and turkey chilis.",
+    "recipes": [
+      {
+        "name": "Classic Beef Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) ground beef",
+          "2 cans (14 oz each) kidney beans, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "1 red bell pepper, diced",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "1 tsp smoked paprika",
+          "½ tsp cayenne",
+          "Salt and pepper",
+          "2 tbsp olive oil",
+          "Toppings: sour cream, cheese, green onions, jalapeños"
+        ],
+        "prep": "Heat olive oil in a large pot. Brown ground beef and drain excess fat. Add onion, pepper, and garlic and cook until softened. Add all spices and cook 1 minute. Add crushed tomatoes and beans. Bring to a boil. Reduce heat and simmer uncovered 30–40 minutes until thick. Season with salt and pepper. Serve with toppings."
+      },
+      {
+        "name": "White Chicken Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) boneless chicken thighs or breasts",
+          "2 cans (14 oz each) white beans — cannellini or Great Northern",
+          "2 cans (4 oz each) diced green chilies",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "4 cups (960 ml) chicken broth",
+          "1 tsp cumin",
+          "1 tsp oregano",
+          "½ tsp cayenne",
+          "1 cup sour cream",
+          "Salt and pepper",
+          "Toppings: avocado, cheese, cilantro, lime"
+        ],
+        "prep": "Cook chicken in broth until cooked through. Remove and shred. Cook onion and garlic in a little oil until soft. Add spices. Add broth, green chilies, and white beans. Simmer 15 minutes. Mash some beans against the side of the pot to thicken. Return chicken. Stir in sour cream off the heat. Season with salt and pepper. Serve with toppings."
+      },
+      {
+        "name": "Vegetarian Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 can (14 oz) black beans, drained",
+          "1 can (14 oz) kidney beans, drained",
+          "1 can (14 oz) chickpeas, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "2 bell peppers, diced",
+          "4 garlic cloves",
+          "1 zucchini, diced",
+          "1 cup corn kernels",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "1 tsp smoked paprika",
+          "2 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion and bell peppers until soft. Add garlic and all spices and cook 1 minute. Add tomatoes, all beans, zucchini, and corn. Simmer 30 minutes until thick and flavors meld. Season with salt and pepper. Serve with your favorite toppings."
+      },
+      {
+        "name": "Texas Beef Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) beef chuck, cut into small cubes — no beans in Texas chili",
+          "1 onion, diced",
+          "6 garlic cloves, minced",
+          "3 dried ancho chilies, toasted and soaked",
+          "2 dried guajillo chilies, toasted and soaked",
+          "1 cup (240 ml) beef broth",
+          "2 tsp cumin",
+          "1 tsp oregano",
+          "Salt",
+          "2 tbsp lard or oil"
+        ],
+        "prep": "Toast dried chilies in a dry pan. Soak in hot water 20 minutes. Blend with soaking water until smooth. Strain. Brown beef in lard in batches over high heat. Cook onion and garlic. Return beef. Add chili sauce, broth, cumin, and oregano. Simmer covered 2 hours until beef is very tender and sauce is thick. Season with salt. True Texas chili has no beans and no tomatoes."
+      },
+      {
+        "name": "Chicken Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) ground chicken",
+          "2 cans (14 oz each) pinto beans, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 red bell pepper, diced",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "½ tsp smoked paprika",
+          "Salt and pepper",
+          "2 tbsp olive oil"
+        ],
+        "prep": "Brown ground chicken in olive oil. Add onion, bell pepper, and garlic and cook until soft. Add spices and cook 1 minute. Add tomatoes and beans. Simmer 30 minutes. Season with salt and pepper."
+      },
+      {
+        "name": "Green Chile Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) pork shoulder, cubed",
+          "2 cups roasted green chiles, peeled and diced — Hatch or Anaheim",
+          "3 potatoes, cubed",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "4 cups (960 ml) chicken broth",
+          "1 tsp cumin",
+          "1 tsp oregano",
+          "2 tbsp oil",
+          "Salt and pepper",
+          "Flour tortillas to serve"
+        ],
+        "prep": "Brown pork in oil over high heat. Remove. Cook onion and garlic until soft. Add cumin and oregano. Add broth, green chiles, and pork. Simmer 45 minutes. Add potatoes and cook 20 more minutes until tender. Season with salt and pepper. Serve with warm flour tortillas."
+      },
+      {
+        "name": "Cincinnati Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) ground beef",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, finely diced",
+          "4 garlic cloves",
+          "2 cups (480 ml) beef broth",
+          "2 tsp chili powder",
+          "1 tsp cumin",
+          "1 tsp cinnamon",
+          "½ tsp allspice",
+          "½ tsp cayenne",
+          "1 tbsp apple cider vinegar",
+          "Salt",
+          "Spaghetti, shredded cheddar, kidney beans, and diced onion to serve"
+        ],
+        "prep": "Brown beef with onion and garlic. Add all spices, tomatoes, broth, and vinegar. Simmer covered 1 hour stirring occasionally. The chili should be thin and sauce-like — this is not a thick Texas chili. Serve Cincinnati style — chili over spaghetti, topped with shredded cheddar, kidney beans, and diced onion."
+      },
+      {
+        "name": "Black Bean Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "3 cans (14 oz each) black beans, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 red bell pepper, diced",
+          "1 chipotle pepper in adobo, minced",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "1 tsp smoked paprika",
+          "2 tbsp olive oil",
+          "Salt and pepper",
+          "Avocado, sour cream, and lime to serve"
+        ],
+        "prep": "Heat olive oil in a large pot. Cook onion and bell pepper until soft. Add garlic, chipotle, and all spices and cook 1 minute. Add tomatoes and black beans. Simmer 25 minutes. Mash about a third of the beans for a thicker texture. Season with salt and pepper. Serve with avocado, sour cream, and lime."
+      },
+      {
+        "name": "Pork Green Chili",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) pork shoulder, cubed",
+          "8 Hatch or Anaheim green chiles, roasted and diced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "4 cups (960 ml) chicken broth",
+          "1 tsp cumin",
+          "½ tsp oregano",
+          "2 tbsp oil",
+          "Salt and pepper"
+        ],
+        "prep": "Brown pork in oil. Remove. Cook onion and garlic until soft. Add cumin and oregano. Add broth, pork, and green chiles. Simmer covered 1 hour until pork is tender. For a thicker stew mix 2 tbsp flour with cold water and stir in. Simmer 10 more minutes. Season with salt and pepper."
+      },
+      {
+        "name": "Turkey Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) ground turkey",
+          "2 cans (14 oz each) kidney beans, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 red bell pepper, diced",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "1 tsp smoked paprika",
+          "½ tsp cayenne",
+          "Salt and pepper",
+          "2 tbsp olive oil"
+        ],
+        "prep": "Brown turkey in olive oil and drain. Add onion, bell pepper, and garlic and cook until soft. Add spices and cook 1 minute. Add tomatoes and beans. Simmer 30 minutes. Season with salt and pepper."
+      },
+      {
+        "name": "Cowboy Chili",
+        "servings": "8 servings",
+        "ingredients": [
+          "1 kg (2 lbs) beef chuck, cubed",
+          "500 g (1 lb) pork sausage",
+          "1 can (14 oz) pinto beans",
+          "1 can (14 oz) kidney beans",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 jalapeño, diced",
+          "3 tbsp chili powder",
+          "2 tsp cumin",
+          "1 tsp smoked paprika",
+          "2 tbsp oil",
+          "Salt and pepper"
+        ],
+        "prep": "Brown beef and sausage in oil in batches. Cook onion, jalapeño, and garlic. Add spices. Add tomatoes, beans, and all meats. Simmer covered 1.5–2 hours until beef is very tender. Season with salt and pepper."
+      },
+      {
+        "name": "Bison Chili",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) ground bison",
+          "2 cans (14 oz each) pinto beans, drained",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 ancho chili, soaked and blended",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "1 tsp smoked paprika",
+          "Salt and pepper",
+          "2 tbsp oil"
+        ],
+        "prep": "Brown bison in oil. Add onion and garlic and cook until soft. Add ancho chili paste and all spices. Add tomatoes and beans. Simmer 30 minutes. Bison is leaner than beef so add a little broth if the chili gets too thick. Season with salt and pepper."
+      }
     ]
   },
-
   {
-    id: 'brothsBisques',
-    icon:"🫙", name:"Broths & Bisques",
-    desc:"Rich homemade broths, bone broths, creamy bisques, and elegant restaurant-style soups.",
-    recipes:[
-      {name:"Homemade Chicken Broth",servings:"8 cups",ingredients:["1 whole chicken carcass or 1 kg chicken bones","2 carrots, roughly chopped","2 celery stalks, roughly chopped","1 onion, quartered","4 garlic cloves","1 leek, roughly chopped","Fresh thyme, parsley stems, and bay leaf","1 tbsp peppercorns","12 cups (2.8 L) cold water","1 tbsp apple cider vinegar"],prep:"Place chicken bones in a large pot. Cover with cold water and bring to a boil. Drain and rinse bones — this removes impurities and results in a clearer broth. Return bones to clean pot with all vegetables, herbs, peppercorns, and vinegar. Cover with 12 cups cold water. Bring to a bare simmer. Cook uncovered 3–4 hours skimming foam occasionally. Strain through a fine sieve. Cool and refrigerate. Skim solidified fat from surface before using."},
-      {name:"Bone Broth",servings:"8 cups",ingredients:["1.5 kg (3 lbs) beef or chicken bones","2 tbsp apple cider vinegar","3 carrots, roughly chopped","3 celery stalks","1 onion, quartered","4 garlic cloves","Fresh thyme, parsley, and bay leaf","1 tbsp peppercorns","12 cups (2.8 L) cold water"],prep:"Roast bones at 450°F for 30 minutes until browned — this adds color and flavor. Transfer to a large stockpot. Add vinegar and water. Let sit 30 minutes before heating — the acid draws minerals from the bones. Bring to a boil. Skim foam. Add vegetables and herbs. Reduce to the lowest possible simmer. Cook 12–24 hours for beef, 6–8 hours for chicken. Strain and season lightly with salt."},
-      {name:"Lobster Bisque",servings:"4 servings",ingredients:["2 lobster tails, cooked, meat removed, shells reserved","1 onion, diced","2 celery stalks, diced","2 carrots, diced","4 garlic cloves","3 tbsp tomato paste","½ cup (120 ml) brandy or cognac","3 cups (720 ml) seafood broth","1 cup (240 ml) heavy cream","4 tbsp butter","Fresh tarragon","Salt, pepper, and cayenne"],prep:"Make stock by simmering lobster shells with vegetables and broth 30 minutes. Strain. Melt butter in a pot. Cook onion, celery, and carrot until soft. Add garlic and tomato paste and cook 2 minutes. Add brandy and cook until evaporated. Add lobster stock and simmer 15 minutes. Blend until smooth. Strain through a fine sieve. Add cream and simmer 5 minutes. Season with salt, pepper, and cayenne. Add lobster meat and heat gently."},
-      {name:"Shrimp Bisque",servings:"4 servings",ingredients:["500 g (1 lb) shrimp, shells reserved","1 onion, diced","2 celery stalks, diced","2 carrots, diced","4 garlic cloves","3 tbsp tomato paste","¼ cup (60 ml) dry sherry","3 cups (720 ml) seafood broth","1 cup (240 ml) heavy cream","4 tbsp butter","Fresh tarragon","Cayenne and salt"],prep:"Sauté shrimp shells in butter until pink and fragrant. Add vegetables and cook until soft. Add tomato paste and cook 2 minutes. Add sherry and cook until evaporated. Add broth and simmer 20 minutes. Strain. Return liquid to pot. Add cream and shrimp and simmer 5 minutes. Blend until very smooth. Season with cayenne, salt, and tarragon."},
-      {name:"Crab Bisque",servings:"4 servings",ingredients:["300 g (10.5 oz) lump crab meat","1 onion, diced","2 celery stalks, diced","3 garlic cloves","3 tbsp tomato paste","¼ cup (60 ml) dry sherry","3 cups (720 ml) seafood broth","1 cup (240 ml) heavy cream","4 tbsp butter","Old Bay seasoning","Salt and cayenne","Fresh chives to garnish"],prep:"Melt butter and cook onion, celery, and garlic until soft. Add tomato paste and cook 2 minutes. Add sherry and reduce. Add broth and simmer 15 minutes. Blend until smooth. Add cream and simmer 5 minutes. Season with Old Bay, salt, and cayenne. Add crab meat and heat gently. Garnish with chives."},
-      {name:"Tomato Bisque",servings:"4 servings",ingredients:["2 cans (28 oz each) San Marzano tomatoes","1 onion, diced","4 garlic cloves","½ cup (120 ml) dry white wine","1 cup (240 ml) heavy cream","4 tbsp butter","1 tsp sugar","Fresh basil","Salt and pepper"],prep:"Melt butter in a pot. Cook onion until very soft. Add garlic and cook 1 minute. Add wine and reduce. Add tomatoes and sugar. Simmer 20 minutes. Blend until perfectly smooth. Strain through a fine sieve for a silky texture. Return to pot. Add cream and basil. Season with salt and pepper."},
-      {name:"Roasted Garlic and Brie Bisque",servings:"4 servings",ingredients:["3 heads garlic, roasted","200 g (7 oz) Brie, rind removed and cubed","1 onion, diced","4 cups (960 ml) chicken broth","1 cup (240 ml) heavy cream","4 tbsp butter","Fresh thyme","Salt and white pepper"],prep:"Roast garlic heads at 400°F for 45 minutes. Squeeze out cloves. Cook onion in butter until very soft. Add roasted garlic and thyme. Add broth and simmer 15 minutes. Blend until smooth. Add cream and heat through. Remove from heat and stir in Brie until melted and incorporated. Season with salt and white pepper."},
-      {name:"Corn Bisque",servings:"4 servings",ingredients:["6 ears corn, kernels cut off and cobs reserved","1 onion, diced","3 garlic cloves","4 cups (960 ml) chicken or vegetable broth","1 cup (240 ml) heavy cream","4 tbsp butter","Fresh thyme","Salt, pepper, and smoked paprika","Crispy bacon and chives to garnish"],prep:"Simmer corn cobs in broth 30 minutes to extract maximum corn flavor. Discard cobs. Cook onion in butter until soft. Add garlic and most of the corn kernels. Add broth. Simmer 15 minutes. Blend until smooth. Strain through a sieve for a silky texture. Add cream. Season with salt, pepper, and smoked paprika. Garnish with reserved corn kernels, crispy bacon, and chives."},
-      {name:"Fennel Bisque",servings:"4 servings",ingredients:["3 large fennel bulbs, sliced","1 onion, diced","4 garlic cloves","½ cup (120 ml) dry white wine","4 cups (960 ml) vegetable broth","1 cup (240 ml) heavy cream","4 tbsp butter","Salt and white pepper","Fennel fronds and olive oil to garnish"],prep:"Melt butter and cook fennel and onion over medium-low heat until very soft and slightly caramelized — about 25 minutes. Add garlic. Add wine and reduce. Add broth and simmer 20 minutes. Blend until very smooth. Strain through a sieve. Add cream. Season with salt and white pepper. Garnish with fennel fronds and a drizzle of olive oil."},
-      {name:"Vegetable Broth",servings:"8 cups",ingredients:["3 carrots, roughly chopped","3 celery stalks with leaves","2 onions, quartered","1 leek, roughly chopped","4 garlic cloves","2 tomatoes, quartered","1 cup mushroom stems","Fresh thyme, parsley, and bay leaf","1 tbsp peppercorns","12 cups (2.8 L) cold water","2 tbsp soy sauce"],prep:"Place all vegetables and herbs in a large pot. Cover with cold water. Bring to a boil. Reduce heat and simmer uncovered 1–1.5 hours. Add soy sauce for extra depth. Strain through a fine sieve pressing vegetables to extract maximum flavor. Cool and refrigerate. Use within 5 days or freeze."},
-      {name:"Fish Stock",servings:"6 cups",ingredients:["1 kg (2 lbs) fish bones and heads — non-oily fish like sole or halibut","1 onion, sliced","2 celery stalks","1 leek","1 cup (240 ml) dry white wine","Fresh parsley, thyme, and bay leaf","1 tbsp peppercorns","7 cups (1.7 L) cold water"],prep:"Soak fish bones in cold salted water 30 minutes to remove blood. Rinse well. Place in a large pot with all vegetables, wine, herbs, and peppercorns. Cover with cold water. Bring to a bare simmer — do not boil or the stock turns bitter. Simmer 20 minutes only — fish stock becomes bitter if cooked too long. Strain through a fine sieve. Use immediately or freeze."},
-      {name:"Pumpkin Bisque",servings:"4 servings",ingredients:["1 can (29 oz) pumpkin puree or 2 cups roasted pumpkin","1 onion, diced","3 garlic cloves","1-inch ginger, grated","4 cups (960 ml) chicken or vegetable broth","1 cup (240 ml) coconut milk","4 tbsp butter","1 tsp cinnamon","½ tsp nutmeg","Salt, pepper, and cayenne","Toasted pepitas and cream to garnish"],prep:"Cook onion in butter until soft. Add garlic and ginger and cook 1 minute. Add pumpkin, broth, cinnamon, and nutmeg. Simmer 15 minutes. Blend until very smooth. Add coconut milk. Season with salt, pepper, and cayenne. Garnish with a swirl of cream and toasted pepitas."},
-      {name:"Roasted Poblano Bisque",servings:"4 servings",ingredients:["6 poblano peppers, roasted and peeled","1 onion, diced","4 garlic cloves","4 cups (960 ml) chicken broth","1 cup (240 ml) heavy cream","4 tbsp butter","1 tsp cumin","Salt and pepper","Crème fraîche and cilantro to garnish"],prep:"Roast poblanos over flame or under broiler until charred. Peel, seed, and roughly chop. Cook onion in butter until soft. Add garlic and cumin. Add roasted poblanos and broth. Simmer 15 minutes. Blend until smooth. Add cream. Season with salt and pepper. Garnish with crème fraîche and fresh cilantro."},
-      {name:"Butternut Squash Bisque",servings:"4 servings",ingredients:["1 large butternut squash, roasted until caramelized","1 onion, diced","4 garlic cloves","1-inch ginger, grated","4 cups (960 ml) vegetable broth","1 cup (240 ml) heavy cream","4 tbsp butter","1 tsp cumin","½ tsp cinnamon","Salt, pepper, and nutmeg"],prep:"Roast butternut squash at 425°F until deeply caramelized. Scoop out flesh. Cook onion in butter until golden. Add garlic, ginger, cumin, and cinnamon. Add squash and broth. Simmer 15 minutes. Blend until very smooth. Strain if desired for a silky texture. Add cream. Season with salt, pepper, and nutmeg."},
-      {name:"Dashi Broth",servings:"4 cups",ingredients:["10 g (0.35 oz) kombu seaweed","20 g (0.7 oz) katsuobushi (dried bonito flakes)","4 cups (960 ml) cold water"],prep:"Combine kombu and cold water in a pot. Let soak 30 minutes. Heat over medium heat. Just before boiling remove kombu. Bring to a boil. Add bonito flakes and turn off heat immediately. Let steep 5 minutes — do not stir. Strain through a fine sieve lined with cheesecloth. This fundamental Japanese broth is the base for miso soup, noodle broths, and many Japanese dishes. Use fresh."}
+    "id": "gumbos",
+    "icon": "🥘",
+    "name": "Gumbos",
+    "desc": "Louisiana-style gumbos.",
+    "recipes": [
+      {
+        "name": "Seafood Gumbo",
+        "servings": "6 servings",
+        "ingredients": [
+          "500 g (1 lb) shrimp, peeled",
+          "300 g (10.5 oz) crab meat",
+          "300 g (10.5 oz) andouille sausage, sliced",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "1 green bell pepper, diced",
+          "4 garlic cloves",
+          "1 cup (240 ml) dark roux: equal parts flour and oil cooked until dark brown",
+          "6 cups (1.4 L) seafood broth",
+          "2 cups okra, sliced",
+          "Cajun seasoning, thyme, and bay leaf",
+          "File powder to serve",
+          "Rice to serve"
+        ],
+        "prep": "Make roux by cooking equal parts flour and oil in a heavy pot over medium heat, stirring constantly, until color of dark chocolate — about 30–45 minutes. Add onion, celery, and bell pepper — the holy trinity. Cook until soft. Add garlic. Add broth gradually while stirring. Add sausage, okra, Cajun seasoning, thyme, and bay leaf. Simmer 30 minutes. Add shrimp and crab and cook 5 more minutes. Serve over rice sprinkled with file powder."
+      },
+      {
+        "name": "Chicken and Andouille Gumbo",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 whole chicken, cut into pieces",
+          "300 g (10.5 oz) andouille sausage, sliced",
+          "Dark roux: ½ cup flour, ½ cup oil",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "1 green bell pepper, diced",
+          "4 garlic cloves",
+          "6 cups (1.4 L) chicken broth",
+          "Cajun seasoning",
+          "File powder and rice to serve"
+        ],
+        "prep": "Make dark roux by cooking flour and oil over medium heat stirring constantly 30–45 minutes until very dark brown. Add vegetables and cook until soft. Add garlic. Add broth gradually. Add chicken and sausage. Simmer 45 minutes until chicken is very tender. Remove chicken, shred, and return meat. Season generously with Cajun seasoning. Serve over rice with file powder."
+      },
+      {
+        "name": "Okra Gumbo",
+        "servings": "6 servings",
+        "ingredients": [
+          "3 cups okra, sliced",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "1 green bell pepper, diced",
+          "4 garlic cloves",
+          "1 can (28 oz) crushed tomatoes",
+          "4 cups (960 ml) vegetable broth",
+          "Roux: ½ cup flour and ½ cup oil",
+          "Cajun seasoning and bay leaf",
+          "Rice to serve"
+        ],
+        "prep": "Make roux by cooking flour and oil stirring constantly until dark brown — 30 minutes. Add onion, celery, and bell pepper and cook until soft. Add garlic. Add tomatoes and broth. Add okra and Cajun seasoning. Simmer 30 minutes — the okra will thicken the gumbo naturally. Season with salt. Serve over rice."
+      }
     ]
   },
-
   {
-    id: 'internationalSoups',
-    icon:"🌍", name:"International Soups",
-    desc:"Soups and stews from around the world — from Italian ribollita to Indian dal.",
-    recipes:[
-      {name:"Italian Ribollita",servings:"6 servings",ingredients:["2 cans (14 oz each) cannellini beans","1 onion, diced","2 carrots, diced","2 celery stalks, diced","4 garlic cloves","2 cups cavolo nero, chopped","1 can (14 oz) diced tomatoes","6 cups (1.4 L) vegetable broth","4 thick slices day-old bread","3 tbsp olive oil","Parmesan rind","Salt, pepper, and red pepper flakes"],prep:"Cook onion, carrots, and celery in olive oil until soft. Add garlic. Add tomatoes, broth, beans, cavolo nero, and Parmesan rind. Simmer 30 minutes. Tear bread into chunks and stir in. Simmer 15 minutes until bread breaks down and thickens the soup. Season well. Even better reheated the next day."},
-      {name:"French Pistou Soup",servings:"6 servings",ingredients:["1 can (14 oz) cannellini beans","1 can (14 oz) diced tomatoes","2 zucchini, diced","2 carrots, diced","2 celery stalks, diced","1 onion, diced","1 cup green beans, cut","1 cup small pasta","6 cups (1.4 L) vegetable broth","Pistou: 2 cups basil, ½ cup Parmesan, ½ cup olive oil, 4 garlic cloves"],prep:"Cook all vegetables in broth until tender — about 20 minutes. Add pasta and beans and cook until pasta is tender. Season with salt and pepper. Make pistou by blending basil, Parmesan, olive oil, and garlic until smooth. Ladle soup into bowls and add a generous spoonful of pistou. The pistou is stirred in at the table — do not cook it in the soup."},
-      {name:"Spanish Gazpacho",servings:"4 servings",ingredients:["6 ripe tomatoes","1 English cucumber, peeled","1 red bell pepper","½ red onion","3 garlic cloves","3 tbsp sherry vinegar","½ cup (120 ml) extra virgin olive oil","1 slice stale bread soaked in water","Salt and pepper","Ice water to adjust","Diced vegetables and olive oil to garnish"],prep:"Blend tomatoes, cucumber, pepper, onion, garlic, and soaked bread until smooth. With blender running add olive oil in a stream. Add sherry vinegar, salt, and pepper. Strain through a sieve for silky texture. Add ice water to thin if needed. Refrigerate minimum 2 hours. Serve ice cold garnished with finely diced vegetables and olive oil."},
-      {name:"Indian Dal Soup",servings:"4 servings",ingredients:["1½ cups (270 g) red lentils","1 onion, diced","4 garlic cloves, minced","1-inch ginger, grated","1 can (14 oz) crushed tomatoes","4 cups (960 ml) vegetable broth","1 tsp cumin","1 tsp turmeric","1 tsp coriander","1 tsp garam masala","Tadka: 2 tbsp ghee, 1 tsp mustard seeds, 2 dried red chilies, curry leaves","Salt and lime juice","Cilantro and naan to serve"],prep:"Cook onion in oil until golden. Add garlic and ginger and cook 2 minutes. Add all spices except tadka. Add lentils, tomatoes, and broth. Simmer 25 minutes until lentils are mushy. Add lime juice and salt. Make tadka by heating ghee until hot. Add mustard seeds and let pop. Add dried chilies and curry leaves — they will sizzle. Pour hot tadka over soup. Serve with naan."},
-      {name:"Mexican Pozole",servings:"8 servings",ingredients:["1 kg (2 lbs) pork shoulder, cut into chunks","2 cans (29 oz each) hominy, drained","4 dried guajillo chilies, toasted and soaked","2 dried ancho chilies, toasted and soaked","1 onion","6 garlic cloves","1 tsp oregano","1 tsp cumin","8 cups (1.9 L) chicken broth","Salt","Toppings: cabbage, radishes, lime, oregano, tostadas, avocado"],prep:"Simmer pork in broth until very tender — about 1.5 hours. Remove and shred. Blend soaked chilies with garlic and spices. Strain. Fry chili sauce in a hot pot 3 minutes. Add broth, hominy, and pork. Simmer 30 minutes. Season with salt. Serve with all toppings."},
-      {name:"Portuguese Caldo Verde",servings:"4 servings",ingredients:["4 large potatoes, peeled and diced","200 g (7 oz) chouriço sausage, sliced","1 onion, diced","4 garlic cloves","6 cups (1.4 L) chicken broth","3 cups kale or collard greens, very thinly sliced","3 tbsp olive oil","Salt and pepper"],prep:"Cook onion and garlic in olive oil until soft. Add potatoes and broth. Simmer 20 minutes until potatoes are completely tender. Blend until smooth. Return to pot. Add chouriço and kale. Simmer 5 more minutes until kale is just wilted but still bright green. Season with salt and pepper. Drizzle with olive oil."},
-      {name:"Greek Avgolemono",servings:"4 servings",ingredients:["6 cups (1.4 L) chicken broth","½ cup orzo or long grain rice","2 eggs","Juice of 2 lemons","2 cups cooked chicken, shredded (optional)","Salt and white pepper","Fresh dill to garnish"],prep:"Bring broth to a boil. Add orzo and cook until tender. Reduce heat to very low. Whisk eggs until frothy. Gradually whisk in lemon juice. Slowly ladle 1 cup of hot broth into egg mixture while whisking constantly to temper. Pour egg mixture back into pot while stirring. Do not boil after this point or eggs will curdle. Add chicken if using. Season with salt and white pepper. Garnish with dill."},
-      {name:"Thai Tom Kha Gai",servings:"4 servings",ingredients:["400 g (14 oz) boneless chicken thighs, sliced","2 cans (14 oz each) coconut milk","2 cups (480 ml) chicken broth","3 stalks lemongrass, bruised","4 kaffir lime leaves","4 slices galangal or ginger","3 Thai chilies","3 tbsp fish sauce","3 tbsp lime juice","200 g (7 oz) mushrooms","Cherry tomatoes","Fresh cilantro"],prep:"Bring coconut milk, broth, lemongrass, lime leaves, galangal, and chilies to a simmer. Cook 10 minutes to infuse flavors. Add chicken and mushrooms. Simmer 10 minutes until chicken is cooked. Add tomatoes and cook 2 minutes. Season with fish sauce and lime juice. Garnish with cilantro. Remove lemongrass and lime leaves before serving."},
-      {name:"Moroccan Harira",servings:"6 servings",ingredients:["200 g (7 oz) lamb shoulder, cubed","1 cup (190 g) red lentils","1 can (14 oz) chickpeas, drained","1 can (14 oz) crushed tomatoes","1 onion, diced","3 celery stalks, diced","4 garlic cloves","½ cup fresh cilantro and parsley","2 tsp cumin","1 tsp turmeric","1 tsp cinnamon","Juice of 1 lemon","Salt and pepper","Dates and bread to serve"],prep:"Brown lamb in a large pot. Add onion, celery, and garlic and cook until soft. Add all spices. Add tomatoes, lentils, chickpeas, and 8 cups water. Bring to a boil. Simmer 45 minutes until lentils are tender and soup is thick. Add cilantro, parsley, and lemon juice. Season with salt and pepper. Traditionally served to break the Ramadan fast."},
-      {name:"Ethiopian Red Lentil Soup",servings:"4 servings",ingredients:["1½ cups (270 g) red lentils","1 onion, finely diced","4 garlic cloves","1-inch ginger, grated","1 can (14 oz) diced tomatoes","4 cups (960 ml) vegetable broth","2 tbsp berbere spice blend","3 tbsp niter kibbeh (spiced butter) or regular butter","Salt","Injera or bread to serve"],prep:"Heat niter kibbeh in a pot. Cook onion until very soft and golden. Add garlic and ginger. Add berbere and cook 2 minutes. Add lentils, tomatoes, and broth. Simmer 25 minutes until lentils are completely dissolved. Season with salt. This Misir Wat is traditionally served with injera flatbread."},
-      {name:"Russian Solyanka",servings:"4 servings",ingredients:["200 g (7 oz) mixed cured meats — ham, salami, kielbasa","2 dill pickles, diced","1 onion, diced","3 garlic cloves","2 tbsp tomato paste","4 cups (960 ml) beef broth","2 tbsp capers","2 tbsp black olives","1 tbsp butter","Salt, pepper, and sugar","Sour cream, lemon, and dill to serve"],prep:"Cook onion in butter until golden. Add garlic and tomato paste and cook 2 minutes. Add meats and cook 3 minutes. Add broth, pickles, capers, and olives. Simmer 20 minutes. Season with salt, pepper, and a pinch of sugar to balance. Serve with a dollop of sour cream, a slice of lemon, and fresh dill. This sour, salty, hearty soup is beloved in Russia."},
-      {name:"Brazilian Feijoada",servings:"8 servings",ingredients:["500 g (1 lb) dried black beans, soaked overnight","300 g (10.5 oz) smoked pork sausage","200 g (7 oz) bacon, cubed","200 g (7 oz) salt pork or pork ribs","1 onion, diced","6 garlic cloves","2 bay leaves","Salt and pepper","Steamed rice, farofa, and orange slices to serve"],prep:"Cook soaked beans in fresh water until almost tender — about 1 hour. In a separate pot brown bacon and salt pork. Add sausage and cook. Add onion and garlic and cook until soft. Add beans with their liquid and bay leaves. Simmer 1–1.5 hours until beans are completely tender and liquid is thickened. Season with salt and pepper. Serve with steamed rice, farofa, and fresh orange slices."},
-      {name:"Japanese Tonjiru",servings:"4 servings",ingredients:["300 g (10.5 oz) pork belly or shoulder, thinly sliced","1 cup daikon, cubed","2 carrots, sliced","1 onion, sliced","2 potatoes, cubed","3 tbsp miso paste","4 cups (960 ml) dashi broth","1 tsp sesame oil","Green onions and togarashi to serve"],prep:"Heat sesame oil in a pot. Cook pork until lightly browned. Add all vegetables and stir fry 3 minutes. Add dashi and bring to a boil. Reduce heat and simmer 20 minutes until vegetables are tender. Dissolve miso in a ladle of broth then stir into pot. Do not boil after adding miso. Serve topped with green onions and a sprinkle of togarashi."},
-      {name:"Chinese Hot and Sour Soup",servings:"4 servings",ingredients:["200 g (7 oz) firm tofu, julienned","1 cup mushrooms, julienned","½ cup bamboo shoots, julienned","3 eggs, beaten","6 cups (1.4 L) chicken broth","3 tbsp soy sauce","4 tbsp rice vinegar","2 tbsp chili paste","2 tbsp cornstarch mixed with 3 tbsp water","1 tsp white pepper","Sesame oil and green onions"],prep:"Bring broth to a boil. Add mushrooms, bamboo shoots, tofu, soy sauce, vinegar, chili paste, and white pepper. Simmer 5 minutes. Stir in cornstarch mixture and cook until slightly thickened. Slowly pour beaten eggs in a thin stream while stirring to create egg ribbons. Drizzle with sesame oil. Garnish with green onions."},
-      {name:"Lebanese Lentil Soup",servings:"4 servings",ingredients:["1½ cups (270 g) red lentils","1 large onion, diced","4 garlic cloves","1 tsp cumin","1 tsp turmeric","½ tsp coriander","6 cups (1.4 L) vegetable broth","Juice of 1–2 lemons","3 tbsp olive oil","Salt and pepper","Crispy fried onion and lemon wedges to serve"],prep:"Heat olive oil in a large pot. Cook onion until deeply golden — about 20 minutes. Reserve half for garnish. Add garlic and spices and cook 1 minute. Add lentils and broth. Simmer 25 minutes until lentils are completely dissolved. Blend until smooth. Season generously with lemon juice, salt, and pepper. The lemon is crucial — be generous. Serve topped with crispy onions and extra lemon wedges."}
+    "id": "broths",
+    "icon": "🍲",
+    "name": "Broths",
+    "desc": "Stocks and broths for sipping or cooking.",
+    "recipes": [
+      {
+        "name": "Homemade Chicken Broth",
+        "servings": "8 cups",
+        "ingredients": [
+          "1 whole chicken carcass or 1 kg chicken bones",
+          "2 carrots, roughly chopped",
+          "2 celery stalks, roughly chopped",
+          "1 onion, quartered",
+          "4 garlic cloves",
+          "1 leek, roughly chopped",
+          "Fresh thyme, parsley stems, and bay leaf",
+          "1 tbsp peppercorns",
+          "12 cups (2.8 L) cold water",
+          "1 tbsp apple cider vinegar"
+        ],
+        "prep": "Place chicken bones in a large pot. Cover with cold water and bring to a boil. Drain and rinse bones — this removes impurities and results in a clearer broth. Return bones to clean pot with all vegetables, herbs, peppercorns, and vinegar. Cover with 12 cups cold water. Bring to a bare simmer. Cook uncovered 3–4 hours skimming foam occasionally. Strain through a fine sieve. Cool and refrigerate. Skim solidified fat from surface before using."
+      },
+      {
+        "name": "Bone Broth",
+        "servings": "8 cups",
+        "ingredients": [
+          "1.5 kg (3 lbs) beef or chicken bones",
+          "2 tbsp apple cider vinegar",
+          "3 carrots, roughly chopped",
+          "3 celery stalks",
+          "1 onion, quartered",
+          "4 garlic cloves",
+          "Fresh thyme, parsley, and bay leaf",
+          "1 tbsp peppercorns",
+          "12 cups (2.8 L) cold water"
+        ],
+        "prep": "Roast bones at 450°F for 30 minutes until browned — this adds color and flavor. Transfer to a large stockpot. Add vinegar and water. Let sit 30 minutes before heating — the acid draws minerals from the bones. Bring to a boil. Skim foam. Add vegetables and herbs. Reduce to the lowest possible simmer. Cook 12–24 hours for beef, 6–8 hours for chicken. Strain and season lightly with salt."
+      },
+      {
+        "name": "Vegetable Broth",
+        "servings": "8 cups",
+        "ingredients": [
+          "3 carrots, roughly chopped",
+          "3 celery stalks with leaves",
+          "2 onions, quartered",
+          "1 leek, roughly chopped",
+          "4 garlic cloves",
+          "2 tomatoes, quartered",
+          "1 cup mushroom stems",
+          "Fresh thyme, parsley, and bay leaf",
+          "1 tbsp peppercorns",
+          "12 cups (2.8 L) cold water",
+          "2 tbsp soy sauce"
+        ],
+        "prep": "Place all vegetables and herbs in a large pot. Cover with cold water. Bring to a boil. Reduce heat and simmer uncovered 1–1.5 hours. Add soy sauce for extra depth. Strain through a fine sieve pressing vegetables to extract maximum flavor. Cool and refrigerate. Use within 5 days or freeze."
+      },
+      {
+        "name": "Fish Stock",
+        "servings": "6 cups",
+        "ingredients": [
+          "1 kg (2 lbs) fish bones and heads — non-oily fish like sole or halibut",
+          "1 onion, sliced",
+          "2 celery stalks",
+          "1 leek",
+          "1 cup (240 ml) dry white wine",
+          "Fresh parsley, thyme, and bay leaf",
+          "1 tbsp peppercorns",
+          "7 cups (1.7 L) cold water"
+        ],
+        "prep": "Soak fish bones in cold salted water 30 minutes to remove blood. Rinse well. Place in a large pot with all vegetables, wine, herbs, and peppercorns. Cover with cold water. Bring to a bare simmer — do not boil or the stock turns bitter. Simmer 20 minutes only — fish stock becomes bitter if cooked too long. Strain through a fine sieve. Use immediately or freeze."
+      },
+      {
+        "name": "Dashi Broth",
+        "servings": "4 cups",
+        "ingredients": [
+          "10 g (0.35 oz) kombu seaweed",
+          "20 g (0.7 oz) katsuobushi (dried bonito flakes)",
+          "4 cups (960 ml) cold water"
+        ],
+        "prep": "Combine kombu and cold water in a pot. Let soak 30 minutes. Heat over medium heat. Just before boiling remove kombu. Bring to a boil. Add bonito flakes and turn off heat immediately. Let steep 5 minutes — do not stir. Strain through a fine sieve lined with cheesecloth. This fundamental Japanese broth is the base for miso soup, noodle broths, and many Japanese dishes. Use fresh."
+      }
+    ]
+  },
+  {
+    "id": "bisques",
+    "icon": "🍲",
+    "name": "Bisques",
+    "desc": "Smooth, creamy bisques.",
+    "recipes": [
+      {
+        "name": "Lobster Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 lobster tails, cooked, meat removed, shells reserved",
+          "1 onion, diced",
+          "2 celery stalks, diced",
+          "2 carrots, diced",
+          "4 garlic cloves",
+          "3 tbsp tomato paste",
+          "½ cup (120 ml) brandy or cognac",
+          "3 cups (720 ml) seafood broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Fresh tarragon",
+          "Salt, pepper, and cayenne"
+        ],
+        "prep": "Make stock by simmering lobster shells with vegetables and broth 30 minutes. Strain. Melt butter in a pot. Cook onion, celery, and carrot until soft. Add garlic and tomato paste and cook 2 minutes. Add brandy and cook until evaporated. Add lobster stock and simmer 15 minutes. Blend until smooth. Strain through a fine sieve. Add cream and simmer 5 minutes. Season with salt, pepper, and cayenne. Add lobster meat and heat gently."
+      },
+      {
+        "name": "Shrimp Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) shrimp, shells reserved",
+          "1 onion, diced",
+          "2 celery stalks, diced",
+          "2 carrots, diced",
+          "4 garlic cloves",
+          "3 tbsp tomato paste",
+          "¼ cup (60 ml) dry sherry",
+          "3 cups (720 ml) seafood broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Fresh tarragon",
+          "Cayenne and salt"
+        ],
+        "prep": "Sauté shrimp shells in butter until pink and fragrant. Add vegetables and cook until soft. Add tomato paste and cook 2 minutes. Add sherry and cook until evaporated. Add broth and simmer 20 minutes. Strain. Return liquid to pot. Add cream and shrimp and simmer 5 minutes. Blend until very smooth. Season with cayenne, salt, and tarragon."
+      },
+      {
+        "name": "Crab Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "300 g (10.5 oz) lump crab meat",
+          "1 onion, diced",
+          "2 celery stalks, diced",
+          "3 garlic cloves",
+          "3 tbsp tomato paste",
+          "¼ cup (60 ml) dry sherry",
+          "3 cups (720 ml) seafood broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Old Bay seasoning",
+          "Salt and cayenne",
+          "Fresh chives to garnish"
+        ],
+        "prep": "Melt butter and cook onion, celery, and garlic until soft. Add tomato paste and cook 2 minutes. Add sherry and reduce. Add broth and simmer 15 minutes. Blend until smooth. Add cream and simmer 5 minutes. Season with Old Bay, salt, and cayenne. Add crab meat and heat gently. Garnish with chives."
+      },
+      {
+        "name": "Tomato Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (28 oz each) San Marzano tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "½ cup (120 ml) dry white wine",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "1 tsp sugar",
+          "Fresh basil",
+          "Salt and pepper"
+        ],
+        "prep": "Melt butter in a pot. Cook onion until very soft. Add garlic and cook 1 minute. Add wine and reduce. Add tomatoes and sugar. Simmer 20 minutes. Blend until perfectly smooth. Strain through a fine sieve for a silky texture. Return to pot. Add cream and basil. Season with salt and pepper."
+      },
+      {
+        "name": "Roasted Garlic and Brie Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 heads garlic, roasted",
+          "200 g (7 oz) Brie, rind removed and cubed",
+          "1 onion, diced",
+          "4 cups (960 ml) chicken broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Fresh thyme",
+          "Salt and white pepper"
+        ],
+        "prep": "Roast garlic heads at 400°F for 45 minutes. Squeeze out cloves. Cook onion in butter until very soft. Add roasted garlic and thyme. Add broth and simmer 15 minutes. Blend until smooth. Add cream and heat through. Remove from heat and stir in Brie until melted and incorporated. Season with salt and white pepper."
+      },
+      {
+        "name": "Corn Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 ears corn, kernels cut off and cobs reserved",
+          "1 onion, diced",
+          "3 garlic cloves",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Fresh thyme",
+          "Salt, pepper, and smoked paprika",
+          "Crispy bacon and chives to garnish"
+        ],
+        "prep": "Simmer corn cobs in broth 30 minutes to extract maximum corn flavor. Discard cobs. Cook onion in butter until soft. Add garlic and most of the corn kernels. Add broth. Simmer 15 minutes. Blend until smooth. Strain through a sieve for a silky texture. Add cream. Season with salt, pepper, and smoked paprika. Garnish with reserved corn kernels, crispy bacon, and chives."
+      },
+      {
+        "name": "Fennel Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 large fennel bulbs, sliced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "½ cup (120 ml) dry white wine",
+          "4 cups (960 ml) vegetable broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "Salt and white pepper",
+          "Fennel fronds and olive oil to garnish"
+        ],
+        "prep": "Melt butter and cook fennel and onion over medium-low heat until very soft and slightly caramelized — about 25 minutes. Add garlic. Add wine and reduce. Add broth and simmer 20 minutes. Blend until very smooth. Strain through a sieve. Add cream. Season with salt and white pepper. Garnish with fennel fronds and a drizzle of olive oil."
+      },
+      {
+        "name": "Pumpkin Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 can (29 oz) pumpkin puree or 2 cups roasted pumpkin",
+          "1 onion, diced",
+          "3 garlic cloves",
+          "1-inch ginger, grated",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 cup (240 ml) coconut milk",
+          "4 tbsp butter",
+          "1 tsp cinnamon",
+          "½ tsp nutmeg",
+          "Salt, pepper, and cayenne",
+          "Toasted pepitas and cream to garnish"
+        ],
+        "prep": "Cook onion in butter until soft. Add garlic and ginger and cook 1 minute. Add pumpkin, broth, cinnamon, and nutmeg. Simmer 15 minutes. Blend until very smooth. Add coconut milk. Season with salt, pepper, and cayenne. Garnish with a swirl of cream and toasted pepitas."
+      },
+      {
+        "name": "Roasted Poblano Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 poblano peppers, roasted and peeled",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "4 cups (960 ml) chicken broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "1 tsp cumin",
+          "Salt and pepper",
+          "Crème fraîche and cilantro to garnish"
+        ],
+        "prep": "Roast poblanos over flame or under broiler until charred. Peel, seed, and roughly chop. Cook onion in butter until soft. Add garlic and cumin. Add roasted poblanos and broth. Simmer 15 minutes. Blend until smooth. Add cream. Season with salt and pepper. Garnish with crème fraîche and fresh cilantro."
+      },
+      {
+        "name": "Butternut Squash Bisque",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large butternut squash, roasted until caramelized",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1-inch ginger, grated",
+          "4 cups (960 ml) vegetable broth",
+          "1 cup (240 ml) heavy cream",
+          "4 tbsp butter",
+          "1 tsp cumin",
+          "½ tsp cinnamon",
+          "Salt, pepper, and nutmeg"
+        ],
+        "prep": "Roast butternut squash at 425°F until deeply caramelized. Scoop out flesh. Cook onion in butter until golden. Add garlic, ginger, cumin, and cinnamon. Add squash and broth. Simmer 15 minutes. Blend until very smooth. Strain if desired for a silky texture. Add cream. Season with salt, pepper, and nutmeg."
+      }
+    ]
+  },
+  {
+    "id": "slow_cooker_soups",
+    "icon": "🍲",
+    "name": "Slow Cooker Soups",
+    "desc": "Soups made low and slow in the slow cooker.",
+    "recipes": [
+      {
+        "name": "Slow Cooker Chicken Noodle Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) bone-in chicken thighs",
+          "3 carrots, sliced",
+          "3 celery stalks, sliced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "6 cups (1.4 L) chicken broth",
+          "Fresh thyme and bay leaf",
+          "2 cups egg noodles",
+          "Salt and pepper",
+          "Fresh parsley"
+        ],
+        "prep": "Place chicken, vegetables, broth, and herbs in slow cooker. Cook on low 7–8 hours. Remove chicken and shred. Return meat to slow cooker. Turn to high. Add egg noodles and cook 20–30 minutes until tender. Remove bay leaf. Season with salt and pepper. Garnish with parsley."
+      },
+      {
+        "name": "Slow Cooker White Bean Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cans (14 oz each) cannellini beans, drained",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "2 carrots, diced",
+          "3 celery stalks, diced",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 can (14 oz) diced tomatoes",
+          "200 g (7 oz) Italian sausage, sliced",
+          "Fresh rosemary and thyme",
+          "Salt, pepper, and red pepper flakes"
+        ],
+        "prep": "Combine all ingredients in slow cooker. Cook on low 6–8 hours. Mash some beans against the side for a thicker texture. Season with salt, pepper, and red pepper flakes."
+      },
+      {
+        "name": "Slow Cooker Lentil Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "1½ cups (270 g) green or red lentils, rinsed",
+          "1 onion, diced",
+          "3 carrots, diced",
+          "3 celery stalks, diced",
+          "4 garlic cloves",
+          "1 can (14 oz) diced tomatoes",
+          "6 cups (1.4 L) vegetable broth",
+          "2 tsp cumin",
+          "1 tsp smoked paprika",
+          "½ tsp turmeric",
+          "Juice of 1 lemon",
+          "Salt and pepper",
+          "Fresh parsley"
+        ],
+        "prep": "Combine all ingredients except lemon juice in slow cooker. Cook on low 8 hours or high 4 hours until lentils are completely tender. Add lemon juice. Season with salt and pepper. Garnish with parsley."
+      },
+      {
+        "name": "Slow Cooker Split Pea Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "500 g (1 lb) dried split peas, rinsed",
+          "1 ham hock or 2 cups diced ham",
+          "1 onion, diced",
+          "3 carrots, diced",
+          "3 celery stalks, diced",
+          "4 garlic cloves",
+          "8 cups (1.9 L) chicken broth",
+          "Bay leaves and thyme",
+          "Salt and pepper"
+        ],
+        "prep": "Place all ingredients in slow cooker. Cook on low 8–10 hours until split peas have completely dissolved and soup is thick. Remove ham hock and shred meat. Return meat to soup. Remove bay leaves. Season with salt and pepper. If too thick add more broth."
+      },
+      {
+        "name": "Slow Cooker Minestrone",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 can (14 oz) cannellini beans, drained",
+          "1 can (14 oz) diced tomatoes",
+          "2 carrots, diced",
+          "2 celery stalks, diced",
+          "1 onion, diced",
+          "2 zucchini, diced",
+          "4 garlic cloves",
+          "6 cups (1.4 L) vegetable broth",
+          "1 tsp Italian seasoning",
+          "1 cup small pasta — added last hour",
+          "2 cups spinach",
+          "Salt, pepper, and Parmesan"
+        ],
+        "prep": "Place all vegetables, beans, tomatoes, broth, and Italian seasoning in slow cooker. Cook on low 6–8 hours. One hour before serving add pasta. Turn to high and cook until pasta is tender. Add spinach and stir until wilted. Season with salt and pepper. Serve with Parmesan."
+      },
+      {
+        "name": "Slow Cooker Potato Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "6 large potatoes, peeled and diced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "4 cups (960 ml) chicken broth",
+          "1 cup sour cream",
+          "1 cup cheddar, shredded",
+          "4 strips bacon, cooked and crumbled",
+          "Salt, pepper, and chives"
+        ],
+        "prep": "Place potatoes, onion, garlic, and broth in slow cooker. Cook on low 7–8 hours until potatoes are completely tender. Mash roughly against the sides — leave some chunks. Stir in sour cream and cheddar until melted and smooth. Season with salt and pepper. Serve topped with bacon and chives."
+      },
+      {
+        "name": "Slow Cooker Chicken Tortilla Soup",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) boneless chicken thighs",
+          "1 can (14 oz) black beans, drained",
+          "1 can (14 oz) corn",
+          "1 can (28 oz) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 jalapeño, diced",
+          "4 cups (960 ml) chicken broth",
+          "2 tsp cumin",
+          "1 tsp chili powder",
+          "Salt and pepper",
+          "Toppings: tortilla strips, avocado, sour cream"
+        ],
+        "prep": "Place all ingredients in slow cooker. Cook on low 7–8 hours. Remove chicken and shred. Return to slow cooker. Stir well and season with salt and pepper. Serve with crispy tortilla strips, avocado, and sour cream."
+      },
+      {
+        "name": "Slow Cooker Seafood Chowder",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) mixed seafood — shrimp, scallops, white fish",
+          "3 potatoes, cubed",
+          "1 onion, diced",
+          "3 celery stalks, diced",
+          "3 garlic cloves",
+          "3 cups (720 ml) clam juice or seafood broth",
+          "1 cup (240 ml) heavy cream",
+          "3 tbsp butter",
+          "Salt, pepper, and Old Bay seasoning"
+        ],
+        "prep": "Place potatoes, onion, celery, garlic, and broth in slow cooker. Cook on low 6 hours until potatoes are tender. Add seafood and cream in the last 30 minutes of cooking — do not cook seafood too long or it becomes rubbery. Add butter. Season with salt, pepper, and Old Bay."
+      },
+      {
+        "name": "Slow Cooker Tomato Basil Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (28 oz each) crushed tomatoes",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "2 cups (480 ml) vegetable broth",
+          "1 tbsp sugar",
+          "1 cup heavy cream",
+          "Large handful fresh basil",
+          "3 tbsp butter",
+          "Salt and pepper"
+        ],
+        "prep": "Place tomatoes, onion, garlic, broth, sugar, and butter in slow cooker. Cook on low 6–8 hours. Blend until smooth using an immersion blender. Stir in cream and fresh basil. Season with salt and pepper. Serve with grilled cheese."
+      },
+      {
+        "name": "Slow Cooker French Onion Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 large yellow onions, thinly sliced",
+          "4 tbsp butter",
+          "1 cup (240 ml) dry white wine",
+          "5 cups (1.2 L) beef broth",
+          "Fresh thyme and bay leaf",
+          "Salt and pepper",
+          "Gruyère croutons to serve"
+        ],
+        "prep": "Combine onions, butter, and a pinch of salt in slow cooker. Cook on high 8–10 hours until onions are very deeply caramelized — the long cook creates incredible sweetness. Add wine, broth, thyme, and bay leaf. Cook another 2 hours. Season with salt and pepper. Ladle into oven-safe bowls with Gruyère toasted bread and broil until bubbly."
+      },
+      {
+        "name": "Slow Cooker Vegetable Curry Soup",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (14 oz each) chickpeas, drained",
+          "1 can (14 oz) coconut milk",
+          "2 cups (480 ml) vegetable broth",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1-inch ginger, grated",
+          "2 tbsp curry powder",
+          "1 tsp turmeric",
+          "1 tsp cumin",
+          "2 cups sweet potato, cubed",
+          "2 cups spinach",
+          "Salt and lime juice"
+        ],
+        "prep": "Place all ingredients except spinach in slow cooker. Cook on low 7–8 hours. Add spinach in the last 30 minutes. Season with salt and lime juice. Serve over basmati rice."
+      }
+    ]
+  },
+  {
+    "id": "slow_cooker_stews",
+    "icon": "🥘",
+    "name": "Slow Cooker Stews",
+    "desc": "Hearty stews made in the slow cooker.",
+    "recipes": [
+      {
+        "name": "Slow Cooker Beef Stew",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) beef chuck, cubed",
+          "3 potatoes, cubed",
+          "3 carrots, sliced",
+          "2 celery stalks, sliced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 cup (240 ml) red wine",
+          "2 cups (480 ml) beef broth",
+          "2 tbsp tomato paste",
+          "2 tbsp flour",
+          "Fresh thyme and bay leaf",
+          "Salt and pepper"
+        ],
+        "prep": "Dust beef with flour, salt, and pepper. Brown in a skillet over high heat then transfer to slow cooker. Add all vegetables, wine, broth, tomato paste, thyme, and bay leaf. Cook on low 8 hours or high 4–5 hours until beef is very tender. Remove bay leaf. Adjust seasoning. The long slow cook develops incredibly deep flavor."
+      },
+      {
+        "name": "Slow Cooker Pulled Pork Stew",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 kg (2 lbs) pork shoulder",
+          "1 onion, sliced",
+          "4 garlic cloves",
+          "1 can (28 oz) crushed tomatoes",
+          "1 cup (240 ml) chicken broth",
+          "2 tbsp Worcestershire sauce",
+          "1 tbsp brown sugar",
+          "1 tsp smoked paprika",
+          "1 tsp cumin",
+          "Salt and pepper"
+        ],
+        "prep": "Season pork generously with salt and paprika. Place onion in bottom of slow cooker. Set pork on top. Mix tomatoes, broth, Worcestershire, brown sugar, and cumin. Pour over pork. Cook on low 8–10 hours. Shred pork with two forks. Stir everything together. Season with salt and pepper."
+      },
+      {
+        "name": "Slow Cooker Lamb Stew",
+        "servings": "4 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) lamb shoulder, cubed",
+          "3 potatoes, cubed",
+          "2 carrots, sliced",
+          "1 onion, diced",
+          "4 garlic cloves",
+          "1 cup (240 ml) red wine",
+          "2 cups (480 ml) chicken broth",
+          "2 tbsp tomato paste",
+          "Fresh rosemary and thyme",
+          "Salt and pepper"
+        ],
+        "prep": "Brown lamb in a skillet. Transfer to slow cooker with all remaining ingredients. Cook on low 8 hours until lamb is very tender. Season with salt and pepper."
+      },
+      {
+        "name": "Slow Cooker Chicken Posole",
+        "servings": "6 servings",
+        "ingredients": [
+          "700 g (1.5 lbs) boneless chicken thighs",
+          "2 cans (29 oz each) hominy, drained",
+          "4 cups (960 ml) chicken broth",
+          "2 dried guajillo chilies, toasted and soaked",
+          "1 onion",
+          "4 garlic cloves",
+          "1 tsp cumin",
+          "1 tsp oregano",
+          "Salt",
+          "Toppings: shredded cabbage, radishes, lime, dried oregano, tostadas"
+        ],
+        "prep": "Blend soaked chilies with garlic, cumin, and oregano until smooth. Strain. Place chicken, hominy, broth, onion, and chili sauce in slow cooker. Cook on low 7–8 hours. Remove chicken and shred. Return to pot. Season with salt. Serve with all toppings on the side."
+      }
     ]
   }
-
 ];
-
-
-
-// ================================================================
-//  TOGGLE CATEGORY — shows/hides recipe list under a card
-// ================================================================
-function toggleCategory(catId) {
-  var ul = document.getElementById(catId);
-  if (!ul) return;
-
-  if (ul.style.display === 'block') {
-    ul.style.display = 'none';
-    return;
-  }
-
-  var cat = soups_and_stews_data.find(function(c) { return c.id === catId; });
-  if (!cat) return;
-
-  if (ul.innerHTML === '') {
-    cat.recipes.forEach(function(recipe, idx) {
-      var li = document.createElement('li');
-      li.className = 'browser-item';
-      li.innerHTML =
-        '<span class="browser-item-name">' + recipe.name + '</span>' +
-        '<span class="browser-item-arrow">›</span>';
-      li.addEventListener('click', function() {
-        open_recipe_modal(recipe, catId);
-      });
-      ul.appendChild(li);
-    });
-  }
-
-  ul.style.display = 'block';
-}
-
-

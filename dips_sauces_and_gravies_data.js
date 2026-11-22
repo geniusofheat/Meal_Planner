@@ -1,9 +1,5 @@
 const dips_sauces_and_gravies_data = [
-
-// ============================================================
-//  DIPS — 10 recipes
-// ============================================================
-{
+  {
     "id": "dips",
     "icon": "🥣",
     "name": "Dips",
@@ -170,17 +166,13 @@ const dips_sauces_and_gravies_data = [
       }
     ]
   },
-
-// ============================================================
-//  SAUCES — 10 recipes
-// ============================================================
   {
     "id": "sauces",
     "icon": "🫕",
     "name": "Sauces",
     "desc": "Classic BBQ, teriyaki, marinara, Alfredo, hollandaise, chimichurri, basil pesto, honey mustard, classic buffalo, and homemade sweet and sour sauce.",
     "recipes": [
-    	      {
+      {
         "name": "Garlic Parmesan Sauce",
         "servings": "8 servings (about 1 cup)",
         "ingredients": [
@@ -211,7 +203,20 @@ const dips_sauces_and_gravies_data = [
         ],
         "prep": "Combine ketchup, horseradish, lemon juice, Worcestershire sauce, hot sauce, and garlic powder in a bowl. Stir together until fully combined. Taste and adjust — add more horseradish for extra heat and sharpness, more lemon juice for brightness, or more hot sauce for a spicier kick. The horseradish is the backbone of this sauce so do not be shy with it. Season lightly with salt and black pepper. Cover and refrigerate at least 30 minutes before serving — the resting time is important as the flavors sharpen and come together significantly as the sauce chills. Keeps in an airtight container in the refrigerator up to 2 weeks. Serve cold alongside chilled shrimp cocktail, crab claws, oysters, and fried seafood."
       },
-      {name:"Tartar Sauce",servings:"4 servings",ingredients:["1 cup mayonnaise","2 tbsp dill pickles, finely chopped","1 tbsp capers, chopped (optional)","1 tsp lemon juice","1 tsp Dijon mustard (optional)","1 tsp fresh parsley, chopped","Salt and pepper to taste"],prep:"In a bowl, combine mayonnaise, chopped pickles, capers, lemon juice, mustard, and parsley. Mix until smooth. Season with salt and pepper to taste. Chill for at least 30 minutes before serving."},
+      {
+        "name": "Tartar Sauce",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup mayonnaise",
+          "2 tbsp dill pickles, finely chopped",
+          "1 tbsp capers, chopped (optional)",
+          "1 tsp lemon juice",
+          "1 tsp Dijon mustard (optional)",
+          "1 tsp fresh parsley, chopped",
+          "Salt and pepper to taste"
+        ],
+        "prep": "In a bowl, combine mayonnaise, chopped pickles, capers, lemon juice, mustard, and parsley. Mix until smooth. Season with salt and pepper to taste. Chill for at least 30 minutes before serving."
+      },
       {
         "name": "Classic Homemade BBQ Sauce",
         "servings": "12 servings (about 2 cups)",
@@ -364,10 +369,6 @@ const dips_sauces_and_gravies_data = [
       }
     ]
   },
-
-// ============================================================
-//  GRAVIES — 10 recipes
-// ============================================================
   {
     "id": "gravies",
     "icon": "🥘",
@@ -526,39 +527,4 @@ const dips_sauces_and_gravies_data = [
       }
     ]
   }
-  ];
-
-
-
-// ================================================================
-//  TOGGLE CATEGORY — shows/hides recipe list under a card
-// ================================================================
-function toggleCategory(catId) {
-  var ul = document.getElementById(catId);
-  if (!ul) return;
-
-  if (ul.style.display === 'block') {
-    ul.style.display = 'none';
-    return;
-  }
-
-  var cat = dips_sauces_and_gravies_data.find(function(c) { return c.id === catId; });
-  if (!cat) return;
-
-  if (ul.innerHTML === '') {
-    cat.recipes.forEach(function(recipe, idx) {
-      var li = document.createElement('li');
-      li.className = 'browser-item';
-      li.innerHTML =
-        '<span class="browser-item-name">' + recipe.name + '</span>' +
-        '<span class="browser-item-arrow">›</span>';
-      li.addEventListener('click', function() {
-        open_recipe_modal(recipe, catId);
-      });
-      ul.appendChild(li);
-    });
-  }
-
-  ul.style.display = 'block';
-}
-
+];

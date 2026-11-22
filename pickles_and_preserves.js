@@ -1,5 +1,4 @@
 const pickles_and_preserves = [
-
   {
     "id": "pickles",
     "icon": "🥒",
@@ -241,41 +240,134 @@ const pickles_and_preserves = [
         "notes": "Cure at least 2 days before eating, best after 1 week. Keep refrigerated and use within 1 month."
       }
     ]
+  },
+  {
+    "id": "jams",
+    "icon": "🍓",
+    "name": "Jams",
+    "desc": "Fruit jams for toast, baking and gifting.",
+    "recipes": [
+      {
+        "name": "Blackberry Jam",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (580 g) fresh or frozen blackberries",
+          "3 cups (600 g) sugar",
+          "2 tbsp lemon juice"
+        ],
+        "prep": "Mash blackberries in a large heavy pot. Add sugar and lemon juice. Bring to a boil over medium-high heat, stirring constantly. Cook until mixture thickens and reaches 220°F, about 20 minutes. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Blueberry Jam",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (580 g) fresh blueberries",
+          "2½ cups (500 g) sugar",
+          "3 tbsp lemon juice",
+          "1 packet (1.75 oz) powdered pectin"
+        ],
+        "prep": "Crush blueberries in a large pot. Stir in lemon juice and pectin. Bring to a full rolling boil. Add all sugar at once and return to a hard boil. Boil 1 minute, stirring constantly. Skim foam. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Classic Strawberry Jam",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (600 g) crushed fresh strawberries",
+          "3 cups (600 g) sugar",
+          "2 tbsp lemon juice"
+        ],
+        "prep": "Combine crushed strawberries, sugar, and lemon juice in a large heavy-bottomed pot. Bring to a boil over medium-high heat, stirring constantly. Continue boiling and stirring until mixture thickens and reaches 220°F on a candy thermometer, about 20 minutes. Skim foam. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Plum Jam",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (680 g) pitted diced plums",
+          "3 cups (600 g) sugar",
+          "2 tbsp lemon juice",
+          "1 tsp cinnamon"
+        ],
+        "prep": "Combine plums, sugar, lemon juice, and cinnamon in a heavy pot. Bring to a boil over medium-high heat, stirring often. Cook until thickened and reaching 220°F, about 25 minutes. Skim foam. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Raspberry Jam",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (500 g) fresh raspberries",
+          "3 cups (600 g) sugar",
+          "2 tbsp lemon juice"
+        ],
+        "prep": "Combine raspberries, sugar, and lemon juice in a heavy pot. Bring to a boil over medium-high heat, stirring constantly. Cook until thickened and reaching 220°F, about 15 minutes. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      }
+    ]
+  },
+  {
+    "id": "jellies",
+    "icon": "🍇",
+    "name": "Jellies",
+    "desc": "Clear fruit jellies.",
+    "recipes": [
+      {
+        "name": "Apple Jelly",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (960 ml) fresh apple juice or cider",
+          "1 packet (1.75 oz) powdered pectin",
+          "3 cups (600 g) sugar",
+          "1 tsp cinnamon"
+        ],
+        "prep": "Combine apple juice and pectin in a pot. Bring to a full rolling boil. Add sugar and cinnamon all at once and return to a hard boil. Boil exactly 1 minute, stirring constantly. Skim foam. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Grape Jelly",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (960 ml) pure grape juice",
+          "1 packet (1.75 oz) powdered pectin",
+          "3 cups (600 g) sugar"
+        ],
+        "prep": "Combine grape juice and pectin in a large pot. Bring to a full rolling boil over high heat, stirring constantly. Add all sugar at once and return to a hard boil. Boil exactly 1 minute, stirring constantly. Skim foam. Pour into sterilized jars and seal. Process in a water bath 10 minutes."
+      }
+    ]
+  },
+  {
+    "id": "preserves",
+    "icon": "🍑",
+    "name": "Preserves",
+    "desc": "Whole-fruit preserves and marmalade.",
+    "recipes": [
+      {
+        "name": "Cherry Preserves",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (600 g) pitted sweet cherries",
+          "2½ cups (500 g) sugar",
+          "3 tbsp lemon juice"
+        ],
+        "prep": "Combine cherries, sugar, and lemon juice in a heavy pot. Bring to a boil over medium heat, stirring often. Simmer until thickened and syrupy, about 20 minutes. Skim foam. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Orange Marmalade",
+        "servings": "About 5 half-pint jars",
+        "ingredients": [
+          "4 large navel oranges",
+          "1 lemon",
+          "4 cups (800 g) sugar",
+          "3 cups (720 ml) water"
+        ],
+        "prep": "Slice oranges and lemon paper thin, removing seeds. Combine fruit and water in a large pot. Simmer uncovered 30 minutes until rind is soft. Add sugar and stir to dissolve. Boil rapidly until mixture reaches 220°F on a candy thermometer, about 25 minutes. Skim foam. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      },
+      {
+        "name": "Peach Preserves",
+        "servings": "About 4 half-pint jars",
+        "ingredients": [
+          "4 cups (680 g) peeled diced fresh peaches",
+          "2 cups (400 g) sugar",
+          "2 tbsp lemon juice",
+          "1 tsp vanilla extract"
+        ],
+        "prep": "Combine peaches, sugar, and lemon juice in a heavy pot. Let sit 30 minutes until juices release. Bring to a boil over medium heat, stirring often. Simmer until thick and glossy, about 30 minutes. Stir in vanilla. Pour into sterilized jars, seal, and process in a water bath 10 minutes."
+      }
+    ]
   }
-
 ];
-
-// ================================================================
-//  TOGGLE CATEGORY — shows/hides recipe list under a card
-//  (legacy accordion helper; kept for consistency with other
-//  category files, though the live inline recipe view no longer
-//  calls this)
-// ================================================================
-function toggleCategory(catId) {
-  var ul = document.getElementById(catId);
-  if (!ul) return;
-
-  if (ul.style.display === 'block') {
-    ul.style.display = 'none';
-    return;
-  }
-
-  var cat = pickles_and_preserves.find(function(c) { return c.id === catId; });
-  if (!cat) return;
-
-  if (ul.innerHTML === '') {
-    cat.recipes.forEach(function(recipe, idx) {
-      var li = document.createElement('li');
-      li.className = 'browser-item';
-      li.innerHTML =
-        '<span class="browser-item-name">' + recipe.name + '</span>' +
-        '<span class="browser-item-arrow">›</span>';
-      li.addEventListener('click', function() {
-        open_recipe_modal(recipe, catId);
-      });
-      ul.appendChild(li);
-    });
-  }
-
-  ul.style.display = 'block';
-}

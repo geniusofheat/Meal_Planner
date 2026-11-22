@@ -1,327 +1,613 @@
 const vegetables_data = [
-
-// ===========================
-// 🌱 SPROUTS
-// ===========================
-{
-  id: 'sprouts',
-  icon: '🌱',
-  name: 'Sprouts',
-  desc: 'Edible sprouts grown from seeds and legumes under controlled moisture, airflow, temperature, and light exposure.',
-  recipes: [
-    {
-      id: 'sp1',
-      name: 'Mung Bean Sprouts',
-      servings: 'N/A (growing batch)',
-      ingredients: [
-        '1/2 cup mung beans (raw, whole)',
-        'Wide-mouth glass jar',
-        'Sprouting mesh lid or cheesecloth',
-        'Cool filtered water'
-      ],
-      prep: 'Initial soak activates germination. After soak, sprouts must remain moist but never submerged. Proper airflow is required to prevent bacterial growth.',
-      growing_instructions: {
-        soak_phase: {
-          duration_hours: '8–12',
-          water_temp: 'Cool (60–75°F)',
-          purpose: 'Hydrates seed coat and initiates germination enzyme activity'
-        },
-
-        germination_phase: {
-          days_1_to_2: {
-            light: 'Dark or shaded cabinet',
-            action: 'Rinse and fully drain 2–3 times daily',
-            requirement: 'Jar must be angled for drainage (no standing water)',
-            expected_change: 'Seed splits and white tail emerges (1–5 mm)'
-          },
-
-          days_3_to_4: {
-            light: 'Indirect daylight only (no direct sun)',
-            action: 'Continue rinsing 2–3 times daily',
-            expected_change: 'Sprout elongates (1–2 inches), hulls loosen naturally',
-            warning: 'Overheating or poor drainage causes sour smell or mold'
-          }
-        },
-
-        harvest_conditions: {
-          ideal_length: '1–2 inches sprout length',
-          texture: 'Crisp, white with minimal yellowing',
-          timing: '2–4 days after soak',
-          stop_signs: 'Any sour odor, slimy texture, or fuzzy growth indicates spoilage'
-        },
-
-        environmental_requirements: {
-          airflow: 'Essential — stagnant air increases bacterial risk',
-          humidity: 'Moderate; jar must never retain pooled water',
-          temperature_range: '65–75°F optimal'
-        }
-      }
-    },
-
-    {
-      id: 'sp2',
-      name: 'Lentil Sprouts',
-      servings: 'N/A (growing batch)',
-      ingredients: [
-        '1/2 cup brown or green lentils',
-        'Sprouting jar',
-        'Clean water'
-      ],
-      prep: 'Lentils sprout quickly due to thin seed coats. Over-soaking causes decay and split seeds.',
-      growing_instructions: {
-        soak_phase: {
-          duration_hours: '8–10',
-          purpose: 'Softens seed coat for radicle emergence'
-        },
-
-        germination_phase: {
-          days_1_to_2: {
-            light: 'Dark storage preferred',
-            action: 'Rinse 2x daily, drain fully',
-            expected_change: 'Tiny white root tip appears within 24–36 hours'
-          },
-
-          days_2_to_3: {
-            light: 'Indirect light acceptable',
-            action: 'Continue rinsing twice daily',
-            expected_change: 'Sprouts reach 0.5–1 inch',
-            warning: 'Excess moisture causes fermentation smell'
-          }
-        },
-
-        harvest_conditions: {
-          ideal: 'Short tail sprouts (½–1 inch)',
-          timing: '2–3 days total',
-          note: 'Lentils are best slightly shorter than mung for texture balance'
-        }
-      }
-    },
-
-    {
-      id: 'sp3',
-      name: 'Alfalfa Sprouts',
-      servings: 'N/A (growing batch)',
-      ingredients: [
-        '1–2 tbsp alfalfa seeds',
-        'Fine mesh sprouting lid',
-        'Cool water'
-      ],
-      prep: 'Alfalfa is highly mold-sensitive and requires excellent airflow and low heat conditions.',
-      growing_instructions: {
-        soak_phase: {
-          duration_hours: '4–6',
-          purpose: 'Quick hydration only — over-soaking reduces germination quality'
-        },
-
-        germination_phase: {
-          days_1_to_3: {
-            light: 'Dark environment preferred',
-            action: 'Rinse 2–3 times daily, shake vigorously to aerate',
-            requirement: 'Must drain completely each rinse cycle'
-          },
-
-          days_3_to_5: {
-            light: 'Indirect sunlight only',
-            action: 'Continue rinsing 2x daily',
-            expected_change: 'Green leaf emergence begins'
-          }
-        },
-
-        harvest_conditions: {
-          ideal: 'Tiny green leaf cluster appears (4–6 days)',
-          texture: 'Crisp with mild grassy flavor',
-          warning: 'Strong odor or sliminess = discard batch'
-        }
-      }
-    },
-
-    {
-      id: 'sp4',
-      name: 'Broccoli Sprouts',
-      servings: 'N/A (growing batch)',
-      ingredients: [
-        '1 tbsp broccoli seeds',
-        'Shallow sprouting tray or jar',
-        'Filtered water'
-      ],
-      prep: 'Broccoli sprouts require cooler temperatures to preserve sulforaphane development.',
-      growing_instructions: {
-        soak_phase: {
-          duration_hours: '6–8'
-        },
-
-        germination_phase: {
-          days_1_to_2: {
-            light: 'Dark environment strictly required',
-            action: 'Rinse 2x daily, drain fully',
-            note: 'Avoid light exposure to maximize nutrient density'
-          },
-
-          days_2_to_4: {
-            light: 'Indirect light only',
-            action: 'Rinse twice daily',
-            expected_change: 'Small green cotyledons form'
-          }
-        },
-
-        harvest_conditions: {
-          ideal: '3–5 day harvest window',
-          note: 'Earlier harvest = higher sulforaphane concentration'
-        }
-      }
-    },
-
-    {
-      id: 'sp5',
-      name: 'Chickpea Sprouts',
-      servings: 'N/A (growing batch)',
-      ingredients: [
-        '1/2 cup chickpeas',
-        'Large sprouting jar',
-        'Clean water'
-      ],
-      prep: 'Chickpeas expand significantly and require high drainage capacity.',
-      growing_instructions: {
-        soak_phase: {
-          duration_hours: '12–18'
-        },
-
-        germination_phase: {
-          days_1_to_2: {
-            light: 'Dark preferred',
-            action: 'Rinse 3x daily',
-            note: 'High heat buildup risk — spread seeds evenly'
-          },
-
-          days_2_to_4: {
-            light: 'Indirect light',
-            action: 'Rinse 2–3x daily',
-            expected_change: 'Thick white shoots form'
-          }
-        },
-
-        harvest_conditions: {
-          ideal: '3–4 days',
-          texture: 'Crunchy, bean-like sprout',
-          warning: 'Any sour smell indicates fermentation failure'
-        }
-      }
-    }
-  ]
-},
-  
-  
-  // ===========================
-  // 🥗 VEGGIE SALADS
-  // ===========================
   {
-    id: 'veggie-salads',
-    icon: '🥗', name: 'Veggie Salads',
-    desc: 'Classic vegetable salads including potato salad, broccoli salad, and fresh garden favorites.',
-    recipes: [
-      {id: 'vs1', name: 'Classic Potato Salad', servings: '6 servings', ingredients: ['2 lbs russet potatoes, cubed', '3 hard boiled eggs, chopped', '3 celery stalks, finely diced', '½ red onion, finely diced', '¾ cup mayonnaise', '2 tbsp yellow mustard', '2 tbsp apple cider vinegar', '1 tsp sugar', 'Salt, pepper, and paprika to garnish'], prep: 'Boil cubed potatoes in salted water until just fork-tender, about 12 minutes. Drain and cool completely. Hard boil eggs — cover with cold water, bring to boil, cook 10 minutes, transfer to ice water, peel and chop. Whisk mayonnaise, mustard, vinegar, and sugar together. Fold potatoes, eggs, celery, and red onion into dressing. Season generously with salt and pepper. Refrigerate at least 2 hours. Sprinkle paprika over top before serving.'},
-      {id: 'vs2', name: 'Broccoli Salad', servings: '6 servings', ingredients: ['4 cups broccoli florets, cut small', '6 strips bacon, cooked and crumbled', '½ red onion, finely diced', '½ cup dried cranberries', '½ cup sunflower seeds', '¾ cup mayonnaise', '2 tbsp apple cider vinegar', '1 tbsp sugar', 'Salt and pepper'], prep: 'Cut broccoli into small bite-sized florets. Cook bacon until crispy and crumble. Whisk mayonnaise, vinegar, and sugar together. Combine broccoli, bacon, red onion, cranberries, and sunflower seeds in a large bowl. Pour dressing over and toss well. Refrigerate at least 1 hour before serving — the dressing softens the raw broccoli slightly which is ideal.'},
-      {id: 'vs3', name: 'Corn and Avocado Salad', servings: '4 servings', ingredients: ['3 cups corn kernels, fresh or thawed', '2 avocados, diced', '1 cup cherry tomatoes, halved', '¼ red onion, finely diced', '¼ cup fresh cilantro', '3 tbsp lime juice', '2 tbsp olive oil', '½ tsp cumin', 'Salt and pepper'], prep: 'If using fresh corn, cut kernels off the cob and char lightly in a dry skillet over high heat for extra flavor. Cool. Combine corn, avocado, tomatoes, and red onion. Whisk lime juice, olive oil, and cumin together. Toss salad gently with dressing. Add cilantro. Season with salt and pepper. Serve immediately.'},
-      {id: 'vs4', name: 'Cucumber Tomato Salad', servings: '4 servings', ingredients: ['3 English cucumbers, sliced', '3 large tomatoes, cut into wedges', '½ red onion, thinly sliced', '¼ cup fresh parsley, chopped', '3 tbsp olive oil', '2 tbsp red wine vinegar', '1 tsp dried oregano', 'Salt and pepper'], prep: 'Slice cucumbers and tomatoes. Combine with red onion and parsley in a bowl. Whisk olive oil, vinegar, and oregano. Pour over vegetables and toss. Season with salt and pepper. Let sit 10 minutes at room temperature before serving so the vegetables release their juices into the dressing.'},
-      {id: 'vs5', name: 'Three Bean Salad', servings: '6 servings', ingredients: ['1 can (14 oz) green beans, drained', '1 can (14 oz) kidney beans, drained and rinsed', '1 can (14 oz) chickpeas, drained and rinsed', '½ red onion, finely diced', '½ green bell pepper, finely diced', '¼ cup fresh parsley', '½ cup apple cider vinegar', '¼ cup olive oil', '3 tbsp sugar', 'Salt and pepper'], prep: 'Drain and rinse all beans. Combine in a large bowl with red onion, bell pepper, and parsley. Whisk vinegar, olive oil, and sugar until sugar dissolves. Pour over beans and toss well. Refrigerate at least 4 hours or overnight — the longer it sits the better the flavor. Toss and adjust seasoning before serving.'}
+    "id": "sprouts",
+    "icon": "🌱",
+    "name": "Sprouts",
+    "desc": "Edible sprouts grown from seeds and legumes under controlled moisture, airflow, temperature, and light exposure.",
+    "recipes": [
+      {
+        "id": "sp1",
+        "name": "Mung Bean Sprouts",
+        "servings": "N/A (growing batch)",
+        "ingredients": [
+          "1/2 cup mung beans (raw, whole)",
+          "Wide-mouth glass jar",
+          "Sprouting mesh lid or cheesecloth",
+          "Cool filtered water"
+        ],
+        "prep": "Initial soak activates germination. After soak, sprouts must remain moist but never submerged. Proper airflow is required to prevent bacterial growth.",
+        "growing_instructions": {
+          "soak_phase": {
+            "duration_hours": "8–12",
+            "water_temp": "Cool (60–75°F)",
+            "purpose": "Hydrates seed coat and initiates germination enzyme activity"
+          },
+          "germination_phase": {
+            "days_1_to_2": {
+              "light": "Dark or shaded cabinet",
+              "action": "Rinse and fully drain 2–3 times daily",
+              "requirement": "Jar must be angled for drainage (no standing water)",
+              "expected_change": "Seed splits and white tail emerges (1–5 mm)"
+            },
+            "days_3_to_4": {
+              "light": "Indirect daylight only (no direct sun)",
+              "action": "Continue rinsing 2–3 times daily",
+              "expected_change": "Sprout elongates (1–2 inches), hulls loosen naturally",
+              "warning": "Overheating or poor drainage causes sour smell or mold"
+            }
+          },
+          "harvest_conditions": {
+            "ideal_length": "1–2 inches sprout length",
+            "texture": "Crisp, white with minimal yellowing",
+            "timing": "2–4 days after soak",
+            "stop_signs": "Any sour odor, slimy texture, or fuzzy growth indicates spoilage"
+          },
+          "environmental_requirements": {
+            "airflow": "Essential — stagnant air increases bacterial risk",
+            "humidity": "Moderate; jar must never retain pooled water",
+            "temperature_range": "65–75°F optimal"
+          }
+        }
+      },
+      {
+        "id": "sp2",
+        "name": "Lentil Sprouts",
+        "servings": "N/A (growing batch)",
+        "ingredients": [
+          "1/2 cup brown or green lentils",
+          "Sprouting jar",
+          "Clean water"
+        ],
+        "prep": "Lentils sprout quickly due to thin seed coats. Over-soaking causes decay and split seeds.",
+        "growing_instructions": {
+          "soak_phase": {
+            "duration_hours": "8–10",
+            "purpose": "Softens seed coat for radicle emergence"
+          },
+          "germination_phase": {
+            "days_1_to_2": {
+              "light": "Dark storage preferred",
+              "action": "Rinse 2x daily, drain fully",
+              "expected_change": "Tiny white root tip appears within 24–36 hours"
+            },
+            "days_2_to_3": {
+              "light": "Indirect light acceptable",
+              "action": "Continue rinsing twice daily",
+              "expected_change": "Sprouts reach 0.5–1 inch",
+              "warning": "Excess moisture causes fermentation smell"
+            }
+          },
+          "harvest_conditions": {
+            "ideal": "Short tail sprouts (½–1 inch)",
+            "timing": "2–3 days total",
+            "note": "Lentils are best slightly shorter than mung for texture balance"
+          }
+        }
+      },
+      {
+        "id": "sp3",
+        "name": "Alfalfa Sprouts",
+        "servings": "N/A (growing batch)",
+        "ingredients": [
+          "1–2 tbsp alfalfa seeds",
+          "Fine mesh sprouting lid",
+          "Cool water"
+        ],
+        "prep": "Alfalfa is highly mold-sensitive and requires excellent airflow and low heat conditions.",
+        "growing_instructions": {
+          "soak_phase": {
+            "duration_hours": "4–6",
+            "purpose": "Quick hydration only — over-soaking reduces germination quality"
+          },
+          "germination_phase": {
+            "days_1_to_3": {
+              "light": "Dark environment preferred",
+              "action": "Rinse 2–3 times daily, shake vigorously to aerate",
+              "requirement": "Must drain completely each rinse cycle"
+            },
+            "days_3_to_5": {
+              "light": "Indirect sunlight only",
+              "action": "Continue rinsing 2x daily",
+              "expected_change": "Green leaf emergence begins"
+            }
+          },
+          "harvest_conditions": {
+            "ideal": "Tiny green leaf cluster appears (4–6 days)",
+            "texture": "Crisp with mild grassy flavor",
+            "warning": "Strong odor or sliminess = discard batch"
+          }
+        }
+      },
+      {
+        "id": "sp4",
+        "name": "Broccoli Sprouts",
+        "servings": "N/A (growing batch)",
+        "ingredients": [
+          "1 tbsp broccoli seeds",
+          "Shallow sprouting tray or jar",
+          "Filtered water"
+        ],
+        "prep": "Broccoli sprouts require cooler temperatures to preserve sulforaphane development.",
+        "growing_instructions": {
+          "soak_phase": {
+            "duration_hours": "6–8"
+          },
+          "germination_phase": {
+            "days_1_to_2": {
+              "light": "Dark environment strictly required",
+              "action": "Rinse 2x daily, drain fully",
+              "note": "Avoid light exposure to maximize nutrient density"
+            },
+            "days_2_to_4": {
+              "light": "Indirect light only",
+              "action": "Rinse twice daily",
+              "expected_change": "Small green cotyledons form"
+            }
+          },
+          "harvest_conditions": {
+            "ideal": "3–5 day harvest window",
+            "note": "Earlier harvest = higher sulforaphane concentration"
+          }
+        }
+      },
+      {
+        "id": "sp5",
+        "name": "Chickpea Sprouts",
+        "servings": "N/A (growing batch)",
+        "ingredients": [
+          "1/2 cup chickpeas",
+          "Large sprouting jar",
+          "Clean water"
+        ],
+        "prep": "Chickpeas expand significantly and require high drainage capacity.",
+        "growing_instructions": {
+          "soak_phase": {
+            "duration_hours": "12–18"
+          },
+          "germination_phase": {
+            "days_1_to_2": {
+              "light": "Dark preferred",
+              "action": "Rinse 3x daily",
+              "note": "High heat buildup risk — spread seeds evenly"
+            },
+            "days_2_to_4": {
+              "light": "Indirect light",
+              "action": "Rinse 2–3x daily",
+              "expected_change": "Thick white shoots form"
+            }
+          },
+          "harvest_conditions": {
+            "ideal": "3–4 days",
+            "texture": "Crunchy, bean-like sprout",
+            "warning": "Any sour smell indicates fermentation failure"
+          }
+        }
+      }
     ]
   },
-
-  // ===========================
-  // 🫕 CASSEROLES
-  // ===========================
   {
-    id: 'casseroles',
-    icon: '🫕', name: 'Casseroles',
-    desc: 'Comforting baked vegetable casseroles including green bean casserole, corn pudding, and more.',
-    recipes: [
-      {id: 'cas1', name: 'Classic Green Bean Casserole', servings: '8 servings', ingredients: ['2 lbs fresh green beans, trimmed and cut into 1-inch pieces', '1 can (10.5 oz) cream of mushroom soup', '¾ cup whole milk', '1 tsp soy sauce', '¼ tsp black pepper', '1½ cups French fried onions, divided'], prep: 'Preheat oven to 350°F. Blanch green beans in salted boiling water 5 minutes. Drain and set aside. Whisk cream of mushroom soup, milk, soy sauce, and pepper together in a large bowl. Fold in green beans and 1 cup of the fried onions. Pour into a 9x13 baking dish. Bake 25 minutes until bubbly. Remove from oven, top with remaining fried onions, and bake an additional 5 minutes until onions are golden and crispy. Serve immediately.'},
-      {id: 'cas2', name: 'Corn Pudding Casserole', servings: '8 servings', ingredients: ['2 cans (15 oz each) whole kernel corn, drained', '1 can (15 oz) creamed corn', '1 box (8.5 oz) corn muffin mix', '1 cup sour cream', '½ cup butter, melted', '2 eggs, beaten', '1 cup cheddar cheese, shredded'], prep: 'Preheat oven to 350°F. Grease a 9x13 baking dish. Combine both cans of corn, creamed corn, muffin mix, sour cream, melted butter, and eggs. Pour into baking dish. Bake 45 minutes until set and lightly golden. Remove from oven, top with shredded cheddar, and bake 5 more minutes until cheese melts. Let sit 10 minutes before serving.'},
-      {id: 'cas3', name: 'Squash Casserole', servings: '8 servings', ingredients: ['3 lbs yellow squash, sliced', '1 medium onion, diced', '1 cup sour cream', '1 can (10.5 oz) cream of chicken soup', '1 cup shredded cheddar cheese', '1 cup Ritz crackers, crushed', '4 tbsp butter, melted', 'Salt and pepper'], prep: 'Preheat oven to 350°F. Boil squash and onion in salted water until tender, about 8 minutes. Drain very well and mash slightly. Mix with sour cream, cream of chicken soup, and half the cheese. Season with salt and pepper. Pour into greased baking dish. Top with remaining cheese. Combine crushed crackers with melted butter and sprinkle over top. Bake 30 minutes until golden and bubbly.'},
-      {id: 'cas4', name: 'Broccoli Cheese Casserole', servings: '6 servings', ingredients: ['4 cups broccoli florets', '1 can (10.5 oz) cream of mushroom soup', '1 cup mayonnaise', '2 eggs, beaten', '1 cup sharp cheddar cheese, shredded', '½ cup onion, finely diced', '1 cup Ritz crackers, crushed', '4 tbsp butter, melted', 'Salt and pepper'], prep: 'Preheat oven to 350°F. Steam broccoli until just tender. Chop into small pieces. Mix cream of mushroom soup, mayonnaise, eggs, cheddar, and onion. Fold in broccoli. Season with salt and pepper. Pour into greased baking dish. Combine crushed crackers with melted butter and spread over top. Bake 30–35 minutes until golden brown and bubbling around the edges.'},
-      {id: 'cas5', name: 'Sweet Potato Casserole', servings: '8 servings', ingredients: ['4 cups sweet potatoes, cooked and mashed', '½ cup sugar', '2 eggs, beaten', '½ cup milk', '⅓ cup butter, melted', '1 tsp vanilla extract', 'Topping: 1 cup brown sugar, ⅓ cup flour, ⅓ cup butter, 1 cup pecans, chopped'], prep: 'Preheat oven to 350°F. Combine mashed sweet potatoes with sugar, eggs, milk, melted butter, and vanilla until smooth. Pour into greased baking dish. Make topping by mixing brown sugar, flour, softened butter, and pecans until crumbly. Spread topping evenly over sweet potato mixture. Bake 30 minutes until topping is golden brown and set. Serve as a side dish — it is sweet enough to double as dessert.'}
+    "id": "veggie-salads",
+    "icon": "🥗",
+    "name": "Veggie Salads",
+    "desc": "Classic vegetable salads including potato salad, broccoli salad, and fresh garden favorites.",
+    "recipes": [
+      {
+        "id": "vs1",
+        "name": "Classic Potato Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 lbs russet potatoes, cubed",
+          "3 hard boiled eggs, chopped",
+          "3 celery stalks, finely diced",
+          "½ red onion, finely diced",
+          "¾ cup mayonnaise",
+          "2 tbsp yellow mustard",
+          "2 tbsp apple cider vinegar",
+          "1 tsp sugar",
+          "Salt, pepper, and paprika to garnish"
+        ],
+        "prep": "Boil cubed potatoes in salted water until just fork-tender, about 12 minutes. Drain and cool completely. Hard boil eggs — cover with cold water, bring to boil, cook 10 minutes, transfer to ice water, peel and chop. Whisk mayonnaise, mustard, vinegar, and sugar together. Fold potatoes, eggs, celery, and red onion into dressing. Season generously with salt and pepper. Refrigerate at least 2 hours. Sprinkle paprika over top before serving."
+      },
+      {
+        "id": "vs2",
+        "name": "Broccoli Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "4 cups broccoli florets, cut small",
+          "6 strips bacon, cooked and crumbled",
+          "½ red onion, finely diced",
+          "½ cup dried cranberries",
+          "½ cup sunflower seeds",
+          "¾ cup mayonnaise",
+          "2 tbsp apple cider vinegar",
+          "1 tbsp sugar",
+          "Salt and pepper"
+        ],
+        "prep": "Cut broccoli into small bite-sized florets. Cook bacon until crispy and crumble. Whisk mayonnaise, vinegar, and sugar together. Combine broccoli, bacon, red onion, cranberries, and sunflower seeds in a large bowl. Pour dressing over and toss well. Refrigerate at least 1 hour before serving — the dressing softens the raw broccoli slightly which is ideal."
+      },
+      {
+        "id": "vs3",
+        "name": "Corn and Avocado Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups corn kernels, fresh or thawed",
+          "2 avocados, diced",
+          "1 cup cherry tomatoes, halved",
+          "¼ red onion, finely diced",
+          "¼ cup fresh cilantro",
+          "3 tbsp lime juice",
+          "2 tbsp olive oil",
+          "½ tsp cumin",
+          "Salt and pepper"
+        ],
+        "prep": "If using fresh corn, cut kernels off the cob and char lightly in a dry skillet over high heat for extra flavor. Cool. Combine corn, avocado, tomatoes, and red onion. Whisk lime juice, olive oil, and cumin together. Toss salad gently with dressing. Add cilantro. Season with salt and pepper. Serve immediately."
+      },
+      {
+        "id": "vs4",
+        "name": "Cucumber Tomato Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 English cucumbers, sliced",
+          "3 large tomatoes, cut into wedges",
+          "½ red onion, thinly sliced",
+          "¼ cup fresh parsley, chopped",
+          "3 tbsp olive oil",
+          "2 tbsp red wine vinegar",
+          "1 tsp dried oregano",
+          "Salt and pepper"
+        ],
+        "prep": "Slice cucumbers and tomatoes. Combine with red onion and parsley in a bowl. Whisk olive oil, vinegar, and oregano. Pour over vegetables and toss. Season with salt and pepper. Let sit 10 minutes at room temperature before serving so the vegetables release their juices into the dressing."
+      }
     ]
   },
-
-  // ===========================
-  // 🥦 ROASTED VEGETABLES
-  // ===========================
   {
-    id: 'roasted-vegetables',
-    icon: '🥦', name: 'Roasted Vegetables',
-    desc: 'Oven-roasted vegetables with herbs, garlic, and olive oil for deep caramelized flavor.',
-    recipes: [
-      {id: 'rv1', name: 'Garlic Roasted Broccoli', servings: '4 servings', ingredients: ['2 large heads broccoli, cut into florets', '4 garlic cloves, thinly sliced', '3 tbsp olive oil', 'Zest and juice of 1 lemon', '¼ cup Parmesan, grated', 'Salt and red pepper flakes'], prep: 'Preheat oven to 425°F. Toss broccoli florets with olive oil, sliced garlic, salt, and red pepper flakes. Spread in a single layer on a baking sheet — do not crowd or they will steam instead of roast. Roast 20–25 minutes until edges are crispy and caramelized. Remove from oven and immediately squeeze lemon juice over. Top with lemon zest and Parmesan. The high heat is key to getting crispy edges.'},
-      {id: 'rv2', name: 'Honey Glazed Roasted Carrots', servings: '4 servings', ingredients: ['2 lbs carrots, peeled and cut into sticks', '3 tbsp butter, melted', '2 tbsp honey', '1 tbsp fresh thyme leaves', '2 garlic cloves, minced', 'Salt and pepper', 'Fresh parsley to garnish'], prep: 'Preheat oven to 400°F. Whisk melted butter, honey, garlic, and thyme together. Toss carrots with honey butter mixture. Spread in a single layer on a baking sheet. Season with salt and pepper. Roast 25–30 minutes, turning once halfway through, until caramelized and tender. Garnish with fresh parsley. The honey creates a beautiful glaze as it caramelizes in the oven.'},
-      {id: 'rv3', name: 'Roasted Brussels Sprouts with Bacon', servings: '4 servings', ingredients: ['2 lbs Brussels sprouts, trimmed and halved', '6 strips bacon, cut into pieces', '3 tbsp olive oil', '3 garlic cloves, minced', '2 tbsp balsamic vinegar', 'Salt and pepper'], prep: 'Preheat oven to 400°F. Toss halved Brussels sprouts with olive oil, garlic, salt, and pepper. Scatter bacon pieces over. Spread on a baking sheet cut-side down for maximum caramelization. Roast 25–30 minutes until sprouts are golden brown and crispy on the edges and bacon is cooked. Drizzle balsamic vinegar over immediately after removing from oven. The key is cut-side down contact with the hot pan.'},
-      {id: 'rv4', name: 'Roasted Mixed Vegetables', servings: '6 servings', ingredients: ['1 zucchini, cut into chunks', '1 yellow squash, cut into chunks', '1 red bell pepper, cut into chunks', '1 red onion, cut into wedges', '1 cup cherry tomatoes', '1 cup mushrooms, halved', '4 tbsp olive oil', '2 tsp Italian seasoning', '4 garlic cloves, minced', 'Salt and pepper'], prep: 'Preheat oven to 425°F. Cut all vegetables into similar sized pieces so they cook evenly. Toss with olive oil, Italian seasoning, garlic, salt, and pepper. Spread in a single layer across two baking sheets — do not crowd. Roast 25–30 minutes, stirring once halfway, until vegetables are tender and caramelized at the edges. Add cherry tomatoes in the last 10 minutes only as they cook faster.'},
-      {id: 'rv5', name: 'Roasted Cauliflower with Turmeric', servings: '4 servings', ingredients: ['1 large head cauliflower, cut into florets', '3 tbsp olive oil', '1 tsp turmeric', '1 tsp cumin', '½ tsp smoked paprika', '¼ tsp cayenne pepper', '4 garlic cloves, minced', 'Juice of ½ lemon', 'Salt and pepper', 'Fresh cilantro to garnish'], prep: 'Preheat oven to 425°F. Combine olive oil with turmeric, cumin, paprika, cayenne, and garlic. Toss cauliflower florets with spiced oil until evenly coated. Spread on a baking sheet in a single layer. Season with salt and pepper. Roast 25–30 minutes until deeply golden and crispy on the edges, turning once halfway. Squeeze lemon juice over and garnish with cilantro.'}
+    "id": "casseroles",
+    "icon": "🫕",
+    "name": "Casseroles",
+    "desc": "Comforting baked vegetable casseroles including green bean casserole, corn pudding, and more.",
+    "recipes": [
+      {
+        "id": "cas1",
+        "name": "Classic Green Bean Casserole",
+        "servings": "8 servings",
+        "ingredients": [
+          "2 lbs fresh green beans, trimmed and cut into 1-inch pieces",
+          "1 can (10.5 oz) cream of mushroom soup",
+          "¾ cup whole milk",
+          "1 tsp soy sauce",
+          "¼ tsp black pepper",
+          "1½ cups French fried onions, divided"
+        ],
+        "prep": "Preheat oven to 350°F. Blanch green beans in salted boiling water 5 minutes. Drain and set aside. Whisk cream of mushroom soup, milk, soy sauce, and pepper together in a large bowl. Fold in green beans and 1 cup of the fried onions. Pour into a 9x13 baking dish. Bake 25 minutes until bubbly. Remove from oven, top with remaining fried onions, and bake an additional 5 minutes until onions are golden and crispy. Serve immediately."
+      },
+      {
+        "id": "cas2",
+        "name": "Corn Pudding Casserole",
+        "servings": "8 servings",
+        "ingredients": [
+          "2 cans (15 oz each) whole kernel corn, drained",
+          "1 can (15 oz) creamed corn",
+          "1 box (8.5 oz) corn muffin mix",
+          "1 cup sour cream",
+          "½ cup butter, melted",
+          "2 eggs, beaten",
+          "1 cup cheddar cheese, shredded"
+        ],
+        "prep": "Preheat oven to 350°F. Grease a 9x13 baking dish. Combine both cans of corn, creamed corn, muffin mix, sour cream, melted butter, and eggs. Pour into baking dish. Bake 45 minutes until set and lightly golden. Remove from oven, top with shredded cheddar, and bake 5 more minutes until cheese melts. Let sit 10 minutes before serving."
+      },
+      {
+        "id": "cas3",
+        "name": "Squash Casserole",
+        "servings": "8 servings",
+        "ingredients": [
+          "3 lbs yellow squash, sliced",
+          "1 medium onion, diced",
+          "1 cup sour cream",
+          "1 can (10.5 oz) cream of chicken soup",
+          "1 cup shredded cheddar cheese",
+          "1 cup Ritz crackers, crushed",
+          "4 tbsp butter, melted",
+          "Salt and pepper"
+        ],
+        "prep": "Preheat oven to 350°F. Boil squash and onion in salted water until tender, about 8 minutes. Drain very well and mash slightly. Mix with sour cream, cream of chicken soup, and half the cheese. Season with salt and pepper. Pour into greased baking dish. Top with remaining cheese. Combine crushed crackers with melted butter and sprinkle over top. Bake 30 minutes until golden and bubbly."
+      },
+      {
+        "id": "cas4",
+        "name": "Broccoli Cheese Casserole",
+        "servings": "6 servings",
+        "ingredients": [
+          "4 cups broccoli florets",
+          "1 can (10.5 oz) cream of mushroom soup",
+          "1 cup mayonnaise",
+          "2 eggs, beaten",
+          "1 cup sharp cheddar cheese, shredded",
+          "½ cup onion, finely diced",
+          "1 cup Ritz crackers, crushed",
+          "4 tbsp butter, melted",
+          "Salt and pepper"
+        ],
+        "prep": "Preheat oven to 350°F. Steam broccoli until just tender. Chop into small pieces. Mix cream of mushroom soup, mayonnaise, eggs, cheddar, and onion. Fold in broccoli. Season with salt and pepper. Pour into greased baking dish. Combine crushed crackers with melted butter and spread over top. Bake 30–35 minutes until golden brown and bubbling around the edges."
+      },
+      {
+        "id": "cas5",
+        "name": "Sweet Potato Casserole",
+        "servings": "8 servings",
+        "ingredients": [
+          "4 cups sweet potatoes, cooked and mashed",
+          "½ cup sugar",
+          "2 eggs, beaten",
+          "½ cup milk",
+          "⅓ cup butter, melted",
+          "1 tsp vanilla extract",
+          "Topping: 1 cup brown sugar, ⅓ cup flour, ⅓ cup butter, 1 cup pecans, chopped"
+        ],
+        "prep": "Preheat oven to 350°F. Combine mashed sweet potatoes with sugar, eggs, milk, melted butter, and vanilla until smooth. Pour into greased baking dish. Make topping by mixing brown sugar, flour, softened butter, and pecans until crumbly. Spread topping evenly over sweet potato mixture. Bake 30 minutes until topping is golden brown and set. Serve as a side dish — it is sweet enough to double as dessert."
+      }
     ]
   },
-
-  // ===========================
-  // 🍳 STIR-FRIED VEGETABLES
-  // ===========================
   {
-    id: 'stir-fried-vegetables',
-    icon: '🍳', name: 'Stir-Fried Vegetables',
-    desc: 'Quick high-heat stir-fries with bold sauces, garlic, and fresh vegetables.',
-    recipes: [
-      {id: 'sf1', name: 'Garlic Butter Green Beans', servings: '4 servings', ingredients: ['1½ lbs fresh green beans, trimmed', '4 tbsp butter', '5 garlic cloves, minced', '¼ tsp red pepper flakes', '1 tbsp soy sauce', 'Salt and black pepper', 'Lemon wedges to serve'], prep: 'Blanch green beans in boiling salted water 3 minutes. Drain and immediately plunge into ice water to stop cooking. Drain well and pat dry — this is important or they will steam instead of fry. Melt butter in a large skillet over high heat. Add garlic and red pepper flakes — cook 30 seconds until fragrant. Add green beans and toss constantly 3–4 minutes until lightly blistered. Add soy sauce and toss. Season with salt and pepper. Serve with lemon wedges.'},
-      {id: 'sf2', name: 'Stir-Fried Bok Choy', servings: '4 servings', ingredients: ['4 heads baby bok choy, halved lengthwise', '4 garlic cloves, minced', '1 tbsp fresh ginger, grated', '2 tbsp soy sauce', '1 tbsp oyster sauce', '1 tbsp sesame oil', '2 tbsp vegetable oil', 'Sesame seeds to garnish'], prep: 'Heat vegetable oil in a wok or large skillet over very high heat until smoking. Add garlic and ginger — stir 30 seconds. Add bok choy cut-side down and press gently. Let sit undisturbed 1 minute to get color. Toss and cook another 2 minutes. Add soy sauce and oyster sauce. Toss to coat. Remove from heat and drizzle sesame oil over. Garnish with sesame seeds. High heat is essential — this should cook fast.'},
-      {id: 'sf3', name: 'Szechuan Stir-Fried Green Beans', servings: '4 servings', ingredients: ['1½ lbs green beans, trimmed', '4 garlic cloves, minced', '1 tbsp fresh ginger, grated', '2 tbsp soy sauce', '1 tbsp chili garlic sauce', '1 tsp sugar', '1 tbsp rice vinegar', '2 tbsp vegetable oil', 'Sesame seeds'], prep: 'Heat oil in a wok over very high heat. Add green beans in a single layer — do not stir for 2 minutes to blister the skins. Toss and cook another 2 minutes until blistered all over. Push beans to one side. Add garlic and ginger to the empty side — cook 30 seconds. Add soy sauce, chili garlic sauce, sugar, and vinegar. Toss everything together and cook 1 more minute. Top with sesame seeds.'},
-      {id: 'sf4', name: 'Stir-Fried Cabbage with Bacon', servings: '4 servings', ingredients: ['1 small head green cabbage, thinly sliced', '6 strips bacon, cut into pieces', '1 onion, thinly sliced', '3 garlic cloves, minced', '2 tbsp apple cider vinegar', '1 tsp sugar', 'Salt and pepper', 'Red pepper flakes'], prep: 'Cook bacon pieces in a large skillet over medium-high heat until crispy. Remove bacon but leave drippings. Add onion to the drippings and cook 3 minutes. Add garlic — cook 30 seconds. Increase heat to high. Add cabbage in batches and toss. Cook 5–7 minutes until cabbage is tender with slightly caramelized edges. Add vinegar and sugar — toss well. Return bacon to pan. Season with salt, pepper, and red pepper flakes.'},
-      {id: 'sf5', name: 'Stir-Fried Snow Peas with Garlic', servings: '4 servings', ingredients: ['1 lb snow peas, trimmed', '4 garlic cloves, minced', '1 tbsp fresh ginger, grated', '2 tbsp soy sauce', '1 tsp sesame oil', '1 tbsp vegetable oil', '1 tsp cornstarch mixed with 2 tbsp water', 'Sesame seeds'], prep: 'Heat oil in a wok over very high heat until smoking. Add garlic and ginger — stir 20 seconds. Add snow peas all at once and toss constantly over high heat for 2 minutes — they should stay bright green and slightly crisp. Add soy sauce and cornstarch mixture. Toss quickly until the sauce thickens and coats the snow peas, about 30 seconds. Remove from heat and drizzle sesame oil over. Top with sesame seeds. Do not overcook — crisp texture is key.'}
+    "id": "roasted-vegetables",
+    "icon": "🥦",
+    "name": "Roasted Vegetables",
+    "desc": "Oven-roasted vegetables with herbs, garlic, and olive oil for deep caramelized flavor.",
+    "recipes": [
+      {
+        "id": "rv1",
+        "name": "Garlic Roasted Broccoli",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 large heads broccoli, cut into florets",
+          "4 garlic cloves, thinly sliced",
+          "3 tbsp olive oil",
+          "Zest and juice of 1 lemon",
+          "¼ cup Parmesan, grated",
+          "Salt and red pepper flakes"
+        ],
+        "prep": "Preheat oven to 425°F. Toss broccoli florets with olive oil, sliced garlic, salt, and red pepper flakes. Spread in a single layer on a baking sheet — do not crowd or they will steam instead of roast. Roast 20–25 minutes until edges are crispy and caramelized. Remove from oven and immediately squeeze lemon juice over. Top with lemon zest and Parmesan. The high heat is key to getting crispy edges."
+      },
+      {
+        "id": "rv2",
+        "name": "Honey Glazed Roasted Carrots",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 lbs carrots, peeled and cut into sticks",
+          "3 tbsp butter, melted",
+          "2 tbsp honey",
+          "1 tbsp fresh thyme leaves",
+          "2 garlic cloves, minced",
+          "Salt and pepper",
+          "Fresh parsley to garnish"
+        ],
+        "prep": "Preheat oven to 400°F. Whisk melted butter, honey, garlic, and thyme together. Toss carrots with honey butter mixture. Spread in a single layer on a baking sheet. Season with salt and pepper. Roast 25–30 minutes, turning once halfway through, until caramelized and tender. Garnish with fresh parsley. The honey creates a beautiful glaze as it caramelizes in the oven."
+      },
+      {
+        "id": "rv3",
+        "name": "Roasted Brussels Sprouts with Bacon",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 lbs Brussels sprouts, trimmed and halved",
+          "6 strips bacon, cut into pieces",
+          "3 tbsp olive oil",
+          "3 garlic cloves, minced",
+          "2 tbsp balsamic vinegar",
+          "Salt and pepper"
+        ],
+        "prep": "Preheat oven to 400°F. Toss halved Brussels sprouts with olive oil, garlic, salt, and pepper. Scatter bacon pieces over. Spread on a baking sheet cut-side down for maximum caramelization. Roast 25–30 minutes until sprouts are golden brown and crispy on the edges and bacon is cooked. Drizzle balsamic vinegar over immediately after removing from oven. The key is cut-side down contact with the hot pan."
+      },
+      {
+        "id": "rv4",
+        "name": "Roasted Mixed Vegetables",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 zucchini, cut into chunks",
+          "1 yellow squash, cut into chunks",
+          "1 red bell pepper, cut into chunks",
+          "1 red onion, cut into wedges",
+          "1 cup cherry tomatoes",
+          "1 cup mushrooms, halved",
+          "4 tbsp olive oil",
+          "2 tsp Italian seasoning",
+          "4 garlic cloves, minced",
+          "Salt and pepper"
+        ],
+        "prep": "Preheat oven to 425°F. Cut all vegetables into similar sized pieces so they cook evenly. Toss with olive oil, Italian seasoning, garlic, salt, and pepper. Spread in a single layer across two baking sheets — do not crowd. Roast 25–30 minutes, stirring once halfway, until vegetables are tender and caramelized at the edges. Add cherry tomatoes in the last 10 minutes only as they cook faster."
+      },
+      {
+        "id": "rv5",
+        "name": "Roasted Cauliflower with Turmeric",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large head cauliflower, cut into florets",
+          "3 tbsp olive oil",
+          "1 tsp turmeric",
+          "1 tsp cumin",
+          "½ tsp smoked paprika",
+          "¼ tsp cayenne pepper",
+          "4 garlic cloves, minced",
+          "Juice of ½ lemon",
+          "Salt and pepper",
+          "Fresh cilantro to garnish"
+        ],
+        "prep": "Preheat oven to 425°F. Combine olive oil with turmeric, cumin, paprika, cayenne, and garlic. Toss cauliflower florets with spiced oil until evenly coated. Spread on a baking sheet in a single layer. Season with salt and pepper. Roast 25–30 minutes until deeply golden and crispy on the edges, turning once halfway. Squeeze lemon juice over and garnish with cilantro."
+      }
     ]
   },
-
-  // ===========================
-  // 🌽 GRILLED VEGETABLES
-  // ===========================
   {
-    id: 'grilled-vegetables',
-    icon: '🌽', name: 'Grilled Vegetables',
-    desc: 'Smoky grilled vegetables with marinades, herbs, and charred edges from the grill.',
-    recipes: [
-      {id: 'gv1', name: 'Grilled Corn on the Cob', servings: '4 servings', ingredients: ['4 ears fresh corn, husks on', '4 tbsp butter, softened', '2 garlic cloves, minced', '1 tbsp fresh parsley, chopped', '½ tsp smoked paprika', 'Salt and pepper', 'Lime wedges to serve'], prep: 'Soak corn in husks in cold water 30 minutes — this prevents husks from burning. Heat grill to medium-high. Mix butter with garlic, parsley, and paprika to make garlic herb butter. Place corn on grill with husks on. Grill 15–20 minutes turning every 5 minutes until husks are charred and corn is cooked. Carefully peel back husks and brush generously with garlic herb butter. Season with salt and pepper. Serve with lime wedges.'},
-      {id: 'gv2', name: 'Grilled Zucchini with Herbs', servings: '4 servings', ingredients: ['4 medium zucchini, sliced lengthwise into planks', '3 tbsp olive oil', '4 garlic cloves, minced', '1 tbsp fresh thyme', '1 tbsp fresh rosemary, chopped', 'Juice of 1 lemon', 'Salt and pepper', 'Parmesan shavings to serve'], prep: 'Slice zucchini lengthwise into ¼-inch thick planks. Whisk olive oil, garlic, thyme, rosemary, salt, and pepper. Brush both sides of zucchini planks with herb oil. Heat grill to medium-high and oil the grates. Grill zucchini 3–4 minutes per side until grill marks form and zucchini is tender but not mushy. Transfer to a platter and immediately squeeze lemon juice over. Top with Parmesan shavings.'},
-      {id: 'gv3', name: 'Grilled Portobello Mushrooms', servings: '4 servings', ingredients: ['4 large portobello mushroom caps, stems removed', '4 tbsp olive oil', '4 garlic cloves, minced', '2 tbsp balsamic vinegar', '1 tbsp fresh thyme', '1 tbsp soy sauce', 'Salt and pepper', 'Fresh parsley to garnish'], prep: 'Wipe mushroom caps clean with a damp cloth. Whisk olive oil, garlic, balsamic, thyme, and soy sauce. Brush both sides of mushrooms generously with marinade. Let sit 15 minutes. Heat grill to medium-high. Grill mushrooms gill-side up 4–5 minutes, flip, then cook another 4–5 minutes. The mushrooms will release liquid — this is normal. Season with salt and pepper. Garnish with fresh parsley. Serve as a side or in a burger bun as a meat-free main.'},
-      {id: 'gv4', name: 'Grilled Asparagus', servings: '4 servings', ingredients: ['2 lbs thick asparagus spears, woody ends snapped off', '3 tbsp olive oil', '4 garlic cloves, minced', 'Zest and juice of 1 lemon', '¼ cup Parmesan, grated', 'Salt and pepper', 'Red pepper flakes'], prep: 'Snap or cut the woody ends off asparagus. Toss with olive oil, garlic, salt, pepper, and red pepper flakes. Heat grill to high. Lay asparagus perpendicular to the grates so they do not fall through. Grill 2–4 minutes per side depending on thickness — they should be tender with good char marks but still have a slight bite. Transfer to a platter. Squeeze lemon juice over and top with lemon zest and Parmesan.'},
-      {id: 'gv5', name: 'Grilled Vegetable Platter', servings: '6 servings', ingredients: ['1 red bell pepper, quartered', '1 yellow bell pepper, quartered', '1 zucchini, sliced lengthwise', '1 eggplant, sliced into rounds', '1 red onion, sliced into thick rounds', '1 cup mushrooms', '4 tbsp olive oil', '2 tbsp balsamic vinegar', '2 garlic cloves, minced', '1 tbsp Italian seasoning', 'Salt and pepper', 'Fresh basil to garnish'], prep: 'Combine olive oil, balsamic, garlic, and Italian seasoning. Toss all vegetables with marinade and season with salt and pepper. Let sit 15 minutes. Heat grill to medium-high. Grill each vegetable by size — peppers and eggplant 4–5 minutes per side, zucchini and onions 3–4 minutes per side, mushrooms 3 minutes per side. Arrange on a large platter. Drizzle any remaining marinade over. Garnish with fresh basil.'},
-      
+    "id": "stir-fried-vegetables",
+    "icon": "🍳",
+    "name": "Stir-Fried Vegetables",
+    "desc": "Quick high-heat stir-fries with bold sauces, garlic, and fresh vegetables.",
+    "recipes": [
+      {
+        "id": "sf1",
+        "name": "Garlic Butter Green Beans",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ lbs fresh green beans, trimmed",
+          "4 tbsp butter",
+          "5 garlic cloves, minced",
+          "¼ tsp red pepper flakes",
+          "1 tbsp soy sauce",
+          "Salt and black pepper",
+          "Lemon wedges to serve"
+        ],
+        "prep": "Blanch green beans in boiling salted water 3 minutes. Drain and immediately plunge into ice water to stop cooking. Drain well and pat dry — this is important or they will steam instead of fry. Melt butter in a large skillet over high heat. Add garlic and red pepper flakes — cook 30 seconds until fragrant. Add green beans and toss constantly 3–4 minutes until lightly blistered. Add soy sauce and toss. Season with salt and pepper. Serve with lemon wedges."
+      },
+      {
+        "id": "sf2",
+        "name": "Stir-Fried Bok Choy",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 heads baby bok choy, halved lengthwise",
+          "4 garlic cloves, minced",
+          "1 tbsp fresh ginger, grated",
+          "2 tbsp soy sauce",
+          "1 tbsp oyster sauce",
+          "1 tbsp sesame oil",
+          "2 tbsp vegetable oil",
+          "Sesame seeds to garnish"
+        ],
+        "prep": "Heat vegetable oil in a wok or large skillet over very high heat until smoking. Add garlic and ginger — stir 30 seconds. Add bok choy cut-side down and press gently. Let sit undisturbed 1 minute to get color. Toss and cook another 2 minutes. Add soy sauce and oyster sauce. Toss to coat. Remove from heat and drizzle sesame oil over. Garnish with sesame seeds. High heat is essential — this should cook fast."
+      },
+      {
+        "id": "sf3",
+        "name": "Szechuan Stir-Fried Green Beans",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ lbs green beans, trimmed",
+          "4 garlic cloves, minced",
+          "1 tbsp fresh ginger, grated",
+          "2 tbsp soy sauce",
+          "1 tbsp chili garlic sauce",
+          "1 tsp sugar",
+          "1 tbsp rice vinegar",
+          "2 tbsp vegetable oil",
+          "Sesame seeds"
+        ],
+        "prep": "Heat oil in a wok over very high heat. Add green beans in a single layer — do not stir for 2 minutes to blister the skins. Toss and cook another 2 minutes until blistered all over. Push beans to one side. Add garlic and ginger to the empty side — cook 30 seconds. Add soy sauce, chili garlic sauce, sugar, and vinegar. Toss everything together and cook 1 more minute. Top with sesame seeds."
+      },
+      {
+        "id": "sf4",
+        "name": "Stir-Fried Cabbage with Bacon",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 small head green cabbage, thinly sliced",
+          "6 strips bacon, cut into pieces",
+          "1 onion, thinly sliced",
+          "3 garlic cloves, minced",
+          "2 tbsp apple cider vinegar",
+          "1 tsp sugar",
+          "Salt and pepper",
+          "Red pepper flakes"
+        ],
+        "prep": "Cook bacon pieces in a large skillet over medium-high heat until crispy. Remove bacon but leave drippings. Add onion to the drippings and cook 3 minutes. Add garlic — cook 30 seconds. Increase heat to high. Add cabbage in batches and toss. Cook 5–7 minutes until cabbage is tender with slightly caramelized edges. Add vinegar and sugar — toss well. Return bacon to pan. Season with salt, pepper, and red pepper flakes."
+      },
+      {
+        "id": "sf5",
+        "name": "Stir-Fried Snow Peas with Garlic",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 lb snow peas, trimmed",
+          "4 garlic cloves, minced",
+          "1 tbsp fresh ginger, grated",
+          "2 tbsp soy sauce",
+          "1 tsp sesame oil",
+          "1 tbsp vegetable oil",
+          "1 tsp cornstarch mixed with 2 tbsp water",
+          "Sesame seeds"
+        ],
+        "prep": "Heat oil in a wok over very high heat until smoking. Add garlic and ginger — stir 20 seconds. Add snow peas all at once and toss constantly over high heat for 2 minutes — they should stay bright green and slightly crisp. Add soy sauce and cornstarch mixture. Toss quickly until the sauce thickens and coats the snow peas, about 30 seconds. Remove from heat and drizzle sesame oil over. Top with sesame seeds. Do not overcook — crisp texture is key."
+      }
+    ]
+  },
+  {
+    "id": "grilled-vegetables",
+    "icon": "🌽",
+    "name": "Grilled Vegetables",
+    "desc": "Smoky grilled vegetables with marinades, herbs, and charred edges from the grill.",
+    "recipes": [
+      {
+        "id": "gv1",
+        "name": "Grilled Corn on the Cob",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 ears fresh corn, husks on",
+          "4 tbsp butter, softened",
+          "2 garlic cloves, minced",
+          "1 tbsp fresh parsley, chopped",
+          "½ tsp smoked paprika",
+          "Salt and pepper",
+          "Lime wedges to serve"
+        ],
+        "prep": "Soak corn in husks in cold water 30 minutes — this prevents husks from burning. Heat grill to medium-high. Mix butter with garlic, parsley, and paprika to make garlic herb butter. Place corn on grill with husks on. Grill 15–20 minutes turning every 5 minutes until husks are charred and corn is cooked. Carefully peel back husks and brush generously with garlic herb butter. Season with salt and pepper. Serve with lime wedges."
+      },
+      {
+        "id": "gv2",
+        "name": "Grilled Zucchini with Herbs",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 medium zucchini, sliced lengthwise into planks",
+          "3 tbsp olive oil",
+          "4 garlic cloves, minced",
+          "1 tbsp fresh thyme",
+          "1 tbsp fresh rosemary, chopped",
+          "Juice of 1 lemon",
+          "Salt and pepper",
+          "Parmesan shavings to serve"
+        ],
+        "prep": "Slice zucchini lengthwise into ¼-inch thick planks. Whisk olive oil, garlic, thyme, rosemary, salt, and pepper. Brush both sides of zucchini planks with herb oil. Heat grill to medium-high and oil the grates. Grill zucchini 3–4 minutes per side until grill marks form and zucchini is tender but not mushy. Transfer to a platter and immediately squeeze lemon juice over. Top with Parmesan shavings."
+      },
+      {
+        "id": "gv3",
+        "name": "Grilled Portobello Mushrooms",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 large portobello mushroom caps, stems removed",
+          "4 tbsp olive oil",
+          "4 garlic cloves, minced",
+          "2 tbsp balsamic vinegar",
+          "1 tbsp fresh thyme",
+          "1 tbsp soy sauce",
+          "Salt and pepper",
+          "Fresh parsley to garnish"
+        ],
+        "prep": "Wipe mushroom caps clean with a damp cloth. Whisk olive oil, garlic, balsamic, thyme, and soy sauce. Brush both sides of mushrooms generously with marinade. Let sit 15 minutes. Heat grill to medium-high. Grill mushrooms gill-side up 4–5 minutes, flip, then cook another 4–5 minutes. The mushrooms will release liquid — this is normal. Season with salt and pepper. Garnish with fresh parsley. Serve as a side or in a burger bun as a meat-free main."
+      },
+      {
+        "id": "gv4",
+        "name": "Grilled Asparagus",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 lbs thick asparagus spears, woody ends snapped off",
+          "3 tbsp olive oil",
+          "4 garlic cloves, minced",
+          "Zest and juice of 1 lemon",
+          "¼ cup Parmesan, grated",
+          "Salt and pepper",
+          "Red pepper flakes"
+        ],
+        "prep": "Snap or cut the woody ends off asparagus. Toss with olive oil, garlic, salt, pepper, and red pepper flakes. Heat grill to high. Lay asparagus perpendicular to the grates so they do not fall through. Grill 2–4 minutes per side depending on thickness — they should be tender with good char marks but still have a slight bite. Transfer to a platter. Squeeze lemon juice over and top with lemon zest and Parmesan."
+      },
+      {
+        "id": "gv5",
+        "name": "Grilled Vegetable Platter",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 red bell pepper, quartered",
+          "1 yellow bell pepper, quartered",
+          "1 zucchini, sliced lengthwise",
+          "1 eggplant, sliced into rounds",
+          "1 red onion, sliced into thick rounds",
+          "1 cup mushrooms",
+          "4 tbsp olive oil",
+          "2 tbsp balsamic vinegar",
+          "2 garlic cloves, minced",
+          "1 tbsp Italian seasoning",
+          "Salt and pepper",
+          "Fresh basil to garnish"
+        ],
+        "prep": "Combine olive oil, balsamic, garlic, and Italian seasoning. Toss all vegetables with marinade and season with salt and pepper. Let sit 15 minutes. Heat grill to medium-high. Grill each vegetable by size — peppers and eggplant 4–5 minutes per side, zucchini and onions 3–4 minutes per side, mushrooms 3 minutes per side. Arrange on a large platter. Drizzle any remaining marinade over. Garnish with fresh basil."
+      }
     ]
   }
-
 ];
-
-// ================================================================
-//  TOGGLE CATEGORY — shows/hides recipe list under a card
-// ================================================================
-function toggleCategory(catId) {
-  var ul = document.getElementById(catId);
-  if (!ul) return;
-
-  if (ul.style.display === 'block') {
-    ul.style.display = 'none';
-    return;
-  }
-
-  var cat = vegetables_data.find(function(c) { return c.id === catId; });
-  if (!cat) return;
-
-  if (ul.innerHTML === '') {
-    cat.recipes.forEach(function(recipe, idx) {
-      var li = document.createElement('li');
-      li.className = 'browser-item';
-      li.innerHTML =
-        '<span class="browser-item-name">' + recipe.name + '</span>' +
-        '<span class="browser-item-arrow">›</span>';
-      li.addEventListener('click', function() {
-        open_recipe_modal(recipe, catId);
-      });
-      ul.appendChild(li);
-    });
-  }
-
-  ul.style.display = 'block';
-}

@@ -122,6 +122,373 @@ const breads_and_grains_data = [
           "¼ tsp black pepper"
         ],
         "prep": "Heat olive oil in a saucepan over medium heat. Sauté onion and garlic until fragrant. Add quinoa and stir to coat. Pour in broth, bring to a boil, reduce heat, cover, and simmer 15 minutes until liquid is absorbed. Fluff with a fork and season with salt and pepper."
+      },
+      {
+        "name": "Quinoa Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (255 g) quinoa",
+          "3 cups (720 ml) water or broth",
+          "1 can (14 oz) chickpeas, drained",
+          "1 cup cucumber, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ red onion, finely diced",
+          "½ cup fresh parsley, chopped",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, salt and pepper",
+          "Optional: feta cheese"
+        ],
+        "prep": "Rinse quinoa well. Combine with water or broth in a saucepan. Bring to a boil, reduce heat, cover, and cook 15 minutes until all liquid is absorbed. Fluff with a fork and spread on a baking sheet to cool. Combine cooled quinoa with chickpeas, cucumber, tomatoes, and red onion. Whisk dressing ingredients and pour over. Toss well. Stir in parsley and feta if using."
+      },
+      {
+        "name": "Couscous with Vegetables",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (250 g) couscous",
+          "1½ cups (360 ml) boiling chicken broth",
+          "2 tbsp olive oil",
+          "1 zucchini, diced",
+          "1 red bell pepper, diced",
+          "1 cup cherry tomatoes, halved",
+          "3 garlic cloves, minced",
+          "½ cup fresh herbs — parsley and mint",
+          "Juice of 1 lemon",
+          "Salt and pepper"
+        ],
+        "prep": "Place couscous in a large bowl. Pour boiling broth over couscous. Add 1 tbsp olive oil and salt. Cover tightly with plastic wrap and let steam 5 minutes. Fluff with a fork. Sauté zucchini, pepper, and garlic in remaining olive oil until tender. Add cherry tomatoes and cook 2 minutes. Combine couscous with vegetables, fresh herbs, and lemon juice. Season with salt and pepper."
+      },
+      {
+        "name": "Creamy Polenta",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup (160 g) coarse cornmeal polenta",
+          "4 cups (960 ml) water or chicken broth",
+          "1 cup (240 ml) whole milk",
+          "3 tbsp unsalted butter",
+          "½ cup Parmesan, grated",
+          "Salt and white pepper"
+        ],
+        "prep": "Bring water or broth to a boil in a heavy saucepan. Add salt. Gradually whisk in cornmeal in a steady stream to avoid lumps. Reduce heat to low and cook stirring frequently with a wooden spoon until polenta is very thick and pulls away from the sides of the pot — about 30–40 minutes. Remove from heat and stir in butter, Parmesan, and milk until smooth and creamy. Season with salt and white pepper."
+      },
+      {
+        "name": "Pilaf",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (300 g) long grain white rice",
+          "2¾ cups (660 ml) chicken broth",
+          "1 onion, finely diced",
+          "2 garlic cloves, minced",
+          "2 tbsp unsalted butter",
+          "1 bay leaf",
+          "Salt and white pepper",
+          "Fresh parsley"
+        ],
+        "prep": "Melt butter in a heavy saucepan over medium heat. Add onion and cook until translucent. Add garlic and rice and stir to coat in butter. Cook 2 minutes until rice is lightly toasted. Add chicken broth and bay leaf. Bring to a boil. Cover tightly and reduce heat to the lowest setting. Cook 18 minutes without lifting the lid. Remove from heat and let stand 5 minutes. Remove bay leaf. Fluff with a fork and stir in fresh parsley."
+      },
+      {
+        "name": "Creamy Mushroom Polenta",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup (160 g) coarse polenta",
+          "4 cups (960 ml) chicken or vegetable broth",
+          "1 cup (240 ml) milk",
+          "3 tbsp butter",
+          "½ cup Parmesan, grated",
+          "500 g (1 lb) mixed mushrooms",
+          "3 garlic cloves, minced",
+          "Fresh thyme",
+          "Salt and pepper"
+        ],
+        "prep": "Make polenta by boiling broth and gradually whisking in cornmeal. Cook on low heat 30–40 minutes stirring frequently until thick. Stir in butter, Parmesan, and milk. Season with salt and pepper. Meanwhile sauté mushrooms in butter over high heat until golden. Add garlic and thyme. Season. Serve creamy polenta in bowls topped with sautéed mushrooms."
+      },
+      {
+        "name": "Farro Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) farro",
+          "4 cups (960 ml) water or broth",
+          "1 cup arugula",
+          "1 cup cherry tomatoes, halved",
+          "½ cup Parmesan, shaved",
+          "¼ cup pine nuts, toasted",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Rinse farro. Cook in salted water or broth 25–30 minutes until tender but still chewy. Drain and spread to cool. Whisk dressing ingredients. Toss cooled farro with arugula, cherry tomatoes, and dressing. Top with shaved Parmesan and toasted pine nuts."
+      },
+      {
+        "name": "Bulgur Wheat Tabbouleh",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup (180 g) fine bulgur wheat",
+          "1 cup boiling water",
+          "2 cups flat-leaf parsley, very finely chopped",
+          "½ cup fresh mint, finely chopped",
+          "3 medium tomatoes, finely diced",
+          "4 green onions, finely sliced",
+          "Juice of 2 lemons",
+          "¼ cup (60 ml) extra virgin olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Pour boiling water over bulgur in a bowl. Cover and let stand 20 minutes until all water is absorbed and bulgur is tender. Fluff with a fork. Cool completely. Combine cooled bulgur with parsley, mint, tomatoes, and green onions. Dress with lemon juice, olive oil, salt, and pepper. Toss well. Taste and adjust seasoning. Refrigerate 30 minutes before serving for flavors to develop."
+      }
+    ]
+  },
+  {
+    "id": "rice",
+    "icon": "🍚",
+    "name": "Rice",
+    "desc": "Steamed, fried, baked and simmered rice dishes, risottos and paella.",
+    "recipes": [
+      {
+        "name": "Yellow Curry Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup long grain white rice",
+          "2 cups water or chicken broth",
+          "1 tsp curry powder",
+          "1 tbsp butter or oil",
+          "½ tsp salt"
+        ],
+        "prep": "Rinse rice until water runs clear. Melt butter in a pot over medium heat and toast rice 1–2 minutes. Add curry powder and stir briefly. Add water and salt. Bring to a boil, cover, reduce heat to low, and simmer 15–18 minutes. Let sit 5 minutes, fluff and serve."
+      },
+      {
+        "name": "Spanish Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup long grain white rice",
+          "2 cups chicken broth",
+          "1 cup tomato sauce",
+          "½ onion diced",
+          "2 garlic cloves minced",
+          "2 tbsp oil",
+          "1 tsp cumin",
+          "1 tsp chili powder",
+          "½ tsp salt"
+        ],
+        "prep": "Heat oil in a skillet over medium heat. Toast rice until lightly golden. Add onion and garlic and cook until softened. Stir in tomato sauce, broth, and spices. Bring to a boil, cover, reduce heat, and simmer 18–20 minutes until liquid is absorbed. Fluff and serve."
+      },
+      {
+        "name": "Fried Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups cooked cold rice",
+          "2 eggs beaten",
+          "1 cup mixed vegetables",
+          "3 tbsp soy sauce",
+          "2 tbsp oil",
+          "2 green onions chopped",
+          "1 tsp sesame oil"
+        ],
+        "prep": "Heat oil in a wok over medium-high heat. Scramble eggs and set aside. Add vegetables and cook 2–3 minutes. Add rice and stir-fry, breaking clumps. Stir in soy sauce and sesame oil. Add eggs back and toss. Garnish with green onions."
+      },
+      {
+        "name": "Chicken Biryani",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cups basmati rice",
+          "500 g chicken",
+          "1 large onion sliced",
+          "2 tomatoes chopped",
+          "3 tbsp yogurt",
+          "2 tsp biryani masala",
+          "1 tsp turmeric",
+          "1 tsp ginger garlic paste",
+          "3 tbsp oil",
+          "Salt"
+        ],
+        "prep": "Cook rice 70% done and set aside. In a pot heat oil and fry onions until golden. Add chicken, spices, yogurt, and tomatoes. Cook until chicken is done. Layer rice over chicken, cover, and cook on low heat 15–20 minutes. Mix gently before serving."
+      },
+      {
+        "name": "Jasmine Coconut Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup jasmine rice",
+          "1 cup coconut milk",
+          "1 cup water",
+          "1 tbsp sugar",
+          "½ tsp salt"
+        ],
+        "prep": "Rinse rice. Combine all ingredients in a pot. Bring to a boil, cover, and reduce heat. Simmer 15 minutes. Let sit 5 minutes, fluff and serve."
+      },
+      {
+        "name": "Rice Pilaf",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup long grain rice",
+          "2 cups chicken broth",
+          "½ onion chopped",
+          "2 tbsp butter",
+          "½ tsp salt"
+        ],
+        "prep": "Melt butter in a pot and sauté onion until soft. Add rice and toast lightly. Add broth and salt. Bring to a boil, cover, and simmer 15–18 minutes. Rest 5 minutes and fluff."
+      },
+      {
+        "name": "Mexican Cilantro Lime Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup long grain rice",
+          "2 cups water",
+          "¼ cup cilantro chopped",
+          "2 tbsp lime juice",
+          "1 tbsp oil",
+          "½ tsp salt"
+        ],
+        "prep": "Cook rice with water, oil, and salt. Once done, let sit 5 minutes. Stir in cilantro and lime juice. Fluff and serve."
+      },
+      {
+        "name": "Garlic Butter Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup long grain rice",
+          "2 cups broth",
+          "3 garlic cloves minced",
+          "2 tbsp butter",
+          "½ tsp salt"
+        ],
+        "prep": "Melt butter and sauté garlic until fragrant. Add rice and toast lightly. Add broth and salt. Bring to boil, cover, and simmer 15–18 minutes. Rest and fluff."
+      },
+      {
+        "name": "Egg Fried Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups cooked rice",
+          "3 eggs",
+          "2 tbsp oil",
+          "2 tbsp soy sauce",
+          "2 green onions",
+          "Salt and pepper"
+        ],
+        "prep": "Heat oil in a pan. Scramble eggs and set aside. Add rice and stir-fry. Add soy sauce, salt, and pepper. Mix in eggs and green onions. Serve hot."
+      },
+      {
+        "name": "Simple Steamed White Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup long grain rice",
+          "2 cups water",
+          "½ tsp salt"
+        ],
+        "prep": "Rinse rice until water runs clear. Add rice, water, and salt to a pot. Bring to a boil, cover, and reduce heat. Simmer 15–18 minutes. Let sit 5 minutes and fluff before serving."
+      },
+      {
+        "name": "Classic Risotto",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (300 g) Arborio rice",
+          "5 cups (1.2 L) warm chicken or vegetable broth",
+          "1 small onion, finely diced",
+          "2 garlic cloves, minced",
+          "½ cup (120 ml) dry white wine",
+          "3 tbsp unsalted butter",
+          "½ cup (50 g) Parmesan, grated",
+          "2 tbsp olive oil",
+          "Salt and white pepper",
+          "Fresh parsley"
+        ],
+        "prep": "Keep broth warm in a separate pot. Heat olive oil and 1 tbsp butter in a large heavy skillet over medium heat. Cook onion until translucent. Add garlic and rice and stir to coat — toast 2 minutes until rice turns slightly translucent at edges. Add wine and stir until absorbed. Add warm broth one ladle at a time, stirring constantly and waiting until each addition is fully absorbed before adding the next — about 18–20 minutes total. Remove from heat and stir in remaining butter and Parmesan vigorously until creamy. Season with salt and white pepper."
+      },
+      {
+        "name": "Mushroom Risotto",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (300 g) Arborio rice",
+          "500 g (1 lb) mixed mushrooms, sliced",
+          "5 cups (1.2 L) warm vegetable or chicken broth",
+          "1 small onion, finely diced",
+          "3 garlic cloves, minced",
+          "½ cup (120 ml) dry white wine",
+          "3 tbsp butter",
+          "½ cup Parmesan, grated",
+          "2 tbsp olive oil",
+          "Fresh thyme",
+          "Salt and pepper"
+        ],
+        "prep": "Sauté mushrooms in 1 tbsp butter and olive oil over high heat until golden. Season with salt and thyme. Remove and set aside. In the same pan heat remaining butter and olive oil over medium heat. Cook onion until soft. Add garlic and rice and toast 2 minutes. Add wine and stir until absorbed. Add warm broth one ladle at a time, stirring constantly until each is absorbed — about 18–20 minutes. Stir in mushrooms, Parmesan, and butter. Season with salt and pepper."
+      },
+      {
+        "name": "Chicken Fried Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups cooked day-old white rice",
+          "300 g (10.5 oz) chicken breast, diced",
+          "3 large eggs",
+          "1 cup frozen peas and carrots",
+          "3 garlic cloves, minced",
+          "3 green onions, sliced",
+          "3 tbsp soy sauce",
+          "1 tbsp oyster sauce",
+          "1 tsp sesame oil",
+          "2 tbsp vegetable oil",
+          "Salt and pepper"
+        ],
+        "prep": "Heat vegetable oil in a wok over very high heat. Cook chicken until golden and cooked through. Push to the side. Add eggs and scramble. Add garlic and cook 30 seconds. Add cold rice, breaking up clumps, and stir fry 3 minutes until rice is heated through and slightly crispy. Add peas and carrots. Add soy sauce, oyster sauce, and sesame oil. Toss everything together. Add green onions. Drizzle with sesame oil."
+      },
+      {
+        "name": "Saffron Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (300 g) basmati or long grain rice",
+          "2½ cups (600 ml) water",
+          "½ tsp saffron threads soaked in 3 tbsp warm water",
+          "2 tbsp unsalted butter",
+          "1 small onion, finely diced",
+          "1 tsp salt",
+          "Pistachios and dried cranberries for garnish (optional)"
+        ],
+        "prep": "Soak rice in cold water 30 minutes. Drain. Melt butter in a heavy saucepan over medium heat. Cook onion until soft. Add rice and stir to coat. Add water, saffron with its soaking liquid, and salt. Bring to a boil. Cover tightly and reduce to lowest heat. Cook 18 minutes. Remove from heat and let steam 5 minutes. Fluff and garnish with pistachios and cranberries if desired."
+      },
+      {
+        "name": "Paella",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cups (400 g) short grain Spanish rice such as Bomba",
+          "4 cups (960 ml) chicken broth, warm",
+          "½ tsp saffron soaked in ¼ cup warm broth",
+          "300 g (10.5 oz) chicken thighs, bone-in",
+          "200 g (7 oz) Spanish chorizo, sliced",
+          "300 g (10.5 oz) large shrimp, shell on",
+          "1 onion, diced",
+          "4 garlic cloves, minced",
+          "1 red bell pepper, diced",
+          "1 can (14 oz) diced tomatoes",
+          "1 tsp smoked paprika",
+          "4 tbsp olive oil",
+          "Fresh parsley and lemon wedges"
+        ],
+        "prep": "Heat olive oil in a large paella pan or wide skillet over medium-high heat. Season chicken and cook until golden on all sides. Remove. Add chorizo and cook 2 minutes. Add onion, pepper, and garlic and cook until soft. Add tomatoes and paprika and cook 3 minutes. Add rice and stir to coat 2 minutes. Add warm broth and saffron. Return chicken. Bring to a boil. Reduce heat and cook uncovered 15 minutes without stirring. Add shrimp on top and cook 5 more minutes until shrimp are pink and rice has absorbed liquid. Let rest 5 minutes. Garnish with parsley and lemon."
+      },
+      {
+        "name": "Vegetable Fried Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups cooked day-old rice",
+          "3 large eggs, beaten",
+          "1 cup frozen peas and carrots",
+          "1 cup corn",
+          "1 onion, diced",
+          "3 garlic cloves, minced",
+          "3 tbsp soy sauce",
+          "1 tbsp oyster sauce",
+          "1 tsp sesame oil",
+          "2 tbsp vegetable oil",
+          "Green onions for garnish"
+        ],
+        "prep": "Heat oil in a wok over very high heat. Add onion and garlic and stir fry 2 minutes. Add eggs and scramble. Add cold rice and break up clumps. Stir fry 3 minutes until heated through and slightly crispy. Add peas, carrots, and corn. Add soy sauce, oyster sauce, and sesame oil. Toss everything together. Garnish with green onions."
+      },
+      {
+        "name": "Mujaddara Lentils and Rice",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup (190 g) green or brown lentils",
+          "1 cup (200 g) long grain rice",
+          "2 large onions, thinly sliced",
+          "4 cups (960 ml) water",
+          "1 tsp cumin",
+          "½ tsp allspice",
+          "Salt and pepper",
+          "4 tbsp olive oil",
+          "Plain yogurt and fresh mint to serve"
+        ],
+        "prep": "Caramelize onions in olive oil over medium heat for 30–40 minutes stirring occasionally until deep golden and sweet. Remove half the onions. Add lentils and water to the pot. Cook 15 minutes. Add rice, cumin, allspice, salt, and pepper. Cover and cook on low heat 18–20 minutes until rice and lentils are tender. Serve topped with remaining caramelized onions and plain yogurt."
       }
     ]
   }

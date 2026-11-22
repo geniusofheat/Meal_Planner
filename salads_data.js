@@ -1,271 +1,2107 @@
 const salads_data = [
-
-  // ===========================
-  // 🥗 GREEN & GARDEN SALADS
-  // ===========================
   {
-    id: 'green-garden',
-    icon:"🥗", name:"Green & Garden Salads",
-    desc:"Classic garden salads, Caesar, wedge, and fresh green salads with homemade dressings.",
-    recipes:[
-      {id:"gg1", name:"Classic Caesar Salad",servings:"4 servings",ingredients:["2 large heads romaine lettuce, chopped","Caesar dressing: 4 anchovy fillets, 3 garlic cloves, 2 egg yolks, 2 tbsp lemon juice, 1 tsp Dijon mustard, ½ cup olive oil, ¼ cup Parmesan, salt and pepper","1 cup homemade croutons","½ cup Parmesan shavings","Black pepper"],prep:"Make dressing by mashing anchovies and garlic into a paste. Whisk in egg yolks, lemon juice, and Dijon. Slowly drizzle in olive oil while whisking until emulsified. Stir in Parmesan, salt, and pepper. Wash and dry romaine thoroughly. Chop into bite-sized pieces. Toss romaine with enough dressing to coat — do not overdress. Add croutons and Parmesan shavings. Crack black pepper over top. Serve immediately."},
-      {id:"gg2", name:"Classic Garden Salad",servings:"4 servings",ingredients:["4 cups mixed salad greens","1 cup cherry tomatoes, halved","1 cucumber, sliced","½ red onion, thinly sliced","1 carrot, shredded","½ cup radishes, sliced","¼ cup black olives","Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon mustard, 1 tsp honey, salt and pepper"],prep:"Wash and dry all vegetables thoroughly. Combine greens, cherry tomatoes, cucumber, red onion, carrot, radishes, and olives in a large bowl. Whisk dressing ingredients together until emulsified. Drizzle dressing over salad and toss gently to coat. Serve immediately."},
-      {id:"gg3", name:"Wedge Salad",servings:"4 servings",ingredients:["1 head iceberg lettuce, cut into 4 wedges","Blue cheese dressing: ½ cup blue cheese crumbled, ½ cup sour cream, ¼ cup mayonnaise, 2 tbsp lemon juice, 1 garlic clove, salt and pepper","8 strips bacon, cooked and crumbled","1 cup cherry tomatoes, halved","¼ cup red onion, finely diced","Extra blue cheese crumbles"],prep:"Make blue cheese dressing by combining all dressing ingredients. Refrigerate 30 minutes. Cut iceberg into 4 equal wedges. Place each wedge on a plate. Spoon dressing generously over each wedge. Top with crumbled bacon, cherry tomatoes, red onion, and extra blue cheese. Crack black pepper over top."},
-      {id:"gg4", name:"Greek Salad",servings:"4 servings",ingredients:["3 large tomatoes, cut into wedges","1 English cucumber, cut into chunks","1 green bell pepper, sliced","½ red onion, thinly sliced","½ cup Kalamata olives","200 g (7 oz) feta cheese, cut into a block or crumbled","Dressing: 4 tbsp extra virgin olive oil, 2 tbsp red wine vinegar, 1 tsp dried oregano, salt and pepper"],prep:"Combine tomatoes, cucumber, bell pepper, red onion, and olives in a large bowl. Whisk dressing ingredients together. Pour over salad and toss gently. Place feta on top — either as a whole block or crumbled. Drizzle a little extra olive oil over the feta. Sprinkle dried oregano over everything. Serve with crusty bread."},
-      {id:"gg5", name:"Caprese Salad",servings:"4 servings",ingredients:["4 large ripe tomatoes, sliced","400 g (14 oz) fresh mozzarella, sliced","Large handful fresh basil leaves","4 tbsp extra virgin olive oil","2 tbsp balsamic glaze","Flaky sea salt and black pepper"],prep:"Arrange alternating slices of tomato and mozzarella on a platter, overlapping slightly. Tuck fresh basil leaves between each slice. Drizzle generously with extra virgin olive oil. Drizzle balsamic glaze over the top in a thin stream. Season with flaky sea salt and freshly cracked black pepper. Serve immediately at room temperature."},
-      {id:"gg6", name:"Arugula Salad with Parmesan",servings:"4 servings",ingredients:["4 cups baby arugula","½ cup Parmesan shavings","¼ cup pine nuts, toasted","1 cup cherry tomatoes, halved","Dressing: 3 tbsp extra virgin olive oil, 1 tbsp lemon juice, 1 tsp Dijon mustard, salt and black pepper"],prep:"Toast pine nuts in a dry skillet over medium heat until golden — watch carefully. Cool. Combine arugula, cherry tomatoes, and pine nuts in a bowl. Whisk dressing ingredients together. Toss salad with dressing. Top with generous Parmesan shavings and extra black pepper."},
-      {id:"gg7", name:"Spinach Salad with Warm Bacon Dressing",servings:"4 servings",ingredients:["6 cups baby spinach","6 strips bacon, diced","½ red onion, thinly sliced","1 cup mushrooms, sliced","2 hard boiled eggs, sliced","Warm dressing: bacon fat, 3 tbsp apple cider vinegar, 1 tbsp sugar, 1 tsp Dijon mustard, salt and pepper"],prep:"Cook bacon in a skillet until crispy. Remove bacon and reserve fat in the pan. While still warm add vinegar, sugar, and Dijon to the fat and whisk until combined. Toss spinach, red onion, and mushrooms in a large bowl. Pour warm dressing over and toss quickly. Top with sliced hard boiled eggs and crispy bacon. Serve immediately."},
-      {id:"gg8", name:"Kale Salad with Lemon Dressing",servings:"4 servings",ingredients:["1 large bunch curly kale, stems removed and leaves torn","¼ cup Parmesan, grated","¼ cup dried cranberries","¼ cup toasted almonds, sliced","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp honey, 1 garlic clove minced, salt and pepper"],prep:"Place kale in a large bowl. Pour dressing over and massage vigorously with your hands for 2–3 minutes until leaves soften and darken. Let sit 5 minutes. Add Parmesan, dried cranberries, and toasted almonds. Toss to combine. The massaging step is crucial — it breaks down the tough fibers and makes the kale tender and pleasant to eat."},
-      {id:"gg9", name:"Niçoise Salad",servings:"4 servings",ingredients:["2 cans (5 oz each) tuna in olive oil, drained","4 large eggs, soft boiled","200 g (7 oz) French green beans, blanched","1 cup cherry tomatoes, halved","½ cup Niçoise olives","4 small potatoes, boiled and halved","½ red onion, thinly sliced","4 anchovy fillets","Dressing: 4 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon mustard, 1 tsp capers, salt and pepper"],prep:"Arrange all ingredients on a large platter — tuna, halved soft boiled eggs, green beans, tomatoes, olives, potatoes, red onion, and anchovies. Whisk dressing ingredients. Drizzle over entire platter. Season with salt and pepper. This salad is best served at room temperature, not cold."},
-      {id:"gg10", name:"Butter Lettuce Salad",servings:"4 servings",ingredients:["2 heads butter lettuce, leaves separated","1 avocado, sliced","1 cup cucumber, thinly sliced","¼ cup chives, chopped","Dressing: 3 tbsp olive oil, 1 tbsp champagne vinegar, 1 tsp honey, 1 shallot minced, salt and pepper"],prep:"Gently wash and dry butter lettuce leaves. Arrange on a platter. Layer avocado and cucumber slices over the lettuce. Whisk dressing ingredients together. Drizzle over salad. Garnish with fresh chives. Season with salt and pepper."},
-      {id:"gg11", name:"Watercress Salad",servings:"4 servings",ingredients:["4 cups fresh watercress","2 oranges, peeled and segmented","½ red onion, very thinly sliced","¼ cup walnuts, toasted","Dressing: 3 tbsp walnut oil, 1 tbsp sherry vinegar, 1 tsp honey, salt and pepper"],prep:"Combine watercress, orange segments, and red onion in a bowl. Whisk dressing ingredients. Toss gently with dressing. Top with toasted walnuts. The peppery watercress pairs beautifully with the sweet orange and nutty walnuts."},
-      {id:"gg12", name:"Endive Salad with Blue Cheese",servings:"4 servings",ingredients:["4 heads Belgian endive, leaves separated","100 g (3.5 oz) blue cheese, crumbled","½ cup walnuts, toasted and roughly chopped","2 pears, thinly sliced","Handful of watercress or arugula","Dressing: 3 tbsp walnut oil, 2 tbsp lemon juice, 1 tsp honey, salt and pepper"],prep:"Arrange endive leaves on a platter. Add pear slices, blue cheese, walnuts, and watercress. Whisk dressing and drizzle over. The bitterness of endive pairs perfectly with the sweet pear and creamy blue cheese."},
-      {id:"gg13", name:"Radicchio and Fennel Salad",servings:"4 servings",ingredients:["1 head radicchio, thinly sliced","1 large fennel bulb, very thinly sliced, fronds reserved","½ cup green olives","¼ cup Parmesan shavings","Dressing: 4 tbsp olive oil, 2 tbsp lemon juice, 1 tsp honey, salt and pepper"],prep:"Combine radicchio and fennel in a large bowl. Add olives. Whisk dressing and toss salad. Top with Parmesan shavings and fennel fronds. Let sit 5 minutes before serving to allow radicchio to soften slightly."},
-      {id:"gg14", name:"Tomato and Cucumber Salad",servings:"4 servings",ingredients:["4 large tomatoes, diced","2 cucumbers, diced","½ red onion, finely diced","¼ cup fresh parsley, chopped","¼ cup fresh mint, chopped","Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp sugar, salt and pepper"],prep:"Combine tomatoes, cucumbers, and red onion in a bowl. Salt lightly and let sit 10 minutes. Drain any excess liquid. Add parsley and mint. Whisk dressing and pour over. Toss well. Serve at room temperature — refrigerating dulls the tomato flavor."},
-      {id:"gg15", name:"Beet and Goat Cheese Salad",servings:"4 servings",ingredients:["4 medium beets, roasted and sliced","100 g (3.5 oz) goat cheese, crumbled","¼ cup candied walnuts","4 cups mixed greens","Dressing: 3 tbsp olive oil, 2 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"],prep:"Roast beets wrapped in foil at 400°F for 45–60 minutes until tender. Cool, peel, and slice. Arrange mixed greens on plates. Top with beet slices, crumbled goat cheese, and candied walnuts. Whisk dressing and drizzle over. The earthiness of beets with creamy goat cheese is a classic combination."}
+    "id": "green-garden",
+    "icon": "🥗",
+    "name": "Green & Garden Salads",
+    "desc": "Classic garden salads, Caesar, wedge, and fresh green salads with homemade dressings.",
+    "recipes": [
+      {
+        "id": "gg1",
+        "name": "Classic Caesar Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 large heads romaine lettuce, chopped",
+          "Caesar dressing: 4 anchovy fillets, 3 garlic cloves, 2 egg yolks, 2 tbsp lemon juice, 1 tsp Dijon mustard, ½ cup olive oil, ¼ cup Parmesan, salt and pepper",
+          "1 cup homemade croutons",
+          "½ cup Parmesan shavings",
+          "Black pepper"
+        ],
+        "prep": "Make dressing by mashing anchovies and garlic into a paste. Whisk in egg yolks, lemon juice, and Dijon. Slowly drizzle in olive oil while whisking until emulsified. Stir in Parmesan, salt, and pepper. Wash and dry romaine thoroughly. Chop into bite-sized pieces. Toss romaine with enough dressing to coat — do not overdress. Add croutons and Parmesan shavings. Crack black pepper over top. Serve immediately."
+      },
+      {
+        "id": "gg2",
+        "name": "Classic Garden Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups mixed salad greens",
+          "1 cup cherry tomatoes, halved",
+          "1 cucumber, sliced",
+          "½ red onion, thinly sliced",
+          "1 carrot, shredded",
+          "½ cup radishes, sliced",
+          "¼ cup black olives",
+          "Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon mustard, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Wash and dry all vegetables thoroughly. Combine greens, cherry tomatoes, cucumber, red onion, carrot, radishes, and olives in a large bowl. Whisk dressing ingredients together until emulsified. Drizzle dressing over salad and toss gently to coat. Serve immediately."
+      },
+      {
+        "id": "gg3",
+        "name": "Wedge Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 head iceberg lettuce, cut into 4 wedges",
+          "Blue cheese dressing: ½ cup blue cheese crumbled, ½ cup sour cream, ¼ cup mayonnaise, 2 tbsp lemon juice, 1 garlic clove, salt and pepper",
+          "8 strips bacon, cooked and crumbled",
+          "1 cup cherry tomatoes, halved",
+          "¼ cup red onion, finely diced",
+          "Extra blue cheese crumbles"
+        ],
+        "prep": "Make blue cheese dressing by combining all dressing ingredients. Refrigerate 30 minutes. Cut iceberg into 4 equal wedges. Place each wedge on a plate. Spoon dressing generously over each wedge. Top with crumbled bacon, cherry tomatoes, red onion, and extra blue cheese. Crack black pepper over top."
+      },
+      {
+        "id": "gg4",
+        "name": "Greek Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 large tomatoes, cut into wedges",
+          "1 English cucumber, cut into chunks",
+          "1 green bell pepper, sliced",
+          "½ red onion, thinly sliced",
+          "½ cup Kalamata olives",
+          "200 g (7 oz) feta cheese, cut into a block or crumbled",
+          "Dressing: 4 tbsp extra virgin olive oil, 2 tbsp red wine vinegar, 1 tsp dried oregano, salt and pepper"
+        ],
+        "prep": "Combine tomatoes, cucumber, bell pepper, red onion, and olives in a large bowl. Whisk dressing ingredients together. Pour over salad and toss gently. Place feta on top — either as a whole block or crumbled. Drizzle a little extra olive oil over the feta. Sprinkle dried oregano over everything. Serve with crusty bread."
+      },
+      {
+        "id": "gg5",
+        "name": "Caprese Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 large ripe tomatoes, sliced",
+          "400 g (14 oz) fresh mozzarella, sliced",
+          "Large handful fresh basil leaves",
+          "4 tbsp extra virgin olive oil",
+          "2 tbsp balsamic glaze",
+          "Flaky sea salt and black pepper"
+        ],
+        "prep": "Arrange alternating slices of tomato and mozzarella on a platter, overlapping slightly. Tuck fresh basil leaves between each slice. Drizzle generously with extra virgin olive oil. Drizzle balsamic glaze over the top in a thin stream. Season with flaky sea salt and freshly cracked black pepper. Serve immediately at room temperature."
+      },
+      {
+        "id": "gg6",
+        "name": "Arugula Salad with Parmesan",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups baby arugula",
+          "½ cup Parmesan shavings",
+          "¼ cup pine nuts, toasted",
+          "1 cup cherry tomatoes, halved",
+          "Dressing: 3 tbsp extra virgin olive oil, 1 tbsp lemon juice, 1 tsp Dijon mustard, salt and black pepper"
+        ],
+        "prep": "Toast pine nuts in a dry skillet over medium heat until golden — watch carefully. Cool. Combine arugula, cherry tomatoes, and pine nuts in a bowl. Whisk dressing ingredients together. Toss salad with dressing. Top with generous Parmesan shavings and extra black pepper."
+      },
+      {
+        "id": "gg7",
+        "name": "Spinach Salad with Warm Bacon Dressing",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 cups baby spinach",
+          "6 strips bacon, diced",
+          "½ red onion, thinly sliced",
+          "1 cup mushrooms, sliced",
+          "2 hard boiled eggs, sliced",
+          "Warm dressing: bacon fat, 3 tbsp apple cider vinegar, 1 tbsp sugar, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Cook bacon in a skillet until crispy. Remove bacon and reserve fat in the pan. While still warm add vinegar, sugar, and Dijon to the fat and whisk until combined. Toss spinach, red onion, and mushrooms in a large bowl. Pour warm dressing over and toss quickly. Top with sliced hard boiled eggs and crispy bacon. Serve immediately."
+      },
+      {
+        "id": "gg8",
+        "name": "Kale Salad with Lemon Dressing",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large bunch curly kale, stems removed and leaves torn",
+          "¼ cup Parmesan, grated",
+          "¼ cup dried cranberries",
+          "¼ cup toasted almonds, sliced",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp honey, 1 garlic clove minced, salt and pepper"
+        ],
+        "prep": "Place kale in a large bowl. Pour dressing over and massage vigorously with your hands for 2–3 minutes until leaves soften and darken. Let sit 5 minutes. Add Parmesan, dried cranberries, and toasted almonds. Toss to combine. The massaging step is crucial — it breaks down the tough fibers and makes the kale tender and pleasant to eat."
+      },
+      {
+        "id": "gg9",
+        "name": "Niçoise Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (5 oz each) tuna in olive oil, drained",
+          "4 large eggs, soft boiled",
+          "200 g (7 oz) French green beans, blanched",
+          "1 cup cherry tomatoes, halved",
+          "½ cup Niçoise olives",
+          "4 small potatoes, boiled and halved",
+          "½ red onion, thinly sliced",
+          "4 anchovy fillets",
+          "Dressing: 4 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon mustard, 1 tsp capers, salt and pepper"
+        ],
+        "prep": "Arrange all ingredients on a large platter — tuna, halved soft boiled eggs, green beans, tomatoes, olives, potatoes, red onion, and anchovies. Whisk dressing ingredients. Drizzle over entire platter. Season with salt and pepper. This salad is best served at room temperature, not cold."
+      },
+      {
+        "id": "gg10",
+        "name": "Butter Lettuce Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 heads butter lettuce, leaves separated",
+          "1 avocado, sliced",
+          "1 cup cucumber, thinly sliced",
+          "¼ cup chives, chopped",
+          "Dressing: 3 tbsp olive oil, 1 tbsp champagne vinegar, 1 tsp honey, 1 shallot minced, salt and pepper"
+        ],
+        "prep": "Gently wash and dry butter lettuce leaves. Arrange on a platter. Layer avocado and cucumber slices over the lettuce. Whisk dressing ingredients together. Drizzle over salad. Garnish with fresh chives. Season with salt and pepper."
+      },
+      {
+        "id": "gg11",
+        "name": "Watercress Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups fresh watercress",
+          "2 oranges, peeled and segmented",
+          "½ red onion, very thinly sliced",
+          "¼ cup walnuts, toasted",
+          "Dressing: 3 tbsp walnut oil, 1 tbsp sherry vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Combine watercress, orange segments, and red onion in a bowl. Whisk dressing ingredients. Toss gently with dressing. Top with toasted walnuts. The peppery watercress pairs beautifully with the sweet orange and nutty walnuts."
+      },
+      {
+        "id": "gg12",
+        "name": "Endive Salad with Blue Cheese",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 heads Belgian endive, leaves separated",
+          "100 g (3.5 oz) blue cheese, crumbled",
+          "½ cup walnuts, toasted and roughly chopped",
+          "2 pears, thinly sliced",
+          "Handful of watercress or arugula",
+          "Dressing: 3 tbsp walnut oil, 2 tbsp lemon juice, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Arrange endive leaves on a platter. Add pear slices, blue cheese, walnuts, and watercress. Whisk dressing and drizzle over. The bitterness of endive pairs perfectly with the sweet pear and creamy blue cheese."
+      },
+      {
+        "id": "gg13",
+        "name": "Radicchio and Fennel Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 head radicchio, thinly sliced",
+          "1 large fennel bulb, very thinly sliced, fronds reserved",
+          "½ cup green olives",
+          "¼ cup Parmesan shavings",
+          "Dressing: 4 tbsp olive oil, 2 tbsp lemon juice, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Combine radicchio and fennel in a large bowl. Add olives. Whisk dressing and toss salad. Top with Parmesan shavings and fennel fronds. Let sit 5 minutes before serving to allow radicchio to soften slightly."
+      },
+      {
+        "id": "gg14",
+        "name": "Tomato and Cucumber Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 large tomatoes, diced",
+          "2 cucumbers, diced",
+          "½ red onion, finely diced",
+          "¼ cup fresh parsley, chopped",
+          "¼ cup fresh mint, chopped",
+          "Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp sugar, salt and pepper"
+        ],
+        "prep": "Combine tomatoes, cucumbers, and red onion in a bowl. Salt lightly and let sit 10 minutes. Drain any excess liquid. Add parsley and mint. Whisk dressing and pour over. Toss well. Serve at room temperature — refrigerating dulls the tomato flavor."
+      },
+      {
+        "id": "gg15",
+        "name": "Beet and Goat Cheese Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 medium beets, roasted and sliced",
+          "100 g (3.5 oz) goat cheese, crumbled",
+          "¼ cup candied walnuts",
+          "4 cups mixed greens",
+          "Dressing: 3 tbsp olive oil, 2 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Roast beets wrapped in foil at 400°F for 45–60 minutes until tender. Cool, peel, and slice. Arrange mixed greens on plates. Top with beet slices, crumbled goat cheese, and candied walnuts. Whisk dressing and drizzle over. The earthiness of beets with creamy goat cheese is a classic combination."
+      }
     ]
   },
-
-  // ===========================
-  // 🍝 PASTA SALADS
-  // ===========================
   {
-    id: 'pasta-salads',
-    icon:"🍝", name:"Pasta Salads",
-    desc:"Cold pasta salads perfect for picnics, potlucks, and summer gatherings.",
-    recipes:[
-      {id:"ps1", name:"Classic Pasta Salad",servings:"8 servings",ingredients:["500 g (1 lb) rotini or fusilli","1 cup cherry tomatoes, halved","1 cucumber, diced","½ red onion, finely diced","1 cup black olives, sliced","1 cup salami, diced","1 cup provolone, cubed","Italian dressing: ½ cup olive oil, ¼ cup red wine vinegar, 1 tsp Italian seasoning, 1 tsp garlic powder, 1 tsp sugar, salt and pepper"],prep:"Cook pasta according to package directions until al dente. Drain and rinse under cold water. Cool completely. Combine pasta with all vegetables, salami, and cheese in a large bowl. Whisk dressing ingredients together. Pour over pasta and toss well. Refrigerate at least 1 hour before serving. Toss again and adjust seasoning before serving."},
-      {id:"ps2", name:"Greek Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) penne or rotini","200 g (7 oz) feta cheese, crumbled","1 cup Kalamata olives","1 cup cherry tomatoes, halved","1 cucumber, diced","½ red onion, thinly sliced","1 red bell pepper, diced","Dressing: 4 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp dried oregano, 1 garlic clove minced, salt and pepper"],prep:"Cook pasta until al dente. Drain and rinse under cold water. Combine cooled pasta with all vegetables, olives, and feta. Whisk dressing and pour over. Toss gently. Refrigerate 30 minutes. Toss again before serving."},
-      {id:"ps3", name:"BLT Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) rotini","8 strips bacon, cooked and crumbled","2 cups cherry tomatoes, halved","3 cups romaine lettuce, chopped","Dressing: ½ cup mayonnaise, 2 tbsp sour cream, 1 tbsp lemon juice, 1 tsp garlic powder, salt and pepper"],prep:"Cook pasta until al dente. Rinse and cool. Mix dressing ingredients. Toss cooled pasta with dressing, bacon, and tomatoes. Refrigerate 30 minutes. Add chopped romaine just before serving so it stays crisp."},
-      {id:"ps4", name:"Caprese Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) penne or farfalle","2 cups cherry tomatoes, halved","200 g (7 oz) fresh mozzarella, cubed","Large handful fresh basil, torn","Dressing: 4 tbsp extra virgin olive oil, 2 tbsp balsamic glaze, 1 garlic clove minced, salt and pepper"],prep:"Cook pasta until al dente. Drain and rinse under cold water. Combine cooled pasta with cherry tomatoes, mozzarella, and basil. Whisk dressing and pour over. Toss gently. Let sit 15 minutes for flavors to develop. Drizzle extra balsamic glaze over before serving."},
-      {id:"ps5", name:"Southwest Pasta Salad",servings:"8 servings",ingredients:["400 g (14 oz) rotini","1 can (14 oz) black beans, drained","1 cup corn kernels","1 red bell pepper, diced","1 cup cherry tomatoes","¼ cup red onion, diced","1 avocado, diced","Dressing: ¼ cup olive oil, 3 tbsp lime juice, 1 tsp cumin, 1 tsp chili powder, 1 garlic clove, cilantro, salt"],prep:"Cook pasta until al dente. Rinse and cool. Combine pasta with beans, corn, bell pepper, tomatoes, and red onion. Whisk dressing ingredients. Toss salad with dressing. Refrigerate 30 minutes. Add avocado and cilantro just before serving."},
-      {id:"ps6", name:"Pesto Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) fusilli or farfalle","½ cup basil pesto","1 cup cherry tomatoes, halved","1 cup fresh mozzarella, cubed","¼ cup sun-dried tomatoes, chopped","¼ cup pine nuts, toasted","Fresh basil leaves","Salt and pepper"],prep:"Cook pasta until al dente. Drain and rinse under cold water. While still slightly warm toss with pesto — this helps the pasta absorb the flavors. Cool completely. Add cherry tomatoes, mozzarella, and sun-dried tomatoes. Toss gently. Top with pine nuts and fresh basil. Season with salt and pepper."},
-      {id:"ps7", name:"Macaroni Salad",servings:"8 servings",ingredients:["500 g (1 lb) elbow macaroni","1 cup mayonnaise","2 tbsp apple cider vinegar","1 tbsp sugar","1 tsp Dijon mustard","3 celery stalks, finely diced","½ red onion, finely diced","1 red bell pepper, finely diced","2 tbsp fresh parsley","Salt and pepper"],prep:"Cook macaroni until al dente. Drain and rinse under cold water. Mix dressing: mayonnaise, vinegar, sugar, Dijon, salt, and pepper. Combine cooled pasta with celery, onion, and bell pepper. Pour dressing over and toss well. Refrigerate at least 2 hours — overnight is best. The pasta absorbs the dressing as it sits. Stir well and adjust seasoning before serving."},
-      {id:"ps8", name:"Tortellini Pasta Salad",servings:"6 servings",ingredients:["500 g (1 lb) cheese tortellini","1 cup salami, quartered","1 cup cherry tomatoes, halved","1 cup black olives, sliced","1 cup artichoke hearts, quartered","½ cup Parmesan, shaved","Italian dressing: ¼ cup olive oil, 3 tbsp red wine vinegar, 1 tsp Italian seasoning, 1 tsp garlic powder, salt and pepper"],prep:"Cook tortellini according to package. Drain and rinse under cold water. Combine with salami, tomatoes, olives, and artichoke hearts. Whisk dressing and pour over. Toss gently. Top with Parmesan shavings. Refrigerate 30 minutes before serving."},
-      {id:"ps9", name:"Antipasto Pasta Salad",servings:"8 servings",ingredients:["400 g (14 oz) rotini","150 g (5 oz) salami, sliced","150 g (5 oz) pepperoni, sliced","1 cup marinated artichoke hearts","1 cup roasted red peppers, sliced","1 cup green olives","1 cup black olives","200 g (7 oz) fresh mozzarella, cubed","Italian dressing","Fresh basil"],prep:"Cook pasta until al dente. Rinse and cool. Combine pasta with all antipasto ingredients. Toss with Italian dressing. Top with fresh basil. Refrigerate 1 hour before serving."},
-      {id:"ps10", name:"Tuna Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) rotini or penne","2 cans (5 oz each) tuna, drained","½ cup mayonnaise","2 tbsp lemon juice","3 celery stalks, diced","½ red onion, finely diced","1 cup frozen peas, thawed","2 tbsp fresh dill","Salt and pepper"],prep:"Cook pasta until al dente. Rinse and cool. Mix mayonnaise and lemon juice together. Combine cooled pasta with tuna, celery, onion, peas, and dill. Fold in mayonnaise mixture. Season generously with salt and pepper. Refrigerate at least 1 hour before serving."},
-      {id:"ps11", name:"Chicken Caesar Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) penne or rotini","2 grilled chicken breasts, sliced","3 cups romaine lettuce, chopped","½ cup Caesar dressing","½ cup Parmesan, grated","1 cup croutons","Salt and pepper"],prep:"Cook pasta until al dente. Rinse and cool. Toss cooled pasta with Caesar dressing. Add romaine, sliced grilled chicken, and Parmesan. Toss gently. Add croutons just before serving to keep them crispy. Season with salt and pepper."},
-      {id:"ps12", name:"Sun-Dried Tomato Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) farfalle","½ cup sun-dried tomatoes in oil, drained and chopped","1 cup fresh mozzarella, cubed","¼ cup fresh basil, torn","¼ cup black olives","3 tbsp sun-dried tomato oil","2 tbsp balsamic vinegar","2 garlic cloves, minced","Salt and pepper"],prep:"Cook pasta until al dente. Rinse and cool. Whisk sun-dried tomato oil, balsamic, and garlic together. Toss cooled pasta with dressing. Add sun-dried tomatoes, mozzarella, olives, and basil. Toss gently. Let sit 15 minutes before serving."},
-      {id:"ps13", name:"Buffalo Chicken Pasta Salad",servings:"6 servings",ingredients:["400 g (14 oz) rotini","2 chicken breasts, cooked and shredded","⅓ cup buffalo sauce","½ cup blue cheese dressing","3 celery stalks, diced","½ red onion, diced","1 cup cherry tomatoes","Blue cheese crumbles","Green onions to garnish"],prep:"Cook pasta until al dente. Rinse and cool. Toss shredded chicken with buffalo sauce. Combine cooled pasta with buffalo chicken, celery, onion, and tomatoes. Drizzle blue cheese dressing over and toss. Top with blue cheese crumbles and green onions. Refrigerate 30 minutes before serving."},
-      {id:"ps14", name:"Orzo Salad with Vegetables",servings:"6 servings",ingredients:["400 g (14 oz) orzo","1 cup cherry tomatoes, halved","1 cucumber, diced","½ red onion, diced","½ cup Kalamata olives","100 g (3.5 oz) feta, crumbled","¼ cup fresh parsley and mint","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp oregano, salt and pepper"],prep:"Cook orzo until al dente. Drain and rinse. Spread on a baking sheet to cool. Combine cooled orzo with tomatoes, cucumber, onion, and olives. Whisk dressing and pour over. Toss well. Top with feta, parsley, and mint. Refrigerate 30 minutes before serving."},
-      {id:"ps15", name:"Bacon Ranch Pasta Salad",servings:"8 servings",ingredients:["500 g (1 lb) rotini","8 strips bacon, cooked and crumbled","1 cup cheddar cheese, cubed","1 cup cherry tomatoes, halved","3 green onions, sliced","Ranch dressing: ½ cup mayonnaise, ½ cup sour cream, 1 packet ranch seasoning, 2 tbsp milk, salt and pepper"],prep:"Cook pasta until al dente. Rinse and cool. Mix ranch dressing ingredients. Combine cooled pasta with bacon, cheddar, tomatoes, and green onions. Pour ranch dressing over and toss well. Refrigerate at least 1 hour before serving."}
+    "id": "pasta-salads",
+    "icon": "🍝",
+    "name": "Pasta Salads",
+    "desc": "Cold pasta salads perfect for picnics, potlucks, and summer gatherings.",
+    "recipes": [
+      {
+        "id": "ps1",
+        "name": "Classic Pasta Salad",
+        "servings": "8 servings",
+        "ingredients": [
+          "500 g (1 lb) rotini or fusilli",
+          "1 cup cherry tomatoes, halved",
+          "1 cucumber, diced",
+          "½ red onion, finely diced",
+          "1 cup black olives, sliced",
+          "1 cup salami, diced",
+          "1 cup provolone, cubed",
+          "Italian dressing: ½ cup olive oil, ¼ cup red wine vinegar, 1 tsp Italian seasoning, 1 tsp garlic powder, 1 tsp sugar, salt and pepper"
+        ],
+        "prep": "Cook pasta according to package directions until al dente. Drain and rinse under cold water. Cool completely. Combine pasta with all vegetables, salami, and cheese in a large bowl. Whisk dressing ingredients together. Pour over pasta and toss well. Refrigerate at least 1 hour before serving. Toss again and adjust seasoning before serving."
+      },
+      {
+        "id": "ps2",
+        "name": "Greek Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) penne or rotini",
+          "200 g (7 oz) feta cheese, crumbled",
+          "1 cup Kalamata olives",
+          "1 cup cherry tomatoes, halved",
+          "1 cucumber, diced",
+          "½ red onion, thinly sliced",
+          "1 red bell pepper, diced",
+          "Dressing: 4 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp dried oregano, 1 garlic clove minced, salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Drain and rinse under cold water. Combine cooled pasta with all vegetables, olives, and feta. Whisk dressing and pour over. Toss gently. Refrigerate 30 minutes. Toss again before serving."
+      },
+      {
+        "id": "ps3",
+        "name": "BLT Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) rotini",
+          "8 strips bacon, cooked and crumbled",
+          "2 cups cherry tomatoes, halved",
+          "3 cups romaine lettuce, chopped",
+          "Dressing: ½ cup mayonnaise, 2 tbsp sour cream, 1 tbsp lemon juice, 1 tsp garlic powder, salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Mix dressing ingredients. Toss cooled pasta with dressing, bacon, and tomatoes. Refrigerate 30 minutes. Add chopped romaine just before serving so it stays crisp."
+      },
+      {
+        "id": "ps4",
+        "name": "Caprese Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) penne or farfalle",
+          "2 cups cherry tomatoes, halved",
+          "200 g (7 oz) fresh mozzarella, cubed",
+          "Large handful fresh basil, torn",
+          "Dressing: 4 tbsp extra virgin olive oil, 2 tbsp balsamic glaze, 1 garlic clove minced, salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Drain and rinse under cold water. Combine cooled pasta with cherry tomatoes, mozzarella, and basil. Whisk dressing and pour over. Toss gently. Let sit 15 minutes for flavors to develop. Drizzle extra balsamic glaze over before serving."
+      },
+      {
+        "id": "ps5",
+        "name": "Southwest Pasta Salad",
+        "servings": "8 servings",
+        "ingredients": [
+          "400 g (14 oz) rotini",
+          "1 can (14 oz) black beans, drained",
+          "1 cup corn kernels",
+          "1 red bell pepper, diced",
+          "1 cup cherry tomatoes",
+          "¼ cup red onion, diced",
+          "1 avocado, diced",
+          "Dressing: ¼ cup olive oil, 3 tbsp lime juice, 1 tsp cumin, 1 tsp chili powder, 1 garlic clove, cilantro, salt"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Combine pasta with beans, corn, bell pepper, tomatoes, and red onion. Whisk dressing ingredients. Toss salad with dressing. Refrigerate 30 minutes. Add avocado and cilantro just before serving."
+      },
+      {
+        "id": "ps6",
+        "name": "Pesto Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) fusilli or farfalle",
+          "½ cup basil pesto",
+          "1 cup cherry tomatoes, halved",
+          "1 cup fresh mozzarella, cubed",
+          "¼ cup sun-dried tomatoes, chopped",
+          "¼ cup pine nuts, toasted",
+          "Fresh basil leaves",
+          "Salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Drain and rinse under cold water. While still slightly warm toss with pesto — this helps the pasta absorb the flavors. Cool completely. Add cherry tomatoes, mozzarella, and sun-dried tomatoes. Toss gently. Top with pine nuts and fresh basil. Season with salt and pepper."
+      },
+      {
+        "id": "ps7",
+        "name": "Macaroni Salad",
+        "servings": "8 servings",
+        "ingredients": [
+          "500 g (1 lb) elbow macaroni",
+          "1 cup mayonnaise",
+          "2 tbsp apple cider vinegar",
+          "1 tbsp sugar",
+          "1 tsp Dijon mustard",
+          "3 celery stalks, finely diced",
+          "½ red onion, finely diced",
+          "1 red bell pepper, finely diced",
+          "2 tbsp fresh parsley",
+          "Salt and pepper"
+        ],
+        "prep": "Cook macaroni until al dente. Drain and rinse under cold water. Mix dressing: mayonnaise, vinegar, sugar, Dijon, salt, and pepper. Combine cooled pasta with celery, onion, and bell pepper. Pour dressing over and toss well. Refrigerate at least 2 hours — overnight is best. The pasta absorbs the dressing as it sits. Stir well and adjust seasoning before serving."
+      },
+      {
+        "id": "ps8",
+        "name": "Tortellini Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "500 g (1 lb) cheese tortellini",
+          "1 cup salami, quartered",
+          "1 cup cherry tomatoes, halved",
+          "1 cup black olives, sliced",
+          "1 cup artichoke hearts, quartered",
+          "½ cup Parmesan, shaved",
+          "Italian dressing: ¼ cup olive oil, 3 tbsp red wine vinegar, 1 tsp Italian seasoning, 1 tsp garlic powder, salt and pepper"
+        ],
+        "prep": "Cook tortellini according to package. Drain and rinse under cold water. Combine with salami, tomatoes, olives, and artichoke hearts. Whisk dressing and pour over. Toss gently. Top with Parmesan shavings. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "ps9",
+        "name": "Antipasto Pasta Salad",
+        "servings": "8 servings",
+        "ingredients": [
+          "400 g (14 oz) rotini",
+          "150 g (5 oz) salami, sliced",
+          "150 g (5 oz) pepperoni, sliced",
+          "1 cup marinated artichoke hearts",
+          "1 cup roasted red peppers, sliced",
+          "1 cup green olives",
+          "1 cup black olives",
+          "200 g (7 oz) fresh mozzarella, cubed",
+          "Italian dressing",
+          "Fresh basil"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Combine pasta with all antipasto ingredients. Toss with Italian dressing. Top with fresh basil. Refrigerate 1 hour before serving."
+      },
+      {
+        "id": "ps10",
+        "name": "Tuna Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) rotini or penne",
+          "2 cans (5 oz each) tuna, drained",
+          "½ cup mayonnaise",
+          "2 tbsp lemon juice",
+          "3 celery stalks, diced",
+          "½ red onion, finely diced",
+          "1 cup frozen peas, thawed",
+          "2 tbsp fresh dill",
+          "Salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Mix mayonnaise and lemon juice together. Combine cooled pasta with tuna, celery, onion, peas, and dill. Fold in mayonnaise mixture. Season generously with salt and pepper. Refrigerate at least 1 hour before serving."
+      },
+      {
+        "id": "ps11",
+        "name": "Chicken Caesar Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) penne or rotini",
+          "2 grilled chicken breasts, sliced",
+          "3 cups romaine lettuce, chopped",
+          "½ cup Caesar dressing",
+          "½ cup Parmesan, grated",
+          "1 cup croutons",
+          "Salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Toss cooled pasta with Caesar dressing. Add romaine, sliced grilled chicken, and Parmesan. Toss gently. Add croutons just before serving to keep them crispy. Season with salt and pepper."
+      },
+      {
+        "id": "ps12",
+        "name": "Sun-Dried Tomato Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) farfalle",
+          "½ cup sun-dried tomatoes in oil, drained and chopped",
+          "1 cup fresh mozzarella, cubed",
+          "¼ cup fresh basil, torn",
+          "¼ cup black olives",
+          "3 tbsp sun-dried tomato oil",
+          "2 tbsp balsamic vinegar",
+          "2 garlic cloves, minced",
+          "Salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Whisk sun-dried tomato oil, balsamic, and garlic together. Toss cooled pasta with dressing. Add sun-dried tomatoes, mozzarella, olives, and basil. Toss gently. Let sit 15 minutes before serving."
+      },
+      {
+        "id": "ps13",
+        "name": "Buffalo Chicken Pasta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) rotini",
+          "2 chicken breasts, cooked and shredded",
+          "⅓ cup buffalo sauce",
+          "½ cup blue cheese dressing",
+          "3 celery stalks, diced",
+          "½ red onion, diced",
+          "1 cup cherry tomatoes",
+          "Blue cheese crumbles",
+          "Green onions to garnish"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Toss shredded chicken with buffalo sauce. Combine cooled pasta with buffalo chicken, celery, onion, and tomatoes. Drizzle blue cheese dressing over and toss. Top with blue cheese crumbles and green onions. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "ps14",
+        "name": "Orzo Salad with Vegetables",
+        "servings": "6 servings",
+        "ingredients": [
+          "400 g (14 oz) orzo",
+          "1 cup cherry tomatoes, halved",
+          "1 cucumber, diced",
+          "½ red onion, diced",
+          "½ cup Kalamata olives",
+          "100 g (3.5 oz) feta, crumbled",
+          "¼ cup fresh parsley and mint",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp oregano, salt and pepper"
+        ],
+        "prep": "Cook orzo until al dente. Drain and rinse. Spread on a baking sheet to cool. Combine cooled orzo with tomatoes, cucumber, onion, and olives. Whisk dressing and pour over. Toss well. Top with feta, parsley, and mint. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "ps15",
+        "name": "Bacon Ranch Pasta Salad",
+        "servings": "8 servings",
+        "ingredients": [
+          "500 g (1 lb) rotini",
+          "8 strips bacon, cooked and crumbled",
+          "1 cup cheddar cheese, cubed",
+          "1 cup cherry tomatoes, halved",
+          "3 green onions, sliced",
+          "Ranch dressing: ½ cup mayonnaise, ½ cup sour cream, 1 packet ranch seasoning, 2 tbsp milk, salt and pepper"
+        ],
+        "prep": "Cook pasta until al dente. Rinse and cool. Mix ranch dressing ingredients. Combine cooled pasta with bacon, cheddar, tomatoes, and green onions. Pour ranch dressing over and toss well. Refrigerate at least 1 hour before serving."
+      }
     ]
   },
-
-  // ===========================
-  // 🌾 GRAIN SALADS
-  // ===========================
   {
-    id: 'grain-salads',
-    icon:"🌾", name:"Grain Salads",
-    desc:"Hearty quinoa, farro, bulgur, and ancient grain salads packed with nutrients.",
-    recipes:[
-      {id:"gs1", name:"Quinoa Tabbouleh",servings:"4 servings",ingredients:["1½ cups (255 g) quinoa, cooked and cooled","2 cups fresh flat-leaf parsley, finely chopped","½ cup fresh mint, finely chopped","3 tomatoes, finely diced","4 green onions, finely sliced","1 cucumber, finely diced","Dressing: juice of 2 lemons, ¼ cup olive oil, salt and pepper"],prep:"Cook quinoa and cool completely. Spread on a tray to dry out a little. Combine with parsley, mint, tomatoes, green onions, and cucumber. Dress with lemon juice, olive oil, salt, and pepper. Toss well. Refrigerate 30 minutes before serving for flavors to develop."},
-      {id:"gs2", name:"Farro Salad with Roasted Vegetables",servings:"4 servings",ingredients:["1½ cups (270 g) farro","1 zucchini, diced and roasted","1 red bell pepper, diced and roasted","1 cup cherry tomatoes, roasted","½ cup arugula","¼ cup Parmesan shavings","¼ cup pine nuts, toasted","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp Dijon mustard, salt and pepper"],prep:"Cook farro in salted water 25–30 minutes until tender but chewy. Drain and cool. Roast vegetables at 400°F with olive oil, salt, and pepper for 20–25 minutes. Cool. Combine farro with roasted vegetables and arugula. Whisk dressing and toss. Top with Parmesan shavings and pine nuts."},
-      {id:"gs3", name:"Bulgur Tabbouleh",servings:"4 servings",ingredients:["1 cup (180 g) fine bulgur wheat","1 cup boiling water","2 cups flat-leaf parsley, very finely chopped","½ cup fresh mint, finely chopped","3 tomatoes, finely diced","4 green onions, finely sliced","Dressing: juice of 2 lemons, ¼ cup extra virgin olive oil, salt and pepper"],prep:"Pour boiling water over bulgur. Cover and let stand 20 minutes until absorbed. Fluff and cool completely. Combine with parsley, mint, tomatoes, and green onions. Dress with lemon juice, olive oil, salt and pepper. Refrigerate 30 minutes before serving."},
-      {id:"gs4", name:"Quinoa and Black Bean Salad",servings:"4 servings",ingredients:["1½ cups (255 g) quinoa, cooked","1 can (14 oz) black beans, drained","1 cup corn kernels","1 red bell pepper, diced","¼ cup red onion, finely diced","¼ cup fresh cilantro, chopped","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, 1 tsp chili powder, salt and pepper"],prep:"Cook quinoa and cool. Combine with black beans, corn, bell pepper, and red onion. Whisk dressing ingredients. Toss salad with dressing. Add cilantro and toss again. Serve at room temperature or chilled."},
-      {id:"gs5", name:"Barley Salad with Herbs",servings:"4 servings",ingredients:["1½ cups (300 g) pearl barley","1 cucumber, diced","1 cup cherry tomatoes, halved","½ cup fresh parsley, chopped","¼ cup fresh dill, chopped","½ red onion, finely diced","100 g (3.5 oz) feta, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 garlic clove, salt and pepper"],prep:"Cook barley in salted water 25–30 minutes until tender. Drain and cool. Combine with cucumber, tomatoes, parsley, dill, and red onion. Whisk dressing and toss. Top with crumbled feta."},
-      {id:"gs6", name:"Wild Rice Salad",servings:"4 servings",ingredients:["1½ cups (255 g) wild rice blend, cooked","½ cup dried cranberries","½ cup pecans, toasted and chopped","2 green onions, sliced","½ cup celery, diced","¼ cup fresh parsley, chopped","Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tbsp honey, 1 tsp Dijon mustard, salt and pepper"],prep:"Cook wild rice blend and cool completely. Combine with cranberries, pecans, green onions, celery, and parsley. Whisk dressing ingredients. Toss salad with dressing. Serve at room temperature or chilled."},
-      {id:"gs7", name:"Millet Salad with Roasted Squash",servings:"4 servings",ingredients:["1½ cups (270 g) millet, cooked","2 cups butternut squash, cubed and roasted","½ cup dried cranberries","¼ cup pumpkin seeds, toasted","3 cups arugula","Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tsp maple syrup, salt and pepper"],prep:"Cook millet and cool. Roast squash at 400°F until tender and golden. Cool. Combine millet, squash, cranberries, and pumpkin seeds. Add arugula and toss. Whisk dressing and toss salad. Serve immediately."},
-      {id:"gs8", name:"Freekeh Salad with Herbs",servings:"4 servings",ingredients:["1½ cups (270 g) freekeh, cooked","1 cup cherry tomatoes, halved","1 cucumber, diced","¼ cup fresh parsley, chopped","¼ cup fresh mint, chopped","½ cup almonds, toasted","100 g (3.5 oz) feta, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, salt and pepper"],prep:"Cook freekeh in salted water 20–25 minutes until tender. Drain and cool. Combine with tomatoes, cucumber, parsley, and mint. Whisk dressing and toss. Top with toasted almonds and crumbled feta."},
-      {id:"gs9", name:"Spelt Salad with Roasted Tomatoes",servings:"4 servings",ingredients:["1½ cups (270 g) spelt, cooked","2 cups cherry tomatoes, roasted","1 cup arugula","½ cup Parmesan shavings","¼ cup basil, torn","Dressing: 3 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"],prep:"Cook spelt in salted water 45–60 minutes until tender. Drain and cool. Roast cherry tomatoes at 400°F with olive oil and salt for 20 minutes. Cool. Combine spelt with roasted tomatoes, arugula, and basil. Whisk dressing and toss. Top with Parmesan shavings."},
-      {id:"gs10", name:"Brown Rice Salad",servings:"4 servings",ingredients:["2 cups cooked brown rice, cooled","1 cup edamame, shelled","1 cup shredded carrots","½ cup cucumber, diced","3 green onions, sliced","¼ cup cilantro, chopped","Dressing: 3 tbsp soy sauce, 2 tbsp rice vinegar, 1 tbsp sesame oil, 1 tsp honey, 1 tsp ginger","Sesame seeds to garnish"],prep:"Combine cooled brown rice with edamame, carrots, cucumber, green onions, and cilantro. Whisk dressing ingredients. Toss salad with dressing. Garnish with sesame seeds. Serve at room temperature or chilled."},
-      {id:"gs11", name:"Amaranth Salad",servings:"4 servings",ingredients:["1½ cups (270 g) amaranth, cooked","1 cup cucumber, diced","1 cup cherry tomatoes, halved","½ cup red onion, finely diced","¼ cup fresh parsley","100 g (3.5 oz) feta, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, salt and pepper"],prep:"Cook amaranth in water 20 minutes until tender. Drain well and cool. Combine with cucumber, tomatoes, red onion, and parsley. Whisk dressing and toss. Top with crumbled feta."},
-      {id:"gs12", name:"Couscous Salad",servings:"4 servings",ingredients:["1½ cups (250 g) couscous","1½ cups boiling chicken broth","1 cup cherry tomatoes, halved","1 cucumber, diced","½ cup fresh parsley and mint","½ cup Kalamata olives","100 g (3.5 oz) feta, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, salt and pepper"],prep:"Pour boiling broth over couscous. Cover and steam 5 minutes. Fluff with a fork and cool. Combine with tomatoes, cucumber, olives, and herbs. Whisk dressing and toss. Top with crumbled feta."},
-      {id:"gs13", name:"Lentil Salad with Dijon Dressing",servings:"4 servings",ingredients:["1½ cups (270 g) French green lentils","1 carrot, finely diced","2 celery stalks, finely diced","½ red onion, finely diced","¼ cup fresh parsley, chopped","Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tbsp Dijon mustard, 1 garlic clove, salt and pepper"],prep:"Cook lentils in salted water 20–25 minutes until tender but still holding shape. Drain and cool. Combine with carrot, celery, onion, and parsley. Whisk dressing and toss well. Let sit 15 minutes before serving. French green lentils work best as they hold their shape after cooking."},
-      {id:"gs14", name:"Sorghum Salad",servings:"4 servings",ingredients:["1½ cups (270 g) sorghum, cooked","1 cup roasted beets, diced","½ cup goat cheese, crumbled","¼ cup walnuts, toasted","3 cups mixed greens","Dressing: 3 tbsp olive oil, 2 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"],prep:"Cook sorghum in salted water 45–60 minutes until tender. Drain and cool. Combine sorghum with roasted beets and mixed greens. Whisk dressing and toss. Top with goat cheese and walnuts."},
-      {id:"gs15", name:"Teff Salad",servings:"4 servings",ingredients:["1 cup teff, cooked","2 cups baby spinach","1 cup cherry tomatoes, halved","½ cup cucumber, diced","¼ cup red onion, diced","¼ cup fresh mint","Dressing: 3 tbsp olive oil, juice of 1 lemon, 1 tsp cumin, salt and pepper"],prep:"Cook teff in water following package directions. Cool completely. Combine with spinach, tomatoes, cucumber, onion, and mint. Whisk dressing and toss. Serve at room temperature."}
+    "id": "grain-salads",
+    "icon": "🌾",
+    "name": "Grain Salads",
+    "desc": "Hearty quinoa, farro, bulgur, and ancient grain salads packed with nutrients.",
+    "recipes": [
+      {
+        "id": "gs1",
+        "name": "Quinoa Tabbouleh",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (255 g) quinoa, cooked and cooled",
+          "2 cups fresh flat-leaf parsley, finely chopped",
+          "½ cup fresh mint, finely chopped",
+          "3 tomatoes, finely diced",
+          "4 green onions, finely sliced",
+          "1 cucumber, finely diced",
+          "Dressing: juice of 2 lemons, ¼ cup olive oil, salt and pepper"
+        ],
+        "prep": "Cook quinoa and cool completely. Spread on a tray to dry out a little. Combine with parsley, mint, tomatoes, green onions, and cucumber. Dress with lemon juice, olive oil, salt, and pepper. Toss well. Refrigerate 30 minutes before serving for flavors to develop."
+      },
+      {
+        "id": "gs2",
+        "name": "Farro Salad with Roasted Vegetables",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) farro",
+          "1 zucchini, diced and roasted",
+          "1 red bell pepper, diced and roasted",
+          "1 cup cherry tomatoes, roasted",
+          "½ cup arugula",
+          "¼ cup Parmesan shavings",
+          "¼ cup pine nuts, toasted",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Cook farro in salted water 25–30 minutes until tender but chewy. Drain and cool. Roast vegetables at 400°F with olive oil, salt, and pepper for 20–25 minutes. Cool. Combine farro with roasted vegetables and arugula. Whisk dressing and toss. Top with Parmesan shavings and pine nuts."
+      },
+      {
+        "id": "gs3",
+        "name": "Bulgur Tabbouleh",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup (180 g) fine bulgur wheat",
+          "1 cup boiling water",
+          "2 cups flat-leaf parsley, very finely chopped",
+          "½ cup fresh mint, finely chopped",
+          "3 tomatoes, finely diced",
+          "4 green onions, finely sliced",
+          "Dressing: juice of 2 lemons, ¼ cup extra virgin olive oil, salt and pepper"
+        ],
+        "prep": "Pour boiling water over bulgur. Cover and let stand 20 minutes until absorbed. Fluff and cool completely. Combine with parsley, mint, tomatoes, and green onions. Dress with lemon juice, olive oil, salt and pepper. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "gs4",
+        "name": "Quinoa and Black Bean Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (255 g) quinoa, cooked",
+          "1 can (14 oz) black beans, drained",
+          "1 cup corn kernels",
+          "1 red bell pepper, diced",
+          "¼ cup red onion, finely diced",
+          "¼ cup fresh cilantro, chopped",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, 1 tsp chili powder, salt and pepper"
+        ],
+        "prep": "Cook quinoa and cool. Combine with black beans, corn, bell pepper, and red onion. Whisk dressing ingredients. Toss salad with dressing. Add cilantro and toss again. Serve at room temperature or chilled."
+      },
+      {
+        "id": "gs5",
+        "name": "Barley Salad with Herbs",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (300 g) pearl barley",
+          "1 cucumber, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ cup fresh parsley, chopped",
+          "¼ cup fresh dill, chopped",
+          "½ red onion, finely diced",
+          "100 g (3.5 oz) feta, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 garlic clove, salt and pepper"
+        ],
+        "prep": "Cook barley in salted water 25–30 minutes until tender. Drain and cool. Combine with cucumber, tomatoes, parsley, dill, and red onion. Whisk dressing and toss. Top with crumbled feta."
+      },
+      {
+        "id": "gs6",
+        "name": "Wild Rice Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (255 g) wild rice blend, cooked",
+          "½ cup dried cranberries",
+          "½ cup pecans, toasted and chopped",
+          "2 green onions, sliced",
+          "½ cup celery, diced",
+          "¼ cup fresh parsley, chopped",
+          "Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tbsp honey, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Cook wild rice blend and cool completely. Combine with cranberries, pecans, green onions, celery, and parsley. Whisk dressing ingredients. Toss salad with dressing. Serve at room temperature or chilled."
+      },
+      {
+        "id": "gs7",
+        "name": "Millet Salad with Roasted Squash",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) millet, cooked",
+          "2 cups butternut squash, cubed and roasted",
+          "½ cup dried cranberries",
+          "¼ cup pumpkin seeds, toasted",
+          "3 cups arugula",
+          "Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tsp maple syrup, salt and pepper"
+        ],
+        "prep": "Cook millet and cool. Roast squash at 400°F until tender and golden. Cool. Combine millet, squash, cranberries, and pumpkin seeds. Add arugula and toss. Whisk dressing and toss salad. Serve immediately."
+      },
+      {
+        "id": "gs8",
+        "name": "Freekeh Salad with Herbs",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) freekeh, cooked",
+          "1 cup cherry tomatoes, halved",
+          "1 cucumber, diced",
+          "¼ cup fresh parsley, chopped",
+          "¼ cup fresh mint, chopped",
+          "½ cup almonds, toasted",
+          "100 g (3.5 oz) feta, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, salt and pepper"
+        ],
+        "prep": "Cook freekeh in salted water 20–25 minutes until tender. Drain and cool. Combine with tomatoes, cucumber, parsley, and mint. Whisk dressing and toss. Top with toasted almonds and crumbled feta."
+      },
+      {
+        "id": "gs9",
+        "name": "Spelt Salad with Roasted Tomatoes",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) spelt, cooked",
+          "2 cups cherry tomatoes, roasted",
+          "1 cup arugula",
+          "½ cup Parmesan shavings",
+          "¼ cup basil, torn",
+          "Dressing: 3 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Cook spelt in salted water 45–60 minutes until tender. Drain and cool. Roast cherry tomatoes at 400°F with olive oil and salt for 20 minutes. Cool. Combine spelt with roasted tomatoes, arugula, and basil. Whisk dressing and toss. Top with Parmesan shavings."
+      },
+      {
+        "id": "gs10",
+        "name": "Brown Rice Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups cooked brown rice, cooled",
+          "1 cup edamame, shelled",
+          "1 cup shredded carrots",
+          "½ cup cucumber, diced",
+          "3 green onions, sliced",
+          "¼ cup cilantro, chopped",
+          "Dressing: 3 tbsp soy sauce, 2 tbsp rice vinegar, 1 tbsp sesame oil, 1 tsp honey, 1 tsp ginger",
+          "Sesame seeds to garnish"
+        ],
+        "prep": "Combine cooled brown rice with edamame, carrots, cucumber, green onions, and cilantro. Whisk dressing ingredients. Toss salad with dressing. Garnish with sesame seeds. Serve at room temperature or chilled."
+      },
+      {
+        "id": "gs11",
+        "name": "Amaranth Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) amaranth, cooked",
+          "1 cup cucumber, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ cup red onion, finely diced",
+          "¼ cup fresh parsley",
+          "100 g (3.5 oz) feta, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, salt and pepper"
+        ],
+        "prep": "Cook amaranth in water 20 minutes until tender. Drain well and cool. Combine with cucumber, tomatoes, red onion, and parsley. Whisk dressing and toss. Top with crumbled feta."
+      },
+      {
+        "id": "gs12",
+        "name": "Couscous Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (250 g) couscous",
+          "1½ cups boiling chicken broth",
+          "1 cup cherry tomatoes, halved",
+          "1 cucumber, diced",
+          "½ cup fresh parsley and mint",
+          "½ cup Kalamata olives",
+          "100 g (3.5 oz) feta, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, salt and pepper"
+        ],
+        "prep": "Pour boiling broth over couscous. Cover and steam 5 minutes. Fluff with a fork and cool. Combine with tomatoes, cucumber, olives, and herbs. Whisk dressing and toss. Top with crumbled feta."
+      },
+      {
+        "id": "gs13",
+        "name": "Lentil Salad with Dijon Dressing",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) French green lentils",
+          "1 carrot, finely diced",
+          "2 celery stalks, finely diced",
+          "½ red onion, finely diced",
+          "¼ cup fresh parsley, chopped",
+          "Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tbsp Dijon mustard, 1 garlic clove, salt and pepper"
+        ],
+        "prep": "Cook lentils in salted water 20–25 minutes until tender but still holding shape. Drain and cool. Combine with carrot, celery, onion, and parsley. Whisk dressing and toss well. Let sit 15 minutes before serving. French green lentils work best as they hold their shape after cooking."
+      },
+      {
+        "id": "gs14",
+        "name": "Sorghum Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups (270 g) sorghum, cooked",
+          "1 cup roasted beets, diced",
+          "½ cup goat cheese, crumbled",
+          "¼ cup walnuts, toasted",
+          "3 cups mixed greens",
+          "Dressing: 3 tbsp olive oil, 2 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Cook sorghum in salted water 45–60 minutes until tender. Drain and cool. Combine sorghum with roasted beets and mixed greens. Whisk dressing and toss. Top with goat cheese and walnuts."
+      },
+      {
+        "id": "gs15",
+        "name": "Teff Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup teff, cooked",
+          "2 cups baby spinach",
+          "1 cup cherry tomatoes, halved",
+          "½ cup cucumber, diced",
+          "¼ cup red onion, diced",
+          "¼ cup fresh mint",
+          "Dressing: 3 tbsp olive oil, juice of 1 lemon, 1 tsp cumin, salt and pepper"
+        ],
+        "prep": "Cook teff in water following package directions. Cool completely. Combine with spinach, tomatoes, cucumber, onion, and mint. Whisk dressing and toss. Serve at room temperature."
+      }
     ]
   },
-
-  // ===========================
-  // 🍗 PROTEIN SALADS
-  // ===========================
   {
-    id: 'protein-salads',
-    icon:"🍗", name:"Protein Salads",
-    desc:"Chicken, tuna, egg, shrimp, and other protein-packed salads for a filling meal.",
-    recipes:[
-      {id:"pro1", name:"Classic Chicken Salad",servings:"4 servings",ingredients:["3 cups cooked chicken breast, shredded or diced","3 celery stalks, finely diced","½ red onion, finely diced","½ cup mayonnaise","1 tbsp Dijon mustard","1 tbsp lemon juice","2 tbsp fresh parsley, chopped","Salt and pepper","Bread, lettuce wraps, or crackers to serve"],prep:"Combine chicken, celery, and red onion in a large bowl. Mix mayonnaise, Dijon, and lemon juice together. Fold into chicken mixture. Add parsley. Season generously with salt and pepper. Refrigerate at least 30 minutes. Serve on bread, in lettuce wraps, or with crackers."},
-      {id:"pro2", name:"Tuna Salad",servings:"4 servings",ingredients:["3 cans (5 oz each) tuna in water, drained","3 celery stalks, finely diced","¼ red onion, finely diced","½ cup mayonnaise","1 tbsp Dijon mustard","1 tbsp lemon juice","2 tbsp fresh parsley or dill","Salt and pepper"],prep:"Drain tuna well and flake into a bowl. Add celery and red onion. Mix mayonnaise, Dijon, and lemon juice. Fold into tuna. Add herbs. Season with salt and pepper. Refrigerate 30 minutes before serving. Serve on bread, in wraps, or over greens."},
-      {id:"pro3", name:"Classic Egg Salad",servings:"4 servings",ingredients:["8 large eggs, hard boiled and peeled","½ cup mayonnaise","1 tbsp Dijon mustard","2 tbsp apple cider vinegar","3 celery stalks, finely diced","¼ cup chives, finely chopped","Salt and pepper","Paprika for garnish"],prep:"Hard boil eggs — place in cold water, bring to a boil, cook 10 minutes, transfer to ice water. Peel and chop eggs. Combine with celery and chives. Mix mayonnaise, Dijon, and vinegar. Fold into egg mixture. Season with salt and pepper. Garnish with paprika. Serve on bread or in lettuce cups."},
-      {id:"pro4", name:"Grilled Chicken Salad",servings:"4 servings",ingredients:["2 grilled chicken breasts, sliced","4 cups mixed greens","1 cup cherry tomatoes, halved","1 avocado, sliced","½ cucumber, sliced","¼ red onion, thinly sliced","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp Dijon, 1 tsp honey, salt and pepper"],prep:"Grill chicken breasts seasoned with salt, pepper, and olive oil 5–6 minutes per side. Rest 5 minutes and slice. Arrange greens on plates. Top with tomatoes, avocado, cucumber, and red onion. Place sliced chicken on top. Whisk dressing and drizzle over."},
-      {id:"pro5", name:"Shrimp Salad",servings:"4 servings",ingredients:["500 g (1 lb) cooked shrimp, peeled and chilled","3 celery stalks, finely diced","¼ red onion, finely diced","½ cup mayonnaise","1 tbsp lemon juice","1 tsp Old Bay seasoning","2 tbsp fresh dill","Salt and pepper"],prep:"Combine shrimp with celery and red onion. Mix mayonnaise, lemon juice, and Old Bay. Fold into shrimp mixture. Add fresh dill. Season with salt and pepper. Refrigerate 30 minutes. Serve on rolls, over greens, or with crackers."},
-      {id:"pro6", name:"Salmon Salad",servings:"4 servings",ingredients:["2 cans (6 oz each) salmon, drained","3 celery stalks, diced","¼ red onion, finely diced","2 tbsp capers, rinsed","½ cup mayonnaise","1 tbsp lemon juice","2 tbsp fresh dill","Salt and pepper"],prep:"Flake salmon into a bowl removing any skin and bones. Add celery, red onion, and capers. Mix mayonnaise and lemon juice. Fold into salmon. Add dill. Season with salt and pepper. Refrigerate 30 minutes. Serve on bread, crackers, or over greens."},
-      {id:"pro7", name:"Cobb Salad",servings:"4 servings",ingredients:["4 cups romaine lettuce, chopped","2 grilled chicken breasts, diced","4 strips bacon, cooked and crumbled","2 hard boiled eggs, quartered","1 avocado, diced","1 cup cherry tomatoes, halved","½ cup blue cheese, crumbled","Blue cheese dressing or ranch to serve"],prep:"Arrange romaine on a large platter. Arrange all toppings in neat rows across the top — chicken, bacon, eggs, avocado, tomatoes, and blue cheese. Serve with blue cheese dressing or ranch on the side. The traditional Cobb presentation keeps each ingredient in its own row."},
-      {id:"pro8", name:"Chicken Waldorf Salad",servings:"4 servings",ingredients:["3 cups cooked chicken breast, diced","2 Granny Smith apples, diced","3 celery stalks, diced","½ cup walnuts, toasted and chopped","½ cup red grapes, halved","½ cup mayonnaise","2 tbsp lemon juice","1 tbsp honey","Salt and pepper","Lettuce leaves to serve"],prep:"Combine chicken, apples, celery, walnuts, and grapes in a bowl. Mix mayonnaise, lemon juice, and honey. Fold into chicken mixture. Season with salt and pepper. Refrigerate 30 minutes. Serve in lettuce cups or on a bed of greens."},
-      {id:"pro9", name:"Steak Salad",servings:"4 servings",ingredients:["500 g (1 lb) flank steak, grilled medium rare and sliced thin","4 cups mixed greens","1 cup cherry tomatoes","½ red onion, thinly sliced","½ cup blue cheese, crumbled","¼ cup candied walnuts","Dressing: 3 tbsp olive oil, 2 tbsp balsamic vinegar, 1 tsp Dijon, 1 tsp honey, salt and pepper"],prep:"Season and grill steak to medium rare. Rest 5 minutes and slice thin against the grain. Arrange greens on plates. Top with tomatoes, red onion, blue cheese, and walnuts. Layer steak slices over the top. Whisk dressing and drizzle over."},
-      {id:"pro10", name:"Lobster Salad",servings:"4 servings",ingredients:["500 g (1 lb) cooked lobster meat, chopped","3 celery stalks, finely diced","¼ cup mayonnaise","1 tbsp lemon juice","1 tbsp fresh tarragon, chopped","Salt and white pepper","Butter lettuce leaves or hot dog rolls to serve"],prep:"Gently combine lobster with celery. Mix mayonnaise and lemon juice. Fold into lobster — use just enough to bind, not too much. Add tarragon. Season with salt and white pepper. Serve in butter lettuce cups or in toasted rolls for a classic lobster roll."},
-      {id:"pro11", name:"Turkey Salad",servings:"4 servings",ingredients:["3 cups cooked turkey, diced","3 celery stalks, finely diced","¼ cup dried cranberries","¼ cup pecans, toasted","½ cup mayonnaise","1 tbsp Dijon mustard","1 tbsp apple cider vinegar","Salt and pepper"],prep:"Combine turkey, celery, cranberries, and pecans. Mix mayonnaise, Dijon, and vinegar. Fold into turkey mixture. Season with salt and pepper. Refrigerate 30 minutes. Serve on bread or in wraps."},
-      {id:"pro12", name:"Crab Salad",servings:"4 servings",ingredients:["450 g (1 lb) fresh lump crab meat","3 celery stalks, finely diced","¼ red onion, finely diced","¼ cup mayonnaise","1 tbsp lemon juice","1 tbsp fresh chives, chopped","1 tsp Old Bay seasoning","Salt and pepper"],prep:"Gently pick through crab removing any shells. Combine with celery and red onion. Mix mayonnaise, lemon juice, and Old Bay. Fold gently into crab — do not overmix or break up the lumps. Add chives. Season with salt and pepper. Serve chilled."},
-      {id:"pro13", name:"Hard Boiled Egg and Avocado Salad",servings:"4 servings",ingredients:["6 hard boiled eggs, chopped","2 avocados, diced","3 celery stalks, diced","¼ red onion, finely diced","2 tbsp lime juice","2 tbsp fresh cilantro","Salt and pepper"],prep:"Combine chopped eggs, avocado, celery, and red onion. Toss gently with lime juice. Add cilantro. Season with salt and pepper. Serve immediately — avocado browns quickly."},
-      {id:"pro14", name:"Smoked Salmon Salad",servings:"4 servings",ingredients:["200 g (7 oz) smoked salmon, torn","4 cups mixed greens","½ cucumber, thinly sliced","¼ red onion, thinly sliced","2 tbsp capers","2 tbsp fresh dill","Dressing: 3 tbsp cream cheese, 2 tbsp lemon juice, 1 tbsp olive oil, salt and pepper"],prep:"Arrange greens on plates. Top with cucumber, red onion, and capers. Layer smoked salmon over. Blend dressing ingredients until smooth. Drizzle over salad. Garnish with fresh dill."},
-      {id:"pro15", name:"Chickpea Tuna Salad",servings:"4 servings",ingredients:["2 cans (5 oz each) tuna, drained","1 can (14 oz) chickpeas, drained","½ red onion, finely diced","2 celery stalks, diced","¼ cup Kalamata olives, halved","2 tbsp capers","3 tbsp olive oil","2 tbsp lemon juice","Salt and pepper","Fresh parsley"],prep:"Flake tuna into a bowl. Add chickpeas, red onion, celery, olives, and capers. Dress with olive oil and lemon juice. Season with salt and pepper. Toss gently. Add fresh parsley. This no-mayo tuna salad is light and Mediterranean."}
+    "id": "protein-salads",
+    "icon": "🍗",
+    "name": "Protein Salads",
+    "desc": "Chicken, tuna, egg, shrimp, and other protein-packed salads for a filling meal.",
+    "recipes": [
+      {
+        "id": "pro1",
+        "name": "Classic Chicken Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups cooked chicken breast, shredded or diced",
+          "3 celery stalks, finely diced",
+          "½ red onion, finely diced",
+          "½ cup mayonnaise",
+          "1 tbsp Dijon mustard",
+          "1 tbsp lemon juice",
+          "2 tbsp fresh parsley, chopped",
+          "Salt and pepper",
+          "Bread, lettuce wraps, or crackers to serve"
+        ],
+        "prep": "Combine chicken, celery, and red onion in a large bowl. Mix mayonnaise, Dijon, and lemon juice together. Fold into chicken mixture. Add parsley. Season generously with salt and pepper. Refrigerate at least 30 minutes. Serve on bread, in lettuce wraps, or with crackers."
+      },
+      {
+        "id": "pro2",
+        "name": "Tuna Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cans (5 oz each) tuna in water, drained",
+          "3 celery stalks, finely diced",
+          "¼ red onion, finely diced",
+          "½ cup mayonnaise",
+          "1 tbsp Dijon mustard",
+          "1 tbsp lemon juice",
+          "2 tbsp fresh parsley or dill",
+          "Salt and pepper"
+        ],
+        "prep": "Drain tuna well and flake into a bowl. Add celery and red onion. Mix mayonnaise, Dijon, and lemon juice. Fold into tuna. Add herbs. Season with salt and pepper. Refrigerate 30 minutes before serving. Serve on bread, in wraps, or over greens."
+      },
+      {
+        "id": "pro3",
+        "name": "Classic Egg Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "8 large eggs, hard boiled and peeled",
+          "½ cup mayonnaise",
+          "1 tbsp Dijon mustard",
+          "2 tbsp apple cider vinegar",
+          "3 celery stalks, finely diced",
+          "¼ cup chives, finely chopped",
+          "Salt and pepper",
+          "Paprika for garnish"
+        ],
+        "prep": "Hard boil eggs — place in cold water, bring to a boil, cook 10 minutes, transfer to ice water. Peel and chop eggs. Combine with celery and chives. Mix mayonnaise, Dijon, and vinegar. Fold into egg mixture. Season with salt and pepper. Garnish with paprika. Serve on bread or in lettuce cups."
+      },
+      {
+        "id": "pro4",
+        "name": "Grilled Chicken Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 grilled chicken breasts, sliced",
+          "4 cups mixed greens",
+          "1 cup cherry tomatoes, halved",
+          "1 avocado, sliced",
+          "½ cucumber, sliced",
+          "¼ red onion, thinly sliced",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp Dijon, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Grill chicken breasts seasoned with salt, pepper, and olive oil 5–6 minutes per side. Rest 5 minutes and slice. Arrange greens on plates. Top with tomatoes, avocado, cucumber, and red onion. Place sliced chicken on top. Whisk dressing and drizzle over."
+      },
+      {
+        "id": "pro5",
+        "name": "Shrimp Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) cooked shrimp, peeled and chilled",
+          "3 celery stalks, finely diced",
+          "¼ red onion, finely diced",
+          "½ cup mayonnaise",
+          "1 tbsp lemon juice",
+          "1 tsp Old Bay seasoning",
+          "2 tbsp fresh dill",
+          "Salt and pepper"
+        ],
+        "prep": "Combine shrimp with celery and red onion. Mix mayonnaise, lemon juice, and Old Bay. Fold into shrimp mixture. Add fresh dill. Season with salt and pepper. Refrigerate 30 minutes. Serve on rolls, over greens, or with crackers."
+      },
+      {
+        "id": "pro6",
+        "name": "Salmon Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (6 oz each) salmon, drained",
+          "3 celery stalks, diced",
+          "¼ red onion, finely diced",
+          "2 tbsp capers, rinsed",
+          "½ cup mayonnaise",
+          "1 tbsp lemon juice",
+          "2 tbsp fresh dill",
+          "Salt and pepper"
+        ],
+        "prep": "Flake salmon into a bowl removing any skin and bones. Add celery, red onion, and capers. Mix mayonnaise and lemon juice. Fold into salmon. Add dill. Season with salt and pepper. Refrigerate 30 minutes. Serve on bread, crackers, or over greens."
+      },
+      {
+        "id": "pro7",
+        "name": "Cobb Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups romaine lettuce, chopped",
+          "2 grilled chicken breasts, diced",
+          "4 strips bacon, cooked and crumbled",
+          "2 hard boiled eggs, quartered",
+          "1 avocado, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ cup blue cheese, crumbled",
+          "Blue cheese dressing or ranch to serve"
+        ],
+        "prep": "Arrange romaine on a large platter. Arrange all toppings in neat rows across the top — chicken, bacon, eggs, avocado, tomatoes, and blue cheese. Serve with blue cheese dressing or ranch on the side. The traditional Cobb presentation keeps each ingredient in its own row."
+      },
+      {
+        "id": "pro8",
+        "name": "Chicken Waldorf Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups cooked chicken breast, diced",
+          "2 Granny Smith apples, diced",
+          "3 celery stalks, diced",
+          "½ cup walnuts, toasted and chopped",
+          "½ cup red grapes, halved",
+          "½ cup mayonnaise",
+          "2 tbsp lemon juice",
+          "1 tbsp honey",
+          "Salt and pepper",
+          "Lettuce leaves to serve"
+        ],
+        "prep": "Combine chicken, apples, celery, walnuts, and grapes in a bowl. Mix mayonnaise, lemon juice, and honey. Fold into chicken mixture. Season with salt and pepper. Refrigerate 30 minutes. Serve in lettuce cups or on a bed of greens."
+      },
+      {
+        "id": "pro9",
+        "name": "Steak Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) flank steak, grilled medium rare and sliced thin",
+          "4 cups mixed greens",
+          "1 cup cherry tomatoes",
+          "½ red onion, thinly sliced",
+          "½ cup blue cheese, crumbled",
+          "¼ cup candied walnuts",
+          "Dressing: 3 tbsp olive oil, 2 tbsp balsamic vinegar, 1 tsp Dijon, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Season and grill steak to medium rare. Rest 5 minutes and slice thin against the grain. Arrange greens on plates. Top with tomatoes, red onion, blue cheese, and walnuts. Layer steak slices over the top. Whisk dressing and drizzle over."
+      },
+      {
+        "id": "pro10",
+        "name": "Lobster Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) cooked lobster meat, chopped",
+          "3 celery stalks, finely diced",
+          "¼ cup mayonnaise",
+          "1 tbsp lemon juice",
+          "1 tbsp fresh tarragon, chopped",
+          "Salt and white pepper",
+          "Butter lettuce leaves or hot dog rolls to serve"
+        ],
+        "prep": "Gently combine lobster with celery. Mix mayonnaise and lemon juice. Fold into lobster — use just enough to bind, not too much. Add tarragon. Season with salt and white pepper. Serve in butter lettuce cups or in toasted rolls for a classic lobster roll."
+      },
+      {
+        "id": "pro11",
+        "name": "Turkey Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups cooked turkey, diced",
+          "3 celery stalks, finely diced",
+          "¼ cup dried cranberries",
+          "¼ cup pecans, toasted",
+          "½ cup mayonnaise",
+          "1 tbsp Dijon mustard",
+          "1 tbsp apple cider vinegar",
+          "Salt and pepper"
+        ],
+        "prep": "Combine turkey, celery, cranberries, and pecans. Mix mayonnaise, Dijon, and vinegar. Fold into turkey mixture. Season with salt and pepper. Refrigerate 30 minutes. Serve on bread or in wraps."
+      },
+      {
+        "id": "pro12",
+        "name": "Crab Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "450 g (1 lb) fresh lump crab meat",
+          "3 celery stalks, finely diced",
+          "¼ red onion, finely diced",
+          "¼ cup mayonnaise",
+          "1 tbsp lemon juice",
+          "1 tbsp fresh chives, chopped",
+          "1 tsp Old Bay seasoning",
+          "Salt and pepper"
+        ],
+        "prep": "Gently pick through crab removing any shells. Combine with celery and red onion. Mix mayonnaise, lemon juice, and Old Bay. Fold gently into crab — do not overmix or break up the lumps. Add chives. Season with salt and pepper. Serve chilled."
+      },
+      {
+        "id": "pro13",
+        "name": "Hard Boiled Egg and Avocado Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 hard boiled eggs, chopped",
+          "2 avocados, diced",
+          "3 celery stalks, diced",
+          "¼ red onion, finely diced",
+          "2 tbsp lime juice",
+          "2 tbsp fresh cilantro",
+          "Salt and pepper"
+        ],
+        "prep": "Combine chopped eggs, avocado, celery, and red onion. Toss gently with lime juice. Add cilantro. Season with salt and pepper. Serve immediately — avocado browns quickly."
+      },
+      {
+        "id": "pro14",
+        "name": "Smoked Salmon Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "200 g (7 oz) smoked salmon, torn",
+          "4 cups mixed greens",
+          "½ cucumber, thinly sliced",
+          "¼ red onion, thinly sliced",
+          "2 tbsp capers",
+          "2 tbsp fresh dill",
+          "Dressing: 3 tbsp cream cheese, 2 tbsp lemon juice, 1 tbsp olive oil, salt and pepper"
+        ],
+        "prep": "Arrange greens on plates. Top with cucumber, red onion, and capers. Layer smoked salmon over. Blend dressing ingredients until smooth. Drizzle over salad. Garnish with fresh dill."
+      },
+      {
+        "id": "pro15",
+        "name": "Chickpea Tuna Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (5 oz each) tuna, drained",
+          "1 can (14 oz) chickpeas, drained",
+          "½ red onion, finely diced",
+          "2 celery stalks, diced",
+          "¼ cup Kalamata olives, halved",
+          "2 tbsp capers",
+          "3 tbsp olive oil",
+          "2 tbsp lemon juice",
+          "Salt and pepper",
+          "Fresh parsley"
+        ],
+        "prep": "Flake tuna into a bowl. Add chickpeas, red onion, celery, olives, and capers. Dress with olive oil and lemon juice. Season with salt and pepper. Toss gently. Add fresh parsley. This no-mayo tuna salad is light and Mediterranean."
+      }
     ]
   },
-
-  // ===========================
-  // 🥢 ASIAN SALADS
-  // ===========================
   {
-    id: 'asian-salads',
-    icon:"🥢", name:"Asian Salads",
-    desc:"Fresh Asian-inspired salads with bold dressings, sesame, ginger, and vibrant flavors.",
-    recipes:[
-      {id:"as1", name:"Asian Sesame Chicken Salad",servings:"4 servings",ingredients:["2 grilled chicken breasts, sliced","4 cups napa cabbage, shredded","2 cups red cabbage, shredded","1 cup shredded carrots","3 green onions, sliced","¼ cup cilantro, chopped","¼ cup slivered almonds, toasted","2 tbsp sesame seeds","Crispy wonton strips","Dressing: 3 tbsp sesame oil, 3 tbsp soy sauce, 2 tbsp rice vinegar, 1 tbsp honey, 1 tbsp ginger, 2 garlic cloves"],prep:"Combine both cabbages, carrots, green onions, and cilantro in a large bowl. Whisk dressing ingredients together. Toss salad with dressing. Top with sliced chicken, toasted almonds, sesame seeds, and crispy wonton strips. Serve immediately."},
-      {id:"as2", name:"Japanese Cucumber Salad",servings:"4 servings",ingredients:["3 English cucumbers, thinly sliced","1 tsp salt","Dressing: 3 tbsp rice vinegar, 1 tbsp sugar, 1 tsp soy sauce, 1 tsp sesame oil","1 tbsp sesame seeds","2 green onions, thinly sliced"],prep:"Slice cucumbers paper thin. Toss with salt and let sit 15 minutes. Squeeze out all excess water firmly. Whisk dressing ingredients until sugar dissolves. Toss cucumbers with dressing. Top with sesame seeds and green onions. Refrigerate 30 minutes before serving."},
-      {id:"as3", name:"Thai Beef Salad",servings:"4 servings",ingredients:["500 g (1 lb) flank steak, grilled medium rare and thinly sliced","3 cups mixed greens or shredded cabbage","1 cup cherry tomatoes, halved","½ cucumber, sliced","½ red onion, thinly sliced","¼ cup fresh mint and cilantro","Dressing: 3 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp sugar, 2 Thai chilies minced, 2 garlic cloves"],prep:"Grill steak to medium rare. Rest 5 minutes and slice thin. Whisk dressing ingredients until sugar dissolves. Combine greens, tomatoes, cucumber, and red onion. Toss with dressing. Top with sliced beef, mint, and cilantro. Serve immediately."},
-      {id:"as4", name:"Korean Cucumber Salad",servings:"4 servings",ingredients:["3 Persian cucumbers, sliced","2 green onions, sliced","2 garlic cloves, minced","Dressing: 2 tbsp gochugaru (Korean chili flakes), 1 tbsp soy sauce, 1 tbsp rice vinegar, 1 tbsp sesame oil, 1 tsp sugar, 1 tsp sesame seeds"],prep:"Slice cucumbers and toss lightly with salt. Let sit 10 minutes. Squeeze out water. Combine dressing ingredients. Toss cucumbers with dressing, green onions, and garlic. Top with sesame seeds. Refrigerate 15 minutes. Serve cold."},
-      {id:"as5", name:"Vietnamese Shrimp Salad",servings:"4 servings",ingredients:["500 g (1 lb) cooked shrimp, peeled","2 cups shredded green papaya or cabbage","1 cup shredded carrots","¼ cup fresh mint","¼ cup fresh cilantro","¼ cup roasted peanuts, crushed","Dressing: 3 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp sugar, 1 garlic clove, 1 Thai chili"],prep:"Whisk dressing until sugar dissolves. Combine papaya or cabbage with carrots, mint, and cilantro. Toss with dressing. Top with shrimp and crushed peanuts. Serve immediately."},
-      {id:"as6", name:"Mango Avocado Salad",servings:"4 servings",ingredients:["2 ripe mangoes, diced","2 avocados, diced","1 red bell pepper, finely diced","¼ red onion, finely diced","¼ cup fresh cilantro, chopped","Dressing: 2 tbsp lime juice, 1 tbsp rice vinegar, 1 tbsp honey, pinch of chili flakes, salt"],prep:"Combine mango, avocado, red pepper, and red onion gently. Whisk dressing ingredients. Drizzle over salad and toss gently — be careful not to mash the avocado. Add cilantro. Serve immediately."},
-      {id:"as7", name:"Cold Soba Noodle Salad",servings:"4 servings",ingredients:["400 g (14 oz) soba noodles, cooked and chilled","2 cups shredded carrots","1 cup edamame, shelled","1 cucumber, julienned","3 green onions, sliced","¼ cup cilantro","Dressing: 3 tbsp soy sauce, 2 tbsp sesame oil, 2 tbsp rice vinegar, 1 tbsp honey, 1 tbsp ginger","Sesame seeds"],prep:"Cook soba noodles and rinse under cold water until completely cold. Drain well. Combine with carrots, edamame, cucumber, green onions, and cilantro. Whisk dressing and toss. Garnish with sesame seeds."},
-      {id:"as8", name:"Chinese Chicken Salad",servings:"4 servings",ingredients:["2 cooked chicken breasts, shredded","3 cups napa cabbage, shredded","1 cup shredded carrots","1 cup mandarin orange segments","3 green onions, sliced","¼ cup slivered almonds, toasted","Crispy wonton strips","Dressing: 3 tbsp rice vinegar, 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp honey, 1 tbsp fresh ginger"],prep:"Combine cabbage, carrots, and green onions. Toss with dressing. Top with shredded chicken, mandarin oranges, almonds, and crispy wonton strips. Serve immediately."},
-      {id:"as9", name:"Thai Papaya Salad",servings:"4 servings",ingredients:["2 cups green papaya, shredded","1 cup shredded carrots","1 cup cherry tomatoes, halved","¼ cup long beans or green beans, cut into pieces","2 tbsp roasted peanuts, crushed","Dressing: 2 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp palm sugar or brown sugar, 2 garlic cloves, 2 Thai chilies"],prep:"Using a mortar and pestle, pound garlic and chilies. Add long beans and tomatoes and bruise lightly. Add papaya and carrots. Add fish sauce, lime juice, and sugar. Toss and pound gently until dressing is absorbed. Adjust seasoning — should be sour, salty, spicy, and slightly sweet. Top with peanuts."},
-      {id:"as10", name:"Edamame Salad",servings:"4 servings",ingredients:["2 cups shelled edamame","1 cup shredded carrots","1 red bell pepper, finely diced","3 green onions, sliced","¼ cup cilantro","Dressing: 2 tbsp soy sauce, 2 tbsp rice vinegar, 1 tbsp sesame oil, 1 tsp honey, 1 tsp ginger, sesame seeds"],prep:"Combine edamame, carrots, bell pepper, green onions, and cilantro. Whisk dressing ingredients. Toss salad with dressing. Top with sesame seeds. Serve chilled."},
-      {id:"as11", name:"Wakame Seaweed Salad",servings:"4 servings",ingredients:["50 g (1.8 oz) dried wakame seaweed","1 cucumber, julienned","2 green onions, thinly sliced","Dressing: 3 tbsp rice vinegar, 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tsp sugar, 1 tsp sesame seeds, pinch red pepper flakes"],prep:"Rehydrate wakame in cold water 5–10 minutes until soft. Drain and squeeze out excess water. Cut into bite-sized pieces. Combine with cucumber and green onions. Whisk dressing until sugar dissolves. Toss salad with dressing. Top with sesame seeds."},
-      {id:"as12", name:"Korean Spinach Salad",servings:"4 servings",ingredients:["4 cups baby spinach, briefly blanched and squeezed dry","2 garlic cloves, minced","Dressing: 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp rice vinegar, 1 tsp sugar, 1 tsp gochugaru, sesame seeds, green onions"],prep:"Blanch spinach in boiling water 30 seconds. Transfer to ice water. Squeeze out all water firmly. Combine dressing ingredients. Toss spinach with dressing. Top with sesame seeds and green onions. Serve cold."},
-      {id:"as13", name:"Thai Larb",servings:"4 servings",ingredients:["500 g (1 lb) ground pork or chicken","3 shallots, thinly sliced","2 green onions, sliced","¼ cup fresh mint","¼ cup fresh cilantro","2 tbsp toasted rice powder","Dressing: 3 tbsp fish sauce, 3 tbsp lime juice, 1 tbsp sugar, 2 Thai chilies minced","Lettuce leaves to serve"],prep:"Cook ground meat in a pan with no oil until cooked through. Cool slightly. Make toasted rice powder by toasting raw rice in a dry pan until golden, then grinding. Mix dressing ingredients. Combine meat with shallots, green onions, mint, cilantro, and rice powder. Dress with the sauce. Toss well. Serve in lettuce cups."},
-      {id:"as14", name:"Japanese Spinach Salad with Sesame",servings:"4 servings",ingredients:["4 cups baby spinach","2 tbsp tahini or sesame paste","1 tbsp soy sauce","1 tbsp rice vinegar","1 tsp sugar","1 tsp sesame oil","Sesame seeds to garnish"],prep:"Whisk tahini, soy sauce, rice vinegar, sugar, and sesame oil until smooth. Thin with a little water if too thick. Toss spinach with dressing until well coated. Top with sesame seeds. Serve immediately."},
-      {id:"as15", name:"Vietnamese Chicken Salad",servings:"4 servings",ingredients:["2 cooked chicken breasts, shredded","2 cups shredded cabbage","1 cup shredded carrots","¼ cup fresh mint","¼ cup fresh cilantro","3 green onions, sliced","¼ cup roasted peanuts","Dressing: 3 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp sugar, 1 garlic clove minced, 1 chili minced"],prep:"Whisk dressing until sugar dissolves. Combine shredded chicken, cabbage, carrots, mint, cilantro, and green onions. Toss with dressing. Top with crushed roasted peanuts. Serve immediately."}
+    "id": "asian-salads",
+    "icon": "🥢",
+    "name": "Asian Salads",
+    "desc": "Fresh Asian-inspired salads with bold dressings, sesame, ginger, and vibrant flavors.",
+    "recipes": [
+      {
+        "id": "as1",
+        "name": "Asian Sesame Chicken Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 grilled chicken breasts, sliced",
+          "4 cups napa cabbage, shredded",
+          "2 cups red cabbage, shredded",
+          "1 cup shredded carrots",
+          "3 green onions, sliced",
+          "¼ cup cilantro, chopped",
+          "¼ cup slivered almonds, toasted",
+          "2 tbsp sesame seeds",
+          "Crispy wonton strips",
+          "Dressing: 3 tbsp sesame oil, 3 tbsp soy sauce, 2 tbsp rice vinegar, 1 tbsp honey, 1 tbsp ginger, 2 garlic cloves"
+        ],
+        "prep": "Combine both cabbages, carrots, green onions, and cilantro in a large bowl. Whisk dressing ingredients together. Toss salad with dressing. Top with sliced chicken, toasted almonds, sesame seeds, and crispy wonton strips. Serve immediately."
+      },
+      {
+        "id": "as2",
+        "name": "Japanese Cucumber Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 English cucumbers, thinly sliced",
+          "1 tsp salt",
+          "Dressing: 3 tbsp rice vinegar, 1 tbsp sugar, 1 tsp soy sauce, 1 tsp sesame oil",
+          "1 tbsp sesame seeds",
+          "2 green onions, thinly sliced"
+        ],
+        "prep": "Slice cucumbers paper thin. Toss with salt and let sit 15 minutes. Squeeze out all excess water firmly. Whisk dressing ingredients until sugar dissolves. Toss cucumbers with dressing. Top with sesame seeds and green onions. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "as3",
+        "name": "Thai Beef Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) flank steak, grilled medium rare and thinly sliced",
+          "3 cups mixed greens or shredded cabbage",
+          "1 cup cherry tomatoes, halved",
+          "½ cucumber, sliced",
+          "½ red onion, thinly sliced",
+          "¼ cup fresh mint and cilantro",
+          "Dressing: 3 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp sugar, 2 Thai chilies minced, 2 garlic cloves"
+        ],
+        "prep": "Grill steak to medium rare. Rest 5 minutes and slice thin. Whisk dressing ingredients until sugar dissolves. Combine greens, tomatoes, cucumber, and red onion. Toss with dressing. Top with sliced beef, mint, and cilantro. Serve immediately."
+      },
+      {
+        "id": "as4",
+        "name": "Korean Cucumber Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 Persian cucumbers, sliced",
+          "2 green onions, sliced",
+          "2 garlic cloves, minced",
+          "Dressing: 2 tbsp gochugaru (Korean chili flakes), 1 tbsp soy sauce, 1 tbsp rice vinegar, 1 tbsp sesame oil, 1 tsp sugar, 1 tsp sesame seeds"
+        ],
+        "prep": "Slice cucumbers and toss lightly with salt. Let sit 10 minutes. Squeeze out water. Combine dressing ingredients. Toss cucumbers with dressing, green onions, and garlic. Top with sesame seeds. Refrigerate 15 minutes. Serve cold."
+      },
+      {
+        "id": "as5",
+        "name": "Vietnamese Shrimp Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) cooked shrimp, peeled",
+          "2 cups shredded green papaya or cabbage",
+          "1 cup shredded carrots",
+          "¼ cup fresh mint",
+          "¼ cup fresh cilantro",
+          "¼ cup roasted peanuts, crushed",
+          "Dressing: 3 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp sugar, 1 garlic clove, 1 Thai chili"
+        ],
+        "prep": "Whisk dressing until sugar dissolves. Combine papaya or cabbage with carrots, mint, and cilantro. Toss with dressing. Top with shrimp and crushed peanuts. Serve immediately."
+      },
+      {
+        "id": "as6",
+        "name": "Mango Avocado Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 ripe mangoes, diced",
+          "2 avocados, diced",
+          "1 red bell pepper, finely diced",
+          "¼ red onion, finely diced",
+          "¼ cup fresh cilantro, chopped",
+          "Dressing: 2 tbsp lime juice, 1 tbsp rice vinegar, 1 tbsp honey, pinch of chili flakes, salt"
+        ],
+        "prep": "Combine mango, avocado, red pepper, and red onion gently. Whisk dressing ingredients. Drizzle over salad and toss gently — be careful not to mash the avocado. Add cilantro. Serve immediately."
+      },
+      {
+        "id": "as7",
+        "name": "Cold Soba Noodle Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "400 g (14 oz) soba noodles, cooked and chilled",
+          "2 cups shredded carrots",
+          "1 cup edamame, shelled",
+          "1 cucumber, julienned",
+          "3 green onions, sliced",
+          "¼ cup cilantro",
+          "Dressing: 3 tbsp soy sauce, 2 tbsp sesame oil, 2 tbsp rice vinegar, 1 tbsp honey, 1 tbsp ginger",
+          "Sesame seeds"
+        ],
+        "prep": "Cook soba noodles and rinse under cold water until completely cold. Drain well. Combine with carrots, edamame, cucumber, green onions, and cilantro. Whisk dressing and toss. Garnish with sesame seeds."
+      },
+      {
+        "id": "as8",
+        "name": "Chinese Chicken Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cooked chicken breasts, shredded",
+          "3 cups napa cabbage, shredded",
+          "1 cup shredded carrots",
+          "1 cup mandarin orange segments",
+          "3 green onions, sliced",
+          "¼ cup slivered almonds, toasted",
+          "Crispy wonton strips",
+          "Dressing: 3 tbsp rice vinegar, 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp honey, 1 tbsp fresh ginger"
+        ],
+        "prep": "Combine cabbage, carrots, and green onions. Toss with dressing. Top with shredded chicken, mandarin oranges, almonds, and crispy wonton strips. Serve immediately."
+      },
+      {
+        "id": "as9",
+        "name": "Thai Papaya Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups green papaya, shredded",
+          "1 cup shredded carrots",
+          "1 cup cherry tomatoes, halved",
+          "¼ cup long beans or green beans, cut into pieces",
+          "2 tbsp roasted peanuts, crushed",
+          "Dressing: 2 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp palm sugar or brown sugar, 2 garlic cloves, 2 Thai chilies"
+        ],
+        "prep": "Using a mortar and pestle, pound garlic and chilies. Add long beans and tomatoes and bruise lightly. Add papaya and carrots. Add fish sauce, lime juice, and sugar. Toss and pound gently until dressing is absorbed. Adjust seasoning — should be sour, salty, spicy, and slightly sweet. Top with peanuts."
+      },
+      {
+        "id": "as10",
+        "name": "Edamame Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups shelled edamame",
+          "1 cup shredded carrots",
+          "1 red bell pepper, finely diced",
+          "3 green onions, sliced",
+          "¼ cup cilantro",
+          "Dressing: 2 tbsp soy sauce, 2 tbsp rice vinegar, 1 tbsp sesame oil, 1 tsp honey, 1 tsp ginger, sesame seeds"
+        ],
+        "prep": "Combine edamame, carrots, bell pepper, green onions, and cilantro. Whisk dressing ingredients. Toss salad with dressing. Top with sesame seeds. Serve chilled."
+      },
+      {
+        "id": "as11",
+        "name": "Wakame Seaweed Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "50 g (1.8 oz) dried wakame seaweed",
+          "1 cucumber, julienned",
+          "2 green onions, thinly sliced",
+          "Dressing: 3 tbsp rice vinegar, 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tsp sugar, 1 tsp sesame seeds, pinch red pepper flakes"
+        ],
+        "prep": "Rehydrate wakame in cold water 5–10 minutes until soft. Drain and squeeze out excess water. Cut into bite-sized pieces. Combine with cucumber and green onions. Whisk dressing until sugar dissolves. Toss salad with dressing. Top with sesame seeds."
+      },
+      {
+        "id": "as12",
+        "name": "Korean Spinach Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups baby spinach, briefly blanched and squeezed dry",
+          "2 garlic cloves, minced",
+          "Dressing: 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp rice vinegar, 1 tsp sugar, 1 tsp gochugaru, sesame seeds, green onions"
+        ],
+        "prep": "Blanch spinach in boiling water 30 seconds. Transfer to ice water. Squeeze out all water firmly. Combine dressing ingredients. Toss spinach with dressing. Top with sesame seeds and green onions. Serve cold."
+      },
+      {
+        "id": "as13",
+        "name": "Thai Larb",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) ground pork or chicken",
+          "3 shallots, thinly sliced",
+          "2 green onions, sliced",
+          "¼ cup fresh mint",
+          "¼ cup fresh cilantro",
+          "2 tbsp toasted rice powder",
+          "Dressing: 3 tbsp fish sauce, 3 tbsp lime juice, 1 tbsp sugar, 2 Thai chilies minced",
+          "Lettuce leaves to serve"
+        ],
+        "prep": "Cook ground meat in a pan with no oil until cooked through. Cool slightly. Make toasted rice powder by toasting raw rice in a dry pan until golden, then grinding. Mix dressing ingredients. Combine meat with shallots, green onions, mint, cilantro, and rice powder. Dress with the sauce. Toss well. Serve in lettuce cups."
+      },
+      {
+        "id": "as14",
+        "name": "Japanese Spinach Salad with Sesame",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups baby spinach",
+          "2 tbsp tahini or sesame paste",
+          "1 tbsp soy sauce",
+          "1 tbsp rice vinegar",
+          "1 tsp sugar",
+          "1 tsp sesame oil",
+          "Sesame seeds to garnish"
+        ],
+        "prep": "Whisk tahini, soy sauce, rice vinegar, sugar, and sesame oil until smooth. Thin with a little water if too thick. Toss spinach with dressing until well coated. Top with sesame seeds. Serve immediately."
+      },
+      {
+        "id": "as15",
+        "name": "Vietnamese Chicken Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cooked chicken breasts, shredded",
+          "2 cups shredded cabbage",
+          "1 cup shredded carrots",
+          "¼ cup fresh mint",
+          "¼ cup fresh cilantro",
+          "3 green onions, sliced",
+          "¼ cup roasted peanuts",
+          "Dressing: 3 tbsp fish sauce, 2 tbsp lime juice, 1 tbsp sugar, 1 garlic clove minced, 1 chili minced"
+        ],
+        "prep": "Whisk dressing until sugar dissolves. Combine shredded chicken, cabbage, carrots, mint, cilantro, and green onions. Toss with dressing. Top with crushed roasted peanuts. Serve immediately."
+      }
     ]
   },
-
-  // ===========================
-  // 🥑 FRUIT & SWEET SALADS
-  // ===========================
   {
-    id: 'fruit-salads',
-    icon:"🥑", name:"Fruit & Sweet Salads",
-    desc:"Fresh fruit salads, tropical bowls, and sweet salads with honey and citrus dressings.",
-    recipes:[
-      {id:"fs1", name:"Classic Fruit Salad",servings:"6 servings",ingredients:["2 cups strawberries, hulled and halved","1 cup blueberries","1 cup grapes, halved","2 kiwi, peeled and sliced","1 mango, diced","1 cup pineapple chunks","Dressing: juice of 1 lime, 1 tbsp honey, 2 tbsp fresh mint, chopped"],prep:"Combine all fruits in a large bowl. Whisk lime juice, honey, and mint together. Pour over fruit and toss gently. Refrigerate 30 minutes. Toss again before serving."},
-      {id:"fs2", name:"Watermelon Feta Salad",servings:"6 servings",ingredients:["6 cups watermelon, cubed","200 g (7 oz) feta cheese, crumbled","Large handful fresh mint leaves","½ red onion, very thinly sliced","2 tbsp extra virgin olive oil","1 tbsp balsamic glaze","Flaky sea salt and black pepper"],prep:"Arrange watermelon cubes on a platter. Scatter feta, mint leaves, and red onion over the top. Drizzle with olive oil and balsamic glaze. Season with flaky sea salt and black pepper. Serve immediately — this salad does not keep well as the watermelon releases juice."},
-      {id:"fs3", name:"Strawberry Spinach Salad",servings:"4 servings",ingredients:["4 cups baby spinach","2 cups strawberries, sliced","½ cup candied walnuts","¼ cup red onion, thinly sliced","100 g (3.5 oz) goat cheese, crumbled","Dressing: 3 tbsp balsamic vinegar, 2 tbsp olive oil, 1 tbsp honey, 1 tsp Dijon mustard, salt and pepper"],prep:"Combine spinach, strawberries, red onion, and walnuts in a large bowl. Whisk dressing ingredients. Toss salad with dressing. Top with crumbled goat cheese. Serve immediately."},
-      {id:"fs4", name:"Tropical Fruit Salad",servings:"6 servings",ingredients:["1 mango, diced","1 papaya, diced","1 cup pineapple chunks","1 cup kiwi, sliced","1 cup starfruit, sliced","1 cup coconut flakes, toasted","Dressing: juice of 2 limes, 1 tbsp honey, 1 tsp fresh ginger, pinch of chili flakes"],prep:"Combine all fruits in a large bowl. Toast coconut in a dry pan until golden. Whisk dressing ingredients. Toss fruit with dressing. Top with toasted coconut. Serve chilled."},
-      {id:"fs5", name:"Apple Walnut Salad",servings:"4 servings",ingredients:["4 cups mixed greens","2 Honeycrisp apples, thinly sliced","½ cup walnuts, toasted","½ cup dried cranberries","100 g (3.5 oz) blue cheese or goat cheese, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tbsp honey, 1 tsp Dijon mustard, salt and pepper"],prep:"Arrange mixed greens on plates. Top with sliced apples, walnuts, cranberries, and crumbled cheese. Whisk dressing and drizzle over. Serve immediately."},
-      {id:"fs6", name:"Peach and Burrata Salad",servings:"4 servings",ingredients:["3 ripe peaches, sliced","2 burrata balls","Large handful fresh basil","¼ cup prosciutto, torn","3 tbsp extra virgin olive oil","1 tbsp balsamic glaze","Flaky sea salt and black pepper"],prep:"Arrange peach slices on a platter. Tear burrata and place over peaches. Tuck prosciutto and basil leaves throughout. Drizzle with olive oil and balsamic glaze. Season with flaky sea salt and black pepper. Serve at room temperature."},
-      {id:"fs7", name:"Fig and Arugula Salad",servings:"4 servings",ingredients:["4 cups arugula","6 fresh figs, halved","100 g (3.5 oz) gorgonzola or goat cheese, crumbled","¼ cup candied walnuts","Dressing: 3 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"],prep:"Arrange arugula on plates. Top with halved figs and crumbled cheese. Scatter candied walnuts over. Whisk dressing and drizzle over. The peppery arugula contrasts beautifully with sweet figs."},
-      {id:"fs8", name:"Pear and Walnut Salad",servings:"4 servings",ingredients:["4 cups mixed greens","2 ripe pears, thinly sliced","½ cup candied walnuts","100 g (3.5 oz) gorgonzola, crumbled","¼ cup dried cranberries","Dressing: 3 tbsp walnut oil, 2 tbsp white wine vinegar, 1 tsp honey, salt and pepper"],prep:"Arrange mixed greens on plates. Layer pear slices, walnuts, gorgonzola, and cranberries over. Whisk dressing and drizzle over. Serve immediately."},
-      {id:"fs9", name:"Cherry Tomato and Peach Salad",servings:"4 servings",ingredients:["2 cups cherry tomatoes, halved","2 ripe peaches, diced","½ red onion, very thinly sliced","¼ cup fresh basil, torn","2 tbsp extra virgin olive oil","1 tbsp white balsamic vinegar","Flaky sea salt and black pepper"],prep:"Combine tomatoes, peaches, and red onion. Toss with olive oil and white balsamic. Add fresh basil. Season with flaky sea salt and black pepper. Let sit 10 minutes at room temperature before serving."},
-      {id:"fs10", name:"Citrus Avocado Salad",servings:"4 servings",ingredients:["2 avocados, sliced","2 oranges, peeled and segmented","1 grapefruit, peeled and segmented","¼ red onion, thinly sliced","Large handful watercress or arugula","Dressing: 2 tbsp olive oil, 1 tbsp lime juice, 1 tsp honey, salt and pepper"],prep:"Arrange watercress on a platter. Layer orange and grapefruit segments with avocado slices. Scatter red onion over. Whisk dressing and drizzle over. Serve immediately."},
-      {id:"fs11", name:"Berry and Spinach Salad",servings:"4 servings",ingredients:["4 cups baby spinach","1 cup blueberries","1 cup raspberries","1 cup strawberries, sliced","½ cup candied pecans","100 g (3.5 oz) feta, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp raspberry vinegar, 1 tbsp honey, salt and pepper"],prep:"Combine spinach and berries in a large bowl. Whisk dressing. Toss salad with dressing. Top with candied pecans and crumbled feta."},
-      {id:"fs12", name:"Melon Prosciutto Salad",servings:"4 servings",ingredients:["½ cantaloupe and ½ honeydew, scooped into balls or cubed","8 slices prosciutto, torn","Large handful fresh mint","100 g (3.5 oz) fresh mozzarella, torn","2 tbsp extra virgin olive oil","1 tbsp lime juice","Flaky sea salt and black pepper"],prep:"Arrange melon on a platter. Drape torn prosciutto over and around. Add mozzarella and tuck mint leaves throughout. Drizzle with olive oil and lime juice. Season with sea salt and black pepper."},
-      {id:"fs13", name:"Grape and Gorgonzola Salad",servings:"4 servings",ingredients:["4 cups mixed greens","1½ cups red and green grapes, halved","100 g (3.5 oz) gorgonzola, crumbled","½ cup candied pecans","Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp honey, salt and pepper"],prep:"Combine greens and grapes. Whisk dressing and toss. Top with gorgonzola and candied pecans. Serve immediately."},
-      {id:"fs14", name:"Mango Cucumber Salad",servings:"4 servings",ingredients:["2 ripe mangoes, diced","2 English cucumbers, diced","¼ red onion, finely diced","1 jalapeño, finely minced","¼ cup fresh cilantro","Dressing: 2 tbsp lime juice, 1 tbsp honey, pinch of salt"],prep:"Combine mango, cucumber, red onion, and jalapeño. Whisk dressing. Toss with dressing. Add cilantro. Let sit 10 minutes before serving."},
-      {id:"fs15", name:"Ambrosia Salad",servings:"8 servings",ingredients:["1 can (14 oz) mandarin oranges, drained","1 can (14 oz) pineapple chunks, drained","1 cup maraschino cherries, halved","1 cup coconut flakes","2 cups mini marshmallows","1 cup sour cream or whipped cream","1 cup pecans, chopped"],prep:"Drain all canned fruits well. Combine oranges, pineapple, cherries, coconut, and marshmallows. Fold in sour cream or whipped cream until everything is coated. Add pecans. Refrigerate at least 2 hours. Serve cold."}
+    "id": "fruit-salads",
+    "icon": "🥑",
+    "name": "Fruit & Sweet Salads",
+    "desc": "Fresh fruit salads, tropical bowls, and sweet salads with honey and citrus dressings.",
+    "recipes": [
+      {
+        "id": "fs1",
+        "name": "Classic Fruit Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "2 cups strawberries, hulled and halved",
+          "1 cup blueberries",
+          "1 cup grapes, halved",
+          "2 kiwi, peeled and sliced",
+          "1 mango, diced",
+          "1 cup pineapple chunks",
+          "Dressing: juice of 1 lime, 1 tbsp honey, 2 tbsp fresh mint, chopped"
+        ],
+        "prep": "Combine all fruits in a large bowl. Whisk lime juice, honey, and mint together. Pour over fruit and toss gently. Refrigerate 30 minutes. Toss again before serving."
+      },
+      {
+        "id": "fs2",
+        "name": "Watermelon Feta Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "6 cups watermelon, cubed",
+          "200 g (7 oz) feta cheese, crumbled",
+          "Large handful fresh mint leaves",
+          "½ red onion, very thinly sliced",
+          "2 tbsp extra virgin olive oil",
+          "1 tbsp balsamic glaze",
+          "Flaky sea salt and black pepper"
+        ],
+        "prep": "Arrange watermelon cubes on a platter. Scatter feta, mint leaves, and red onion over the top. Drizzle with olive oil and balsamic glaze. Season with flaky sea salt and black pepper. Serve immediately — this salad does not keep well as the watermelon releases juice."
+      },
+      {
+        "id": "fs3",
+        "name": "Strawberry Spinach Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups baby spinach",
+          "2 cups strawberries, sliced",
+          "½ cup candied walnuts",
+          "¼ cup red onion, thinly sliced",
+          "100 g (3.5 oz) goat cheese, crumbled",
+          "Dressing: 3 tbsp balsamic vinegar, 2 tbsp olive oil, 1 tbsp honey, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Combine spinach, strawberries, red onion, and walnuts in a large bowl. Whisk dressing ingredients. Toss salad with dressing. Top with crumbled goat cheese. Serve immediately."
+      },
+      {
+        "id": "fs4",
+        "name": "Tropical Fruit Salad",
+        "servings": "6 servings",
+        "ingredients": [
+          "1 mango, diced",
+          "1 papaya, diced",
+          "1 cup pineapple chunks",
+          "1 cup kiwi, sliced",
+          "1 cup starfruit, sliced",
+          "1 cup coconut flakes, toasted",
+          "Dressing: juice of 2 limes, 1 tbsp honey, 1 tsp fresh ginger, pinch of chili flakes"
+        ],
+        "prep": "Combine all fruits in a large bowl. Toast coconut in a dry pan until golden. Whisk dressing ingredients. Toss fruit with dressing. Top with toasted coconut. Serve chilled."
+      },
+      {
+        "id": "fs5",
+        "name": "Apple Walnut Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups mixed greens",
+          "2 Honeycrisp apples, thinly sliced",
+          "½ cup walnuts, toasted",
+          "½ cup dried cranberries",
+          "100 g (3.5 oz) blue cheese or goat cheese, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tbsp honey, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Arrange mixed greens on plates. Top with sliced apples, walnuts, cranberries, and crumbled cheese. Whisk dressing and drizzle over. Serve immediately."
+      },
+      {
+        "id": "fs6",
+        "name": "Peach and Burrata Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 ripe peaches, sliced",
+          "2 burrata balls",
+          "Large handful fresh basil",
+          "¼ cup prosciutto, torn",
+          "3 tbsp extra virgin olive oil",
+          "1 tbsp balsamic glaze",
+          "Flaky sea salt and black pepper"
+        ],
+        "prep": "Arrange peach slices on a platter. Tear burrata and place over peaches. Tuck prosciutto and basil leaves throughout. Drizzle with olive oil and balsamic glaze. Season with flaky sea salt and black pepper. Serve at room temperature."
+      },
+      {
+        "id": "fs7",
+        "name": "Fig and Arugula Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups arugula",
+          "6 fresh figs, halved",
+          "100 g (3.5 oz) gorgonzola or goat cheese, crumbled",
+          "¼ cup candied walnuts",
+          "Dressing: 3 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Arrange arugula on plates. Top with halved figs and crumbled cheese. Scatter candied walnuts over. Whisk dressing and drizzle over. The peppery arugula contrasts beautifully with sweet figs."
+      },
+      {
+        "id": "fs8",
+        "name": "Pear and Walnut Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups mixed greens",
+          "2 ripe pears, thinly sliced",
+          "½ cup candied walnuts",
+          "100 g (3.5 oz) gorgonzola, crumbled",
+          "¼ cup dried cranberries",
+          "Dressing: 3 tbsp walnut oil, 2 tbsp white wine vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Arrange mixed greens on plates. Layer pear slices, walnuts, gorgonzola, and cranberries over. Whisk dressing and drizzle over. Serve immediately."
+      },
+      {
+        "id": "fs9",
+        "name": "Cherry Tomato and Peach Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups cherry tomatoes, halved",
+          "2 ripe peaches, diced",
+          "½ red onion, very thinly sliced",
+          "¼ cup fresh basil, torn",
+          "2 tbsp extra virgin olive oil",
+          "1 tbsp white balsamic vinegar",
+          "Flaky sea salt and black pepper"
+        ],
+        "prep": "Combine tomatoes, peaches, and red onion. Toss with olive oil and white balsamic. Add fresh basil. Season with flaky sea salt and black pepper. Let sit 10 minutes at room temperature before serving."
+      },
+      {
+        "id": "fs10",
+        "name": "Citrus Avocado Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 avocados, sliced",
+          "2 oranges, peeled and segmented",
+          "1 grapefruit, peeled and segmented",
+          "¼ red onion, thinly sliced",
+          "Large handful watercress or arugula",
+          "Dressing: 2 tbsp olive oil, 1 tbsp lime juice, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Arrange watercress on a platter. Layer orange and grapefruit segments with avocado slices. Scatter red onion over. Whisk dressing and drizzle over. Serve immediately."
+      },
+      {
+        "id": "fs11",
+        "name": "Berry and Spinach Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups baby spinach",
+          "1 cup blueberries",
+          "1 cup raspberries",
+          "1 cup strawberries, sliced",
+          "½ cup candied pecans",
+          "100 g (3.5 oz) feta, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp raspberry vinegar, 1 tbsp honey, salt and pepper"
+        ],
+        "prep": "Combine spinach and berries in a large bowl. Whisk dressing. Toss salad with dressing. Top with candied pecans and crumbled feta."
+      },
+      {
+        "id": "fs12",
+        "name": "Melon Prosciutto Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "½ cantaloupe and ½ honeydew, scooped into balls or cubed",
+          "8 slices prosciutto, torn",
+          "Large handful fresh mint",
+          "100 g (3.5 oz) fresh mozzarella, torn",
+          "2 tbsp extra virgin olive oil",
+          "1 tbsp lime juice",
+          "Flaky sea salt and black pepper"
+        ],
+        "prep": "Arrange melon on a platter. Drape torn prosciutto over and around. Add mozzarella and tuck mint leaves throughout. Drizzle with olive oil and lime juice. Season with sea salt and black pepper."
+      },
+      {
+        "id": "fs13",
+        "name": "Grape and Gorgonzola Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups mixed greens",
+          "1½ cups red and green grapes, halved",
+          "100 g (3.5 oz) gorgonzola, crumbled",
+          "½ cup candied pecans",
+          "Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Combine greens and grapes. Whisk dressing and toss. Top with gorgonzola and candied pecans. Serve immediately."
+      },
+      {
+        "id": "fs14",
+        "name": "Mango Cucumber Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 ripe mangoes, diced",
+          "2 English cucumbers, diced",
+          "¼ red onion, finely diced",
+          "1 jalapeño, finely minced",
+          "¼ cup fresh cilantro",
+          "Dressing: 2 tbsp lime juice, 1 tbsp honey, pinch of salt"
+        ],
+        "prep": "Combine mango, cucumber, red onion, and jalapeño. Whisk dressing. Toss with dressing. Add cilantro. Let sit 10 minutes before serving."
+      },
+      {
+        "id": "fs15",
+        "name": "Ambrosia Salad",
+        "servings": "8 servings",
+        "ingredients": [
+          "1 can (14 oz) mandarin oranges, drained",
+          "1 can (14 oz) pineapple chunks, drained",
+          "1 cup maraschino cherries, halved",
+          "1 cup coconut flakes",
+          "2 cups mini marshmallows",
+          "1 cup sour cream or whipped cream",
+          "1 cup pecans, chopped"
+        ],
+        "prep": "Drain all canned fruits well. Combine oranges, pineapple, cherries, coconut, and marshmallows. Fold in sour cream or whipped cream until everything is coated. Add pecans. Refrigerate at least 2 hours. Serve cold."
+      }
     ]
   },
-
-  // ===========================
-  // 🌮 MEXICAN & LATIN SALADS
-  // ===========================
   {
-    id: 'mexican-salads',
-    icon:"🌮", name:"Mexican & Latin Salads",
-    desc:"Taco salads, elote, Mexican street corn, and Latin-inspired fresh salads.",
-    recipes:[
-      {id:"ml1", name:"Taco Salad",servings:"4 servings",ingredients:["500 g (1 lb) ground beef, seasoned with taco seasoning","4 cups romaine lettuce, chopped","1 cup cherry tomatoes, halved","1 can (14 oz) black beans, drained","1 cup corn kernels","1 avocado, diced","1 cup cheddar cheese, shredded","1 cup tortilla chips, crushed","Sour cream and salsa to serve"],prep:"Brown ground beef with taco seasoning. Cool slightly. Arrange lettuce in large bowls or on plates. Top with beef, tomatoes, black beans, corn, avocado, and cheddar. Add crushed tortilla chips. Serve with sour cream and salsa on the side."},
-      {id:"ml2", name:"Mexican Street Corn Salad",servings:"4 servings",ingredients:["4 ears corn, grilled or roasted and kernels cut off","¼ cup mayonnaise","¼ cup sour cream","½ cup Cotija cheese, crumbled","1 tsp chili powder","1 tsp smoked paprika","Juice of 1 lime","¼ cup fresh cilantro","Salt and pepper"],prep:"Grill corn until charred. Cut kernels off the cob. Mix mayonnaise and sour cream. Toss corn with mayo mixture. Add Cotija, chili powder, paprika, and lime juice. Toss well. Season with salt. Top with cilantro. Can be served warm or at room temperature."},
-      {id:"ml3", name:"Black Bean and Corn Salad",servings:"4 servings",ingredients:["1 can (14 oz) black beans, drained","1 cup corn kernels","1 red bell pepper, diced","½ red onion, finely diced","1 avocado, diced","¼ cup fresh cilantro","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, 1 tsp chili powder, salt and pepper"],prep:"Combine black beans, corn, bell pepper, and red onion. Whisk dressing ingredients. Toss salad with dressing. Add avocado and cilantro gently. Serve at room temperature."},
-      {id:"ml4", name:"Avocado Tomato Salad",servings:"4 servings",ingredients:["3 ripe avocados, diced","2 cups cherry tomatoes, halved","½ red onion, finely diced","¼ cup fresh cilantro","1 jalapeño, finely minced","Juice of 2 limes","2 tbsp olive oil","Salt and pepper"],prep:"Combine avocado, tomatoes, red onion, cilantro, and jalapeño. Dress with lime juice and olive oil. Toss gently. Season with salt and pepper. Serve immediately."},
-      {id:"ml5", name:"Jicama Mango Salad",servings:"4 servings",ingredients:["2 cups jicama, peeled and julienned","1 mango, julienned","1 cucumber, julienned","¼ cup fresh cilantro","1 jalapeño, thinly sliced","Juice of 2 limes","1 tbsp olive oil","Chili powder and salt"],prep:"Combine jicama, mango, cucumber, and jalapeño. Toss with lime juice and olive oil. Add cilantro. Sprinkle chili powder and salt over. Toss again. Serve chilled."},
-      {id:"ml6", name:"Cucumber Lime Salad",servings:"4 servings",ingredients:["3 English cucumbers, thinly sliced","¼ red onion, thinly sliced","¼ cup fresh cilantro","Juice of 2 limes","1 tbsp olive oil","½ tsp chili powder","½ tsp cumin","Salt"],prep:"Combine cucumbers and red onion. Dress with lime juice, olive oil, chili powder, cumin, and salt. Toss well. Add cilantro. Refrigerate 15 minutes. Toss again before serving."},
-      {id:"ml7", name:"Ceviche Salad",servings:"4 servings",ingredients:["500 g (1 lb) fresh white fish, diced very small","Juice of 6 limes","1 tomato, finely diced","½ red onion, finely diced","1 jalapeño, minced","¼ cup fresh cilantro","1 avocado, diced","Salt and pepper","Tortilla chips to serve"],prep:"Toss fish with lime juice in a glass bowl. Refrigerate 30–45 minutes until fish turns opaque and is cured by the acid. Drain excess lime juice. Combine with tomato, red onion, jalapeño, and cilantro. Season with salt and pepper. Add avocado gently. Serve with tortilla chips."},
-      {id:"ml8", name:"Chayote Salad",servings:"4 servings",ingredients:["3 chayotes, peeled and diced","½ red onion, finely diced","2 tomatoes, diced","¼ cup fresh cilantro","Juice of 2 limes","2 tbsp olive oil","Salt and pepper"],prep:"Dice chayote into small cubes. Combine with red onion, tomatoes, and cilantro. Dress with lime juice and olive oil. Season with salt and pepper. Refrigerate 30 minutes before serving."},
-      {id:"ml9", name:"Nopal Cactus Salad",servings:"4 servings",ingredients:["4 nopal cactus paddles, cleaned and diced","1 tomato, diced","½ white onion, finely diced","¼ cup fresh cilantro","1 jalapeño, minced","Juice of 2 limes","2 tbsp olive oil","Salt"],prep:"Grill or boil nopales until tender. Rinse well to remove the viscous liquid. Cool completely and dice. Combine with tomato, onion, cilantro, and jalapeño. Dress with lime juice and olive oil. Season with salt."},
-      {id:"ml10", name:"Hearts of Palm Salad",servings:"4 servings",ingredients:["2 cans (14 oz) hearts of palm, drained and sliced","1 avocado, diced","1 cup cherry tomatoes, halved","½ red onion, finely diced","¼ cup fresh cilantro","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, salt and pepper"],prep:"Combine hearts of palm, tomatoes, and red onion. Whisk dressing. Toss salad with dressing. Add avocado and cilantro gently. Serve at room temperature."},
-      {id:"ml11", name:"Quinoa and Mango Salad",servings:"4 servings",ingredients:["1½ cups quinoa, cooked and cooled","1 mango, diced","1 avocado, diced","½ red bell pepper, diced","¼ red onion, finely diced","¼ cup fresh cilantro","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, salt"],prep:"Combine cooled quinoa with mango, avocado, bell pepper, and red onion. Whisk dressing. Toss gently. Add cilantro. Serve at room temperature or chilled."},
-      {id:"ml12", name:"Pepita Kale Salad",servings:"4 servings",ingredients:["1 large bunch kale, stems removed and massaged","½ cup pepitas, toasted","½ cup dried cranberries","1 avocado, diced","¼ cup Cotija cheese, crumbled","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp honey, 1 tsp cumin, salt"],prep:"Massage kale with a little olive oil and salt until softened. Whisk dressing. Toss kale with dressing. Top with pepitas, cranberries, avocado, and Cotija cheese."},
-      {id:"ml13", name:"Grilled Corn and Avocado Salad",servings:"4 servings",ingredients:["4 ears corn, grilled","2 avocados, diced","1 cup cherry tomatoes, halved","¼ red onion, diced","¼ cup cilantro","Juice of 2 limes","2 tbsp olive oil","Salt and chili powder"],prep:"Grill corn until charred. Cut kernels off. Combine with avocado, tomatoes, and red onion. Dress with lime juice and olive oil. Add cilantro and sprinkle with chili powder and salt. Toss gently."},
-      {id:"ml14", name:"Salpicón",servings:"6 servings",ingredients:["500 g (1 lb) shredded beef or chicken, cooked","1 head romaine, shredded","2 tomatoes, diced","½ red onion, finely diced","1 avocado, sliced","Radishes, sliced","¼ cup fresh cilantro","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp oregano, salt"],prep:"Combine shredded meat with romaine, tomatoes, and red onion. Dress with lime juice, olive oil, and oregano. Toss well. Top with avocado slices, radishes, and cilantro. Serve immediately."},
-      {id:"ml15", name:"Watermelon Cucumber Agua Fresca Salad",servings:"4 servings",ingredients:["4 cups watermelon, cubed","2 cucumbers, diced","¼ red onion, thinly sliced","¼ cup fresh mint","1 jalapeño, thinly sliced","Juice of 2 limes","1 tbsp honey","Chili powder and flaky salt"],prep:"Combine watermelon, cucumber, red onion, and jalapeño. Toss with lime juice and honey. Add fresh mint. Sprinkle chili powder and flaky salt over. Serve immediately — very cold."}
+    "id": "mexican-salads",
+    "icon": "🌮",
+    "name": "Mexican & Latin Salads",
+    "desc": "Taco salads, elote, Mexican street corn, and Latin-inspired fresh salads.",
+    "recipes": [
+      {
+        "id": "ml1",
+        "name": "Taco Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) ground beef, seasoned with taco seasoning",
+          "4 cups romaine lettuce, chopped",
+          "1 cup cherry tomatoes, halved",
+          "1 can (14 oz) black beans, drained",
+          "1 cup corn kernels",
+          "1 avocado, diced",
+          "1 cup cheddar cheese, shredded",
+          "1 cup tortilla chips, crushed",
+          "Sour cream and salsa to serve"
+        ],
+        "prep": "Brown ground beef with taco seasoning. Cool slightly. Arrange lettuce in large bowls or on plates. Top with beef, tomatoes, black beans, corn, avocado, and cheddar. Add crushed tortilla chips. Serve with sour cream and salsa on the side."
+      },
+      {
+        "id": "ml2",
+        "name": "Mexican Street Corn Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 ears corn, grilled or roasted and kernels cut off",
+          "¼ cup mayonnaise",
+          "¼ cup sour cream",
+          "½ cup Cotija cheese, crumbled",
+          "1 tsp chili powder",
+          "1 tsp smoked paprika",
+          "Juice of 1 lime",
+          "¼ cup fresh cilantro",
+          "Salt and pepper"
+        ],
+        "prep": "Grill corn until charred. Cut kernels off the cob. Mix mayonnaise and sour cream. Toss corn with mayo mixture. Add Cotija, chili powder, paprika, and lime juice. Toss well. Season with salt. Top with cilantro. Can be served warm or at room temperature."
+      },
+      {
+        "id": "ml3",
+        "name": "Black Bean and Corn Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 can (14 oz) black beans, drained",
+          "1 cup corn kernels",
+          "1 red bell pepper, diced",
+          "½ red onion, finely diced",
+          "1 avocado, diced",
+          "¼ cup fresh cilantro",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, 1 tsp chili powder, salt and pepper"
+        ],
+        "prep": "Combine black beans, corn, bell pepper, and red onion. Whisk dressing ingredients. Toss salad with dressing. Add avocado and cilantro gently. Serve at room temperature."
+      },
+      {
+        "id": "ml4",
+        "name": "Avocado Tomato Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 ripe avocados, diced",
+          "2 cups cherry tomatoes, halved",
+          "½ red onion, finely diced",
+          "¼ cup fresh cilantro",
+          "1 jalapeño, finely minced",
+          "Juice of 2 limes",
+          "2 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Combine avocado, tomatoes, red onion, cilantro, and jalapeño. Dress with lime juice and olive oil. Toss gently. Season with salt and pepper. Serve immediately."
+      },
+      {
+        "id": "ml5",
+        "name": "Jicama Mango Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups jicama, peeled and julienned",
+          "1 mango, julienned",
+          "1 cucumber, julienned",
+          "¼ cup fresh cilantro",
+          "1 jalapeño, thinly sliced",
+          "Juice of 2 limes",
+          "1 tbsp olive oil",
+          "Chili powder and salt"
+        ],
+        "prep": "Combine jicama, mango, cucumber, and jalapeño. Toss with lime juice and olive oil. Add cilantro. Sprinkle chili powder and salt over. Toss again. Serve chilled."
+      },
+      {
+        "id": "ml6",
+        "name": "Cucumber Lime Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 English cucumbers, thinly sliced",
+          "¼ red onion, thinly sliced",
+          "¼ cup fresh cilantro",
+          "Juice of 2 limes",
+          "1 tbsp olive oil",
+          "½ tsp chili powder",
+          "½ tsp cumin",
+          "Salt"
+        ],
+        "prep": "Combine cucumbers and red onion. Dress with lime juice, olive oil, chili powder, cumin, and salt. Toss well. Add cilantro. Refrigerate 15 minutes. Toss again before serving."
+      },
+      {
+        "id": "ml7",
+        "name": "Ceviche Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) fresh white fish, diced very small",
+          "Juice of 6 limes",
+          "1 tomato, finely diced",
+          "½ red onion, finely diced",
+          "1 jalapeño, minced",
+          "¼ cup fresh cilantro",
+          "1 avocado, diced",
+          "Salt and pepper",
+          "Tortilla chips to serve"
+        ],
+        "prep": "Toss fish with lime juice in a glass bowl. Refrigerate 30–45 minutes until fish turns opaque and is cured by the acid. Drain excess lime juice. Combine with tomato, red onion, jalapeño, and cilantro. Season with salt and pepper. Add avocado gently. Serve with tortilla chips."
+      },
+      {
+        "id": "ml8",
+        "name": "Chayote Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 chayotes, peeled and diced",
+          "½ red onion, finely diced",
+          "2 tomatoes, diced",
+          "¼ cup fresh cilantro",
+          "Juice of 2 limes",
+          "2 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Dice chayote into small cubes. Combine with red onion, tomatoes, and cilantro. Dress with lime juice and olive oil. Season with salt and pepper. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "ml9",
+        "name": "Nopal Cactus Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 nopal cactus paddles, cleaned and diced",
+          "1 tomato, diced",
+          "½ white onion, finely diced",
+          "¼ cup fresh cilantro",
+          "1 jalapeño, minced",
+          "Juice of 2 limes",
+          "2 tbsp olive oil",
+          "Salt"
+        ],
+        "prep": "Grill or boil nopales until tender. Rinse well to remove the viscous liquid. Cool completely and dice. Combine with tomato, onion, cilantro, and jalapeño. Dress with lime juice and olive oil. Season with salt."
+      },
+      {
+        "id": "ml10",
+        "name": "Hearts of Palm Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (14 oz) hearts of palm, drained and sliced",
+          "1 avocado, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ red onion, finely diced",
+          "¼ cup fresh cilantro",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, salt and pepper"
+        ],
+        "prep": "Combine hearts of palm, tomatoes, and red onion. Whisk dressing. Toss salad with dressing. Add avocado and cilantro gently. Serve at room temperature."
+      },
+      {
+        "id": "ml11",
+        "name": "Quinoa and Mango Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups quinoa, cooked and cooled",
+          "1 mango, diced",
+          "1 avocado, diced",
+          "½ red bell pepper, diced",
+          "¼ red onion, finely diced",
+          "¼ cup fresh cilantro",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp cumin, salt"
+        ],
+        "prep": "Combine cooled quinoa with mango, avocado, bell pepper, and red onion. Whisk dressing. Toss gently. Add cilantro. Serve at room temperature or chilled."
+      },
+      {
+        "id": "ml12",
+        "name": "Pepita Kale Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large bunch kale, stems removed and massaged",
+          "½ cup pepitas, toasted",
+          "½ cup dried cranberries",
+          "1 avocado, diced",
+          "¼ cup Cotija cheese, crumbled",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp honey, 1 tsp cumin, salt"
+        ],
+        "prep": "Massage kale with a little olive oil and salt until softened. Whisk dressing. Toss kale with dressing. Top with pepitas, cranberries, avocado, and Cotija cheese."
+      },
+      {
+        "id": "ml13",
+        "name": "Grilled Corn and Avocado Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 ears corn, grilled",
+          "2 avocados, diced",
+          "1 cup cherry tomatoes, halved",
+          "¼ red onion, diced",
+          "¼ cup cilantro",
+          "Juice of 2 limes",
+          "2 tbsp olive oil",
+          "Salt and chili powder"
+        ],
+        "prep": "Grill corn until charred. Cut kernels off. Combine with avocado, tomatoes, and red onion. Dress with lime juice and olive oil. Add cilantro and sprinkle with chili powder and salt. Toss gently."
+      },
+      {
+        "id": "ml14",
+        "name": "Salpicón",
+        "servings": "6 servings",
+        "ingredients": [
+          "500 g (1 lb) shredded beef or chicken, cooked",
+          "1 head romaine, shredded",
+          "2 tomatoes, diced",
+          "½ red onion, finely diced",
+          "1 avocado, sliced",
+          "Radishes, sliced",
+          "¼ cup fresh cilantro",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp oregano, salt"
+        ],
+        "prep": "Combine shredded meat with romaine, tomatoes, and red onion. Dress with lime juice, olive oil, and oregano. Toss well. Top with avocado slices, radishes, and cilantro. Serve immediately."
+      },
+      {
+        "id": "ml15",
+        "name": "Watermelon Cucumber Agua Fresca Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups watermelon, cubed",
+          "2 cucumbers, diced",
+          "¼ red onion, thinly sliced",
+          "¼ cup fresh mint",
+          "1 jalapeño, thinly sliced",
+          "Juice of 2 limes",
+          "1 tbsp honey",
+          "Chili powder and flaky salt"
+        ],
+        "prep": "Combine watermelon, cucumber, red onion, and jalapeño. Toss with lime juice and honey. Add fresh mint. Sprinkle chili powder and flaky salt over. Serve immediately — very cold."
+      }
     ]
   },
-
-  // ===========================
-  // 🧆 MIDDLE EASTERN SALADS
-  // ===========================
   {
-    id: 'middle-eastern',
-    icon:"🧆", name:"Middle Eastern Salads",
-    desc:"Fattoush, tabbouleh, lentil salads, and fresh Middle Eastern mezze salads.",
-    recipes:[
-      {id:"me1", name:"Fattoush",servings:"4 servings",ingredients:["2 pita breads, torn and toasted until crispy","3 cups romaine or mixed greens","2 tomatoes, diced","1 cucumber, diced","1 red bell pepper, diced","½ red onion, thinly sliced","¼ cup fresh parsley and mint","½ cup radishes, sliced","Dressing: 4 tbsp olive oil, 2 tbsp lemon juice, 1 tbsp pomegranate molasses, 1 tsp sumac, 1 garlic clove, salt"],prep:"Toast torn pita in the oven at 375°F until crispy. Combine all vegetables and herbs in a large bowl. Whisk dressing ingredients. Add crispy pita to salad. Dress and toss. The pita should be added just before serving to maintain some crunch."},
-      {id:"me2", name:"Classic Tabbouleh",servings:"4 servings",ingredients:["1 cup fine bulgur wheat","1 cup boiling water","2 cups flat-leaf parsley, very finely chopped","½ cup fresh mint, finely chopped","3 tomatoes, finely diced","4 green onions, sliced","Dressing: juice of 2 lemons, ¼ cup olive oil, salt and pepper"],prep:"Pour boiling water over bulgur. Cover 20 minutes until absorbed. Fluff and cool. The parsley is the star — chop very finely. Combine bulgur with parsley, mint, tomatoes, and green onions. Dress with lemon juice and olive oil. Refrigerate 30 minutes. The bulgur should be a background grain, not the main ingredient."},
-      {id:"me3", name:"Shirazi Salad",servings:"4 servings",ingredients:["3 Persian cucumbers, very finely diced","3 ripe tomatoes, very finely diced","½ red onion, very finely diced","¼ cup fresh mint, finely chopped","Dressing: 3 tbsp lemon juice or verjuice, 2 tbsp olive oil, salt and pepper"],prep:"Dice all vegetables into very small, uniform pieces — this salad is all about the fine chop. Combine cucumber, tomatoes, onion, and mint. Dress with lemon juice and olive oil. Season with salt and pepper. Let sit 10 minutes before serving."},
-      {id:"me4", name:"Lentil and Herb Salad",servings:"4 servings",ingredients:["1½ cups green lentils, cooked and cooled","½ cup fresh parsley, chopped","¼ cup fresh mint, chopped","½ red onion, finely diced","2 tomatoes, diced","½ cup pomegranate seeds","Dressing: 3 tbsp lemon juice, 2 tbsp olive oil, 1 tsp cumin, 1 tsp sumac, salt"],prep:"Cook lentils until tender but holding shape. Drain and cool. Combine with parsley, mint, red onion, and tomatoes. Whisk dressing. Toss salad with dressing. Top with pomegranate seeds."},
-      {id:"me5", name:"Roasted Eggplant Salad",servings:"4 servings",ingredients:["2 large eggplants, roasted","3 garlic cloves, minced","¼ cup fresh parsley, chopped","2 tbsp tahini","Juice of 1 lemon","2 tbsp olive oil","½ tsp cumin","Salt and pepper","Pomegranate seeds and pine nuts to garnish"],prep:"Roast eggplants directly over flame or at 450°F until completely charred and collapsed. Cool and scoop out flesh. Drain excess liquid. Combine with garlic, tahini, lemon juice, olive oil, and cumin. Season with salt and pepper. Top with parsley, pomegranate seeds, and toasted pine nuts."},
-      {id:"me6", name:"Muhammara Salad",servings:"4 servings",ingredients:["3 red bell peppers, roasted and peeled","½ cup walnuts, toasted","2 tbsp pomegranate molasses","1 tbsp tomato paste","1 tsp cumin","½ tsp cayenne","2 tbsp olive oil","Salt","Flatbread to serve"],prep:"Blend roasted peppers with walnuts, pomegranate molasses, tomato paste, cumin, and cayenne until thick and slightly chunky. Drizzle with olive oil. Season with salt. Serve as a salad or dip with flatbread."},
-      {id:"me7", name:"Cucumber Yogurt Salad",servings:"4 servings",ingredients:["3 Persian cucumbers, finely diced","2 cups plain Greek yogurt","3 garlic cloves, minced","2 tbsp fresh mint, finely chopped","2 tbsp fresh dill, chopped","1 tbsp olive oil","Salt and pepper"],prep:"Salt cucumbers lightly and let sit 10 minutes. Squeeze out all excess water. Combine yogurt with garlic, mint, and dill. Fold in cucumbers. Season with salt and pepper. Drizzle olive oil over. Refrigerate 30 minutes. Serve cold."},
-      {id:"me8", name:"Chickpea Salad",servings:"4 servings",ingredients:["2 cans (14 oz each) chickpeas, drained","1 cucumber, diced","1 cup cherry tomatoes, halved","½ red onion, finely diced","¼ cup fresh parsley","½ cup Kalamata olives","100 g (3.5 oz) feta, crumbled","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, 1 tsp sumac, salt"],prep:"Combine chickpeas, cucumber, tomatoes, onion, olives, and parsley. Whisk dressing and toss. Top with crumbled feta."},
-      {id:"me9", name:"Roasted Red Pepper Salad",servings:"4 servings",ingredients:["6 red bell peppers, roasted, peeled, and sliced","3 garlic cloves, minced","¼ cup fresh parsley, chopped","2 tbsp capers","2 tbsp extra virgin olive oil","1 tbsp red wine vinegar","Salt and pepper"],prep:"Roast peppers until charred. Peel, seed, and slice into strips. Combine with garlic, capers, and parsley. Dress with olive oil and red wine vinegar. Season with salt and pepper. Let sit 30 minutes at room temperature."},
-      {id:"me10", name:"Za'atar Bread Salad",servings:"4 servings",ingredients:["2 pita breads, torn and toasted","3 tomatoes, diced","1 cucumber, diced","½ red onion, thinly sliced","¼ cup fresh parsley and mint","2 tbsp za'atar","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 garlic clove, salt"],prep:"Toast pita until crispy. Combine tomatoes, cucumber, onion, parsley, and mint. Dress with olive oil, lemon juice, and garlic. Add toasted pita and za'atar. Toss well just before serving."},
-      {id:"me11", name:"Pomegranate Walnut Salad",servings:"4 servings",ingredients:["4 cups mixed greens","1 cup pomegranate seeds","½ cup walnuts, toasted","100 g (3.5 oz) feta, crumbled","¼ cup fresh mint","Dressing: 3 tbsp olive oil, 2 tbsp pomegranate molasses, 1 tbsp lemon juice, salt and pepper"],prep:"Combine greens, pomegranate seeds, walnuts, feta, and mint. Whisk dressing. Toss salad with dressing. Serve immediately."},
-      {id:"me12", name:"Tomato Herb Salad",servings:"4 servings",ingredients:["4 large heirloom tomatoes, sliced","½ cup fresh basil","¼ cup fresh mint","¼ cup fresh parsley","3 green onions, sliced","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp sumac, salt and pepper"],prep:"Arrange tomato slices on a platter. Scatter fresh herbs and green onions over. Whisk dressing and drizzle over. Sprinkle sumac. Let sit 5 minutes before serving."},
-      {id:"me13", name:"Carrot and Cumin Salad",servings:"4 servings",ingredients:["6 large carrots, grated","¼ cup fresh parsley, chopped","¼ cup raisins","¼ cup toasted almonds","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, 1 tsp honey, ½ tsp cinnamon, salt"],prep:"Grate carrots coarsely. Combine with parsley, raisins, and almonds. Whisk dressing and toss. Let sit 15 minutes before serving."},
-      {id:"me14", name:"Roasted Cauliflower Salad",servings:"4 servings",ingredients:["1 large cauliflower, cut into florets and roasted","½ cup pomegranate seeds","¼ cup toasted pine nuts","¼ cup fresh parsley and mint","2 tbsp tahini dressing: tahini, lemon juice, water, garlic, salt"],prep:"Roast cauliflower at 425°F with olive oil, cumin, and salt until golden and caramelized — about 25 minutes. Cool slightly. Arrange on a platter. Drizzle tahini dressing over. Top with pomegranate seeds, pine nuts, and fresh herbs."},
-      {id:"me15", name:"Parsley and Onion Salad",servings:"4 servings",ingredients:["2 large bunches flat-leaf parsley, leaves only","1 white onion, very thinly sliced","2 tomatoes, finely diced","1 tsp sumac","Dressing: 3 tbsp lemon juice, 2 tbsp olive oil, salt"],prep:"Separate parsley into small sprigs. Combine with thinly sliced onion and tomatoes. Dress with lemon juice and olive oil. Toss with sumac. Season with salt. This simple salad is served alongside kebabs and grilled meats throughout the Middle East."}
+    "id": "middle-eastern",
+    "icon": "🧆",
+    "name": "Middle Eastern Salads",
+    "desc": "Fattoush, tabbouleh, lentil salads, and fresh Middle Eastern mezze salads.",
+    "recipes": [
+      {
+        "id": "me1",
+        "name": "Fattoush",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 pita breads, torn and toasted until crispy",
+          "3 cups romaine or mixed greens",
+          "2 tomatoes, diced",
+          "1 cucumber, diced",
+          "1 red bell pepper, diced",
+          "½ red onion, thinly sliced",
+          "¼ cup fresh parsley and mint",
+          "½ cup radishes, sliced",
+          "Dressing: 4 tbsp olive oil, 2 tbsp lemon juice, 1 tbsp pomegranate molasses, 1 tsp sumac, 1 garlic clove, salt"
+        ],
+        "prep": "Toast torn pita in the oven at 375°F until crispy. Combine all vegetables and herbs in a large bowl. Whisk dressing ingredients. Add crispy pita to salad. Dress and toss. The pita should be added just before serving to maintain some crunch."
+      },
+      {
+        "id": "me2",
+        "name": "Classic Tabbouleh",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 cup fine bulgur wheat",
+          "1 cup boiling water",
+          "2 cups flat-leaf parsley, very finely chopped",
+          "½ cup fresh mint, finely chopped",
+          "3 tomatoes, finely diced",
+          "4 green onions, sliced",
+          "Dressing: juice of 2 lemons, ¼ cup olive oil, salt and pepper"
+        ],
+        "prep": "Pour boiling water over bulgur. Cover 20 minutes until absorbed. Fluff and cool. The parsley is the star — chop very finely. Combine bulgur with parsley, mint, tomatoes, and green onions. Dress with lemon juice and olive oil. Refrigerate 30 minutes. The bulgur should be a background grain, not the main ingredient."
+      },
+      {
+        "id": "me3",
+        "name": "Shirazi Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 Persian cucumbers, very finely diced",
+          "3 ripe tomatoes, very finely diced",
+          "½ red onion, very finely diced",
+          "¼ cup fresh mint, finely chopped",
+          "Dressing: 3 tbsp lemon juice or verjuice, 2 tbsp olive oil, salt and pepper"
+        ],
+        "prep": "Dice all vegetables into very small, uniform pieces — this salad is all about the fine chop. Combine cucumber, tomatoes, onion, and mint. Dress with lemon juice and olive oil. Season with salt and pepper. Let sit 10 minutes before serving."
+      },
+      {
+        "id": "me4",
+        "name": "Lentil and Herb Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups green lentils, cooked and cooled",
+          "½ cup fresh parsley, chopped",
+          "¼ cup fresh mint, chopped",
+          "½ red onion, finely diced",
+          "2 tomatoes, diced",
+          "½ cup pomegranate seeds",
+          "Dressing: 3 tbsp lemon juice, 2 tbsp olive oil, 1 tsp cumin, 1 tsp sumac, salt"
+        ],
+        "prep": "Cook lentils until tender but holding shape. Drain and cool. Combine with parsley, mint, red onion, and tomatoes. Whisk dressing. Toss salad with dressing. Top with pomegranate seeds."
+      },
+      {
+        "id": "me5",
+        "name": "Roasted Eggplant Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 large eggplants, roasted",
+          "3 garlic cloves, minced",
+          "¼ cup fresh parsley, chopped",
+          "2 tbsp tahini",
+          "Juice of 1 lemon",
+          "2 tbsp olive oil",
+          "½ tsp cumin",
+          "Salt and pepper",
+          "Pomegranate seeds and pine nuts to garnish"
+        ],
+        "prep": "Roast eggplants directly over flame or at 450°F until completely charred and collapsed. Cool and scoop out flesh. Drain excess liquid. Combine with garlic, tahini, lemon juice, olive oil, and cumin. Season with salt and pepper. Top with parsley, pomegranate seeds, and toasted pine nuts."
+      },
+      {
+        "id": "me6",
+        "name": "Muhammara Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 red bell peppers, roasted and peeled",
+          "½ cup walnuts, toasted",
+          "2 tbsp pomegranate molasses",
+          "1 tbsp tomato paste",
+          "1 tsp cumin",
+          "½ tsp cayenne",
+          "2 tbsp olive oil",
+          "Salt",
+          "Flatbread to serve"
+        ],
+        "prep": "Blend roasted peppers with walnuts, pomegranate molasses, tomato paste, cumin, and cayenne until thick and slightly chunky. Drizzle with olive oil. Season with salt. Serve as a salad or dip with flatbread."
+      },
+      {
+        "id": "me7",
+        "name": "Cucumber Yogurt Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 Persian cucumbers, finely diced",
+          "2 cups plain Greek yogurt",
+          "3 garlic cloves, minced",
+          "2 tbsp fresh mint, finely chopped",
+          "2 tbsp fresh dill, chopped",
+          "1 tbsp olive oil",
+          "Salt and pepper"
+        ],
+        "prep": "Salt cucumbers lightly and let sit 10 minutes. Squeeze out all excess water. Combine yogurt with garlic, mint, and dill. Fold in cucumbers. Season with salt and pepper. Drizzle olive oil over. Refrigerate 30 minutes. Serve cold."
+      },
+      {
+        "id": "me8",
+        "name": "Chickpea Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans (14 oz each) chickpeas, drained",
+          "1 cucumber, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ red onion, finely diced",
+          "¼ cup fresh parsley",
+          "½ cup Kalamata olives",
+          "100 g (3.5 oz) feta, crumbled",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, 1 tsp sumac, salt"
+        ],
+        "prep": "Combine chickpeas, cucumber, tomatoes, onion, olives, and parsley. Whisk dressing and toss. Top with crumbled feta."
+      },
+      {
+        "id": "me9",
+        "name": "Roasted Red Pepper Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 red bell peppers, roasted, peeled, and sliced",
+          "3 garlic cloves, minced",
+          "¼ cup fresh parsley, chopped",
+          "2 tbsp capers",
+          "2 tbsp extra virgin olive oil",
+          "1 tbsp red wine vinegar",
+          "Salt and pepper"
+        ],
+        "prep": "Roast peppers until charred. Peel, seed, and slice into strips. Combine with garlic, capers, and parsley. Dress with olive oil and red wine vinegar. Season with salt and pepper. Let sit 30 minutes at room temperature."
+      },
+      {
+        "id": "me10",
+        "name": "Za'atar Bread Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 pita breads, torn and toasted",
+          "3 tomatoes, diced",
+          "1 cucumber, diced",
+          "½ red onion, thinly sliced",
+          "¼ cup fresh parsley and mint",
+          "2 tbsp za'atar",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 garlic clove, salt"
+        ],
+        "prep": "Toast pita until crispy. Combine tomatoes, cucumber, onion, parsley, and mint. Dress with olive oil, lemon juice, and garlic. Add toasted pita and za'atar. Toss well just before serving."
+      },
+      {
+        "id": "me11",
+        "name": "Pomegranate Walnut Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups mixed greens",
+          "1 cup pomegranate seeds",
+          "½ cup walnuts, toasted",
+          "100 g (3.5 oz) feta, crumbled",
+          "¼ cup fresh mint",
+          "Dressing: 3 tbsp olive oil, 2 tbsp pomegranate molasses, 1 tbsp lemon juice, salt and pepper"
+        ],
+        "prep": "Combine greens, pomegranate seeds, walnuts, feta, and mint. Whisk dressing. Toss salad with dressing. Serve immediately."
+      },
+      {
+        "id": "me12",
+        "name": "Tomato Herb Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 large heirloom tomatoes, sliced",
+          "½ cup fresh basil",
+          "¼ cup fresh mint",
+          "¼ cup fresh parsley",
+          "3 green onions, sliced",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp sumac, salt and pepper"
+        ],
+        "prep": "Arrange tomato slices on a platter. Scatter fresh herbs and green onions over. Whisk dressing and drizzle over. Sprinkle sumac. Let sit 5 minutes before serving."
+      },
+      {
+        "id": "me13",
+        "name": "Carrot and Cumin Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "6 large carrots, grated",
+          "¼ cup fresh parsley, chopped",
+          "¼ cup raisins",
+          "¼ cup toasted almonds",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp cumin, 1 tsp honey, ½ tsp cinnamon, salt"
+        ],
+        "prep": "Grate carrots coarsely. Combine with parsley, raisins, and almonds. Whisk dressing and toss. Let sit 15 minutes before serving."
+      },
+      {
+        "id": "me14",
+        "name": "Roasted Cauliflower Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large cauliflower, cut into florets and roasted",
+          "½ cup pomegranate seeds",
+          "¼ cup toasted pine nuts",
+          "¼ cup fresh parsley and mint",
+          "2 tbsp tahini dressing: tahini, lemon juice, water, garlic, salt"
+        ],
+        "prep": "Roast cauliflower at 425°F with olive oil, cumin, and salt until golden and caramelized — about 25 minutes. Cool slightly. Arrange on a platter. Drizzle tahini dressing over. Top with pomegranate seeds, pine nuts, and fresh herbs."
+      },
+      {
+        "id": "me15",
+        "name": "Parsley and Onion Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 large bunches flat-leaf parsley, leaves only",
+          "1 white onion, very thinly sliced",
+          "2 tomatoes, finely diced",
+          "1 tsp sumac",
+          "Dressing: 3 tbsp lemon juice, 2 tbsp olive oil, salt"
+        ],
+        "prep": "Separate parsley into small sprigs. Combine with thinly sliced onion and tomatoes. Dress with lemon juice and olive oil. Toss with sumac. Season with salt. This simple salad is served alongside kebabs and grilled meats throughout the Middle East."
+      }
     ]
   },
-
-  // ===========================
-  // 🥙 HEARTY MEAL SALADS
-  // ===========================
   {
-    id: 'hearty-salads',
-    icon:"🥙", name:"Hearty Meal Salads",
-    desc:"Full meal salads with roasted vegetables, proteins, and bold toppings to keep you satisfied.",
-    recipes:[
-      {id:"hs1", name:"Harvest Salad",servings:"4 servings",ingredients:["4 cups mixed greens","1 cup roasted butternut squash, cubed","½ cup dried cranberries","½ cup candied pecans","100 g (3.5 oz) goat cheese, crumbled","½ red onion, thinly sliced","Apple, thinly sliced","Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tbsp maple syrup, 1 tsp Dijon mustard, salt and pepper"],prep:"Roast butternut squash at 400°F with olive oil, salt, and pepper for 25 minutes. Cool. Arrange greens on plates. Top with roasted squash, cranberries, pecans, goat cheese, red onion, and apple slices. Whisk dressing and drizzle over."},
-      {id:"hs2", name:"Power Greens Salad",servings:"4 servings",ingredients:["2 cups kale, massaged","2 cups baby spinach","1 cup quinoa, cooked","1 cup roasted chickpeas","1 avocado, sliced","½ cup cherry tomatoes","¼ cup pumpkin seeds","Dressing: 3 tbsp tahini, 2 tbsp lemon juice, 1 garlic clove, water to thin, salt"],prep:"Massage kale with olive oil and salt until softened. Combine with spinach. Top with quinoa, roasted chickpeas, avocado, tomatoes, and pumpkin seeds. Drizzle tahini dressing over. Serve immediately."},
-      {id:"hs3", name:"BBQ Chicken Salad",servings:"4 servings",ingredients:["2 chicken breasts, grilled and glazed with BBQ sauce","4 cups romaine lettuce, chopped","1 cup corn kernels","1 cup black beans, drained","1 cup cherry tomatoes","1 cup cheddar cheese, shredded","½ red onion, diced","Crispy tortilla strips","Ranch dressing"],prep:"Grill chicken and glaze with BBQ sauce. Slice. Arrange romaine on plates. Top with corn, black beans, tomatoes, cheese, and red onion. Layer BBQ chicken over. Add crispy tortilla strips. Drizzle ranch dressing over."},
-      {id:"hs4", name:"Lemon Herb Salmon Salad",servings:"4 servings",ingredients:["4 salmon fillets, pan seared","4 cups mixed greens","1 cup cucumber, sliced","½ cup cherry tomatoes","¼ cup capers","¼ cup fresh dill","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tbsp Dijon, 1 tsp honey, salt and pepper"],prep:"Season and pan sear salmon 4 minutes per side until cooked. Arrange greens on plates with cucumber, tomatoes, and capers. Place salmon on top. Whisk dressing and drizzle over. Garnish with fresh dill."},
-      {id:"hs5", name:"Mediterranean Bowl Salad",servings:"4 servings",ingredients:["2 cups farro or quinoa, cooked","1 cup roasted red peppers, sliced","1 cup cucumber, diced","1 cup cherry tomatoes","½ cup Kalamata olives","100 g (3.5 oz) feta, crumbled","4 falafel balls per serving","Tzatziki and hummus","Dressing: olive oil, lemon juice, oregano, salt"],prep:"Arrange farro in bowls. Top with roasted peppers, cucumber, tomatoes, and olives. Add crumbled feta. Serve falafel on the side with tzatziki and hummus. Drizzle lemon herb dressing over everything."},
-      {id:"hs6", name:"Roasted Vegetable Salad",servings:"4 servings",ingredients:["1 zucchini, roasted","1 red bell pepper, roasted","1 cup cherry tomatoes, roasted","1 cup eggplant, roasted","4 cups arugula","¼ cup Parmesan shavings","¼ cup pine nuts, toasted","Dressing: 3 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"],prep:"Roast all vegetables at 400°F with olive oil, salt, and pepper. Cool slightly. Arrange arugula on plates. Top with roasted vegetables. Whisk dressing and drizzle over. Add Parmesan shavings and toasted pine nuts."},
-      {id:"hs7", name:"Warm Chicken and Roasted Vegetable Salad",servings:"4 servings",ingredients:["2 chicken breasts, roasted and sliced","1 cup sweet potato, roasted","1 cup broccoli, roasted","4 cups mixed greens","¼ cup dried cranberries","¼ cup pumpkin seeds","Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp honey, 1 tsp Dijon, salt and pepper"],prep:"Roast chicken and vegetables. Arrange warm chicken and vegetables over greens. The warmth will slightly wilt the greens which is perfect. Add cranberries and pumpkin seeds. Whisk dressing and drizzle over. Serve while still warm."},
-      {id:"hs8", name:"Steak and Arugula Salad",servings:"4 servings",ingredients:["500 g (1 lb) sirloin steak, grilled medium rare","4 cups arugula","½ cup Parmesan shavings","¼ cup pine nuts, toasted","Lemon dressing: 3 tbsp olive oil, 1 tbsp lemon juice, salt and pepper"],prep:"Grill steak to medium rare. Rest 5 minutes and slice thin. Toss arugula with lemon dressing. Arrange on plates. Top with steak slices. Add Parmesan shavings and pine nuts. This classic Italian bistecca salad is best served immediately while the steak is still warm."},
-      {id:"hs9", name:"Tuna Niçoise Bowl",servings:"4 servings",ingredients:["2 cans tuna in olive oil, drained","4 eggs, soft boiled and halved","200 g (7 oz) French green beans, blanched","4 small potatoes, boiled","1 cup cherry tomatoes","½ cup Niçoise olives","4 cups mixed greens","4 anchovy fillets","Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon, salt and pepper"],prep:"Arrange greens in bowls. Arrange tuna, eggs, green beans, potatoes, tomatoes, olives, and anchovies over greens. Whisk dressing and drizzle over everything. Serve at room temperature."},
-      {id:"hs10", name:"Quinoa Power Bowl",servings:"4 servings",ingredients:["1½ cups quinoa, cooked","1 cup roasted sweet potato","1 cup roasted broccoli","1 avocado, sliced","½ cup edamame","¼ cup pumpkin seeds","¼ cup fresh herbs","Dressing: 3 tbsp tahini, 2 tbsp lemon juice, 1 garlic clove, 1 tbsp maple syrup, water to thin, salt"],prep:"Arrange quinoa in bowls. Top with roasted sweet potato, broccoli, avocado, and edamame. Drizzle tahini dressing over. Top with pumpkin seeds and fresh herbs."},
-      {id:"hs11", name:"Chopped Antipasto Salad",servings:"4 servings",ingredients:["3 cups romaine, finely chopped","1 cup salami, diced","1 cup provolone, diced","½ cup pepperoncini, sliced","½ cup black olives, sliced","1 cup cherry tomatoes, halved","½ cup artichoke hearts","Italian dressing"],prep:"Finely chop all ingredients into uniform bite-sized pieces. Combine everything in a large bowl. Dress with Italian dressing and toss well. This chopped style means every bite has a mix of all ingredients. Refrigerate 30 minutes before serving."},
-      {id:"hs12", name:"Falafel Salad",servings:"4 servings",ingredients:["12 falafel balls, cooked","4 cups mixed greens","1 cup cucumber, diced","1 cup cherry tomatoes","½ cup Kalamata olives","100 g (3.5 oz) feta, crumbled","Tzatziki dressing: ½ cup Greek yogurt, 1 tbsp lemon juice, 1 garlic clove, 2 tbsp fresh dill, salt"],prep:"Arrange greens on plates. Top with cucumber, tomatoes, and olives. Place falafel over the top. Crumble feta over. Drizzle tzatziki dressing over everything."},
-      {id:"hs13", name:"Kale Caesar Salad",servings:"4 servings",ingredients:["1 large bunch curly kale, massaged","1 cup croutons","½ cup Parmesan, grated","Caesar dressing: 4 anchovy fillets, 3 garlic cloves, 2 egg yolks, 2 tbsp lemon juice, 1 tsp Dijon, ½ cup olive oil, ¼ cup Parmesan, salt and pepper"],prep:"Massage kale with olive oil and salt until softened — about 3 minutes. Make Caesar dressing by whisking all ingredients together. Toss kale with dressing. Top with croutons and extra Parmesan. Kale holds up to the dressing much better than romaine and can sit dressed for a while without wilting."},
-      {id:"hs14", name:"Shrimp and Avocado Salad",servings:"4 servings",ingredients:["500 g (1 lb) cooked shrimp, chilled","2 avocados, diced","1 cup cherry tomatoes, halved","½ cucumber, diced","¼ red onion, finely diced","¼ cup fresh cilantro","Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp honey, pinch of chili flakes, salt"],prep:"Combine shrimp, avocado, tomatoes, cucumber, and red onion. Whisk dressing. Toss salad gently with dressing. Add cilantro. Serve immediately — avocado browns quickly."},
-      {id:"hs15", name:"Roasted Beet and Lentil Salad",servings:"4 servings",ingredients:["4 medium beets, roasted and sliced","1½ cups French green lentils, cooked","4 cups arugula","100 g (3.5 oz) goat cheese, crumbled","¼ cup walnuts, toasted","Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon, 1 tsp honey, salt and pepper"],prep:"Roast beets at 400°F wrapped in foil until tender. Cool, peel, and slice. Cook lentils until tender. Cool. Arrange arugula on plates. Top with lentils, beet slices, goat cheese, and walnuts. Whisk dressing and drizzle over."}
+    "id": "hearty-salads",
+    "icon": "🥙",
+    "name": "Hearty Meal Salads",
+    "desc": "Full meal salads with roasted vegetables, proteins, and bold toppings to keep you satisfied.",
+    "recipes": [
+      {
+        "id": "hs1",
+        "name": "Harvest Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 cups mixed greens",
+          "1 cup roasted butternut squash, cubed",
+          "½ cup dried cranberries",
+          "½ cup candied pecans",
+          "100 g (3.5 oz) goat cheese, crumbled",
+          "½ red onion, thinly sliced",
+          "Apple, thinly sliced",
+          "Dressing: 3 tbsp olive oil, 2 tbsp apple cider vinegar, 1 tbsp maple syrup, 1 tsp Dijon mustard, salt and pepper"
+        ],
+        "prep": "Roast butternut squash at 400°F with olive oil, salt, and pepper for 25 minutes. Cool. Arrange greens on plates. Top with roasted squash, cranberries, pecans, goat cheese, red onion, and apple slices. Whisk dressing and drizzle over."
+      },
+      {
+        "id": "hs2",
+        "name": "Power Greens Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups kale, massaged",
+          "2 cups baby spinach",
+          "1 cup quinoa, cooked",
+          "1 cup roasted chickpeas",
+          "1 avocado, sliced",
+          "½ cup cherry tomatoes",
+          "¼ cup pumpkin seeds",
+          "Dressing: 3 tbsp tahini, 2 tbsp lemon juice, 1 garlic clove, water to thin, salt"
+        ],
+        "prep": "Massage kale with olive oil and salt until softened. Combine with spinach. Top with quinoa, roasted chickpeas, avocado, tomatoes, and pumpkin seeds. Drizzle tahini dressing over. Serve immediately."
+      },
+      {
+        "id": "hs3",
+        "name": "BBQ Chicken Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 chicken breasts, grilled and glazed with BBQ sauce",
+          "4 cups romaine lettuce, chopped",
+          "1 cup corn kernels",
+          "1 cup black beans, drained",
+          "1 cup cherry tomatoes",
+          "1 cup cheddar cheese, shredded",
+          "½ red onion, diced",
+          "Crispy tortilla strips",
+          "Ranch dressing"
+        ],
+        "prep": "Grill chicken and glaze with BBQ sauce. Slice. Arrange romaine on plates. Top with corn, black beans, tomatoes, cheese, and red onion. Layer BBQ chicken over. Add crispy tortilla strips. Drizzle ranch dressing over."
+      },
+      {
+        "id": "hs4",
+        "name": "Lemon Herb Salmon Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 salmon fillets, pan seared",
+          "4 cups mixed greens",
+          "1 cup cucumber, sliced",
+          "½ cup cherry tomatoes",
+          "¼ cup capers",
+          "¼ cup fresh dill",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tbsp Dijon, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Season and pan sear salmon 4 minutes per side until cooked. Arrange greens on plates with cucumber, tomatoes, and capers. Place salmon on top. Whisk dressing and drizzle over. Garnish with fresh dill."
+      },
+      {
+        "id": "hs5",
+        "name": "Mediterranean Bowl Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cups farro or quinoa, cooked",
+          "1 cup roasted red peppers, sliced",
+          "1 cup cucumber, diced",
+          "1 cup cherry tomatoes",
+          "½ cup Kalamata olives",
+          "100 g (3.5 oz) feta, crumbled",
+          "4 falafel balls per serving",
+          "Tzatziki and hummus",
+          "Dressing: olive oil, lemon juice, oregano, salt"
+        ],
+        "prep": "Arrange farro in bowls. Top with roasted peppers, cucumber, tomatoes, and olives. Add crumbled feta. Serve falafel on the side with tzatziki and hummus. Drizzle lemon herb dressing over everything."
+      },
+      {
+        "id": "hs6",
+        "name": "Roasted Vegetable Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 zucchini, roasted",
+          "1 red bell pepper, roasted",
+          "1 cup cherry tomatoes, roasted",
+          "1 cup eggplant, roasted",
+          "4 cups arugula",
+          "¼ cup Parmesan shavings",
+          "¼ cup pine nuts, toasted",
+          "Dressing: 3 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Roast all vegetables at 400°F with olive oil, salt, and pepper. Cool slightly. Arrange arugula on plates. Top with roasted vegetables. Whisk dressing and drizzle over. Add Parmesan shavings and toasted pine nuts."
+      },
+      {
+        "id": "hs7",
+        "name": "Warm Chicken and Roasted Vegetable Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 chicken breasts, roasted and sliced",
+          "1 cup sweet potato, roasted",
+          "1 cup broccoli, roasted",
+          "4 cups mixed greens",
+          "¼ cup dried cranberries",
+          "¼ cup pumpkin seeds",
+          "Dressing: 3 tbsp olive oil, 2 tbsp lemon juice, 1 tsp honey, 1 tsp Dijon, salt and pepper"
+        ],
+        "prep": "Roast chicken and vegetables. Arrange warm chicken and vegetables over greens. The warmth will slightly wilt the greens which is perfect. Add cranberries and pumpkin seeds. Whisk dressing and drizzle over. Serve while still warm."
+      },
+      {
+        "id": "hs8",
+        "name": "Steak and Arugula Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) sirloin steak, grilled medium rare",
+          "4 cups arugula",
+          "½ cup Parmesan shavings",
+          "¼ cup pine nuts, toasted",
+          "Lemon dressing: 3 tbsp olive oil, 1 tbsp lemon juice, salt and pepper"
+        ],
+        "prep": "Grill steak to medium rare. Rest 5 minutes and slice thin. Toss arugula with lemon dressing. Arrange on plates. Top with steak slices. Add Parmesan shavings and pine nuts. This classic Italian bistecca salad is best served immediately while the steak is still warm."
+      },
+      {
+        "id": "hs9",
+        "name": "Tuna Niçoise Bowl",
+        "servings": "4 servings",
+        "ingredients": [
+          "2 cans tuna in olive oil, drained",
+          "4 eggs, soft boiled and halved",
+          "200 g (7 oz) French green beans, blanched",
+          "4 small potatoes, boiled",
+          "1 cup cherry tomatoes",
+          "½ cup Niçoise olives",
+          "4 cups mixed greens",
+          "4 anchovy fillets",
+          "Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon, salt and pepper"
+        ],
+        "prep": "Arrange greens in bowls. Arrange tuna, eggs, green beans, potatoes, tomatoes, olives, and anchovies over greens. Whisk dressing and drizzle over everything. Serve at room temperature."
+      },
+      {
+        "id": "hs10",
+        "name": "Quinoa Power Bowl",
+        "servings": "4 servings",
+        "ingredients": [
+          "1½ cups quinoa, cooked",
+          "1 cup roasted sweet potato",
+          "1 cup roasted broccoli",
+          "1 avocado, sliced",
+          "½ cup edamame",
+          "¼ cup pumpkin seeds",
+          "¼ cup fresh herbs",
+          "Dressing: 3 tbsp tahini, 2 tbsp lemon juice, 1 garlic clove, 1 tbsp maple syrup, water to thin, salt"
+        ],
+        "prep": "Arrange quinoa in bowls. Top with roasted sweet potato, broccoli, avocado, and edamame. Drizzle tahini dressing over. Top with pumpkin seeds and fresh herbs."
+      },
+      {
+        "id": "hs11",
+        "name": "Chopped Antipasto Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "3 cups romaine, finely chopped",
+          "1 cup salami, diced",
+          "1 cup provolone, diced",
+          "½ cup pepperoncini, sliced",
+          "½ cup black olives, sliced",
+          "1 cup cherry tomatoes, halved",
+          "½ cup artichoke hearts",
+          "Italian dressing"
+        ],
+        "prep": "Finely chop all ingredients into uniform bite-sized pieces. Combine everything in a large bowl. Dress with Italian dressing and toss well. This chopped style means every bite has a mix of all ingredients. Refrigerate 30 minutes before serving."
+      },
+      {
+        "id": "hs12",
+        "name": "Falafel Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "12 falafel balls, cooked",
+          "4 cups mixed greens",
+          "1 cup cucumber, diced",
+          "1 cup cherry tomatoes",
+          "½ cup Kalamata olives",
+          "100 g (3.5 oz) feta, crumbled",
+          "Tzatziki dressing: ½ cup Greek yogurt, 1 tbsp lemon juice, 1 garlic clove, 2 tbsp fresh dill, salt"
+        ],
+        "prep": "Arrange greens on plates. Top with cucumber, tomatoes, and olives. Place falafel over the top. Crumble feta over. Drizzle tzatziki dressing over everything."
+      },
+      {
+        "id": "hs13",
+        "name": "Kale Caesar Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "1 large bunch curly kale, massaged",
+          "1 cup croutons",
+          "½ cup Parmesan, grated",
+          "Caesar dressing: 4 anchovy fillets, 3 garlic cloves, 2 egg yolks, 2 tbsp lemon juice, 1 tsp Dijon, ½ cup olive oil, ¼ cup Parmesan, salt and pepper"
+        ],
+        "prep": "Massage kale with olive oil and salt until softened — about 3 minutes. Make Caesar dressing by whisking all ingredients together. Toss kale with dressing. Top with croutons and extra Parmesan. Kale holds up to the dressing much better than romaine and can sit dressed for a while without wilting."
+      },
+      {
+        "id": "hs14",
+        "name": "Shrimp and Avocado Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "500 g (1 lb) cooked shrimp, chilled",
+          "2 avocados, diced",
+          "1 cup cherry tomatoes, halved",
+          "½ cucumber, diced",
+          "¼ red onion, finely diced",
+          "¼ cup fresh cilantro",
+          "Dressing: 3 tbsp lime juice, 2 tbsp olive oil, 1 tsp honey, pinch of chili flakes, salt"
+        ],
+        "prep": "Combine shrimp, avocado, tomatoes, cucumber, and red onion. Whisk dressing. Toss salad gently with dressing. Add cilantro. Serve immediately — avocado browns quickly."
+      },
+      {
+        "id": "hs15",
+        "name": "Roasted Beet and Lentil Salad",
+        "servings": "4 servings",
+        "ingredients": [
+          "4 medium beets, roasted and sliced",
+          "1½ cups French green lentils, cooked",
+          "4 cups arugula",
+          "100 g (3.5 oz) goat cheese, crumbled",
+          "¼ cup walnuts, toasted",
+          "Dressing: 3 tbsp olive oil, 2 tbsp red wine vinegar, 1 tsp Dijon, 1 tsp honey, salt and pepper"
+        ],
+        "prep": "Roast beets at 400°F wrapped in foil until tender. Cool, peel, and slice. Cook lentils until tender. Cool. Arrange arugula on plates. Top with lentils, beet slices, goat cheese, and walnuts. Whisk dressing and drizzle over."
+      }
     ]
   }
-
 ];
-
-// ================================================================
-//  TOGGLE CATEGORY — shows/hides recipe list under a card
-// ================================================================
-function toggleCategory(catId) {
-  var ul = document.getElementById(catId);
-  if (!ul) return;
-
-  if (ul.style.display === 'block') {
-    ul.style.display = 'none';
-    return;
-  }
-
-  var cat = salads_data.find(function(c) { return c.id === catId; });
-  if (!cat) return;
-
-  if (ul.innerHTML === '') {
-    cat.recipes.forEach(function(recipe, idx) {
-      var li = document.createElement('li');
-      li.className = 'browser-item';
-      li.innerHTML =
-        '<span class="browser-item-name">' + recipe.name + '</span>' +
-        '<span class="browser-item-arrow">›</span>';
-      li.addEventListener('click', function() {
-        open_recipe_modal(recipe, catId);
-      });
-      ul.appendChild(li);
-    });
-  }
-
-  ul.style.display = 'block';
-}
-
-
