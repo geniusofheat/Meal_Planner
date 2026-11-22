@@ -52,6 +52,7 @@ const CATEGORIES = [
 let expanded_tools = new Set();
 let expanded_categories = new Set();
 let open_subcat = {}; // { cat_id: sub_idx_or_'custom' }
+let open_subsub = {}; // { 'cat_id:sub_idx': subsub_idx }  (third level, e.g. Meats > Seafood > Shrimp)
 
 let engine_current_recipe = null;
 let engine_current_cat_name = null;
@@ -182,6 +183,38 @@ function toggle_subcat(cat_id, key) {
 }
 window.toggle_subcat = toggle_subcat;
 
+function toggle_subsub(cat_id, sub_idx, key) {
+  const k = cat_id + ':' + sub_idx;
+  if (open_subsub[k] === key) delete open_subsub[k];
+  else open_subsub[k] = key;
+  redraw_list();
+}
+window.toggle_subsub = toggle_subsub;
+
+// Third level: a subcategory that holds its own subcategories
+// (Meats > Seafood > Shrimp). Each one then lists its recipes.
+function render_subsubcats(cat_id, sub_idx, sub) {
+  const items = (sub.subcategories || [])
+    .map((s2, original_idx) => ({ s2, original_idx }))
+    .sort((a, b) => a.s2.name.localeCompare(b.s2.name));
+  const open_key = open_subsub[cat_id + ':' + sub_idx];
+  let html = '<ul class="sub-list level-3">';
+  items.forEach(({ s2, original_idx }) => {
+    html += `
+      <li class="note-item-row">
+        <div class="row-content">
+          <span class="note-list-title" onclick="toggle_subsub('${cat_id}', ${sub_idx}, ${original_idx})">${s2.name}</span>
+        </div>
+      </li>
+    `;
+    if (open_key === original_idx) {
+      html += `<li>${render_recipe_titles(cat_id, sub_idx, s2.recipes || [], original_idx)}</li>`;
+    }
+  });
+  html += '</ul>';
+  return html;
+}
+
 function render_subcats(cat_id) {
   const subcats_raw = (typeof cookbook_data !== 'undefined' && cookbook_data[cat_id]) ? cookbook_data[cat_id] : [];
   const subcats = subcats_raw
@@ -193,7 +226,7 @@ function render_subcats(cat_id) {
   // (Breads & Grains, Pickles & Preserves, Side Dishes): skip that extra
   // level and list the recipes straight away.
   const cat_def = CATEGORIES.find((c) => c.id === cat_id);
-  if (cat_def && subcats.length === 1 &&
+  if (cat_def && subcats.length === 1 && !subcats[0].sub.subcategories &&
       subcats[0].sub.name.trim().toLowerCase() === cat_def.label.trim().toLowerCase()) {
     return render_recipe_titles(cat_id, subcats[0].original_idx, subcats[0].sub.recipes || []);
   }
@@ -212,7 +245,9 @@ function render_subcats(cat_id) {
         </li>
       `;
       if (open_key === original_idx) {
-        html += `<li>${render_recipe_titles(cat_id, original_idx, sub.recipes || [])}</li>`;
+        html += Array.isArray(sub.subcategories)
+          ? `<li>${render_subsubcats(cat_id, original_idx, sub)}</li>`
+          : `<li>${render_recipe_titles(cat_id, original_idx, sub.recipes || [])}</li>`;
       }
     });
   }
@@ -224,16 +259,17 @@ function render_subcats(cat_id) {
 
 // ── SECTION 6: LEVEL 4 — RECIPE TITLES (leaf — opens full view) ─
 
-function render_recipe_titles(cat_id, sub_idx, recipes) {
+function render_recipe_titles(cat_id, sub_idx, recipes, sub2_idx) {
+  const has_sub2 = (sub2_idx !== undefined && sub2_idx !== null);
   const sorted = recipes
     .map((r, original_ri) => ({ r, original_ri }))
     .sort((a, b) => a.r.name.localeCompare(b.r.name));
-  let html = '<ul class="sub-list level-3">';
+  let html = `<ul class="sub-list ${has_sub2 ? 'level-4' : 'level-3'}">`;
   sorted.forEach(({ r, original_ri }) => {
     html += `
       <li class="note-item-row">
         <div class="row-content">
-          <span class="note-list-title" onclick="open_recipe_view_by_lookup('${cat_id}', ${sub_idx}, ${original_ri})">${r.name}</span>
+          <span class="note-list-title" onclick="open_recipe_view_by_lookup('${cat_id}', ${sub_idx}, ${original_ri}, ${has_sub2 ? sub2_idx : 'null'})">${r.name}</span>
         </div>
       </li>
     `;
@@ -244,8 +280,9 @@ function render_recipe_titles(cat_id, sub_idx, recipes) {
 
 // ── SECTION 7: RECIPE FULL VIEW (replaces the list, like Notepad's note editor) ──
 
-function open_recipe_view_by_lookup(cat_id, sub_idx, recipe_idx) {
-  const subcat = cookbook_data[cat_id][sub_idx];
+function open_recipe_view_by_lookup(cat_id, sub_idx, recipe_idx, sub2_idx) {
+  let subcat = cookbook_data[cat_id][sub_idx];
+  if (sub2_idx !== undefined && sub2_idx !== null) subcat = subcat.subcategories[sub2_idx];
   const recipe = subcat.recipes[recipe_idx];
   open_recipe_view(recipe, subcat.icon || '', subcat.name);
 }
@@ -419,6 +456,16 @@ function search_cookbook() {
     const cat = cookbook_data[cat_id];
     if (!cat) return false;
     return cat.some((subcat, sub_idx) => {
+      if (Array.isArray(subcat.subcategories)) {
+        return subcat.subcategories.some((s2, sub2_idx) =>
+          (s2.recipes || []).some((recipe) => {
+            if (recipe.name.toLowerCase().indexOf(q) !== -1) {
+              found = { cat_id, sub_idx, sub2_idx };
+              return true;
+            }
+            return false;
+          }));
+      }
       return (subcat.recipes || []).some((recipe) => {
         if (recipe.name.toLowerCase().indexOf(q) !== -1) {
           found = { cat_id, sub_idx };
@@ -433,6 +480,7 @@ function search_cookbook() {
     expanded_tools.add('recipes');
     expanded_categories.add(found.cat_id);
     open_subcat[found.cat_id] = found.sub_idx;
+    if (found.sub2_idx !== undefined) open_subsub[found.cat_id + ':' + found.sub_idx] = found.sub2_idx;
     redraw_list();
   }
 }

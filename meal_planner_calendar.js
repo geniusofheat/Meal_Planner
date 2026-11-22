@@ -233,8 +233,11 @@ function find_cookbook_recipe(name) {
   const data = window.cookbook_json_data || {};
   for (const cat_id of Object.keys(data)) {
     for (const sub of (data[cat_id] || [])) {
-      for (const r of (sub.recipes || [])) {
-        if (String(r.name).trim().toLowerCase() === want) return r;
+      const groups = Array.isArray(sub.subcategories) ? sub.subcategories : [sub];
+      for (const g of groups) {
+        for (const r of (g.recipes || [])) {
+          if (String(r.name).trim().toLowerCase() === want) return r;
+        }
       }
     }
   }

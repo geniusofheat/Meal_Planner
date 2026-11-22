@@ -333,6 +333,11 @@ p {
   padding-left: 20px;
 }
 
+.sub-list.level-4 {
+  list-style: circle;
+  padding-left: 20px;
+}
+
 /* =====================
    BREADCRUMB
 ===================== */
