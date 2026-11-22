@@ -10,7 +10,7 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=11">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=12">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
@@ -39,13 +39,11 @@
   <span class="search-icon" onclick="startVoice()">🎤</span>
   <input class="text-input" type="text" id="search_input" placeholder="Search the menu here..." onkeydown="search_on_enter(event)" autocomplete="off">
   <span class="search-icon" onclick="search_cookbook()">🔍</span>
-  <span class="bracket-action search-add" onclick="open_add_recipe_modal()">[ + ]</span>
 </div>
 
 <main class="main">
 
   <div id="notes-list-view">
-    <h3 class="menu-title">🍽️ Recipes Menu :</h3>
     <div class="notepad-body">
       <div id="notes-list"></div>
     </div>
