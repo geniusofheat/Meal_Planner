@@ -739,297 +739,6 @@
     ]
   },
   {
-    "id": "sausages",
-    "icon": "🌭",
-    "name": "Sausages",
-    "desc": "Brats, chorizo, kielbasa and sausage dishes.",
-    "recipes": [
-      {
-        "name": "Beer Braised Brats",
-        "servings": "4 servings",
-        "ingredients": [
-          "6 bratwurst sausages",
-          "2 onions, sliced",
-          "3 garlic cloves, sliced",
-          "2 bottles (24 oz) beer — lager or pilsner",
-          "2 tbsp butter",
-          "Hoagie rolls and mustard to serve"
-        ],
-        "prep": "Melt butter in a large skillet. Cook onions and garlic over medium heat until golden and caramelized — about 15 minutes. Add bratwurst and pour beer over. Bring to a simmer. Cook uncovered 20 minutes until brats are cooked through. Remove brats and grill or sear in a hot pan 2–3 minutes per side until browned and slightly charred. Serve on hoagie rolls with caramelized onions and mustard."
-      },
-      {
-        "name": "Chorizo and Eggs",
-        "servings": "4 servings",
-        "ingredients": [
-          "200 g (7 oz) fresh Mexican chorizo, casings removed",
-          "8 large eggs",
-          "1 onion, diced",
-          "1 jalapeño, diced",
-          "2 garlic cloves, minced",
-          "2 tomatoes, diced",
-          "Salt and pepper",
-          "Warm tortillas and salsa to serve"
-        ],
-        "prep": "Cook chorizo in a skillet over medium heat breaking it up until browned and fat is rendered. Drain excess fat if desired. Add onion, jalapeño, and garlic and cook until softened. Add tomatoes and cook 2 minutes. Whisk eggs and pour over chorizo mixture. Scramble gently over medium-low heat until eggs are just set. Season with salt and pepper. Serve with warm tortillas and fresh salsa."
-      },
-      {
-        "name": "Chorizo Paella",
-        "servings": "6 servings",
-        "ingredients": [
-          "2 cups (400 g) short grain rice",
-          "300 g (10.5 oz) Spanish chorizo, sliced",
-          "300 g (10.5 oz) chicken thighs",
-          "4 cups (960 ml) chicken broth, warm",
-          "½ tsp saffron in broth",
-          "1 onion, diced",
-          "4 garlic cloves",
-          "1 red bell pepper, diced",
-          "1 can (14 oz) diced tomatoes",
-          "1 tsp smoked paprika",
-          "4 tbsp olive oil",
-          "Fresh parsley and lemon"
-        ],
-        "prep": "Heat olive oil in a large paella pan. Brown chicken and chorizo. Remove. Cook onion, pepper, and garlic. Add tomatoes and paprika. Add rice and stir to coat. Add warm saffron broth. Return chicken and chorizo. Cook uncovered without stirring 18–20 minutes until rice is cooked and has formed a crust on the bottom. Rest 5 minutes. Garnish with parsley and lemon."
-      },
-      {
-        "name": "Hot Dog Bar",
-        "servings": "6 servings",
-        "ingredients": [
-          "12 quality hot dogs or frankfurters",
-          "12 hot dog buns, toasted",
-          "Condiments: mustard, ketchup, relish, sauerkraut, diced onion, jalapeños, cheddar sauce, chili, coleslaw"
-        ],
-        "prep": "Grill hot dogs over medium-high heat turning frequently until nicely charred and skin blisters slightly — about 5–6 minutes. Alternatively boil in water or steam. Toast buns on the grill or in a skillet with a little butter. Set up a condiment bar and let everyone build their own. Classic combinations: Chicago style with mustard, relish, onion, and tomato; New York style with sauerkraut and spicy mustard; chili cheese dog."
-      },
-      {
-        "name": "Kielbasa and Sauerkraut",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) kielbasa, sliced",
-          "500 g (1 lb) sauerkraut, drained",
-          "1 onion, sliced",
-          "3 garlic cloves, minced",
-          "1 cup (240 ml) beer or chicken broth",
-          "1 tbsp brown sugar",
-          "1 tsp caraway seeds",
-          "2 tbsp butter",
-          "Salt and pepper",
-          "Mashed potatoes or crusty bread to serve"
-        ],
-        "prep": "Melt butter in a large skillet over medium heat. Cook onion until caramelized — about 15 minutes. Add garlic and caraway seeds and cook 1 minute. Add sauerkraut, beer, and brown sugar. Stir well. Add sliced kielbasa. Cover and simmer 20 minutes, stirring occasionally. Uncover and cook until liquid mostly evaporates. Season with salt and pepper. Serve with mashed potatoes."
-      },
-      {
-        "name": "Sausage and Lentil Stew",
-        "servings": "4 servings",
-        "ingredients": [
-          "400 g (14 oz) smoked sausage or kielbasa, sliced",
-          "1 cup (190 g) green or brown lentils",
-          "1 onion, diced",
-          "2 carrots, diced",
-          "3 celery stalks, diced",
-          "4 garlic cloves, minced",
-          "4 cups (960 ml) chicken broth",
-          "1 can (14 oz) crushed tomatoes",
-          "1 tsp cumin",
-          "½ tsp smoked paprika",
-          "2 tbsp olive oil",
-          "Salt and pepper",
-          "Fresh parsley"
-        ],
-        "prep": "Heat olive oil in a large pot. Cook sausage slices until browned. Remove. Cook onion, carrots, and celery until softened. Add garlic, cumin, and paprika and cook 1 minute. Add lentils, broth, and tomatoes. Simmer 25–30 minutes until lentils are tender. Return sausage. Season with salt and pepper. Garnish with fresh parsley."
-      },
-      {
-        "name": "Sausage Rolls",
-        "servings": "12 rolls",
-        "ingredients": [
-          "500 g (1 lb) pork sausage meat",
-          "1 onion, grated",
-          "3 garlic cloves, minced",
-          "1 tbsp Dijon mustard",
-          "1 egg yolk in meat mixture",
-          "Fresh thyme",
-          "Salt and pepper",
-          "2 sheets puff pastry",
-          "1 egg, beaten for glaze",
-          "Sesame seeds"
-        ],
-        "prep": "Preheat oven to 400°F (200°C). Mix sausage meat with onion, garlic, mustard, egg yolk, thyme, salt, and pepper. Cut pastry sheets in half lengthwise. Place a log of sausage meat along one edge of each strip. Roll up tightly. Press to seal with egg wash. Cut into portions. Brush with egg wash and sprinkle with sesame seeds. Bake 20–25 minutes until golden and cooked through."
-      },
-      {
-        "name": "Sausage Stuffed Mushrooms",
-        "servings": "6 servings",
-        "ingredients": [
-          "24 large cremini mushrooms, stems removed and chopped",
-          "300 g (10.5 oz) Italian sausage, casings removed",
-          "1 onion, finely diced",
-          "4 garlic cloves, minced",
-          "½ cup Parmesan, grated",
-          "100 g (3.5 oz) cream cheese",
-          "Fresh parsley",
-          "Salt and pepper",
-          "Olive oil"
-        ],
-        "prep": "Preheat oven to 375°F (190°C). Cook sausage in a skillet breaking it up. Add onion, garlic, and chopped mushroom stems and cook until softened. Cool slightly. Mix with cream cheese, Parmesan, and parsley. Season. Brush mushroom caps with olive oil inside and out. Fill generously with sausage mixture. Bake 20–25 minutes until mushrooms are tender and tops are golden. Serve hot."
-      },
-      {
-        "name": "Toad in the Hole",
-        "servings": "4 servings",
-        "ingredients": [
-          "8 pork sausages",
-          "Yorkshire pudding batter: 1 cup (120 g) flour, 3 eggs, 1 cup (240 ml) milk, pinch of salt",
-          "3 tbsp vegetable oil or dripping",
-          "Onion gravy to serve"
-        ],
-        "prep": "Preheat oven to 425°F (220°C). Make batter by whisking flour, eggs, milk, and salt until smooth. Rest 30 minutes. Pour oil into a large roasting pan and heat in oven until smoking hot. Add sausages and cook 10 minutes until browned. Quickly pour batter over and around sausages. Return to oven immediately without opening for 25–30 minutes until batter is puffed and deeply golden. Do not open the oven while it bakes. Serve with onion gravy."
-      },
-      {
-        "name": "Italian Sausage and Peppers",
-        "servings": "4 servings",
-        "ingredients": [
-          "600 g (1.3 lbs) Italian sausages, sweet or hot",
-          "3 bell peppers, sliced — red, yellow, green",
-          "2 onions, sliced",
-          "4 garlic cloves, minced",
-          "1 can (14 oz) diced tomatoes",
-          "½ cup (120 ml) dry white wine",
-          "2 tbsp olive oil",
-          "Fresh basil",
-          "Salt and pepper",
-          "Hoagie rolls or pasta to serve"
-        ],
-        "prep": "Brown sausages in olive oil over medium-high heat on all sides. Remove and slice into pieces. Cook peppers and onions in the same pan until softened and slightly caramelized. Add garlic and cook 1 minute. Add wine and cook 2 minutes. Add diced tomatoes and sausage. Simmer 15 minutes until sauce thickens. Add fresh basil. Serve on hoagie rolls or over pasta."
-      },
-      {
-        "name": "Bratwurst with Beer and Onions",
-        "servings": "4 servings",
-        "ingredients": [
-          "6 bratwurst links",
-          "2 large onions, thinly sliced",
-          "3 garlic cloves, minced",
-          "2 cups (480 ml) German beer",
-          "2 tbsp butter",
-          "1 tsp caraway seeds",
-          "Salt and pepper",
-          "Hoagie buns, sauerkraut, and mustard to serve"
-        ],
-        "prep": "Melt butter in a large skillet or Dutch oven over medium heat. Cook onions slowly 15 minutes until golden. Add garlic and caraway seeds and cook 1 minute. Add beer and bring to a simmer. Add bratwurst. Simmer covered 20 minutes turning once. Remove bratwurst and grill or pan fry over high heat 3–4 minutes until nicely browned and skin is crispy. Continue reducing the beer onion mixture until thick. Serve brats on buns with beer onions, sauerkraut, and mustard."
-      },
-      {
-        "name": "Chorizo and Potato Hash",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 lb (450 g) Mexican or Spanish chorizo",
-          "4 medium potatoes, diced small",
-          "1 onion, diced",
-          "1 red bell pepper, diced",
-          "3 garlic cloves, minced",
-          "4 large eggs",
-          "2 tbsp olive oil",
-          "1 tsp cumin",
-          "Salt and pepper",
-          "Fresh cilantro and hot sauce to serve"
-        ],
-        "prep": "Cook potatoes in salted boiling water 5 minutes. Drain. Cook chorizo in a large skillet over medium-high heat breaking it up until browned. Remove. Cook onion and pepper in chorizo fat until soft. Add garlic and cumin 1 minute. Add potatoes and cook undisturbed 5 minutes until crispy. Return chorizo and toss. Create 4 wells in the hash. Crack an egg into each well. Cover and cook on medium-low heat until eggs are set to your liking. Garnish with cilantro."
-      },
-      {
-        "name": "Italian Sausage Pasta",
-        "servings": "4 servings",
-        "ingredients": [
-          "400 g (14 oz) rigatoni or penne",
-          "1 lb (450 g) Italian sausage, casings removed",
-          "1 onion, diced",
-          "4 garlic cloves, minced",
-          "1 can (28 oz) crushed tomatoes",
-          "½ cup (120 ml) dry red wine",
-          "1 tsp dried oregano",
-          "Red pepper flakes",
-          "½ cup Parmesan",
-          "Fresh basil",
-          "2 tbsp olive oil"
-        ],
-        "prep": "Cook pasta until al dente. Brown sausage in olive oil over medium-high heat breaking it up. Remove. Cook onion in same pan until soft. Add garlic, oregano, and red pepper flakes 1 minute. Add wine and reduce. Add crushed tomatoes. Return sausage. Simmer 20 minutes. Toss with drained pasta. Top with Parmesan and fresh basil."
-      },
-      {
-        "name": "Andouille and Red Bean Stew",
-        "servings": "6 servings",
-        "ingredients": [
-          "1 lb (450 g) andouille sausage, sliced",
-          "2 cans (14 oz each) red kidney beans, drained",
-          "1 onion, diced",
-          "3 celery stalks, diced",
-          "1 green bell pepper, diced",
-          "4 garlic cloves, minced",
-          "3 cups (720 ml) chicken broth",
-          "1 can (14 oz) diced tomatoes",
-          "1 tbsp Cajun seasoning",
-          "1 tsp dried thyme",
-          "Salt and pepper",
-          "Steamed white rice and green onions"
-        ],
-        "prep": "Cook andouille in a large pot until browned. Remove. Cook onion, celery, and pepper in sausage drippings until soft. Add garlic and Cajun seasoning and cook 1 minute. Return andouille. Add broth, diced tomatoes, beans, and thyme. Bring to a boil. Reduce and simmer 30 minutes until stew thickens. Mash some beans against the side of the pot for a creamier texture. Season with salt and pepper. Serve over white rice with green onions."
-      },
-      {
-        "name": "Chorizo Tacos",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 lb (450 g) Mexican chorizo, casings removed",
-          "8 corn tortillas",
-          "Toppings: diced white onion, fresh cilantro, avocado, salsa verde, lime wedges, queso fresco"
-        ],
-        "prep": "Cook chorizo in a dry skillet over medium-high heat breaking it up until fully cooked and slightly crispy — about 8–10 minutes. Drain excess fat. Warm tortillas directly over a gas flame or in a dry skillet until lightly charred. Fill each with chorizo. Top with diced onion, cilantro, avocado, and a spoonful of salsa verde. Crumble queso fresco over top. Serve with lime wedges."
-      },
-      {
-        "name": "German Sausage Platter",
-        "servings": "4 servings",
-        "ingredients": [
-          "2 bratwurst links",
-          "2 knockwurst links",
-          "2 weisswurst links",
-          "1 lb sauerkraut",
-          "2 large onions, sliced",
-          "1 cup (240 ml) German beer",
-          "2 tbsp butter",
-          "1 tsp caraway seeds",
-          "1 tbsp whole grain mustard",
-          "Pretzels and dark bread to serve"
-        ],
-        "prep": "Cook onions in butter over medium heat 20 minutes until caramelized. Add sauerkraut, beer, and caraway seeds. Simmer 15 minutes. Grill or pan fry all sausages over medium-high heat turning frequently until browned and cooked through. Arrange sausages on a platter over a bed of beer-braised sauerkraut and onions. Serve with whole grain mustard, pretzels, and dark bread."
-      },
-      {
-        "name": "Breakfast Sausage Patties",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 lb (450 g) ground pork",
-          "1 tsp dried sage",
-          "½ tsp dried thyme",
-          "½ tsp garlic powder",
-          "½ tsp onion powder",
-          "¼ tsp red pepper flakes",
-          "½ tsp brown sugar",
-          "1 tsp salt",
-          "½ tsp black pepper",
-          "1 tbsp maple syrup (optional)"
-        ],
-        "prep": "Mix ground pork with all seasonings and maple syrup if using. Mix well but do not overwork. Form into thin patties about 3 inches wide. Heat a skillet over medium heat. Cook patties 3–4 minutes per side until deeply golden and cooked through to 160°F (71°C). Do not press down — let them cook undisturbed for best browning. Rest 2 minutes before serving."
-      },
-      {
-        "name": "Spicy Chorizo Pizza",
-        "servings": "4 servings",
-        "ingredients": [
-          "1 pizza dough, store-bought or homemade",
-          "½ lb (225 g) Spanish chorizo, thinly sliced",
-          "1 cup crushed San Marzano tomatoes",
-          "2 cups shredded mozzarella",
-          "1 red onion, thinly sliced",
-          "½ cup roasted red peppers",
-          "Fresh arugula and Parmesan to top after baking",
-          "Red pepper flakes and olive oil"
-        ],
-        "prep": "Preheat oven to 500°F (260°C) with a pizza stone or inverted baking sheet inside. Stretch dough to desired shape. Spread thin layer of crushed tomatoes. Top with mozzarella, chorizo, red onion, and roasted red peppers. Drizzle with olive oil. Bake 10–12 minutes until crust is charred and crispy and cheese is bubbling. Top immediately with fresh arugula and shaved Parmesan."
-      }
-    ]
-  },
-  {
     "id": "cured_meats",
     "icon": "🥓",
     "name": "Cured Meats",
@@ -2348,6 +2057,287 @@
               "BBQ sauce for finishing"
             ],
             "prep": "Remove membrane from back of ribs. Apply dry rub generously on all sides. Smoke at 225°F with hickory or apple wood for 3 hours. Spritz with apple juice every 45 minutes. Wrap tightly in foil with a splash of apple juice. Continue smoking 2 more hours. Unwrap. Brush with BBQ sauce and smoke unwrapped 1 final hour. Rest 15 minutes. Slice between bones."
+          }
+        ]
+      },
+      {
+        "id": "pork_sausages",
+        "icon": "🌭",
+        "name": "Sausages",
+        "desc": "Bratwurst, chorizo, Italian sausage, kielbasa and sausage dishes.",
+        "recipes": [
+          {
+            "name": "Beer Braised Brats",
+            "servings": "4 servings",
+            "ingredients": [
+              "6 bratwurst sausages",
+              "2 onions, sliced",
+              "3 garlic cloves, sliced",
+              "2 bottles (24 oz) beer — lager or pilsner",
+              "2 tbsp butter",
+              "Hoagie rolls and mustard to serve"
+            ],
+            "prep": "Melt butter in a large skillet. Cook onions and garlic over medium heat until golden and caramelized — about 15 minutes. Add bratwurst and pour beer over. Bring to a simmer. Cook uncovered 20 minutes until brats are cooked through. Remove brats and grill or sear in a hot pan 2–3 minutes per side until browned and slightly charred. Serve on hoagie rolls with caramelized onions and mustard."
+          },
+          {
+            "name": "Chorizo and Eggs",
+            "servings": "4 servings",
+            "ingredients": [
+              "200 g (7 oz) fresh Mexican chorizo, casings removed",
+              "8 large eggs",
+              "1 onion, diced",
+              "1 jalapeño, diced",
+              "2 garlic cloves, minced",
+              "2 tomatoes, diced",
+              "Salt and pepper",
+              "Warm tortillas and salsa to serve"
+            ],
+            "prep": "Cook chorizo in a skillet over medium heat breaking it up until browned and fat is rendered. Drain excess fat if desired. Add onion, jalapeño, and garlic and cook until softened. Add tomatoes and cook 2 minutes. Whisk eggs and pour over chorizo mixture. Scramble gently over medium-low heat until eggs are just set. Season with salt and pepper. Serve with warm tortillas and fresh salsa."
+          },
+          {
+            "name": "Chorizo Paella",
+            "servings": "6 servings",
+            "ingredients": [
+              "2 cups (400 g) short grain rice",
+              "300 g (10.5 oz) Spanish chorizo, sliced",
+              "300 g (10.5 oz) chicken thighs",
+              "4 cups (960 ml) chicken broth, warm",
+              "½ tsp saffron in broth",
+              "1 onion, diced",
+              "4 garlic cloves",
+              "1 red bell pepper, diced",
+              "1 can (14 oz) diced tomatoes",
+              "1 tsp smoked paprika",
+              "4 tbsp olive oil",
+              "Fresh parsley and lemon"
+            ],
+            "prep": "Heat olive oil in a large paella pan. Brown chicken and chorizo. Remove. Cook onion, pepper, and garlic. Add tomatoes and paprika. Add rice and stir to coat. Add warm saffron broth. Return chicken and chorizo. Cook uncovered without stirring 18–20 minutes until rice is cooked and has formed a crust on the bottom. Rest 5 minutes. Garnish with parsley and lemon."
+          },
+          {
+            "name": "Kielbasa and Sauerkraut",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) kielbasa, sliced",
+              "500 g (1 lb) sauerkraut, drained",
+              "1 onion, sliced",
+              "3 garlic cloves, minced",
+              "1 cup (240 ml) beer or chicken broth",
+              "1 tbsp brown sugar",
+              "1 tsp caraway seeds",
+              "2 tbsp butter",
+              "Salt and pepper",
+              "Mashed potatoes or crusty bread to serve"
+            ],
+            "prep": "Melt butter in a large skillet over medium heat. Cook onion until caramelized — about 15 minutes. Add garlic and caraway seeds and cook 1 minute. Add sauerkraut, beer, and brown sugar. Stir well. Add sliced kielbasa. Cover and simmer 20 minutes, stirring occasionally. Uncover and cook until liquid mostly evaporates. Season with salt and pepper. Serve with mashed potatoes."
+          },
+          {
+            "name": "Sausage and Lentil Stew",
+            "servings": "4 servings",
+            "ingredients": [
+              "400 g (14 oz) smoked sausage or kielbasa, sliced",
+              "1 cup (190 g) green or brown lentils",
+              "1 onion, diced",
+              "2 carrots, diced",
+              "3 celery stalks, diced",
+              "4 garlic cloves, minced",
+              "4 cups (960 ml) chicken broth",
+              "1 can (14 oz) crushed tomatoes",
+              "1 tsp cumin",
+              "½ tsp smoked paprika",
+              "2 tbsp olive oil",
+              "Salt and pepper",
+              "Fresh parsley"
+            ],
+            "prep": "Heat olive oil in a large pot. Cook sausage slices until browned. Remove. Cook onion, carrots, and celery until softened. Add garlic, cumin, and paprika and cook 1 minute. Add lentils, broth, and tomatoes. Simmer 25–30 minutes until lentils are tender. Return sausage. Season with salt and pepper. Garnish with fresh parsley."
+          },
+          {
+            "name": "Sausage Rolls",
+            "servings": "12 rolls",
+            "ingredients": [
+              "500 g (1 lb) pork sausage meat",
+              "1 onion, grated",
+              "3 garlic cloves, minced",
+              "1 tbsp Dijon mustard",
+              "1 egg yolk in meat mixture",
+              "Fresh thyme",
+              "Salt and pepper",
+              "2 sheets puff pastry",
+              "1 egg, beaten for glaze",
+              "Sesame seeds"
+            ],
+            "prep": "Preheat oven to 400°F (200°C). Mix sausage meat with onion, garlic, mustard, egg yolk, thyme, salt, and pepper. Cut pastry sheets in half lengthwise. Place a log of sausage meat along one edge of each strip. Roll up tightly. Press to seal with egg wash. Cut into portions. Brush with egg wash and sprinkle with sesame seeds. Bake 20–25 minutes until golden and cooked through."
+          },
+          {
+            "name": "Sausage Stuffed Mushrooms",
+            "servings": "6 servings",
+            "ingredients": [
+              "24 large cremini mushrooms, stems removed and chopped",
+              "300 g (10.5 oz) Italian sausage, casings removed",
+              "1 onion, finely diced",
+              "4 garlic cloves, minced",
+              "½ cup Parmesan, grated",
+              "100 g (3.5 oz) cream cheese",
+              "Fresh parsley",
+              "Salt and pepper",
+              "Olive oil"
+            ],
+            "prep": "Preheat oven to 375°F (190°C). Cook sausage in a skillet breaking it up. Add onion, garlic, and chopped mushroom stems and cook until softened. Cool slightly. Mix with cream cheese, Parmesan, and parsley. Season. Brush mushroom caps with olive oil inside and out. Fill generously with sausage mixture. Bake 20–25 minutes until mushrooms are tender and tops are golden. Serve hot."
+          },
+          {
+            "name": "Toad in the Hole",
+            "servings": "4 servings",
+            "ingredients": [
+              "8 pork sausages",
+              "Yorkshire pudding batter: 1 cup (120 g) flour, 3 eggs, 1 cup (240 ml) milk, pinch of salt",
+              "3 tbsp vegetable oil or dripping",
+              "Onion gravy to serve"
+            ],
+            "prep": "Preheat oven to 425°F (220°C). Make batter by whisking flour, eggs, milk, and salt until smooth. Rest 30 minutes. Pour oil into a large roasting pan and heat in oven until smoking hot. Add sausages and cook 10 minutes until browned. Quickly pour batter over and around sausages. Return to oven immediately without opening for 25–30 minutes until batter is puffed and deeply golden. Do not open the oven while it bakes. Serve with onion gravy."
+          },
+          {
+            "name": "Italian Sausage and Peppers",
+            "servings": "4 servings",
+            "ingredients": [
+              "600 g (1.3 lbs) Italian sausages, sweet or hot",
+              "3 bell peppers, sliced — red, yellow, green",
+              "2 onions, sliced",
+              "4 garlic cloves, minced",
+              "1 can (14 oz) diced tomatoes",
+              "½ cup (120 ml) dry white wine",
+              "2 tbsp olive oil",
+              "Fresh basil",
+              "Salt and pepper",
+              "Hoagie rolls or pasta to serve"
+            ],
+            "prep": "Brown sausages in olive oil over medium-high heat on all sides. Remove and slice into pieces. Cook peppers and onions in the same pan until softened and slightly caramelized. Add garlic and cook 1 minute. Add wine and cook 2 minutes. Add diced tomatoes and sausage. Simmer 15 minutes until sauce thickens. Add fresh basil. Serve on hoagie rolls or over pasta."
+          },
+          {
+            "name": "Bratwurst with Beer and Onions",
+            "servings": "4 servings",
+            "ingredients": [
+              "6 bratwurst links",
+              "2 large onions, thinly sliced",
+              "3 garlic cloves, minced",
+              "2 cups (480 ml) German beer",
+              "2 tbsp butter",
+              "1 tsp caraway seeds",
+              "Salt and pepper",
+              "Hoagie buns, sauerkraut, and mustard to serve"
+            ],
+            "prep": "Melt butter in a large skillet or Dutch oven over medium heat. Cook onions slowly 15 minutes until golden. Add garlic and caraway seeds and cook 1 minute. Add beer and bring to a simmer. Add bratwurst. Simmer covered 20 minutes turning once. Remove bratwurst and grill or pan fry over high heat 3–4 minutes until nicely browned and skin is crispy. Continue reducing the beer onion mixture until thick. Serve brats on buns with beer onions, sauerkraut, and mustard."
+          },
+          {
+            "name": "Chorizo and Potato Hash",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 lb (450 g) Mexican or Spanish chorizo",
+              "4 medium potatoes, diced small",
+              "1 onion, diced",
+              "1 red bell pepper, diced",
+              "3 garlic cloves, minced",
+              "4 large eggs",
+              "2 tbsp olive oil",
+              "1 tsp cumin",
+              "Salt and pepper",
+              "Fresh cilantro and hot sauce to serve"
+            ],
+            "prep": "Cook potatoes in salted boiling water 5 minutes. Drain. Cook chorizo in a large skillet over medium-high heat breaking it up until browned. Remove. Cook onion and pepper in chorizo fat until soft. Add garlic and cumin 1 minute. Add potatoes and cook undisturbed 5 minutes until crispy. Return chorizo and toss. Create 4 wells in the hash. Crack an egg into each well. Cover and cook on medium-low heat until eggs are set to your liking. Garnish with cilantro."
+          },
+          {
+            "name": "Italian Sausage Pasta",
+            "servings": "4 servings",
+            "ingredients": [
+              "400 g (14 oz) rigatoni or penne",
+              "1 lb (450 g) Italian sausage, casings removed",
+              "1 onion, diced",
+              "4 garlic cloves, minced",
+              "1 can (28 oz) crushed tomatoes",
+              "½ cup (120 ml) dry red wine",
+              "1 tsp dried oregano",
+              "Red pepper flakes",
+              "½ cup Parmesan",
+              "Fresh basil",
+              "2 tbsp olive oil"
+            ],
+            "prep": "Cook pasta until al dente. Brown sausage in olive oil over medium-high heat breaking it up. Remove. Cook onion in same pan until soft. Add garlic, oregano, and red pepper flakes 1 minute. Add wine and reduce. Add crushed tomatoes. Return sausage. Simmer 20 minutes. Toss with drained pasta. Top with Parmesan and fresh basil."
+          },
+          {
+            "name": "Andouille and Red Bean Stew",
+            "servings": "6 servings",
+            "ingredients": [
+              "1 lb (450 g) andouille sausage, sliced",
+              "2 cans (14 oz each) red kidney beans, drained",
+              "1 onion, diced",
+              "3 celery stalks, diced",
+              "1 green bell pepper, diced",
+              "4 garlic cloves, minced",
+              "3 cups (720 ml) chicken broth",
+              "1 can (14 oz) diced tomatoes",
+              "1 tbsp Cajun seasoning",
+              "1 tsp dried thyme",
+              "Salt and pepper",
+              "Steamed white rice and green onions"
+            ],
+            "prep": "Cook andouille in a large pot until browned. Remove. Cook onion, celery, and pepper in sausage drippings until soft. Add garlic and Cajun seasoning and cook 1 minute. Return andouille. Add broth, diced tomatoes, beans, and thyme. Bring to a boil. Reduce and simmer 30 minutes until stew thickens. Mash some beans against the side of the pot for a creamier texture. Season with salt and pepper. Serve over white rice with green onions."
+          },
+          {
+            "name": "Chorizo Tacos",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 lb (450 g) Mexican chorizo, casings removed",
+              "8 corn tortillas",
+              "Toppings: diced white onion, fresh cilantro, avocado, salsa verde, lime wedges, queso fresco"
+            ],
+            "prep": "Cook chorizo in a dry skillet over medium-high heat breaking it up until fully cooked and slightly crispy — about 8–10 minutes. Drain excess fat. Warm tortillas directly over a gas flame or in a dry skillet until lightly charred. Fill each with chorizo. Top with diced onion, cilantro, avocado, and a spoonful of salsa verde. Crumble queso fresco over top. Serve with lime wedges."
+          },
+          {
+            "name": "German Sausage Platter",
+            "servings": "4 servings",
+            "ingredients": [
+              "2 bratwurst links",
+              "2 knockwurst links",
+              "2 weisswurst links",
+              "1 lb sauerkraut",
+              "2 large onions, sliced",
+              "1 cup (240 ml) German beer",
+              "2 tbsp butter",
+              "1 tsp caraway seeds",
+              "1 tbsp whole grain mustard",
+              "Pretzels and dark bread to serve"
+            ],
+            "prep": "Cook onions in butter over medium heat 20 minutes until caramelized. Add sauerkraut, beer, and caraway seeds. Simmer 15 minutes. Grill or pan fry all sausages over medium-high heat turning frequently until browned and cooked through. Arrange sausages on a platter over a bed of beer-braised sauerkraut and onions. Serve with whole grain mustard, pretzels, and dark bread."
+          },
+          {
+            "name": "Breakfast Sausage Patties",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 lb (450 g) ground pork",
+              "1 tsp dried sage",
+              "½ tsp dried thyme",
+              "½ tsp garlic powder",
+              "½ tsp onion powder",
+              "¼ tsp red pepper flakes",
+              "½ tsp brown sugar",
+              "1 tsp salt",
+              "½ tsp black pepper",
+              "1 tbsp maple syrup (optional)"
+            ],
+            "prep": "Mix ground pork with all seasonings and maple syrup if using. Mix well but do not overwork. Form into thin patties about 3 inches wide. Heat a skillet over medium heat. Cook patties 3–4 minutes per side until deeply golden and cooked through to 160°F (71°C). Do not press down — let them cook undisturbed for best browning. Rest 2 minutes before serving."
+          },
+          {
+            "name": "Spicy Chorizo Pizza",
+            "servings": "4 servings",
+            "ingredients": [
+              "1 pizza dough, store-bought or homemade",
+              "½ lb (225 g) Spanish chorizo, thinly sliced",
+              "1 cup crushed San Marzano tomatoes",
+              "2 cups shredded mozzarella",
+              "1 red onion, thinly sliced",
+              "½ cup roasted red peppers",
+              "Fresh arugula and Parmesan to top after baking",
+              "Red pepper flakes and olive oil"
+            ],
+            "prep": "Preheat oven to 500°F (260°C) with a pizza stone or inverted baking sheet inside. Stretch dough to desired shape. Spread thin layer of crushed tomatoes. Top with mozzarella, chorizo, red onion, and roasted red peppers. Drizzle with olive oil. Bake 10–12 minutes until crust is charred and crispy and cheese is bubbling. Top immediately with fresh arugula and shaved Parmesan."
           }
         ]
       }
@@ -4083,6 +4073,24 @@
               "Salsa fresca and garlic bread to serve"
             ],
             "prep": "Apply dry rub on all sides. Let sit at room temperature 1 hour. Grill over high direct heat 4–5 minutes per side until deeply seared. Move to indirect heat and cook until internal temperature reaches 130–135°F for medium rare — about 20–30 more minutes. Rest 10 minutes. Slice thinly against the grain. Tri-tip has two grain directions — find where they meet in the middle and slice accordingly. Serve with salsa fresca and garlic bread."
+          }
+        ]
+      },
+      {
+        "id": "beef_sausages",
+        "icon": "🌭",
+        "name": "Sausages",
+        "desc": "Hot dogs and beef sausage dishes.",
+        "recipes": [
+          {
+            "name": "Hot Dog Bar",
+            "servings": "6 servings",
+            "ingredients": [
+              "12 quality hot dogs or frankfurters",
+              "12 hot dog buns, toasted",
+              "Condiments: mustard, ketchup, relish, sauerkraut, diced onion, jalapeños, cheddar sauce, chili, coleslaw"
+            ],
+            "prep": "Grill hot dogs over medium-high heat turning frequently until nicely charred and skin blisters slightly — about 5–6 minutes. Alternatively boil in water or steam. Toast buns on the grill or in a skillet with a little butter. Set up a condiment bar and let everyone build their own. Classic combinations: Chicago style with mustard, relish, onion, and tomato; New York style with sauerkraut and spicy mustard; chili cheese dog."
           }
         ]
       }
