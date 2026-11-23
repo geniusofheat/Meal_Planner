@@ -7,69 +7,51 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="grocery_list.css">
+  <link rel="stylesheet" href="grocery_list.css?v=2">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
 <body>
 
 <header>
-  <div class="header-left">
-    <button class="orange-btn" onclick="handleBack()">← Back</button>
-  </div>
-
-  <div class="header-right">
-    <div class="notepad-date" id="dateDisplay"></div>
-  </div>
+  <button class="orange-btn" onclick="handleBack()">← Back</button>
+  <div class="notepad-date" id="dateDisplay"></div>
 </header>
+
+<div class="page-head">
+  <h1 class="page-title">🛒 Grocery List</h1>
+  <p class="page-desc">Add, check off and save your shopping lists.</p>
+</div>
 
 <main class="main">
 
-<!-- GROCERY LIST NOTEPAD -->
-  <div class="toolbar-row">
-    <div class="notepad-title">Grocery List :</div>    
-    
-    <button class="orange-btn" style="display: flex; justify-content: flex-end;" id="lockBtn" onclick="toggleLock()">🔓 Lock</button>
+  <div class="list-head">
+    <div>
+      <div class="list-name" id="listName">Default List</div>
+      <div class="list-count" id="listCount"></div>
+    </div>
+    <button class="orange-btn" id="lockBtn" onclick="toggleLock()">🔓 Lock</button>
   </div>
-<!-- END GROCERY LIST NOTEPAD -->
 
   <div class="notepad-body">
     <div id="grocery-list"></div>
+  </div>
 
-<!-- GROCERY LIST TITLE INPUT ROW -->
-  <div id="saveListContainer" class="block-flex-row-no-border" style="display:none;">
-  	
+  <div id="saveListContainer" class="input-row" style="display:none;">
     <input id="saveListNameInput" class="text-input" placeholder="Name this list...">
-    
-    <button class="orange-btn-44" onclick="confirmSaveList()">Save :</button>
+    <button class="orange-btn" onclick="confirmSaveList()">Save</button>
   </div>
-<!-- END GROCERY LIST TITLE INPUT ROW -->
 
-
-<!-- ADD ITEM INPUT ROW -->
-  <div class="toolbar-row">
-  	
+  <div class="input-row">
     <input class="text-input" id="textInput" placeholder="Add item...">
-    
     <button class="orange-btn-44" onclick="addItems()">＋</button>
-    
-    <button class="orange-btn-44" onclick="voiceInput()">🎤</button>  
-  </div>
-<!-- END ADD ITEM INPUT ROW -->
-
-  <div class="toolbar-row">
-
-<!-- END SAVE LIST BUTTON AND CUSTOM LISTS BUTTON -->
-    <button class="orange-btn" onclick="toggleSavedLists()">📋</button>
-
-
-    <button class="orange-btn" onclick="saveCurrentList()">Save</button>
-<!-- END SAVE LIST BUTTON AND CUSTOM LISTS BUTTON -->
+    <button class="orange-btn-44" onclick="voiceInput()">🎤</button>
   </div>
 
+  <div class="action-row">
+    <button class="orange-btn" onclick="toggleSavedLists()">📋 Saved Lists</button>
+    <button class="orange-btn" onclick="saveCurrentList()">Save List</button>
   </div>
-
-
 
 </main>
 
@@ -77,6 +59,10 @@
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service_worker.js');
 }
+</script>
+<script>
+document.getElementById('dateDisplay').textContent =
+  new Date().toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
 </script>
 
 <script type="module" src="grocery_list_data.js"></script>

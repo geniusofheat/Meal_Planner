@@ -89,28 +89,26 @@ function renderList() {
   }
 
   const items = getItems();
-  const blankCount = Math.max(0, 8 - items.length);
-  const blanks = Array(blankCount)
-    .fill('<div class="notepad-row blank"></div>')
-    .join("");
+  document.getElementById("listName").textContent =
+    activeListName === "Default" ? "Default List" : activeListName;
+  document.getElementById("listCount").textContent =
+    items.length + (items.length === 1 ? " item" : " items");
 
-  el.innerHTML =
-`<div class="grocery-list-title">
-  ${activeListName === "Default" ? "Default List :" : activeListName}
-</div>` +
-    items.map(item => `
-      <div class="notepad-row">
+  if (!items.length) {
+    el.innerHTML = '<div class="grocery-list-placeholder">Your list is empty. Add an item below.</div>';
+    return;
+  }
+
+  el.innerHTML = items.map(item => `
+      <div class="item-card">
         <input type="checkbox"
                ${item.checked ? "checked" : ""}
                onchange="toggleCheck(${item.id})"
                ${locked ? "disabled" : ""}>
-        <label class="${item.checked ? "crossed" : ""}">
-          ${item.name}
-        </label>
+        <label class="${item.checked ? "crossed" : ""}">${item.name}</label>
         ${!locked ? `<button class="remove-btn" onclick="removeItem(${item.id})">✕</button>` : ""}
       </div>
-    `).join("") +
-    blanks;
+    `).join("");
 }
 
 function addItem(name) {
@@ -250,17 +248,14 @@ function renderSavedListsPanel() {
   return `
     <div class="saved-lists-panel">
       <h3>Saved Lists</h3>
-
       ${names.map(name => `
-        <div>
-          <button onclick="loadList('${name.replace(/'/g, "\\'")}')">
+        <div class="saved-list-row">
+          <button class="open-list" onclick="loadList('${name.replace(/'/g, "\\'")}')">
             ${name} - (${groceryLists[name].length} items)
           </button>
-
-          <button onclick="deleteList('${name.replace(/'/g, "\\'")}')">✕</button>
+          <button class="remove-btn" onclick="deleteList('${name.replace(/'/g, "\\'")}')">✕</button>
         </div>
       `).join("")}
-
     </div>
   `;
 }
