@@ -3,69 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grocery Notepad</title>
+  <title>Grocery List</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Space+Mono&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="grocery_list.css?v=2">
-<link rel="stylesheet" href="button_style.css?v=2">
+  <link rel="stylesheet" href="grocery_list.css?v=3">
 </head>
 
 <body>
+<div class="page">
 
-<header>
-  <button class="orange-btn" onclick="handleBack()">← Back</button>
-  <div class="notepad-date" id="dateDisplay"></div>
-</header>
+  <nav class="nav-row">
+    <button class="nav-btn" onclick="handleBack()">← Back</button>
+    <div class="nav-date" id="dateDisplay"></div>
+  </nav>
 
-<div class="page-head">
-  <h1 class="page-title">🛒 Grocery List</h1>
-  <p class="page-desc">Add, check off and save your shopping lists.</p>
-</div>
-
-<main class="main">
-
-  <div class="list-head">
+  <div class="title-row">
     <div>
-      <div class="list-name" id="listName">Default List</div>
-      <div class="list-count" id="listCount"></div>
+      <h1 class="page-title">Groceries</h1>
+      <div class="page-sub" id="summary">Your list is empty</div>
     </div>
-    <button class="orange-btn" id="lockBtn" onclick="toggleLock()">🔓 Lock</button>
+    <button class="pill-outline" id="lockBtn" onclick="toggleLock()" aria-pressed="false">Lock</button>
   </div>
 
-  <div class="notepad-body">
-    <div id="grocery-list"></div>
+  <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+
+  <div class="two-btns">
+    <button class="btn-green" id="addBtn" onclick="toggleAdd()">Add</button>
+    <button class="btn-outline-green" id="menuBtn" onclick="toggleMenu()">Grocery Menu</button>
   </div>
 
-  <div id="saveListContainer" class="input-row" style="display:none;">
-    <input id="saveListNameInput" class="text-input" placeholder="Name this list...">
-    <button class="orange-btn" onclick="confirmSaveList()">Save</button>
+  <div id="addPanel" class="add-panel hidden">
+    <input id="textInput" class="text-input" placeholder="Type an item" aria-label="Item to add">
+    <button class="icon-btn" onclick="voiceInput()" aria-label="Speak an item">🎤</button>
+    <button class="btn-dark" onclick="addItems()">Done</button>
   </div>
 
-  <div class="input-row">
-    <input class="text-input" id="textInput" placeholder="Add item...">
-    <button class="orange-btn-44" onclick="addItems()">＋</button>
-    <button class="orange-btn-44" onclick="voiceInput()">🎤</button>
+  <div id="menuPanel" class="card menu-card hidden"></div>
+
+  <div id="emptyState" class="card empty-card hidden">
+    <p><strong>Adding items.</strong> Tap Add, type what you need, then tap Done. Each item is placed in the correct category for you, and you can check it off once it is in your cart.</p>
+    <p><strong>Locking your list.</strong> Tap Lock when you are ready to shop. A locked list cannot have items added or removed by accident, but you can still check things off. Tap Unlock to make changes again.</p>
+    <p><strong>Using the menu.</strong> Tap Grocery Menu to see common items grouped by category. Tap any item to put it on your list, and tap Grocery Menu again to close it.</p>
   </div>
 
-  <div class="action-row">
-    <button class="orange-btn" onclick="toggleSavedLists()">📋 Saved Lists</button>
-    <button class="orange-btn" onclick="saveCurrentList()">Save List</button>
+  <div id="grocery-list"></div>
+
+  <div id="saveListContainer" class="add-panel hidden">
+    <input id="saveListNameInput" class="text-input" placeholder="Name this list..." aria-label="List name">
+    <button class="btn-dark" onclick="confirmSaveList()">Save</button>
   </div>
 
-</main>
+  <div class="bottom-row">
+    <button class="pill-outline" id="clearBtn" onclick="clearChecked()">Clear checked items</button>
+    <button class="pill-outline" onclick="toggleSavedLists()">Saved Lists</button>
+    <button class="pill-outline" onclick="saveCurrentList()">Save List</button>
+  </div>
+
+</div>
 
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service_worker.js');
 }
-</script>
-<script>
 document.getElementById('dateDisplay').textContent =
   new Date().toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
 </script>
 
-<script type="module" src="grocery_list_data.js"></script>
+<script type="module" src="grocery_list_data.js?v=3"></script>
 <script type="module" src="firebase_login_auth.js"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
