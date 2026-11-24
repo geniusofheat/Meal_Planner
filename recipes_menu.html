@@ -10,7 +10,7 @@
 <link rel="manifest" href="meal_planner_manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=14">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=15">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
@@ -30,6 +30,8 @@
 <h3 id="pageTitle" class="page-title">📖  Recipes Menu :</h3>
 
 <p id="mainPageDescription">Please choose an item in the list or click Help for more instructions.<span class="desc-line">Search through the recipes menu below to find a recipe.</span></p>
+
+<div id="plan-target-note" class="target-note" style="display:none;"></div>
 
 <!-- Search results message -->
 <div id="search_results" class="search-error-message"></div>
@@ -105,6 +107,20 @@
 </div>
 <!-- END ADD RECIPE MODAL -->
 
+<script>
+// Shown only when a day was chosen with the + button in the Meal Planner
+(function () {
+  try {
+    var t = JSON.parse(localStorage.getItem('mealplanner_target_date') || 'null');
+    if (!t || !t.iso || (Date.now() - t.t) > 30 * 60 * 1000) return;
+    var p = t.iso.split('-').map(Number);
+    var label = new Date(p[0], p[1] - 1, p[2]).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    var el = document.getElementById('plan-target-note');
+    el.innerHTML = '<b>Planning a meal for ' + label + '.</b> Choose a recipe from the menu, then press the Plan button at the bottom of the recipe card.';
+    el.style.display = 'block';
+  } catch (e) {}
+})();
+</script>
 <script src="cookbook_json.js?v=5"></script>
 <script src="cookbook_menu_data.js?v=5"></script>
 

@@ -1004,3 +1004,11 @@ header.cookbook-toolbar .notepad-date { margin-left: auto; }
 .recipe-card p,
 .recipe-card span,
 .recipe-card div { color: #000000; }
+
+/* Note shown when a day was chosen in the Meal Planner */
+.target-note {
+  max-width: 680px; margin: 0 auto 12px;
+  border: 2px solid #c8a96e; border-radius: 12px;
+  background: rgba(255,255,255,0.08); color: #ffffff;
+  padding: 10px 14px; font-family: 'Crimson Pro', serif; font-size: 18px; line-height: 1.4;
+}

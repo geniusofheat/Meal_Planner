@@ -127,7 +127,7 @@ const HELP_CONTENT = `
   <p>The Meal Planner lets you plan recipes on the days you want to cook them.</p>
   <ul class="help-list">
     <li>Tap a date on the calendar to open its week in the list below. An empty day shows a + button.</li>
-    <li>Tap the + to choose where the recipe comes from: the Recipe Menu or the Recipe Creator. The recipe is added to that day.</li>
+    <li>Tap the + to choose where the recipe comes from: the Recipe Menu, your Favorites or the Recipe Creator. The recipe is added to that day.</li>
     <li>You can also press Plan on any recipe card, then tap a day on the calendar.</li>
     <li>Use the arrows above the calendar to move to the previous or next month.</li>
     <li>Days with something planned are highlighted.</li>
@@ -260,6 +260,7 @@ function render_week() {
               html += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div>' +
                 '<div class="add-choice-btns">' +
                 '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipe Menu</button>' +
+                '<button class="orange-btn" data-act="go-favorites" data-iso="' + iso + '">Favorites</button>' +
                 '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">Recipe Creator</button>' +
                 '</div></div>';
             }
@@ -366,10 +367,11 @@ function on_week_click(e) {
     render_week();
     return;
   }
-  const go = e.target.closest('[data-act="go-menu"], [data-act="go-creator"]');
+  const go = e.target.closest('[data-act="go-menu"], [data-act="go-favorites"], [data-act="go-creator"]');
   if (go) {
     try { localStorage.setItem(TARGET_KEY, JSON.stringify({ iso: go.getAttribute('data-iso'), t: Date.now() })); } catch (err) {}
-    window.location.href = go.getAttribute('data-act') === 'go-menu' ? 'recipes_menu.html' : 'recipe_creator.html';
+    const dest = { 'go-menu': 'recipes_menu.html', 'go-favorites': 'favorite_recipes.html', 'go-creator': 'recipe_creator.html' };
+    window.location.href = dest[go.getAttribute('data-act')];
     return;
   }
   const ch = e.target.closest('[data-act="change-meal"]');

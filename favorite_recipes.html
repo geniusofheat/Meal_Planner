@@ -6,7 +6,7 @@
 <title>Favorite Recipes</title>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 <link rel="manifest" href="meal_planner_manifest.json">
-<link rel="stylesheet" href="recipe_tools.css?v=1">
+<link rel="stylesheet" href="recipe_tools.css?v=2">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 <body>
@@ -21,6 +21,8 @@
   <p class="page-desc">Keep the recipes you love together in one place.</p>
 </div>
 
+<div id="plan-target-note" class="target-note" style="display:none;"></div>
+
 <div class="panel" id="listView">
   <input class="field" id="favSearch" placeholder="Search your favorites..." oninput="renderList()" autocomplete="off">
   <div id="favList"></div>
@@ -28,6 +30,20 @@
 
 <div class="panel recipe-card hidden" id="cardView"></div>
 
+<script>
+// Shown only when a day was chosen with the + button in the Meal Planner
+(function () {
+  try {
+    var t = JSON.parse(localStorage.getItem('mealplanner_target_date') || 'null');
+    if (!t || !t.iso || (Date.now() - t.t) > 30 * 60 * 1000) return;
+    var p = t.iso.split('-').map(Number);
+    var label = new Date(p[0], p[1] - 1, p[2]).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    var el = document.getElementById('plan-target-note');
+    el.innerHTML = '<b>Planning a meal for ' + label + '.</b> Choose a favorite recipe, then press the Plan button at the bottom of the card.';
+    el.style.display = 'block';
+  } catch (e) {}
+})();
+</script>
 <script src="favorite_recipes.js?v=1"></script>
 <script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
 </body>

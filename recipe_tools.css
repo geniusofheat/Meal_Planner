@@ -66,3 +66,11 @@ textarea.field { min-height: 130px; resize: vertical; }
 .recipe-card li { margin-bottom: 4px; }
 .recipe-card p { font-size: 18px; line-height: 1.5; }
 .hidden { display: none !important; }
+
+/* Note shown when a day was chosen in the Meal Planner */
+.target-note {
+  max-width: 680px; margin: 0 auto 12px;
+  border: 2px solid #c8a96e; border-radius: 12px;
+  background: rgba(255,255,255,0.08); color: #ffffff;
+  padding: 10px 14px; font-family: 'Crimson Pro', serif; font-size: 18px; line-height: 1.4;
+}
