@@ -1,5 +1,5 @@
 // ================================================================
-// index_data.js — Account Type Selection UI Only
+// login_data.js — Account Type Selection UI Only
 // Auth handled by firebase_login_auth.js
 // ================================================================
 

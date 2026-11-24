@@ -20,7 +20,7 @@ let currentUser       = null;
 let cookbook_unlocked = false;
 let preview_used      = false;
 
-// ── Card switcher (shared with index_data.js via window) ───────
+// ── Card switcher (shared with login_data.js via window) ───────
 // Any card that should be part of the same-page switching system
 // must have its id listed here.
 const ALL_CARD_IDS = [
@@ -112,7 +112,7 @@ function unlockGroceryMenu() {
 }
 
 // ── Page destinations ──────────────────────────────────────────
-const LOGIN_PAGE = 'index.html';
+const LOGIN_PAGE = 'login.html';
 const FREE_PAGE  = 'meal_planner_free.html';
 const FULL_PAGE  = 'meal_planner_full.html';
 
@@ -235,7 +235,7 @@ getRedirectResult(auth).catch(e => {
 export async function signOutUser() {
   try {
     await signOut(auth);
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
   } catch (e) {
     console.error(e);
   }
