@@ -28,9 +28,9 @@
     if (!load().length) {
       $('favSearch').classList.add('hidden');
       el.innerHTML =
-        '<p style="font-size:18px;line-height:1.5">You have no favorite recipes yet. Open any recipe in the Recipes Menu and tap Save, or build your own in the Recipe Creator. Saved recipes will appear here.</p>' +
+        '<p style="font-size:18px;line-height:1.5">You have no favorite recipes yet. Open any recipe in the Recipes Menu and tap Save, or build your own in My Recipes. Saved recipes will appear here.</p>' +
         '<div class="btn-row"><a class="orange-btn" href="recipes_menu.html">Open Recipes Menu</a>' +
-        '<a class="orange-btn" href="recipe_creator.html">Open Recipe Creator</a></div>';
+        '<a class="orange-btn" href="myrecipes.html">Open My Recipes</a></div>';
       return;
     }
     $('favSearch').classList.remove('hidden');

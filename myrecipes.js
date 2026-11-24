@@ -1,4 +1,4 @@
-// Recipe Creator — saves a recipe card to localStorage 'mealplanner_favorites'
+// My Recipes — saves a recipe card to localStorage 'mealplanner_favorites'
 // (same format the cookbook's Save button uses).
 
 (function () {
