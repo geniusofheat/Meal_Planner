@@ -68,6 +68,21 @@
 
     msg.className = 'msg';
     msg.textContent = 'Recipe saved to your favorites!';
+
+    // A day was chosen in the Meal Planner: offer to plan this recipe on it
+    try {
+      var tg = JSON.parse(localStorage.getItem('mealplanner_target_date') || 'null');
+      if (tg && tg.iso && (Date.now() - tg.t) < 30 * 60 * 1000) {
+        var p = tg.iso.split('-').map(Number);
+        var label = new Date(p[0], p[1] - 1, p[2]).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        localStorage.setItem('mealplanner_pending_recipe', JSON.stringify({
+          name: name, servings: servings, ingredients: ingredients, steps: steps, prep: '', notes: notes, batches: 1, mode: 'plan'
+        }));
+        $('r_plan').textContent = 'Plan on ' + label;
+        $('r_plan').classList.remove('hidden');
+      }
+    } catch (e) {}
+
     $('r_after').classList.remove('hidden');
     $('r_name').value = ''; $('r_servings').value = ''; $('r_prep').value = ''; $('r_notes').value = '';
     $('r_ingredients').innerHTML = '';

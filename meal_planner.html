@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=6">
-<link rel="stylesheet" href="meal_planner_calendar.css?v=8">
+<link rel="stylesheet" href="meal_planner_calendar.css?v=10">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
@@ -27,7 +27,7 @@
   </div>
 </header>
 
-<p id="mainPageDescription">Plan your meals by the day. Choose a day from the calendar to plan a meal, or tap a highlighted day to see what is already planned.</p>
+<p id="mainPageDescription">Tap a date on the calendar to open its week. To add a meal, tap the + beside an empty day, then choose a recipe from the Recipe Menu or create one with the Recipe Creator. Tap a planned meal to see its recipe.</p>
 
 <!-- BACK TOOLBAR -->
 <div class="back-row">
@@ -52,7 +52,7 @@
 
   <!-- Days of the week + month grid -->
   <div class="cal-weekdays">
-    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
   </div>
   <div class="cal-grid" id="cal-grid"></div>
 
@@ -73,7 +73,7 @@
 </div>
 
 <script src="cookbook_json.js?v=5"></script>
-<script src="meal_planner_calendar.js?v=8"></script>
+<script src="meal_planner_calendar.js?v=9"></script>
 <script type="module" src="firebase_login_auth.js"></script>
 
 <script>

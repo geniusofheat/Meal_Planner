@@ -11,6 +11,8 @@
 
 const PLAN_KEY    = 'mealplanner_plan';
 const PENDING_KEY = 'mealplanner_pending_recipe';
+const TARGET_KEY  = 'mealplanner_target_date';   // day chosen with the + button, waiting for a recipe
+let add_iso = null;                                // day whose + chooser is open
 
 const MONTHS = ['January','February','March','April','May','June','July',
                 'August','September','October','November','December'];
@@ -68,6 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
   pending = load_json(PENDING_KEY, null);
   if (pending && !pending.name) pending = null;
 
+  // A day was chosen with the + button and a recipe has now come back for it
+  const target = load_json(TARGET_KEY, null);
+  try { localStorage.removeItem(TARGET_KEY); } catch (e) {}
+  if (pending && target && target.iso && (Date.now() - target.t) < 30 * 60 * 1000) {
+    const recipe = Object.assign({}, pending);
+    delete recipe.mode;
+    if (!plan[target.iso]) plan[target.iso] = [];
+    plan[target.iso].push(recipe);
+    save_plan();
+    pending = null;
+    try { localStorage.removeItem(PENDING_KEY); } catch (e) {}
+    selected_iso = target.iso;
+    const td = date_of(target.iso);
+    view_year = td.getFullYear(); view_month = td.getMonth();
+    open_weeks = new Set([week_key(view_year, view_month, ordinal_week(td))]);
+  }
+
   const dd = document.getElementById('dateDisplay');
   if (dd) dd.textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
@@ -100,16 +119,18 @@ function render_prompt() {
   if (!el) return;
   el.textContent = pending
     ? (moving ? 'Choose the new day for this meal from the calendar below.' : 'Please choose a day of the week from the calendar below.')
-    : 'Tap a highlighted day to see what is planned for that week.';
+    : 'Tap a date to open its week.';
 }
 
 // ── help ────────────────────────────────────────────────────────
 const HELP_CONTENT = `
-  <p>The Meal Planner lets you plan recipes from the Cookbook on the days you want to cook them.</p>
+  <p>The Meal Planner lets you plan recipes on the days you want to cook them.</p>
   <ul class="help-list">
-    <li>Press Plan or Save on a recipe card, then tap a day on the calendar to add it.</li>
+    <li>Tap a date on the calendar to open its week in the list below. An empty day shows a + button.</li>
+    <li>Tap the + to choose where the recipe comes from: the Recipe Menu or the Recipe Creator. The recipe is added to that day.</li>
+    <li>You can also press Plan on any recipe card, then tap a day on the calendar.</li>
     <li>Use the arrows above the calendar to move to the previous or next month.</li>
-    <li>Days with something planned are highlighted. Tap one to open its week in the list below the calendar.</li>
+    <li>Days with something planned are highlighted.</li>
     <li>The list below the calendar shows the month by week. Tap a week to see its seven days, with Empty beside any day that has nothing planned. Tap a meal to see its recipe, and tap Change to move it to another day, and tap ✕ to take it off your plan.</li>
   </ul>
 `;
@@ -189,11 +210,10 @@ function on_grid_click(e) {
     save_plan();
     pending = null;
     try { localStorage.removeItem(PENDING_KEY); } catch (err) {}
-  } else if (!(plan[iso] && plan[iso].length)) {
-    return;   // only highlighted days open anything
   }
 
   selected_iso = iso;
+  add_iso = null;
   const dd = date_of(iso);
   view_year = dd.getFullYear(); view_month = dd.getMonth();
   open_weeks = new Set([week_key(view_year, view_month, ordinal_week(dd))]);
@@ -229,9 +249,20 @@ function render_week() {
         for (let n = first; n <= last; n++) {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
           const meals = plan[iso] || [];
-          html += '<div class="day-row"><div class="day-num' + (meals.length ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
+          html += '<div class="day-row"><div class="day-num' + ((meals.length || iso === selected_iso) ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
           if (!meals.length) {
-            html += '<div class="day-empty">Empty</div>';
+            html += '<div class="day-empty"><span>Empty</span>';
+            if (iso === selected_iso) {
+              html += '<button class="orange-btn" data-act="add-meal" data-iso="' + iso + '" aria-label="Add a meal to ' + esc(full_date(iso)) + '">+</button>';
+            }
+            html += '</div>';
+            if (iso === selected_iso && add_iso === iso) {
+              html += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div>' +
+                '<div class="add-choice-btns">' +
+                '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipe Menu</button>' +
+                '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">Recipe Creator</button>' +
+                '</div></div>';
+            }
           } else {
             meals.forEach((m, idx) => {
               const mkey = iso + '#' + idx;
@@ -328,6 +359,19 @@ function meal_detail_html(m, iso) {
 }
 
 function on_week_click(e) {
+  const addb = e.target.closest('[data-act="add-meal"]');
+  if (addb) {
+    const iso = addb.getAttribute('data-iso');
+    add_iso = (add_iso === iso) ? null : iso;
+    render_week();
+    return;
+  }
+  const go = e.target.closest('[data-act="go-menu"], [data-act="go-creator"]');
+  if (go) {
+    try { localStorage.setItem(TARGET_KEY, JSON.stringify({ iso: go.getAttribute('data-iso'), t: Date.now() })); } catch (err) {}
+    window.location.href = go.getAttribute('data-act') === 'go-menu' ? 'recipes_menu.html' : 'recipe_creator.html';
+    return;
+  }
   const ch = e.target.closest('[data-act="change-meal"]');
   if (ch) {
     e.stopPropagation();
