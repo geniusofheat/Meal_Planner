@@ -114,7 +114,8 @@
 .week-day-head .count { font: 12px 'Space Mono', monospace; color: rgba(255,255,255,0.8); }
 .week-day.selected .week-day-head { font-weight: 600; }
 .week-meals { background: #fafafa; padding: 0 0 6px; }
-.meal-row { border-top: 1px solid rgba(100, 149, 237, 0.4); padding: 0 4px 0 14px; }
+.meal-row { border-top: 1px solid rgba(100, 149, 237, 0.4); padding: 0 4px 0 6px; }
+.meal-row:first-child { border-top: 0; }
 .meal-head {
   display: flex;
   align-items: center;
@@ -142,3 +143,22 @@
 }
 
 .meal-date { font: 600 16px 'Playfair Display', serif; margin: 2px 0 6px; }
+
+/* ── Month > Weeks > Days list ─────────────────────────────────── */
+.month-block { margin-top: 16px; }
+.month-head, .week-head {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 46px; cursor: pointer; color: #ffffff;
+  border-bottom: 1px solid var(--gold, #c8a96e);
+}
+.month-head { font: 600 22px 'Playfair Display', serif; padding: 0 4px; }
+.week-head  { font: 600 18px 'Playfair Display', serif; padding: 0 4px; }
+.month-head .count, .week-head .count { font: 13px 'Space Mono', monospace; color: rgba(255,255,255,0.8); }
+.month-weeks { margin-left: 16px; }
+.week-days { margin: 8px 0 10px 16px; background: #fafafa; border-radius: 10px; overflow: hidden; }
+.day-row { display: flex; align-items: flex-start; gap: 10px; border-top: 1px solid rgba(100,149,237,0.4); padding: 4px 6px; }
+.day-row:first-child { border-top: 0; }
+.day-num { width: 30px; min-height: 40px; display: flex; align-items: center; justify-content: center;
+  font: 600 18px 'Playfair Display', serif; color: #1a1a2e; }
+.day-meals { flex: 1; min-width: 0; }
+.day-empty { min-height: 40px; display: flex; align-items: center; font: italic 16px 'Crimson Pro', serif; color: #666; }

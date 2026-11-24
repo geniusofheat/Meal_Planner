@@ -24,6 +24,8 @@ let week_start  = null;   // Date (a Sunday) for the week list
 let selected_iso = null;
 let open_days   = new Set();
 let open_meals  = new Set();
+let open_weeks  = new Set();
+let month_open  = true;
 let moving      = null;   // { iso, idx } while a planned meal is being moved to another day
 
 // ── helpers ─────────────────────────────────────────────────────
@@ -60,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   view_year  = now.getFullYear();
   view_month = now.getMonth();
   week_start = sunday_of(now);
+  open_weeks = new Set([week_key(view_year, view_month, ordinal_week(now))]);
 
   plan    = load_json(PLAN_KEY, {});
   pending = load_json(PENDING_KEY, null);
@@ -106,8 +109,8 @@ const HELP_CONTENT = `
   <ul class="help-list">
     <li>Press Plan or Save on a recipe card, then tap a day on the calendar to add it.</li>
     <li>Use the arrows above the calendar to move to the previous or next month.</li>
-    <li>Days with something planned are highlighted. Tap one to see that week listed below the calendar.</li>
-    <li>Tap a day in the list to open or close it, tap a meal to see its recipe, and tap Change to move it to another day, and tap ✕ to take it off your plan.</li>
+    <li>Days with something planned are highlighted. Tap one to open its week in the list below the calendar.</li>
+    <li>The list below the calendar shows the month by week. Tap a week to see its seven days, with Empty beside any day that has nothing planned. Tap a meal to see its recipe, and tap Change to move it to another day, and tap ✕ to take it off your plan.</li>
   </ul>
 `;
 function show_help_modal() {
@@ -191,50 +194,70 @@ function on_grid_click(e) {
   }
 
   selected_iso = iso;
-  week_start   = sunday_of(date_of(iso));
-  open_days    = new Set([iso]);
+  const dd = date_of(iso);
+  view_year = dd.getFullYear(); view_month = dd.getMonth();
+  open_weeks = new Set([week_key(view_year, view_month, ordinal_week(dd))]);
+  month_open = true;
   render_all();
 }
 
-// ── 7-day list for the chosen week ──────────────────────────────
+// ── Month list below the calendar: Month > Weeks > Days > Meals ──
+function week_key(y, m, w) { return y + '-' + m + '-' + w; }
+function ordinal_week(d) { return Math.floor((d.getDate() - 1) / 7); }
+
 function render_week() {
   const sec = document.getElementById('week-section');
-  const days = [];
-  for (let i = 0; i < 7; i++) {
-    const d = new Date(week_start.getFullYear(), week_start.getMonth(), week_start.getDate() + i);
-    const iso = iso_of(d);
-    if (plan[iso] && plan[iso].length) days.push({ d, iso, meals: plan[iso] });
-  }
-  if (days.length === 0) { sec.innerHTML = ''; return; }   // nothing planned that week
+  const days_in = new Date(view_year, view_month + 1, 0).getDate();
+  const weeks = Math.ceil(days_in / 7);
 
-  const end = new Date(week_start.getFullYear(), week_start.getMonth(), week_start.getDate() + 6);
-  let html = '<div class="week-title">Week of ' + short_date(week_start) + ' – ' + short_date(end) + '</div><ol class="week-ol">';
+  let html = '<div class="month-block">' +
+    '<div class="month-head" data-act="toggle-month">' +
+    '<span>' + MONTHS[view_month] + '</span>' +
+    '<span class="count">' + (month_open ? '[–]' : '[+]') + '</span></div>';
 
-  days.forEach(({ d, iso, meals }) => {
-    const is_open = open_days.has(iso);
-    html += '<li class="week-day' + (iso === selected_iso ? ' selected' : '') + '">' +
-            '<div class="week-day-head" data-act="toggle-day" data-iso="' + iso + '">' +
-            '<span>' + DAYS[d.getDay()] + ', ' + short_date(d) + '</span>' +
-            '<span class="count">' + meals.length + (meals.length === 1 ? ' meal' : ' meals') + ' ' + (is_open ? '[–]' : '[+]') + '</span></div>';
-    if (is_open) {
-      html += '<div class="week-meals">';
-      meals.forEach((m, idx) => {
-        const key = iso + '#' + idx;
-        const m_open = open_meals.has(key);
-        html += '<div class="meal-row"><div class="meal-head" data-act="toggle-meal" data-key="' + key + '">' +
+  if (month_open) {
+    html += '<div class="month-weeks">';
+    for (let w = 0; w < weeks; w++) {
+      const first = w * 7 + 1;
+      const last  = Math.min(first + 6, days_in);
+      const key   = week_key(view_year, view_month, w);
+      const is_open = open_weeks.has(key);
+      html += '<div class="week-block">' +
+        '<div class="week-head" data-act="toggle-week" data-key="' + key + '">' +
+        '<span>Week ' + (w + 1) + '</span>' +
+        '<span class="count">' + first + ' – ' + last + ' ' + (is_open ? '[–]' : '[+]') + '</span></div>';
+
+      if (is_open) {
+        html += '<div class="week-days">';
+        for (let n = first; n <= last; n++) {
+          const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
+          const meals = plan[iso] || [];
+          html += '<div class="day-row"><div class="day-num">' + n + '</div><div class="day-meals">';
+          if (!meals.length) {
+            html += '<div class="day-empty">Empty</div>';
+          } else {
+            meals.forEach((m, idx) => {
+              const mkey = iso + '#' + idx;
+              const m_open = open_meals.has(mkey);
+              html += '<div class="meal-row"><div class="meal-head" data-act="toggle-meal" data-key="' + mkey + '">' +
                 '<span>' + esc(m.name) + '</span>' +
                 '<span class="meal-btns">' +
                 '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
                 '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(m.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
                 '</span></div>';
-        if (m_open) html += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
+              if (m_open) html += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
+              html += '</div>';
+            });
+          }
+          html += '</div></div>';
+        }
         html += '</div>';
-      });
+      }
       html += '</div>';
     }
-    html += '</li>';
-  });
-  html += '</ol>';
+    html += '</div>';
+  }
+  html += '</div>';
   sec.innerHTML = html;
 }
 
@@ -346,10 +369,16 @@ function on_week_click(e) {
     }
     return;
   }
-  const day = e.target.closest('[data-act="toggle-day"]');
-  if (day) {
-    const iso = day.getAttribute('data-iso');
-    if (open_days.has(iso)) open_days.delete(iso); else open_days.add(iso);
+  const wk = e.target.closest('[data-act="toggle-week"]');
+  if (wk) {
+    const key = wk.getAttribute('data-key');
+    if (open_weeks.has(key)) open_weeks.delete(key); else open_weeks.add(key);
+    render_week();
+    return;
+  }
+  const mo = e.target.closest('[data-act="toggle-month"]');
+  if (mo) {
+    month_open = !month_open;
     render_week();
   }
 }
