@@ -259,9 +259,9 @@ function render_week() {
             if (iso === selected_iso && add_iso === iso) {
               html += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div>' +
                 '<div class="add-choice-btns">' +
-                '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipe Menu</button>' +
-                '<button class="orange-btn" data-act="go-favorites" data-iso="' + iso + '">Favorites</button>' +
-                '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">Recipe Creator</button>' +
+                '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipes Menu</button>' +
+                '<button class="orange-btn" data-act="go-favorites" data-iso="' + iso + '">Favorites Menu</button>' +
+                '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">My Recipes</button>' +
                 '</div></div>';
             }
           } else {
