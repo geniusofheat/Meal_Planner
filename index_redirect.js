@@ -8,6 +8,7 @@ onAuthStateChanged(auth, async (user) => {
   try {
     const snap = await getDoc(doc(db, 'users', user.uid));
     const paid = snap.exists() && snap.data().paid === true;
+    try { localStorage.setItem('mealplanner_account', paid ? 'full' : 'free'); } catch (e) {}
     window.location.replace(paid ? 'meal_planner_full.html' : 'meal_planner_free.html');
   } catch (e) {
     console.error(e);

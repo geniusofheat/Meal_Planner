@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome to Meal Planner</title>
+<script>
+// Returning signed-in user: go straight to their page (no waiting for Firebase).
+try {
+  var acct = localStorage.getItem('mealplanner_account');
+  if (acct === 'full') location.replace('meal_planner_full.html');
+  else if (acct === 'free') location.replace('meal_planner_free.html');
+} catch (e) {}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Crimson+Pro:ital,wght@0,400;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="account_type_stylesheet.css">
 <link rel="manifest" href="meal_planner_manifest.json">

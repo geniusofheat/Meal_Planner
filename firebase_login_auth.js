@@ -152,6 +152,7 @@ onAuthStateChanged(auth, async (user) => {
     await check_paid_status(user.uid);
     unlockGroceryMenu();
     user.isFullVersion = cookbook_unlocked;
+    try { localStorage.setItem('mealplanner_account', cookbook_unlocked ? 'full' : 'free'); } catch (e) {}
     await showPostLoginOptions(user);
     prefillContactForm(user);
 
@@ -168,6 +169,7 @@ onAuthStateChanged(auth, async (user) => {
     }
 
 } else {
+    try { localStorage.removeItem('mealplanner_account'); } catch (e) {}
     // ── Not signed in — send to sign-in page if on a protected page ──
     const on_public_page = on_login_page || window.location.pathname.includes('account_type');
     if (!on_public_page) {
@@ -234,6 +236,7 @@ getRedirectResult(auth).catch(e => {
 // ── Sign Out ───────────────────────────────────────────────────
 export async function signOutUser() {
   try {
+    try { localStorage.removeItem('mealplanner_account'); } catch (e) {}
     await signOut(auth);
     window.location.href = 'login.html';
   } catch (e) {
