@@ -370,7 +370,7 @@ function on_week_click(e) {
   const go = e.target.closest('[data-act="go-menu"], [data-act="go-favorites"], [data-act="go-creator"]');
   if (go) {
     try { localStorage.setItem(TARGET_KEY, JSON.stringify({ iso: go.getAttribute('data-iso'), t: Date.now() })); } catch (err) {}
-    const dest = { 'go-menu': 'recipes_menu.html', 'go-favorites': 'favorite_recipes.html', 'go-creator': 'myrecipes.html' };
+    const dest = { 'go-menu': 'recipes_menu.html', 'go-favorites': 'favorite_recipes.html', 'go-creator': 'my_recipes.html' };
     window.location.href = dest[go.getAttribute('data-act')];
     return;
   }
