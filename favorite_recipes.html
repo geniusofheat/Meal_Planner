@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorite Recipes</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="manifest" href="meal_planner_manifest.json">
+<link rel="stylesheet" href="recipe_tools.css?v=1">
+<link rel="stylesheet" href="button_style.css?v=2">
+</head>
+<body>
+
+<nav class="nav-row">
+  <button class="orange-btn" onclick="goBack()">← Back</button>
+  <div class="nav-date" id="dateDisplay"></div>
+</nav>
+
+<div class="page-head">
+  <h3 class="page-title">♡ Favorite Recipes :</h3>
+  <p class="page-desc">Keep the recipes you love together in one place.</p>
+</div>
+
+<div class="panel" id="listView">
+  <input class="field" id="favSearch" placeholder="Search your favorites..." oninput="renderList()" autocomplete="off">
+  <div id="favList"></div>
+</div>
+
+<div class="panel recipe-card hidden" id="cardView"></div>
+
+<script src="favorite_recipes.js?v=1"></script>
+<script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 // Auto-updating: always fetches fresh files, cache is backup only
 // ============================================================
 
-const CACHE_NAME = 'Meal_Planner-v44';
+const CACHE_NAME = 'Meal_Planner-v46';
 
 const FILES_TO_CACHE = [
   'index.html',
@@ -29,6 +29,11 @@ const FILES_TO_CACHE = [
   'cookbook_menu_data.js',
   'cookbook_engine.js',
   'grocery_list.html',
+  'recipe_creator.html',
+  'recipe_creator.js',
+  'favorite_recipes.html',
+  'favorite_recipes.js',
+  'recipe_tools.css',
   'grocery_list.css',
   'grocery_list_data.js',
   'firebase_config.js',

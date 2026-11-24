@@ -996,3 +996,11 @@ header.cookbook-toolbar .notepad-date { margin-left: auto; }
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
+
+/* ── Recipe card: black text on the light card (was inheriting white from main) ── */
+.recipe-card,
+.recipe-card h4,
+.recipe-card li,
+.recipe-card p,
+.recipe-card span,
+.recipe-card div { color: #000000; }

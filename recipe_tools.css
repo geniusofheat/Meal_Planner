@@ -1,0 +1,68 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root { --gold: #c8a96e; --navy: #14286b; --beige: #f2f2ef; --ink: #1a1a2e; }
+
+html {
+  min-height: 100%;
+  background: linear-gradient(160deg, rgba(0,0,148,0.9) 0%, rgba(22,46,95,0.80) 10%, rgba(0,0,0,0.90) 100%);
+  background-attachment: fixed;
+}
+body {
+  background: transparent;
+  font-family: 'Crimson Pro', serif;
+  color: #fff;
+  min-height: 100vh;
+  padding: 0 12px 28px;
+}
+
+.nav-row {
+  max-width: 680px; margin: 0 auto; padding: 10px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-date { font-family: 'Space Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.75); }
+
+.page-head { max-width: 680px; margin: 4px auto 14px; text-align: center; }
+.page-title { font-family: 'Playfair Display', serif; font-size: 24px; }
+.page-desc { font-size: 17px; color: rgba(255,255,255,0.8); margin-top: 2px; }
+
+.orange-btn, .orange-btn-44 {
+  font-family: 'Playfair Display', serif; font-size: 16px;
+  min-height: 44px; padding: 6px 18px; cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+.panel {
+  max-width: 680px; margin: 0 auto;
+  background: var(--beige); color: var(--ink);
+  border: 2px solid var(--gold); border-radius: 14px;
+  padding: 16px; display: flex; flex-direction: column; gap: 12px;
+}
+.panel h3 { font-family: 'Playfair Display', serif; font-size: 18px; }
+.label { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+.field {
+  width: 100%; min-height: 46px; border-radius: 12px;
+  border: 1.5px solid var(--ink); background: #fff; color: var(--ink);
+  font-family: inherit; font-size: 18px; padding: 8px 14px; outline: none;
+}
+textarea.field { min-height: 130px; resize: vertical; }
+
+.ing-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.ing-row .field { flex: 1; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.msg { text-align: center; font-size: 17px; min-height: 22px; }
+.msg.err { color: #9b1c1c; }
+
+/* favorites */
+.fav-item {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff; border: 1px solid var(--gold); border-radius: 12px;
+  padding: 10px 14px; min-height: 52px; cursor: pointer;
+}
+.fav-name { flex: 1; font-size: 19px; }
+.fav-cat { font-size: 14px; color: #555; }
+.recipe-card h2 { font-family: 'Playfair Display', serif; font-size: 22px; }
+.recipe-card ul, .recipe-card ol { padding-left: 24px; font-size: 18px; line-height: 1.5; }
+.recipe-card li { margin-bottom: 4px; }
+.recipe-card p { font-size: 18px; line-height: 1.5; }
+.hidden { display: none !important; }

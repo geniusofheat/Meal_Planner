@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Creator</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="manifest" href="meal_planner_manifest.json">
+<link rel="stylesheet" href="recipe_tools.css?v=1">
+<link rel="stylesheet" href="button_style.css?v=2">
+</head>
+<body>
+
+<nav class="nav-row">
+  <button class="orange-btn" onclick="window.location.href='full_version_index.html'">← Back</button>
+  <div class="nav-date" id="dateDisplay"></div>
+</nav>
+
+<div class="page-head">
+  <h3 class="page-title">✏️ Recipe Creator :</h3>
+  <p class="page-desc">Create a recipe card with the same layout as the cookbook recipes.</p>
+</div>
+
+<div class="panel">
+  <div class="label">Recipe name</div>
+  <input class="field" id="r_name" placeholder="Recipe name" autocomplete="off">
+
+  <div class="label">Servings</div>
+  <input class="field" id="r_servings" placeholder="Serving size (e.g. Serves 4)" autocomplete="off">
+
+  <div class="label">Ingredients</div>
+  <div id="r_ingredients"></div>
+  <div class="btn-row"><button class="orange-btn" onclick="addIngredient()">+ Add Ingredient</button></div>
+
+  <div class="label">Preparation (one step per line)</div>
+  <textarea class="field" id="r_prep" placeholder="Preparation steps"></textarea>
+
+  <div class="label">Notes (optional)</div>
+  <textarea class="field" id="r_notes" style="min-height:70px" placeholder="Tips, substitutions..."></textarea>
+
+  <div class="btn-row"><button class="orange-btn" onclick="saveRecipe()">Save Recipe</button></div>
+  <div class="msg" id="r_msg"></div>
+  <div class="btn-row hidden" id="r_after">
+    <a class="orange-btn" href="favorite_recipes.html">Open Favorite Recipes</a>
+  </div>
+</div>
+
+<script src="recipe_creator.js?v=1"></script>
+<script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
+</body>
+</html>
