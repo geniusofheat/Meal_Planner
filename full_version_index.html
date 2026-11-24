@@ -20,6 +20,14 @@
 .tool-intro { margin:0 0 8px 0; }
 .feature-desc { margin:4px 0 0 0; }
 .ability-list { list-style:disc; padding-left:22px; margin:6px 0 0; }
+.title-row { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:6px 10px 4px; }
+.title-row h2 { margin:0; color:#c8a96e; font-family:'Playfair Display',serif; font-weight:600; font-size:22px; }
+.title-right { display:flex; align-items:center; gap:12px; color:#f0e8d0; font-family:'Space Mono',monospace; font-size:12px; }
+.help-btn { width:26px; height:26px; background:#fff; color:#000; font:700 16px 'Space Mono',monospace; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.help-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:none; align-items:center; justify-content:center; z-index:50; padding:20px; }
+.help-box { background:#f2f2ef; color:#1a1a2e; border:2px solid #c8a96e; border-radius:14px; padding:18px; max-width:420px; width:100%; }
+.help-box h3 { margin:0 0 8px; }
+.help-box ul { padding-left:20px; margin:0 0 14px; line-height:1.5; font-size:17px; }
 </style>
 </head>
 
@@ -38,14 +46,36 @@
 <!-- ──  END AUTH NAV BAR ── -->
 
 
+<!-- ── TITLE ROW ── -->
+<div class="title-row">
+  <h2>Meal Planner :</h2>
+  <div class="title-right">
+    <span id="dateDisplay"></span>
+    <div class="help-btn" onclick="showHelp()" aria-label="Help">?</div>
+  </div>
+</div>
+
+<!-- ── HELP ── -->
+<div class="help-overlay" id="helpOverlay" onclick="hideHelp()">
+  <div class="help-box" onclick="event.stopPropagation()">
+    <h3>Help</h3>
+    <ul>
+      <li>This page lists every Meal Planner tool.</li>
+      <li>Tap a feature title to read what it does.</li>
+      <li>Tap Open to go straight to that tool.</li>
+    </ul>
+    <button class="orange-btn" onclick="hideHelp()">Close</button>
+  </div>
+</div>
+
 <!-- ── WELCOME CARD ── -->
 <div class="card">
 
   <div class="tool-head">
-    <h3 class="tool-title">📖 Cookbook Features :</h3>
+    <h3 class="tool-title">🍽️ Tools and Features :</h3>
   </div>
 
-  <p class="tool-intro">The cookbook features are listed below. Tap a feature title to read what it does, or tap Open to go straight to it.</p>
+  <p class="tool-intro">Every Meal Planner tool is listed below. Tap a feature title to read what it does, or tap Open to go straight to it.</p>
 
   <ol class="feature-list">
       <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Recipe Menu :</h5><a href="recipes_menu.html" class="orange-btn">Open !</a></div>
@@ -80,6 +110,12 @@
   <div class="page-ornament"></div>
 </div>
 
+<script>
+document.getElementById('dateDisplay').textContent =
+  new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+function showHelp() { document.getElementById('helpOverlay').style.display = 'flex'; }
+function hideHelp() { document.getElementById('helpOverlay').style.display = 'none'; }
+</script>
 <script>
 function toggleFeatures(id) {
   var el = document.getElementById(id);
