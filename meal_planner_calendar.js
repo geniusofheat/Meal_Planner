@@ -24,6 +24,7 @@ let week_start  = null;   // Date (a Sunday) for the week list
 let selected_iso = null;
 let open_days   = new Set();
 let open_meals  = new Set();
+let moving      = null;   // { iso, idx } while a planned meal is being moved to another day
 
 // ── helpers ─────────────────────────────────────────────────────
 function esc(s) {
@@ -95,7 +96,7 @@ function render_prompt() {
   const el = document.getElementById('cal-prompt');
   if (!el) return;
   el.textContent = pending
-    ? 'Please choose a day of the week from the calendar below.'
+    ? (moving ? 'Choose the new day for this meal from the calendar below.' : 'Please choose a day of the week from the calendar below.')
     : 'Tap a highlighted day to see what is planned for that week.';
 }
 
@@ -106,7 +107,7 @@ const HELP_CONTENT = `
     <li>Press Plan or Save on a recipe card, then tap a day on the calendar to add it.</li>
     <li>Use the arrows above the calendar to move to the previous or next month.</li>
     <li>Days with something planned are highlighted. Tap one to see that week listed below the calendar.</li>
-    <li>Tap a day in the list to open or close it, tap a meal to see its recipe, and tap Remove to take it off your plan.</li>
+    <li>Tap a day in the list to open or close it, tap a meal to see its recipe, and tap Change to move it to another day, and tap ✕ to take it off your plan.</li>
   </ul>
 `;
 function show_help_modal() {
@@ -125,12 +126,13 @@ function render_banner() {
   if (!pending) { el.style.display = 'none'; el.innerHTML = ''; return; }
   const lead = pending.mode === 'save' ? 'Saved to Favorites. ' : '';
   el.style.display = 'flex';
-  el.innerHTML = '<div>' + lead + 'Planning: <b>' + esc(pending.name) + '</b></div>' +
+  el.innerHTML = '<div>' + lead + (moving ? 'Moving: <b>' : 'Planning: <b>') + esc(pending.name) + '</b></div>' +
                  '<button class="orange-btn" data-act="cancel-pending">Cancel</button>';
 }
 function on_banner_click(e) {
   if (e.target.closest('[data-act="cancel-pending"]')) {
     pending = null;
+    moving = null;
     try { localStorage.removeItem(PENDING_KEY); } catch (err) {}
     render_all();
   }
@@ -169,6 +171,16 @@ function on_grid_click(e) {
     // A recipe is waiting: put it on the tapped day
     const recipe = Object.assign({}, pending);
     delete recipe.mode;
+    if (moving) {
+      // Moving a planned meal: take it off its old day first
+      const from = plan[moving.iso];
+      if (from) {
+        from.splice(moving.idx, 1);
+        if (from.length === 0) delete plan[moving.iso];
+      }
+      moving = null;
+      open_meals.clear();
+    }
     if (!plan[iso]) plan[iso] = [];
     plan[iso].push(recipe);
     save_plan();
@@ -211,8 +223,11 @@ function render_week() {
         const m_open = open_meals.has(key);
         html += '<div class="meal-row"><div class="meal-head" data-act="toggle-meal" data-key="' + key + '">' +
                 '<span>' + esc(m.name) + '</span>' +
-                '<button class="orange-btn" data-act="remove-meal" data-iso="' + iso + '" data-idx="' + idx + '">Remove</button></div>';
-        if (m_open) html += '<div class="meal-detail">' + meal_detail_html(m) + '</div>';
+                '<span class="meal-btns">' +
+                '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
+                '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(m.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
+                '</span></div>';
+        if (m_open) html += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
         html += '</div>';
       });
       html += '</div>';
@@ -267,8 +282,14 @@ function recover_meal(iso, idx) {
   });
 }
 
-function meal_detail_html(m) {
+function full_date(iso) {
+  const d = date_of(iso);
+  return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+}
+
+function meal_detail_html(m, iso) {
   let h = '';
+  if (iso) h += '<div class="meal-date">' + esc(full_date(iso)) + '</div>';
   if (m.servings) h += '<div>' + esc(m.servings) + '</div>';
   if (Array.isArray(m.ingredients) && m.ingredients.length) {
     h += '<h4>Ingredients :</h4><ul>' + m.ingredients.map(i => '<li>' + esc(i) + '</li>').join('') + '</ul>';
@@ -287,6 +308,19 @@ function meal_detail_html(m) {
 }
 
 function on_week_click(e) {
+  const ch = e.target.closest('[data-act="change-meal"]');
+  if (ch) {
+    e.stopPropagation();
+    const iso = ch.getAttribute('data-iso');
+    const idx = Number(ch.getAttribute('data-idx'));
+    const m = plan[iso] && plan[iso][idx];
+    if (!m) return;
+    pending = Object.assign({}, m);
+    moving = { iso: iso, idx: idx };
+    window.scrollTo(0, 0);
+    render_all();
+    return;
+  }
   const rm = e.target.closest('[data-act="remove-meal"]');
   if (rm) {
     e.stopPropagation();
