@@ -26,6 +26,7 @@
 .help-btn { width:26px; height:26px; background:#fff; color:#000; font:700 16px 'Space Mono',monospace; display:flex; align-items:center; justify-content:center; cursor:pointer; }
 .help-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:none; align-items:center; justify-content:center; z-index:50; padding:20px; }
 .help-box { background:#f2f2ef; color:#1a1a2e; border:2px solid #c8a96e; border-radius:14px; padding:18px; max-width:420px; width:100%; }
+.upgrade-box { border:2px solid #c8a96e; color:#c8a96e; border-radius:999px; padding:6px 16px; font-family:'Playfair Display',serif; font-size:16px; font-weight:600; }
 .help-box h3 { margin:0 0 8px; }
 .help-box ul { padding-left:20px; margin:0 0 14px; line-height:1.5; font-size:17px; }
 </style>
@@ -34,7 +35,7 @@
 <body>
 	
 <!-- ── NAV ── -->
-<div class="card"><a class="gold-btn" href="free_version_index.html">← Back</a></div>
+<div class="card"><a class="gold-btn" href="meal_planner_free.html">← Back</a></div>
 
 <!-- ── TITLE ROW ── -->
 <div class="title-row">
@@ -50,21 +51,42 @@
   <div class="help-box" onclick="event.stopPropagation()">
     <h3>Help</h3>
     <ul>
-      <li>This page describes every tool in the full version.</li>
+      <li>This page lists your free tools and the tools in the full version.</li>
       <li>Tap a feature title to read what it does.</li>
     </ul>
     <button class="orange-btn" onclick="hideHelp()">Close</button>
   </div>
 </div>
 
-<!-- ── WELCOME CARD ── -->
+<!-- ── FREE VERSION TOOLS ── -->
 <div class="card">
 
   <div class="tool-head">
-    <h3 class="tool-title">🍽️ Full Version Features :</h3>
+    <h3 class="tool-title">Free Version Tools :</h3>
   </div>
 
-  <p class="tool-intro">Everything in the full version of Meal Planner is described below. Tap a feature title to read what it does.</p>
+  <p class="tool-intro">These tools are included with your free account. Tap a tool title to read what it does.</p>
+
+  <ol class="feature-list">
+      <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Grocery List :</h5></div>
+        <p class="feature-desc">Build your grocery list by typing an item name or speaking into the microphone (🎤).</p>
+        <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Add items by typing or speaking</li><li>Check an item off when you take it from the shelf</li><li>Lock button locks your selections</li></ul></div></li>
+      <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Cookbook :</h5></div>
+        <p class="feature-desc">See the cookbook menu and one free recipe preview.</p>
+        <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Browse the cookbook menu</li><li>Open one free recipe to preview it</li><li>Upgrade to open the complete list of recipes</li></ul></div></li>
+  </ol>
+
+</div>
+
+<!-- ── FULL VERSION ── -->
+<div class="card">
+
+  <div class="tool-head">
+    <h3 class="tool-title">Full Version :</h3>
+    <div class="upgrade-box">Upgrade</div>
+  </div>
+
+  <p class="tool-intro">Upgrade to the full version to unlock every tool described below. Tap a tool title to read what it does.</p>
 
   <ol class="feature-list">
       <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Recipe Menu :</h5></div>
@@ -82,7 +104,6 @@
       <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Recipe Creator :</h5></div>
         <p class="feature-desc">Create a recipe card with the same layout as the cookbook recipes.</p>
         <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Add a recipe with the [ + ] button</li><li>Use your own recipe cards in the meal plan</li></ul></div></li>
-<li>Search by ingredient</li><li>Type into the text box or speak into the microphone (🎤)</li><li>Every category is searched at once</li><li>Matching recipes are highlighted in the menu</li></ul></div></li>
       <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Favorite Recipes :</h5></div>
         <p class="feature-desc">Keep the recipes you love together in one place.</p>
         <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Press the save button on any recipe card</li><li>Saved recipes are added to your favorites list</li><li>All saved recipes in one place, no digging through categories</li></ul></div></li>

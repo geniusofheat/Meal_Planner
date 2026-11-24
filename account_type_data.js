@@ -10,10 +10,10 @@ onAuthStateChanged(auth, async (user) => {
 
   if (paid) {
     await navigator.serviceWorker.ready;
-window.location.replace('full_version_index.html');
+window.location.replace('meal_planner_full.html');
   } else {
     await navigator.serviceWorker.ready;
-window.location.replace('free_version_index.html');
+window.location.replace('meal_planner_free.html');
   }
 });
 

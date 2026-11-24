@@ -90,7 +90,7 @@
   }
 
   window.goBack = function () {
-    if (openName) showList(); else window.location.href = 'full_version_index.html';
+    if (openName) showList(); else window.location.href = 'meal_planner_full.html';
   };
 
   renderList();

@@ -113,8 +113,8 @@ function unlockGroceryMenu() {
 
 // ── Page destinations ──────────────────────────────────────────
 const LOGIN_PAGE = 'index.html';
-const FREE_PAGE  = 'free_version_index.html';
-const FULL_PAGE  = 'full_version_index.html';
+const FREE_PAGE  = 'meal_planner_free.html';
+const FULL_PAGE  = 'meal_planner_full.html';
 
 // The sign-in page is identified by the presence of the sign-in
 // form itself, not by filename — this keeps working even if the

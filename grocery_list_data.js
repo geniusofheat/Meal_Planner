@@ -393,10 +393,10 @@ function handleBack() {
   const user = auth.currentUser;
 
   if (user && user.isFullVersion) {
-    window.location.href = "full_version_index.html";
+    window.location.href = "meal_planner_full.html";
     return;
   }
 
-  window.location.href = "free_version_index.html";
+  window.location.href = "meal_planner_free.html";
 }
 window.handleBack = handleBack;

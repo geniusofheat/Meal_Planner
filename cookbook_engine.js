@@ -383,7 +383,7 @@ function toolbar_back() {
   if (recipe_view && recipe_view.style.display !== 'none') {
     back_to_list();
   } else {
-    window.location.href = 'full_version_index.html';
+    window.location.href = 'meal_planner_full.html';
   }
 }
 window.toolbar_back = toolbar_back;
