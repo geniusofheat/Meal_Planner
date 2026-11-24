@@ -197,7 +197,6 @@ function on_grid_click(e) {
   const dd = date_of(iso);
   view_year = dd.getFullYear(); view_month = dd.getMonth();
   open_weeks = new Set([week_key(view_year, view_month, ordinal_week(dd))]);
-  month_open = true;
   render_all();
 }
 
@@ -211,11 +210,9 @@ function render_week() {
   const weeks = Math.ceil(days_in / 7);
 
   let html = '<div class="month-block">' +
-    '<div class="month-head" data-act="toggle-month">' +
-    '<span>' + MONTHS[view_month] + '</span>' +
-    '<span class="count">' + (month_open ? '[–]' : '[+]') + '</span></div>';
+    '<div class="month-head"><span>' + MONTHS[view_month] + '</span></div>';
 
-  if (month_open) {
+  {
     html += '<div class="month-weeks">';
     for (let w = 0; w < weeks; w++) {
       const first = w * 7 + 1;
@@ -232,7 +229,7 @@ function render_week() {
         for (let n = first; n <= last; n++) {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
           const meals = plan[iso] || [];
-          html += '<div class="day-row"><div class="day-num">' + n + '</div><div class="day-meals">';
+          html += '<div class="day-row"><div class="day-num' + (meals.length ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
           if (!meals.length) {
             html += '<div class="day-empty">Empty</div>';
           } else {
@@ -376,9 +373,5 @@ function on_week_click(e) {
     render_week();
     return;
   }
-  const mo = e.target.closest('[data-act="toggle-month"]');
-  if (mo) {
-    month_open = !month_open;
-    render_week();
-  }
+
 }

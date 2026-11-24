@@ -151,7 +151,7 @@
   min-height: 46px; cursor: pointer; color: #ffffff;
   border-bottom: 1px solid var(--gold, #c8a96e);
 }
-.month-head { font: 600 22px 'Playfair Display', serif; padding: 0 4px; }
+.month-head { font: 600 22px 'Playfair Display', serif; padding: 0 4px; cursor: default; }
 .week-head  { font: 600 18px 'Playfair Display', serif; padding: 0 4px; }
 .month-head .count, .week-head .count { font: 13px 'Space Mono', monospace; color: rgba(255,255,255,0.8); }
 .month-weeks { margin-left: 16px; }
@@ -162,3 +162,10 @@
   font: 600 18px 'Playfair Display', serif; color: #1a1a2e; }
 .day-meals { flex: 1; min-width: 0; }
 .day-empty { min-height: 40px; display: flex; align-items: center; font: italic 16px 'Crimson Pro', serif; color: #666; }
+
+/* Day number highlighted when something is planned (same orange as the calendar) */
+.day-num.planned {
+  width: 34px; min-height: 0; height: 34px; margin: 3px 0;
+  background: #ffa500; border: 2px solid #000000; border-radius: 2px;
+  color: var(--btn-navy, #14286b); font-weight: 700;
+}
