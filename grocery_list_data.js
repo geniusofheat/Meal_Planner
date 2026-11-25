@@ -435,6 +435,7 @@ document.getElementById("textInput").addEventListener("input", e => {
 });
 
 function toggleEdit() {
+  commitPending();
   editMode = !editMode;
   editField = null;
   renderList();
@@ -443,13 +444,27 @@ window.toggleEdit = toggleEdit;
 
 const listEl = document.getElementById("grocery-list");
 
+/* saves a box that is showing but was never focused (so no keyboard came up and no blur will fire) */
+function commitPending() {
+  const inp = listEl.querySelector(".edit-in");
+  if (!inp || !editField) return;
+  const item = getItems().find(i => String(i.id) === inp.dataset.id);
+  const val = inp.value.trim();
+  if (item) {
+    if (inp.dataset.field === "name") { if (val) item.name = val; }
+    else item[inp.dataset.field] = val;
+  }
+  editField = null;
+  saveLists();
+}
+
+/* first tap only shows the box (no keyboard); tapping the box itself brings up the keyboard */
 listEl.addEventListener("click", e => {
   const t = e.target.closest(".edit-tap");
   if (!t) return;
+  commitPending();
   editField = { id: Number(t.dataset.id), field: t.dataset.field };
   renderList();
-  const inp = listEl.querySelector(".edit-in");
-  if (inp) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
 });
 
 function commitEdit(inp) {
