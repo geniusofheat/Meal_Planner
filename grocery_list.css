@@ -161,3 +161,4 @@ button { font-family: inherit; cursor: pointer; }
 #menuHead { display: flex; flex-direction: column; align-items: flex-start; }
 .menu-view #addPanel, .menu-view #grocery-list, .menu-view #emptyState, .menu-view #saveListContainer, .menu-view #bottomRow, .menu-view #menuBtnRow { display: none !important; }
 #menuBtnRow .btn-outline-green { flex: 1; }
+#menuHead .menu-note { margin-top: 0; }

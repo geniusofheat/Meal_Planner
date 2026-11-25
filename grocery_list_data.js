@@ -541,9 +541,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function handleBack() {
-  const user = auth.currentUser;
+  if (menuOpen) { menuOpen = false; renderList(); window.scrollTo(0, 0); return; }
 
-  if (user && user.isFullVersion) {
+  const user = auth.currentUser;
+  let account = "";
+  try { account = localStorage.getItem("mealplanner_account") || ""; } catch (e) {}
+
+  if (account === "full" || (user && user.isFullVersion)) {
     window.location.href = "meal_planner_full.html";
     return;
   }
