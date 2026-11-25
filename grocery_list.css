@@ -128,3 +128,24 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .bottom-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+/* Vertical menu: category rows that expand into item rows */
+.menu-card { gap: 0; padding: 8px 12px; }
+.menu-cat { border-top: 1px solid var(--line); }
+.menu-cat:first-child { border-top: 0; }
+.cat-row {
+  width: 100%; min-height: 52px; display: flex; align-items: center; justify-content: space-between;
+  background: transparent; border: 0; color: var(--ink);
+  font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.cat-mark { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--muted); }
+.opt-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-left: 14px; }
+.opt-name {
+  min-height: 48px; background: transparent; border: 0; color: var(--ink);
+  font-size: 18px; text-align: left; flex-shrink: 0;
+}
+.opt-info { font-size: 16px; color: var(--muted); text-align: right; word-break: break-word; }
+.opt-form { display: flex; flex-direction: column; gap: 8px; padding: 2px 0 12px 14px; }
+.form-line { display: flex; gap: 8px; align-items: center; }
+.form-line .text-input { height: 46px; font-size: 16px; }
+.form-line .btn-dark { height: 46px; padding: 0 18px; }

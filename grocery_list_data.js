@@ -18,6 +18,9 @@ let itemCounter = 0;
 let showingSavedLists = false;
 let addOpen = false;
 let menuOpen = false;
+let menuInfo = {};        // saved serving size and price per menu item: { Eggs: { serving, price } }
+let openCats = new Set(); // menu categories that are expanded
+let openItem = null;      // menu item whose serving size / price fields are showing
 
 /* =========================
    FIRESTORE PATH
@@ -40,6 +43,7 @@ if (!user) return;
     const data = snap.data();
     groceryLists = data.lists || {};
     activeListName = data.activeListName || "Default";
+    menuInfo = data.menuInfo || {};
   } else {
     groceryLists = { Default: [] };
     activeListName = "Default";
@@ -58,35 +62,128 @@ async function saveLists() {
 
   await setDoc(getRef(user.uid), {
     lists: groceryLists,
-    activeListName
+    activeListName,
+    menuInfo
   });
 }
 
 /* =========================
    CATEGORIES
    ========================= */
-const CATEGORIES = ['Produce','Dairy and eggs','Meat and fish','Bakery','Pantry','Household','Other'];
-
 const MENU = {
-  'Produce': ['Apples','Bananas','Onions','Potatoes','Tomatoes','Garlic'],
-  'Dairy and eggs': ['Milk','Eggs','Butter','Cheese','Yogurt'],
-  'Meat and fish': ['Chicken','Ground beef','Bacon','Sausage','Shrimp'],
-  'Bakery': ['Bread','Tortillas','Buns'],
-  'Pantry': ['Rice','Pasta','Flour','Sugar','Coffee'],
-  'Household': ['Paper towels','Dish soap','Foil']
+  'Produce': [
+    'Apples','Apricots','Artichokes','Arugula','Asparagus','Avocados','Bananas','Basil','Beets','Bell peppers',
+    'Blackberries','Blueberries','Bok choy','Broccoli','Brussels sprouts','Butternut squash','Cabbage','Cantaloupe',
+    'Carrots','Cauliflower','Celery','Cherries','Cilantro','Clementines','Collard greens','Corn on the cob',
+    'Cranberries','Cucumbers','Dill','Eggplant','Fennel','Garlic','Ginger','Grapefruit','Grapes','Green beans',
+    'Green onions','Honeydew','Jalapenos','Kale','Kiwi','Leeks','Lemons','Lettuce','Limes','Mangoes','Mint',
+    'Mushrooms','Nectarines','Okra','Onions','Oranges','Oregano','Papayas','Parsley','Parsnips','Peaches','Pears',
+    'Peas','Pineapple','Plums','Pomegranates','Potatoes','Pumpkin','Radishes','Raspberries','Red onions','Rosemary',
+    'Rutabaga','Sage','Shallots','Spaghetti squash','Spinach','Strawberries','Sweet potatoes','Tangerines','Thyme',
+    'Tomatoes','Turnips','Watermelon','Yams','Yellow squash','Zucchini'
+  ],
+  'Dairy and eggs': [
+    'Almond milk','Buttermilk','Butter','Cheddar cheese','Cottage cheese','Cream cheese','Eggs','Egg whites',
+    'Feta cheese','Greek yogurt','Half and half','Heavy cream','Margarine','Mozzarella cheese','Oat milk',
+    'Parmesan cheese','Provolone cheese','Ricotta cheese','Shredded cheese','Sour cream','Soy milk','String cheese',
+    'Swiss cheese','Whipped cream','Whole milk','2% milk','Skim milk','Yogurt'
+  ],
+  'Meat and fish': [
+    'Bacon','Beef roast','Brisket','Chicken breasts','Chicken drumsticks','Chicken thighs','Chicken wings','Clams',
+    'Cod','Crab','Duck','Flank steak','Ground beef','Ground chicken','Ground pork','Ground turkey','Ham','Lamb chops',
+    'Lobster','Mussels','Oysters','Pork chops','Pork loin','Pork ribs','Pork shoulder','Ribeye steak','Salmon',
+    'Scallops','Shrimp','Sirloin steak','Smoked sausage','Sausage','Tilapia','Tuna steaks','Turkey breast','Whole chicken'
+  ],
+  'Deli': [
+    'Bologna','Deli chicken','Deli ham','Deli turkey','Hummus','Olives','Pastrami','Potato salad','Prepared salads',
+    'Rotisserie chicken','Roast beef','Salami','Sliced cheese','Coleslaw','Pickles'
+  ],
+  'Bakery': [
+    'Bagels','Baguette','Birthday cake','Bread','Brioche buns','Cake','Ciabatta','Cookies','Cupcakes','Croissants',
+    'Donuts','English muffins','Hamburger buns','Hot dog buns','Muffins','Pie','Pita bread','Rolls','Sourdough bread',
+    'Tortillas','Wheat bread'
+  ],
+  'Frozen': [
+    'Frozen berries','Frozen broccoli','Frozen corn','Frozen dinners','Frozen fish sticks','Frozen fruit','Frozen peas',
+    'Frozen pizza','Frozen shrimp','Frozen vegetables','Frozen waffles','French fries','Ice cream','Ice cubes',
+    'Popsicles','Tater tots'
+  ],
+  'Canned and jarred': [
+    'Applesauce','Baked beans','Black beans','Canned corn','Canned fruit','Canned peaches','Canned tomatoes',
+    'Canned tuna','Chicken broth','Beef broth','Chickpeas','Coconut milk','Diced tomatoes','Green beans (canned)',
+    'Kidney beans','Pasta sauce','Pinto beans','Refried beans','Soup','Tomato paste','Tomato sauce','Vegetable broth'
+  ],
+  'Pantry': [
+    'Breadcrumbs','Brown rice','Cereal','Cornmeal','Couscous','Grits','Lentils','Macaroni','Noodles','Oatmeal','Oats',
+    'Olive oil','Pancake mix','Pasta','Peanut butter','Quinoa','Ramen','Rice','Spaghetti','Vegetable oil','Vegetable shortening'
+  ],
+  'Spices and baking': [
+    'Baking powder','Baking soda','Black pepper','Brown sugar','Cinnamon','Chili powder','Chocolate chips','Cocoa powder',
+    'Confectioners sugar','Cornstarch','Cumin','Flour','Garlic powder','Honey','Italian seasoning','Maple syrup',
+    'Molasses','Nutmeg','Onion powder','Paprika','Red pepper flakes','Salt','Sugar','Vanilla extract','Yeast'
+  ],
+  'Condiments and sauces': [
+    'Barbecue sauce','Hot sauce','Jam','Jelly','Ketchup','Mayonnaise','Mustard','Pickle relish','Ranch dressing',
+    'Salad dressing','Salsa','Soy sauce','Steak sauce','Syrup','Vinegar','Worcestershire sauce'
+  ],
+  'Snacks': [
+    'Candy','Cheese crackers','Chips','Chocolate','Cookies (packaged)','Crackers','Granola bars','Nuts','Peanuts','Popcorn',
+    'Pretzels','Raisins','Tortilla chips','Trail mix'
+  ],
+  'Beverages': [
+    'Apple juice','Bottled water','Coffee (ground)','Energy drinks','Ginger ale','Iced tea','Juice','Lemonade','Orange juice',
+    'Soda','Sparkling water','Sports drinks','Tea bags'
+  ],
+  'Household': [
+    'Aluminum foil','Batteries','Bleach','Dish soap','Dishwasher tablets','Garbage bags','Glass cleaner','Laundry detergent',
+    'Light bulbs','Napkins','Paper plates','Paper towels','Plastic wrap','Sandwich bags','Sponges','Toilet paper',
+    'Trash bags','Zip bags'
+  ],
+  'Personal care': [
+    'Body wash','Conditioner','Deodorant','Floss','Hand soap','Lotion','Mouthwash','Razors','Shampoo','Sunscreen',
+    'Tissues','Toothbrush','Toothpaste'
+  ],
+  'Pet': [
+    'Cat food','Cat litter','Dog food','Dog treats','Pet treats'
+  ]
 };
 
+const CATEGORIES = Object.keys(MENU).concat(['Other']);
+
 const KEYWORDS = [
-  ['Produce', ['apple','banana','lemon','lime','onion','garlic','potato','tomato','lettuce','spinach','pepper','carrot','celery','berry','fruit','herb']],
+  ['Produce', ['apple','banana','lemon','lime','onion','garlic','potato','tomato','lettuce','spinach','pepper','carrot','celery','berry','fruit','herb','squash','melon','bean sprout']],
   ['Dairy and eggs', ['milk','egg','cheese','butter','yogurt','cream']],
-  ['Meat and fish', ['chicken','beef','pork','sausage','bacon','shrimp','fish','salmon','steak','turkey','ham']],
-  ['Bakery', ['bread','bun','roll','bagel','tortilla']],
-  ['Pantry', ['rice','pasta','flour','sugar','oil','salt','sauce','bean','cereal','coffee','tea','spice','can']],
-  ['Household', ['soap','paper','towel','foil','bag','detergent','sponge','tissue']]
+  ['Meat and fish', ['chicken','beef','pork','sausage','bacon','shrimp','fish','salmon','steak','turkey','ham','lamb']],
+  ['Bakery', ['bread','bun','roll','bagel','tortilla','cake','muffin']],
+  ['Frozen', ['frozen','ice cream']],
+  ['Pantry', ['rice','pasta','cereal','oat','noodle','flour','oil']],
+  ['Spices and baking', ['sugar','salt','spice','vanilla']],
+  ['Condiments and sauces', ['sauce','dressing','ketchup','mustard','mayo']],
+  ['Snacks', ['chip','cracker','cookie','candy','nut','popcorn']],
+  ['Beverages', ['juice','soda','water','coffee','tea','drink']],
+  ['Household', ['soap','paper','towel','foil','bag','detergent','sponge','tissue','cleaner']],
+  ['Personal care', ['shampoo','toothpaste','deodorant','lotion']],
+  ['Pet', ['dog','cat ','pet']]
 ];
 
 function guessCategory(name) {
-  const n = name.toLowerCase();
+  const n = name.trim().toLowerCase();
+  const stem = w => w.replace(/(es|s)$/, "");
+
+  // 1. exact match against the menu lists (ignoring plural endings)
+  for (const cat of Object.keys(MENU)) {
+    if (MENU[cat].some(i => stem(i.toLowerCase()) === stem(n))) return cat;
+  }
+  // 2. the typed name contains a menu item (longest item wins)
+  let best = null, bestLen = 0;
+  for (const cat of Object.keys(MENU)) {
+    for (const i of MENU[cat]) {
+      const key = stem(i.toLowerCase());
+      if (key.length > 3 && n.indexOf(key) !== -1 && key.length > bestLen) { best = cat; bestLen = key.length; }
+    }
+  }
+  if (best) return best;
+  // 3. keywords
   for (const [cat, words] of KEYWORDS) {
     if (words.some(w => n.includes(w))) return cat;
   }
@@ -190,16 +287,57 @@ function renderList() {
 
 function renderMenu(items) {
   const has = n => items.some(i => i.name.toLowerCase() === n.toLowerCase());
-  document.getElementById("menuPanel").innerHTML = Object.keys(MENU).map((cat, ci) => `
-    <div>
-      <h2 class="group-title">${cat}</h2>
-      <div class="chips">
-        ${MENU[cat].map((n, ni) => `
-          <button class="chip ${has(n) ? "added" : ""}" aria-pressed="${has(n)}"
-                  onclick="pickMenu(${ci},${ni})">${n}</button>`).join("")}
-      </div>
-    </div>`).join("");
+  document.getElementById("menuPanel").innerHTML = Object.keys(MENU).map((cat, ci) => {
+    const open = openCats.has(cat);
+    return `
+    <div class="menu-cat">
+      <button class="cat-row" onclick="toggleCat(${ci})" aria-expanded="${open}">
+        <span>${cat}</span><span class="cat-mark">${open ? "[–]" : "[+]"}</span>
+      </button>
+      ${open ? MENU[cat].map((n, ni) => {
+        const info = menuInfo[n];
+        const bits = info ? [info.serving, info.price].filter(Boolean).map(esc).join(" · ") : "";
+        const editing = openItem === n;
+        return `
+        <div class="opt-row">
+          <button class="opt-name" onclick="pickMenu(${ci},${ni})">${has(n) ? "✓ " : ""}${n}</button>
+          ${bits && !editing ? `<span class="opt-info">${bits}</span>` : ""}
+        </div>
+        ${editing ? `
+        <div class="opt-form">
+          <div class="form-line">
+            <input id="mi_serving" class="text-input" placeholder="Serving size" aria-label="Serving size for ${n}" value="${info ? esc(info.serving || "") : ""}">
+            <button class="btn-dark" onclick="saveMenuInfo()">Save</button>
+          </div>
+          <div class="form-line">
+            <input id="mi_price" class="text-input" placeholder="Price" aria-label="Price for ${n}" value="${info ? esc(info.price || "") : ""}">
+            <button class="btn-dark" onclick="saveMenuInfo()">Save</button>
+          </div>
+        </div>` : ""}`;
+      }).join("") : ""}
+    </div>`;
+  }).join("");
 }
+
+function toggleCat(ci) {
+  const cat = Object.keys(MENU)[ci];
+  if (openCats.has(cat)) openCats.delete(cat); else openCats.add(cat);
+  openItem = null;
+  renderList();
+}
+window.toggleCat = toggleCat;
+
+async function saveMenuInfo() {
+  if (!openItem) return;
+  const serving = document.getElementById("mi_serving").value.trim();
+  const price = document.getElementById("mi_price").value.trim();
+  if (serving || price) menuInfo[openItem] = { serving, price };
+  else delete menuInfo[openItem];
+  openItem = null;
+  await saveLists();
+  renderList();
+}
+window.saveMenuInfo = saveMenuInfo;
 
 /* =========================
    ADD ITEMS
@@ -238,7 +376,10 @@ document.addEventListener("keydown", e => {
 
 function pickMenu(ci, ni) {
   const cat = Object.keys(MENU)[ci];
-  addItem(MENU[cat][ni], cat);
+  const name = MENU[cat][ni];
+  openItem = (openItem === name) ? null : name;   // tapping again closes the fields
+  addItem(name, cat);                              // puts it on the list if it is not there yet
+  renderList();
 }
 window.pickMenu = pickMenu;
 
