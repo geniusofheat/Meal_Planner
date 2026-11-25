@@ -235,6 +235,13 @@ function renderList() {
     activeListName !== "Default" ? activeListName + " - " + items.length + " items" :
     items.length === 0 ? "Your list is empty" :
     doneCount + " of " + items.length + " in the cart";
+  let total = 0, priced = 0;
+  items.forEach(i => {
+    const m = menuInfo[i.name] && String(menuInfo[i.name].price || "").replace(/,/g, "").match(/\d+(\.\d+)?/);
+    if (m) { total += parseFloat(m[0]); priced++; }
+  });
+  document.getElementById("totalCost").textContent =
+    priced ? "Total: $" + total.toFixed(2) + " (" + priced + " priced)" : "";
   document.getElementById("progressFill").style.width =
     items.length ? Math.round(doneCount / items.length * 100) + "%" : "0%";
 
