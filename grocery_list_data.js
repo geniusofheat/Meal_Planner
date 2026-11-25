@@ -16,7 +16,6 @@ let activeListName = "Default";
 let locked = false;
 let itemCounter = 0;
 let showingSavedLists = false;
-let addOpen = false;
 let menuOpen = false;
 let menuInfo = {};        // saved serving size and price per menu item: { Eggs: { serving, price } }
 let openCats = new Set(); // menu categories that are expanded
@@ -234,11 +233,12 @@ function renderList() {
   lockBtn.textContent = locked ? "Unlock" : "Lock";
   lockBtn.classList.toggle("on", locked);
   lockBtn.setAttribute("aria-pressed", locked);
-  document.getElementById("addBtn").disabled = locked;
   document.getElementById("menuBtn").disabled = locked;
 
   /* panels */
-  show("addPanel", addOpen && !locked);
+  document.body.classList.toggle("menu-view", menuOpen && !locked);
+  show("addPanel", !locked);
+  show("menuHead", menuOpen && !locked);
   show("menuPanel", menuOpen && !locked);
   show("emptyState", items.length === 0 && !showingSavedLists);
   show("clearBtn", doneCount > 0 && !locked && !showingSavedLists);
@@ -399,13 +399,6 @@ function pickMenu(ci, ni) {
   renderList();
 }
 window.pickMenu = pickMenu;
-
-function toggleAdd() {
-  addOpen = !addOpen;
-  renderList();
-  if (addOpen) document.getElementById("textInput").focus();
-}
-window.toggleAdd = toggleAdd;
 
 function toggleMenu() {
   menuOpen = !menuOpen;
