@@ -149,3 +149,10 @@ button { font-family: inherit; cursor: pointer; }
 .form-line { display: flex; gap: 8px; align-items: center; }
 .form-line .text-input { height: 46px; font-size: 16px; }
 .form-line .btn-dark { height: 46px; padding: 0 18px; }
+
+.cat-head { display: flex; align-items: center; gap: 10px; }
+.cat-head .cat-row { flex: 1; }
+.cat-save { min-height: 0; height: 36px; padding: 0 18px; }
+.opt-check { width: 22px; height: 22px; accent-color: #2f6b4a; flex-shrink: 0; }
+.opt-row { justify-content: flex-start; padding-left: 18px; }
+.opt-name { flex: 1; text-align: left; }

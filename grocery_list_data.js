@@ -20,7 +20,8 @@ let addOpen = false;
 let menuOpen = false;
 let menuInfo = {};        // saved serving size and price per menu item: { Eggs: { serving, price } }
 let openCats = new Set(); // menu categories that are expanded
-let openItem = null;      // menu item whose serving size / price fields are showing
+let openItem = null;
+const menuChecked = new Set();      // menu item whose serving size / price fields are showing
 
 /* =========================
    FIRESTORE PATH
@@ -291,16 +292,21 @@ function renderMenu(items) {
     const open = openCats.has(cat);
     return `
     <div class="menu-cat">
-      <button class="cat-row" onclick="toggleCat(${ci})" aria-expanded="${open}">
-        <span>${cat}</span><span class="cat-mark">${open ? "[–]" : "[+]"}</span>
-      </button>
+      <div class="cat-head">
+        <button class="cat-row" onclick="toggleCat(${ci})" aria-expanded="${open}">
+          <span>${cat}</span><span class="cat-mark">${open ? "[–]" : "[+]"}</span>
+        </button>
+        <button class="btn-dark cat-save" onclick="saveChecked(${ci})">Save</button>
+      </div>
       ${open ? MENU[cat].map((n, ni) => {
         const info = menuInfo[n];
         const bits = info ? [info.serving, info.price].filter(Boolean).map(esc).join(" · ") : "";
         const editing = openItem === n;
+        const onList = has(n);
         return `
         <div class="opt-row">
-          <button class="opt-name" onclick="pickMenu(${ci},${ni})">${has(n) ? "✓ " : ""}${n}</button>
+          <input type="checkbox" class="opt-check" aria-label="Select ${n}" ${menuChecked.has(n) || onList ? "checked" : ""} ${onList ? "disabled" : ""} onchange="toggleMenuCheck(${ci},${ni})">
+          <button class="opt-name" onclick="pickMenu(${ci},${ni})">${n}</button>
           ${bits && !editing ? `<span class="opt-info">${bits}</span>` : ""}
         </div>
         ${editing ? `
@@ -318,6 +324,26 @@ function renderMenu(items) {
     </div>`;
   }).join("");
 }
+
+function toggleMenuCheck(ci, ni) {
+  const name = MENU[Object.keys(MENU)[ci]][ni];
+  if (menuChecked.has(name)) menuChecked.delete(name); else menuChecked.add(name);
+}
+window.toggleMenuCheck = toggleMenuCheck;
+
+async function saveChecked(ci) {
+  const cat = Object.keys(MENU)[ci];
+  const items = getItems();
+  MENU[cat].forEach(n => {
+    if (menuChecked.has(n) && !items.some(i => i.name.toLowerCase() === n.toLowerCase())) {
+      items.push({ id: Date.now() + (itemCounter++), name: n, category: cat, checked: false });
+    }
+    menuChecked.delete(n);
+  });
+  await saveLists();
+  renderList();
+}
+window.saveChecked = saveChecked;
 
 function toggleCat(ci) {
   const cat = Object.keys(MENU)[ci];
@@ -378,7 +404,6 @@ function pickMenu(ci, ni) {
   const cat = Object.keys(MENU)[ci];
   const name = MENU[cat][ni];
   openItem = (openItem === name) ? null : name;   // tapping again closes the fields
-  addItem(name, cat);                              // puts it on the list if it is not there yet
   renderList();
 }
 window.pickMenu = pickMenu;
