@@ -170,3 +170,11 @@ button { font-family: inherit; cursor: pointer; }
 .row-info { font-size: 15px; color: var(--muted); margin-top: 2px; }
 .edit-fields { display: flex; gap: 8px; margin-top: 8px; }
 .edit-fields .text-input { height: 40px; font-size: 15px; flex: 1; min-width: 0; }
+.edit-tap { background: none; border: 0; padding: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.edit-tap.row-name { font-size: 18px; }
+.edit-chip { font-size: 15px; color: var(--muted); }
+.edit-chip em { opacity: .7; }
+.edit-fields { margin-top: 4px; gap: 14px; flex-wrap: wrap; }
+.row-text .edit-in { height: 40px; font-size: 16px; width: 100%; margin: 2px 0; }
+.menu-view #editNote { display: none !important; }
+#editNote { margin: 0 0 10px; }

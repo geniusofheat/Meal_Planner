@@ -18,6 +18,7 @@ let itemCounter = 0;
 let showingSavedLists = false;
 let menuOpen = false;
 let editMode = false;
+let editField = null;     // the one thing being changed: { id, field } with field name | serving | price
 let menuInfo = {};        // saved serving size and price per menu item: { Eggs: { serving, price } }
 let openCats = new Set(); // menu categories that are expanded
 let openItem = null;
@@ -215,6 +216,15 @@ function infoFor(item) {
   return menuInfo[item.name] || { serving: "", price: "" };
 }
 
+/* in Edit mode each piece of text is tappable; only the tapped one turns into a box */
+function editPart(item, field, value, label) {
+  if (editField && editField.id === item.id && editField.field === field) {
+    return `<input class="text-input edit-in" data-id="${item.id}" data-field="${field}" placeholder="${label || "Item name"}" aria-label="${label || "Item name"}" value="${esc(value)}">`;
+  }
+  const shown = value ? esc(value) : `<em>${label}</em>`;
+  return `<button class="edit-tap ${field === "name" ? "row-name" : "edit-chip"}" data-id="${item.id}" data-field="${field}">${shown}</button>`;
+}
+
 function renderList() {
   const el = document.getElementById("grocery-list");
   const items = getItems();
@@ -247,6 +257,7 @@ function renderList() {
   show("addPanel", !locked);
   show("entryFields", !locked && document.getElementById("textInput").value.trim() !== "");
   show("listHead", items.length > 0 && !locked && !showingSavedLists);
+  show("editNote", editMode && items.length > 0 && !locked && !showingSavedLists);
   document.getElementById("editBtn").textContent = editMode ? "Done" : "Edit";
   show("menuHead", menuOpen && !locked);
   show("menuPanel", menuOpen && !locked);
@@ -281,12 +292,9 @@ function renderList() {
                 <span class="box">${CHECK_SVG}</span>
               </button>
               <div class="row-text">
-                <span class="row-name">${esc(item.name)}</span>
-                ${editMode ? `
-                <div class="edit-fields">
-                  <input class="text-input edit-in" data-id="${item.id}" data-field="serving" placeholder="Serving size" aria-label="Serving size for ${esc(item.name)}" value="${esc(infoFor(item).serving)}">
-                  <input class="text-input edit-in" data-id="${item.id}" data-field="price" placeholder="Price" aria-label="Price for ${esc(item.name)}" value="${esc(infoFor(item).price)}">
-                </div>` : (infoFor(item).serving || infoFor(item).price ? `<span class="row-info">${[infoFor(item).serving, infoFor(item).price].filter(Boolean).map(esc).join(" · ")}</span>` : "")}
+                ${editMode ? editPart(item, "name", item.name, "") : `<span class="row-name">${esc(item.name)}</span>`}
+                ${editMode ? `<div class="edit-fields">${editPart(item, "serving", infoFor(item).serving, "Serving size")}${editPart(item, "price", infoFor(item).price, "Price")}</div>`
+                  : (infoFor(item).serving || infoFor(item).price ? `<span class="row-info">${[infoFor(item).serving, infoFor(item).price].filter(Boolean).map(esc).join(" · ")}</span>` : "")}
               </div>
               ${editMode && !locked ? `<button class="remove-btn" onclick="removeItem(${item.id})" aria-label="Remove ${esc(item.name)}">${X_SVG}</button>` : ""}
             </div>`).join("")}
@@ -428,17 +436,39 @@ document.getElementById("textInput").addEventListener("input", e => {
 
 function toggleEdit() {
   editMode = !editMode;
+  editField = null;
   renderList();
 }
 window.toggleEdit = toggleEdit;
 
-document.getElementById("grocery-list").addEventListener("change", e => {
-  const t = e.target;
-  if (!t.classList || !t.classList.contains("edit-in")) return;
-  const item = getItems().find(i => String(i.id) === t.dataset.id);
-  if (!item) return;
-  item[t.dataset.field] = t.value.trim();
+const listEl = document.getElementById("grocery-list");
+
+listEl.addEventListener("click", e => {
+  const t = e.target.closest(".edit-tap");
+  if (!t) return;
+  editField = { id: Number(t.dataset.id), field: t.dataset.field };
+  renderList();
+  const inp = listEl.querySelector(".edit-in");
+  if (inp) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
+});
+
+function commitEdit(inp) {
+  if (!editField) return;
+  const item = getItems().find(i => String(i.id) === inp.dataset.id);
+  const val = inp.value.trim();
+  if (item) {
+    if (inp.dataset.field === "name") { if (val) item.name = val; }
+    else item[inp.dataset.field] = val;
+  }
+  editField = null;
   saveLists();
+  renderList();
+}
+listEl.addEventListener("focusout", e => {
+  if (e.target.classList && e.target.classList.contains("edit-in")) commitEdit(e.target);
+});
+listEl.addEventListener("keydown", e => {
+  if (e.key === "Enter" && e.target.classList && e.target.classList.contains("edit-in")) e.target.blur();
 });
 
 function toggleMenu() {
