@@ -17,6 +17,7 @@ let locked = false;
 let itemCounter = 0;
 let showingSavedLists = false;
 let menuOpen = false;
+let editMode = false;
 let menuInfo = {};        // saved serving size and price per menu item: { Eggs: { serving, price } }
 let openCats = new Set(); // menu categories that are expanded
 let openItem = null;
@@ -209,6 +210,11 @@ function show(id, on) {
   document.getElementById(id).classList.toggle("hidden", !on);
 }
 
+function infoFor(item) {
+  if (item.serving || item.price) return { serving: item.serving || "", price: item.price || "" };
+  return menuInfo[item.name] || { serving: "", price: "" };
+}
+
 function renderList() {
   const el = document.getElementById("grocery-list");
   const items = getItems();
@@ -221,7 +227,7 @@ function renderList() {
     doneCount + " of " + items.length + " in the cart";
   let total = 0, priced = 0;
   items.forEach(i => {
-    const m = menuInfo[i.name] && String(menuInfo[i.name].price || "").replace(/,/g, "").match(/\d+(\.\d+)?/);
+    const m = String(infoFor(i).price || "").replace(/,/g, "").match(/\d+(\.\d+)?/);
     if (m) { total += parseFloat(m[0]); priced++; }
   });
   document.getElementById("totalCost").textContent =
@@ -237,7 +243,11 @@ function renderList() {
 
   /* panels */
   document.body.classList.toggle("menu-view", menuOpen && !locked);
+  if (locked) editMode = false;
   show("addPanel", !locked);
+  show("entryFields", !locked && document.getElementById("textInput").value.trim() !== "");
+  show("listHead", items.length > 0 && !locked && !showingSavedLists);
+  document.getElementById("editBtn").textContent = editMode ? "Done" : "Edit";
   show("menuHead", menuOpen && !locked);
   show("menuPanel", menuOpen && !locked);
   show("emptyState", items.length === 0 && !showingSavedLists);
@@ -270,8 +280,15 @@ function renderList() {
                       aria-label="${item.checked ? "Uncheck " : "Check "}${esc(item.name)}">
                 <span class="box">${CHECK_SVG}</span>
               </button>
-              <span class="row-name">${esc(item.name)}</span>
-              ${locked ? "" : `<button class="remove-btn" onclick="removeItem(${item.id})" aria-label="Remove ${esc(item.name)}">${X_SVG}</button>`}
+              <div class="row-text">
+                <span class="row-name">${esc(item.name)}</span>
+                ${editMode ? `
+                <div class="edit-fields">
+                  <input class="text-input edit-in" data-id="${item.id}" data-field="serving" placeholder="Serving size" aria-label="Serving size for ${esc(item.name)}" value="${esc(infoFor(item).serving)}">
+                  <input class="text-input edit-in" data-id="${item.id}" data-field="price" placeholder="Price" aria-label="Price for ${esc(item.name)}" value="${esc(infoFor(item).price)}">
+                </div>` : (infoFor(item).serving || infoFor(item).price ? `<span class="row-info">${[infoFor(item).serving, infoFor(item).price].filter(Boolean).map(esc).join(" · ")}</span>` : "")}
+              </div>
+              ${editMode && !locked ? `<button class="remove-btn" onclick="removeItem(${item.id})" aria-label="Remove ${esc(item.name)}">${X_SVG}</button>` : ""}
             </div>`).join("")}
         </div>
       </section>`;
@@ -328,7 +345,8 @@ async function saveChecked(ci) {
   const items = getItems();
   MENU[cat].forEach(n => {
     if (menuChecked.has(n) && !items.some(i => i.name.toLowerCase() === n.toLowerCase())) {
-      items.push({ id: Date.now() + (itemCounter++), name: n, category: cat, checked: false });
+      const mi = menuInfo[n] || {};
+      items.push({ id: Date.now() + (itemCounter++), name: n, category: cat, checked: false, serving: mi.serving || "", price: mi.price || "" });
     }
     menuChecked.delete(n);
   });
@@ -360,7 +378,7 @@ window.saveMenuInfo = saveMenuInfo;
 /* =========================
    ADD ITEMS
    ========================= */
-function addItem(name, category) {
+function addItem(name, category, serving, price) {
   const user = auth.currentUser;
   if (!user) return;
 
@@ -371,7 +389,9 @@ function addItem(name, category) {
     id: Date.now() + (itemCounter++),
     name,
     category: category || guessCategory(name),
-    checked: false
+    checked: false,
+    serving: serving || "",
+    price: price || ""
   });
 
   return saveLists().then(() => renderList());
@@ -382,8 +402,10 @@ function addItems() {
   const input = document.getElementById("textInput");
   const name = input.value.trim();
   if (!name) return;
-  addItem(name);
-  input.value = "";
+  const sv = document.getElementById("servingInput"), pr = document.getElementById("priceInput");
+  addItem(name, undefined, sv.value.trim(), pr.value.trim());
+  input.value = ""; sv.value = ""; pr.value = "";
+  show("entryFields", false);
 }
 window.addItems = addItems;
 
@@ -399,6 +421,25 @@ function pickMenu(ci, ni) {
   renderList();
 }
 window.pickMenu = pickMenu;
+
+document.getElementById("textInput").addEventListener("input", e => {
+  show("entryFields", e.target.value.trim() !== "");
+});
+
+function toggleEdit() {
+  editMode = !editMode;
+  renderList();
+}
+window.toggleEdit = toggleEdit;
+
+document.getElementById("grocery-list").addEventListener("change", e => {
+  const t = e.target;
+  if (!t.classList || !t.classList.contains("edit-in")) return;
+  const item = getItems().find(i => String(i.id) === t.dataset.id);
+  if (!item) return;
+  item[t.dataset.field] = t.value.trim();
+  saveLists();
+});
 
 function toggleMenu() {
   menuOpen = !menuOpen;
