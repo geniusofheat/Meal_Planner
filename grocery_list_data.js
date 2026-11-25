@@ -134,18 +134,6 @@ const MENU = {
   'Beverages': [
     'Apple juice','Bottled water','Coffee (ground)','Energy drinks','Ginger ale','Iced tea','Juice','Lemonade','Orange juice',
     'Soda','Sparkling water','Sports drinks','Tea bags'
-  ],
-  'Household': [
-    'Aluminum foil','Batteries','Bleach','Dish soap','Dishwasher tablets','Garbage bags','Glass cleaner','Laundry detergent',
-    'Light bulbs','Napkins','Paper plates','Paper towels','Plastic wrap','Sandwich bags','Sponges','Toilet paper',
-    'Trash bags','Zip bags'
-  ],
-  'Personal care': [
-    'Body wash','Conditioner','Deodorant','Floss','Hand soap','Lotion','Mouthwash','Razors','Shampoo','Sunscreen',
-    'Tissues','Toothbrush','Toothpaste'
-  ],
-  'Pet': [
-    'Cat food','Cat litter','Dog food','Dog treats','Pet treats'
   ]
 };
 
@@ -161,10 +149,7 @@ const KEYWORDS = [
   ['Spices and baking', ['sugar','salt','spice','vanilla']],
   ['Condiments and sauces', ['sauce','dressing','ketchup','mustard','mayo']],
   ['Snacks', ['chip','cracker','cookie','candy','nut','popcorn']],
-  ['Beverages', ['juice','soda','water','coffee','tea','drink']],
-  ['Household', ['soap','paper','towel','foil','bag','detergent','sponge','tissue','cleaner']],
-  ['Personal care', ['shampoo','toothpaste','deodorant','lotion']],
-  ['Pet', ['dog','cat ','pet']]
+  ['Beverages', ['juice','soda','water','coffee','tea','drink']]
 ];
 
 function guessCategory(name) {
@@ -204,7 +189,7 @@ function getItems() {
     groceryLists[activeListName] = [];
   }
   const items = groceryLists[activeListName];
-  items.forEach(i => { if (!i.category) i.category = guessCategory(i.name); });
+  items.forEach(i => { if (!i.category || !CATEGORIES.includes(i.category)) i.category = guessCategory(i.name); });
   return items;
 }
 
