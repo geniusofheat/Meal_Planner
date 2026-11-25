@@ -7,7 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Space+Mono&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="grocery_list.css?v=12">
+  <link rel="stylesheet" href="grocery_list.css?v=13">
 </head>
 
 <body>
@@ -15,14 +15,15 @@
 
   <nav class="nav-row">
     <button class="nav-btn" onclick="handleBack()">← Back</button>
-    <div class="nav-date" id="dateDisplay"></div>
+    <div class="nav-right">
+      <div class="nav-date" id="dateDisplay"></div>
+      <button class="help-btn" onclick="showHelp()" aria-label="Help">?</button>
+    </div>
   </nav>
 
   <div class="title-row">
     <div>
       <h1 class="page-title">Groceries</h1>
-      <div class="page-sub" id="summary">Your list is empty</div>
-      <div class="page-sub total-cost" id="totalCost"></div>
     </div>
     <button class="pill-outline" id="lockBtn" onclick="toggleLock()" aria-pressed="false">Lock</button>
   </div>
@@ -56,9 +57,17 @@
     <p><strong>Using the menu.</strong> Tap Grocery Menu to see common items grouped by category. Check the items you want and tap Save on that category to put them on your list, then tap Back to return here.</p>
   </div>
 
-  <div id="listHead" class="list-head hidden">
-    <h2 class="list-title">Grocery List</h2>
-    <button class="pill-outline" id="editBtn" onclick="toggleEdit()">Edit</button>
+  <div id="listHead" class="hidden">
+    <div class="list-head">
+      <h2 class="list-title">Grocery List</h2>
+      <button class="pill-outline" id="editBtn" onclick="toggleEdit()">Edit</button>
+    </div>
+    <hr class="list-rule">
+    <div class="list-count">
+      <div class="page-sub" id="summary">Your list is empty</div>
+      <div class="page-sub total-cost" id="totalCost"></div>
+    </div>
+    <hr class="list-rule">
   </div>
 
   <p id="editNote" class="menu-note hidden">Tap the item that you would like to change.</p>
@@ -78,7 +87,25 @@
 
 </div>
 
+<div class="help-overlay" id="helpOverlay" onclick="hideHelp()">
+  <div class="help-box" onclick="event.stopPropagation()">
+    <h3>Help</h3>
+    <ul>
+      <li>Type an item in the box and tap Add.</li>
+      <li>Serving size and price boxes appear when you type.</li>
+      <li>Tap the circle beside an item to check it off.</li>
+      <li>Tap Edit to change or delete items.</li>
+      <li>Tap Grocery Menu to pick items by category.</li>
+      <li>Tap Back at the top to leave the menu.</li>
+      <li>Lock keeps your list from changing.</li>
+    </ul>
+    <button class="pill-outline" onclick="hideHelp()">Close</button>
+  </div>
+</div>
+
 <script>
+function showHelp() { document.getElementById('helpOverlay').style.display = 'flex'; }
+function hideHelp() { document.getElementById('helpOverlay').style.display = 'none'; }
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service_worker.js');
 }
