@@ -196,3 +196,4 @@ button { font-family: inherit; cursor: pointer; }
 .cat-row > span:first-child { display: block; }
 #grocery-list .group-title, .cat-row > span:first-child { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 18px; }
 #grocery-list .group-title, .cat-row > span:first-child { font-weight: 400; }
+#grocery-list .group-title, .cat-row > span:first-child { font-family: 'Geologica', sans-serif; font-weight: 400; font-size: 20px; }
