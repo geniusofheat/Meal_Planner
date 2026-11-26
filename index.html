@@ -46,6 +46,12 @@ try {
 
 <body>
 
+<!-- ── TOP ROW: sign in + help ── -->
+<div class="title-row">
+  <a class="orange-btn" href="login.html" style="margin:0;">Sign in</a>
+  <div class="help-btn" onclick="document.getElementById('helpOverlay').style.display='flex'" role="button" aria-label="Help">?</div>
+</div>
+
 <!-- ── WELCOME HEADER ── -->
 <div class="welcome-head">
   <svg width="56" height="56" viewBox="0 0 56 56" role="img" aria-label="Meal Planner icon"><rect x="8" y="12" width="40" height="36" rx="6" fill="none" stroke="#c8a96e" stroke-width="2.5"/><path d="M8 24h40" stroke="#c8a96e" stroke-width="2.5"/><path d="M18 8v8M38 8v8" stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round"/><path d="M19 36l6 6 12-12" fill="none" stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -71,7 +77,7 @@ try {
         <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Browse the recipe menu</li><li>Open one free recipe to preview it</li><li>Upgrade to open the complete list of recipes</li></ul></div></li>
   </ol>
 
-  <div class="signup-row"><a class="orange-btn" href="login.html">Create a Free Account</a></div>
+  <div class="signup-row"><a class="orange-btn" href="login.html?card=create-account&plan=free">Create a Free Account</a></div>
 
 </div>
 
@@ -103,7 +109,7 @@ try {
         <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Press the save button on any recipe card</li><li>Saved recipes are added to your favorites list</li><li>All saved recipes in one place, no digging through categories</li></ul></div></li>
   </ol>
 
-  <div class="signup-row"><a class="orange-btn" href="login.html">Create a Full Account</a></div>
+  <div class="signup-row"><a class="orange-btn" href="login.html?card=create-account&plan=full">Create a Full Account</a></div>
 
 </div>
 
@@ -114,6 +120,18 @@ try {
     <p>Enjoying the app? Share it with friends and family so they can try it too.</p>
   </div>
   <div class="page-ornament"></div>
+</div>
+
+<div class="help-overlay" id="helpOverlay" onclick="this.style.display='none'">
+  <div class="help-box" onclick="event.stopPropagation()">
+    <h3>Help</h3>
+    <ul>
+      <li>Tap a tool title to read what it does.</li>
+      <li>New here? Choose Create a Free Account or Create a Full Account.</li>
+      <li>Already have an account? Tap Sign in at the top.</li>
+    </ul>
+    <div class="orange-btn" onclick="document.getElementById('helpOverlay').style.display='none'">Close</div>
+  </div>
 </div>
 
 <script>
