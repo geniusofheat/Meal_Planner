@@ -41,6 +41,16 @@ try {
 .signup-row { display:flex; justify-content:center; margin-top:16px; }
 .help-box h3 { margin:0 0 8px; }
 .help-box ul { padding-left:20px; margin:0 0 14px; line-height:1.5; font-size:17px; }
+.shots-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:60; padding:14px; }
+.shots-box { width:100%; max-width:420px; display:flex; flex-direction:column; align-items:center; gap:10px; }
+.shots-track { display:flex; width:100%; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-radius:12px; }
+.shots-track::-webkit-scrollbar { display:none; }
+.shots-slide { flex:0 0 100%; scroll-snap-align:center; margin:0; text-align:center; }
+.shots-slide img { width:100%; max-height:72vh; object-fit:contain; display:block; border-radius:12px; border:2px solid #c8a96e; background:#F6F3EC; }
+.shots-slide figcaption { color:#f0e8d0; font-family:'Playfair Display',serif; font-size:17px; margin-top:8px; }
+.shots-dots { display:flex; gap:8px; }
+.shots-dots span { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.35); }
+.shots-dots span.on { background:#c8a96e; }
 </style>
 </head>
 
@@ -109,6 +119,7 @@ try {
         <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Press the save button on any recipe card</li><li>Saved recipes are added to your favorites list</li><li>All saved recipes in one place, no digging through categories</li></ul></div></li>
       <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Notepad :</h5></div>
         <p class="feature-desc">Keep notes in lists, with formatting, photos and voice typing.</p>
+        <div style="margin:8px 0 0 0;"><span class="orange-btn" onclick="openShots()" style="margin:0;">See screenshots</span></div>
         <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Make a list for each subject and add notes to it</li><li>Format text with bold, italic, colors, lists and checkboxes</li><li>Type by voice and add photos</li><li>Your notes are saved to your account and work on every device</li></ul></div></li>
   </ol>
 
@@ -125,6 +136,18 @@ try {
   <div class="page-ornament"></div>
 </div>
 
+<div class="shots-overlay" id="shotsOverlay" onclick="closeShots()">
+  <div class="shots-box" onclick="event.stopPropagation()">
+    <div class="shots-track" id="shotsTrack">
+      <figure class="shots-slide"><img src="notepad_screenshot_1.png" alt="Notepad lists screen"><figcaption>Your lists and notes</figcaption></figure>
+      <figure class="shots-slide"><img src="notepad_screenshot_2.png" alt="Notepad note screen"><figcaption>A note</figcaption></figure>
+      <figure class="shots-slide"><img src="notepad_screenshot_3.png" alt="Notepad formatting menu"><figcaption>The formatting menu</figcaption></figure>
+    </div>
+    <div class="shots-dots" id="shotsDots"><span class="on"></span><span></span><span></span></div>
+    <div class="orange-btn" onclick="closeShots()">Close</div>
+  </div>
+</div>
+
 <div class="help-overlay" id="helpOverlay" onclick="this.style.display='none'">
   <div class="help-box" onclick="event.stopPropagation()">
     <h3>Help</h3>
@@ -138,6 +161,15 @@ try {
 </div>
 
 <script>
+function openShots() {
+  document.getElementById('shotsOverlay').style.display = 'flex';
+  document.getElementById('shotsTrack').scrollLeft = 0;
+}
+function closeShots() { document.getElementById('shotsOverlay').style.display = 'none'; }
+document.getElementById('shotsTrack').addEventListener('scroll', function () {
+  var i = Math.round(this.scrollLeft / this.clientWidth);
+  document.querySelectorAll('#shotsDots span').forEach(function (d, n) { d.classList.toggle('on', n === i); });
+});
 function toggleFeatures(id) {
   var el = document.getElementById(id);
   if (!el) return;
