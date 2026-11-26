@@ -195,3 +195,4 @@ button { font-family: inherit; cursor: pointer; }
 #grocery-list .group-title::first-letter, .cat-row > span:first-child::first-letter { text-transform: uppercase; }
 .cat-row > span:first-child { display: block; }
 #grocery-list .group-title, .cat-row > span:first-child { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 18px; }
+#grocery-list .group-title, .cat-row > span:first-child { font-weight: 400; }
