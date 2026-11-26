@@ -339,6 +339,7 @@ p {
 
 #breadcrumb {
   width: 100%;
+  overflow-wrap: anywhere;   /* a very long note title wraps instead of widening the page */
   font-family: 'Space Mono', monospace;
   font-size: 13px;
   padding: 6px 20px 4px 20px;
@@ -385,22 +386,72 @@ p {
 
 
 #note-textarea {
+  position: relative;
   width: 100%;
-  min-height: 400px;
+  min-height: calc(100% + 1px);   /* always 1px taller than its box, so the note box always scrolls on its own */
   padding: 10px 10px;
   font-family: 'Crimson Pro', serif;
-  font-size: 14px;
+  font-size: 18px;                /* default size for everything typed */
   outline: none;
   border-left: 4px solid #2f6fa3;
+}
+
+/* The note box: finger on the note scrolls the note only; finger anywhere
+   else scrolls the page. Height is set by fit_note_area() in the engine. */
+#noteBody {
+  height: calc(100vh - 200px);    /* fallback; the engine sets the real height */
+  min-height: 160px;
+  max-height: none;
   overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* contenteditable placeholder (textarea placeholder doesn't work on divs) */
-#note-textarea:empty:before {
+#note-textarea:empty:before,
+#note-textarea.is-empty:before {
   content: attr(data-placeholder);
+  position: absolute;
+  left: 10px;
+  top: 10px;
   font-style: italic;
   color: #888;
   pointer-events: none;
+}
+
+/* Paragraph spacing: every paragraph (a new one starts each time Enter is
+   pressed) has 12 px after it. The Spacing menu overrides this per paragraph. */
+#note-textarea > div,
+#note-textarea > p {
+  margin-bottom: 12px;
+}
+
+/* List items: 6 px between items (the Lists options + the - / + buttons change
+   it through --li-gap on the list). The list itself has 12 px after it. */
+#note-textarea ol,
+#note-textarea ul {
+  margin-bottom: 12px;
+}
+
+#note-textarea li {
+  font-size: 18px;                /* numbers and bullets match the text size */
+  margin-bottom: var(--li-gap, 6px);
+}
+
+#note-textarea li:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================
+   NOTE PHOTOS
+===================== */
+
+.note-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 8px 0;
 }
 
 /* The global reset at the top of this file zeroes out ol/ul padding,
@@ -410,6 +461,44 @@ p {
 #note-textarea ul {
   padding-left: 28px;
   margin-left: 0;
+}
+
+/* =====================
+   NOTE PHOTO RESIZING
+===================== */
+
+.note-photo {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.note-photo-selected {
+  outline: 2px solid #2f6fa3;
+}
+
+.photo-resize-handle {
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  background: orange;
+  border: 2px outset gold;
+  border-radius: 2px;
+  z-index: 1000;
+  touch-action: none;
+  cursor: nwse-resize;
+}
+
+.photo-resize-handle::before {
+  content: '↘';
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 /* =====================
@@ -595,6 +684,566 @@ p {
 }
 
 /* =====================
+   CATEGORY FORMATTING TOOLBAR (redesign)
+   One compact row: Formatting : [Category menu] [Select]
+   The old per-button toolbar rules above (.align-btn, .indent-group,
+   .cursor-move-group, .fmt-select, ...) are left in place but are no
+   longer used by index.html.
+===================== */
+
+.fmt-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  width: 100%;
+}
+
+.fmt-row-label {
+  flex: 0 0 auto;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Larger, touch-friendly version of the standard toolbar button */
+.fmt-btn.fmt-big {
+  height: 36px;
+  padding: 0 10px;
+  font-size: 15px;
+  touch-action: manipulation;
+}
+
+.fmt-cat-btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.fmt-cat-btn #fmtCategoryLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fmt-caret {
+  flex: 0 0 auto;
+  font-size: 13px;
+}
+
+.fmt-select-btn {
+  flex: 0 0 auto;
+}
+
+/* Short message line under the row (e.g. "Not inside a list") */
+.fmt-notice {
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* ---- Category menu: bulleted, nested, tap-to-expand (no hover needed) ---- */
+
+.fmt-menu {
+  display: none;
+  position: absolute;        /* opens upward from the Formatting bar; placed by place_fmt_menu() */
+  left: 0;
+  right: 0;
+  bottom: 50vh;
+  top: auto;
+  max-height: 45vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #ffffff;
+  border: 2px solid #2f6fa3;
+  box-shadow: 2px 6px 18px rgba(0,0,0,0.35);
+  list-style: none;
+  padding: 4px 0;
+  z-index: 30;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.fmt-menu.open {
+  display: block;
+}
+
+.fmt-menu ul,
+.fmt-menu li {
+  list-style: none;
+}
+
+.fmt-head,
+.fmt-item {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 6px 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #1a1a2e;
+  cursor: pointer;
+  touch-action: manipulation;
+  border-bottom: 1px solid rgba(100, 149, 237, 0.25);
+}
+
+/* level 1: category (the only hollow bullet; everything below uses solid bullets) */
+.fmt-cat > .fmt-head {
+  font-weight: 700;
+}
+
+.fmt-cat > .fmt-head::before {
+  content: '\25E6';         /* white (hollow) bullet */
+  margin-right: 10px;
+}
+
+/* expandable heads show a small arrow */
+.fmt-head::after {
+  content: '\25B8';          /* right-pointing triangle */
+  margin-left: auto;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.fmt-cat.open > .fmt-head::after,
+.fmt-group.open > .fmt-head::after {
+  content: '\25BE';          /* down-pointing triangle */
+}
+
+.fmt-cat.open > .fmt-head,
+.fmt-group.open > .fmt-head {
+  background: #e8f1fa;
+}
+
+/* sub lists are collapsed until their head is tapped */
+.fmt-sub {
+  display: none;
+}
+
+.fmt-cat.open > .fmt-sub,
+.fmt-group.open > .fmt-sub {
+  display: block;
+}
+
+/* rows one level down: Insert commands and subcategory titles (Font, Color, ...) */
+.fmt-cat > .fmt-sub > .fmt-item,
+.fmt-subcat > .fmt-head {
+  padding-left: 32px;
+}
+
+/* the options inside a subcategory (Family, Size, Bold, ...) sit further in than its title */
+.fmt-subcat > .fmt-sub > .fmt-item,
+.fmt-subcat > .fmt-sub > .fmt-group > .fmt-head {
+  padding-left: 54px;
+}
+
+.fmt-cat > .fmt-sub > .fmt-item::before,
+.fmt-subcat > .fmt-head::before,
+.fmt-subcat > .fmt-sub > .fmt-item::before,
+.fmt-subcat > .fmt-sub > .fmt-group > .fmt-head::before {
+  content: '\2022';         /* solid bullet */
+  margin-right: 10px;
+}
+
+/* values inside an option (Family > Serif, Size > 18 px, ...) sit in again */
+.fmt-subcat > .fmt-sub > .fmt-group .fmt-sub .fmt-item {
+  padding-left: 76px;
+  font-size: 15px;
+}
+
+.fmt-subcat > .fmt-sub > .fmt-group .fmt-sub .fmt-item::before {
+  content: '\2022';         /* solid bullet */
+  margin-right: 10px;
+}
+
+.fmt-subcat > .fmt-sub > .fmt-group .fmt-group > .fmt-head {
+  padding-left: 76px;
+  font-size: 15px;
+}
+
+.fmt-subcat > .fmt-sub > .fmt-group .fmt-group .fmt-sub .fmt-item {
+  padding-left: 98px;
+}
+
+/* ---- Three-level navigation: Main categories > Subcategories > Options ---- */
+
+.fmt-back,
+.fmt-active-link,
+.fmt-active-view {
+  display: none;
+}
+
+.fmt-menu.nav-1 > .fmt-back,
+.fmt-menu.nav-2 > .fmt-back {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 6px 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a2e;
+  background: #dfeaf7;
+  border-bottom: 1px solid rgba(100, 149, 237, 0.5);
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.fmt-back::before {
+  content: '\2039';
+  margin-right: 10px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.fmt-menu.view-active > .fmt-active-view {
+  display: block;
+}
+
+.fmt-menu.view-active > .fmt-cat,
+.fmt-menu.view-active > .fmt-active-link {
+  display: none;
+}
+
+/* inside a main category / subcategory only the chosen branch shows */
+.fmt-menu.nav-1 > .fmt-cat:not(.open),
+.fmt-menu.nav-2 > .fmt-cat:not(.open) {
+  display: none;
+}
+
+.fmt-menu.nav-2 > .fmt-cat.open > .fmt-sub > .fmt-subcat:not(.open),
+.fmt-menu.nav-2 > .fmt-cat.open > .fmt-sub > .fmt-item {
+  display: none;
+}
+
+/* the main category and the open subcategory stay on screen as the titles of what is below */
+.fmt-menu.nav-1 > .fmt-cat.open > .fmt-head,
+.fmt-menu.nav-2 > .fmt-cat.open > .fmt-head {
+  background: #cfe3f7;
+  font-size: 18px;
+}
+.fmt-menu.nav-2 > .fmt-cat.open > .fmt-sub > .fmt-subcat.open > .fmt-head {
+  background: #e8f1fa;
+}
+
+/* context: a selected image shows Image, otherwise Text; Insert always */
+.fmt-menu.ctx-image > .fmt-cat[data-cat="Text"],
+.fmt-menu.ctx-image > .fmt-cat[data-cat="HTML"],
+.fmt-menu:not(.ctx-image) > .fmt-cat[data-cat="Image"] {
+  display: none !important;
+}
+
+/* The "On" status label: a plain indicator, never a button. */
+.fmt-on {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin: 5px;
+  padding: 0 5px;
+  border: 1px solid #000000;
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.fmt-curval {
+  margin-left: auto;
+  padding-left: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.fmt-head.has-val::after {
+  margin-left: 0;
+}
+
+.fmt-active-view .fmt-item {
+  padding-left: 12px;
+}
+
+.fmt-active-view .fmt-item::before {
+  content: none;
+}
+
+.fmt-active-row {
+  cursor: pointer;
+}
+
+.fmt-active-row.quick-open {
+  font-weight: 700;
+}
+
+.fmt-quick-list {
+  border-left: 3px solid #444444;
+  margin: 0 0 4px 12px;
+}
+
+.fmt-quick-list .fmt-quick-item {
+  padding-left: 12px;
+  font-weight: 400;
+}
+
+.fmt-choose-row {
+  padding: 12px;
+  font-weight: 700;
+  border-top: 1px solid #c9d6e2;
+  cursor: pointer;
+}
+
+.fmt-empty-row {
+  padding: 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  color: #444444;
+}
+
+/* ---- Photo source sheet: Camera / Photos / Files ---- */
+.photo-source-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.photo-source-overlay.open {
+  display: flex;
+}
+
+.photo-source-sheet {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  padding: 12px;
+}
+
+.photo-source-sheet h3 {
+  margin: 0 0 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.photo-source-sheet button {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin: 0 0 8px;
+  border: 1px solid #000000;
+  background: #f4f8fd;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  text-align: left;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.photo-source-sheet button.cancel {
+  margin-bottom: 0;
+  text-align: center;
+  background: #ffffff;
+}
+
+.fmt-item:active,
+.fmt-head:active {
+  background: #cfe3f7;
+}
+
+/* toggle commands (bold, italic, ...) show as active while on */
+.fmt-item.active {
+  background: #a8d4f5;
+  font-weight: 700;
+}
+
+.fmt-swatch {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #000000;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
+.fmt-swatch-none {
+  background: #ffffff;
+  background-image: linear-gradient(135deg, transparent 45%, #cc0000 45%, #cc0000 55%, transparent 55%);
+}
+
+/* ---- Note action line: one reserved line at the top of the white note area ----
+   [title of what - / + control]  ... undo redo | left right | - +
+   The title (left) names the option the - / + buttons are stepping, e.g.
+   Weight, Size, Spacing, or All while Select is on. Room for more buttons
+   later: add them inside .note-action-line. */
+
+.note-action-line {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 36px;
+  padding: 0 6px;
+  background: #ffffff;
+}
+
+.note-action-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 28px;
+  margin: 0 4px 0 0;
+  padding: 0 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #000000;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+
+.note-action-title.pressable {
+  border-color: #000000;
+  cursor: pointer;
+  text-align: center;
+  flex: 0 0 auto;
+  min-width: 44px;
+}
+
+.note-action-gap {
+  width: 6px;
+  flex: 0 0 auto;
+}
+
+.note-action-btn {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #000000;
+  outline: none;
+  background: transparent;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.note-action-btn:active {
+  opacity: 0.5;
+}
+
+.note-action-btn:disabled,
+.note-action-btn.disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* ---- Select mode ---- */
+
+/* The Select button, while selection mode is on, uses the existing
+   .fmt-btn.active look (light blue). */
+
+/* The blue-background / white-text selection is drawn with the CSS Custom
+   Highlight API (a Range painted by the browser). It is never written into
+   the note's HTML, so it cannot be saved. */
+::highlight(fmt-select) {
+  background-color: #2f6fa3;
+  color: #ffffff;
+}
+
+/* Fallback for browsers without the Custom Highlight API: while select
+   mode is on, the native selection itself is drawn blue/white. */
+#note-textarea.select-mode::selection {
+  background: #2f6fa3;
+  color: #ffffff;
+}
+
+/* ---- Structural styles available from the Styles category ---- */
+
+#note-textarea h1,
+#note-textarea h2,
+#note-textarea h3,
+#note-textarea h4,
+#note-textarea h5,
+#note-textarea h6 {
+  margin: 6px 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+#note-textarea blockquote {
+  margin: 8px 0 8px 12px;
+  padding: 2px 0 2px 10px;
+  border-left: 3px solid #2f6fa3;
+  color: #333333;
+}
+
+/* ---- Note title row (white page, under the "Note :" header) ---- */
+
+.note-title-row {
+  width: 100%;
+  padding: 2px 10px 0 10px;
+}
+
+.note-title-row h3 {
+  margin: 0;
+  padding: 4px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #1a1a2e;
+  overflow-wrap: anywhere;      /* a long title wraps here, in the white space */
+}
+
+/* ---- Note button row: always one line, always the same height ----
+   (mic, photos, save, back). The title is no longer in this row, so nothing
+   can wrap and stretch the buttons. */
+
+.note-button-row {
+  align-items: center;          /* buttons keep their own height */
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.note-button-row .orange-btn {
+  margin: 6px 4px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.note-button-row .note-header-action-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+}
+
+/* =====================
    HELP BUTTON + MODAL
 ===================== */
 
@@ -695,3 +1344,251 @@ p {
   font-size: 15px;
   line-height: 1.4;
 }
+/* =====================
+   HELP TOPICS (expand / collapse like the Formatting list)
+===================== */
+
+.help-modal-body .help-intro {
+  padding: 0 0 10px 0;
+  font-style: italic;
+}
+
+.help-topic-head {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 6px 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  border-bottom: 1px solid rgba(100, 149, 237, 0.25);
+}
+
+.help-topic-head::before {
+  content: '\2022';
+  margin-right: 10px;
+}
+
+.help-topic-head::after {
+  content: '\25B8';
+  margin-left: auto;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.help-topic.open > .help-topic-head {
+  background: #e8f1fa;
+}
+
+.help-topic.open > .help-topic-head::after {
+  content: '\25BE';
+}
+
+.help-topic-body {
+  display: none;
+  padding: 12px 12px 4px 32px;
+}
+
+.help-topic.open > .help-topic-body {
+  display: block;
+}
+
+
+/* =====================
+   RENAMING TITLES (Edit mode)
+===================== */
+
+#editBtn.active {
+  background: #a8d4f5;
+  color: #000000;
+}
+
+.editing-titles .note-list-title {
+  text-decoration: underline dashed;
+  text-underline-offset: 4px;
+}
+
+.rename-input {
+  flex: 1 1 140px;
+  width: auto;
+  min-width: 100px;
+  box-sizing: border-box;
+}
+
+/* ---- In-app camera ---- */
+.camera-overlay { position: fixed; inset: 0; z-index: 110; display: none; flex-direction: column; background: #000000; }
+.camera-overlay.open { display: flex; }
+.camera-overlay video { flex: 1 1 auto; min-height: 0; width: 100%; object-fit: contain; background: #000000; }
+.camera-bar { display: flex; gap: 8px; padding: 12px; background: #000000; }
+.camera-bar button { flex: 1 1 0; min-height: 52px; border: 1px solid #ffffff; background: #222222; color: #ffffff; font-size: 17px; }
+.camera-bar #cameraShutter { flex: 2 1 0; background: #ff8c00; color: #000000; font-weight: 700; }
+
+
+/* HTML category: rule, table, code, collapsible section, link */
+#note-textarea hr { border: 0; border-top: 2px solid #8a8a8a; margin: 10px 0; }
+#note-textarea table.note-table { border-collapse: collapse; width: 100%; margin: 6px 0; table-layout: fixed; }
+#note-textarea table.note-table td { border: 1px solid #8a8a8a; padding: 6px; min-width: 24px; vertical-align: top; overflow-wrap: anywhere; }
+#note-textarea pre.note-code { background: #f0f0f0; border-left: 3px solid #2f6fa3; padding: 8px 10px; margin: 6px 0; font-family: 'Space Mono', monospace, monospace; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+#note-textarea details.note-details { border: 1px solid #c4c4c4; padding: 4px 8px; margin: 6px 0; }
+#note-textarea details.note-details > summary { font-weight: 700; cursor: pointer; }
+#note-textarea a[href] { color: #1a5fb4; text-decoration: underline; }
+
+.fmt-reset-row { font-weight: 700; color: #b00020; }
+
+/* The notes list is part of the page, not a scrolling box of its own, so the whole list can be reached by dragging the page. */
+#notes-list-view .notepad-body { max-height: none; overflow-y: visible; }
+
+
+/* =====================================================================
+   GROCERY LIST LOOK — cream paper, green + ink pills, white cards.
+   (Appended last so it restyles everything above; the layout rules
+   that make the toolbar and menus work are untouched.)
+===================== */
+
+:root {
+  --ink: #1F2A24; --muted: #5B655F; --green: #2F6B4F; --paper: #F6F3EC; --line: #DDD6C8;
+  --header-bg: #1F2A24;
+}
+html { background: var(--paper); min-height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif;
+  max-width: 480px; width: 100%; margin: 0 auto; padding: 12px 20px 32px; }
+button { font-family: inherit; cursor: pointer; }
+
+/* nav row + title */
+header { display: flex; flex-direction: column; gap: 20px; width: auto; padding: 0; }
+.nav-row { display: flex; align-items: center; justify-content: space-between; }
+.nav-btn { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--ink);
+  background: transparent; color: var(--ink); font-size: 15px; font-weight: 500; }
+.nav-right { display: flex; align-items: center; gap: 10px; }
+.notepad-date { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); margin: 0; }
+.help-btn { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--ink); background: transparent;
+  color: var(--ink); font: 700 15px 'Space Mono', monospace; padding: 0; }
+.page-title { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; line-height: 1.1; }
+#breadcrumb { display: none; }
+
+main { background: transparent; box-shadow: none; border-radius: 0; padding: 0; margin: 20px 0 0; }
+p { text-indent: 0; padding: 0; }
+
+/* description card */
+#mainPageDescription { background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  padding: 18px 20px; font-size: 16px; line-height: 1.5; margin-top: 20px; }
+
+/* buttons */
+.orange-btn { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--green);
+  background: #fff; color: var(--green); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; margin: 0; }
+.orange-btn::first-letter { text-transform: uppercase; }
+.orange-btn-44 { height: 52px; width: auto; padding: 0 22px; border-radius: 999px; border: 0; background: var(--ink);
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; margin: 0; }
+.toolbar-row { display: flex; gap: 10px; background: transparent; border: 0; padding: 0; margin: 20px 0 0; }
+#listToolbarRow .orange-btn { flex: 1 1 0; height: 52px; font-size: 17px; margin: 0 !important; }
+#newListBtn { background: var(--green); color: #fff; }
+#editBtn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+/* inputs */
+.text-input { flex: 1; min-width: 0; height: 52px; border-radius: 999px; border: 1.5px solid var(--ink); background: #fff;
+  padding: 0 20px; margin: 0; font-family: inherit; font-size: 17px; color: var(--ink); text-align: left; outline: none; width: auto; }
+.text-input::placeholder { color: var(--muted); }
+#listAddFields { gap: 8px; align-items: center; margin-top: 12px; }
+
+/* the lists */
+.notepad-body { min-height: 0; max-height: none; overflow: visible; margin-top: 16px; }
+#notes-list { display: flex; flex-direction: column; gap: 14px; }
+.notepad-placeholder { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px;
+  font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.5; text-align: left; margin: 0; }
+.np-cat { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.np-head { display: flex; align-items: center; gap: 8px; min-height: 56px; padding: 0 8px 0 16px; }
+.np-head .note-list-title { flex: 1; min-width: 0; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding: 0; word-break: break-word; }
+.np-mark { margin-left: 8px; color: var(--muted); letter-spacing: 0; }
+.np-add { height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--ink); color: #fff;
+  font-size: 14px; font-weight: 700; white-space: nowrap; }
+.np-x { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0;
+  background: transparent; color: var(--muted); font-size: 16px; flex: 0 0 auto; }
+.np-note-row { display: flex; align-items: center; gap: 4px; min-height: 52px; padding: 0 6px 0 32px; border-top: 1px solid #EEE9DD; }
+.np-note-row .note-list-title { flex: 1; min-width: 0; font-family: 'DM Sans', sans-serif; font-size: 18px; padding: 0; word-break: break-word; }
+.np-add-row { display: flex; align-items: center; gap: 8px; padding: 8px 6px 8px 32px; border-top: 1px solid #EEE9DD; }
+.np-add-row .text-input { height: 46px; }
+.np-add-row .orange-btn-44 { height: 46px; padding: 0 18px; }
+.np-empty { padding: 14px 16px 14px 32px; border-top: 1px solid #EEE9DD; font-size: 15px; color: var(--muted); line-height: 1.4; }
+.np-head .rename-input, .np-note-row .rename-input { height: 44px; }
+.np-head .orange-btn, .np-note-row .orange-btn { min-height: 40px; padding: 0 14px; }
+
+/* the note screen */
+#note-editor-view { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 12px; }
+.note-title-row { padding: 0 4px; }
+.note-title-row h3 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 600; color: var(--ink); }
+.note-editor-description { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--muted); text-align: left; padding: 6px 4px 12px; }
+.note-editor-sticky-toolbar { background: #fff; }
+.note-button-row { padding: 4px 0 !important; margin: 0 !important; }
+#headerBackBtn { display: none !important; }
+.format-toolbar-single { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 6px; }
+.fmt-btn { background: #fff; border: 1.5px solid var(--ink); color: var(--ink); border-radius: 999px; font-family: 'DM Sans', sans-serif; }
+.fmt-btn.active { background: var(--ink); color: #fff; }
+.fmt-btn.fmt-big { height: 40px; padding: 0 16px; }
+.fmt-cat-btn { background: var(--ink); color: #fff; }
+.fmt-select { background: #fff; border: 1.5px solid var(--ink); color: var(--ink); border-radius: 999px; }
+.fmt-row-label { color: var(--ink); }
+.fmt-notice { background: #fff; color: var(--ink); font-family: 'DM Sans', sans-serif; border-radius: 8px; }
+.fmt-menu { border: 1.5px solid var(--ink); border-radius: 14px; background: #fff; }
+.fmt-head, .fmt-item { font-family: 'DM Sans', sans-serif; color: var(--ink); border-bottom: 1px solid #EEE9DD; }
+.note-action-line { background: transparent; }
+.note-action-title { color: var(--ink); font-family: 'DM Sans', sans-serif; }
+.note-action-title.pressable { border-color: var(--ink); border-radius: 999px; }
+.note-action-btn { border: 1.5px solid var(--ink); color: var(--ink); border-radius: 10px; }
+#note-textarea { border-left: 4px solid var(--green); font-family: 'Crimson Pro', serif; }
+::highlight(fmt-select) { background-color: var(--green); color: #fff; }
+
+/* help window */
+.help-modal { border-radius: 16px; border: 1px solid var(--line); font-family: 'DM Sans', sans-serif; }
+header { align-items: stretch; text-align: left; }
+.page-title { text-align: left; margin: 0; padding: 0; }
+.orange-btn { display: flex; align-items: center; justify-content: center; white-space: nowrap; line-height: 1.1; }
+#listToolbarRow .orange-btn { font-size: 16px; padding: 0 8px; }
+.help-modal-header { background: var(--ink) !important; }
+.help-modal-header h3, .help-modal-body, .help-topic-head, .help-list li { font-family: 'DM Sans', sans-serif !important; }
+.help-topic-head { color: var(--ink); }
+.np-head .note-list-title { font-family: 'Abril Fatface', serif; font-weight: 400; font-size: 22px; letter-spacing: 0; text-transform: none; }
+.np-head .np-mark { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; }
+.np-head .note-list-title::first-letter { text-transform: uppercase; }
+.np-head .note-list-title { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 18px; }
+.np-head .note-list-title { font-weight: 400; }
+.np-head .note-list-title { font-family: 'Geologica', sans-serif; font-weight: 400; font-size: 20px; }
+/* all lists in ONE white box, separated by horizontal rules */
+#notes-list { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; gap: 0; }
+#notes-list .np-cat { border: 0; border-radius: 0; }
+#notes-list .np-cat + .np-cat { border-top: 1px solid var(--line); }
+#notes-list .notepad-placeholder { border: 0; border-radius: 0; }
+
+/* title, date and help all on one row */
+header { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+.top-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.nav-btn { display: inline-flex; align-items: center; }
+.help-btn { width: 46px; height: 46px; border-radius: 4px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 0; flex: 0 0 auto; }
+.help-q { font: 700 17px 'Space Mono', monospace; line-height: 1; }
+.help-word { font: 400 10px 'Space Mono', monospace; line-height: 1; }
+
+/* two borders: outer box, 10px of in-between colour, then the inner white box the rules touch */
+#notes-list { background: #FAF9F5; border: 1px solid var(--line); border-radius: 16px; padding: 10px; overflow: visible; }
+#notes-list .np-inner { background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+/* horizontal rules stop 10px short of the inner border on both sides */
+#notes-list .np-cat + .np-cat { border-top: 0; background-image: linear-gradient(var(--line), var(--line)); background-size: calc(100% - 20px) 1px; background-repeat: no-repeat; background-position: center top; }
+#notes-list .np-note-row, #notes-list .np-add-row, #notes-list .np-empty { border-top: 0; background-image: linear-gradient(#EEE9DD, #EEE9DD); background-size: calc(100% - 20px) 1px; background-repeat: no-repeat; background-position: center top; }
+/* darker beige in the 10px space; list box 10px from the screen edges (page padding is 20px) */
+#notes-list { background: #D2C6AB; margin-left: -10px; margin-right: -10px; }
+/* note rows inside an opened list use the page's beige */
+#notes-list .np-note-row, #notes-list .np-add-row, #notes-list .np-empty { background-color: var(--paper); background-image: linear-gradient(var(--line), var(--line)); }
+/* opened-list rows: slightly lighter than the page, inset 10px so white shows beside them */
+#notes-list .np-note-row, #notes-list .np-add-row, #notes-list .np-empty { background-color: #FAF8F3; margin: 0 10px; background-size: 100% 1px; }
+#notes-list .np-note-row, #notes-list .np-empty { padding-left: 22px; }
+#notes-list .np-add-row { padding-left: 22px; }
+/* the top row now always has a Back button, so keep it on one line */
+.nav-btn { white-space: nowrap; padding: 0 14px; }
+.top-left { gap: 10px; }
+.page-title { font-size: 28px; }
+.notepad-date { white-space: nowrap; font-size: 11px; }
+.nav-right { gap: 8px; }

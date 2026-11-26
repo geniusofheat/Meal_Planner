@@ -3,7 +3,7 @@
 // Auto-updating: always fetches fresh files, cache is backup only
 // ============================================================
 
-const CACHE_NAME = 'Meal_Planner-v84';
+const CACHE_NAME = 'Meal_Planner-v85';
 
 const FILES_TO_CACHE = [
   'index.html',
@@ -33,6 +33,13 @@ const FILES_TO_CACHE = [
   'grocery_list.html',
   'my_recipes.html',
   'my_recipes.js',
+  'notepad.html',
+  'notepad_engine.js',
+  'notepad_fonts.js',
+  'notepad_menu.js',
+  'notepad_photos.js',
+  'notepad_stylesheet.css',
+  'notepad_sync.js',
   'favorite_recipes.html',
   'favorite_recipes.js',
   'recipe_tools.css',
