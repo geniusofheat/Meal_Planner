@@ -641,3 +641,11 @@ function handleBack() {
   window.location.href = "meal_planner_free.html";
 }
 window.handleBack = handleBack;
+
+/* keep the box being typed in above the on-screen keyboard */
+function keepInView() {
+  const el = document.activeElement;
+  if (el && el.matches && el.matches("input, textarea")) el.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+document.addEventListener("focusin", () => { setTimeout(keepInView, 350); });
+if (window.visualViewport) window.visualViewport.addEventListener("resize", () => { setTimeout(keepInView, 100); });
