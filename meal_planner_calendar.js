@@ -287,6 +287,61 @@ function on_grid_click(e) {
 function week_key(y, m, w) { return y + '-' + m + '-' + w; }
 function ordinal_week(d) { return Math.floor((d.getDate() - 1) / 7); }
 
+function day_num_cls(iso) {
+  const hm = !!(plan[iso] && plan[iso].length), he = !!(events[iso] && events[iso].length);
+  return (hm ? ' has-meal' : '') + (he ? ' has-event' : '') + (iso === selected_iso ? ' selected' : '');
+}
+
+// One day in the week list:
+//   row 1: date + buttons / rule / MEAL section / rule / EVENT section
+function day_block_html(iso, n) {
+  const meals = plan[iso] || [];
+  const evs   = events[iso] || [];
+  const dow   = DAYS[date_of(iso).getDay()].slice(0, 3);
+  let h = '<div class="day-block">';
+  h += '<div class="day-top"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><span class="day-dow">' + dow + '</span>' +
+       '<span class="day-top-btns">' +
+       '<button class="orange-btn add-meal-btn" data-act="add-meal" data-iso="' + iso + '" aria-label="Add a meal to ' + esc(full_date(iso)) + '">+ Meal</button>' +
+       '<button class="orange-btn add-event-btn" data-act="add-event" data-iso="' + iso + '" aria-label="Add an event to ' + esc(full_date(iso)) + '">+ Event</button>' +
+       '</span></div>';
+  if (add_iso === iso) {
+    h += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div><div class="add-choice-btns">' +
+      '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipes Menu</button>' +
+      '<button class="orange-btn" data-act="go-favorites" data-iso="' + iso + '">Favorites Menu</button>' +
+      '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">My Recipes</button></div></div>';
+  }
+  if (event_iso === iso) {
+    h += '<div class="add-choice"><div>Event for ' + esc(full_date(iso)) + ':</div>' +
+      '<input class="event-input" id="event-title-input" type="text" maxlength="80" placeholder="Event title" autocomplete="off">' +
+      '<div class="add-choice-btns"><button class="orange-btn" data-act="save-event" data-iso="' + iso + '">Save</button>' +
+      '<button class="orange-btn" data-act="cancel-event">Cancel</button></div></div>';
+  }
+  if (meals.length) {
+    h += '<div class="day-section day-meals-sec"><span class="tag tag-meal">Meal</span>';
+    meals.forEach((m, idx) => {
+      const mkey = iso + '#' + idx;
+      h += '<div class="meal-row"><div class="meal-head ev-head" data-act="toggle-meal" data-key="' + mkey + '">' +
+        '<span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(m.name) + '</span>' +
+        '<span class="meal-btns">' +
+        '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
+        '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(m.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
+        '</span></div>';
+      if (open_meals.has(mkey)) h += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
+      h += '</div>';
+    });
+    h += '</div>';
+  }
+  if (evs.length) {
+    h += '<div class="day-section day-events-sec"><span class="tag tag-event">Event</span>';
+    evs.forEach((ev, idx) => {
+      h += '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(ev.title) + '</span>' +
+        '<span class="meal-btns"><button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span></div></div>';
+    });
+    h += '</div>';
+  }
+  return h + '</div>';
+}
+
 function render_week() {
   const sec = document.getElementById('week-section');
   const days_in = new Date(view_year, view_month + 1, 0).getDate();
@@ -311,39 +366,7 @@ function render_week() {
         html += '<div class="week-days">';
         for (let n = first; n <= last; n++) {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
-          if (mode === 'events') { html += event_day_html(iso, n); continue; }
-          const meals = plan[iso] || [];
-          html += '<div class="day-row"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><div class="day-meals">';
-          if (!meals.length) {
-            html += '<div class="day-empty"><span>Empty</span>';
-            if (iso === selected_iso) {
-              html += '<button class="orange-btn" data-act="add-meal" data-iso="' + iso + '" aria-label="Add a meal to ' + esc(full_date(iso)) + '">+</button>';
-            }
-            html += '</div>';
-            if (iso === selected_iso && add_iso === iso) {
-              html += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div>' +
-                '<div class="add-choice-btns">' +
-                '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipes Menu</button>' +
-                '<button class="orange-btn" data-act="go-favorites" data-iso="' + iso + '">Favorites Menu</button>' +
-                '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">My Recipes</button>' +
-                '</div></div>';
-            }
-          } else {
-            meals.forEach((m, idx) => {
-              const mkey = iso + '#' + idx;
-              const m_open = open_meals.has(mkey);
-              html += '<div class="meal-row"><div class="meal-head" data-act="toggle-meal" data-key="' + mkey + '">' +
-                '<span>' + esc(m.name) + '</span>' +
-                '<span class="meal-btns">' +
-                '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
-                '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(m.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
-                '</span></div>';
-              if (m_open) html += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
-              html += '</div>';
-            });
-          }
-          html += ev_rows_html(iso);
-          html += '</div></div>';
+          html += day_block_html(iso, n);
         }
         html += '</div>';
       }
@@ -355,42 +378,6 @@ function render_week() {
   sec.innerHTML = html;
 }
 
-function event_day_html(iso, n) {
-  const list = events[iso] || [];
-  let h = '<div class="day-row"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><div class="day-meals">' + meal_rows_ro_html(iso);
-  if (!list.length) {
-    h += '<div class="day-empty"><span>No events</span>' + ev_plus(iso) + '</div>';
-  } else {
-    list.forEach((ev, idx) => {
-      h += '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title">' + esc(ev.title) + '</span><span class="meal-btns">' +
-        '<button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
-        (idx === 0 ? ev_plus(iso) : '') + '</span></div></div>';
-    });
-  }
-  if (event_iso === iso) {
-    h += '<div class="add-choice"><div>Event for ' + esc(full_date(iso)) + ':</div>' +
-      '<input class="event-input" id="event-title-input" type="text" maxlength="80" placeholder="Event title" autocomplete="off">' +
-      '<div class="add-choice-btns"><button class="orange-btn" data-act="save-event" data-iso="' + iso + '">Save</button>' +
-      '<button class="orange-btn" data-act="cancel-event">Cancel</button></div></div>';
-  }
-  return h + '</div></div>';
-}
-function ev_rows_html(iso) {        // events shown inside the meal view, with ✕
-  return (events[iso] || []).map((ev, idx) =>
-    '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="tag tag-event">Event</span> ' + esc(ev.title) + '</span><span class="meal-btns">' +
-    '<button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span></div></div>').join('');
-}
-function meal_rows_ro_html(iso) {   // meals shown (read-only) inside the events view
-  return (plan[iso] || []).map(m =>
-    '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="tag tag-meal">Meal</span> ' + esc(m.name) + '</span></div></div>').join('');
-}
-function day_num_cls(iso) {
-  const hm = !!(plan[iso] && plan[iso].length), he = !!(events[iso] && events[iso].length);
-  return (hm ? ' has-meal' : '') + (he ? ' has-event' : '') + (iso === selected_iso ? ' selected' : '');
-}
-function ev_plus(iso) {
-  return '<button class="orange-btn" data-act="add-event" data-iso="' + iso + '" aria-label="Add an event to ' + esc(full_date(iso)) + '">+</button>';
-}
 function commit_event(iso) {
   const inp = document.getElementById('event-title-input');
   const title = inp ? inp.value.trim() : '';
@@ -472,47 +459,32 @@ function meal_detail_html(m, iso) {
 }
 
 function on_week_click(e) {
-  const rmev = e.target.closest('[data-act="remove-event"]');
-  if (rmev && mode !== 'events') {
-    const riso = rmev.getAttribute('data-iso'), ridx = Number(rmev.getAttribute('data-idx'));
-    if (events[riso]) { events[riso].splice(ridx, 1); if (!events[riso].length) delete events[riso]; save_events(); }
-    render_all();
-    return;
-  }
-  if (mode === 'events') {
-    const a = e.target.closest('[data-act]');
-    if (!a) return;
-    const act = a.getAttribute('data-act');
-    const iso = a.getAttribute('data-iso');
+  const a0 = e.target.closest('[data-act]');
+  if (a0) {
+    const act = a0.getAttribute('data-act'), iso = a0.getAttribute('data-iso');
     if (act === 'add-event') {
       event_iso = (event_iso === iso) ? null : iso;
-      selected_iso = iso;
+      add_iso = null; selected_iso = iso;
       render_all();
       const inp = document.getElementById('event-title-input');
-      if (inp) {
-        inp.focus();
-        inp.addEventListener('keydown', ev => { if (ev.key === 'Enter') commit_event(iso); });
-      }
-    } else if (act === 'save-event') {
-      commit_event(iso);
-    } else if (act === 'cancel-event') {
-      event_iso = null; render_week();
-    } else if (act === 'remove-event') {
-      const idx = Number(a.getAttribute('data-idx'));
+      if (inp) { inp.focus(); inp.addEventListener('keydown', ev => { if (ev.key === 'Enter') commit_event(iso); }); }
+      return;
+    }
+    if (act === 'save-event') { commit_event(iso); return; }
+    if (act === 'cancel-event') { event_iso = null; render_week(); return; }
+    if (act === 'remove-event') {
+      const idx = Number(a0.getAttribute('data-idx'));
       if (events[iso]) { events[iso].splice(idx, 1); if (!events[iso].length) delete events[iso]; save_events(); }
       render_all();
-    } else if (act === 'toggle-week') {
-      const key = a.getAttribute('data-key');
-      if (open_weeks.has(key)) open_weeks.delete(key); else open_weeks.add(key);
-      render_week();
+      return;
     }
-    return;
   }
   const addb = e.target.closest('[data-act="add-meal"]');
   if (addb) {
     const iso = addb.getAttribute('data-iso');
     add_iso = (add_iso === iso) ? null : iso;
-    render_week();
+    event_iso = null; selected_iso = iso;
+    render_all();
     return;
   }
   const go = e.target.closest('[data-act="go-menu"], [data-act="go-favorites"], [data-act="go-creator"]');

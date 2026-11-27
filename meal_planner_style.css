@@ -73,3 +73,23 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .tag-event { background: var(--event); }
 .tag-meal { background: var(--meal); }
 .ev-head [data-act="remove-event"] { font-size: 14px; min-height: 32px; }
+
+/* ── week list: one block per day ── */
+.day-block { padding: 6px 8px 8px; border-top: 1px solid var(--line); }
+.day-block:first-child { border-top: 0; }
+.day-top { display: flex; align-items: center; gap: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.day-top .day-num { margin: 0; flex: 0 0 auto; }
+.day-dow { font: 400 12px 'Space Mono', monospace; color: var(--muted); flex: 1; }
+.day-top-btns { display: flex; gap: 6px; }
+.day-top-btns .orange-btn { min-height: 34px; padding: 0 12px; font-size: 13px; }
+.add-meal-btn { background: var(--meal) !important; }
+.add-event-btn { background: var(--event) !important; }
+.day-section { padding: 6px 0 2px; }
+.day-section + .day-section { border-top: 1px solid var(--line); margin-top: 4px; }
+.day-section > .tag { display: inline-block; margin-bottom: 2px; }
+.item-num { font: 400 12px 'Space Mono', monospace; color: var(--muted); margin-right: 4px; }
+.ev-title { padding-top: 4px; }
+.day-section .meal-row { padding: 0; }
+.day-section .meal-row + .meal-row { border-top: 1px solid var(--line); }
+.day-block .add-choice { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.day-section .ev-head .orange-btn { min-height: 32px; min-width: 40px; padding: 0 12px; font-size: 14px; }
