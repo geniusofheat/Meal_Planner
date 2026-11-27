@@ -206,9 +206,11 @@ function render_calendar() {
   for (let i = 0; i < first; i++) html += '<div class="cal-blank"></div>';
   for (let d = 1; d <= days_in; d++) {
     const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-    const planned = mode === 'events' ? !!(events[iso] && events[iso].length) : !!(plan[iso] && plan[iso].length);
+    const has_meal  = !!(plan[iso] && plan[iso].length);
+    const has_event = !!(events[iso] && events[iso].length);
     let cls = 'cal-day';
-    if (planned)              cls += ' planned';
+    if (has_meal)             cls += ' has-meal';
+    if (has_event)            cls += ' has-event';
     if (iso === today_iso)    cls += ' today';
     if (iso === selected_iso) cls += ' selected';
     html += '<button type="button" class="' + cls + '" data-iso="' + iso + '">' + d + '</button>';
@@ -280,7 +282,7 @@ function render_week() {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
           if (mode === 'events') { html += event_day_html(iso, n); continue; }
           const meals = plan[iso] || [];
-          html += '<div class="day-row"><div class="day-num' + (meals.length ? ' planned' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
+          html += '<div class="day-row"><div class="day-num' + (meals.length ? ' has-meal' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
           if (!meals.length) {
             html += '<div class="day-empty"><span>Empty</span>';
             if (iso === selected_iso) {
@@ -323,7 +325,7 @@ function render_week() {
 
 function event_day_html(iso, n) {
   const list = events[iso] || [];
-  let h = '<div class="day-row"><div class="day-num' + (list.length ? ' planned' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
+  let h = '<div class="day-row"><div class="day-num' + (list.length ? ' has-event' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
   if (!list.length) {
     h += '<div class="day-empty"><span>No events</span>' + ev_plus(iso) + '</div>';
   } else {

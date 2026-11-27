@@ -13,8 +13,7 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .cal-weekdays div { color: var(--muted); font: 400 12px 'Space Mono', monospace; }
 .cal-day { background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; font: 400 16px 'DM Sans', sans-serif; }
 .cal-day.today { border: 2px solid var(--ink); font-weight: 700; }
-.cal-day.planned, .cal-day.selected { background: var(--deep); border-color: var(--ink); color: var(--ink); font-weight: 700; }
-.cal-day.planned.selected { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+.cal-day.selected { border: 2px solid var(--ink); font-weight: 700; }
 .cal-grid.picking .cal-day { border-color: var(--ink); }
 .month-head, .week-head { color: var(--ink); border-bottom: 1px solid var(--line); }
 .month-head { font: 600 24px 'Fraunces', serif; }
@@ -24,7 +23,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .week-days { margin: 8px 0 10px; background: var(--paper); border-radius: 12px; }
 .day-row { border-top: 1px solid var(--line); }
 .day-num { color: var(--ink); font: 600 17px 'DM Sans', sans-serif; }
-.day-num.planned { background: var(--deep); border: 1.5px solid var(--ink); border-radius: 8px; color: var(--ink); }
 .day-empty { color: var(--muted); font: italic 15px 'DM Sans', sans-serif; }
 .meal-row { border-top: 1px solid var(--line); }
 .meal-head { color: var(--ink); font: 16px 'DM Sans', sans-serif; }
@@ -33,5 +31,15 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .add-choice { color: var(--ink); font: 15px 'DM Sans', sans-serif; }
 .event-input { border: 1.5px solid var(--ink); font-family: 'DM Sans', sans-serif; color: var(--ink); }
 
-/* the selected day in the week list: orange rounded square, white number */
-.day-num.selected { width: 34px; min-height: 0; height: 34px; margin: 3px 0; background: #E8761E; border: 1.5px solid #E8761E; border-radius: 8px; color: #fff; font-weight: 700; }
+/* planned meals = orange, planned events = soft blue; both = split tile. Selection = black ring only. */
+:root { --meal: #E8761E; --event: #5E87B0; }
+.cal-day.has-meal  { background: var(--meal);  border-color: var(--meal);  color: #fff; font-weight: 700; }
+.cal-day.has-event { background: var(--event); border-color: var(--event); color: #fff; font-weight: 700; }
+.cal-day.has-meal.has-event { background: linear-gradient(135deg, var(--meal) 50%, var(--event) 50%); border-color: var(--ink); }
+.cal-day.today { border: 2px solid var(--ink); }
+.cal-day.selected { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+.day-num { width: 34px; min-height: 0; height: 34px; margin: 3px 0; border: 1.5px solid transparent; border-radius: 8px; }
+.day-num.has-meal  { background: var(--meal);  border-color: var(--meal);  color: #fff; }
+.day-num.has-event { background: var(--event); border-color: var(--event); color: #fff; }
+.day-num.selected  { border-color: var(--ink); box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--ink); }
+.day-row { align-items: center; }
