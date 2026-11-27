@@ -67,3 +67,9 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .ev-head .meal-btns { flex: 0 0 auto; flex-wrap: nowrap; align-self: flex-start; }
 .ev-head .orange-btn { min-width: 44px; margin: 0; }
 .ev-head .orange-btn { min-height: 34px; font-size: 18px; padding: 0 14px; line-height: 1; }
+
+.day-num.has-meal.has-event { background: linear-gradient(135deg, var(--meal) 50%, var(--event) 50%); border-color: transparent; color: #fff; }
+.tag { display: inline-block; font: 700 10px 'Space Mono', monospace; text-transform: uppercase; padding: 1px 6px; border-radius: 4px; color: #fff; vertical-align: 2px; }
+.tag-event { background: var(--event); }
+.tag-meal { background: var(--meal); }
+.ev-head [data-act="remove-event"] { font-size: 14px; min-height: 32px; }

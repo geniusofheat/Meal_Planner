@@ -313,7 +313,7 @@ function render_week() {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
           if (mode === 'events') { html += event_day_html(iso, n); continue; }
           const meals = plan[iso] || [];
-          html += '<div class="day-row"><div class="day-num' + (meals.length ? ' has-meal' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
+          html += '<div class="day-row"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><div class="day-meals">';
           if (!meals.length) {
             html += '<div class="day-empty"><span>Empty</span>';
             if (iso === selected_iso) {
@@ -342,6 +342,7 @@ function render_week() {
               html += '</div>';
             });
           }
+          html += ev_rows_html(iso);
           html += '</div></div>';
         }
         html += '</div>';
@@ -356,7 +357,7 @@ function render_week() {
 
 function event_day_html(iso, n) {
   const list = events[iso] || [];
-  let h = '<div class="day-row"><div class="day-num' + (list.length ? ' has-event' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
+  let h = '<div class="day-row"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><div class="day-meals">' + meal_rows_ro_html(iso);
   if (!list.length) {
     h += '<div class="day-empty"><span>No events</span>' + ev_plus(iso) + '</div>';
   } else {
@@ -373,6 +374,19 @@ function event_day_html(iso, n) {
       '<button class="orange-btn" data-act="cancel-event">Cancel</button></div></div>';
   }
   return h + '</div></div>';
+}
+function ev_rows_html(iso) {        // events shown inside the meal view, with ✕
+  return (events[iso] || []).map((ev, idx) =>
+    '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="tag tag-event">Event</span> ' + esc(ev.title) + '</span><span class="meal-btns">' +
+    '<button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span></div></div>').join('');
+}
+function meal_rows_ro_html(iso) {   // meals shown (read-only) inside the events view
+  return (plan[iso] || []).map(m =>
+    '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="tag tag-meal">Meal</span> ' + esc(m.name) + '</span></div></div>').join('');
+}
+function day_num_cls(iso) {
+  const hm = !!(plan[iso] && plan[iso].length), he = !!(events[iso] && events[iso].length);
+  return (hm ? ' has-meal' : '') + (he ? ' has-event' : '') + (iso === selected_iso ? ' selected' : '');
 }
 function ev_plus(iso) {
   return '<button class="orange-btn" data-act="add-event" data-iso="' + iso + '" aria-label="Add an event to ' + esc(full_date(iso)) + '">+</button>';
@@ -458,6 +472,13 @@ function meal_detail_html(m, iso) {
 }
 
 function on_week_click(e) {
+  const rmev = e.target.closest('[data-act="remove-event"]');
+  if (rmev && mode !== 'events') {
+    const riso = rmev.getAttribute('data-iso'), ridx = Number(rmev.getAttribute('data-idx'));
+    if (events[riso]) { events[riso].splice(ridx, 1); if (!events[riso].length) delete events[riso]; save_events(); }
+    render_all();
+    return;
+  }
   if (mode === 'events') {
     const a = e.target.closest('[data-act]');
     if (!a) return;
