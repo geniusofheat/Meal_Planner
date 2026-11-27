@@ -45,9 +45,9 @@ try {
 .shots-box { width:100%; max-width:420px; display:flex; flex-direction:column; align-items:center; gap:10px; }
 .shots-track { display:flex; width:100%; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-radius:12px; }
 .shots-track::-webkit-scrollbar { display:none; }
-.shots-slide { flex:0 0 100%; scroll-snap-align:center; margin:0; text-align:center; }
-.shots-slide img { width:100%; max-height:72vh; object-fit:contain; display:block; border-radius:12px; border:2px solid #c8a96e; background:#F6F3EC; }
-.shots-slide figcaption { color:#f0e8d0; font-family:'Playfair Display',serif; font-size:17px; margin-top:8px; }
+.shots-slide { flex:0 0 100%; scroll-snap-align:center; margin:0; border:2px solid #c8a96e; border-radius:12px; background:#0d1b4a; padding:12px; display:flex; flex-direction:column; gap:10px; }
+.shots-slide img { width:100%; max-height:58vh; object-fit:contain; display:block; border-radius:8px; background:#F6F3EC; }
+.shots-slide figcaption { color:#f0e8d0; font-family:'Crimson Pro',serif; font-size:18px; line-height:1.35; text-align:left; }
 .shots-dots { display:flex; gap:8px; }
 .shots-dots span { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.35); }
 .shots-dots span.on { background:#c8a96e; }
@@ -139,9 +139,9 @@ try {
 <div class="shots-overlay" id="shotsOverlay" onclick="closeShots()">
   <div class="shots-box" onclick="event.stopPropagation()">
     <div class="shots-track" id="shotsTrack">
-      <figure class="shots-slide"><img src="notepad_screenshot_1.png" alt="Notepad lists screen"><figcaption>Your lists and notes</figcaption></figure>
-      <figure class="shots-slide"><img src="notepad_screenshot_2.png" alt="Notepad note screen"><figcaption>A note</figcaption></figure>
-      <figure class="shots-slide"><img src="notepad_screenshot_3.png" alt="Notepad formatting menu"><figcaption>The formatting menu</figcaption></figure>
+      <figure class="shots-slide"><figcaption>Your lists. Tap a list title to open it and see its notes. Add + puts a new note inside that list.</figcaption><img src="notepad_screenshot_1.png" alt="Notepad lists screen"></figure>
+      <figure class="shots-slide"><figcaption>A note. Type your note in the page below, and use the toolbar above it to format the text.</figcaption><img src="notepad_screenshot_2.png" alt="Notepad note screen"></figure>
+      <figure class="shots-slide"><figcaption>The formatting menu. Tap the select box to choose Text, HTML or Insert, then pick the format you want.</figcaption><img src="notepad_screenshot_3.png" alt="Notepad formatting menu"></figure>
     </div>
     <div class="shots-dots" id="shotsDots"><span class="on"></span><span></span><span></span></div>
     <div class="orange-btn" onclick="closeShots()">Close</div>
