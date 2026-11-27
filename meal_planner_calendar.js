@@ -133,6 +133,8 @@ function render_all() {
 }
 
 function render_mode_buttons() {
+  document.body.classList.toggle('mode-meal', mode === 'meal');
+  document.body.classList.toggle('mode-events', mode === 'events');
   ['meal', 'events'].forEach(k => {
     const b = document.getElementById('mode-' + k);
     if (!b) return;
