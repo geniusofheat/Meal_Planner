@@ -61,6 +61,25 @@ function load_json(key, fallback) {
   try { const v = JSON.parse(localStorage.getItem(key)); return v == null ? fallback : v; }
   catch (e) { return fallback; }
 }
+// Drop empty leftovers so a day with nothing planned is never highlighted
+function clean_events() {
+  let changed = false;
+  Object.keys(events).forEach(iso => {
+    const list = Array.isArray(events[iso]) ? events[iso].filter(e => e && String(e.title || '').trim()) : [];
+    if (!Array.isArray(events[iso]) || list.length !== events[iso].length) changed = true;
+    if (list.length) events[iso] = list; else { delete events[iso]; changed = true; }
+  });
+  if (changed) save_events();
+}
+function clean_plan() {
+  let changed = false;
+  Object.keys(plan).forEach(iso => {
+    const list = Array.isArray(plan[iso]) ? plan[iso].filter(m => m && String(m.name || '').trim()) : [];
+    if (!Array.isArray(plan[iso]) || list.length !== plan[iso].length) changed = true;
+    if (list.length) plan[iso] = list; else { delete plan[iso]; changed = true; }
+  });
+  if (changed) save_plan();
+}
 function save_events() {
   try { localStorage.setItem(EVENTS_KEY, JSON.stringify(events)); } catch (e) { console.error(e); }
 }
@@ -79,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   plan    = load_json(PLAN_KEY, {});
   events  = load_json(EVENTS_KEY, {});
+  clean_events();
+  clean_plan();
   pending = load_json(PENDING_KEY, null);
   if (pending && !pending.name) pending = null;
 
