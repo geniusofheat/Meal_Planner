@@ -11,6 +11,7 @@
 
 const PLAN_KEY    = 'mealplanner_plan';
 const PENDING_KEY = 'mealplanner_pending_recipe';
+const EVENTS_KEY  = 'mealplanner_events';
 const TARGET_KEY  = 'mealplanner_target_date';   // day chosen with the + button, waiting for a recipe
 let add_iso = null;                                // day whose + chooser is open
 
@@ -28,6 +29,9 @@ let open_days   = new Set();
 let open_meals  = new Set();
 let open_weeks  = new Set();
 let month_open  = true;
+let mode        = 'meal';   // 'meal' | 'events'
+let events      = {};       // { 'YYYY-MM-DD': [ { title }, ... ] }
+let event_iso   = null;     // day whose event-title row is open
 let moving      = null;   // { iso, idx } while a planned meal is being moved to another day
 
 // ── helpers ─────────────────────────────────────────────────────
@@ -54,6 +58,9 @@ function load_json(key, fallback) {
   try { const v = JSON.parse(localStorage.getItem(key)); return v == null ? fallback : v; }
   catch (e) { return fallback; }
 }
+function save_events() {
+  try { localStorage.setItem(EVENTS_KEY, JSON.stringify(events)); } catch (e) { console.error(e); }
+}
 function save_plan() {
   try { localStorage.setItem(PLAN_KEY, JSON.stringify(plan)); } catch (e) { console.error(e); }
 }
@@ -67,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
   open_weeks = new Set([week_key(view_year, view_month, ordinal_week(now))]);
 
   plan    = load_json(PLAN_KEY, {});
+  events  = load_json(EVENTS_KEY, {});
   pending = load_json(PENDING_KEY, null);
   if (pending && !pending.name) pending = null;
 
@@ -90,14 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const dd = document.getElementById('dateDisplay');
   if (dd) dd.textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
+  document.getElementById('mode-meal').addEventListener('click', () => set_mode('meal'));
+  document.getElementById('mode-events').addEventListener('click', () => set_mode('events'));
   document.getElementById('cal-prev').addEventListener('click', () => change_month(-1));
   document.getElementById('cal-next').addEventListener('click', () => change_month(1));
   document.getElementById('cal-grid').addEventListener('click', on_grid_click);
   document.getElementById('week-section').addEventListener('click', on_week_click);
   document.getElementById('pending-banner').addEventListener('click', on_banner_click);
 
+  if (pending) mode = 'meal';
   render_all();
 });
+
+function set_mode(m) {
+  if (m === 'events' && pending) return;     // finish placing the waiting recipe first
+  mode = m; add_iso = null; event_iso = null;
+  render_all();
+}
 
 function change_month(delta) {
   view_month += delta;
@@ -107,16 +124,27 @@ function change_month(delta) {
 }
 
 function render_all() {
+  render_mode_buttons();
   render_prompt();
   render_banner();
   render_calendar();
   render_week();
 }
 
+function render_mode_buttons() {
+  ['meal', 'events'].forEach(k => {
+    const b = document.getElementById('mode-' + k);
+    if (!b) return;
+    b.classList.toggle('active', mode === k);
+    b.setAttribute('aria-pressed', mode === k ? 'true' : 'false');
+  });
+}
+
 // ── prompt above the calendar ───────────────────────────────────
 function render_prompt() {
   const el = document.getElementById('cal-prompt');
   if (!el) return;
+  if (mode === 'events') { el.textContent = 'Tap a date to open its week, then tap the + beside a day to add an event.'; return; }
   el.textContent = pending
     ? (moving ? 'Choose the new day for this meal from the calendar below.' : 'Please choose a day of the week from the calendar below.')
     : 'Tap a date to open its week.';
@@ -131,6 +159,7 @@ const HELP_CONTENT = `
     <li>You can also press Plan on any recipe card, then tap a day on the calendar.</li>
     <li>Use the arrows above the calendar to move to the previous or next month.</li>
     <li>Days with something planned are highlighted.</li>
+    <li>Press Plan Events at the top to pin events to dates instead of meals. Tap a date, then tap the + beside a day in the week list and type the event title. Press Plan a Meal to go back to meals.</li>
     <li>The list below the calendar shows the month by week. Tap a week to see its seven days, with Empty beside any day that has nothing planned. Tap a meal to see its recipe, and tap Change to move it to another day, and tap ✕ to take it off your plan.</li>
   </ul>
 `;
@@ -176,7 +205,7 @@ function render_calendar() {
   for (let i = 0; i < first; i++) html += '<div class="cal-blank"></div>';
   for (let d = 1; d <= days_in; d++) {
     const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-    const planned = plan[iso] && plan[iso].length > 0;
+    const planned = mode === 'events' ? !!(events[iso] && events[iso].length) : !!(plan[iso] && plan[iso].length);
     let cls = 'cal-day';
     if (planned)              cls += ' planned';
     if (iso === today_iso)    cls += ' today';
@@ -248,6 +277,7 @@ function render_week() {
         html += '<div class="week-days">';
         for (let n = first; n <= last; n++) {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
+          if (mode === 'events') { html += event_day_html(iso, n); continue; }
           const meals = plan[iso] || [];
           html += '<div class="day-row"><div class="day-num' + ((meals.length || iso === selected_iso) ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
           if (!meals.length) {
@@ -288,6 +318,40 @@ function render_week() {
   }
   html += '</div>';
   sec.innerHTML = html;
+}
+
+function event_day_html(iso, n) {
+  const list = events[iso] || [];
+  let h = '<div class="day-row"><div class="day-num' + ((list.length || iso === selected_iso) ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
+  if (!list.length) {
+    h += '<div class="day-empty"><span>No events</span>' + ev_plus(iso) + '</div>';
+  } else {
+    list.forEach((ev, idx) => {
+      h += '<div class="meal-row"><div class="meal-head"><span>' + esc(ev.title) + '</span><span class="meal-btns">' +
+        '<button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span></div></div>';
+    });
+    h += '<div class="day-empty"><span></span>' + ev_plus(iso) + '</div>';
+  }
+  if (event_iso === iso) {
+    h += '<div class="add-choice"><div>Event for ' + esc(full_date(iso)) + ':</div>' +
+      '<input class="event-input" id="event-title-input" type="text" maxlength="80" placeholder="Event title" autocomplete="off">' +
+      '<div class="add-choice-btns"><button class="orange-btn" data-act="save-event" data-iso="' + iso + '">Save</button>' +
+      '<button class="orange-btn" data-act="cancel-event">Cancel</button></div></div>';
+  }
+  return h + '</div></div>';
+}
+function ev_plus(iso) {
+  return '<button class="orange-btn" data-act="add-event" data-iso="' + iso + '" aria-label="Add an event to ' + esc(full_date(iso)) + '">+</button>';
+}
+function commit_event(iso) {
+  const inp = document.getElementById('event-title-input');
+  const title = inp ? inp.value.trim() : '';
+  if (!title) { if (inp) inp.focus(); return; }
+  if (!events[iso]) events[iso] = [];
+  events[iso].push({ title: title });
+  save_events();
+  event_iso = null;
+  render_all();
 }
 
 // ── recovering instructions for meals saved without them ───────
@@ -360,6 +424,35 @@ function meal_detail_html(m, iso) {
 }
 
 function on_week_click(e) {
+  if (mode === 'events') {
+    const a = e.target.closest('[data-act]');
+    if (!a) return;
+    const act = a.getAttribute('data-act');
+    const iso = a.getAttribute('data-iso');
+    if (act === 'add-event') {
+      event_iso = (event_iso === iso) ? null : iso;
+      selected_iso = iso;
+      render_all();
+      const inp = document.getElementById('event-title-input');
+      if (inp) {
+        inp.focus();
+        inp.addEventListener('keydown', ev => { if (ev.key === 'Enter') commit_event(iso); });
+      }
+    } else if (act === 'save-event') {
+      commit_event(iso);
+    } else if (act === 'cancel-event') {
+      event_iso = null; render_week();
+    } else if (act === 'remove-event') {
+      const idx = Number(a.getAttribute('data-idx'));
+      if (events[iso]) { events[iso].splice(idx, 1); if (!events[iso].length) delete events[iso]; save_events(); }
+      render_all();
+    } else if (act === 'toggle-week') {
+      const key = a.getAttribute('data-key');
+      if (open_weeks.has(key)) open_weeks.delete(key); else open_weeks.add(key);
+      render_week();
+    }
+    return;
+  }
   const addb = e.target.closest('[data-act="add-meal"]');
   if (addb) {
     const iso = addb.getAttribute('data-iso');

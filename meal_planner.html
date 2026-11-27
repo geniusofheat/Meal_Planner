@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=6">
-<link rel="stylesheet" href="meal_planner_calendar.css?v=10">
+<link rel="stylesheet" href="meal_planner_calendar.css?v=11">
 <link rel="stylesheet" href="button_style.css?v=2">
 </head>
 
@@ -38,6 +38,12 @@
 <div id="pending-banner" class="pending-banner" style="display:none;"></div>
 
 <!-- CONTAINER -->
+<!-- MODE BUTTONS: plan a meal / plan events -->
+<div class="mode-row">
+  <button class="orange-btn mode-btn active" id="mode-meal" type="button">Plan a Meal</button>
+  <button class="orange-btn mode-btn" id="mode-events" type="button">Plan Events</button>
+</div>
+
 <main class="main">
 
   <!-- Prompt above the calendar (changes with what you are doing) -->
@@ -73,7 +79,7 @@
 </div>
 
 <script src="cookbook_json.js?v=5"></script>
-<script src="meal_planner_calendar.js?v=12"></script>
+<script src="meal_planner_calendar.js?v=13"></script>
 <script type="module" src="firebase_login_auth.js"></script>
 
 <script>

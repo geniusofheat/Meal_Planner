@@ -184,3 +184,9 @@
   font-weight: 700;
 }
 .cal-day { cursor: pointer; }
+
+/* Plan a Meal / Plan Events switch */
+.mode-row { display: flex; gap: 10px; margin: 0 0 12px; }
+.mode-btn { flex: 1; min-height: 44px; opacity: .55; }
+.mode-btn.active { opacity: 1; }
+.event-input { width: 100%; height: 40px; margin: 6px 0; padding: 0 12px; border: 1.5px solid #14286b; border-radius: 8px; font-size: 16px; background: #fff; color: #000; text-align: left; }
