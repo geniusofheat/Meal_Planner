@@ -3,7 +3,7 @@
 // Auto-updating: always fetches fresh files, cache is backup only
 // ============================================================
 
-const CACHE_NAME = 'Meal_Planner-v89';
+const CACHE_NAME = 'Meal_Planner-v90';
 
 const FILES_TO_CACHE = [
   'index.html',
@@ -28,6 +28,8 @@ const FILES_TO_CACHE = [
   'meal_planner_calendar.js',
   'recipes_menu.html',
   'cookbook_menu_stylesheet.css',
+  'recipes_menu_style.css',
+  'tools_page.css',
   'cookbook_menu_data.js',
   'cookbook_engine.js',
   'grocery_list.html',

@@ -4,7 +4,7 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/f
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 onAuthStateChanged(auth, async (user) => {
-  if (!user) return;
+  if (!user || location.search.includes('view=features')) return;
   try {
     const snap = await getDoc(doc(db, 'users', user.uid));
     const paid = snap.exists() && snap.data().paid === true;

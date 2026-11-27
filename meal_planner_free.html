@@ -3,95 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meal Planner -Free Account :</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Crimson+Pro:ital,wght@0,400;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="button_style.css?v=2">
+<title>Meal Planner — Free Version</title>
+<meta name="theme-color" content="#F6F3EC">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="meal_planner_manifest.json">
+<link rel="stylesheet" href="tools_page.css?v=1">
 </head>
 
 <body>
 
-<!-- ── LOGIN NAV BAR ── -->
-<div class="card">
-
-  <a id="homepage-redirect-link" class="gold-btn" href="index.html">🏠 Back</a>
-
+<!-- ── SIGNED-IN ROW ── -->
+<div id="auth-nav">
+  <div id="nav-user-email">Welcome, Guest</div>
+  <div id="sign-out-btn">Sign out</div>
 </div>
-<!-- ── END LOGIN NAV BAR ── -->
 
-<!-- ── WELCOME CARD ── -->
+<!-- ── TITLE ROW ── -->
+<div class="title-row">
+  <h2>Meal Planner</h2>
+  <div class="title-right">
+    <span id="dateDisplay"></span>
+    <button class="help-btn" onclick="showHelp()" aria-label="Help"><span class="help-q">?</span><span class="help-word">help</span></button>
+  </div>
+</div>
+
+<!-- ── HELP ── -->
+<div class="help-overlay" id="helpOverlay" onclick="hideHelp()">
+  <div class="help-box" onclick="event.stopPropagation()">
+    <h3>Help</h3>
+    <ul>
+      <li>This page lists your free tools.</li>
+      <li>Tap a tool title to read what it does.</li>
+      <li>Tap Open to go straight to that tool.</li>
+      <li>Tap See all features to learn about the full version.</li>
+    </ul>
+    <div class="orange-btn" onclick="hideHelp()">Close</div>
+  </div>
+</div>
+
+<!-- ── FREE TOOLS CARD ── -->
 <div class="card">
-	
-  <h3>Free Account Tools:</h3>
-  
-  <p class="tool-tip">Tool features are explained in detail. Click the open button to open the tool.</p>
+  <div class="tool-head"><h3>Your Free Tools</h3></div>
+  <p class="tool-intro">Tap a tool title to read what it does, or tap Open to go straight to it.</p>
+  <ol class="feature-list">
+    <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Grocery List</h5><a href="grocery_list.html" class="orange-btn">Open</a></div>
+      <p class="feature-desc">Build and keep your shopping list.</p>
+      <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Add items by typing or speaking into the microphone</li><li>Check items off as you shop</li><li>Press the lock button to lock your list</li></ul></div></li>
+    <li><div class="tool-head"><h5 class="feature-title" onclick="toggleFeature(this)">Recipe Menu</h5><a href="recipes_menu.html" class="orange-btn">Open</a></div>
+      <p class="feature-desc">See the recipe menu and one free recipe preview.</p>
+      <div class="feature-body" style="display:none;"><ul class="ability-list"><li>Browse the recipe categories</li><li>Open one free recipe to see its card</li><li>Upgrade to open every recipe</li></ul></div></li>
+  </ol>
+</div>
 
-  <hr>
-
-  <h4>◆ Your Free Tools ◆</h4>
-
-  <!-- GROCERY LIST -->
-  <h4>📋 Grocery List :</h4>
-
-  <div class="card flex-row">
-  	
-  	<div class"flex-column">
-    <p>Build your grocery list by typing an item name into the text box or speaking into the microphone(🎤) and pressing the add(+) button.</p>
-    
-    <p>When you take an item from the shelf, put a check in the box beside the item name. Press the lock button to lock your selection.</p>
-    </div>
-    
-    <a href="grocery_list.html" class="orange-btn" >Open Tool</a>
+<!-- ── UPGRADE CARD ── -->
+<div class="card">
+  <h4>Want More Tools?</h4>
+  <p>Upgrade to the full version of Meal Planner for $5 and unlock every tool.</p>
+  <p>Tools include Favorite Recipes, My Recipes, the Meal Planner Calendar, the Notepad and more, plus all future upgrades.</p>
+  <div class="btn-row">
+    <a href="index.html?view=features" class="pill">See all features</a>
+    <a href="purchase_page.html" class="pill dark">Upgrade for $5</a>
   </div>
-
-  <hr>
-
-  <!-- COOKBOOK -->
-  <h4>📖 Cookbook :</h4>
-  <div class="card flex-row">
-  	
-  	<div class"flex-column">
-    <p>The free version lets you see the cookbook menu and 1 free recipe preview.</p>
-    
-    <p>Upgrade to gain access to the complete list of cookbook recipes and capabilities.</p>
-    </div>
-    
-    
-    <a href="recipes_menu.html" class="orange-btn" >Open Tool</a>
-  </div>
-
-  <hr>
-
-  <!-- UPGRADE PROMPT -->
-  <h4>◆ Want More Tools ? ◆</h4>
-  <div class="card">
-    <p>Upgrade to the full version of meal planner for $5 and unlock the full list of tools and smart tool abilities.</p>
-    <p>Tools include Favorite Recipes List, My Recipes, Meal Planner Calendar, Smart Search, A.I. Suggestions and many more.</p>
-    
-    <p>Plus all future upgrades to meal planner are included.</p>
-
-    <a href="index.html" class="orange-btn">See All Features</a>
-    
-    <a href="purchase_page.html" class="blue-btn" style="width:90px; flex-shrink:0; font-size:11px; color:gold;">Upgrade for $5</a>
-  </div>
-
 </div>
 
 <!-- ── SHARE CARD ── -->
 <div class="card">
-	
-  <div class="blue-block">◆ Share This App ◆</div>
-  
+  <div class="blue-block">Share This App</div>
   <div class="tip-box">
     <p>Enjoying the app? Share it with friends and family so they can try it too.</p>
   </div>
-  
-  <div class="page-ornament"></div>
-  
 </div>
 
-<script src="free_version_data.js"></script>
+<script>
+document.getElementById('dateDisplay').textContent =
+  new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+function showHelp() { document.getElementById('helpOverlay').style.display = 'flex'; }
+function hideHelp() { document.getElementById('helpOverlay').style.display = 'none'; }
+function toggleFeature(h) {
+  var b = h.closest('li').querySelector('.feature-body');
+  if (b) b.style.display = (b.style.display === 'none') ? 'block' : 'none';
+}
+</script>
+<script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
 <script type="module" src="firebase_login_auth.js"></script>
 
 </body>

@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cookbook</title>
+<title>Recipes Menu</title>
 
-<meta name="theme-color" content="#c8a96e">
+<meta name="theme-color" content="#F6F3EC">
 
 <link rel="manifest" href="meal_planner_manifest.json">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=15">
-<link rel="stylesheet" href="button_style.css?v=2">
+<link rel="stylesheet" href="cookbook_menu_stylesheet.css?v=16">
+<link rel="stylesheet" href="recipes_menu_style.css?v=2">
 </head>
 
 <body>
@@ -21,22 +21,19 @@
 <header class="cookbook-toolbar">
   <button class="orange-btn" id="toolbarBackBtn" onclick="toolbar_back()">← Back</button>
   <div class="notepad-date" id="dateDisplay"></div>
-  <div class="help-btn-wrap">
-    <div class="help-btn" id="helpBtn" onclick="show_help_modal()">?</div>
-    <div class="help-btn-label">help</div>
-  </div>
+  <button class="help-btn" id="helpBtn" onclick="show_help_modal()" aria-label="Help"><span class="help-q">?</span><span class="help-word">help</span></button>
 </header>
 
-<h3 id="pageTitle" class="page-title">📖  Recipes Menu :</h3>
+<div class="title-line"><h3 id="pageTitle" class="page-title">Recipes Menu</h3></div>
 
-<p id="mainPageDescription">Please choose an item in the list or click Help for more instructions.<span class="desc-line">Search through the recipes menu below to find a recipe.</span></p>
+<p id="mainPageDescription">Tap a category to see its recipes.<span class="desc-line">Search the menu below to find a recipe.</span></p>
 
 <div id="plan-target-note" class="target-note" style="display:none;"></div>
 
 <!-- Search results message -->
 <div id="search_results" class="search-error-message"></div>
 
-<!-- SEARCH ROW (its own bordered row above the container) -->
+<!-- SEARCH ROW -->
 <div class="search-row" id="search-row">
   <span class="search-icon" onclick="startVoice()">🎤</span>
   <input class="text-input" type="text" id="search_input" placeholder="Search the menu here..." onkeydown="search_on_enter(event)" autocomplete="off">

@@ -298,7 +298,7 @@ function open_recipe_view(recipe, icon, cat_name) {
   document.getElementById('recipe-editor-view').style.display = 'block';
 
   document.getElementById('recipe-title-display').textContent = (icon ? icon + ' ' : '') + recipe.name;
-  set_header_title('🍽️  Recipe :');
+  set_header_title('Recipe');
 
   document.getElementById('recipe-editor-body').innerHTML = render_recipe_card(recipe);
   show_back_btn();
@@ -365,7 +365,7 @@ window.adjust_batches = adjust_batches;
 function back_to_list() {
   document.getElementById('recipe-editor-view').style.display = 'none';
   document.getElementById('notes-list-view').style.display = 'block';
-  set_header_title('📖  Recipes Menu :');
+  set_header_title('Recipes Menu');
   hide_back_btn();
   const desc = document.getElementById('mainPageDescription');
   if (desc) desc.style.display = '';

@@ -1,0 +1,53 @@
+/* tools_page.css — Meal Planner Full / Free pages in the grocery list look:
+   cream paper, ink text, green accents, white cards, pill buttons. */
+:root { --ink: #1F2A24; --muted: #5B655F; --green: #2F6B4F; --paper: #F6F3EC; --line: #DDD6C8; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { background: var(--paper); min-height: 100%; }
+body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: var(--paper); color: var(--ink);
+  font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.45; }
+h1, h2, h3, h4, h5, p { margin: 0; }
+
+/* signed-in row */
+#auth-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+#nav-user-email { font-size: 15px; color: var(--muted); min-width: 0; overflow-wrap: anywhere; }
+#sign-out-btn, .pill { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 16px; border-radius: 999px;
+  border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 500 15px 'DM Sans', sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; }
+.pill.dark { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 700; }
+
+/* title row */
+.title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 16px 0 20px; }
+.title-row h2 { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; line-height: 1.1; color: var(--ink); }
+.title-right { display: flex; align-items: center; gap: 8px; }
+#dateDisplay { font: 400 11px 'Space Mono', monospace; color: var(--muted); white-space: nowrap; }
+.help-btn { width: 46px; height: 46px; border-radius: 4px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 0; flex: 0 0 auto; cursor: pointer; }
+.help-q { font: 700 17px 'Space Mono', monospace; line-height: 1; }
+.help-word { font: 400 10px 'Space Mono', monospace; line-height: 1; }
+.help-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; z-index: 50; padding: 20px; }
+.help-box { background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 18px; max-width: 420px; width: 100%; }
+.help-box h3 { font-size: 20px; margin-bottom: 8px; }
+.help-box ul { padding-left: 20px; margin: 0 0 14px; line-height: 1.5; }
+
+/* cards */
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin-bottom: 16px; }
+.card > .tool-head h3 { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; }
+.tool-intro { margin-top: 8px; color: var(--muted); }
+
+/* the tool list */
+.feature-list { list-style: none; padding: 0; margin: 14px 0 0; }
+.feature-list > li { padding: 14px 0; border-top: 1px solid var(--line); }
+.tool-head { display: flex; align-items: center; gap: 10px; }
+.feature-title { flex: 1; font-family: 'Geologica', sans-serif; font-weight: 400; font-size: 20px; cursor: pointer; }
+.feature-title::first-letter { text-transform: uppercase; }
+.feature-desc { margin-top: 4px; }
+.ability-list { list-style: disc; padding-left: 22px; margin: 8px 0 0; color: var(--muted); }
+.ability-list li { margin-bottom: 4px; }
+.orange-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 0 18px; border-radius: 999px; border: 0;
+  background: var(--ink); color: #fff; font: 700 14px 'DM Sans', sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; }
+
+/* upgrade + share */
+.card h4, .blue-block { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.card p + p { margin-top: 8px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.tip-box p { color: var(--muted); }
+.page-ornament { display: none; }
