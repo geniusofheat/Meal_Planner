@@ -50,3 +50,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .note-item-row, .sub-list li { border-bottom-color: var(--line) !important; }
 .sub-list { margin: 0 10px; }
 .main { padding-left: 0; }
+
+/* help button: dark fill, white text */
+.help-btn { background: #1F2A24; color: #fff; border-color: #1F2A24; }

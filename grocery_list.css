@@ -200,3 +200,6 @@ button { font-family: inherit; cursor: pointer; }
 .help-btn { width: 46px; height: 46px; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
 .help-q { font: 700 17px 'Space Mono', monospace; line-height: 1; }
 .help-word { font: 400 10px 'Space Mono', monospace; line-height: 1; }
+
+/* help button: dark fill, white text */
+.help-btn { background: #1F2A24; color: #fff; border-color: #1F2A24; }

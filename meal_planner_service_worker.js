@@ -3,7 +3,7 @@
 // Auto-updating: always fetches fresh files, cache is backup only
 // ============================================================
 
-const CACHE_NAME = 'Meal_Planner-v95';
+const CACHE_NAME = 'Meal_Planner-v96';
 
 const FILES_TO_CACHE = [
   'index.html',

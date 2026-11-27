@@ -54,3 +54,6 @@ h1, h2, h3, h4, h5, p { margin: 0; }
 
 .share-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
 .share-head .blue-block { margin: 0; }
+
+/* help button: dark fill, white text */
+.help-btn { background: #1F2A24; color: #fff; border-color: #1F2A24; }

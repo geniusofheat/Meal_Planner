@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   view_year  = now.getFullYear();
   view_month = now.getMonth();
   week_start = sunday_of(now);
+  selected_iso = iso_of(now);   // today starts out selected
   open_weeks = new Set([week_key(view_year, view_month, ordinal_week(now))]);
 
   plan    = load_json(PLAN_KEY, {});
@@ -279,7 +280,7 @@ function render_week() {
           const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
           if (mode === 'events') { html += event_day_html(iso, n); continue; }
           const meals = plan[iso] || [];
-          html += '<div class="day-row"><div class="day-num' + ((meals.length || iso === selected_iso) ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
+          html += '<div class="day-row"><div class="day-num' + (meals.length ? ' planned' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
           if (!meals.length) {
             html += '<div class="day-empty"><span>Empty</span>';
             if (iso === selected_iso) {
@@ -322,7 +323,7 @@ function render_week() {
 
 function event_day_html(iso, n) {
   const list = events[iso] || [];
-  let h = '<div class="day-row"><div class="day-num' + ((list.length || iso === selected_iso) ? ' planned' : '') + '">' + n + '</div><div class="day-meals">';
+  let h = '<div class="day-row"><div class="day-num' + (list.length ? ' planned' : '') + (iso === selected_iso ? ' selected' : '') + '">' + n + '</div><div class="day-meals">';
   if (!list.length) {
     h += '<div class="day-empty"><span>No events</span>' + ev_plus(iso) + '</div>';
   } else {

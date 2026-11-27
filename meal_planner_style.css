@@ -32,3 +32,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .meal-detail h4, .meal-date { font-family: 'Fraunces', serif; color: var(--ink); }
 .add-choice { color: var(--ink); font: 15px 'DM Sans', sans-serif; }
 .event-input { border: 1.5px solid var(--ink); font-family: 'DM Sans', sans-serif; color: var(--ink); }
+
+/* the selected day in the week list: orange rounded square, white number */
+.day-num.selected { width: 34px; min-height: 0; height: 34px; margin: 3px 0; background: #E8761E; border: 1.5px solid #E8761E; border-radius: 8px; color: #fff; font-weight: 700; }
