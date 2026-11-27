@@ -175,7 +175,7 @@ function open_plan_popup() {
     steps:       current_recipe.prep
   }));
 
-  window.location.href = 'meal_planner.html';
+  window.location.href = 'calendar.html';
 }
 // END § 4b
 

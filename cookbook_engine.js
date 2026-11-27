@@ -397,7 +397,7 @@ function hide_back_btn() {
   if (btn) btn.style.display = 'none';
 }
 
-// Hand the open recipe to the Meal Planner page and go there.
+// Hand the open recipe to the Calendar page and go there.
 // mode 'plan' -> planner asks which day;  mode 'save' -> also kept in Favorites.
 function send_recipe_to_planner(mode) {
   const r = engine_current_recipe;
@@ -413,7 +413,7 @@ function send_recipe_to_planner(mode) {
     mode:        mode
   };
   try { localStorage.setItem('mealplanner_pending_recipe', JSON.stringify(copy)); } catch (e) { console.error(e); }
-  window.location.href = 'meal_planner.html';
+  window.location.href = 'calendar.html';
 }
 
 function save_to_favorites_cb() {

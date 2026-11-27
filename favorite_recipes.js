@@ -72,7 +72,7 @@
       batches: 1, mode: 'plan'
     };
     try { localStorage.setItem(PENDING_KEY, JSON.stringify(copy)); } catch (e) {}
-    window.location.href = 'meal_planner.html';
+    window.location.href = 'calendar.html';
   };
 
   window.removeFav = function () {

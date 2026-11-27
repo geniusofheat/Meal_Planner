@@ -152,7 +152,7 @@ function render_prompt() {
 
 // ── help ────────────────────────────────────────────────────────
 const HELP_CONTENT = `
-  <p>The Meal Planner lets you plan recipes on the days you want to cook them.</p>
+  <p>The Calendar lets you plan recipes on the days you want to cook them.</p>
   <ul class="help-list">
     <li>Tap a date on the calendar to open its week in the list below. An empty day shows a + button.</li>
     <li>Tap the + to choose where the recipe comes from: the Recipe Menu, your Favorites or My Recipes. The recipe is added to that day.</li>
