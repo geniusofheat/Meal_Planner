@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#F6F3EC">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="manifest" href="meal_planner_manifest.json">
-<link rel="stylesheet" href="tools_page.css?v=1">
+<link rel="stylesheet" href="tools_page.css?v=2">
 </head>
 
 <body>
@@ -68,15 +68,29 @@
 
 <!-- ── SHARE CARD ── -->
 <div class="card">
-  <div class="blue-block">Share This App</div>
+  <div class="share-head">
+    <div class="blue-block">Share This App</div>
+    <button class="orange-btn" id="shareBtn" type="button" onclick="shareApp()">Share</button>
+  </div>
   <div class="tip-box">
-    <p>Enjoying the app? Share it with friends and family so they can try it too.</p>
+    <p id="shareNote">Enjoying the app? Share it with friends and family so they can try it too.</p>
   </div>
 </div>
 
 <script>
 document.getElementById('dateDisplay').textContent =
   new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+function shareApp() {
+  var data = { title: 'Meal Planner', text: 'Try Meal Planner: recipes, a calendar, a grocery list and a notepad.', url: 'https://geniusofheat.github.io/Meal_Planner/' };
+  var note = document.getElementById('shareNote');
+  if (navigator.share) {
+    navigator.share(data).catch(function () {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(data.url).then(function () { note.textContent = 'Link copied. Paste it into a message to share.'; });
+  } else {
+    note.textContent = 'Share this link: ' + data.url;
+  }
+}
 function showHelp() { document.getElementById('helpOverlay').style.display = 'flex'; }
 function hideHelp() { document.getElementById('helpOverlay').style.display = 'none'; }
 function toggleFeature(h) {
