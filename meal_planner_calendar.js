@@ -29,7 +29,10 @@ let open_days   = new Set();
 let open_meals  = new Set();
 let open_weeks  = new Set();
 let month_open  = true;
-let mode        = 'meal';   // 'meal' | 'events'
+let mode        = 'meal';   // which view the week list shows
+let mode_chosen = false;    // true once a Plan button has been pressed
+let _unused_mode_note = 0;
+let mode_x      = 0;   // 'meal' | 'events'
 let events      = {};       // { 'YYYY-MM-DD': [ { title }, ... ] }
 let event_iso   = null;     // day whose event-title row is open
 let moving      = null;   // { iso, idx } while a planned meal is being moved to another day
@@ -113,6 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function set_mode(m) {
   if (m === 'events' && pending) return;     // finish placing the waiting recipe first
+  if (mode_chosen && mode === m) { mode_chosen = false; mode = 'meal'; add_iso = null; event_iso = null; render_all(); return; }   // press again to clear
+  mode_chosen = true;
   mode = m; add_iso = null; event_iso = null;
   render_all();
 }
@@ -133,13 +138,16 @@ function render_all() {
 }
 
 function render_mode_buttons() {
-  document.body.classList.toggle('mode-meal', mode === 'meal');
-  document.body.classList.toggle('mode-events', mode === 'events');
+  document.body.classList.toggle('mode-meal', mode_chosen && mode === 'meal');
+  document.body.classList.toggle('mode-events', mode_chosen && mode === 'events');
+  const row = document.querySelector('.mode-row');
+  if (row) row.classList.toggle('chosen', mode_chosen);
   ['meal', 'events'].forEach(k => {
     const b = document.getElementById('mode-' + k);
     if (!b) return;
-    b.classList.toggle('active', mode === k);
-    b.setAttribute('aria-pressed', mode === k ? 'true' : 'false');
+    const on = mode_chosen && mode === k;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
   });
 }
 
@@ -147,7 +155,7 @@ function render_mode_buttons() {
 function render_prompt() {
   const el = document.getElementById('cal-prompt');
   if (!el) return;
-  if (mode === 'events') { el.textContent = 'Tap a date to open its week, then tap the + beside a day to add an event.'; return; }
+  if (mode === 'events' && mode_chosen) { el.textContent = 'Tap a date to open its week, then tap the + beside a day to add an event.'; return; }
   el.textContent = pending
     ? (moving ? 'Choose the new day for this meal from the calendar below.' : 'Please choose a day of the week from the calendar below.')
     : 'Tap a date to open its week.';

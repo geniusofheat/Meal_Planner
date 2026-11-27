@@ -12,7 +12,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .cal-month-title { color: var(--ink); font: 600 22px 'Fraunces', serif; }
 .cal-weekdays div { color: var(--muted); font: 400 12px 'Space Mono', monospace; }
 .cal-day { background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 0; font: 400 16px 'DM Sans', sans-serif; }
-.cal-day.today { border: 2px solid var(--ink); font-weight: 700; }
 .cal-grid.picking .cal-day { border-color: var(--ink); }
 .month-head, .week-head { color: var(--ink); border-bottom: 1px solid var(--line); }
 .month-head { font: 600 24px 'Fraunces', serif; }
@@ -35,20 +34,29 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .cal-day.has-meal  { background: var(--meal);  border-color: var(--meal);  color: #fff; font-weight: 700; }
 .cal-day.has-event { background: var(--event); border-color: var(--event); color: #fff; font-weight: 700; }
 .cal-day.has-meal.has-event { background: linear-gradient(135deg, var(--meal) 50%, var(--event) 50%); }
-.cal-day.today { border: 2px solid var(--ink); }
 .day-num { width: 34px; min-height: 0; height: 34px; margin: 3px 0; border: 1.5px solid transparent; border-radius: 8px; }
 .day-num.has-meal  { background: var(--meal);  border-color: var(--meal);  color: #fff; }
 .day-num.has-event { background: var(--event); border-color: var(--event); color: #fff; }
-.mode-meal .day-num.selected  { background: var(--meal);  border-color: var(--meal);  color: #fff; }
-.mode-events .day-num.selected { background: var(--event); border-color: var(--event); color: #fff; }
 .day-row { align-items: center; }
 
 /* mode buttons carry the plan colours */
-.mode-btn { color: #fff !important; border: 0 !important; opacity: .5; }
+.mode-btn { color: #fff !important; border: 0 !important; opacity: 1; }
 #mode-meal   { background: var(--meal)  !important; }
 #mode-events { background: var(--event) !important; }
-.mode-btn.active { opacity: 1; }
-/* an unplanned day stays plain even when selected (overrides old orange rule) */
-.cal-day.selected:not(.has-meal):not(.has-event) { background: var(--paper); color: var(--ink); font-weight: 400; }
-.cal-day.selected:not(.has-meal):not(.has-event):not(.today) { border-color: var(--line); }
-.cal-day.today.selected:not(.has-meal):not(.has-event) { font-weight: 700; }
+.mode-row.chosen .mode-btn:not(.active) { opacity: .45; }
+.mode-btn.active { box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--ink); }
+
+/* ── current selection: black border follows the tapped day (today on load) ── */
+.cal-day.selected:not(.has-meal):not(.has-event) { background: var(--paper); color: var(--ink); font-weight: 700; }
+.cal-day.selected, .cal-day.selected.has-meal, .cal-day.selected.has-event { border: 2px solid var(--ink); }
+/* after a Plan button is pressed, the selected day takes that button's colour */
+.mode-meal   .cal-day.selected:not(.has-meal):not(.has-event) { background: var(--meal);  color: #fff; }
+.mode-events .cal-day.selected:not(.has-meal):not(.has-event) { background: var(--event); color: #fff; }
+.day-num.selected { background: var(--paper); border: 2px solid var(--ink); color: var(--ink); }
+.day-num.selected.has-meal  { background: var(--meal);  color: #fff; }
+.day-num.selected.has-event { background: var(--event); color: #fff; }
+.mode-meal   .day-num.selected:not(.has-event) { background: var(--meal);  color: #fff; }
+.mode-events .day-num.selected:not(.has-meal)  { background: var(--event); color: #fff; }
+/* today, when it is not the current selection, looks like any other day */
+.cal-day.today:not(.selected):not(.has-meal):not(.has-event) { background: var(--paper); border: 1px solid var(--line); font-weight: 400; }
+.cal-day.today:not(.selected).has-meal, .cal-day.today:not(.selected).has-event { border-width: 1px; }
