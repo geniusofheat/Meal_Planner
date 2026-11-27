@@ -57,6 +57,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 .day-num.selected.has-event { background: var(--event); color: #fff; }
 .mode-meal   .day-num.selected:not(.has-event) { background: var(--meal);  color: #fff; }
 .mode-events .day-num.selected:not(.has-meal)  { background: var(--event); color: #fff; }
-/* today, when it is not the current selection, looks like any other day */
-.cal-day.today:not(.selected):not(.has-meal):not(.has-event) { background: var(--paper); border: 1px solid var(--line); font-weight: 400; }
-.cal-day.today:not(.selected).has-meal, .cal-day.today:not(.selected).has-event { border-width: 1px; }
+/* today, when it is not the current selection: same marker, grayed out */
+.cal-day.today:not(.selected) { border: 2px solid #A9A8A1; }
+.cal-day.today:not(.selected):not(.has-meal):not(.has-event) { background: #E9E8E2; color: #6E6E69; font-weight: 700; }
