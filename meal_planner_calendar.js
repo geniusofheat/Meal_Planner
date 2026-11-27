@@ -34,6 +34,7 @@ let mode_chosen = false;    // true once a Plan button has been pressed
 let _unused_mode_note = 0;
 let mode_x      = 0;   // 'meal' | 'events'
 let events      = {};       // { 'YYYY-MM-DD': [ { title }, ... ] }
+let edit_iso    = null;     // day whose Edit controls (Change / ✕) are showing
 let event_iso   = null;     // day whose event-title row is open
 let moving      = null;   // { iso, idx } while a planned meal is being moved to another day
 
@@ -139,7 +140,7 @@ function set_mode(m) {
   if (m === 'events' && pending) return;     // finish placing the waiting recipe first
   if (mode_chosen && mode === m) { mode_chosen = false; mode = 'meal'; add_iso = null; event_iso = null; render_all(); return; }   // press again to clear
   mode_chosen = true;
-  mode = m; add_iso = null; event_iso = null;
+  mode = m; add_iso = null; event_iso = null; edit_iso = null;
   render_all();
 }
 
@@ -301,9 +302,10 @@ function day_block_html(iso, n) {
   let h = '<div class="day-block">';
   h += '<div class="day-top"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><span class="day-dow">' + dow + '</span>' +
        '<span class="day-top-btns">' +
-       '<button class="orange-btn add-meal-btn" data-act="add-meal" data-iso="' + iso + '" aria-label="Add a meal to ' + esc(full_date(iso)) + '">+ Meal</button>' +
-       '<button class="orange-btn add-event-btn" data-act="add-event" data-iso="' + iso + '" aria-label="Add an event to ' + esc(full_date(iso)) + '">+ Event</button>' +
+       '<button class="orange-btn add-btn" data-act="add-plus" data-iso="' + iso + '" aria-label="Add to ' + esc(full_date(iso)) + '">+</button>' +
+       ((meals.length || evs.length) ? '<button class="orange-btn" data-act="toggle-edit" data-iso="' + iso + '">' + (edit_iso === iso ? 'Done' : 'Edit') + '</button>' : '') +
        '</span></div>';
+  const editing = edit_iso === iso;
   if (add_iso === iso) {
     h += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div><div class="add-choice-btns">' +
       '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipes Menu</button>' +
@@ -322,10 +324,10 @@ function day_block_html(iso, n) {
       const mkey = iso + '#' + idx;
       h += '<div class="meal-row"><div class="meal-head ev-head" data-act="toggle-meal" data-key="' + mkey + '">' +
         '<span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(m.name) + '</span>' +
-        '<span class="meal-btns">' +
+        (editing ? '<span class="meal-btns">' +
         '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
         '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(m.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
-        '</span></div>';
+        '</span>' : '') + '</div>';
       if (open_meals.has(mkey)) h += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
       h += '</div>';
     });
@@ -335,7 +337,7 @@ function day_block_html(iso, n) {
     h += '<div class="day-section day-events-sec"><span class="tag tag-event">Event</span>';
     evs.forEach((ev, idx) => {
       h += '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(ev.title) + '</span>' +
-        '<span class="meal-btns"><button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span></div></div>';
+        (editing ? '<span class="meal-btns"><button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span>' : '') + '</div></div>';
     });
     h += '</div>';
   }
@@ -462,6 +464,15 @@ function on_week_click(e) {
   const a0 = e.target.closest('[data-act]');
   if (a0) {
     const act = a0.getAttribute('data-act'), iso = a0.getAttribute('data-iso');
+    if (act === 'toggle-edit') { edit_iso = (edit_iso === iso) ? null : iso; render_week(); return; }
+    if (act === 'add-plus' && mode_chosen && mode === 'events') {
+      event_iso = (event_iso === iso) ? null : iso;
+      add_iso = null; selected_iso = iso;
+      render_all();
+      const inp0 = document.getElementById('event-title-input');
+      if (inp0) { inp0.focus(); inp0.addEventListener('keydown', ev => { if (ev.key === 'Enter') commit_event(iso); }); }
+      return;
+    }
     if (act === 'add-event') {
       event_iso = (event_iso === iso) ? null : iso;
       add_iso = null; selected_iso = iso;
@@ -479,7 +490,7 @@ function on_week_click(e) {
       return;
     }
   }
-  const addb = e.target.closest('[data-act="add-meal"]');
+  const addb = e.target.closest('[data-act="add-meal"], [data-act="add-plus"]');
   if (addb) {
     const iso = addb.getAttribute('data-iso');
     add_iso = (add_iso === iso) ? null : iso;
