@@ -340,10 +340,10 @@ function event_day_html(iso, n) {
     h += '<div class="day-empty"><span>No events</span>' + ev_plus(iso) + '</div>';
   } else {
     list.forEach((ev, idx) => {
-      h += '<div class="meal-row"><div class="meal-head"><span>' + esc(ev.title) + '</span><span class="meal-btns">' +
-        '<button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span></div></div>';
+      h += '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title">' + esc(ev.title) + '</span><span class="meal-btns">' +
+        '<button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
+        (idx === 0 ? ev_plus(iso) : '') + '</span></div></div>';
     });
-    h += '<div class="day-empty"><span></span>' + ev_plus(iso) + '</div>';
   }
   if (event_iso === iso) {
     h += '<div class="add-choice"><div>Event for ' + esc(full_date(iso)) + ':</div>' +
