@@ -1,0 +1,21 @@
+/* recipe_tools_style.css — My Recipes + Favorite Recipes in beige / white / black. Loaded after recipe_tools.css */
+:root { --ink:#1F2A24; --muted:#5B655F; --paper:#F6F3EC; --deep:#E8DFCB; --line:#DDD6C8; }
+html, body { background: var(--paper); }
+body { max-width: 480px; margin: 0 auto; padding: 12px 20px 32px; color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 16px; }
+.nav-row { padding: 0; max-width: none; }
+.nav-date { color: var(--muted); font: 400 11px 'Space Mono', monospace; }
+.page-head { max-width: none; margin: 18px 0 14px; text-align: left; }
+.page-title { font: 600 34px/1.1 'Fraunces', serif; color: var(--ink); }
+.page-desc { color: var(--muted); font-size: 15px; margin-top: 8px; }
+.orange-btn, .orange-btn-44 { background: var(--ink); color: #fff; border: 0; border-radius: 999px; min-height: 40px; padding: 0 18px; font: 700 14px 'DM Sans', sans-serif; }
+.panel { max-width: none; background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 16px; }
+.panel h3, .label { font-family: 'Fraunces', serif; color: var(--ink); }
+.label { font-size: 17px; }
+.field { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; font: 400 16px 'DM Sans', sans-serif; color: var(--ink); }
+.fav-item { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
+.fav-name { font: 400 18px 'Geologica', sans-serif; }
+.fav-cat { color: var(--muted); }
+.recipe-card h2 { font-family: 'Fraunces', serif; }
+.recipe-card ul, .recipe-card ol, .recipe-card p { font-size: 16px; }
+.msg { font-size: 15px; }
+.target-note { max-width: none; background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 16px; font: 15px 'DM Sans', sans-serif; }
