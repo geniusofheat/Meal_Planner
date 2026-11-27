@@ -197,3 +197,6 @@ button { font-family: inherit; cursor: pointer; }
 #grocery-list .group-title, .cat-row > span:first-child { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 18px; }
 #grocery-list .group-title, .cat-row > span:first-child { font-weight: 400; }
 #grocery-list .group-title, .cat-row > span:first-child { font-family: 'Geologica', sans-serif; font-weight: 400; font-size: 20px; }
+.help-btn { width: 46px; height: 46px; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
+.help-q { font: 700 17px 'Space Mono', monospace; line-height: 1; }
+.help-word { font: 400 10px 'Space Mono', monospace; line-height: 1; }
