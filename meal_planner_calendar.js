@@ -428,7 +428,6 @@ function full_date(iso) {
 
 function meal_detail_html(m, iso) {
   let h = '';
-  if (iso) h += '<div class="meal-date">' + esc(full_date(iso)) + '</div>';
   if (m.servings) h += '<div>' + esc(m.servings) + '</div>';
   if (Array.isArray(m.ingredients) && m.ingredients.length) {
     h += '<h4>Ingredients :</h4><ul>' + m.ingredients.map(i => '<li>' + esc(i) + '</li>').join('') + '</ul>';
