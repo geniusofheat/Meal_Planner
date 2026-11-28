@@ -113,6 +113,9 @@
   $('timerReset').addEventListener('click', function () {
     localStorage.removeItem(TIMER_KEY); stopRing(); timerUI(); keepAwake(); tick();
   });
+  $('timerClear').addEventListener('click', function () {
+    localStorage.removeItem(TIMER_KEY); stopRing(); setInputs(0); timerUI(); keepAwake(); tick();
+  });
   ['tHours', 'tMins', 'tSecs'].forEach(function (id) { $(id).addEventListener('input', tick); });
   function scale(f) {
     if (load(TIMER_KEY, null)) return;

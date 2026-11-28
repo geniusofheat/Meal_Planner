@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#F6F3EC">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="manifest" href="meal_planner_manifest.json">
-<link rel="stylesheet" href="timer_alarm.css?v=4">
+<link rel="stylesheet" href="timer_alarm.css?v=7">
 </head>
 <body>
 
@@ -19,9 +19,23 @@
 
 <h2 class="ta-title">Timer and Alarm</h2>
 
+<!-- ───────────── ALARM ───────────── -->
+<section class="card" id="alarmCard">
+  <h3>Alarm</h3>
+  <div class="lcd clock" id="clockDisplay">--:--:--</div>
+
+  <div class="alarm-add">
+    <input type="time" id="alarmTime" value="07:00" aria-label="Alarm time">
+    <input type="text" id="alarmLabel" maxlength="30" placeholder="Label (optional)" aria-label="Alarm label" autocomplete="off">
+    <button type="button" class="orange-btn" id="alarmAdd">Add</button>
+  </div>
+  <ul class="alarm-list" id="alarmList"></ul>
+  <p class="note">Alarms ring while this page is open. Keep the page open and your phone's volume up.</p>
+</section>
+
 <!-- ───────────── TIMER ───────────── -->
 <section class="card" id="timerCard">
-  <h3>Timer</h3>
+  <div class="card-head"><h3>Timer</h3><button type="button" class="orange-btn small" id="timerClear">Clear</button></div>
   <div class="lcd" id="timerDisplay" aria-live="off">00:00:00</div>
 
   <div class="set-row" id="timerSet">
@@ -47,20 +61,6 @@
   </div>
 </section>
 
-<!-- ───────────── ALARM ───────────── -->
-<section class="card" id="alarmCard">
-  <h3>Alarm</h3>
-  <div class="lcd clock" id="clockDisplay">--:--:--</div>
-
-  <div class="alarm-add">
-    <input type="time" id="alarmTime" value="07:00" aria-label="Alarm time">
-    <input type="text" id="alarmLabel" maxlength="30" placeholder="Label (optional)" aria-label="Alarm label" autocomplete="off">
-    <button type="button" class="orange-btn" id="alarmAdd">Add</button>
-  </div>
-  <ul class="alarm-list" id="alarmList"></ul>
-  <p class="note">Alarms ring while this page is open. Keep the page open and your phone's volume up.</p>
-</section>
-
 <!-- ───────────── RINGING ───────────── -->
 <div class="ring-overlay" id="ringOverlay">
   <div class="ring-box">
@@ -79,7 +79,7 @@
     <h3>Help</h3>
     <ul>
       <li>Timer: set hours (up to 99), minutes and seconds, or tap a preset, then press Start. Press ▲ to double the time or ▼ to halve it.</li>
-      <li>Press Pause to stop it, Resume to continue, and Reset to start over.</li>
+      <li>Press Pause to stop it, Resume to continue, and Reset to start the same time over. Clear sets the timer back to zero.</li>
       <li>Alarm: pick a time, add an optional label and press Add.</li>
       <li>Use the switch beside an alarm to turn it on or off, and the ✕ to delete it.</li>
       <li>When a timer or alarm rings, press Stop, or Snooze to ring again in 5 minutes.</li>
@@ -89,7 +89,7 @@
   </div>
 </div>
 
-<script src="timer_alarm.js?v=4"></script>
+<script src="timer_alarm.js?v=5"></script>
 <script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
 </body>
 </html>
