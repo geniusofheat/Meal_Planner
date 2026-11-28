@@ -8,6 +8,26 @@ function esc(t) {
   return String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
+/* "1 can black beans, drained" -> "black bean": compare ingredients by what they are, not the amount */
+const UNITS = 'cups?|c|tbsp|tablespoons?|tsp|teaspoons?|oz|ounces?|lbs?|pounds?|g|grams?|kg|ml|l|liters?|cans?|cloves?|slices?|pinch(?:es)?|dash(?:es)?|packages?|pkgs?|bunch(?:es)?|large|medium|small|whole|fresh|ripe|about';
+function key(name) {
+  let n = String(name).toLowerCase().split(',')[0].replace(/\(.*?\)/g, ' ');
+  n = n.replace(/[\d\u00bc-\u00be\u2150-\u215e\/.\-]+/g, ' ');
+  n = n.replace(new RegExp('\\b(' + UNITS + ')\\b', 'g'), ' ').replace(/\bof\b/g, ' ');
+  return n.split(/\s+/).filter(Boolean).map(w => w.replace(/(es|s)$/, '')).join(' ');
+}
+
+/* Pop-up message */
+function popup(lines) {
+  const old = document.getElementById('pickPopup'); if (old) old.remove();
+  const o = document.createElement('div');
+  o.id = 'pickPopup'; o.className = 'pick-popup';
+  o.innerHTML = '<div class="pick-popup-box" role="alertdialog"><div class="pick-popup-text">' +
+    lines.map(l => '<p>' + esc(l) + '</p>').join('') + '</div><button type="button" class="orange-btn pick-popup-ok">OK</button></div>';
+  o.addEventListener('click', ev => { if (ev.target === o || ev.target.closest('.pick-popup-ok')) o.remove(); });
+  document.body.appendChild(o);
+}
+
 /* The tip row (sentence + Add button) and the tappable ingredient list, as one block of HTML */
 window.ing_picker_html = function (ingredients) {
   const list = (ingredients || []);
@@ -51,14 +71,15 @@ async function add_to_grocery(names) {
   const lists = data.lists || {};
   const active = data.activeListName || 'Default';
   if (!lists[active]) lists[active] = [];
-  let added = 0, had = 0;
+  let added = 0; const dups = [];
   names.forEach((n, k) => {
-    if (lists[active].some(i => String(i.name).toLowerCase() === n.toLowerCase())) { had++; return; }
+    const kn = key(n);
+    if (lists[active].some(i => key(i.name) === kn)) { dups.push(n); return; }
     lists[active].push({ id: Date.now() + k, name: n, checked: false, serving: '', price: '' });
     added++;
   });
   await setDoc(ref, { lists, activeListName: active, menuInfo: data.menuInfo || {} });
-  return { ok: true, added, had };
+  return { ok: true, added, dups };
 }
 
 document.addEventListener('click', async (e) => {
@@ -77,10 +98,15 @@ document.addEventListener('click', async (e) => {
   catch (err) { console.error(err); res = { ok: false, msg: 'Could not reach your grocery list. Try again.' }; }
   if (res.ok) {
     set_selecting(block, false);
-    tip.textContent = res.added
-      ? 'Added ' + res.added + (res.added === 1 ? ' item' : ' items') + ' to your grocery list.' + (res.had ? ' ' + res.had + ' already there.' : '')
-      : 'Already on your grocery list.';
-    setTimeout(() => { if (!block.classList.contains('selecting')) tip.textContent = tip.getAttribute('data-idle'); }, 3500);
+    if (res.added) {
+      tip.textContent = 'Added ' + res.added + (res.added === 1 ? ' item' : ' items') + ' to your grocery list.';
+      setTimeout(() => { if (!block.classList.contains('selecting')) tip.textContent = tip.getAttribute('data-idle'); }, 3500);
+    }
+    if (res.dups.length) {
+      popup(res.dups.length === 1
+        ? ['This item is already in the grocery list:', res.dups[0]]
+        : ['These items are already in the grocery list:'].concat(res.dups));
+    }
   } else {
     tip.textContent = res.msg;
     refresh(block);

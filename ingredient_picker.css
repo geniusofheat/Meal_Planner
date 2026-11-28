@@ -15,3 +15,9 @@ ul.pick-list { list-style: disc; padding-left: 22px; margin: 0 0 8px; }
 .pick-ing.picked { background: #E8DFCB; border-radius: 8px; }
 .pick-ing.picked::before { background: #1F2A24 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
 .pick-ing.added { color: #5B655F; }
+
+.pick-popup { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
+.pick-popup-box { background: #fff; border: 1px solid #DDD6C8; border-radius: 16px; padding: 18px; max-width: 360px; width: 100%; text-align: center; color: #1F2A24; font: 16px/1.4 'DM Sans', sans-serif; }
+.pick-popup-text p { margin: 0 0 6px; }
+.pick-popup-text p + p { font-weight: 700; }
+.pick-popup-box .orange-btn { margin-top: 10px; }
