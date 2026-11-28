@@ -335,7 +335,6 @@ function day_block_html(iso, n) {
           (editing ? '<span class="meal-btns">' +
           '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(it.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
           '</span>' : '') + '</div>';
-        if (open_meals.has(mkey)) h += '<div class="meal-detail">' + meal_detail_html(it, iso) + '</div>';
         h += '</div>';
       }
     });
@@ -421,6 +420,7 @@ function recover_meal(iso, idx) {
     if (!m.notes && r.notes) m.notes = r.notes;
     save_plan();
     render_week();
+    refresh_recipe_card();
   });
 }
 
@@ -522,13 +522,9 @@ function on_week_click(e) {
   }
   const meal = e.target.closest('[data-act="toggle-meal"]');
   if (meal) {
-    const key = meal.getAttribute('data-key');
-    if (open_meals.has(key)) open_meals.delete(key); else open_meals.add(key);
-    render_week();
-    if (open_meals.has(key)) {
-      const parts = key.split('#');
-      recover_meal(parts[0], Number(parts[1]));
-    }
+    const parts = meal.getAttribute('data-key').split('#');
+    open_recipe_card(parts[0], Number(parts[1]));
+    recover_meal(parts[0], Number(parts[1]));
     return;
   }
   const wk = e.target.closest('[data-act="pick-week"]');
@@ -539,4 +535,32 @@ function on_week_click(e) {
     return;
   }
 
+}
+
+
+// Recipe card pop-up: opens when a planned meal title is tapped
+let card_ref = null;
+function refresh_recipe_card() {
+  const box = document.getElementById('recipe-card-pop');
+  if (!box || !card_ref) return;
+  const m = plan[card_ref.iso] && plan[card_ref.iso][card_ref.idx];
+  if (!m) { box.remove(); return; }
+  box.querySelector('.rc-title').textContent = m.name;
+  box.querySelector('.rc-body').innerHTML = meal_detail_html(m, card_ref.iso);
+}
+function open_recipe_card(iso, idx) {
+  const m = plan[iso] && plan[iso][idx];
+  if (!m) return;
+  card_ref = { iso: iso, idx: idx };
+  let box = document.getElementById('recipe-card-pop');
+  if (box) box.remove();
+  box = document.createElement('div');
+  box.id = 'recipe-card-pop';
+  box.innerHTML = '<div class="rc-card"><h3 class="rc-title"></h3><div class="rc-body meal-detail"></div>' +
+    '<button class="orange-btn rc-close" type="button">Close</button></div>';
+  box.addEventListener('click', ev => {
+    if (ev.target === box || ev.target.closest('.rc-close')) { box.remove(); card_ref = null; }
+  });
+  document.body.appendChild(box);
+  refresh_recipe_card();
 }
