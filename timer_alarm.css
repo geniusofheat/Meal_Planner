@@ -60,3 +60,7 @@ body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: va
 .card-head h3 { margin: 0; }
 .orange-btn.small { min-height: 36px; padding: 0 16px; font-size: 14px; }
 .preset-row { flex-wrap: nowrap; gap: 6px; } .preset-row button { min-width: 0; padding: 0 2px; font-size: 13px; }
+/* turquoise readouts with an inner white border, 10px in */
+.lcd { background: #2BB5A6; color: var(--ink); outline: 2px solid #fff; outline-offset: -10px; padding: 24px 18px; }
+.lcd.clock { padding: 24px 18px; }
+#timerDisplay { font-size: clamp(32px, 12vw, 54px); letter-spacing: 1px; white-space: nowrap; }
