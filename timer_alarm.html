@@ -22,10 +22,10 @@
 <!-- ───────────── TIMER ───────────── -->
 <section class="card" id="timerCard">
   <h3>Timer</h3>
-  <div class="lcd" id="timerDisplay" aria-live="off">01:00:00</div>
+  <div class="lcd" id="timerDisplay" aria-live="off">00:00:00</div>
 
   <div class="set-row" id="timerSet">
-    <label>Hours<input type="number" id="tHours" inputmode="numeric" min="0" max="99" value="1"></label>
+    <label>Hours<input type="number" id="tHours" inputmode="numeric" min="0" max="99" value="0"></label>
     <label>Minutes<input type="number" id="tMins" inputmode="numeric" min="0" max="59" value="0"></label>
     <label>Seconds<input type="number" id="tSecs" inputmode="numeric" min="0" max="59" value="0"></label>
   </div>
@@ -89,7 +89,7 @@
   </div>
 </div>
 
-<script src="timer_alarm.js?v=3"></script>
+<script src="timer_alarm.js?v=4"></script>
 <script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
 </body>
 </html>

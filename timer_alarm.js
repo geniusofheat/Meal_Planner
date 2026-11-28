@@ -93,7 +93,7 @@
         localStorage.removeItem(TIMER_KEY);
         $('timerDisplay').textContent = '00:00:00'; $('timerDisplay').classList.add('done');
         timerUI(); ring('timer', t.snooze ? 'Snooze over' : "Time's up", 'Timer finished');
-        setInputs(inputsMs() || 60 * 60000);
+        setInputs(inputsMs());
       } else { $('timerDisplay').textContent = fmt(left); }
     } else if (t && t.left != null) {
       $('timerDisplay').textContent = fmt(t.left);
@@ -116,7 +116,8 @@
   ['tHours', 'tMins', 'tSecs'].forEach(function (id) { $(id).addEventListener('input', tick); });
   function scale(f) {
     if (load(TIMER_KEY, null)) return;
-    var ms = inputsMs() || 60000;
+    var ms = inputsMs();
+    if (!ms) { if (f > 1) ms = 30000; else return; }   // from zero, ▲ starts at 1 minute
     ms = Math.round(ms * f / 1000) * 1000;
     ms = Math.max(1000, Math.min(ms, (99 * 3600 + 59 * 60 + 59) * 1000));
     setInputs(ms); tick();
@@ -166,7 +167,7 @@
 
   /* ── go ── */
   var t0 = load(TIMER_KEY, null);
-  if (!t0) setInputs(60 * 60000);
+  if (!t0) setInputs(0);
   renderAlarms(); timerUI(); keepAwake(); tick();
   setInterval(tick, 250);
 })();
