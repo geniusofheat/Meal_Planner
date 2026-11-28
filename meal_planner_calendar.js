@@ -357,7 +357,7 @@ function render_week() {
   for (let w = 0; w < weeks; w++) {
     html += '<button class="week-num' + (w === cur ? ' on' : '') + '" data-act="pick-week" data-key="' + week_key(view_year, view_month, w) + '" aria-label="Week ' + (w + 1) + '">' + (w + 1) + '</button>';
   }
-  html += '</span><span class="week-range">' + first + ' – ' + last + '</span></div><div class="week-days">';
+  html += '</span></div><div class="week-range">' + MONTHS[view_month] + ' ' + first + ' – ' + last + '</div><div class="week-days">';
   for (let n = first; n <= last; n++) {
     const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
     html += day_block_html(iso, n);
