@@ -188,5 +188,27 @@
         "prep": "Prepare pizza, bake, and slice into handheld pieces."
       }
     ]
+  },
+  {
+    "id": "egg_sides",
+    "icon": "🥚",
+    "name": "Egg Sides",
+    "desc": "Egg-based side dishes.",
+    "recipes": [
+      {
+        "name": "Deviled Eggs",
+        "servings": "6 servings",
+        "ingredients": [
+          "6 large eggs",
+          "¼ cup mayonnaise",
+          "1 tsp yellow mustard",
+          "1 tsp white vinegar",
+          "salt",
+          "pepper",
+          "paprika, for garnish"
+        ],
+        "prep": "Place eggs in a pot and cover with cold water by 1 inch. Bring to a boil, cover, remove from heat and let sit 12 minutes. Cool in ice water for 5 minutes, then peel. Cut the eggs in half lengthwise and scoop the yolks into a bowl. Mash yolks with mayonnaise, mustard, vinegar, salt and pepper until smooth. Spoon or pipe the filling back into the whites and dust with paprika. Chill until ready to serve."
+      }
+    ]
   }
 ]
