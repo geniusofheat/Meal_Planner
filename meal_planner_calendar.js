@@ -195,7 +195,7 @@ const HELP_CONTENT = `
     <li>Tap a week number in the weekly list to see that week's seven days.</li>
     <li>Press the + beside a date. In Plan a Meal it lets you pick a recipe from the Recipes Menu, your Favorites or My Recipes. In Plan Events it lets you type an event title and save it.</li>
     <li>Tap a meal title to see its ingredients and preparation.</li>
-    <li>Press Edit beside a date to change a meal's day or remove a meal or event with the ✕, then press Done.</li>
+    <li>Press Edit beside a date to show a ✕ on its meals or events, tap the ✕ to remove one, then press Done.</li>
     <li>You can also press Plan on any recipe card, then tap a day on the calendar.</li>
     <li>Orange days have a meal, blue days have an event, and days with both are split.</li>
   </ul>
@@ -333,7 +333,6 @@ function day_block_html(iso, n) {
         h += '<div class="meal-row"><div class="meal-head ev-head" data-act="toggle-meal" data-key="' + mkey + '">' +
           '<span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(it.name) + '</span>' +
           (editing ? '<span class="meal-btns">' +
-          '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
           '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(it.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
           '</span>' : '') + '</div>';
         if (open_meals.has(mkey)) h += '<div class="meal-detail">' + meal_detail_html(it, iso) + '</div>';
