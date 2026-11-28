@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timer and Alarm</title>
+<meta name="theme-color" content="#F6F3EC">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="meal_planner_manifest.json">
+<link rel="stylesheet" href="timer_alarm.css?v=2">
+</head>
+<body>
+
+<header class="ta-top">
+  <a class="orange-btn" href="meal_planner_full.html">← Back</a>
+  <div class="ta-date" id="dateDisplay"></div>
+  <button class="help-btn" onclick="showHelp()" aria-label="Help"><span class="help-q">?</span><span class="help-word">help</span></button>
+</header>
+
+<h2 class="ta-title">Timer and Alarm</h2>
+
+<!-- ───────────── TIMER ───────────── -->
+<section class="card" id="timerCard">
+  <h3>Timer</h3>
+  <div class="lcd" id="timerDisplay" aria-live="off">00:20:00</div>
+
+  <div class="set-row" id="timerSet">
+    <label>Hours<input type="number" id="tHours" inputmode="numeric" min="0" max="23" value="0"></label>
+    <label>Minutes<input type="number" id="tMins" inputmode="numeric" min="0" max="59" value="20"></label>
+    <label>Seconds<input type="number" id="tSecs" inputmode="numeric" min="0" max="59" value="0"></label>
+  </div>
+  <div class="preset-row" id="presets">
+    <button type="button" data-m="1">1 min</button>
+    <button type="button" data-m="5">5 min</button>
+    <button type="button" data-m="10">10 min</button>
+    <button type="button" data-m="20">20 min</button>
+    <button type="button" data-m="30">30 min</button>
+  </div>
+  <div class="btn-row">
+    <button type="button" class="orange-btn" id="timerStart">Start</button>
+    <button type="button" class="orange-btn ghost" id="timerReset">Reset</button>
+  </div>
+</section>
+
+<!-- ───────────── ALARM ───────────── -->
+<section class="card" id="alarmCard">
+  <h3>Alarm</h3>
+  <div class="lcd clock" id="clockDisplay">--:--:--</div>
+
+  <div class="alarm-add">
+    <input type="time" id="alarmTime" value="07:00" aria-label="Alarm time">
+    <input type="text" id="alarmLabel" maxlength="30" placeholder="Label (optional)" aria-label="Alarm label" autocomplete="off">
+    <button type="button" class="orange-btn" id="alarmAdd">Add</button>
+  </div>
+  <ul class="alarm-list" id="alarmList"></ul>
+  <p class="note">Alarms ring while this page is open. Keep the page open and your phone's volume up.</p>
+</section>
+
+<!-- ───────────── RINGING ───────────── -->
+<div class="ring-overlay" id="ringOverlay">
+  <div class="ring-box">
+    <div class="ring-title" id="ringTitle">Time's up</div>
+    <div class="ring-sub" id="ringSub"></div>
+    <div class="btn-row">
+      <button type="button" class="orange-btn" id="ringStop">Stop</button>
+      <button type="button" class="orange-btn ghost" id="ringSnooze">Snooze 5 min</button>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────── HELP ───────────── -->
+<div class="help-overlay" id="helpOverlay" onclick="hideHelp()">
+  <div class="help-box" onclick="event.stopPropagation()">
+    <h3>Help</h3>
+    <ul>
+      <li>Timer: set hours, minutes and seconds, or tap a preset, then press Start.</li>
+      <li>Press Pause to stop it, Resume to continue, and Reset to start over.</li>
+      <li>Alarm: pick a time, add an optional label and press Add.</li>
+      <li>Use the switch beside an alarm to turn it on or off, and the ✕ to delete it.</li>
+      <li>When a timer or alarm rings, press Stop, or Snooze to ring again in 5 minutes.</li>
+      <li>Keep this page open so it can ring.</li>
+    </ul>
+    <button type="button" class="orange-btn" onclick="hideHelp()">Close</button>
+  </div>
+</div>
+
+<script src="timer_alarm.js?v=1"></script>
+<script>if('serviceWorker' in navigator){ navigator.serviceWorker.register('meal_planner_service_worker.js'); }</script>
+</body>
+</html>
