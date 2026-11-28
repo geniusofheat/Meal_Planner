@@ -30,7 +30,7 @@ let open_meals  = new Set();
 let open_weeks  = new Set();
 let month_open  = true;
 let mode        = 'meal';   // which view the week list shows
-let mode_chosen = false;    // true once a Plan button has been pressed
+let mode_chosen = true;     // Plan a Meal is selected when the page loads    // true once a Plan button has been pressed
 let _unused_mode_note = 0;
 let mode_x      = 0;   // 'meal' | 'events'
 let events      = {};       // { 'YYYY-MM-DD': [ { title }, ... ] }
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function set_mode(m) {
   if (m === 'events' && pending) return;     // finish placing the waiting recipe first
-  if (mode_chosen && mode === m) { mode_chosen = false; mode = 'meal'; add_iso = null; event_iso = null; render_all(); return; }   // press again to clear
+  if (mode === m) return;                    // already selected
   mode_chosen = true;
   mode = m; add_iso = null; event_iso = null; edit_iso = null;
   render_all();
