@@ -307,8 +307,8 @@ function day_block_html(iso, n) {
   let h = '<div class="day-block">';
   h += '<div class="day-top"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><span class="day-dow">' + dow + '</span>' +
        '<span class="day-top-btns">' +
-       '<button class="orange-btn add-btn" data-act="add-plus" data-iso="' + iso + '" aria-label="Add to ' + esc(full_date(iso)) + '">+</button>' +
        (items.length ? '<button class="orange-btn" data-act="toggle-edit" data-iso="' + iso + '">' + (editing ? 'Done' : 'Edit') + '</button>' : '') +
+       '<button class="orange-btn add-btn" data-act="add-plus" data-iso="' + iso + '" aria-label="Add to ' + esc(full_date(iso)) + '">+</button>' +
        '</span></div>';
   if (!is_ev && add_iso === iso) {
     h += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div><div class="add-choice-btns">' +
