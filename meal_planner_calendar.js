@@ -289,55 +289,52 @@ function week_key(y, m, w) { return y + '-' + m + '-' + w; }
 function ordinal_week(d) { return Math.floor((d.getDate() - 1) / 7); }
 
 function day_num_cls(iso) {
-  const hm = !!(plan[iso] && plan[iso].length), he = !!(events[iso] && events[iso].length);
-  return (hm ? ' has-meal' : '') + (he ? ' has-event' : '') + (iso === selected_iso ? ' selected' : '');
+  const has = mode === 'events' ? !!(events[iso] && events[iso].length) : !!(plan[iso] && plan[iso].length);
+  return (has ? (mode === 'events' ? ' has-event' : ' has-meal') : '') + (iso === selected_iso ? ' selected' : '');
 }
 
-// One day in the week list:
-//   row 1: date + buttons / rule / MEAL section / rule / EVENT section
+// One day in the week list (meal view OR events view, never both):
+//   row 1: date + weekday + [+] [Edit]   then the numbered items below it
 function day_block_html(iso, n) {
-  const meals = plan[iso] || [];
-  const evs   = events[iso] || [];
+  const is_ev = mode === 'events';
+  const items = is_ev ? (events[iso] || []) : (plan[iso] || []);
   const dow   = DAYS[date_of(iso).getDay()].slice(0, 3);
+  const editing = edit_iso === iso;
   let h = '<div class="day-block">';
   h += '<div class="day-top"><div class="day-num' + day_num_cls(iso) + '">' + n + '</div><span class="day-dow">' + dow + '</span>' +
        '<span class="day-top-btns">' +
        '<button class="orange-btn add-btn" data-act="add-plus" data-iso="' + iso + '" aria-label="Add to ' + esc(full_date(iso)) + '">+</button>' +
-       ((meals.length || evs.length) ? '<button class="orange-btn" data-act="toggle-edit" data-iso="' + iso + '">' + (edit_iso === iso ? 'Done' : 'Edit') + '</button>' : '') +
+       (items.length ? '<button class="orange-btn" data-act="toggle-edit" data-iso="' + iso + '">' + (editing ? 'Done' : 'Edit') + '</button>' : '') +
        '</span></div>';
-  const editing = edit_iso === iso;
-  if (add_iso === iso) {
+  if (!is_ev && add_iso === iso) {
     h += '<div class="add-choice"><div>Add a meal for ' + esc(full_date(iso)) + ':</div><div class="add-choice-btns">' +
       '<button class="orange-btn" data-act="go-menu" data-iso="' + iso + '">Recipes Menu</button>' +
       '<button class="orange-btn" data-act="go-favorites" data-iso="' + iso + '">Favorites Menu</button>' +
       '<button class="orange-btn" data-act="go-creator" data-iso="' + iso + '">My Recipes</button></div></div>';
   }
-  if (event_iso === iso) {
+  if (is_ev && event_iso === iso) {
     h += '<div class="add-choice"><div>Event for ' + esc(full_date(iso)) + ':</div>' +
       '<input class="event-input" id="event-title-input" type="text" maxlength="80" placeholder="Event title" autocomplete="off">' +
       '<div class="add-choice-btns"><button class="orange-btn" data-act="save-event" data-iso="' + iso + '">Save</button>' +
       '<button class="orange-btn" data-act="cancel-event">Cancel</button></div></div>';
   }
-  if (meals.length) {
-    h += '<div class="day-section day-meals-sec"><span class="tag tag-meal">Meal</span>';
-    meals.forEach((m, idx) => {
-      const mkey = iso + '#' + idx;
-      h += '<div class="meal-row"><div class="meal-head ev-head" data-act="toggle-meal" data-key="' + mkey + '">' +
-        '<span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(m.name) + '</span>' +
-        (editing ? '<span class="meal-btns">' +
-        '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
-        '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(m.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
-        '</span>' : '') + '</div>';
-      if (open_meals.has(mkey)) h += '<div class="meal-detail">' + meal_detail_html(m, iso) + '</div>';
-      h += '</div>';
-    });
-    h += '</div>';
-  }
-  if (evs.length) {
-    h += '<div class="day-section day-events-sec"><span class="tag tag-event">Event</span>';
-    evs.forEach((ev, idx) => {
-      h += '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(ev.title) + '</span>' +
-        (editing ? '<span class="meal-btns"><button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(ev.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span>' : '') + '</div></div>';
+  if (items.length) {
+    h += '<div class="day-section">';
+    items.forEach((it, idx) => {
+      if (is_ev) {
+        h += '<div class="meal-row"><div class="meal-head ev-head"><span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(it.title) + '</span>' +
+          (editing ? '<span class="meal-btns"><button class="orange-btn" data-act="remove-event" aria-label="Remove ' + esc(it.title) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button></span>' : '') + '</div></div>';
+      } else {
+        const mkey = iso + '#' + idx;
+        h += '<div class="meal-row"><div class="meal-head ev-head" data-act="toggle-meal" data-key="' + mkey + '">' +
+          '<span class="ev-title"><span class="item-num">' + (idx + 1) + '.</span> ' + esc(it.name) + '</span>' +
+          (editing ? '<span class="meal-btns">' +
+          '<button class="orange-btn" data-act="change-meal" data-iso="' + iso + '" data-idx="' + idx + '">Change</button>' +
+          '<button class="orange-btn" data-act="remove-meal" aria-label="Remove ' + esc(it.name) + '" data-iso="' + iso + '" data-idx="' + idx + '">✕</button>' +
+          '</span>' : '') + '</div>';
+        if (open_meals.has(mkey)) h += '<div class="meal-detail">' + meal_detail_html(it, iso) + '</div>';
+        h += '</div>';
+      }
     });
     h += '</div>';
   }
@@ -348,33 +345,22 @@ function render_week() {
   const sec = document.getElementById('week-section');
   const days_in = new Date(view_year, view_month + 1, 0).getDate();
   const weeks = Math.ceil(days_in / 7);
+  const is_ev = mode === 'events';
 
-  let html = '<div class="month-block">' +
-    '<div class="month-head"><span>' + MONTHS[view_month] + '</span></div>';
+  let cur = 0;
+  for (let w = 0; w < weeks; w++) if (open_weeks.has(week_key(view_year, view_month, w))) { cur = w; break; }
+  const first = cur * 7 + 1;
+  const last  = Math.min(first + 6, days_in);
 
-  {
-    html += '<div class="month-weeks">';
-    for (let w = 0; w < weeks; w++) {
-      const first = w * 7 + 1;
-      const last  = Math.min(first + 6, days_in);
-      const key   = week_key(view_year, view_month, w);
-      const is_open = open_weeks.has(key);
-      html += '<div class="week-block">' +
-        '<div class="week-head" data-act="toggle-week" data-key="' + key + '">' +
-        '<span>Week ' + (w + 1) + '</span>' +
-        '<span class="count">' + first + ' – ' + last + ' ' + (is_open ? '[–]' : '[+]') + '</span></div>';
-
-      if (is_open) {
-        html += '<div class="week-days">';
-        for (let n = first; n <= last; n++) {
-          const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
-          html += day_block_html(iso, n);
-        }
-        html += '</div>';
-      }
-      html += '</div>';
-    }
-    html += '</div>';
+  let html = '<h3 class="week-title">' + (is_ev ? 'Planned Events' : 'Planned Meals') + '</h3>' +
+    '<div class="week-toolbar"><span class="week-label">Week</span><span class="week-nums">';
+  for (let w = 0; w < weeks; w++) {
+    html += '<button class="week-num' + (w === cur ? ' on' : '') + '" data-act="pick-week" data-key="' + week_key(view_year, view_month, w) + '" aria-label="Week ' + (w + 1) + '">' + (w + 1) + '</button>';
+  }
+  html += '</span><span class="week-range">' + first + ' – ' + last + '</span></div><div class="week-days">';
+  for (let n = first; n <= last; n++) {
+    const iso = view_year + '-' + String(view_month + 1).padStart(2, '0') + '-' + String(n).padStart(2, '0');
+    html += day_block_html(iso, n);
   }
   html += '</div>';
   sec.innerHTML = html;
@@ -465,7 +451,7 @@ function on_week_click(e) {
   if (a0) {
     const act = a0.getAttribute('data-act'), iso = a0.getAttribute('data-iso');
     if (act === 'toggle-edit') { edit_iso = (edit_iso === iso) ? null : iso; render_week(); return; }
-    if (act === 'add-plus' && mode_chosen && mode === 'events') {
+    if (act === 'add-plus' && mode === 'events') {
       event_iso = (event_iso === iso) ? null : iso;
       add_iso = null; selected_iso = iso;
       render_all();
@@ -543,10 +529,10 @@ function on_week_click(e) {
     }
     return;
   }
-  const wk = e.target.closest('[data-act="toggle-week"]');
+  const wk = e.target.closest('[data-act="pick-week"]');
   if (wk) {
-    const key = wk.getAttribute('data-key');
-    if (open_weeks.has(key)) open_weeks.delete(key); else open_weeks.add(key);
+    open_weeks = new Set([wk.getAttribute('data-key')]);
+    add_iso = null; event_iso = null; edit_iso = null;
     render_week();
     return;
   }
