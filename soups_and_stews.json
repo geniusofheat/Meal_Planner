@@ -164,13 +164,13 @@
           "3 garlic cloves, minced",
           "2 cups (480 ml) clam juice or fish broth",
           "2 cups (480 ml) heavy cream",
-          "3 tbsp butter",
-          "3 tbsp flour",
+          "3 tbsp butter (roux)",
+          "3 tbsp flour (roux)",
           "Fresh thyme and bay leaf",
           "Salt and pepper",
           "Oyster crackers to serve"
         ],
-        "prep": "Cook bacon in a large pot until crispy. Remove. Cook onion and celery in bacon fat until soft. Add garlic and cook 1 minute. Stir in flour and cook 2 minutes. Add clam juice and bring to a boil. Add potatoes, thyme, and bay leaf. Simmer 15 minutes until potatoes are tender. Add cream and clams with their juice. Simmer 5 minutes — do not boil. Season with salt and pepper. Garnish with bacon bits and oyster crackers."
+        "prep": "Cook bacon in a large pot until crispy. Remove. Cook onion and celery in bacon fat until soft. Add garlic and cook 1 minute. Stir in the butter and flour and cook 2 minutes to make a roux. Add clam juice and bring to a boil. Add potatoes, thyme, and bay leaf. Simmer 15 minutes until potatoes are tender. Add cream and clams with their juice. Simmer 5 minutes — do not boil. Season with salt and pepper. Garnish with bacon bits and oyster crackers."
       },
       {
         "name": "Corn Chowder",
@@ -184,12 +184,12 @@
           "3 garlic cloves, minced",
           "4 cups (960 ml) chicken broth",
           "1 cup (240 ml) heavy cream",
-          "3 tbsp butter",
-          "3 tbsp flour",
+          "3 tbsp butter (roux)",
+          "3 tbsp flour (roux)",
           "Fresh thyme",
           "Salt, pepper, and smoked paprika"
         ],
-        "prep": "Cook bacon until crispy. Remove and reserve. Cook onion and celery in bacon fat until soft. Add garlic. Stir in flour and cook 2 minutes. Add broth and bring to a boil. Add potatoes and thyme. Simmer 15 minutes. Add corn and cream. Simmer 10 more minutes. Season with salt, pepper, and smoked paprika. Garnish with bacon and chives."
+        "prep": "Cook bacon until crispy. Remove and reserve. Cook onion and celery in bacon fat until soft. Add garlic. Stir in the butter and flour and cook 2 minutes to make a roux. Add broth and bring to a boil. Add potatoes and thyme. Simmer 15 minutes. Add corn and cream. Simmer 10 more minutes. Season with salt, pepper, and smoked paprika. Garnish with bacon and chives."
       },
       {
         "name": "Broccoli Cheddar Soup",
@@ -202,11 +202,11 @@
           "4 cups (960 ml) chicken or vegetable broth",
           "1 cup (240 ml) heavy cream",
           "2 cups sharp cheddar, shredded",
-          "4 tbsp butter",
-          "¼ cup flour",
+          "4 tbsp butter (roux)",
+          "¼ cup flour (roux)",
           "Salt, pepper, and nutmeg"
         ],
-        "prep": "Melt butter in a large pot over medium heat. Cook onion until soft. Add garlic and cook 1 minute. Whisk in flour and cook 2 minutes. Gradually add broth whisking until smooth. Add broccoli and carrots. Simmer 15–20 minutes until broccoli is very tender. Add cream and simmer 5 minutes. Remove from heat and stir in cheddar until melted. Do not boil after adding cheese. Season with salt, pepper, and nutmeg."
+        "prep": "Melt butter in a large pot over medium heat. Cook onion until soft. Add garlic and cook 1 minute. Whisk in flour and cook 2 minutes to make a roux with the butter. Gradually add broth whisking until smooth. Add broccoli and carrots. Simmer 15–20 minutes until broccoli is very tender. Add cream and simmer 5 minutes. Remove from heat and stir in cheddar until melted. Do not boil after adding cheese. Season with salt, pepper, and nutmeg."
       },
       {
         "name": "Gazpacho",
