@@ -53,3 +53,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 
 /* help button: dark fill, white text */
 .help-btn { background: #1F2A24; color: #fff; border-color: #1F2A24; }
+#recipe-title-display { background: none; border: 0; margin: 0; box-shadow: none; }
+main, main.main { overflow: hidden; }
+#recipe-editor-view .toolbar-row { background: none; border: 0; padding: 0; margin: 0; }

@@ -1,0 +1,17 @@
+/* ingredient_picker.css — tap-to-add ingredients on recipe cards */
+.pick-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0 10px; }
+.pick-tip { flex: 1; font: 14px/1.35 'DM Sans', sans-serif; color: #5B655F; }
+.pick-btns { display: flex; gap: 6px; flex: 0 0 auto; }
+.pick-btns .orange-btn { min-height: 38px; padding: 0 16px; font-size: 14px; }
+.pick-btns [hidden] { display: none; }
+.pick-main-btn:disabled { opacity: .35; }
+ul.pick-list { list-style: disc; padding-left: 22px; margin: 0 0 8px; }
+.selecting ul.pick-list { list-style: none; padding: 0; }
+.selecting .pick-ing { display: flex; align-items: center; gap: 10px; padding: 10px 8px; border-top: 1px solid #DDD6C8; font-size: 16px; }
+.selecting .pick-ing:first-child { border-top: 0; }
+.selecting .pick-ing { cursor: pointer; }
+.pick-ing::before { display: none; }
+.selecting .pick-ing::before { display: block; content: ''; flex: 0 0 20px; height: 20px; border: 1.5px solid #1F2A24; border-radius: 4px; background: #fff; box-sizing: border-box; }
+.pick-ing.picked { background: #E8DFCB; border-radius: 8px; }
+.pick-ing.picked::before { background: #1F2A24 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
+.pick-ing.added { color: #5B655F; }

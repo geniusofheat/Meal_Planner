@@ -324,9 +324,14 @@ function render_recipe_card(recipe) {
     <div class="servings-label">batches</div>
   `;
 
-  html += '<h4>Ingredients :</h4><ul class="ingredients-list">';
-  (recipe.ingredients || []).forEach((ing) => { html += `<li>${ing}</li>`; });
-  html += '</ul>';
+  html += '<h4>Ingredients :</h4>';
+  if (window.ing_picker_html) {
+    html += window.ing_picker_html(recipe.ingredients || []);
+  } else {
+    html += '<ul class="ingredients-list">';
+    (recipe.ingredients || []).forEach((ing) => { html += `<li>${ing}</li>`; });
+    html += '</ul>';
+  }
 
   html += '<h4>Preparation :</h4><div class="steps-list">';
   if (Array.isArray(recipe.steps) && recipe.steps.length > 0) {

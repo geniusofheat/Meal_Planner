@@ -51,8 +51,9 @@
     $('cardView').innerHTML =
       '<h2>' + esc(f.name) + '</h2>' +
       (f.servings ? '<p>' + esc(f.servings) + '</p>' : '') +
-      '<div class="label">Ingredients</div><ul>' +
-        (f.ingredients || []).map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
+      '<div class="label">Ingredients</div>' +
+        (window.ing_picker_html ? window.ing_picker_html(f.ingredients || []) :
+          '<ul>' + (f.ingredients || []).map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>') +
       '<div class="label">Preparation</div><ol>' +
         steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>' +
       (f.notes ? '<div class="label">Notes</div><p>' + esc(f.notes) + '</p>' : '') +
