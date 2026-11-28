@@ -175,25 +175,26 @@ function render_mode_buttons() {
 
 // ── prompt above the calendar ───────────────────────────────────
 function render_prompt() {
+  // Only shown while a recipe is waiting to be placed on a date
   const el = document.getElementById('cal-prompt');
   if (!el) return;
-  if (mode === 'events' && mode_chosen) { el.textContent = 'Tap a date to open its week, then tap the + beside a day to add an event.'; return; }
   el.textContent = pending
     ? (moving ? 'Choose the new day for this meal from the calendar below.' : 'Please choose a day of the week from the calendar below.')
-    : 'Tap a date to open its week.';
+    : '';
 }
 
 // ── help ────────────────────────────────────────────────────────
 const HELP_CONTENT = `
-  <p>The Calendar lets you plan recipes on the days you want to cook them.</p>
+  <p>The Calendar lets you plan meals and events on the dates you choose.</p>
   <ul class="help-list">
-    <li>Tap a date on the calendar to open its week in the list below. An empty day shows a + button.</li>
-    <li>Tap the + to choose where the recipe comes from: the Recipe Menu, your Favorites or My Recipes. The recipe is added to that day.</li>
+    <li>Press Plan a Meal or Plan Events at the top. The weekly list below the calendar switches to match.</li>
+    <li>Tap a number on the calendar to pick a date. Use the arrows to change months.</li>
+    <li>Tap a week number in the weekly list to see that week's seven days.</li>
+    <li>Press the + beside a date. In Plan a Meal it lets you pick a recipe from the Recipes Menu, your Favorites or My Recipes. In Plan Events it lets you type an event title and save it.</li>
+    <li>Tap a meal title to see its ingredients and preparation.</li>
+    <li>Press Edit beside a date to change a meal's day or remove a meal or event with the ✕, then press Done.</li>
     <li>You can also press Plan on any recipe card, then tap a day on the calendar.</li>
-    <li>Use the arrows above the calendar to move to the previous or next month.</li>
-    <li>Days with something planned are highlighted.</li>
-    <li>Press Plan Events at the top to pin events to dates instead of meals. Tap a date, then tap the + beside a day in the week list and type the event title. Press Plan a Meal to go back to meals.</li>
-    <li>The list below the calendar shows the month by week. Tap a week to see its seven days, with Empty beside any day that has nothing planned. Tap a meal to see its recipe, and tap Change to move it to another day, and tap ✕ to take it off your plan.</li>
+    <li>Orange days have a meal, blue days have an event, and days with both are split.</li>
   </ul>
 `;
 function show_help_modal() {
