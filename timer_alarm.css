@@ -82,3 +82,8 @@ body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: va
 .lcd, .alarm-time { font-family: 'Geologica', sans-serif; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 1px; }
 #timerDisplay { font-size: clamp(32px, 12vw, 52px); }
 .lcd.clock { font-size: clamp(24px, 8.5vw, 36px); }
+/* Azeret Mono digits */
+.lcd, .alarm-time { font-family: 'Azeret Mono', monospace; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: 0; }
+#timerDisplay { font-size: clamp(30px, 11vw, 46px); }
+.lcd.clock { font-size: clamp(20px, 7vw, 28px); }
+.alarm-time { font-size: 20px; }
