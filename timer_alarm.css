@@ -54,3 +54,5 @@ body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: va
 .help-box h3 { margin: 0 0 8px; font: 600 22px 'Fraunces', serif; }
 .help-box ul { padding-left: 20px; margin: 0 0 14px; line-height: 1.5; }
 .lcd.clock { font-size: clamp(28px, 9vw, 42px); white-space: nowrap; letter-spacing: 1px; }
+.preset-row.locked { opacity: .45; pointer-events: none; }
+#scaleRow { margin-top: -4px; }

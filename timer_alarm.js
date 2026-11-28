@@ -80,6 +80,8 @@
     var t = load(TIMER_KEY, null);
     var running = t && t.end, paused = t && t.left != null;
     $('timerSet').classList.toggle('locked', !!(running || paused));
+    $('presets').classList.toggle('locked', !!(running || paused));
+    $('scaleRow').classList.toggle('locked', !!(running || paused));
     $('timerStart').textContent = running ? 'Pause' : (paused ? 'Resume' : 'Start');
   }
   function tick() {
@@ -112,6 +114,15 @@
     localStorage.removeItem(TIMER_KEY); stopRing(); timerUI(); keepAwake(); tick();
   });
   ['tHours', 'tMins', 'tSecs'].forEach(function (id) { $(id).addEventListener('input', tick); });
+  function scale(f) {
+    if (load(TIMER_KEY, null)) return;
+    var ms = inputsMs() || 60000;
+    ms = Math.round(ms * f / 1000) * 1000;
+    ms = Math.max(1000, Math.min(ms, (99 * 3600 + 59 * 60 + 59) * 1000));
+    setInputs(ms); tick();
+  }
+  $('timerUp').addEventListener('click', function () { scale(2); });
+  $('timerDown').addEventListener('click', function () { scale(0.5); });
   $('presets').addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b || load(TIMER_KEY, null)) return;
     setInputs(+b.getAttribute('data-m') * 60000); tick();
