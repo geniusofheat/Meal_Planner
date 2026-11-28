@@ -78,3 +78,7 @@ body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: va
 #timerDisplay { font-size: clamp(34px, 13vw, 56px); }
 .lcd.clock { font-size: clamp(26px, 9vw, 38px); }
 .alarm-time { font-size: 24px; }
+/* Geologica digits (same font as the tool titles) */
+.lcd, .alarm-time { font-family: 'Geologica', sans-serif; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 1px; }
+#timerDisplay { font-size: clamp(32px, 12vw, 52px); }
+.lcd.clock { font-size: clamp(24px, 8.5vw, 36px); }
