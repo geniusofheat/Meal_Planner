@@ -64,3 +64,6 @@ body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: va
 .lcd { background: #2BB5A6; color: var(--ink); outline: 2px solid #fff; outline-offset: -10px; padding: 24px 18px; }
 .lcd.clock { padding: 24px 18px; }
 #timerDisplay { font-size: clamp(32px, 12vw, 54px); letter-spacing: 1px; white-space: nowrap; }
+/* blue readouts, no inner border */
+.lcd { background: #3C9FDB; outline: 0; padding: 18px 12px; }
+.lcd.clock { padding: 18px 12px; }
