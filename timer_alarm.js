@@ -70,7 +70,7 @@
   }
   function inputsMs() {
     var h = +$('tHours').value || 0, m = +$('tMins').value || 0, s = +$('tSecs').value || 0;
-    return ((Math.min(h, 23) * 60 + Math.min(m, 59)) * 60 + Math.min(s, 59)) * 1000;
+    return ((Math.min(h, 99) * 60 + Math.min(m, 59)) * 60 + Math.min(s, 59)) * 1000;
   }
   function setInputs(ms) {
     var s = Math.round(ms / 1000);
@@ -91,7 +91,7 @@
         localStorage.removeItem(TIMER_KEY);
         $('timerDisplay').textContent = '00:00:00'; $('timerDisplay').classList.add('done');
         timerUI(); ring('timer', t.snooze ? 'Snooze over' : "Time's up", 'Timer finished');
-        setInputs(inputsMs() || 20 * 60000);
+        setInputs(inputsMs() || 60 * 60000);
       } else { $('timerDisplay').textContent = fmt(left); }
     } else if (t && t.left != null) {
       $('timerDisplay').textContent = fmt(t.left);
@@ -155,7 +155,7 @@
 
   /* ── go ── */
   var t0 = load(TIMER_KEY, null);
-  if (!t0) setInputs(20 * 60000);
+  if (!t0) setInputs(60 * 60000);
   renderAlarms(); timerUI(); keepAwake(); tick();
   setInterval(tick, 250);
 })();
