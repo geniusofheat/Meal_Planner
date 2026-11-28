@@ -336,12 +336,23 @@ function render_recipe_card(recipe) {
   html += '<h4>Preparation :</h4><div class="steps-list">';
   if (Array.isArray(recipe.steps) && recipe.steps.length > 0) {
     recipe.steps.forEach((step, idx) => {
-      html += `
+      if (step && typeof step === 'object') {
+        html += `
+        <div class="step-item titled">
+          <div class="step-body">
+            <div class="step-title">Step ${idx + 1} - ${step.title || ''}</div>
+            <p class="step-text">${step.text || ''}</p>
+          </div>
+        </div>
+      `;
+      } else {
+        html += `
         <div class="step-item">
           <span class="step-number">${idx + 1}</span>
           <p class="step-text">${step}</p>
         </div>
       `;
+      }
     });
   } else if (recipe.prep) {
     // fallback for recipe files not yet converted to a steps array

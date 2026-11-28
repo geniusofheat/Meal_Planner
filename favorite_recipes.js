@@ -55,7 +55,7 @@
         (window.ing_picker_html ? window.ing_picker_html(f.ingredients || []) :
           '<ul>' + (f.ingredients || []).map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>') +
       '<div class="label">Preparation</div><ol>' +
-        steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>' +
+        steps.map(function (s, i) { return (s && typeof s === 'object') ? '<li style="list-style:none;margin-left:-20px"><b>Step ' + (i + 1) + ' - ' + esc(s.title) + '</b><br>' + esc(s.text) + '</li>' : '<li>' + esc(s) + '</li>'; }).join('') + '</ol>' +
       (f.notes ? '<div class="label">Notes</div><p>' + esc(f.notes) + '</p>' : '') +
       '<div class="btn-row"><button class="orange-btn" onclick="planFav()">Plan</button>' +
       '<button class="orange-btn" id="rmBtn" onclick="removeFav()">Remove</button></div>';

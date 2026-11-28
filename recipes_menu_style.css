@@ -56,3 +56,6 @@ main, main.main { background: #fff !important; color: var(--ink) !important; bor
 #recipe-title-display { background: none; border: 0; margin: 0; box-shadow: none; }
 main, main.main { overflow: hidden; }
 #recipe-editor-view .toolbar-row { background: none; border: 0; padding: 0; margin: 0; }
+
+.step-item.titled { display: block; }
+.step-title { font-family: 'Geologica', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 4px; }

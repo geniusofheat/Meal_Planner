@@ -387,7 +387,25 @@
           "½ tsp garlic powder",
           "Salt and black pepper to taste"
         ],
-        "prep": "Melt butter in a heavy saucepan over medium heat. Once foaming, add the flour all at once and whisk constantly to combine into a smooth roux. Continue whisking and cooking the roux for 3 to 4 minutes until it turns a light golden-brown color — this toasts out the raw flour taste and gives the gravy its deep nutty flavor. Do not rush this step. Slowly pour in the warm beef stock a small amount at a time, whisking vigorously after each addition to keep the gravy smooth and lump-free. Adding cold stock to a hot roux is what causes lumps. Add the Worcestershire sauce, onion powder, and garlic powder. Bring to a gentle simmer over medium heat and cook 5 to 8 minutes, whisking frequently, until the gravy is thick enough to coat the back of a spoon. Season generously with salt and black pepper. If too thick, whisk in a splash more stock. Serve over mashed potatoes, roast beef, meatloaf, or biscuits."
+        "prep": "Melt butter in a heavy saucepan over medium heat. Once foaming, add the flour all at once and whisk constantly to combine into a smooth roux. Continue whisking and cooking the roux for 3 to 4 minutes until it turns a light golden-brown color — this toasts out the raw flour taste and gives the gravy its deep nutty flavor. Do not rush this step. Slowly pour in the warm beef stock a small amount at a time, whisking vigorously after each addition to keep the gravy smooth and lump-free. Adding cold stock to a hot roux is what causes lumps. Add the Worcestershire sauce, onion powder, and garlic powder. Bring to a gentle simmer over medium heat and cook 5 to 8 minutes, whisking frequently, until the gravy is thick enough to coat the back of a spoon. Season generously with salt and black pepper. If too thick, whisk in a splash more stock. Serve over mashed potatoes, roast beef, meatloaf, or biscuits.",
+        "steps": [
+          {
+            "title": "Make the roux",
+            "text": "Melt the butter in a heavy saucepan over medium heat. Once foaming, add the flour all at once and whisk constantly until smooth. Keep whisking and cooking for 3 to 4 minutes until light golden-brown. This toasts out the raw flour taste and gives the gravy its deep nutty flavor. Do not rush this step."
+          },
+          {
+            "title": "Add the stock",
+            "text": "Slowly pour in the warm beef stock a small amount at a time, whisking vigorously after each addition so the gravy stays smooth. Adding cold stock to a hot roux is what causes lumps."
+          },
+          {
+            "title": "Season and simmer",
+            "text": "Add the Worcestershire sauce, onion powder, and garlic powder. Bring to a gentle simmer over medium heat and cook 5 to 8 minutes, whisking frequently, until thick enough to coat the back of a spoon."
+          },
+          {
+            "title": "Finish and serve",
+            "text": "Season generously with salt and black pepper. If too thick, whisk in a splash more stock. Serve over mashed potatoes, roast beef, meatloaf, or biscuits."
+          }
+        ]
       },
       {
         "name": "Country White Pepper Gravy",
@@ -400,7 +418,25 @@
           "½ tsp kosher salt",
           "Pinch of cayenne pepper, optional"
         ],
-        "prep": "Melt butter in a wide skillet over medium heat. Add the flour and whisk together until a smooth paste forms. Cook this roux for 3 to 4 minutes, whisking constantly, until it smells toasty and nutty but remains pale — it should not take on any color. Slowly add the milk a splash at a time, whisking vigorously after each addition to prevent lumps. Once all the milk is incorporated, switch to a wooden spoon or heat-resistant spatula. Continue to cook over medium heat, stirring frequently and scraping the bottom of the pan, until the gravy is thick, creamy, and smooth — about 5 to 7 minutes. Season very generously with freshly cracked black pepper and salt. The pepper is what makes this gravy distinctly Southern and not just a white sauce. Add a pinch of cayenne if desired for a gentle warmth. Serve immediately over split buttermilk biscuits, chicken fried steak, fried pork chops, or breakfast potatoes."
+        "prep": "Melt butter in a wide skillet over medium heat. Add the flour and whisk together until a smooth paste forms. Cook this roux for 3 to 4 minutes, whisking constantly, until it smells toasty and nutty but remains pale — it should not take on any color. Slowly add the milk a splash at a time, whisking vigorously after each addition to prevent lumps. Once all the milk is incorporated, switch to a wooden spoon or heat-resistant spatula. Continue to cook over medium heat, stirring frequently and scraping the bottom of the pan, until the gravy is thick, creamy, and smooth — about 5 to 7 minutes. Season very generously with freshly cracked black pepper and salt. The pepper is what makes this gravy distinctly Southern and not just a white sauce. Add a pinch of cayenne if desired for a gentle warmth. Serve immediately over split buttermilk biscuits, chicken fried steak, fried pork chops, or breakfast potatoes.",
+        "steps": [
+          {
+            "title": "Make the roux",
+            "text": "Melt the butter in a wide skillet over medium heat. Add the flour and whisk until a smooth paste forms. Cook for 3 to 4 minutes, whisking constantly, until it smells toasty and nutty but stays pale. It should not take on any color."
+          },
+          {
+            "title": "Add the milk",
+            "text": "Slowly add the milk a splash at a time, whisking vigorously after each addition to prevent lumps. Once all the milk is in, switch to a wooden spoon or heat-resistant spatula."
+          },
+          {
+            "title": "Thicken the gravy",
+            "text": "Cook over medium heat, stirring frequently and scraping the bottom of the pan, for 5 to 7 minutes until thick, creamy, and smooth."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season very generously with freshly cracked black pepper and salt. The pepper is what makes this gravy distinctly Southern and not just a white sauce. Add a pinch of cayenne if desired. Serve immediately over split buttermilk biscuits, chicken fried steak, fried pork chops, or breakfast potatoes."
+          }
+        ]
       },
       {
         "name": "Southern Sausage Gravy",
@@ -414,7 +450,29 @@
           "Salt to taste",
           "Pinch of crushed red pepper flakes, optional"
         ],
-        "prep": "Cook the breakfast sausage in a large cast iron skillet over medium-high heat, breaking it into small crumbles with a wooden spoon, until browned and crispy in spots — about 8 to 10 minutes. Do not drain the fat from the pan — it is essential for making the roux and developing the flavor of the gravy. Reduce the heat to medium. Sprinkle the flour directly over the cooked sausage in the pan and stir to coat everything evenly. Cook 2 minutes to toast out the flour. Gradually pour in the milk while stirring constantly to prevent lumps. Bring to a simmer over medium heat, continuing to stir and scrape the bottom of the pan. Simmer 5 to 7 minutes until the gravy is thick, rich, and creamy. Season very generously with cracked black pepper, garlic powder, and salt. If the gravy becomes too thick as it sits, stir in a splash of warm milk. Serve immediately ladled generously over split, freshly baked buttermilk biscuits."
+        "prep": "Cook the breakfast sausage in a large cast iron skillet over medium-high heat, breaking it into small crumbles with a wooden spoon, until browned and crispy in spots — about 8 to 10 minutes. Do not drain the fat from the pan — it is essential for making the roux and developing the flavor of the gravy. Reduce the heat to medium. Sprinkle the flour directly over the cooked sausage in the pan and stir to coat everything evenly. Cook 2 minutes to toast out the flour. Gradually pour in the milk while stirring constantly to prevent lumps. Bring to a simmer over medium heat, continuing to stir and scrape the bottom of the pan. Simmer 5 to 7 minutes until the gravy is thick, rich, and creamy. Season very generously with cracked black pepper, garlic powder, and salt. If the gravy becomes too thick as it sits, stir in a splash of warm milk. Serve immediately ladled generously over split, freshly baked buttermilk biscuits.",
+        "steps": [
+          {
+            "title": "Brown the sausage",
+            "text": "Cook the breakfast sausage in a large cast iron skillet over medium-high heat, breaking it into small crumbles with a wooden spoon, for 8 to 10 minutes until browned and crispy in spots. Do not drain the fat from the pan. It is essential for the gravy base and its flavor."
+          },
+          {
+            "title": "Make the roux",
+            "text": "Reduce the heat to medium. Sprinkle the flour directly over the cooked sausage and stir to coat everything evenly. Cook 2 minutes to toast out the raw flour taste."
+          },
+          {
+            "title": "Add the milk",
+            "text": "Gradually pour in the milk while stirring constantly to prevent lumps. Bring to a simmer over medium heat, stirring and scraping the bottom of the pan."
+          },
+          {
+            "title": "Thicken the gravy",
+            "text": "Simmer 5 to 7 minutes until thick, rich, and creamy."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season very generously with cracked black pepper, garlic powder, and salt. If the gravy gets too thick as it sits, stir in a splash of warm milk. Serve immediately over split, freshly baked buttermilk biscuits."
+          }
+        ]
       },
       {
         "name": "Turkey Pan Gravy",
@@ -429,7 +487,29 @@
           "Salt and black pepper to taste",
           "Splash of Worcestershire sauce if the gravy tastes flat"
         ],
-        "prep": "After roasting your turkey, pour all the pan drippings into a large measuring cup or fat separator. Skim off and discard the fat layer — or use 4 tablespoons of it in place of the butter. Melt butter in a saucepan over medium heat. Add flour and whisk to form a smooth roux. Cook 3 minutes until the roux smells golden and toasty. If using white wine, add it now and cook 1 minute. Slowly whisk in the warm stock a little at a time, followed by the defatted pan drippings. Add the fresh thyme and bring to a simmer, whisking constantly until smooth. Cook 8 to 10 minutes, stirring frequently, until the gravy is rich, silky, and thick enough to coat a spoon. If it tastes flat, add a splash of Worcestershire sauce. Season well with salt and pepper. Strain through a fine mesh strainer for an ultra smooth result. Serve over carved turkey, stuffing, and mashed potatoes."
+        "prep": "After roasting your turkey, pour all the pan drippings into a large measuring cup or fat separator. Skim off and discard the fat layer — or use 4 tablespoons of it in place of the butter. Melt butter in a saucepan over medium heat. Add flour and whisk to form a smooth roux. Cook 3 minutes until the roux smells golden and toasty. If using white wine, add it now and cook 1 minute. Slowly whisk in the warm stock a little at a time, followed by the defatted pan drippings. Add the fresh thyme and bring to a simmer, whisking constantly until smooth. Cook 8 to 10 minutes, stirring frequently, until the gravy is rich, silky, and thick enough to coat a spoon. If it tastes flat, add a splash of Worcestershire sauce. Season well with salt and pepper. Strain through a fine mesh strainer for an ultra smooth result. Serve over carved turkey, stuffing, and mashed potatoes.",
+        "steps": [
+          {
+            "title": "Prepare the drippings",
+            "text": "After roasting the turkey, pour all the pan drippings into a large measuring cup or fat separator. Skim off and discard the fat layer, or use 4 tablespoons of it in place of the butter."
+          },
+          {
+            "title": "Make the roux",
+            "text": "Melt the butter in a saucepan over medium heat. Add the flour and whisk until smooth. Cook 3 minutes until golden and toasty smelling. If using white wine, add it now and cook 1 minute."
+          },
+          {
+            "title": "Add the stock and drippings",
+            "text": "Slowly whisk in the warm stock a little at a time, followed by the defatted pan drippings. Add the fresh thyme and bring to a simmer, whisking constantly until smooth."
+          },
+          {
+            "title": "Simmer until thick",
+            "text": "Cook 8 to 10 minutes, stirring frequently, until rich, silky, and thick enough to coat a spoon."
+          },
+          {
+            "title": "Season and serve",
+            "text": "If it tastes flat, add a splash of Worcestershire sauce. Season well with salt and pepper. Strain through a fine mesh strainer for an ultra smooth result. Serve over carved turkey, stuffing, and mashed potatoes."
+          }
+        ]
       },
       {
         "name": "Mushroom Gravy",
@@ -461,7 +541,29 @@
           "1 tsp fresh thyme leaves",
           "Salt and white pepper to taste"
         ],
-        "prep": "Melt butter in a saucepan over medium heat. Add the minced shallot and cook 2 to 3 minutes until soft and translucent. Add the garlic and cook 1 minute more. Add the flour and whisk to combine into a roux. Cook 3 to 4 minutes, whisking constantly, until the roux is pale golden and smells lightly nutty. Slowly pour in the warm chicken stock a splash at a time, whisking vigorously between each addition until smooth. Bring to a simmer over medium heat and cook 5 to 8 minutes, stirring frequently, until the gravy is thick and coats the back of a spoon. Add the fresh thyme and heavy cream if using. Stir and simmer 2 more minutes. Season well with salt and white pepper. Strain through a fine mesh strainer for a very smooth result if desired. Serve over roasted chicken pieces, mashed potatoes, biscuits, stuffing, or as a sauce for chicken pot pie filling."
+        "prep": "Melt butter in a saucepan over medium heat. Add the minced shallot and cook 2 to 3 minutes until soft and translucent. Add the garlic and cook 1 minute more. Add the flour and whisk to combine into a roux. Cook 3 to 4 minutes, whisking constantly, until the roux is pale golden and smells lightly nutty. Slowly pour in the warm chicken stock a splash at a time, whisking vigorously between each addition until smooth. Bring to a simmer over medium heat and cook 5 to 8 minutes, stirring frequently, until the gravy is thick and coats the back of a spoon. Add the fresh thyme and heavy cream if using. Stir and simmer 2 more minutes. Season well with salt and white pepper. Strain through a fine mesh strainer for a very smooth result if desired. Serve over roasted chicken pieces, mashed potatoes, biscuits, stuffing, or as a sauce for chicken pot pie filling.",
+        "steps": [
+          {
+            "title": "Cook the shallot",
+            "text": "Melt the butter in a saucepan over medium heat. Add the minced shallot and cook 2 to 3 minutes until soft and translucent. Add the garlic and cook 1 minute more."
+          },
+          {
+            "title": "Make the roux",
+            "text": "Add the flour and whisk to combine. Cook 3 to 4 minutes, whisking constantly, until pale golden and lightly nutty smelling."
+          },
+          {
+            "title": "Add the stock",
+            "text": "Slowly pour in the warm chicken stock a splash at a time, whisking vigorously between additions until smooth."
+          },
+          {
+            "title": "Simmer until thick",
+            "text": "Bring to a simmer over medium heat and cook 5 to 8 minutes, stirring frequently, until thick enough to coat the back of a spoon. Add the fresh thyme and heavy cream if using. Stir and simmer 2 more minutes."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season well with salt and white pepper. Strain through a fine mesh strainer for a very smooth result if desired. Serve over roasted chicken pieces, mashed potatoes, biscuits, stuffing, or as a sauce for chicken pot pie filling."
+          }
+        ]
       },
       {
         "name": "Caramelized Onion Gravy",
@@ -523,7 +625,29 @@
           "1 tsp fresh thyme",
           "2 hard-boiled eggs, finely chopped — optional traditional addition"
         ],
-        "prep": "Place the turkey neck, heart, and gizzard in a saucepan with the onion, celery, garlic, and water or broth. Do not add the liver yet as it makes the broth bitter if simmered too long. Bring to a boil, then reduce heat and simmer for 1 to 1.5 hours. Add the liver in the last 20 minutes. Remove the giblets and strain the broth — you should have about 3 cups of rich giblet stock. Pick any meat from the neck and finely chop the gizzard and liver. In a separate saucepan melt butter over medium heat. Whisk in flour and cook the roux 3 to 4 minutes until golden. Slowly whisk in the strained giblet broth and defatted turkey drippings a little at a time until smooth. Simmer 8 to 10 minutes until thickened. Stir in the chopped giblet meat and hard-boiled eggs if using. Add fresh thyme, salt, and pepper. This is the most flavorful and traditional Thanksgiving gravy — deeply savory, rich, and full of character."
+        "prep": "Place the turkey neck, heart, and gizzard in a saucepan with the onion, celery, garlic, and water or broth. Do not add the liver yet as it makes the broth bitter if simmered too long. Bring to a boil, then reduce heat and simmer for 1 to 1.5 hours. Add the liver in the last 20 minutes. Remove the giblets and strain the broth — you should have about 3 cups of rich giblet stock. Pick any meat from the neck and finely chop the gizzard and liver. In a separate saucepan melt butter over medium heat. Whisk in flour and cook the roux 3 to 4 minutes until golden. Slowly whisk in the strained giblet broth and defatted turkey drippings a little at a time until smooth. Simmer 8 to 10 minutes until thickened. Stir in the chopped giblet meat and hard-boiled eggs if using. Add fresh thyme, salt, and pepper. This is the most flavorful and traditional Thanksgiving gravy — deeply savory, rich, and full of character.",
+        "steps": [
+          {
+            "title": "Simmer the giblets",
+            "text": "Place the turkey neck, heart, and gizzard in a saucepan with the onion, celery, garlic, and water or broth. Do not add the liver yet, as it makes the broth bitter if simmered too long. Bring to a boil, then reduce heat and simmer 1 to 1.5 hours. Add the liver in the last 20 minutes."
+          },
+          {
+            "title": "Strain and chop",
+            "text": "Remove the giblets and strain the broth. You should have about 3 cups of rich giblet stock. Pick any meat from the neck and finely chop the gizzard and liver."
+          },
+          {
+            "title": "Make the roux",
+            "text": "In a separate saucepan, melt the butter over medium heat. Whisk in the flour and cook 3 to 4 minutes until golden."
+          },
+          {
+            "title": "Make the gravy",
+            "text": "Slowly whisk in the strained giblet broth and defatted turkey drippings a little at a time until smooth. Simmer 8 to 10 minutes until thickened."
+          },
+          {
+            "title": "Finish and serve",
+            "text": "Stir in the chopped giblet meat and hard-boiled eggs if using. Add fresh thyme, salt, and pepper. This is the most flavorful and traditional Thanksgiving gravy: deeply savory, rich, and full of character."
+          }
+        ]
       }
     ]
   }

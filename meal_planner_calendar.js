@@ -436,7 +436,7 @@ function meal_detail_html(m, iso) {
     h += '<h4>Ingredients :</h4><ul>' + m.ingredients.map(i => '<li>' + esc(i) + '</li>').join('') + '</ul>';
   }
   if (Array.isArray(m.steps) && m.steps.length) {
-    h += '<h4>Preparation :</h4><ol>' + m.steps.map(s => '<li>' + esc(s) + '</li>').join('') + '</ol>';
+    h += '<h4>Preparation :</h4><ol>' + m.steps.map((s, i) => (s && typeof s === 'object') ? '<li style="list-style:none;margin-left:-20px"><b>Step ' + (i + 1) + ' - ' + esc(s.title) + '</b><br>' + esc(s.text) + '</li>' : '<li>' + esc(s) + '</li>').join('') + '</ol>';
   } else if (typeof m.steps === 'string' && m.steps.trim()) {
     h += '<h4>Preparation :</h4><div>' + esc(m.steps) + '</div>';
   } else if (m.prep) {

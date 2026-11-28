@@ -170,7 +170,33 @@
           "Salt and pepper",
           "Oyster crackers to serve"
         ],
-        "prep": "Cook bacon in a large pot until crispy. Remove. Cook onion and celery in bacon fat until soft. Add garlic and cook 1 minute. Stir in the butter and flour and cook 2 minutes to make a roux. Add clam juice and bring to a boil. Add potatoes, thyme, and bay leaf. Simmer 15 minutes until potatoes are tender. Add cream and clams with their juice. Simmer 5 minutes — do not boil. Season with salt and pepper. Garnish with bacon bits and oyster crackers."
+        "prep": "Cook bacon in a large pot until crispy. Remove. Cook onion and celery in bacon fat until soft. Add garlic and cook 1 minute. Stir in the butter and flour and cook 2 minutes to make a roux. Add clam juice and bring to a boil. Add potatoes, thyme, and bay leaf. Simmer 15 minutes until potatoes are tender. Add cream and clams with their juice. Simmer 5 minutes — do not boil. Season with salt and pepper. Garnish with bacon bits and oyster crackers.",
+        "steps": [
+          {
+            "title": "Cook the bacon",
+            "text": "Cook the bacon in a large pot until crispy. Remove and set aside."
+          },
+          {
+            "title": "Cook the vegetables",
+            "text": "Cook the onion and celery in the bacon fat until soft. Add the garlic and cook 1 minute."
+          },
+          {
+            "title": "Make the roux",
+            "text": "Stir in the butter and flour and cook 2 minutes."
+          },
+          {
+            "title": "Simmer the potatoes",
+            "text": "Add the clam juice and bring to a boil. Add the potatoes, thyme, and bay leaf. Simmer 15 minutes until the potatoes are tender."
+          },
+          {
+            "title": "Add the cream and clams",
+            "text": "Add the cream and clams with their juice. Simmer 5 minutes. Do not boil."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season with salt and pepper. Garnish with bacon bits and oyster crackers."
+          }
+        ]
       },
       {
         "name": "Corn Chowder",
@@ -189,7 +215,33 @@
           "Fresh thyme",
           "Salt, pepper, and smoked paprika"
         ],
-        "prep": "Cook bacon until crispy. Remove and reserve. Cook onion and celery in bacon fat until soft. Add garlic. Stir in the butter and flour and cook 2 minutes to make a roux. Add broth and bring to a boil. Add potatoes and thyme. Simmer 15 minutes. Add corn and cream. Simmer 10 more minutes. Season with salt, pepper, and smoked paprika. Garnish with bacon and chives."
+        "prep": "Cook bacon until crispy. Remove and reserve. Cook onion and celery in bacon fat until soft. Add garlic. Stir in the butter and flour and cook 2 minutes to make a roux. Add broth and bring to a boil. Add potatoes and thyme. Simmer 15 minutes. Add corn and cream. Simmer 10 more minutes. Season with salt, pepper, and smoked paprika. Garnish with bacon and chives.",
+        "steps": [
+          {
+            "title": "Cook the bacon",
+            "text": "Cook the bacon until crispy. Remove and reserve."
+          },
+          {
+            "title": "Cook the vegetables",
+            "text": "Cook the onion and celery in the bacon fat until soft. Add the garlic."
+          },
+          {
+            "title": "Make the roux",
+            "text": "Stir in the butter and flour and cook 2 minutes."
+          },
+          {
+            "title": "Simmer the potatoes",
+            "text": "Add the broth and bring to a boil. Add the potatoes and thyme. Simmer 15 minutes."
+          },
+          {
+            "title": "Add the corn and cream",
+            "text": "Add the corn and cream. Simmer 10 more minutes."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season with salt, pepper, and smoked paprika. Garnish with bacon and chives."
+          }
+        ]
       },
       {
         "name": "Broccoli Cheddar Soup",
@@ -206,7 +258,29 @@
           "¼ cup flour (roux)",
           "Salt, pepper, and nutmeg"
         ],
-        "prep": "Melt butter in a large pot over medium heat. Cook onion until soft. Add garlic and cook 1 minute. Whisk in flour and cook 2 minutes to make a roux with the butter. Gradually add broth whisking until smooth. Add broccoli and carrots. Simmer 15–20 minutes until broccoli is very tender. Add cream and simmer 5 minutes. Remove from heat and stir in cheddar until melted. Do not boil after adding cheese. Season with salt, pepper, and nutmeg."
+        "prep": "Melt butter in a large pot over medium heat. Cook onion until soft. Add garlic and cook 1 minute. Whisk in flour and cook 2 minutes to make a roux with the butter. Gradually add broth whisking until smooth. Add broccoli and carrots. Simmer 15–20 minutes until broccoli is very tender. Add cream and simmer 5 minutes. Remove from heat and stir in cheddar until melted. Do not boil after adding cheese. Season with salt, pepper, and nutmeg.",
+        "steps": [
+          {
+            "title": "Cook the onion",
+            "text": "Melt the butter in a large pot over medium heat. Cook the onion until soft. Add the garlic and cook 1 minute."
+          },
+          {
+            "title": "Make the roux",
+            "text": "Whisk in the flour and cook 2 minutes."
+          },
+          {
+            "title": "Add the broth and vegetables",
+            "text": "Gradually add the broth, whisking until smooth. Add the broccoli and carrots. Simmer 15 to 20 minutes until the broccoli is very tender."
+          },
+          {
+            "title": "Add the cream",
+            "text": "Add the cream and simmer 5 minutes."
+          },
+          {
+            "title": "Melt in the cheese",
+            "text": "Remove from heat and stir in the cheddar until melted. Do not boil after adding the cheese. Season with salt, pepper, and nutmeg."
+          }
+        ]
       },
       {
         "name": "Gazpacho",
@@ -1577,7 +1651,29 @@
           "File powder to serve",
           "Rice to serve"
         ],
-        "prep": "Make roux by cooking equal parts flour and oil in a heavy pot over medium heat, stirring constantly, until color of dark chocolate — about 30–45 minutes. Add onion, celery, and bell pepper — the holy trinity. Cook until soft. Add garlic. Add broth gradually while stirring. Add sausage, okra, Cajun seasoning, thyme, and bay leaf. Simmer 30 minutes. Add shrimp and crab and cook 5 more minutes. Serve over rice sprinkled with file powder."
+        "prep": "Make roux by cooking equal parts flour and oil in a heavy pot over medium heat, stirring constantly, until color of dark chocolate — about 30–45 minutes. Add onion, celery, and bell pepper — the holy trinity. Cook until soft. Add garlic. Add broth gradually while stirring. Add sausage, okra, Cajun seasoning, thyme, and bay leaf. Simmer 30 minutes. Add shrimp and crab and cook 5 more minutes. Serve over rice sprinkled with file powder.",
+        "steps": [
+          {
+            "title": "Make the dark roux",
+            "text": "Cook equal parts flour and oil in a heavy pot over medium heat, stirring constantly, for 30 to 45 minutes until the color of dark chocolate."
+          },
+          {
+            "title": "Cook the vegetables",
+            "text": "Add the onion, celery, and bell pepper (the holy trinity) and cook until soft. Add the garlic."
+          },
+          {
+            "title": "Add the broth",
+            "text": "Add the broth gradually while stirring."
+          },
+          {
+            "title": "Simmer",
+            "text": "Add the sausage, okra, Cajun seasoning, thyme, and bay leaf. Simmer 30 minutes."
+          },
+          {
+            "title": "Add the seafood and serve",
+            "text": "Add the shrimp and crab and cook 5 more minutes. Serve over rice sprinkled with file powder."
+          }
+        ]
       },
       {
         "name": "Chicken and Andouille Gumbo",
@@ -1594,7 +1690,29 @@
           "Cajun seasoning",
           "File powder and rice to serve"
         ],
-        "prep": "Make dark roux by cooking flour and oil over medium heat stirring constantly 30–45 minutes until very dark brown. Add vegetables and cook until soft. Add garlic. Add broth gradually. Add chicken and sausage. Simmer 45 minutes until chicken is very tender. Remove chicken, shred, and return meat. Season generously with Cajun seasoning. Serve over rice with file powder."
+        "prep": "Make dark roux by cooking flour and oil over medium heat stirring constantly 30–45 minutes until very dark brown. Add vegetables and cook until soft. Add garlic. Add broth gradually. Add chicken and sausage. Simmer 45 minutes until chicken is very tender. Remove chicken, shred, and return meat. Season generously with Cajun seasoning. Serve over rice with file powder.",
+        "steps": [
+          {
+            "title": "Make the dark roux",
+            "text": "Cook the flour and oil over medium heat, stirring constantly, for 30 to 45 minutes until very dark brown."
+          },
+          {
+            "title": "Cook the vegetables",
+            "text": "Add the vegetables and cook until soft. Add the garlic."
+          },
+          {
+            "title": "Add the broth and meat",
+            "text": "Add the broth gradually. Add the chicken and sausage. Simmer 45 minutes until the chicken is very tender."
+          },
+          {
+            "title": "Shred the chicken",
+            "text": "Remove the chicken, shred it, and return the meat to the pot."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season generously with Cajun seasoning. Serve over rice with file powder."
+          }
+        ]
       },
       {
         "name": "Okra Gumbo",
@@ -1611,7 +1729,29 @@
           "Cajun seasoning and bay leaf",
           "Rice to serve"
         ],
-        "prep": "Make roux by cooking flour and oil stirring constantly until dark brown — 30 minutes. Add onion, celery, and bell pepper and cook until soft. Add garlic. Add tomatoes and broth. Add okra and Cajun seasoning. Simmer 30 minutes — the okra will thicken the gumbo naturally. Season with salt. Serve over rice."
+        "prep": "Make roux by cooking flour and oil stirring constantly until dark brown — 30 minutes. Add onion, celery, and bell pepper and cook until soft. Add garlic. Add tomatoes and broth. Add okra and Cajun seasoning. Simmer 30 minutes — the okra will thicken the gumbo naturally. Season with salt. Serve over rice.",
+        "steps": [
+          {
+            "title": "Make the roux",
+            "text": "Cook the flour and oil, stirring constantly, for about 30 minutes until dark brown."
+          },
+          {
+            "title": "Cook the vegetables",
+            "text": "Add the onion, celery, and bell pepper and cook until soft. Add the garlic."
+          },
+          {
+            "title": "Add the tomatoes and broth",
+            "text": "Add the tomatoes and broth."
+          },
+          {
+            "title": "Simmer with the okra",
+            "text": "Add the okra and Cajun seasoning. Simmer 30 minutes. The okra will thicken the gumbo naturally."
+          },
+          {
+            "title": "Season and serve",
+            "text": "Season with salt. Serve over rice."
+          }
+        ]
       }
     ]
   },
