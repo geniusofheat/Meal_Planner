@@ -67,3 +67,9 @@ body { margin: 0 auto; max-width: 480px; padding: 12px 20px 32px; background: va
 /* blue readouts, no inner border */
 .lcd { background: #3C9FDB; outline: 0; padding: 18px 12px; }
 .lcd.clock { padding: 18px 12px; }
+
+/* black readouts, plain zeros (Orbitron has no dot in the zero) */
+.lcd { background: #111; color: var(--paper); font-family: 'Orbitron', 'DM Sans', sans-serif; font-weight: 700; letter-spacing: 1px; }
+#timerDisplay { font-size: clamp(28px, 10.5vw, 46px); }
+.lcd.clock { font-size: clamp(20px, 7vw, 30px); }
+.alarm-time { font-family: 'Orbitron', 'DM Sans', sans-serif; font-size: 20px; }
